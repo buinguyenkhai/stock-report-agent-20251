@@ -1,0 +1,19 @@
+{
+    "query": "so sánh fpt quý 2 và quý 3 năm 2024",
+    "pending_requests": [],
+    "collected_links": {
+        "req_1": "https://static2.vietstock.vn/data/HOSE/2024/BCTC/VN/QUY 2/FPT_Baocaotaichinh_Q2_2024_Congtyme.pdf",
+        "req_2": "https://static2.vietstock.vn/data/HOSE/2024/BCTC/VN/QUY 3/FPT_Baocaotaichinh_Q3_2024_Congtyme.pdf"
+    },
+    "comparison_context": "So sánh FPT Quý 2 và Quý 3 năm 2024.",
+    "current_request_id": "req_2",
+    "stock_code": "FPT",
+    "year": 2024,
+    "period": "Quý",
+    "quarter": 3,
+    "report_link": "https://static2.vietstock.vn/data/HOSE/2024/BCTC/VN/QUY 3/FPT_Baocaotaichinh_Q3_2024_Congtyme.pdf",
+    "error_message": null,
+    "clarification_prompt": null,
+    "possible_choices": null,
+    "notification": null
+}
