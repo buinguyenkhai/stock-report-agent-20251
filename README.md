@@ -1,1 +1,1 @@
-![Agent Graph](graph.png?v=2)
+![Agent Graph](graph_v2.png)
