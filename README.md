@@ -5,6 +5,7 @@
 ### process_query_node (NEW)
 - Sử dụng API Gemini-2.5-flash, sử dụng được tools để biết ngày hiện tại
 - Áp dụng kỹ thuật Few-shot examples để tăng độ chính xác
+- Prompt Structuring: dịch câu query thành một cấu trúc dữ liệu mà LLM dễ dàng hiểu được (AnalysisIntent và ReportRequest trong pydantic_models)
 - Tự động bỏ qua các báo cáo chưa tồn tại giữa vào thời gian hiện tại
 
 ### ask_user_for_clarification_node (NEW)
