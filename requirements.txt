@@ -1,0 +1,5 @@
+dotenv==0.9.9
+langgraph==1.0.1
+langchain_google_genai==3.0.0
+playwright==1.55.0
+regex==2025.10.23
