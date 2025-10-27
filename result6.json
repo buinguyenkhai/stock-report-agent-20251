@@ -1,0 +1,19 @@
+{
+    "query": "lấy cho tôi báo cáo mới nhất của HPG",
+    "pending_requests": [],
+    "collected_links": {
+        "req_1": "https://static2.vietstock.vn/data/HOSE/2025/BCTC/VN/QUY 2/HPG_Baocaotaichinh_6T_2025_Soatxet_Hopnhat.pdf"
+    },
+    "comparison_context": "Tìm báo cáo tài chính mới nhất của HPG.",
+    "current_request_id": "req_1",
+    "stock_code": "HPG",
+    "year": null,
+    "period": "Mới nhất",
+    "quarter": null,
+    "consolidation_status": null,
+    "report_link": "https://static2.vietstock.vn/data/HOSE/2025/BCTC/VN/QUY 2/HPG_Baocaotaichinh_6T_2025_Soatxet_Hopnhat.pdf",
+    "error_message": null,
+    "clarification_prompt": null,
+    "notification": "Đã tìm thấy báo cáo mới nhất: 'Báo cáo tài chính Hợp nhất Soát xét 6 tháng đầu năm 2025'. (Mặc định lấy báo cáo đầu tiên trong danh sách).",
+    "final_response": "**Mục tiêu phân tích:** Tìm báo cáo tài chính mới nhất của HPG.\n\n**Thông báo:**\nĐã tìm thấy báo cáo mới nhất: 'Báo cáo tài chính Hợp nhất Soát xét 6 tháng đầu năm 2025'. (Mặc định lấy báo cáo đầu tiên trong danh sách).\n\n**Kết quả tìm kiếm:**\n- Yêu cầu req_1: Thành công. Link: https://static2.vietstock.vn/data/HOSE/2025/BCTC/VN/QUY 2/HPG_Baocaotaichinh_6T_2025_Soatxet_Hopnhat.pdf"
+}

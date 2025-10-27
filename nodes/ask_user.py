@@ -7,7 +7,6 @@ def ask_user_for_clarification_node(state: StockReportState) -> StockReportState
     choices = state.get("possible_choices")
     if not prompt or not choices:
         return {**state, "error_message": "Lỗi logic: Thiếu prompt hoặc lựa chọn để hỏi người dùng."}
-    print("YÊU CẦU NHẬP LIỆU")
     print(prompt)
 
     while True:

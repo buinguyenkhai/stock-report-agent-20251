@@ -3,6 +3,7 @@ from state import StockReportState
 from tools import get_current_time
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptTemplate
+from datetime import datetime
 
 def process_query_node(state: StockReportState) -> StockReportState:
     print("Bắt đầu Node: Xử lý Query")
@@ -49,6 +50,20 @@ def process_query_node(state: StockReportState) -> StockReportState:
                 ],
                 comparison_context="Phân tích sự tăng trưởng của HPG qua Quý 1, 2, và 3 của năm 2025."
             )
+        },
+        {
+            "input": "lấy cho tôi báo cáo tài chính hợp nhất quý 2 2024 của FPT",
+            "output": AnalysisIntent(
+                requests=[ReportRequest(stock_code="FPT", year=2024, period="Quý", quarter=2, consolidation_status="Hợp nhất")],
+                comparison_context="Phân tích báo cáo tài chính hợp nhất Quý 2 2024 của FPT."
+            )
+        },
+        {
+            "input": "tìm báo cáo mới nhất của VNM",
+            "output": AnalysisIntent(
+                requests=[ReportRequest(stock_code="VNM", period="Mới nhất")],
+                comparison_context="Tìm báo cáo tài chính mới nhất của VNM."
+            )
         }
     ]
 
@@ -73,15 +88,57 @@ def process_query_node(state: StockReportState) -> StockReportState:
 
     try:
         analysis_intent = chain.invoke({"query": query})
+        # Loại bỏ các báo cáo tương lai
+        now = datetime.now()
+        valid_requests = []
+        future_requests_messages = []
+
+        if not analysis_intent.requests:
+            return {
+                **state,
+                "pending_requests": [],
+                "comparison_context": analysis_intent.comparison_context,
+                "notification": "Tôi nhận thấy yêu cầu của bạn dành cho một báo cáo trong tương lai và chưa được phát hành. Do đó, không có tác vụ tìm kiếm nào được thực hiện.",
+                "collected_links": {}
+            }
+
+        for req in analysis_intent.requests:
+            if req.year is not None:
+                end_month = 12
+                if req.period == "Quý" and req.quarter:
+                    end_month = req.quarter * 3
+                elif req.period == "6 tháng":
+                    end_month = 6
+                
+                report_is_in_future = False
+                if req.year > now.year:
+                    report_is_in_future = True
+                elif req.year == now.year and end_month >= now.month:
+                     report_is_in_future = True
+
+                if report_is_in_future:
+                    req_str = f"{req.stock_code} {req.period} {req.quarter}/{req.year}" if req.period == "Quý" else f"{req.stock_code} {req.period}/{req.year}"
+                    future_requests_messages.append(f"- {req_str}")
+                    continue
+            
+            valid_requests.append(req)
+        
+        notification = None
+        if future_requests_messages:
+            notification = "Một số báo cáo bạn yêu cầu chưa đến kỳ phát hành và đã được bỏ qua:\n" + "\n".join(future_requests_messages)
+
         return {
             **state,
-            "pending_requests": analysis_intent.requests,
+            "pending_requests": valid_requests,
             "comparison_context": analysis_intent.comparison_context,
+            "notification": notification,
             "collected_links": {}
         }
     except Exception as e:
         print(f"Lỗi khi xử lý query: {e}")
         return {
             **state,
-            "error_message": "Lỗi xử lý query."
+            "pending_requests": [],
+            "collected_links": {},
+            "error_message": f"Lỗi nghiêm trọng khi xử lý query: {e}"
         }

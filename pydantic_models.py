@@ -6,9 +6,10 @@ class ReportRequest(BaseModel):
     """Yêu cầu tìm một báo cáo tài chính cụ thể."""
     request_id: str = Field(description="Mã định danh duy nhất cho yêu cầu này, ví dụ 'req_1', 'req_2'.",default_factory=lambda: f"req_{uuid.uuid4().hex[:4]}")
     stock_code: str = Field(description="Mã chứng khoán, ví dụ: 'FPT', 'VCB'.")
-    year: int = Field(description="Năm của báo cáo.")
-    period: Literal["Quý", "6 tháng", "Cả năm"] = Field(description="Kỳ báo cáo.")
-    quarter: Optional[int] = Field(description="Quý của báo cáo (chỉ khi period là 'Quý').")
+    year: Optional[int] = Field(default=None, description="Năm của báo cáo.")
+    period: Optional[Literal["Quý", "6 tháng", "Cả năm", "Mới nhất"]] = Field(default=None, description="Kỳ báo cáo.")
+    quarter: Optional[int] = Field(default=None, description="Quý của báo cáo (chỉ khi period là 'Quý').")
+    consolidation_status: Optional[Literal["Hợp nhất", "Công ty mẹ"]] = Field(default=None, description="Loại báo cáo: Hợp nhất hay của Công ty mẹ.")
 
 class AnalysisIntent(BaseModel):
     """Ý định phân tích tổng thể của người dùng, bao gồm tất cả các báo cáo cần thiết."""

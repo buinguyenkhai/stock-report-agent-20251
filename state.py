@@ -10,7 +10,7 @@ class StockReportState(TypedDict):
     current_request_id: Optional[str]
     stock_code: Optional[str]
     year: Optional[int]
-    period: Optional[Literal["Quý", "6 tháng", "Cả năm"]]
+    period: Optional[Literal["Quý", "6 tháng", "Cả năm", "Mới nhất"]]
     quarter: Optional[int]
     consolidation_status: Optional[Literal["Hợp nhất", "Công ty mẹ"]]
     report_link: Optional[str]

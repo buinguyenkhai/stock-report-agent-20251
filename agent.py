@@ -11,6 +11,7 @@ from nodes import (
     should_continue_extraction,
     collect_result_node,
     ask_user_for_clarification_node,
+    generate_final_response_node
 )
 
 load_dotenv()
@@ -24,6 +25,7 @@ graph_builder.add_node("prepare_next_extraction", prepare_next_extraction_node)
 graph_builder.add_node("extract_report_link", extract_report_link_node)
 graph_builder.add_node("ask_user", ask_user_for_clarification_node)
 graph_builder.add_node("collect_result", collect_result_node)
+graph_builder.add_node("generate_final_response", generate_final_response_node)
 
 # Edges
 
@@ -31,13 +33,14 @@ graph_builder.add_edge(START, "process_query")
 graph_builder.add_conditional_edges(
     "process_query",
     should_continue_extraction,
-    {"continue": "prepare_next_extraction", "end_extraction": END}
+    {"continue": "prepare_next_extraction", "end_extraction": "generate_final_response"}
 )
 graph_builder.add_conditional_edges(
     "collect_result",
     should_continue_extraction,
-    {"continue": "prepare_next_extraction", "end_extraction": END}
+    {"continue": "prepare_next_extraction", "end_extraction": "generate_final_response"}
 )
+graph_builder.add_edge("generate_final_response", END)
 graph_builder.add_edge("prepare_next_extraction", "extract_report_link")
 graph_builder.add_edge("ask_user", "collect_result")
 graph_builder.add_conditional_edges(
@@ -48,7 +51,7 @@ graph_builder.add_conditional_edges(
 
 agent = graph_builder.compile()
 
-query = "so sánh fpt quý 2 và quý 3 năm 2024"
+query = "tìm báo cáo tài chính quý 2 2024 của FPT"
 final_state = agent.invoke({"query": query})
 
 print("AGENT ĐÃ HOÀN TẤT")

@@ -1,0 +1,20 @@
+{
+    "query": "so sánh VCB và TCB hợp nhất quý 1 năm 2024",
+    "pending_requests": [],
+    "collected_links": {
+        "req_1": "https://static2.vietstock.vn/data/HOSE/2024/BCTC/VN/QUY 1/VCB_Baocaotaichinh_Q1_2024_Hopnhat.pdf",
+        "req_2": "https://static2.vietstock.vn/data/HOSE/2024/BCTC/VN/QUY 1/TCB_Baocaotaichinh_Q1_2024_Hopnhat.pdf"
+    },
+    "comparison_context": "So sánh báo cáo tài chính hợp nhất Quý 1 2024 của VCB và TCB.",
+    "current_request_id": "req_2",
+    "stock_code": "TCB",
+    "year": 2024,
+    "period": "Quý",
+    "quarter": 1,
+    "consolidation_status": "Hợp nhất",
+    "report_link": "https://static2.vietstock.vn/data/HOSE/2024/BCTC/VN/QUY 1/TCB_Baocaotaichinh_Q1_2024_Hopnhat.pdf",
+    "error_message": null,
+    "clarification_prompt": null,
+    "notification": "Đã tìm thấy báo cáo 'Báo cáo tài chính Hợp nhất quý 1 năm 2024' theo yêu cầu.",
+    "final_response": "Mục tiêu phân tích: So sánh báo cáo tài chính hợp nhất Quý 1 2024 của VCB và TCB.\n\nThông báo:\nĐã tìm thấy báo cáo 'Báo cáo tài chính Hợp nhất quý 1 năm 2024' theo yêu cầu.\n\nKết quả tìm kiếm:\nYêu cầu req_1: Thành công. Link: https://static2.vietstock.vn/data/HOSE/2024/BCTC/VN/QUY 1/VCB_Baocaotaichinh_Q1_2024_Hopnhat.pdf\nYêu cầu req_2: Thành công. Link: https://static2.vietstock.vn/data/HOSE/2024/BCTC/VN/QUY 1/TCB_Baocaotaichinh_Q1_2024_Hopnhat.pdf"
+}
