@@ -29,7 +29,7 @@ converter = PdfConverter(
     llm_service=config_parser.get_llm_service()
 )
 
-pdf_path = "ocr/FPT_Baocaotaichinh_Q3_2025_Congtyme.pdf"
+pdf_path = "ocr/DBC_Baocaotaichinh_Q3_2025_Hopnhat.pdf"
 rendered = converter(pdf_path)
 
 text, _, images = text_from_rendered(rendered)
