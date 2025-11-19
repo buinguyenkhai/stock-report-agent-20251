@@ -51,7 +51,8 @@ graph_builder.add_conditional_edges(
 
 agent = graph_builder.compile()
 
-query = "tìm báo cáo tài chính quý 2 2024 của FPT"
+print('Xin chào, tôi là trợ lý báo cáo tài chính cổ phiếu Việt Nam. Hãy nhập truy vấn của bạn!')
+query = input("Truy vấn: ")
 final_state = agent.invoke({"query": query})
 
 print("AGENT ĐÃ HOÀN TẤT")
