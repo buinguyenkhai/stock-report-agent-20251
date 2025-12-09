@@ -12,7 +12,8 @@ from nodes import (
     collect_result_node,
     ask_user_for_clarification_node,
     generate_final_response_node,
-    ocr_report_node
+    ocr_report_node,
+    parse_report_node
 )
 
 load_dotenv()
@@ -26,6 +27,7 @@ graph_builder.add_node("prepare_next_extraction", prepare_next_extraction_node)
 graph_builder.add_node("extract_report_link", extract_report_link_node)
 graph_builder.add_node("ask_user", ask_user_for_clarification_node)
 graph_builder.add_node("ocr_report", ocr_report_node)
+graph_builder.add_node("parse_report", parse_report_node)
 graph_builder.add_node("collect_result", collect_result_node)
 graph_builder.add_node("generate_final_response", generate_final_response_node)
 
@@ -45,7 +47,8 @@ graph_builder.add_conditional_edges(
 graph_builder.add_edge("generate_final_response", END)
 graph_builder.add_edge("prepare_next_extraction", "extract_report_link")
 graph_builder.add_edge("ask_user", "ocr_report")
-graph_builder.add_edge("ocr_report", "collect_result")
+graph_builder.add_edge("ocr_report", "parse_report")
+graph_builder.add_edge("parse_report", "collect_result")
 graph_builder.add_conditional_edges(
     "extract_report_link",
     check_extraction_result,
