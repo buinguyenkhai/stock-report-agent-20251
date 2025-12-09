@@ -14,6 +14,7 @@ class StockReportState(TypedDict):
     quarter: Optional[int]
     consolidation_status: Optional[Literal["Hợp nhất", "Công ty mẹ"]]
     report_link: Optional[str]
+    ocr_markdown_content: Optional[str]
     error_message: Optional[str]
     clarification_prompt: Optional[str]
     possible_choices: Optional[List[dict]]

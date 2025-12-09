@@ -4,3 +4,4 @@ from .collect_results import collect_result_node
 from .ask_user import ask_user_for_clarification_node
 from .routing import should_continue_extraction, check_extraction_result
 from .generate_response import generate_final_response_node
+from .ocr_node import ocr_report_node
