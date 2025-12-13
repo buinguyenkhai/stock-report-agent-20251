@@ -1,16 +1,34 @@
 from pydantic_models import AnalysisIntent, ReportRequest
 from state import StockReportState
 from tools import get_current_time
+from config import settings, QUARTER_END_MONTHS
+from logger import get_logger
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptTemplate
 from datetime import datetime
 
+logger = get_logger(__name__)
+
 def process_query_node(state: StockReportState) -> StockReportState:
-    print("Bắt đầu Node: Xử lý Query")
-    query = state["query"]
+    """Process user query and extract report requests using LLM."""
+    logger.info("Bắt đầu Node: Xử lý Query")
+    query = state.get("query", "")
+    
+    if not query or not query.strip():
+        logger.warning("Empty query received")
+        return {
+            **state,
+            "pending_requests": [],
+            "collected_links": {},
+            "error_message": "Truy vấn trống. Vui lòng nhập câu hỏi của bạn."
+        }
 
     tools = [get_current_time]
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0).bind_tools(tools)
+    llm = ChatGoogleGenerativeAI(
+        model=settings.llm_model,
+        temperature=settings.llm_temperature,
+        google_api_key=settings.google_api_key
+    ).bind_tools(tools)
     llm_with_tools = llm.with_structured_output(AnalysisIntent)
 
     system_prompt = """Bạn là một chuyên gia phân tích tài chính thông minh. Nhiệm vụ của bạn là phân tích yêu cầu của người dùng và chia nó thành một danh sách các yêu cầu báo cáo riêng lẻ.
@@ -87,13 +105,17 @@ def process_query_node(state: StockReportState) -> StockReportState:
     chain = final_prompt | llm_with_tools
 
     try:
+        logger.debug(f"Invoking LLM with query: {query[:100]}...")
         analysis_intent = chain.invoke({"query": query})
+        logger.info(f"LLM returned {len(analysis_intent.requests) if analysis_intent.requests else 0} requests")
+        
         # Loại bỏ các báo cáo tương lai
         now = datetime.now()
         valid_requests = []
         future_requests_messages = []
 
         if not analysis_intent.requests:
+            logger.warning("No requests extracted from query")
             return {
                 **state,
                 "pending_requests": [],
@@ -106,7 +128,7 @@ def process_query_node(state: StockReportState) -> StockReportState:
             if req.year is not None:
                 end_month = 12
                 if req.period == "Quý" and req.quarter:
-                    end_month = req.quarter * 3
+                    end_month = QUARTER_END_MONTHS.get(req.quarter, req.quarter * 3)
                 elif req.period == "6 tháng":
                     end_month = 6
                 
@@ -126,7 +148,9 @@ def process_query_node(state: StockReportState) -> StockReportState:
         notification = None
         if future_requests_messages:
             notification = "Một số báo cáo bạn yêu cầu chưa đến kỳ phát hành và đã được bỏ qua:\n" + "\n".join(future_requests_messages)
+            logger.info(f"Filtered out {len(future_requests_messages)} future reports")
 
+        logger.info(f"Successfully processed query with {len(valid_requests)} valid requests")
         return {
             **state,
             "pending_requests": valid_requests,
@@ -135,7 +159,7 @@ def process_query_node(state: StockReportState) -> StockReportState:
             "collected_links": {}
         }
     except Exception as e:
-        print(f"Lỗi khi xử lý query: {e}")
+        logger.error(f"Lỗi khi xử lý query: {e}", exc_info=True)
         return {
             **state,
             "pending_requests": [],

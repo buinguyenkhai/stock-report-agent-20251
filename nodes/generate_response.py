@@ -1,8 +1,11 @@
 from state import StockReportState
+from logger import get_logger
+
+logger = get_logger(__name__)
 
 def generate_final_response_node(state: StockReportState) -> StockReportState:
     """Tạo câu trả lời cuối cùng dựa trên kết quả thu thập được."""
-    print("Bắt đầu Node: Tạo Phản hồi Cuối cùng")
+    logger.info("Bắt đầu Node: Tạo Phản hồi Cuối cùng")
     
     collected = state.get("collected_links", {})
     context = state.get("comparison_context", "")

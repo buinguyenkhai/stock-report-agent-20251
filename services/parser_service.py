@@ -1,24 +1,35 @@
+from tenacity import retry, stop_after_attempt, wait_exponential
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic_models import FinancialReportData
-import os
+from config import settings
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 
 class FinancialParser:
     """
     Parses raw Markdown content into structured financial items using LLM.
     """
     def __init__(self):
-        api_key = os.getenv("GOOGLE_API_KEY")
-        if not api_key:
+        if not settings.google_api_key:
             raise ValueError("GOOGLE_API_KEY is not set.")
         
         self.llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",
-            temperature=0,
-            google_api_key=api_key
+            model=settings.llm_model,
+            temperature=settings.llm_temperature,
+            google_api_key=settings.google_api_key
         )
         self.structured_llm = self.llm.with_structured_output(FinancialReportData)
 
+    @retry(
+        stop=stop_after_attempt(settings.retry_max_attempts),
+        wait=wait_exponential(multiplier=1, min=settings.retry_min_wait, max=settings.retry_max_wait),
+        before_sleep=lambda retry_state: logger.warning(
+            f"Retrying LLM parse call (attempt {retry_state.attempt_number})..."
+        )
+    )
     def parse(self, markdown_content: str) -> dict:
         """
         Returns a dictionary with keys 'BS' (Balance Sheet), 'PL' (Profit Loss), 'CF' (Cash Flow).
@@ -49,16 +60,19 @@ class FinancialParser:
         chain = prompt | self.structured_llm
 
         try:
+            logger.info("Invoking LLM for structured parsing...")
             result: FinancialReportData = chain.invoke({"content": markdown_content})
             
-            return {
+            parsed = {
                 "BS": [item.model_dump() for item in result.balance_sheet],
                 "PL": [item.model_dump() for item in result.income_statement],
                 "CF": [item.model_dump() for item in result.cash_flow],
                 "Notes": [item.model_dump() for item in result.notes]
             }
+            logger.info(f"Successfully parsed: BS={len(parsed['BS'])}, PL={len(parsed['PL'])}, CF={len(parsed['CF'])} items")
+            return parsed
         except Exception as e:
-            print(f"Parser Error: {str(e)}")
+            logger.error(f"Parser Error: {str(e)}", exc_info=True)
             # Return empty structure on failure
             return {
                 "BS": [],

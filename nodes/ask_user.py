@@ -1,12 +1,18 @@
 from state import StockReportState
+from logger import get_logger
+
+logger = get_logger(__name__)
 
 def ask_user_for_clarification_node(state: StockReportState) -> StockReportState:
     """Hiển thị prompt và chờ người dùng nhập liệu."""
-    print("Bắt đầu Node: Hỏi người dùng")
+    logger.info("Bắt đầu Node: Hỏi người dùng")
     prompt = state.get("clarification_prompt")
     choices = state.get("possible_choices")
+    
     if not prompt or not choices:
+        logger.error("Missing prompt or choices for user clarification")
         return {**state, "error_message": "Lỗi logic: Thiếu prompt hoặc lựa chọn để hỏi người dùng."}
+    
     print(prompt)
 
     while True:
@@ -14,11 +20,12 @@ def ask_user_for_clarification_node(state: StockReportState) -> StockReportState
             choice_idx = int(input("Vui lòng nhập lựa chọn của bạn (số): ")) - 1
             if 0 <= choice_idx < len(choices):
                 selected_choice = choices[choice_idx]
+                logger.info(f"User selected: {selected_choice.get('title', 'Unknown')}")
                 print(f"Bạn đã chọn: {selected_choice['title']}")
                 # Cập nhật state với link đã được giải quyết
                 return {
                     **state,
-                    "report_link": selected_choice["link"],
+                    "report_link": selected_choice.get("link"),
                     "clarification_prompt": None,
                     "possible_choices": None
                 }

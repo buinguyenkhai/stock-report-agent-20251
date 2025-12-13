@@ -1,15 +1,20 @@
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 from state import StockReportState
+from config import settings
+from logger import get_logger
 import regex as re
+
+logger = get_logger(__name__)
 
 def prepare_next_extraction_node(state: StockReportState) -> StockReportState:
     """Lấy yêu cầu tiếp theo từ danh sách chờ và cập nhật State."""
-    print("Bắt đầu Node: Chuẩn bị Trích xuất")
-    pending = state["pending_requests"]
+    logger.info("Bắt đầu Node: Chuẩn bị Trích xuất")
+    pending = list(state.get("pending_requests", []))
     if not pending:
+        logger.warning("No pending requests found")
         return {**state, "error_message": "Không có yêu cầu nào đang chờ."}
-    next_request = pending.pop(0) # Lấy yêu cầu đầu tiên
-    print(f"Đang xử lý yêu cầu: {next_request.request_id} - {next_request.stock_code} {next_request.period} {next_request.quarter}/{next_request.year}")
+    next_request = pending.pop(0)
+    logger.info(f"Đang xử lý yêu cầu: {next_request.request_id} - {next_request.stock_code} {next_request.period} {next_request.quarter}/{next_request.year}")
 
     return {
         **state,
@@ -29,31 +34,37 @@ def prepare_next_extraction_node(state: StockReportState) -> StockReportState:
 
 def extract_report_link_node(state: StockReportState) -> StockReportState:
     """Node để trích xuất link PDF."""
-    print(f"Bắt đầu Node: Trích xuất link cho {state['stock_code']}")
+    stock_code = state.get("stock_code", "")
+    logger.info(f"Bắt đầu Node: Trích xuất link cho {stock_code}")
+    
+    if not stock_code:
+        logger.error("Missing stock_code in state")
+        return {**state, "error_message": "Thiếu mã chứng khoán."}
+    
     # Khởi tạo
-    stock_code = state["stock_code"]
-    year = state["year"]
-    period = state["period"]
+    year = state.get("year")
+    period = state.get("period")
     user_consol_status = state.get("consolidation_status")
     output_state = { "report_link": None, "error_message": None, "clarification_prompt": None, "notification": None }
     try:
         with sync_playwright() as p:
             # Truy cập vietstock
-            browser = p.chromium.launch(headless=True)
+            browser = p.chromium.launch(headless=settings.scraper_headless)
             page = browser.new_page()
-            url = f"https://finance.vietstock.vn/{stock_code.upper()}/tai-tai-lieu.htm?doctype=1"
-            page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            url = f"{settings.vietstock_base_url}/{stock_code.upper()}/tai-tai-lieu.htm?doctype=1"
+            logger.debug(f"Navigating to: {url}")
+            page.goto(url, wait_until="domcontentloaded", timeout=settings.scraper_timeout)
             if period != "Mới nhất" and year:
                 # Chọn năm
                 year_selector = 'select.dropdown-year'
-                page.wait_for_selector(year_selector, timeout=30000) 
+                page.wait_for_selector(year_selector, timeout=settings.scraper_timeout) 
                 page.select_option(year_selector, str(year))
                 page.wait_for_function("""
                             (year) => {
                                 const firstReport = document.querySelector("div.p-t-xs p.i-b-d a");
                                 return firstReport && firstReport.innerText.includes(year);
                             }
-                        """, arg=str(year), timeout=60000)
+                        """, arg=str(year), timeout=settings.scraper_wait_timeout)
             reports_data = page.query_selector_all("div.p-t-xs p.i-b-d")
             # Lấy tên và link của tất cả pdf báo cáo trong năm
             scraped_reports = []
@@ -68,13 +79,16 @@ def extract_report_link_node(state: StockReportState) -> StockReportState:
                     cleaned_title = re.sub(r'\s*\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2}\s*$', '', title)
                     scraped_reports.append({"title": cleaned_title, "link": link})
             browser.close()
+            logger.debug(f"Found {len(scraped_reports)} reports")
             if not scraped_reports:
                 output_state["error_message"] = f"Không tìm thấy báo cáo nào cho mã {stock_code} năm {year}."
                 return {**state, **output_state}
     except PlaywrightTimeoutError:
+        logger.error(f"Playwright timeout for stock {stock_code}")
         output_state["error_message"] = f"Không tìm thấy thông tin cho mã chứng khoán '{stock_code}'. Vui lòng kiểm tra lại mã."
         return {**state, **output_state}
     except Exception as e:
+        logger.error(f"Scraping error: {e}", exc_info=True)
         output_state["error_message"] = f"Lỗi khi scraping web: {str(e)}"
         return {**state, **output_state}
     

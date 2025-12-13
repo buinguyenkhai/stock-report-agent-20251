@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from langgraph.graph import StateGraph, START, END
 
 from state import StockReportState
+from logger import setup_logging, get_logger
 from nodes import (
     process_query_node,
     extract_report_link_node,
@@ -17,6 +18,8 @@ from nodes import (
 )
 
 load_dotenv()
+setup_logging()
+logger = get_logger(__name__)
 
 graph_builder = StateGraph(StockReportState)
 
@@ -57,10 +60,14 @@ graph_builder.add_conditional_edges(
 
 agent = graph_builder.compile()
 
+logger.info("Agent compiled successfully")
 print('Xin chào, tôi là trợ lý báo cáo tài chính cổ phiếu Việt Nam. Hãy nhập truy vấn của bạn!')
 query = input("Truy vấn: ")
+
+logger.info(f"Received query: {query}")
 final_state = agent.invoke({"query": query})
 
+logger.info("AGENT ĐÃ HOÀN TẤT")
 print("AGENT ĐÃ HOÀN TẤT")
 with open("result.json", 'w', encoding='utf-8') as f:
     json.dump(final_state, f, ensure_ascii=False, indent=4)
