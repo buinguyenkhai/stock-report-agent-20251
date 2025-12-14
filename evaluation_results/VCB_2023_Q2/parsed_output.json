@@ -1,0 +1,868 @@
+{
+  "BS": [
+    {
+      "item_code": "I",
+      "item_name": "Tiền mặt, vàng bạc, đá quý",
+      "value": 16134106.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "II",
+      "item_name": "Tiền gửi tại Ngân hàng Nhà nước",
+      "value": 56430924.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "III",
+      "item_name": "Tiền gửi tại và cho vay các tổ chức tín dụng khác",
+      "value": 286406768.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Tiền gửi tại các tô chức tín dụng khác",
+      "value": 266930956.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Cho các tô chức tín dụng khác",
+      "value": 20475812.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "vay Dự phòng rủi ro",
+      "value": -1000000.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IV",
+      "item_name": "Chứng khoán kinh doanh",
+      "value": 1375964.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Chứng khoán kinh doanh",
+      "value": 1394711.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Dự phòng rủi ro chứng khoán kính doanh",
+      "value": -18747.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "V",
+      "item_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác",
+      "value": 217428.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VI",
+      "item_name": "Cho vay khách hàng",
+      "value": 1139981404.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Cho vay khách hàng",
+      "value": 1177728457.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Dự phòng rủi ro cho vay khách hàng",
+      "value": -37747053.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VII",
+      "item_name": "Chứng khoán đầu tư",
+      "value": 156871470.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Chứng khoán đầu tư sẵn sàng để bán",
+      "value": 65672102.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Chứng khoán đầu tư giữ đến ngày đáo hạn",
+      "value": 91277142.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Dự phòng rủi ro chứng khoán đầu tư",
+      "value": -71714.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VIII",
+      "item_name": "Góp vốn, đầu tư dài hạn",
+      "value": 2248021.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "8(a)",
+      "item_name": "Vốn góp liên doanh",
+      "value": 822679.0,
+      "notes_ref": "8(a)"
+    },
+    {
+      "item_code": "8(b)",
+      "item_name": "Đầu tư vào công ty liên kết",
+      "value": 14196.0,
+      "notes_ref": "8(b)"
+    },
+    {
+      "item_code": "",
+      "item_name": "Đầu tư đài hạn khác",
+      "value": 1529145.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Dự phòng giảm giá đầu tư dài hạn",
+      "value": -117999.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản cố định",
+      "value": 7598470.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản cố định hữu hình",
+      "value": 4918188.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Nguyên giá",
+      "value": 14154402.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Hao mòn tài sản cô định",
+      "value": -9236214.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IX",
+      "item_name": "Tài sản cố định vô hình",
+      "value": 2680282.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Nguyên giá",
+      "value": 4864567.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Hao mòn tài sản cô định",
+      "value": -2184285.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "X",
+      "item_name": "Tài sản Có khác",
+      "value": 37008578.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Các khoản phải thu",
+      "value": 24959159.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Các khoản lãi, phí phải thu",
+      "value": 8954322.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản thuế thu nhập doanh nghiệp hoãn lại",
+      "value": 953110.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản Có khác",
+      "value": 2154222.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Các khoản dự phòng rủi ro cho các tài sản Có khác",
+      "value": -12235.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "TỔNG TÀI SẢN CÓ",
+      "value": 1704273133.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "I",
+      "item_name": "Các khoản nợ Chính phủ và Ngân hàng Nhà nước",
+      "value": 2270345.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Tiền gửi và vay Chính phủ và Ngân hàng Nhà nước",
+      "value": 2270345.0,
+      "notes_ref": "9"
+    },
+    {
+      "item_code": "II",
+      "item_name": "Tiền gửi và vay các tổ chức tín dụng khác",
+      "value": 160661447.0,
+      "notes_ref": "10"
+    },
+    {
+      "item_code": "1",
+      "item_name": "Tiền gửi của các tổ chức tín dụng khác",
+      "value": 155314392.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Vay các tổ chức tín dụng khác",
+      "value": 5347055.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "III",
+      "item_name": "Tiền gửi của khách hàng",
+      "value": 1326853836.0,
+      "notes_ref": "11"
+    },
+    {
+      "item_code": "IV",
+      "item_name": "Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro",
+      "value": 1088.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "V",
+      "item_name": "Phát hành giấy tờ có giá",
+      "value": 16323830.0,
+      "notes_ref": "12"
+    },
+    {
+      "item_code": "VI",
+      "item_name": "Các khoản nợ khác",
+      "value": 46161459.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Các khoản lãi, phí phải trả",
+      "value": 19005982.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Các khoản phải trả và công nợ khác",
+      "value": 27155477.0,
+      "notes_ref": "13"
+    },
+    {
+      "item_code": "",
+      "item_name": "TỔNG NỢ PHẢI TRẢ",
+      "value": 1552272005.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VII",
+      "item_name": "Vốn và các quỹ",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Vốn của tổ chức tín dụng",
+      "value": 53130392.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Vốn điêu lệ",
+      "value": 47325166.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Thặng dư vốn cổ phần",
+      "value": 4995389.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Vốn khác",
+      "value": 809837.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Quỹ của tổ chức tín dụng",
+      "value": 22564054.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Chênh lệch tỷ giá hồi đoái",
+      "value": -886284.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Lợi nhuận chưa phân phối",
+      "value": 77094650.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lợi nhuận để lại năm trước",
+      "value": 60685392.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lợi nhuận năm nay",
+      "value": 16409258.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Lợi ích cổ đông không kiểm soát",
+      "value": 98316.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "14",
+      "item_name": "TỔNG VỐN CHỦ SỞ HỮU",
+      "value": 152001128.0,
+      "notes_ref": "14"
+    },
+    {
+      "item_code": "",
+      "item_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+      "value": 1704273133.0,
+      "notes_ref": ""
+    }
+  ],
+  "PL": [
+    {
+      "item_code": "1",
+      "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+      "value": 56512081.0,
+      "notes_ref": "16"
+    },
+    {
+      "item_code": "2",
+      "item_name": "Chỉ phí lãi và các chỉ phí tươngtự",
+      "value": -28288554.0,
+      "notes_ref": "17"
+    },
+    {
+      "item_code": "I",
+      "item_name": "Thu nhập lãi thuần",
+      "value": 28223527.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Thu nhập từ hoạt động dịch vụ",
+      "value": 6120161.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Chỉ phí hoạt động dịch vụ",
+      "value": -3041702.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "II",
+      "item_name": "Lãi thuần từ hoạt động dịch vụ",
+      "value": 3078459.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "III",
+      "item_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
+      "value": 3186302.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IV",
+      "item_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+      "value": 88904.0,
+      "notes_ref": "18"
+    },
+    {
+      "item_code": "V",
+      "item_name": "(Lỗ)/lãi thuần từ mua bán chứng khoán đầu tư",
+      "value": -61.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Thu nhập từ hoạt động khác",
+      "value": 2071267.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "6",
+      "item_name": "Chỉ phí hoạt động khác",
+      "value": -730353.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VII",
+      "item_name": "Lãi thuần từ hoạt động khác",
+      "value": 1340914.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VIII",
+      "item_name": "Thu nhập từ góp vốn, mua cỗ phần",
+      "value": 69305.0,
+      "notes_ref": "19"
+    },
+    {
+      "item_code": "IX",
+      "item_name": "Chỉ phí hoạt động",
+      "value": -10930359.0,
+      "notes_ref": "20"
+    },
+    {
+      "item_code": "X",
+      "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chỉ phí dự phòng rủi ro tín dụng",
+      "value": 25056991.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "XI",
+      "item_name": "Chi phí dự phòng rủi ro tín dụng",
+      "value": -4557965.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "XII",
+      "item_name": "Tổng lợi nhuận trước thuế",
+      "value": 20499026.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Chỉ phí thuế TNDN hiện hành",
+      "value": -4074211.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Chỉ phí thuế TNDN hoãn lại",
+      "value": -4956.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "XIII",
+      "item_name": "Chi phí thuế TNDN",
+      "value": -4079167.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "XIV",
+      "item_name": "Lợi nhuận sau thuế",
+      "value": 16419859.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "XV",
+      "item_name": "Lợi ích của cỗ đông không kiểm soát",
+      "value": -10601.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "XVI",
+      "item_name": "Lợi nhuận thuần trong kỳ phân bỗ cho cỗ đông của Ngân hàng",
+      "value": 16409258.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "XVII",
+      "item_name": "Lãi cơ bản trên cổ phiếu (VND)",
+      "value": 3467.0,
+      "notes_ref": "15"
+    }
+  ],
+  "CF": [
+    {
+      "item_code": "1",
+      "item_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được",
+      "value": 56751152.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Chỉ phí lãi và các chỉ phí tương tự đã trả",
+      "value": -21791253.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Thu nhập từ hoạt động dịch vụ nhận được",
+      "value": 2238909.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",
+      "value": 3036726.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Chi phí khác",
+      "value": 551848.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "6",
+      "item_name": "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro",
+      "value": 785926.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "7",
+      "item_name": "Tiền chỉ trả cho nhân viên và hoạt động quản lý công vụ",
+      "value": -9820696.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "8",
+      "item_name": "Tiền thuế thu nhập thực nộp trong kỳ",
+      "value": -7789763.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "I",
+      "item_name": "Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+      "value": 2861.89,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "II",
+      "item_name": "(Tăng)/Giảm về tài sản hoạt động",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "9",
+      "item_name": "Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác",
+      "value": 18323601.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "10",
+      "item_name": "Các khoản về kinh doanh chứng khoán",
+      "value": 9852666.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "11",
+      "item_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác",
+      "value": -60913.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "12",
+      "item_name": "Các khoản cho vay khách hàng",
+      "value": -32662207.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "13",
+      "item_name": "Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thât",
+      "value": -1433429.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "14",
+      "item_name": "_ Tài sản hoạt động khác",
+      "value": 23648769.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "III",
+      "item_name": "Tăng/(Giảm) về công nợ hoạt động",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "15",
+      "item_name": "Các khoản nợ Chính phủ và NHNN",
+      "value": -65044471.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "16",
+      "item_name": "Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác",
+      "value": -71849403.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "17",
+      "item_name": "Các khoản tiền gửi của khách hàng",
+      "value": 83385365.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "18",
+      "item_name": "Các khoản phát hành giấy tờ có giá",
+      "value": -9014117.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "19",
+      "item_name": "Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro",
+      "value": -2210.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "20",
+      "item_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "21",
+      "item_name": "Công nợ hoạt động khác",
+      "value": -64317672.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "22",
+      "item_name": "Chỉ từ các quỹ của tổ chức tín dụng",
+      "value": -1236860.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IV",
+      "item_name": "Tiền thuần (sử dụng cho)/ từ hoạt động kinh doanh",
+      "value": -86448032.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Mua sắm tài sản cố định",
+      "value": -279706.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Tiền thu từ thanh lý, nhượng bán tài sản cố định",
+      "value": 3490.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "_ Tiền chỉ cho thanh lý, nhượng bán tài sản có định",
+      "value": -350.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Tiền thu đầu tư, góp vốn vào các đơn vị khác",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn đài hạn",
+      "value": 12363.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "6",
+      "item_name": "Tiền thu từ cổ tức đã có quyết định từ năm trước",
+      "value": 23847.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VII",
+      "item_name": "Tiền thuần (sử dụng cho) hoạt động đầu tư",
+      "value": -240356.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Cổ tức đã trả",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VIII",
+      "item_name": "Tiền thuần (sử dụng cho) hoạt động tài chính",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IX",
+      "item_name": "Lưu chuyển tiền thuần trong kỳ",
+      "value": -86688388.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "X",
+      "item_name": "Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ",
+      "value": 412235294.0,
+      "notes_ref": "21"
+    },
+    {
+      "item_code": "XI",
+      "item_name": "Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ",
+      "value": 325546906.0,
+      "notes_ref": "21"
+    }
+  ],
+  "Notes": [
+    {
+      "note_number": "4",
+      "note_title": "Chứng khoán kinh doanh",
+      "content": "Chứng khoán nợ\nTrái phiếu Chính phủ\nTrái phiếu do các TCTD khác trong nước phát hành\nChứng khoán do các TCKT trong nước phát hành\nChứng khoán vốn\nvốn do các TCTD khác\nChứng khoán phát hành Chứng khoán vốn do các TCKT trong nước phát hành\nDự phòng rủi ro chứng khoán kinh doanh\nCho vay khách hàng\nCho vay các TCKT, cá nhân trong nước\nCho vay chiết khấu công cụ chuyên nhượng và các giấy tờ có giá\nCho thuê tài chính\nCác khoản trả thay khách hàng\nCho vay đối với các tổ chức, cá nhân nước ngoài\nPhân tích chất lượng nợ cho vay:\nNợ đủ tiêu chuẩn\nNợ cần chú ý\nNợ đưới tiêu chuẩn Nợ nghỉ ngờ\nkhả mắt\nNợ có năng vốn..."
+    },
+    {
+      "note_number": "5",
+      "note_title": "Chứng khoán đầu tư",
+      "content": "Chứng khoán đầu tư sẵn sàng để bán\nChứng khoán nợ\nTrái phiếu Chính phủ phiếu Kho bạc, tín phiếu NHNN\nTín khoán do các TCTD khác trong nước phát hành\nChứng nợ Chứng khoán nợ do các TCKT trong nước phát hành\nDự phòng rủi ro chứng khoán đầu tư sẵn sàng để bán Trong đó:\nDự phòng giảm giá\nChứng khoán đầu tư giữ đến ngày đáo hạn\nChứng khoán nợ Trái phiếu Chính phủ\nkhoán do các TCTD khác trong nước phát hành\nChứng nợ Chứng khoán nợ do các TCKT trong nước phát hành\nDự phòng rủi ro chứng khoán đầu tư giữ đến ngày đáo hạn\nTrong đó: Dự phòng chung Trái phiếu doanh nghiệp chưa niêm yết..."
+    },
+    {
+      "note_number": "8",
+      "note_title": "Góp vốn đầu tư dài hạn",
+      "content": "(a) Vốn góp liên doanh\nTại ngày 30 tháng 6 năm 2023\nCông ty TNHH Vietcombank - Bonday- Bến Thành đầu\nCho thuê văn phòng lý Quỹ\nCông ty liên doanh Quản lý quỹ tư chứng khoán Vietcombank\nQuản đầu tư\nTại ngày 31 tháng 12 năm 2022 (đã kiểm toán) —\nNgành kinhdoanhh\nCông ty TNHH Vietcombank - Bonday- Bến Thành\nCho thuê văn phòng\nCông ty liên doanh Quản lý quỹ đầu tư chứng khoán Vietcombank\nQuản lý Quỹ đầu tư\nĐầu tư vào các công ty liên kết\nĐầu tư vào các công ty liên kết\nTại ngày 30 tháng 6 năm 2023\nNgành kinhdoanh\nCông ty TNHH Vietcombank - Bonday\nCho thuê văn phòng\nTại ngày 31 tháng 12 năm 2022 (đã kiểm toán)\nNgành kinhhdoanh\nCông ty TNHH Vietcombank - Bonday\nCho thuê văn phòng..."
+    },
+    {
+      "note_number": "9",
+      "note_title": "Các khoản nợ Chính Phủ và Ngân hàng Nhà nước Việt Nam",
+      "content": "Vay Ngân hàng Nhà nước\nVay theo hồ sơ tín dụng\nVay khác\nTiền gửi thanh toán của Kho bạc Nhà nước\nTiền gửi không kỳ hạn băng VND\nTiền gửi không kỳ hạn băng ngoại tệ\nTiền gửi có kỳ hạn bằng VND\nTiền gửi của Ngân hàng Nhà nước"
+    },
+    {
+      "note_number": "10",
+      "note_title": "Tiền gửi và vay các tô chức tín dụng khác",
+      "content": "Tiền gửi của các tô chức tín dụng khác\nTiền gửi không kỳ hạn băng VND\nTiền gửi không kỳ hạn băng ngoại tỆ\nTiền gửi có kỳ hạn băng VND\nTiền gửi có kỳ hạn băng ngoại tệ\nVay các tổ chức tín dụng khác\nVay VND\nbăng Vay băng ngoại tệ"
+    },
+    {
+      "note_number": "11",
+      "note_title": "Tiền gửi của khách hàng",
+      "content": "Tiền gửi không kỳ hạn\nTiền gửi không kỳ hạn bằng VND bằng vàng, ngoại tệ\nTiền gửi không kỳ hạn\nTiền gửi có kỳ hạn có kỳ hạn bằng VND\nTiền gửi Tiền gửi có kỳ hạn bằng vàng, ngoại tỆ\nTiền gửi vốn chuyên dùng\nTiền gửi ký quỹ"
+    },
+    {
+      "note_number": "12",
+      "note_title": "Phát hành giấy tờ có giá",
+      "content": "chỉ\nChứng tiền gửi Ngắn hạn bằng VND\nTrung, dài hạn bằng VND\nKỳ phiếu, trái phiếu\nNgắn hạn bằng VND\nNgắn hạn bằng ngoại tỆ\nhạn bằng VND\nTrung bằng ngoại tỆ\nTrung hạn Dài hạn bằng VND"
+    },
+    {
+      "note_number": "13",
+      "note_title": "Các khoản phải trả và công nợ khác",
+      "content": "Các khoản phải trả nội bộ\nCác khoản phải trả bên ngoài\nQuỹ khen thưởng, phúc lợi"
+    },
+    {
+      "note_number": "14",
+      "note_title": "Vốn và các quỹ",
+      "content": "(a) Báo cáo tình hình thay đối vốn chủ sở hữu\nSố dư tại ngày 1/1/2023 (đã kiểm toán)\nLợi nhuận thuần trong kỳ\nSử dụng trong kỳ\nĐiều chỉnh theo Nghị quyết của Công ty con\nĐiều chỉnh công ty LDLK theo phương pháp vốn chủ\nChênh lệch tỷ giá\nKhác\nSố dư tại ngày 30/6/2023\nChỉ tiết các cổ đông của Ngân hàng\nCổ phiếu phổ thông\nNhà nước\nCỏ nước\nđông chiến lược Cổ đông khác\nVốn cổ phần đã được duyệt và đã phát hành của Ngân hàng là:\nVốn cổ phần được duyệt\nCổ phiếu đã phát hành Cổ phiếu phô thông\nCổ phiếu đang lưu hành Cổ phiếu phổ thông\nMệnh giá cổ phiếu phổ thông của Ngân hàng là 10.000 VND."
+    },
+    {
+      "note_number": "15",
+      "note_title": "Lãi cơ bản trên cỗ phiếu",
+      "content": "(a) Lợi nhuận để tính lãi cơ bản trên cỗ phiếu\nLợi nhuận thuần\nLợi nhuận phân bổ cho cổ đông sở hữu cỗ phiếu phổ thông\nSố bình quân gia quyền của cổ phiếu phổ thông\ntrong kỳ 1.023.639.123\nCổ phiếu phổ thông đã phát hành đầu kỳ cỗ phổ\nthông đã phát hành =\nẢnh hưởng của số 4.732.516.571\nphiếu\nLãi cơ bản phiếu\ntrên cỗ\nLãi cơ bản trên cổ phiếu (VND/cổ phiếu)\ntừ 1/1/2023 đến 30/6/2023\nThu lãi cho khách\nnhập vay hàng Thu nhập lãi tiền gửi đầu tư\nkhoán 3.612.261 3.901.539\nlãi từ kinh 34.112.133\nThu nhập doanh, chứng - Thu lãi từ chứng khoán đầu tư\nThu từ cho thuê tài chính\nThu lãi từ chứng khoán kinh doanh\nThu khác từ hoạt động tín dụng\nThu phí từ nghiệp vụ\nbảo lãnh..."
+    },
+    {
+      "note_number": "17",
+      "note_title": "Chỉ phí lãi và các khoản chỉ phí tương tự",
+      "content": "Trả lãi tiền gửi\nTrả lãi tiền gửi và vay các tổ chức tín dụng khác\nTrả lãi phát hành giấy tờ có giá\nChi phí khác cho hoạt động tín dụng"
+    },
+    {
+      "note_number": "18",
+      "note_title": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+      "content": "Thu nhập từ mua bán chứng khoán kinh doanh\nChi về bán chứng khoán kinh doanh\nphí mua Hoàn nhập dự phòng giảm giá chứng khoán kinh doanh"
+    },
+    {
+      "note_number": "19",
+      "note_title": "Thu nhập từ góp vốn, mua cổ phần",
+      "content": "Cổ tức nhận được trong kỳ từ góp vốn, mua cỗ phần - Cô tức từ các khoản góp vốn, mua cổ phân đã nhận\n~ Phân chia lãi theo phương pháp vốn chủ sở hữu của các khoản đầu tư vào các công ty liên doanh, liên kết\nCổ tức từ chứng khoán vốn kinh doanh đã nhận"
+    },
+    {
+      "note_number": "20",
+      "note_title": "Chỉ phí hoạt động",
+      "content": "Chỉ nộp thuế và các khoản phí, lệ phí\nChỉ phí cho nhân viên\nTrong đó:\n- Chỉ lương và phụ cấp khoản chỉ đóng góp theo lương\n- Các Chỉ trợ cấp\n-\nChỉ về tài sản\nTrong đó:\n- Khẩu hao tài sản có định Chi cho hoạt động quản lý công\nvụ Chỉ nộp phí bảo hiểm, bảo toàn tiền gửi của khách hàng\nChỉ phí hoạt động khác"
+    },
+    {
+      "note_number": "21",
+      "note_title": "Tiền và các khoản tương đương tiền",
+      "content": "Tiền\nTiền mặt,\nvàng gửi\ntại\nTiền, bạc,\nNgân vàng\nvới gửi\nđá\nhàng tại\nkỳ\nhạn\nChứng khoán\n3\ntháng kê\ngộc quý\nNhà\nvà\ncho nước\nvay không\ncó\nthời từ\ncác quá\nhạn ngày\nthu mua\nViệt\nNam tổ\nchức\n3\ntháng hồi\nhoặc tín\ndụng\nđáo hạn\nkhác không\nquá\n30/6/2023\nTriệu\nVND\n16.134.106\n56.430.924\n252.981.876\n325.546.906\n(đã\n31/12/2022\nTriệu\nVND\nkiểm toán)\n18.348.534\n92.557.809\n271.728.951\n29.600.000\n412.235.294"
+    },
+    {
+      "note_number": "22",
+      "note_title": "Giao dịch với các bên liên quan",
+      "content": "Trong giai đoạn từ ngày 1 tháng 1 năm 2023 đến ngày 30 tháng 6 năm 2023, Vietcombank có các giao dịch với các bên liên quan như sau:\nNgân hàng Nhà nước\nĐại diện chủ sở hữu\nThu lãi tiền gửi\nlãi tiên và tiền\nChỉ phí gửi vay\nBộ Tài chính\nBên liên quan của chủ sở hữu\nChỉ phí lãi tiền gửi\nChỉ phí lãi tiền vay\nTại ngày 30 tháng 6 năm 2023, Vietcombank có các số dư trọng yêu với các bên liên quan như sau:\nNgân hàng Nhà nước\nĐại diện chủ sở hữu\nTiền gửi của Vietcombank tại NHNN\nTiền gửi và tiền vay của Vietcombank từ NHNN\nBộ Tài chính\nBên liên quan của chủ sở hữu\nTiền gửi tại Vietcombank\nVay Bộ tài chính..."
+    },
+    {
+      "note_number": "23",
+      "note_title": "Báo cáo bộ phận",
+      "content": "(a) Báo cáo bộ phận theo khu vực địa lý\nl Miền Bắc (*) Triệu VND\nMiền Trung  &Tây Nguyên Triệu VND\nMiền Nam Triệu VND\nNước ngoài Triệu VND\nLoại trừ Triệu VND\nTổng Triệu VND\nThu nhập lãi và các khoản thu nhập tương tự\nChỉ phí lãi và các chỉ phí tương tự\nThu nhập lãi thuần\nThu từ hoạt động dịch\nnhập vụ Chỉ phí từ hoạt động dịch vụ\nLãi thuần từ hoạt động dịch vụ\nLãi thuần từ hoạt động kinh doanh ngoại hối\nLãi thuần từ mua bán chứng khoán kinh doanh\n(Lỗ) thuần từ mua bán chứng khoán đầu tư\nThu hoạt động khác\nnhập Chỉ khác\nphí hoạt động Lãi/(ỗ) thuần từ hoạt động khác\nThu nhập từ góp vốn, mua cỗ phần\nChỉ phí hoạt động\nLợi nhuận thuần từ hoạt động kinh doanh trước chỉ phí dự phòng rủi ro tín dụng\nChỉ phí dự phòng rủi ro tín dụng\nTổng lợi nhuận trước thuế\nChi phí thuế TNDN hiện hành\nChi phí thuế TNDN hoãn lại\nChi phí thuế TNDN\nLợi nhuận sau thuế\n(*) — Tại thời điểm ngày 30 tháng 6 năm 2023, Trụ Sở chính thuộc khu vực miễn Bắc thực hiện chỉ một số khoản chỉ phí hoạt động cho toàn hệ thống nhưng chưa phân bồ tới các đơn vị trong Ngân hàng.\n(b) Báo cáo bộ phận theo lĩnh vực kinh doanh\nNgân hàng Triệu VND\nTài chính phi ngân hàng Triệu VND\nChứng khoán Triệu VND\nKhác Triệu VND\nLoại trừ Triệu VND\nTổng Triệu VND\nThu nhập lãi và các khoản thu nhập tương tự\nChỉ phí lãi và các chỉ phí tương tự\nThu nhập lãi thuần\nThu nhập từ hoạt động dịch vụ\nhú Chỉ phí từ hoạt động dịch vụ\nLãi thuần từ hoạt động dịch vụ\nLãi thuần từ hoạt động kinh doanh ngoại hối\nLãi thuần từ mua bán chứng khoán kinh doanh\n(Lỗ) thuần từ mua bán chứng khoán đầu tư\nThu nhập hoạt động khác\nChi phí hoạt động khác\nLãi thuần từ hoạt động khác\nvu Thu nhập từ góp vốn, mua cỗ phần\nChỉ phí hoạt động\nLợi nhuận thuần từ hoạt động kinh doanh trước chỉ phí dự phòng rủi ro tín dụng\nChỉ phí dự phòng rủi ro tín dụng\nTổng lợi nhuận trước thuế\nChỉ phí thuế TNDN hiện hành\nChi phí thuê TNDN hoãn lại\nxH Chỉ phí thuế TNDN\nxIH Lợi nhuận sau thuế..."
+    },
+    {
+      "note_number": "24",
+      "note_title": "Thuyết minh công cụ tài chính",
+      "content": "(a) Thuyết minh về tài sản đảm bảo\nVietcombank không nắm giữ tài sản bảo đảm mà Vietcombank được phép bán hoặc đem tài sản đó đi bảo đảm cho bên thứ ba trong trường hợp chủ sở hữu tài sản vẫn có khả năng trả nợ.\n(b) Thuyết minh về giá trị hợp lý\nThông tư 210/2009/TT-BTC yêu cầu thuyết minh về phương pháp xác định giá trị hợp lý và các thông tin về giá trị hợp lý của tài sản và nợ phải trả tài chính để có thể so sánh giá trị hợp lý và giá trị ghi sô.\nBảng sau trình bày giá trị ghi số và giá trị hợp lý của các tài sản và nợ phải trả tài chính của Vietcombank tại ngày 30 tháng 6 năm 2023:\nGiá trị ghi số\nGiá trị ghi số\nGiá trị ghi số\nGiá trị ghi số\nGiá trị ghi số\nGiá trị ghi số\nGiá trị ghi số\nGiá trị\nGiá trị\nKinh doanh\nGiữ đến ngày đáo hạn\n— Cho vay và phải thu\nSẵn sàng đểbán\nHạchtoán theo giá phân b\nTông cộng giá trị ghi số (gộp)\nhợp lý\nhợp lý\nTriuVND\nTriệuVND\nTriệuVND\nTriệu VND\nTriệu VND\nTriệu\nTriệu VND\nTriệu VND\nVND\nTài sản tài\nchính\nTiền bạc, đá\nTiền gửi tại NHNN\nTiền gửi tại và cho vay các tổ chức tín dụng khác\nChứng khoán kinh doanh tài chính tài sản tài chính\nCác công cụ phái sinh và các\nCho vay khách hàng\nChứng khoán đầu tư\nGóp vốn, đầu tư đài hạn\nTài sản tài chính khác\nNợ phải trả tài chính và các tổ chức tín\nTiền gửi của và vay từ NHNN Tiền của khách\ngửi hàng đầu cho vay TCTD chịu rủi\nVốn tài trợ, ủy thác tư, Phát hành giấy tờ có giá\ntrả tài chính\nVỊ Các khoản nợ phải khác\nŒ) Do không đủ thông tin để sử dụng các kỹ thuật định giá, giá trị hợp lý của các tài sản và nợ phải trả tài chính không có thị trường hoạt động này không ước tính được một cách đáng tin cậy và đo đó, không được thuyt mỉnh.\n(c) Chính sách quản lý rủi ro liên quan đến các công cụ tài chính\nHội đồng Quản trị có quyền hạn và nhiệm vụ cao nhất trong việc điều hành tất cả các hoạt động của Vietcombank liên quan đến quản lý rủi ro, bảo đảm hoạt động kinh doanh của Vietcombank không ngừng phát triên, an toàn và bên vững.\nĐể thực hiện chức năng và nhiệm vụ của mình, Hội đồng Quản trị chịu trách nhiệm ban hành các chính sách và chiến lược quản lý rủi ro phù hợp trong từng thời kỳ; xác lập các giới hạn kinh doanh an toàn; trực tiếp phê duyệt các giao dịch kinh doanh có giá trị lớn theo quy định của pháp luật và Vietcombank trong từng thời kỳ; quyêt định cơ cấu tổ chức và các vị trí nhân sự chủ chốt.\nCác chính sách, hoạt động quản lý rủi ro của Hội đồng Quản trị phải phù hợp với các quy định tại Điều lệ của Vietcombank và Nghị quyết của Đại hội đồng cô đông trong từng thời kỳ.\nỦy ban Quản lý Rủi ro là bộ phận do Hội đồng quản trị ra quyết định thành lập và chịu trách nhiệm giúp việc cho Hội đồng Quản trị trong việc quản lý mọi loại rủi ro phát sinh trong hoạt động kinh doanh của Vietcombank.\nỦy ban Quản lý Tài sản nợ -Tài sản có (*ALCO\") là bộ phận do Tổng Giám đốc ra quyết định thành lập. Chủ tịch ALCO là Tông Giám đốc. Các thành viên của ALCO là các cán bộ chủ chốt đang thực hiện nhiệm vụ quản lý rủi ro trong Vietcombank.\nALCO có nhiệm vụ giám sát và quản lý tổng thể các hạng mục tài sản có và tài sản nợ trong báo cáo tình hình tài chính hợp nhất và riêng của Vietcombank nhằm tối đa hoá lợi nhuận và tối thiêu hoá các tổn thất phát sinh do những biến động bắt lợi từ thị trường; quản lý rủi ro thanh khoản; điều hành lãi suất và tỷ giá phù hợp.\nTrong phạm vi phân cấp, ALCO được quyền ra các quyết định liên quan đến quản lý rủi ro.\n(d) Rủi ro tín dụng\nVietcombank luôn phải đứng trước các rủi ro tín dụng, đó là nguy cơ mắt mát về tài chính khi các bên đối tác không thể hoàn thành nghĩa vụ đúng hạn. Rủi ro tín dụng phát sinh chủ yếu trong nghiệp vụ cho vay dưới hình thức các khoản vay và tạm ứng, trong đầu tư dưới hình thức các chứng khoán nợ. Các công cụ tài chính ngoại bảng, như cam kết cho vay, cũng tiềm ẳn rủi ro tín dụng. Quản lý và kiểm soát rủi ro tín dụng được thực hiện thông qua các chính sách và thủ tục có liên quan, trong đó có chính sách quản lý rủi ro tín dụng và hoạt động của Ủy ban Quản lý Rủi ro và Hội đồng Tín dụng.\nVietcombank tiến hành phân loại nợ đối với các khoản cho vay khách hàng và các tổ chức tín dụng khác, cam kết ngoại bảng, các khoản ủy thác cho vay, ủy thác và đầu tư trái phiếu tổ chức kinh tế chưa niêm yết dựa trên yêu cầu của Thông tư 11 (Thuyết minh 2(h)), qua đó thường xuyên đánh giá rủi ro của các khoản nợ có vấn đề, nợ xấu và đề xuất biện pháp xử lý phù hợp.\nĐể quản lý rủi ro tín dụng Vieteombank sử dụng các công cụ: xây dựng chính sách và ban hành các quy định liên quan công tác quản lý rủi ro tín dụng; xây dựng các quy trình tín dụng; thực hiện rà Soát rủi ro tín dụng; xây đựng hệ thông xếp hạng tín dụng nội bộ và phân loại nợ; phân câp thâm quyền trong hoạt động tín dụng.\nSố liệu thể hiện trung thực nhất mức độ rủi ro tín dụng nội bảng tối đa của Vietcombank tại ngày 30 tháng 6 năm 2023, không tính đến tài sản đảm bảo hay hỗ trợ tín dụng, bao gồm:\nChưa quáhạn và chưa bị giảm giá Triệu VND\nĐã quáhạn nhưng chưa bị giảm giá Triệu VND\nĐã bị giảm giá và lập dự phòng đây đủ Triệu VND\nTổng Triệu VND\nTiền gửi và cho vay các tổ chức tín dụng khác - gộp\nTiền gửi tại các tô chức tín dụng khác\nCho vay các tổ chức tín dụng khác\nCho vay và ứng trước khách hàng- gộp\nChứng khoán đầu tư ~ gộp\nChứng khoán đầu tư sẵn sàng để bán\nChứng khoán đầu tư giữ đến ngày đáo hạn\nTài sản Có khác\nMô tả và giá trị ghỉ số của tài sản đảm bảo Vietcombank nắm giữ làm tài sản thế chấp tại ngày 30 tháng 6 năm 2023 như sau:\nTiền gửi\nGiấy tờ có giá\nBất động sản\nTài sản thế chấp\n(e) Rải ro lãi suất\nRủi ro lãi suất là rủi ro khi luồng tiền trong tương lai của công cụ tài chính diễn biến bất thường do những biến động của lãi suất thị trường.\nKỳ định lại lãi suất thực tế là thời hạn còn lại tính từ ngày kết thúc kỳ kế toán cho tới ngày định lại lãi suất gần nhất của các khoản mục trên báo cáo tình hình tài chính hợp nhất của Vietcombank.\nCác giả định và điều kiện sau được áp dụng để phân tích kỳ định lại lãi suất thực tế của các khoản mục tài sản và công nợ trên Báo cáo tình hình tài chính hợp nhất của Vietcombank.\nTiền mặt, vàng bạc, đá quý, góp vốn đầu tư dài hạn và các tài sản có khác (bao gồm tài sản cố định và các tài sản có khác) được xếp vào nhóm các khoản mục không chịu lãi;\nChứng khoán kinh doanh được xếp vào khoản mục đến 1 tháng;\n-Kỳ định lại lãi suất thực tế của chứng khoán đầu tư phụ thuộc vào quy định về lãi suất của tổ chức phát hành đối với từng loại chứng khoán;\n-Kỳ định lại lãi suất thực tế của các khoản tiền gửi và cho vay các tổ chức tín dụng khác, cho vay khách hàng, các khoản nợ Chính phủ và Ngân hàng Nhà nước Việt Nam, các khoản tiền gửi và vay các tô chức tín dụng khác, tiền gửi của khách hàng và các khoản nợ khác được xác định như sau:\n-Các khoản mục có lãi suất cố định trong suốt thời Lạ của hợp đồng: kỳ định lại lãi suất thực tế dựa trên thời gian đáo hạn thực tế tính từ ngày kết thúc kỳ kê toán;\n~ ˆ Các khoản mục có lãi suất thả nổi: kỳ định lại lãi suất thực tế dựa trên kỳ định lại lãi suất gần nhất tính từ ngày kết thúc kỳ kế toán.\n-Kỳ định lại lãi suất thực tế của các giấy tờ có giá đã phát hành được xác định dựa trên thời gian đáo hạn thực tế hoặc kỳ định lại lãi suất thực tế của từng loại giấy tờ có giá; phụ thuộc vào quy định về lãi suất của Ngân hàng đối với từng đợt phát hành.\nQuá hạn Triệu VND\nKhông chịu lãi suất Triệu VND\nTrongvòng 1 tháng Triệu VND\nTừ 1 đến 3 tháng TriệuVND\nTừ3đến 6 tháng TriệuVND\nTừ 6 đến 12 tháng Triệu VND\nTừ 1 đến 5 năm Triệu VND\nTrên 5năm Triệu VND\nTổng cộng Triệu VND\nTài sản\nTiền mặt, vàng bạc, đá quý\nli Tiền gửi tại Ngân hàng Nhà nước Việt Nam\nI . : Tiên gửi tại và cho vay các tô chức tín dụng khác - gộp\nIV Chứng khoán kinh doanh\nM Các công cụ tài chính phái sinh và các tài sản tài chính khác\nVỊ Cho vay khách hàng - gộp\nVI Chứng khoán đầu tư —\ngộp Góp vốn đầu tư dài hạn- gộp\nIX Tài sản cố định\nX Tài sản Có khác - gộp\nTổng tài sản\nNợ phải trả\nTiên gửi của và vay từ NHNN và các tổ chức tín dụng khác\nH Tiền gửi của khách hàng\nIV Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro\nV Phát hành giây tờ có giá\nVỊ Các khoản nợ khác\nTổng nợ phải trả\nMức chênh nhạy cảm với lãi suất\nLãy kế chênh nhạy cảm với lãi suất\n(ii) Rủi ro tiền tệ\nRủi ro tiền tệ là rủi ro mà giá trị của các công cụ tài chính bị biến động xuất phát từ biến động tỷ giá. Vietcombank được thành lập và hoạt động tại Việt Nam với đồng tiền báo cáo là VND. Đồng tiền giao dịch chính của Vietcombank cũng là VND. Các khoản cho vay khách hàng của Vietcombank chủ yêu bằng VND và Đô la Mỹ. Một số tài sản khác của Vietcombank bằng ngoại tệ khác ngoài VND và Đô la Mỹ. Vietcombank đã thiết lập hạn mức trạng thái cho từng loại tiền tệ dựa trên hệ thống đánh giá rủi ro nội bộ của Vietcombank và các quy định của NHNN. Trạng thái đồng tiền được quản lý hàng ngày và chiến lược phòng ngừa rủi ro được Vietcombank sử dụng để đảm bảo trạng thái đông tiên được duy trì trong hạn mức đã thiết lập.\nEuro Triệu VND\nĐô la Mỹ Triệu VND\nNgoại tệ khác Triệu VND\nTổng cộng Triệu VND\nTài sản\nđá\nTiên mặt, vàng bạc, quý Nhà\nTiên gửi tại Ngân hàng nước Việt Nam tín khác — gộp\nTiền gửi tại và cho vay các tô chức dụng\nCho vay khách hàng — gộp\nChứng khoán đâu tư — gộp\nTài sản có định Tài sản Có khác gộp\nTổng tài sản\nNợ phải trả\nTiên gửi của và vay từ NHNN và các tô chức tín dụng khác\nTiền gửi của khách hàng khác\nCác công cụ tài chính phái sinh và các khoản nợ tài chính\nPhát hành giấy tờ có giá Các khoản nợ khác\nTổng nợ phải trả\nTrạng thái tiền tệ nội bảng\n(bu) Rủi ro thanh khoản\nRủi ro thanh khoản là tình huống Vietcombank không thể thực hiện các cam kết tài chính đã thỏa thuận đối với khách hàng hoặc đối tác do không huy động đủ vốn hoặc không thanh khoản được tài sản.\nThời gian đáo hạn thực tế của các tài sản và công nợ thể hiện thời gian còn lại của tài sản và công nợ tính từ thời điểm lập báo cáo tài chính của Vietcombank đến kỳ thanh toán theo quy định trong hợp đồng hoặc trong điều khoản phát hành.\nCác giả định và điều kiện sau được áp dụng trong phân tích thời gian đến hạn của các tài sản và công nợ trên Báo cáo tình hình tài chính của Vietcombank:\nTiền gửi tại Ngân hàng Nhà nước Việt Nam được xem như tiền gửi thanh toán, bao gồm cả tiền gửi dự trữ bắt buộc;\nThời gian đáo hạn của chứng khoán kinh doanh được coi là dưới 1 tháng do các chứng khoán này được nắm giữ trong ngắn hạn nhăm thu lợi nhuận do chênh lệch giá;\nThời gian đáo hạn của chứng khoán đầu tư được tính dựa trên ngày đáo hạn của từng loại chứng khoán theo như quy định của đơn vị phát hành;\nThời gian đáo hạn của các khoản tiền gửi và cho vay các tổ chức tín dụng và các khoản cho vay khách hàng được xác định dựa trên ngày đến hạn mà hợp đồng quy định. Thời gian đáo hạn thực tÊ có thể thay đổi do các hợp đồng cho vay được gia hạn;\nThời gian đến hạn của các khoản đầu tư góp vốn mua cổ phần được coi là hơn một năm do các khoản đầu tư này không có thời gian đáo hạn xác định;\nCác khoản tiền gửi và vay các tổ chức tín dụng khác, tiền gửi của khách hàng và phát hành giấy tờ có giá được xác định \" vào tính chất của các khoản vay, tiền gửi và giấy tờ có giá này hoặc thời gian đáo hạn trên hợp đông. Ví dụ tài khoản tiền gửi thanh toán của các TCTD khác tại Vietcombank và tiền gửi thanh toán của Vietcombank tại các TCTD khác dùng đẻ thực hiện yêu cầu giao dịch của khách hàng được xếp loại không kỳ hạn, thời gian đáo hạn với các khoản vay và tiền gửi có kỳ hạn được xác định dựa trên ngày đến hạn theo hợp đồng. Trên thực tế, các khoản vay và tiên gửi này có thể được tái tục và duy trì trong thời gian lâu hơn.\nNợ quáhạn trên 3tháng TriuVND\nNợ quá hạn đến 3 tháng Triệu VND\nĐến 1 tháng TriệuVND\nTừ 1 đến 3 tháng  TriệuVND\nTừ 3 đến 12 tháng Triệu VND\nTừ 1 đến 5 năm TriệuVND\nTrên 5 năm Triệu VND\nTổng cộng Triệu VND\nTài sản\nTiền mặt, vàng bạc, đá\nH quý Tiền gửi tại Ngân hàng Nhà nước Việt Nam -\nHÌi Tiền gửi tại và cho vay các tô chức tín dụng khác - gộp\nIV Chứng khoán kinh doanh\nV Các công cụ tài chính phái sinh và các khoản nợ tài chính khác\nVI Cho vay khách hàng - gộp\nVII Chứng khoán đầu tr- gộp\nVII Góp vốn đầu tư dài hạn- gộp\nIX Tài sản có định\nx Tài sản Có khác - gộp\nTổng tài sản\nNợ phải trả\nTiền gửi của và vay từ NHNN và _các tô chức tín dụng khác\nHị Tiền gửi của khách hàng\nIV Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro\nV Phát hành giấy tờ có giá\nVI Các khoản nợ khác\nTổng nợ phải trả\nMức chênh thanh khoản ròng..."
+    },
+    {
+      "note_number": "25",
+      "note_title": "Các yếu tố mang tính thời vụ hoặc chu kỳ",
+      "content": "Kết quả hoạt động của Ngân hàng không bị ảnh hưởng bởi các yếu tố thời vụ hoặc chu kỳ trừ các khoản mục $au:\n(a) Thuế\nPhù hợp với các quy định thuế hiện hành, thuế thu nhập doanh nghiệp của Ngân hàng được tính toán và quyết toán độc lập vào cuối năm. Chỉ phí thuế thu nhập trong kỳ được tính dựa trên thu nhập chịu thuế với thuế suất là 20%.\n(b) Trích lập quỹ\nCác quỹ dự trữ như nêu tại Thuyết minh 2(s) (¡v) sẽ được trích lập vào thời điểm cuối năm tài chính."
+    },
+    {
+      "note_number": "26",
+      "note_title": "Lãi cho vay và phí phải thu chưa thu được",
+      "content": "Lãi cho vay chưa thu được\nPhí phải thu chưa thu được"
+    },
+    {
+      "note_number": "27",
+      "note_title": "Nợ khó đòi đã xử lý",
+      "content": "Nợ gốc của khoản nợ đã xử lý rủi ro đang trong thời gian theo dõi\nNợ lãi của khoản nợ đã xử lý rủi ro đang trong thời gian theo đõi\nCác khoản nợ khác đã xử lý"
+    },
+    {
+      "note_number": "28",
+      "note_title": "Tài sản và chứng từ khác",
+      "content": "Tài sản khác giữ hộ\nTài sản thuê ngoài\nTài sản bảo đảm nhận thay thế cho việc thực hiện nghĩa vụ của bên bảo đảm chờ xử lý\nCác chứng từ có giá trị khác đang bảo quản\n(*) Ngân hàng chưa xác định giá trị của khoản mục này do chưa có đủ thông tin, cũng như chưa có hướng dẫn về xác định giá trị theo Hệ thống Chuẩn mực kế toán Việt Nam và Chê độ báo cáo tài chính đối với các TCTD Việt Nam."
+    },
+    {
+      "note_number": "29",
+      "note_title": "Các sự kiện xảy ra sau ngày khóa số lập báo cáo tài chính giữa niên độ",
+      "content": "Cho đến ngày lập báo cáo tài chính hợp nhất giữa niên độ không có sự kiện trọng yếu nào xảy ra sau ngày 30 tháng 6 năm 2023 có thể ảnh hưởng trọng yếu đến tình hình tài chính hợp nhất giữa niên độ của Vietcombank và yêu cầu phải có các điều chỉnh hoặc thuyết minh trên báo cáo tài chính hợp nhất giữa niên độ tại ngày 30 tháng 6 năm 2023 và cho giai đoạn từ ngày Ì tháng 1 năm 2023 đến ngày 30 tháng 6 năm 2023."
+    },
+    {
+      "note_number": "30",
+      "note_title": "Phê duyệt báo cáo tài chính hợp nhất",
+      "content": "Báo cáo tài chính hợp nhất được Ban Điều hành phê duyệt vào ngày 28 tháng 7 năm 2023."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "report_id": "FPT_2024_Q4",
+  "stock_code": "FPT",
+  "year": 2024,
+  "quarter": 4,
+  "ocr_method": "docling",
+  "detected_unit": "VND",
+  "evaluated_at": "2025-12-14T21:36:40.987826",
+  "overall_match_rate": 0.3434343434343434,
+  "overall_value_accuracy": 0.35294117647058826,
+  "overall_mape": 347.55021615222233,
+  "sections": {
+    "balance_sheet": {
+      "match_rate": 0.39473684210526316,
+      "value_accuracy": 0.8,
+      "mape": 54.73456090534806,
+      "total_vnstock": 38,
+      "total_ocr": 44,
+      "matched": 15
+    },
+    "income_statement": {
+      "match_rate": 0.46153846153846156,
+      "value_accuracy": 0.0,
+      "mape": 212.59278246538926,
+      "total_vnstock": 26,
+      "total_ocr": 23,
+      "matched": 12
+    },
+    "cash_flow": {
+      "match_rate": 0.2,
+      "value_accuracy": 0.0,
+      "mape": 765.7184497304761,
+      "total_vnstock": 35,
+      "total_ocr": 14,
+      "matched": 7
+    }
+  }
+}

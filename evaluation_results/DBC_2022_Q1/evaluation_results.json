@@ -1,0 +1,37 @@
+{
+  "report_id": "DBC_2022_Q1",
+  "stock_code": "DBC",
+  "year": 2022,
+  "quarter": 1,
+  "ocr_method": "docling",
+  "evaluated_at": "2025-12-14T20:12:23.627250",
+  "overall_match_rate": 0.4842105263157895,
+  "overall_value_accuracy": 0.5869565217391305,
+  "overall_mape": 100.37316780451428,
+  "sections": {
+    "balance_sheet": {
+      "match_rate": 0.5135135135135135,
+      "value_accuracy": 0.631578947368421,
+      "mape": 141.44504022784957,
+      "total_vnstock": 37,
+      "total_ocr": 54,
+      "matched": 19
+    },
+    "income_statement": {
+      "match_rate": 0.4166666666666667,
+      "value_accuracy": 0.3,
+      "mape": 128.76929336970258,
+      "total_vnstock": 24,
+      "total_ocr": 18,
+      "matched": 10
+    },
+    "cash_flow": {
+      "match_rate": 0.5,
+      "value_accuracy": 0.7058823529411765,
+      "mape": 35.63298270957529,
+      "total_vnstock": 34,
+      "total_ocr": 37,
+      "matched": 17
+    }
+  }
+}

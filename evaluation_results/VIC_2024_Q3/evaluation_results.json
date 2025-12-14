@@ -1,0 +1,37 @@
+{
+  "report_id": "VIC_2024_Q3",
+  "stock_code": "VIC",
+  "year": 2024,
+  "quarter": 3,
+  "ocr_method": "docling",
+  "evaluated_at": "2025-12-14T20:04:56.853867",
+  "overall_match_rate": 0.0,
+  "overall_value_accuracy": 0.0,
+  "overall_mape": 0.0,
+  "sections": {
+    "balance_sheet": {
+      "match_rate": 0.0,
+      "value_accuracy": 0.0,
+      "mape": 0.0,
+      "total_vnstock": 40,
+      "total_ocr": 0,
+      "matched": 0
+    },
+    "income_statement": {
+      "match_rate": 0.0,
+      "value_accuracy": 0.0,
+      "mape": 0.0,
+      "total_vnstock": 26,
+      "total_ocr": 0,
+      "matched": 0
+    },
+    "cash_flow": {
+      "match_rate": 0.0,
+      "value_accuracy": 0.0,
+      "mape": 0.0,
+      "total_vnstock": 36,
+      "total_ocr": 0,
+      "matched": 0
+    }
+  }
+}

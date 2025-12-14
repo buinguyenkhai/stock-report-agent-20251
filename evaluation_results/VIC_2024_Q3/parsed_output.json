@@ -1,0 +1,918 @@
+{
+  "unit": "triệu VND",
+  "BS": [
+    {
+      "item_code": "400",
+      "item_name": "TÀI SẢN NGẮÁN HẠN",
+      "value": 423990500.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền và các khoản tương đương tiền",
+      "value": 27040242.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Tiền",
+      "value": 26731528.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Các khoản tương đương tiền",
+      "value": 308714.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Đầu tư tài chính ngắn hạn",
+      "value": 6424590.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Đầu tư nắm giữ đến ngày đáo hạn",
+      "value": 6424590.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Các khoản phải thu ngắn hạn",
+      "value": 217470663.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Phải thu ngắn hạn của khách hàng",
+      "value": 27139507.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Trả trước cho người bán ngắn hạn",
+      "value": 38449157.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Phải thu về cho vay ngắn hạn",
+      "value": 10684528.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Phải thu ngắn hạn khác",
+      "value": 141911927.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Dự phòng phải thu ngắn hạn khó đòi",
+      "value": -714456.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Hàng tồn kho",
+      "value": 128229866.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Hàng tồn kho",
+      "value": 139923090.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Dự phòng giảm giá hàng tồn kho",
+      "value": -11693224.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản ngắn hạn khác",
+      "value": 44825139.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Chi phí trả trước ngắn hạn",
+      "value": 3787617.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Thuế GTGT được khấu trừ",
+      "value": 10767432.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Thuế và các khoản khác phải thu Nhà nước",
+      "value": 324077.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản ngắn hạn khác",
+      "value": 29946013.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "TÀI SẢN DÀI HẠN",
+      "value": 367483444.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Các khoản phải thu dài hạn",
+      "value": 15381144.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Phải thu dài hạn của khách hàng",
+      "value": 1151138.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Phải thu vê cho vay dài hạn",
+      "value": 2854876.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Phải thu dài hạn khác",
+      "value": 11375130.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản cô định sản cố",
+      "value": 186833298.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Tài định hữu hình",
+      "value": 149295164.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Nguyên giá",
+      "value": 198423691.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Giá trị hao mòn luỹ kế",
+      "value": -49128527.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản cố định thuê tài chính",
+      "value": 351112.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Nguyên giá",
+      "value": 480723.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Giá trị hao mòn luỹ kế",
+      "value": -129611.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản cố định vô hình",
+      "value": 37187022.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Nguyên giá",
+      "value": 59334446.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Giá trị hao mòn luỹ kế",
+      "value": -22147424.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Bắt động sản đầu tư",
+      "value": 15067665.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Nguyên giá",
+      "value": 17817658.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Giá trị hao mòn luỹ kế",
+      "value": -2749993.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản dở dang dài hạn",
+      "value": 709297386.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Chỉ phí xây dựng cơ bản dở dang",
+      "value": 109297386.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Đầu tư vào công ty liên doanh, liên kết",
+      "value": 9141831.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Đầu tư tài chính dài hạn",
+      "value": 23657660.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Đầu tư vốn vào đơn khác",
+      "value": 16092357.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Dự phòng góp vị đầu tư tài chính dài hạn",
+      "value": -1609819.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Đầu tư nắm giữ đến ngày đáo hạn",
+      "value": 33191.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tài sản dài hạn khác",
+      "value": 17246291.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Chỉ phí trả trước dài hạn",
+      "value": 7821923.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Tài sản thuế thu nhập hoãn lại",
+      "value": 3005661.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Tài sản dài hạn khác",
+      "value": 4768227.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Lợi thê thương mại",
+      "value": 1660480.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "TỎNG CỘNG TÀI SẢN",
+      "value": 791473944.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "300",
+      "item_name": "NỢ PHẢI TRẢ",
+      "value": 627217065.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Nợ ngắn hạn",
+      "value": 470411783.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Phải trả người bán ngắn hạn trả tiền trước ngắn hạn",
+      "value": 97033850.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Người mụa Thuê và các khoản phải nộp Nhà nước",
+      "value": 29291240.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Phải trả người lao động",
+      "value": 1337385.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Chi phí phải trả ngắn hạn",
+      "value": 64950756.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "6",
+      "item_name": "Doanh thu chưa thực hiện ngắn hạn",
+      "value": 4728498.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "T",
+      "item_name": "Phải trả ngắn hạn khác",
+      "value": 133343385.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "8",
+      "item_name": "Vay và nợ thuê tài chính ngắn hạn",
+      "value": 96768964.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "9",
+      "item_name": "Dự phòng phải trả ngắn hạn",
+      "value": 3914837.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Nợ dài hạn",
+      "value": 156805282.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Chỉ phí phải trả dài hạn",
+      "value": 1274429.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu chưa thực hiện dài hạn",
+      "value": 3850859.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Phải trả dài hạn khác",
+      "value": 22217481.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Vay và nợ thuê tài chính dài hạn",
+      "value": 115120855.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Trái phiếu hoán đổi",
+      "value": 3600189.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Thuế thu nhập hoãn lại phải trả",
+      "value": 3265197.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Dự phòng phải trả dài hạn",
+      "value": 7476272.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "400",
+      "item_name": "VÓN CHỦ SỞ HỮU",
+      "value": 164256879.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Vốn chủ sở hữu",
+      "value": 164256879.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Vốn góp của chủ sở hữu",
+      "value": 38785833.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Cỗ phiếu phỗ thông có quyên biểu quyết",
+      "value": 38236616.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Cổ phiếu ưu đãi",
+      "value": 549217.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Thặng dư vốn cỗ phần",
+      "value": 40232887.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Vốn khác của chủ sở hữu",
+      "value": 15306530.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Cỗ phiếu quỹ",
+      "value": -1344123.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Chênh lệch tỷ giá hỗi đoái",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Quỹ khác thuộc vốn chủ sở hữu",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lợi nhuận sau thuế chưa phân phối",
+      "value": 41791856.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lợi nhuận sau thuế chưa phân phối lũy ké đến cuối năm trước",
+      "value": 14099159.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lợi nhuận sau thuế chưa phân phối kỳ này",
+      "value": 27692697.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lợi ích của cổ đông không kiểm soát",
+      "value": 29427206.0,
+      "notes_ref": ""
+    }
+  ],
+  "PL": [
+    {
+      "item_code": "",
+      "item_name": "Doanh thu thuần",
+      "value": 62850017.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu chuyển nhượng bắt động sản",
+      "value": 38928856.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu cho thuê bắt động sản đâu tư và cung cắp các dịch vụ liên quan",
+      "value": 386454.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu cung cấp dịch vụ khách sạn, du lịch, vui chơi giải trí và các dịch vụ liên quan",
+      "value": 2552015.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu cung cấp dịch vụ bệnh viện và các dịch vụ liên quan",
+      "value": 1153680.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu cung cấp hoạt động giáo dục và các dịch vụ liên quan",
+      "value": 1298330.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu hoạt động sản xuât",
+      "value": 14081932.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu khác",
+      "value": 4478750.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Doanh thu hoạt động tài chính",
+      "value": null,
+      "notes_ref": "25.2"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Lãi tiền gửi, cho vay và các khoản đặt cọc",
+      "value": 1113790.0,
+      "notes_ref": "25.2"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Lãi chênh lệch tỷ giá",
+      "value": 1789572.0,
+      "notes_ref": "25.2"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Lãi từ thanh lý các khoản đầu tư tài chính và chuyển nhượng công ty con",
+      "value": 5826957.0,
+      "notes_ref": "25.2"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Thu nhập tài chính khác",
+      "value": 42136.0,
+      "notes_ref": "25.2"
+    },
+    {
+      "item_code": "",
+      "item_name": "TỎNG CỘNG",
+      "value": 8572435.0,
+      "notes_ref": "25.2"
+    },
+    {
+      "item_code": "",
+      "item_name": "Giá vốn hàng bán và cung cấp dịch vụ",
+      "value": null,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Giá vốn bắt động sản chuyển nhượng",
+      "value": 22956954.0,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Chỉ phí cho thuê bắt động sản đầu tư và cung cắp các dịch vụ liên quan",
+      "value": 102446.0,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Giá vốn cung cắp dịch vụ khách sạn, du lịch, vui chơi giải trí và các dịch vụ liên quan",
+      "value": 2295689.0,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Giá vốn cung cắp dịch vụ bệnh viện và các dịch vụ liên quan",
+      "value": 988377.0,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Giá vốn cung cắp hoạt động giáo dục và các dịch vụ liên quan",
+      "value": 1171496.0,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Giá vốn hoạt động sản xuất",
+      "value": 18167375.0,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Giá vốn khác",
+      "value": 4094176.0,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "TỎNG CỘNG",
+      "value": 49776513.0,
+      "notes_ref": "26"
+    },
+    {
+      "item_code": "",
+      "item_name": "Chi phí tài chính",
+      "value": null,
+      "notes_ref": "27"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Chỉ phí lãi vay",
+      "value": 5013333.0,
+      "notes_ref": "27"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Chỉ phí phát hành trái phiêu",
+      "value": 594935.0,
+      "notes_ref": "27"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Lỗ chênh lệch tỷ giá",
+      "value": 0.0,
+      "notes_ref": "27"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Chỉ phi tài chính khác",
+      "value": 1995031.0,
+      "notes_ref": "27"
+    },
+    {
+      "item_code": "",
+      "item_name": "TÔNG CỘNG",
+      "value": 7603299.0,
+      "notes_ref": "27"
+    },
+    {
+      "item_code": "",
+      "item_name": "Thu nhập và chi phí khác",
+      "value": null,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "Thu nhập khác",
+      "value": 377588.0,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Thu nhập từ phạt hợp đồng",
+      "value": 187142.0,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Thu nhập khác",
+      "value": 190446.0,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "Chi phí khác",
+      "value": 1262322.0,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Lỗ từ thanh lý tài sản cố định",
+      "value": 235559.0,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Chí phí phạt hợp đồng và phạt khác",
+      "value": 612624.0,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Chỉ phí khác",
+      "value": 414139.0,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "GIÁ TRỊ THUẦN",
+      "value": -884734.0,
+      "notes_ref": "28"
+    },
+    {
+      "item_code": "",
+      "item_name": "Thuế thu nhập doanh nghiệp",
+      "value": null,
+      "notes_ref": "29"
+    },
+    {
+      "item_code": "",
+      "item_name": "  Chi phí thuế TNDN hiện hành",
+      "value": 4742333.0,
+      "notes_ref": "29"
+    },
+    {
+      "item_code": "",
+      "item_name": "  (Thu nhập)/ Chi phí thuế TNDN hoãn lại",
+      "value": -2051847.0,
+      "notes_ref": "29"
+    },
+    {
+      "item_code": "",
+      "item_name": "TÔNG CỘNG",
+      "value": 2690486.0,
+      "notes_ref": "29"
+    }
+  ],
+  "CF": [
+    {
+      "item_code": "",
+      "item_name": "Tiền chỉ để mua sắm, xây dựng tài sản có định và các tài sản dải hạn khác",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền thu được từ thanh lý, nhượng bán tài sản cố định và các tài sản dài hạn khác",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền chỉ cho vay, mua các công cụ nợ của đơn vị khác",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền chỉ đầu tư góp vốn vào đơn vị khác (trừ đi tiền thu về)",
+      "value": -28045103.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền thu hồi đầu tư góp vốn vào đơn vị khác (trừ đi tiền do đơn vị bị thanh lý nắm giữ)",
+      "value": 65893018.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền thu lãi cho vay, cỗ tức và lợi nhuận được chía",
+      "value": 3296081.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "30",
+      "item_name": "Lưu chuyển tiền thuần từ hoạt động đầu tư",
+      "value": 14545151.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền thu từ phát hành cỗ phiều, 'nhận vốn _.góp của chủ sở hữu",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền thu từ đi Ì Vay,",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền chỉ trả nợ gốc vay",
+      "value": -61734533.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Cỗ tức, lợi nhuận đã trả cho cỗ đông không kiểm soát",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lưu chuyển tiền thuần từ hoạt động tài chính",
+      "value": 14627341.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lưu chuyển tiền thuần trong kỳ",
+      "value": -942381.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền và tương đương tiền đầu kỳ",
+      "value": 27982623.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền và tương đương tiền cuối kỳ",
+      "value": 27040242.0,
+      "notes_ref": ""
+    }
+  ],
+  "Notes": [
+    {
+      "note_number": "",
+      "note_title": "THÔNG TIN DOANH NGHIỆP",
+      "content": "Tập đoàn Vingroup — Công ty CP (\"Công ty\") là một công ty cổ phần được thành lập theo Luật Doanh nghiệp của Việt Nam theo Giấy Chứng nhận Đăng ký Kinh doanh số 0103001016 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cắp vào ngày 3 tháng 5 năm 2002 và được cấp lại Giấy Chứng nhận Đăng ký Kinh doanh số 0101245486 vào ngày 12 tháng 5 năm 2010. Công ty sau đó nhận được các Giấy Chứng nhận Đăng ký Doanh nghiệp sửa đổi với lần gần nhất là lần thứ 73 được cấp ngày 9 tháng 1 năm 2024.\nCó phiều của Công ty đã được chính thức giao dịch tại Sở Giao dịch Chứng khoán thành phố Hỗ Chí Minh kể từ ngày 19 tháng 9 năm 2007 theo Quyết định số 106/QĐ-TTGDHCM do Giám đốc Sở Giao dịch Chứng khoán thành phố Hồ Chí Minh ký ngày 7 tháng 9 năm 2007.\nHoạt động chính trong năm hiện tại của Công fy là đầu tư, xây dựng và kinh doanh bắt động sản; tiến hành các hoạt động huy động vốn, đầu tư góp vốn; và cung cấp các dịch vụ hành chính văn phòng tổng hợp. Hoạt động chính trong năm hiện tại của các công ty con của Công ty được trình bày tại"
+    },
+    {
+      "note_number": "25",
+      "note_title": "DOANH THƯ (tiếp theo)",
+      "content": "Các số liệu chính:\nLãi tiền gửi, cho vay và các khoản đặt cọc | 1.113.790\nLãi chênh lệch tỷ giá | 1.789.572\nLãi từ thanh lý các khoản đầu tư tài chính và chuyển nhượng công ty con | 5.826.957\nThu nhập tài chính khác | 42.136\nTỎNG CỘNG | 8.572.435"
+    },
+    {
+      "note_number": "2",
+      "note_title": "GIÁ VÓN HÀNG BÁN VÀ CUNG CÁP DỊCH VỤ",
+      "content": "Các số liệu chính:\nGiá vốn bắt động sản chuyển nhượng | 22.956.954\nChỉ phí cho thuê bắt động sản đầu tư và cung cắp các dịch vụ liên quan | 102.446\nGiá vốn cung cắp dịch vụ khách sạn, du lịch, vui chơi giải trí và các dịch vụ liên quan | 2.295.689\nGiá vốn cung cắp dịch vụ bệnh viện và các dịch vụ liên quan | 988.377\nGiá vốn cung cắp hoạt động giáo dục và các dịch vụ liên quan | 1.171.496"
+    },
+    {
+      "note_number": "27",
+      "note_title": "CHI PHÍ TÀI CHÍNH",
+      "content": "Các số liệu chính:\nChỉ phí lãi vay | 5.013.333\nChỉ phí phát hành trái phiêu | 594.935\nLỗ chênh lệch tỷ giá |\nChỉ phi tài chính khác | 1.995.031\nTÔNG CỘNG | 7.603.299"
+    },
+    {
+      "note_number": "28",
+      "note_title": "THU NHẬP VÀ CHI PHÍ KHÁC",
+      "content": "Các số liệu chính:\nThu nhập khác | 377.588\nThu nhập từ phạt hợp đồng | 187.142\nThu nhập khác | 190.446\nChỉ phí khác | 1.262.322\nLỗ từ thanh lý tài sản cố định | 235.559"
+    },
+    {
+      "note_number": "29",
+      "note_title": "THUÉ THU NHẬP DOANH NGHIỆP",
+      "content": "Các số liệu chính:\nChi phí thuế TNDN hiện hành | A.742.333\n(Thu nhập)/ Chi phí thuế TNDN hoãn lại | (2.051.847)\nTÔNG CỘNG | 2.690.486"
+    },
+    {
+      "note_number": "30",
+      "note_title": "NGHIỆP VỤ VỚI CÁC BÊN LIÊN QUAN",
+      "content": "Các số liệu chính:\nQuỹ Thiện Tâm | Cùng chủ sở hữu | Doanh thu từ cung cấp dịch vụ lữ hành, khám chữa bệnh | 25.608\nTập đoàn Đầu tư Việt Nam | Cùng chủ sở hữu | Nhận đặt cọc để chuyển nhượng dự án | 194.100\n| | 'Tài trợ cho công ty con của Tập đoàn | 74.904\n| | Thanh toán tiền dịch vụ thuê văn phòng, khách sạn và tư vẫn | 147.686\n| | Phải trả tiền mua dịch vụ thuê văn phòng, khách sạn và tư vấn | 125.371"
+    },
+    {
+      "note_number": "30",
+      "note_title": "NGHIỆP VỤ VỚI CÁC BÊN LIÊN QUAN (tiếp theo)",
+      "content": "Các điều kiện và điều khoản của các giao dịch với các bên liên quan:\n\nTrong kỳ, Tập đoàn cung cắp và sử dụng dịch vụ từ các bên liên quan theo mức giá trên thị trường, đồng thời không trích lập dự phòng phải thu khó đòi cho các khoản phải thu từ các bên liên quan (ngày 31 tháng 12 năm 2023: không). Việc đánh giá này được thực hiện hàng kỳ thông qua việc xem xét khả năng tài chính và thị trường hoạt động của các bên liên quan.\n\nCác khoản phải thu và phải trả lớn với các bên liên quan tại ngày 30 tháng 9 năm 2024 như sau:\n\nCác số liệu chính:\nPhải thu ngắn hạn của khách hàng | Phải thu ngắn hạn của khách hàng |\nCông ty GSM | Cùng chủ sở hữu | Phải thu từ bán hàng và cung cấp dịch vụ | 2.537.087\nCông ty V-G | Công ty liên doanh | Phải thu liên quan đến hợp đồng xây dựng | - 216.477\nBên liên quan khác | Các bên liên quan khác | Phải thu khác | 19.714\n| | | | 2.773.278"
+    },
+    {
+      "note_number": "30",
+      "note_title": "NGHIỆP VỤ VỚI CÁC BÊN LIÊN QUAN (tiếp theo)",
+      "content": "Các số liệu chính:\nTài sản dài hạn khác |\nCông ty Sài Đồng . | Cùng chủ sở hữu | Đặt cọc cho mục đích nhận chuyển nhượng tài sản | 61.666\n| | | | 61.666\nPhải trả người bán ngắn hạn | Phải trả người bán ngắn hạn |\nCông ty Vincom Retail | Công ty liên kết | Phải trả liên quan đến cung cấp dịch vụ | 518\nCông ty Vận hành Vincom Retail | Công ty liên kết | Phải trả liên quan đến cung cấp dịch vụ | 351.137"
+    },
+    {
+      "note_number": "31",
+      "note_title": "THÔNG TIN THEO BỘ PHẬN",
+      "content": "Đễ phục vụ mục đích quản lý, Tập đoàn được tổ chức thành các bộ phận kinh doanh dựa trên loại hình sản phẩm và dịch vụ cung cấp, và bao gồm các bộ phận kinh doanh như sau:\n\n- e Kinh doanh chuyển nhượng bắt động sản: bao gồm hoạt động chuyễn nhượng các hạng mục xây dựng để bán tại các dự án bắt động sản của Tập đoàn cũng như các hoạt động đầu tư bất động sản khác;\n- « Kinh doanh cho thuê bắt động sản đầu tư và cung cấp các dịch vụ liên quan: bao gồm cung cắp dịch vụ cho thuê văn phòng, trung tâm thương mại và cung cấp các dịch vụ liên quan tại các bát động sản đầu tư của Tập đoàn;\n- e Kinh doanh dịch vụ khách sạn du lịch, vui chơi giải trí và các dịch vụ liên quan: bao gồm cung cáp dịch vụ khách sạn và các dịch vụ liên quan tại các khách sạn và khu nghỉ dưỡng của Tập đoàn;\n- e Hoạt động y tế và các dịch vụ liên quan: bao gồm cung cấp dịch vụ khám, chữa bệnh và các dịch vụ liên quan khác tại Bệnh viện Đa khoa Quốc tế Vinmec và Phòng khám Đa khoa Quộc tế Vinmec;\n- e Hoạt động giáo dục và các dịch vụ liên quan: bao gềm cung cấp dịch vụ giáo dục và các dịch vụ liên quan tại hệ thống giáo dục Vinschool, Brighton và VinUni của Tập đoàn;"
+    },
+    {
+      "note_number": "31",
+      "note_title": "THÔNG TIN THEO BỘ PHẬN (tiếp theo)",
+      "content": "Các số liệu chính:\nTổng | | | | | (5.481.671) | | 730.327.923 | 61.146.022 369.048.333 | 288.168.732 | 9.141.931 | \" 49.987.927 | \" 49.987.927 | \" 49.987.927 | \" 49.987.927\nvà trừ | “ | | 126.9185.633 | | | | | | — | | | | | |\nloại | | | | - | - | | _ | | ˆ (19.765.583) | - | - | - — | - — | - — | - —\nchỉnh | | | (7.784.625) | | | 145.159 | | (19.765.583) | ˆ ˆ 1.635.021 | - | | | | |\nđộng doanh Điều khác | | (7.784.625) | | | ˆ | | - | | - | - | | | | |"
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "BS": [
+    {
+      "item_code": "A",
+      "item_name": "TÀI SẢN NGẮN HẠN",
+      "value": 5624216063644.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Các khoản tương đương tiền",
+      "value": 50000000000.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IH",
+      "item_name": "Đầu tư tài chính ngắn hạn",
+      "value": 885327513041.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Đầu tư nắm giữ đến ngày đáo hạn",
+      "value": 555327513041.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "HI",
+      "item_name": "Các khoản phải thu ngắn hạn",
+      "value": 635641288038.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Phải thu ngắn hạn của khách hàng",
+      "value": 274761965250.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Trả trước cho người bán ngắn hạn",
+      "value": 259854737170.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Phải thu ngắn hạn khác",
+      "value": 101024585618.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IV",
+      "item_name": "Hàng tồn kho",
+      "value": 4127802111320.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Hàng tồn kho",
+      "value": 4127802111320.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "V",
+      "item_name": "Tài sản ngắn hạn khác",
+      "value": 76731476352.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Chỉ phí trả trước ngắn hạn",
+      "value": 20530964780.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Thuế GTGT được khẩu trừ",
+      "value": 47241590051.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Thuế và các khoản phải thu nhà nước",
+      "value": 4694148892.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Tài sản ngắn hạn khác",
+      "value": 4264772629.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "B",
+      "item_name": "TÀI SẢN DÀI HẠN",
+      "value": 5434358806073.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Các khoản phải thu dài hạn",
+      "value": 18961157140.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Phải thu dài hạn khác",
+      "value": 18961157140.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "H",
+      "item_name": "Tài sản cố định",
+      "value": 4503598018977.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Tài sản cố định hữu hình -",
+      "value": 4173300835850.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Nguyên giá",
+      "value": 6472917411709.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Giá trị hao mòn luỹ kế",
+      "value": -2299616575859.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Tài sản cố định thuê tài chính",
+      "value": 330297183127.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Nguyên giá",
+      "value": 475690702001.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Giá trị hao mòn luỹ kế",
+      "value": -145393518874.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IV",
+      "item_name": "Tài sản đở dang dài hạn",
+      "value": 760278340239.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Chi phí XDCB dở dang",
+      "value": 760278340239.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "V",
+      "item_name": "Đầu tư tài chính dài hạn",
+      "value": 105317423994.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Đầu tư vào công ty liên kết, liên doanh",
+      "value": 105317423994.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "VI",
+      "item_name": "Tài sản dài hạn khác",
+      "value": 46203865723.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Chỉ phí trả trước dài hạn",
+      "value": 46203865723.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "270",
+      "item_name": "Tổng cộng tài sản",
+      "value": 11058574869717.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "C",
+      "item_name": "NỢ PHẢI TRẢ",
+      "value": 6368979969767.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "IL",
+      "item_name": "Nợ ngắn hạn",
+      "value": 5134273720453.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Phải trả người bán ngắn hạn",
+      "value": 1141145103170.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Người mua trả tiền trước ngắn hạn",
+      "value": 664187636134.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Thuế và các khoản phải nộp Nhà nước",
+      "value": 30794343006.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Phải trả người lao động",
+      "value": 81928308605.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Chỉ phí phải trả ngắn hạn",
+      "value": 68057480143.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "6",
+      "item_name": "Phải trả ngắn hạn khác",
+      "value": 245748941700.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "7",
+      "item_name": "Vay và nợ thuê tài chính ngắn hạn",
+      "value": 2844281184958.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "8",
+      "item_name": "Quï khen thưởng, phúc lợi",
+      "value": 61130722737.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "H",
+      "item_name": "Nợ dài hạn",
+      "value": 1234706249314.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Phải trả dài hạn khác",
+      "value": 326960828344.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Vay và nợ thuê tài chính dài hạn",
+      "value": 907745420970.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "D",
+      "item_name": "VÓN CHỦ SỞ HỮU",
+      "value": 4689594899950.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "I",
+      "item_name": "Vốn chủ sở hữu",
+      "value": 4689594899950.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Vốn góp của chủ sở hữu",
+      "value": 1152394300000.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Cổ phiếu phổ thông có quyền biểu quyết",
+      "value": 1152324300000.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Thặng dư vốn cổ phần",
+      "value": 418432992221.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Quỹ đầu tư phát triển",
+      "value": 2517108779304.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Lợi nhuận sau thuế chưa phân phối",
+      "value": 601658828425.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "LN sau thuế chưa phân phối luỹ kế đến cuối kỳ trước",
+      "value": 593050074446.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lợi nhuận sau thuế chưa phân phối kỳ này",
+      "value": 8608753979.0,
+      "notes_ref": ""
+    }
+  ],
+  "PL": [
+    {
+      "item_code": "1",
+      "item_name": "Doanh thu bán hàng và cung cần địch:vù",
+      "value": 2920854639559.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Các khoản giảm trừ doanh thu",
+      "value": 115040656773.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+      "value": 2805813982786.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Giá vốn hàng bán",
+      "value": 2551558241554.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+      "value": 254255741232.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "6",
+      "item_name": "Doanh thu hoạt động tài chính",
+      "value": 6548832994.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "7",
+      "item_name": "Chỉ phí tài chính",
+      "value": 52100286875.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Trong đó: Chỉ phí lãi vay",
+      "value": 46314181169.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "9",
+      "item_name": "Chỉ phí bán hàng",
+      "value": 96337352682.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "10",
+      "item_name": "Chỉ phí quản lý doanh nghiệp",
+      "value": 87155594506.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "11",
+      "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh",
+      "value": 22936286563.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "12",
+      "item_name": "Thu nhập khác",
+      "value": 239582899.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "13",
+      "item_name": "Chi phíkhác",
+      "value": 57282498.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "14",
+      "item_name": "Lợi nhuận khác",
+      "value": 2338546493.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "15",
+      "item_name": "Tổng lợi nhuận kế toán trước thuế",
+      "value": 25274833056.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "16",
+      "item_name": "Chỉ phí thuế TNDN hiện hành",
+      "value": 16666079077.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "17",
+      "item_name": "Lợi nhuận sau thuế thu nhập doanh nghiệp",
+      "value": 8608753979.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "18",
+      "item_name": "Lãi cơ bản trên cỗ phiếu",
+      "value": 15.0,
+      "notes_ref": ""
+    }
+  ],
+  "CF": [
+    {
+      "item_code": "1",
+      "item_name": "Lợi nhuận trước thuế",
+      "value": 25274833056.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Điều chỉnh cho các khoản.",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Khấu hao TSCĐ và BĐSĐT",
+      "value": 127489828781.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Các khoản dự phòng",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lãi, lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tê có gốc ngoai tê - -_",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lãi, lỗ từ hoạt động đầu tư c c",
+      "value": -4857923903.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Chỉ phí lãi vay c",
+      "value": 46314181169.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+      "value": 194220919103.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tăng, giảm các khoản phải thu. ¬ -",
+      "value": -95270697777.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tăng, giảm hàngtồnkho",
+      "value": 75325644550.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tăng, giảm các khoản phải trả (không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)",
+      "value": -140486273757.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tăng, giảm chỉ phí trả trước",
+      "value": 7668442038.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền lãi vay đã trả",
+      "value": -55717567578.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Thuế thu nhập doanh nghiệp đã nộp",
+      "value": -70347491453.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền thu khác từ hoạt động kinhdoanh",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Tiền chỉ khác cho hoạt động kinh doanh",
+      "value": -28585009000.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
+      "value": -113192033874.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "H",
+      "item_name": "Lưu chuyển tiền từ hoạt động đầu tư",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Tiền chỉ để mua sắm, xây dựng TSCĐ và các tài sản dài hạn khác",
+      "value": -349693791655.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Tiền thu từ thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác",
+      "value": 309090909.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Tiền chỉ cho vay, mua các công cụ nợ của đơn vị khác",
+      "value": -15844700000.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Tiền thu hồi cho vay, mua các công cụ nợ của đơn vị khác",
+      "value": 37600000000.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Tiền chỉ đầu tư góp vốn vào đơn vị khác -",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "6",
+      "item_name": "Tiền thu hồi đầu tư góp vốn vào đơn vị khác",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "7",
+      "item_name": "Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia",
+      "value": 4145651993.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lưu chuyễn tiền thuần từ hoạt động đâu tre",
+      "value": -323483748753.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "II",
+      "item_name": "Lưu chuyển tiền từ hoạt động tài chính",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "1",
+      "item_name": "Tiền thu từ phát hành cỗ phiếu, nhận vốn góp của chủ sở hữu",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "2",
+      "item_name": "Tiền thu từ đi vay",
+      "value": 2349526192318.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "3",
+      "item_name": "Tiền trả nợ gốc Vay",
+      "value": -1861715325767.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "4",
+      "item_name": "Tiền trả nợ gốc thuêtàichnh",
+      "value": -22478498335.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "5",
+      "item_name": "Cổ tức, lợi nhuận đã trả cho chủ sởhu -",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "",
+      "item_name": "Lưu chuyển tiền thuần từ hoạt động tài chính",
+      "value": 465332368216.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "50",
+      "item_name": "Lưu chuyển tiền thuần trong kỳ",
+      "value": 28656585589.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "6",
+      "item_name": "Tiền và tương đương tiền đầu kỳ",
+      "value": 200057089304.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "61",
+      "item_name": "Ảnh hưởng của thay đổi ¡ tỷ giá hồi đoái quy đổi ngoại",
+      "value": 0.0,
+      "notes_ref": ""
+    },
+    {
+      "item_code": "70",
+      "item_name": "Tiền và tương đương tiền cuối kỳ",
+      "value": 713674.0,
+      "notes_ref": ""
+    }
+  ],
+  "Notes": [
+    {
+      "note_number": "I",
+      "note_title": "Đặc điểm hoạt động của doanh nghiệp",
+      "content": "1. Hình thức sở hữu vón: Công ty cô phần"
+    },
+    {
+      "note_number": "II",
+      "note_title": "Niên độ kế toán, đơn vị tiền tệ sử dụng trong kế toán:",
+      "content": "1. Niên độ kế toán: Bắt đầu từ 1/1 đến 31/12"
+    },
+    {
+      "note_number": "III",
+      "note_title": "Chuẩn mực và Chế độ kế toán áp dụng",
+      "content": "1. Chế độ kế toán áp dụng: Theo thông tư số 200/2014/TT-BTC ngày 22/12/2014 của Bộ Tài Chính"
+    },
+    {
+      "note_number": "IV",
+      "note_title": "Các chính sách kế toán áp dụng:",
+      "content": "1. Nguyên tắc chuyển đổi các đồng tiền khác ra đồng tiền sử dụng trong kế toán: theo tỷ giá thực tế"
+    },
+    {
+      "note_number": "V.1",
+      "note_title": "Tiền và các khoản tương đương tiền",
+      "content": "- Tiền mặt: 26271061982.0; - Tiền gửi ngân hàng: 152442612911.0; - Các khoản tương đương tiền: 50000000000.0"
+    },
+    {
+      "note_number": "V.2",
+      "note_title": "Các khoản đầu tư tài chính",
+      "content": "b_ Đầu tư nắm giữ đến ngày đáo hạn: 555327513041.0; bI Ngắn hạn: 555327513041.0; - Tiền gửi có kỳ hạn: 555327513041.0; c_ Đâu tư góp vôn vào đơn vị khác: 105317423994.0; - Đầu tư vào công ty liên doanh, liên kết.: 105317423994.0"
+    },
+    {
+      "note_number": "V.3",
+      "note_title": "Phải thu của khách hàng",
+      "content": "a _ - Phải thu khách hàng ngắn hạn: 274761965250.0"
+    },
+    {
+      "note_number": "V.4",
+      "note_title": "Các khoản phải thu khác",
+      "content": "a Ngắn hạn: 101024585618.0; - Phải thu lãi tiền gửi: 7499351133.0; - Phải thu người lao động: 43058628806.0; - Ký cược, ký quỹ: 18807504490.0; -PhảitukhéÉO. ': 31659101189.0; b Dài hạn - -: 18961157140.0; - Ký cược, ký quỹ: 18961157140.0"
+    },
+    {
+      "note_number": "V.7",
+      "note_title": "Hàng tồn kho",
+      "content": "- Hàng mua đang đi trên đường: 0.0; ~ Nguyên liệu, vật liệu: 931683769249.0; - Công cụ, dụng cụ: 5629846367.0; - Chỉ phí sản xuất kinh doanh dở dang: 2963943686157.0; - Thành phẩm: 163596280383.0; * Dự phòng giảm giá hàng tồn kho: 62948529164.0"
+    },
+    {
+      "note_number": "V.8",
+      "note_title": "Tài sản dở dang dài hạn",
+      "content": "- Chi phí sản xuất kinh doanh dở dang dài hạn: 0.0; b -Xây dựng cơ bản dở dang: 760278340239.0; Trung tâm thương mại Yên Phong: 12448246504.0; DA lợn giống Dabaco Phú Thọ GĐ 2: 42207113252.0"
+    },
+    {
+      "note_number": "V.13",
+      "note_title": "Chỉ phí trả trước",
+      "content": "a Ngắn hạn: 20530964780.0; x= Công cụ dụng cụ xuất dùng.: 19578426404.0; \" Các khoản khác a: 952538376.0; b Đài hạn: 46203865723.0; - Công cụ, dụng cụ xuất dùng: 38533655438.0; - Các khoản khác: 7670210285.0"
+    },
+    {
+      "note_number": "V.14",
+      "note_title": "Tài sản khác",
+      "content": "a Ngắn hạn: 4264772629.0"
+    },
+    {
+      "note_number": "V.15",
+      "note_title": "Vay và nợ thuê tài chính",
+      "content": "a - Vay ngắn hạn: 2701811432872.0; - Vay các ngân hàng thương mại Nhà nước: 2340057427288.0; - Vay các ngân hàng thương mại cô phần: 339754005584.0; - Vay các CN ngân hàng Nước ngoài ở Việt Nam: 97900000000.0; - Vay Quỹ đầu tư phát triển Bắc Ninh: 14000000000.0; - Vay đối tượng khác: 100000000.0; - Trái phiếu: 0.0; b_ Vay dài hạn:: 832197518185.0; - Vay các ngân hàng thương mại Nhà nước: 634820018185.0; - Vay các ngân hàng thương mại cổ phần: 47377500000.0; - Trái phiếu: 150000000000.0; c Các khoản nợ thuê tài chính: 128017654871.0; - Từ 1 năm trở xuống: 52469752086.0; - Trên 1 năm đến 5 năm: 75547902785.0"
+    },
+    {
+      "note_number": "V.16",
+      "note_title": "Phải trả người bán",
+      "content": "a _ - Các khoản phải trả người bán ngắn hạn: 1141145103170.0"
+    },
+    {
+      "note_number": "V.17",
+      "note_title": "Thuế và các khoản phải nộp nhà nước",
+      "content": "a Phải nộp: 30794343006.0; - Thuế GTGT: 6827029160.0; - Thuế TNDN: 23967313846.0; Phải thu: 4694148892.0; - Thuế TNDN nộp thừa: 4694148892.0"
+    },
+    {
+      "note_number": "V.25",
+      "note_title": "Vốn chủ sở hữu",
+      "content": "b. Chỉ tiết vốn góp của chủ sở hữu: 1152394300000.0; - Vốn góp của Nhà nước: 0.0; - Vốn góp của các cổ đông: 1152394300000.0; c. Các giao dịch về vốn với các chủ sở hữu: 0.0; Vốn góp đầu kỳ: 1152394300000.0; Vốn góp tăng trong kỳ: 0.0; Vốn góp giảm trong kỳ: 0.0; Vốn góp cuối kỳ: 1152394300000.0; d. Cổ phiếu: 0.0; - Số lượng cổ phiếu đăng ký phát hành: 115239430.0; - Số lượng cổ phiếu đã bán ra công chúng: 115239430.0; Trong đó: + Cổ phiếu phổ thông: 115239430.0; + Cổ phiếu ưu đãi: 0.0; Số lượng cổ phiếu được mua lại: 0.0"
+    },
+    {
+      "note_number": "V.9",
+      "note_title": "Tăng, giảm TSCĐ hữu hình",
+      "content": "Cộng: 6322167278015.0; l ] , Dụng cụ quản lý: 43509322585.0; Phương tiện vận tải * - * tiyÊn đầu: 303572707050.0; .‹4,. | 4 l4 Máy móc thiết bị: 2716355939623.0; Nhà cửa vật kiến * trúc: 3409479442451.0"
+    },
+    {
+      "note_number": "V.25",
+      "note_title": "Vốn chủ sở hữu",
+      "content": "Số dư đầu năm trước: 0.0; Số dư đầu kỳ năm nay: 4696438486734.0; - Lãi trong kỳ: 8608753979.0; - Tăng (+)Giảm(-) khác: -15452340763.0; Số dư cuối kỳ: 4689594899950.0"
+    },
+    {
+      "note_number": "V.11",
+      "note_title": "Tăng, giảm TSCĐ thuê tài chính",
+      "content": "Nguyên giá: 0.0; Số dư đầu kỳ: 576317109341.0; - Thuê tài chính trong năm: 2460179727.0; - Tăng khác: 0.0; - Giảm khác: 103086587067.0; Số dư cuối kỳ: 475690702001.0; Giá trị hao mòn luỹ kế: 0.0; Số dư đầu kỳ: 170719187494.0; - Khấu hao trong năm: 14076117675.0; -Giảmkhác: 39401786295.0; Số dư cuối kỳ: 145393518874.0; Giá trị còn lại: 0.0; Tại ngày đầu kỳ: 405597921847.0; Tại ngày cuối kỳ: 330297183127.0"
+    },
+    {
+      "note_number": "VII.1",
+      "note_title": "Tổng doanh thu bán hàng và cung cấp dịch vụ",
+      "content": "- Doanh thu bán thành phâm sản xuất: 2758516334581.0; - Doanh thu thương mại, siêu thị, khách sạn, nhà hàng: 143618293588.0; - Doanh thu KD BĐS, hoạt động xây dựng: 18720011390.0"
+    },
+    {
+      "note_number": "VII.2",
+      "note_title": "Các khoản giảm trừ",
+      "content": "- Chiết khấu: 113069401482.0; - Giảm giá hàng bán: 551800.0; - Hàng bán trả lại: 1970703491.0"
+    },
+    {
+      "note_number": "VII.3",
+      "note_title": "Giá vốn hàng bán",
+      "content": "- Giá vốn bán thành phẩm sản xuất: 2419462890928.0; - Giá vốn KD thương mại, siêu thị, khách sạn, nhà hàng: 119248817117.0; - Giá vốn KD BĐS, hoạt động xây dựng: 12846533509.0"
+    },
+    {
+      "note_number": "VII.4",
+      "note_title": "Doanh thu hoạt động tài chính",
+      "content": "- Lãi tiền gửi, tiền cho vay: 4548832994.0; - Doanh thu hoạt động tài chính khác: 2000000000.0"
+    },
+    {
+      "note_number": "VII.5",
+      "note_title": "Chi phí tài chính",
+      "content": "- Lãi tiền vay: 46314181169.0; - Chi phí tài chính khác ( Phí LC trả chậm, upas): 5786105706.0"
+    },
+    {
+      "note_number": "VII.6",
+      "note_title": "Thu nhập khác",
+      "content": "- Thanh lý, nhượng bán TSCĐ: 309090909.0; - Thu tiền phạt: 73630417.0; ~ Phế liệu thanh lý, khác —_: 2013081496.0"
+    },
+    {
+      "note_number": "VII.7",
+      "note_title": "Chi phí khác",
+      "content": "- Chi phí khác: 57282498.0"
+    },
+    {
+      "note_number": "VII.8",
+      "note_title": "Chi phí bán hàng và chỉ phí quản lý doanh nghiệp",
+      "content": "- Các khoản chi phí quản lý doanh nghiệp: 87155594506.0; - Các khoản chỉ phí bán hàng: 98612406282.0"
+    },
+    {
+      "note_number": "VII.9",
+      "note_title": "Chi phí sản xuất kinh doanh theo yếu tổ",
+      "content": "Chi phí nguyên liệu, vật liệu: 2284730842005.0; Chi phí nhân công: 206458413356.0"
+    },
+    {
+      "note_number": "VII.10",
+      "note_title": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+      "content": "- Chi phí thuế TNDN tính trên thu nhập chịu thuế năm hiện hành: 16666079077.0; - Tổng chỉ phí thuế thu nhập DN hiện hành: 16666079077.0"
+    }
+  ]
+}

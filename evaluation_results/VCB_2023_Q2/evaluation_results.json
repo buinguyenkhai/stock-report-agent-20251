@@ -1,0 +1,37 @@
+{
+  "report_id": "VCB_2023_Q2",
+  "stock_code": "VCB",
+  "year": 2023,
+  "quarter": 2,
+  "ocr_method": "docling",
+  "evaluated_at": "2025-12-14T20:10:05.940014",
+  "overall_match_rate": 0.5111111111111111,
+  "overall_value_accuracy": 0.021739130434782608,
+  "overall_mape": 96.52377094820564,
+  "sections": {
+    "balance_sheet": {
+      "match_rate": 0.6511627906976745,
+      "value_accuracy": 0.0,
+      "mape": 99.99990591400751,
+      "total_vnstock": 43,
+      "total_ocr": 61,
+      "matched": 28
+    },
+    "income_statement": {
+      "match_rate": 0.4482758620689655,
+      "value_accuracy": 0.0,
+      "mape": 101.62356532293603,
+      "total_vnstock": 29,
+      "total_ocr": 24,
+      "matched": 13
+    },
+    "cash_flow": {
+      "match_rate": 0.2777777777777778,
+      "value_accuracy": 0.2,
+      "mape": 80.00333537061329,
+      "total_vnstock": 18,
+      "total_ocr": 38,
+      "matched": 5
+    }
+  }
+}

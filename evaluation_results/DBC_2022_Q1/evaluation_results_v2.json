@@ -1,0 +1,38 @@
+{
+  "report_id": "DBC_2022_Q1",
+  "stock_code": "DBC",
+  "year": 2022,
+  "quarter": 1,
+  "ocr_method": "docling",
+  "detected_unit": "VND",
+  "evaluated_at": "2025-12-14T21:36:40.875326",
+  "overall_match_rate": 0.47368421052631576,
+  "overall_value_accuracy": 0.7777777777777778,
+  "overall_mape": 16.127383726446524,
+  "sections": {
+    "balance_sheet": {
+      "match_rate": 0.4864864864864865,
+      "value_accuracy": 0.8333333333333334,
+      "mape": 14.292851662374666,
+      "total_vnstock": 37,
+      "total_ocr": 49,
+      "matched": 18
+    },
+    "income_statement": {
+      "match_rate": 0.4166666666666667,
+      "value_accuracy": 0.8,
+      "mape": 9.2307066311322,
+      "total_vnstock": 24,
+      "total_ocr": 18,
+      "matched": 10
+    },
+    "cash_flow": {
+      "match_rate": 0.5,
+      "value_accuracy": 0.7058823529411765,
+      "mape": 22.992028922276006,
+      "total_vnstock": 34,
+      "total_ocr": 37,
+      "matched": 17
+    }
+  }
+}

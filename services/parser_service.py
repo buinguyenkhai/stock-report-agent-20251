@@ -4,8 +4,11 @@ from langchain_core.prompts import ChatPromptTemplate
 from pydantic_models import FinancialReportData
 from config import settings
 from logger import get_logger
+from services.llm_utils import extract_tables_llm
 
 logger = get_logger(__name__)
+TABLE_EXTRACTION_THRESHOLD = getattr(settings, 'llm_table_extraction_threshold', 80000)
+USE_LLM_EXTRACTION = getattr(settings, 'llm_use_for_extraction', True)
 
 
 class FinancialParser:
@@ -45,6 +48,11 @@ class FinancialParser:
         4. Thuyết minh (Notes): Trích xuất danh sách các mục thuyết minh chính (Số hiệu, Tiêu đề, Nội dung tóm tắt).
 
         QUY TẮC QUAN TRỌNG:
+        - **ĐƠN VỊ TIỀN TỆ**: Tìm dòng "Đơn vị tính:" hoặc cột header có chứa đơn vị. Có thể là:
+          * "VND" hoặc "VNĐ" hoặc "đồng" -> unit = "VND"
+          * "triệu VND" hoặc "Triệu VND" hoặc "Triệu đồng" -> unit = "triệu VND"
+          * "tỷ VND" hoặc "Tỷ VND" hoặc "Tỷ đồng" hoặc "Bn. VND" -> unit = "tỷ VND"
+          * "nghìn VND" hoặc "Nghìn đồng" -> unit = "nghìn VND"
         - Chỉ lấy số liệu của "Kỳ này" hoặc "Cuối kỳ" (Cột số liệu mới nhất). KHÔNG lấy số liệu "Kỳ trước" hay "Đầu năm".
         - "item_code" (Mã số) là RẤT QUAN TRỌNG. Hãy cố gắng lấy chính xác. Nếu không có, hãy để trống.
         - "value" (Giá trị) phải là số thực (float). Hãy xử lý các dấu phân cách hàng nghìn (dấu chấm hoặc phẩy tùy báo cáo) để chuyển thành số đúng. Ví dụ: "1.000.000" -> 1000000.
@@ -60,21 +68,34 @@ class FinancialParser:
         chain = prompt | self.structured_llm
 
         try:
+            # Extract only financial tables for large documents using LLM
+            content_to_parse = markdown_content
+            should_extract = (
+                USE_LLM_EXTRACTION 
+                and len(markdown_content) > TABLE_EXTRACTION_THRESHOLD
+            )
+            if should_extract:
+                logger.info(f"Large document detected ({len(markdown_content):,} chars), using LLM extraction...")
+                content_to_parse = extract_tables_llm(markdown_content)
+                logger.info(f"Reduced to {len(content_to_parse):,} chars for parsing")
+            
             logger.info("Invoking LLM for structured parsing...")
-            result: FinancialReportData = chain.invoke({"content": markdown_content})
+            result: FinancialReportData = chain.invoke({"content": content_to_parse})
             
             parsed = {
+                "unit": result.unit or "VND",  # Default to VND if not detected
                 "BS": [item.model_dump() for item in result.balance_sheet],
                 "PL": [item.model_dump() for item in result.income_statement],
                 "CF": [item.model_dump() for item in result.cash_flow],
                 "Notes": [item.model_dump() for item in result.notes]
             }
-            logger.info(f"Successfully parsed: BS={len(parsed['BS'])}, PL={len(parsed['PL'])}, CF={len(parsed['CF'])} items")
+            logger.info(f"Successfully parsed: Unit={parsed['unit']}, BS={len(parsed['BS'])}, PL={len(parsed['PL'])}, CF={len(parsed['CF'])} items")
             return parsed
         except Exception as e:
             logger.error(f"Parser Error: {str(e)}", exc_info=True)
             # Return empty structure on failure
             return {
+                "unit": "VND",
                 "BS": [],
                 "PL": [],
                 "CF": [],

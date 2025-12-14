@@ -31,6 +31,10 @@ class FinancialNote(BaseModel):
 
 class FinancialReportData(BaseModel):
     """Dữ liệu cấu trúc được trích xuất từ báo cáo tài chính."""
+    unit: Optional[Literal["VND", "triệu VND", "tỷ VND", "nghìn VND"]] = Field(
+        default="VND",
+        description="Đơn vị tiền tệ của báo cáo. Tìm trong header bảng hoặc dòng 'Đơn vị tính'. Ví dụ: 'VND', 'triệu VND', 'tỷ VND', 'nghìn VND'."
+    )
     balance_sheet: List[FinancialItem] = Field(description="Bảng Cân đối kế toán.")
     income_statement: List[FinancialItem] = Field(description="Báo cáo Kết quả hoạt động kinh doanh.")
     cash_flow: List[FinancialItem] = Field(description="Báo cáo Lưu chuyển tiền tệ.")
