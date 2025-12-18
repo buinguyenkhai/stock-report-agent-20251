@@ -15,7 +15,7 @@ logger = get_logger(__name__)
 LLM_RETRY_ATTEMPTS = 3
 LLM_RETRY_MIN_WAIT = 2
 LLM_RETRY_MAX_WAIT = 30
-DEFAULT_UTILS_MODEL = settings.llm_utils_model if hasattr(settings, 'llm_utils_model') else "gemini-2.5-flash"
+DEFAULT_UTILS_MODEL = settings.llm_utils_model if hasattr(settings, 'llm_utils_model') else "gemini-3-flash-preview"
 
 # LLM TABLE EXTRACTOR
 
