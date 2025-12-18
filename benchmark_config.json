@@ -1,0 +1,31 @@
+{
+  "description": "Configuration for LLM model benchmarking",
+  "models": {
+    "description": "List of OpenRouter models to benchmark.",
+    "openrouter": [
+      "mistralai/devstral-2512:free",
+      "z-ai/glm-4.5-air:free",
+      "moonshotai/kimi-k2:free",
+      "qwen/qwen3-coder:free",
+      "tngtech/deepseek-r1t2-chimera:free",
+      "deepseek/deepseek-r1-0528:free",
+      "qwen/qwen3-235b-a22b:free",
+      "google/gemini-2.0-flash-exp:free"
+    ]
+  },
+  "tasks": {
+    "description": "Tasks to benchmark. Options: table_extraction, item_matching, unit_detection, all",
+    "enabled": ["all"]
+  },
+  "settings": {
+    "validate_structured_output": true,
+    "ground_truth_dir": "data/ground_truth",
+    "evaluation_results_dir": "evaluation_results", 
+    "output_dir": "benchmark_results"
+  },
+  "notes": {
+    "adding_models": "Add models in OpenRouter format: 'org/model-name' or 'org/model-name:free' for free tier",
+    "structured_output": "Models that don't support Pydantic structured output will be automatically filtered out",
+    "free_models": "Free OpenRouter models have ':free' suffix. Check https://openrouter.ai/docs#quick-start for available free models"
+  }
+}

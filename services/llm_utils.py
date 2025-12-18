@@ -3,19 +3,19 @@ import re
 from typing import Dict, List, Optional, Tuple
 from functools import lru_cache
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel, Field
 
 from config import settings
 from logger import get_logger
+from services.llm_factory import create_llm_for_task
 
 logger = get_logger(__name__)
 
 LLM_RETRY_ATTEMPTS = 3
 LLM_RETRY_MIN_WAIT = 2
 LLM_RETRY_MAX_WAIT = 30
-DEFAULT_UTILS_MODEL = settings.llm_utils_model if hasattr(settings, 'llm_utils_model') else "gemini-3-flash-preview"
+DEFAULT_UTILS_MODEL = settings.llm_utils_model if hasattr(settings, 'llm_utils_model') else "mistralai/devstral-2512:free"
 
 # LLM TABLE EXTRACTOR
 
@@ -40,15 +40,9 @@ class LLMTableExtractor:
     
     def __init__(self, model: str = None):
         """Initialize with a fast, cheap model for extraction."""
-        if not settings.google_api_key:
-            raise ValueError("GOOGLE_API_KEY is not set.")
-        
         model = model or DEFAULT_UTILS_MODEL
-        self.llm = ChatGoogleGenerativeAI(
-            model=model,
-            temperature=0.0,
-            google_api_key=settings.google_api_key
-        )
+        self.model = model
+        self.llm = create_llm_for_task("table_extraction", model=model)
         self.structured_llm = self.llm.with_structured_output(TableExtractionResult)
     
     def extract_sections(self, markdown_text: str) -> Dict[str, str]:
@@ -184,11 +178,8 @@ class LLMItemMatcher:
     
     def __init__(self, model: str = None):
         model = model or DEFAULT_UTILS_MODEL
-        self.llm = ChatGoogleGenerativeAI(
-            model=model,
-            temperature=0.0,
-            google_api_key=settings.google_api_key
-        )
+        self.model = model
+        self.llm = create_llm_for_task("item_matching", model=model)
         self.structured_llm = self.llm.with_structured_output(MatchResult)
         self._match_cache: Dict[Tuple[str, str], MatchResult] = {}
     
@@ -375,15 +366,9 @@ class LLMUnitDetector:
     """
     
     def __init__(self, model: str = None):
-        if not settings.google_api_key:
-            raise ValueError("GOOGLE_API_KEY is not set.")
-        
         model = model or DEFAULT_UTILS_MODEL
-        self.llm = ChatGoogleGenerativeAI(
-            model=model,
-            temperature=0.0,
-            google_api_key=settings.google_api_key
-        )
+        self.model = model
+        self.llm = create_llm_for_task("unit_detection", model=model)
         self.structured_llm = self.llm.with_structured_output(UnitDetectionResult)
     
     def detect_unit(self, markdown_text: str) -> str:

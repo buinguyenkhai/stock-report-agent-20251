@@ -3,7 +3,7 @@ from state import StockReportState
 from tools import get_current_time
 from config import settings, QUARTER_END_MONTHS
 from logger import get_logger
-from langchain_google_genai import ChatGoogleGenerativeAI
+from services.llm_factory import create_llm_for_task
 from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptTemplate
 from datetime import datetime
 
@@ -24,10 +24,9 @@ def process_query_node(state: StockReportState) -> StockReportState:
         }
 
     tools = [get_current_time]
-    llm = ChatGoogleGenerativeAI(
-        model=settings.llm_model,
-        temperature=settings.llm_temperature,
-        google_api_key=settings.google_api_key
+    llm = create_llm_for_task(
+        "query_processing", 
+        model=settings.llm_model
     ).bind_tools(tools)
     llm_with_tools = llm.with_structured_output(AnalysisIntent)
 

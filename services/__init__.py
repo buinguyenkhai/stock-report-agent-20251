@@ -10,6 +10,15 @@ from .llm_utils import (
     get_item_matcher,
     get_unit_detector,
 )
+from .llm_factory import (
+    create_llm,
+    create_structured_llm,
+    create_llm_for_task,
+    create_structured_llm_for_task,
+    get_model_info,
+    test_model_structured_output,
+    LLMConfig,
+)
 
 __all__ = [
     "FinancialParser",
@@ -22,4 +31,11 @@ __all__ = [
     "get_table_extractor",
     "get_item_matcher",
     "get_unit_detector",
+    "create_llm",
+    "create_structured_llm",
+    "create_llm_for_task",
+    "create_structured_llm_for_task",
+    "get_model_info",
+    "test_model_structured_output",
+    "LLMConfig",
 ]

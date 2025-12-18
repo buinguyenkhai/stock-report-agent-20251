@@ -1,10 +1,10 @@
 from tenacity import retry, stop_after_attempt, wait_exponential
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from pydantic_models import FinancialReportData
 from config import settings
 from logger import get_logger
 from services.llm_utils import extract_tables_llm
+from services.llm_factory import create_llm_for_task
 
 logger = get_logger(__name__)
 TABLE_EXTRACTION_THRESHOLD = getattr(settings, 'llm_table_extraction_threshold', 80000)
@@ -16,14 +16,10 @@ class FinancialParser:
     Parses raw Markdown content into structured financial items using LLM.
     """
     def __init__(self):
-        if not settings.google_api_key:
-            raise ValueError("GOOGLE_API_KEY is not set.")
+        if not settings.openrouter_api_key:
+            raise ValueError("OPENROUTER_API_KEY is not set.")
         
-        self.llm = ChatGoogleGenerativeAI(
-            model=settings.llm_model,
-            temperature=settings.llm_temperature,
-            google_api_key=settings.google_api_key
-        )
+        self.llm = create_llm_for_task("parsing", model=settings.llm_model)
         self.structured_llm = self.llm.with_structured_output(FinancialReportData)
 
     @retry(
