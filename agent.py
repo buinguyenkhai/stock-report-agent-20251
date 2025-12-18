@@ -73,5 +73,5 @@ with open("result.json", 'w', encoding='utf-8') as f:
     json.dump(final_state, f, ensure_ascii=False, indent=4)
 
 # Lưu graph
-with open("graph_v2.png", "wb") as f:
+with open("readme_img/graph_v2.png", "wb") as f:
     f.write(agent.get_graph().draw_mermaid_png())

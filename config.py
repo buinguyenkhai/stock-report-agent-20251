@@ -11,11 +11,11 @@ class Settings(BaseSettings):
     openrouter_api_key: str = Field(default="", description="OpenRouter API key for LLMs")
     
     # LLM Settings
-    llm_model: str = Field(default="google/gemini-2.0-flash-exp:free", description="LLM model for main parsing")
+    llm_model: str = Field(default="mistralai/devstral-2512:free", description="LLM model for main parsing")
     llm_temperature: float = Field(default=0.0, description="LLM temperature setting")
     
     # LLM Utility Settings (for table extraction, matching, unit detection)
-    llm_utils_model: str = Field(default="google/gemini-2.0-flash-exp:free", description="Fast model for utilities")
+    llm_utils_model: str = Field(default="mistralai/devstral-2512:free", description="Fast model for utilities")
     llm_use_for_matching: bool = Field(default=True, description="Use LLM for item matching")
     llm_use_for_extraction: bool = Field(default=True, description="Use LLM for table extraction")
     llm_table_extraction_threshold: int = Field(default=80000, description="Document size threshold for table extraction (chars)")
