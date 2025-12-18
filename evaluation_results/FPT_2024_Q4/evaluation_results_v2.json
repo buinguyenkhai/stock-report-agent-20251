@@ -5,34 +5,34 @@
   "quarter": 4,
   "ocr_method": "docling",
   "detected_unit": "VND",
-  "evaluated_at": "2025-12-14T21:36:40.987826",
-  "overall_match_rate": 0.3434343434343434,
-  "overall_value_accuracy": 0.35294117647058826,
-  "overall_mape": 347.55021615222233,
+  "evaluated_at": "2025-12-18T10:55:18.076011",
+  "overall_match_rate": 0.48484848484848486,
+  "overall_value_accuracy": 0.3125,
+  "overall_mape": 237.58582187949494,
   "sections": {
     "balance_sheet": {
-      "match_rate": 0.39473684210526316,
-      "value_accuracy": 0.8,
-      "mape": 54.73456090534806,
+      "match_rate": 0.42105263157894735,
+      "value_accuracy": 0.9375,
+      "mape": 6.438046602914753,
       "total_vnstock": 38,
       "total_ocr": 44,
-      "matched": 15
+      "matched": 16
     },
     "income_statement": {
-      "match_rate": 0.46153846153846156,
+      "match_rate": 0.7307692307692307,
       "value_accuracy": 0.0,
-      "mape": 212.59278246538926,
+      "mape": 225.98421307992828,
       "total_vnstock": 26,
       "total_ocr": 23,
-      "matched": 12
+      "matched": 19
     },
     "cash_flow": {
-      "match_rate": 0.2,
+      "match_rate": 0.37142857142857144,
       "value_accuracy": 0.0,
-      "mape": 765.7184497304761,
+      "mape": 497.16460157374576,
       "total_vnstock": 35,
       "total_ocr": 14,
-      "matched": 7
+      "matched": 13
     }
   }
 }

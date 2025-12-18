@@ -50,6 +50,8 @@ class FinancialReport:
     stock_code: str             # "FPT", "VCI"
     year: int                   # 2024
     quarter: Optional[int] = None  # 1-4 for quarterly, None for yearly
+    report_scope: str = "consolidated"  # "consolidated" or "parent"
+    period_type: str = "quarterly"      # "quarterly" or "cumulative"
     
     balance_sheet: FinancialStatement = field(
         default_factory=lambda: FinancialStatement("BS")
@@ -92,6 +94,8 @@ class FinancialReport:
             "year": self.year,
             "quarter": self.quarter,
             "period": self.period,
+            "report_scope": self.report_scope,
+            "period_type": self.period_type,
             "source": self.source,
             "collected_at": self.collected_at,
             "balance_sheet": [

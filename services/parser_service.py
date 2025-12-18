@@ -47,13 +47,34 @@ class FinancialParser:
         3. Báo cáo Lưu chuyển tiền tệ (Cash Flow)
         4. Thuyết minh (Notes): Trích xuất danh sách các mục thuyết minh chính (Số hiệu, Tiêu đề, Nội dung tóm tắt).
 
+        === XÁC ĐỊNH PHẠM VI BÁO CÁO (report_scope) ===
+        - Xem tiêu đề báo cáo để xác định:
+          * "Hợp nhất" / "Consolidated" -> report_scope = "consolidated"
+          * "Công ty mẹ" / "Riêng lẻ" / "Parent" / "Separate" -> report_scope = "parent"
+        - Nếu không rõ, mặc định là "consolidated".
+
+        === XÁC ĐỊNH LOẠI KỲ BÁO CÁO (period_type) ===
+        - Báo cáo có thể có nhiều cột số liệu. Hãy xác định loại kỳ từ header cột:
+          * "Quý X" / "Số quý này" / "Kỳ này" / "Năm nay" -> period_type = "quarterly" (số liệu của riêng quý đó)
+          * "Lũy kế" / "Từ đầu năm" / "Accumulated" / "YTD" / "Cộng dồn" -> period_type = "cumulative" (lũy kế từ đầu năm)
+        - **ƯU TIÊN**: Nếu có nhiều cột, hãy ưu tiên lấy cột "quarterly" (số quý) thay vì "cumulative" (lũy kế).
+        - Nếu chỉ có một cột hoặc không rõ, mặc định là "quarterly".
+
+        === CHỌN CỘT SỐ LIỆU ĐÚNG ===
+        - Bảng có thể có 2-4 cột số liệu với các tổ hợp:
+          * Cột 1: Quý X năm nay | Cột 2: Quý X năm trước | Cột 3: Lũy kế năm nay | Cột 4: Lũy kế năm trước
+          * Hoặc: Cuối kỳ | Đầu năm (cho Balance Sheet)
+        - **CHỈ LẤY** cột số liệu của kỳ hiện tại (Quý X năm nay hoặc Cuối kỳ). KHÔNG lấy:
+          * Số liệu năm trước / kỳ trước
+          * Số liệu đầu năm
+          * Số liệu lũy kế (trừ khi báo cáo chỉ có cột lũy kế)
+
         QUY TẮC QUAN TRỌNG:
         - **ĐƠN VỊ TIỀN TỆ**: Tìm dòng "Đơn vị tính:" hoặc cột header có chứa đơn vị. Có thể là:
           * "VND" hoặc "VNĐ" hoặc "đồng" -> unit = "VND"
           * "triệu VND" hoặc "Triệu VND" hoặc "Triệu đồng" -> unit = "triệu VND"
           * "tỷ VND" hoặc "Tỷ VND" hoặc "Tỷ đồng" hoặc "Bn. VND" -> unit = "tỷ VND"
           * "nghìn VND" hoặc "Nghìn đồng" -> unit = "nghìn VND"
-        - Chỉ lấy số liệu của "Kỳ này" hoặc "Cuối kỳ" (Cột số liệu mới nhất). KHÔNG lấy số liệu "Kỳ trước" hay "Đầu năm".
         - "item_code" (Mã số) là RẤT QUAN TRỌNG. Hãy cố gắng lấy chính xác. Nếu không có, hãy để trống.
         - "value" (Giá trị) phải là số thực (float). Hãy xử lý các dấu phân cách hàng nghìn (dấu chấm hoặc phẩy tùy báo cáo) để chuyển thành số đúng. Ví dụ: "1.000.000" -> 1000000.
         - Nếu giá trị nằm trong ngoặc đơn `(100)`, đó là số âm -> -100.
@@ -84,18 +105,22 @@ class FinancialParser:
             
             parsed = {
                 "unit": result.unit or "VND",  # Default to VND if not detected
+                "report_scope": result.report_scope or "consolidated",
+                "period_type": result.period_type or "quarterly",
                 "BS": [item.model_dump() for item in result.balance_sheet],
                 "PL": [item.model_dump() for item in result.income_statement],
                 "CF": [item.model_dump() for item in result.cash_flow],
                 "Notes": [item.model_dump() for item in result.notes]
             }
-            logger.info(f"Successfully parsed: Unit={parsed['unit']}, BS={len(parsed['BS'])}, PL={len(parsed['PL'])}, CF={len(parsed['CF'])} items")
+            logger.info(f"Successfully parsed: Unit={parsed['unit']}, Scope={parsed['report_scope']}, Period={parsed['period_type']}, BS={len(parsed['BS'])}, PL={len(parsed['PL'])}, CF={len(parsed['CF'])} items")
             return parsed
         except Exception as e:
             logger.error(f"Parser Error: {str(e)}", exc_info=True)
             # Return empty structure on failure
             return {
                 "unit": "VND",
+                "report_scope": "consolidated",
+                "period_type": "quarterly",
                 "BS": [],
                 "PL": [],
                 "CF": [],

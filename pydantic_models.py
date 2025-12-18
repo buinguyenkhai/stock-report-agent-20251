@@ -35,6 +35,14 @@ class FinancialReportData(BaseModel):
         default="VND",
         description="Đơn vị tiền tệ của báo cáo. Tìm trong header bảng hoặc dòng 'Đơn vị tính'. Ví dụ: 'VND', 'triệu VND', 'tỷ VND', 'nghìn VND'."
     )
+    report_scope: Optional[Literal["consolidated", "parent"]] = Field(
+        default="consolidated",
+        description="Phạm vi báo cáo: 'consolidated' = Hợp nhất (bao gồm công ty con), 'parent' = Công ty mẹ (riêng lẻ). Xác định từ tiêu đề báo cáo."
+    )
+    period_type: Optional[Literal["quarterly", "cumulative"]] = Field(
+        default="quarterly",
+        description="Loại kỳ báo cáo: 'quarterly' = Số liệu của riêng quý đó, 'cumulative' = Lũy kế từ đầu năm (YTD). Xác định từ header cột."
+    )
     balance_sheet: List[FinancialItem] = Field(description="Bảng Cân đối kế toán.")
     income_statement: List[FinancialItem] = Field(description="Báo cáo Kết quả hoạt động kinh doanh.")
     cash_flow: List[FinancialItem] = Field(description="Báo cáo Lưu chuyển tiền tệ.")
