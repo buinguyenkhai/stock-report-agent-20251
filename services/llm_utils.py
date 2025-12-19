@@ -17,145 +17,6 @@ LLM_RETRY_MIN_WAIT = 2
 LLM_RETRY_MAX_WAIT = 30
 DEFAULT_UTILS_MODEL = settings.llm_utils_model if hasattr(settings, 'llm_utils_model') else "mistralai/devstral-2512:free"
 
-# LLM TABLE EXTRACTOR
-
-class TableSection(BaseModel):
-    """Identified section in a financial report."""
-    section_type: str = Field(description="One of: BS (Balance Sheet), PL (Income Statement), CF (Cash Flow)")
-    start_line: int = Field(description="1-based line number where section starts")
-    end_line: int = Field(description="1-based line number where section ends")
-    confidence: float = Field(description="Confidence score 0-1")
-
-
-class TableExtractionResult(BaseModel):
-    """Result of table extraction."""
-    sections: List[TableSection] = Field(description="List of identified sections")
-    unit: Optional[str] = Field(default=None, description="Detected currency unit")
-
-class LLMTableExtractor:
-    """
-    Uses LLM to identify financial statement sections in markdown.
-    Replaces regex-based pattern matching with semantic understanding.
-    """
-    
-    def __init__(self, model: str = None):
-        """Initialize with a fast, cheap model for extraction."""
-        model = model or DEFAULT_UTILS_MODEL
-        self.model = model
-        self.llm = create_llm_for_task("table_extraction", model=model)
-        self.structured_llm = self.llm.with_structured_output(TableExtractionResult)
-    
-    def extract_sections(self, markdown_text: str) -> Dict[str, str]:
-        """
-        Extract BS, PL, CF sections from markdown using LLM.
-        """
-        # Split into lines for line-number reference
-        lines = markdown_text.split('\n')
-        total_lines = len(lines)
-
-        if total_lines > 2000:
-            # Create a condensed view with line numbers
-            sample = self._create_condensed_view(lines)
-            content_for_llm = sample
-        else:
-            # Add line numbers to help LLM reference
-            content_for_llm = self._add_line_numbers(lines[:1500])
-        
-        prompt = ChatPromptTemplate.from_messages([
-            ("system", """You are a financial document analyzer. Your task is to identify the line numbers where each financial statement section begins and ends.
-
-Financial reports typically contain 3 main sections:
-1. **BS** (Balance Sheet / Bảng cân đối kế toán) - Shows assets, liabilities, equity
-2. **PL** (Income Statement / Báo cáo kết quả hoạt động kinh doanh) - Shows revenue, expenses, profit
-3. **CF** (Cash Flow / Báo cáo lưu chuyển tiền tệ) - Shows cash movements
-
-Look for:
-- Section headers in Vietnamese or English
-- Tables with financial line items (asset codes like 100, 110, 200, etc.)
-- Section transitions (one statement ending before another begins)
-
-Also identify the currency unit if visible (VND, triệu VND, tỷ VND, etc.)
-
-Return the line numbers (1-based) for each section you find."""),
-            ("user", """Analyze this financial report and identify the sections:
-
-{content}
-
-Total lines in document: {total_lines}
-
-Find the start and end line numbers for BS, PL, and CF sections.""")
-        ])
-        
-        try:
-            chain = prompt | self.structured_llm
-            result: TableExtractionResult = chain.invoke({
-                "content": content_for_llm,
-                "total_lines": total_lines
-            })
-            
-            # Extract sections based on identified line numbers
-            extracted = {"header": ""}
-            
-            for section in result.sections:
-                section_type = section.section_type.upper()
-                if section_type in ['BS', 'PL', 'CF']:
-                    start = max(0, section.start_line - 1)  # Convert to 0-based
-                    end = min(total_lines, section.end_line)
-                    extracted[section_type] = '\n'.join(lines[start:end])
-                    logger.debug(f"Extracted {section_type}: lines {section.start_line}-{section.end_line} ({end-start} lines)")
-            
-            # Add unit if detected
-            if result.unit:
-                extracted["unit"] = result.unit
-            
-            # Extract header (first 50 lines or until first section)
-            first_section_line = min(
-                (s.start_line for s in result.sections),
-                default=50
-            )
-            extracted["header"] = '\n'.join(lines[:min(50, first_section_line)])
-            
-            logger.info(f"LLM extracted sections: {list(extracted.keys())}")
-            return extracted
-            
-        except Exception as e:
-            logger.error(f"LLM table extraction failed: {e}")
-            return {}
-    
-    def _add_line_numbers(self, lines: List[str]) -> str:
-        """Add line numbers to each line for LLM reference."""
-        numbered = []
-        for i, line in enumerate(lines, 1):
-            if line.strip():
-                numbered.append(f"L{i}: {line}")
-        return '\n'.join(numbered)
-    
-    def _create_condensed_view(self, lines: List[str]) -> str:
-        """Create a condensed view of large document for LLM."""
-        total = len(lines)
-        
-        samples = []
-        
-        # First 300 lines
-        samples.append("=== FIRST 300 LINES ===")
-        samples.extend([f"L{i}: {line}" for i, line in enumerate(lines[:300], 1) if line.strip()])
-        
-        # Sample from middle
-        mid_start = total // 3
-        samples.append(f"\n=== LINES {mid_start}-{mid_start+300} (MIDDLE) ===")
-        samples.extend([f"L{i}: {line}" for i, line in enumerate(lines[mid_start:mid_start+300], mid_start+1) if line.strip()])
-        
-        # Sample from 2/3
-        late_start = 2 * total // 3
-        samples.append(f"\n=== LINES {late_start}-{late_start+300} (LATE) ===")
-        samples.extend([f"L{i}: {line}" for i, line in enumerate(lines[late_start:late_start+300], late_start+1) if line.strip()])
-        
-        # Last 100 lines
-        samples.append("\n=== LAST 100 LINES ===")
-        samples.extend([f"L{i}: {line}" for i, line in enumerate(lines[-100:], total-99) if line.strip()])
-        
-        return '\n'.join(samples)
-
 # LLM ITEM MATCHER
 
 class MatchResult(BaseModel):
@@ -415,12 +276,6 @@ What is the currency unit used?""")
             logger.warning(f"LLM unit detection failed: {e}, defaulting to VND")
             return "VND"
 
-@lru_cache(maxsize=1)
-def get_table_extractor() -> LLMTableExtractor:
-    """Get singleton table extractor instance."""
-    return LLMTableExtractor()
-
-
 @lru_cache(maxsize=1) 
 def get_item_matcher() -> LLMItemMatcher:
     """Get singleton item matcher instance."""
@@ -431,35 +286,6 @@ def get_item_matcher() -> LLMItemMatcher:
 def get_unit_detector() -> LLMUnitDetector:
     """Get singleton unit detector instance."""
     return LLMUnitDetector()
-
-
-def extract_tables_llm(markdown_text: str) -> str:
-    """
-    Convenience function to extract financial tables using LLM.
-    """
-    extractor = get_table_extractor()
-    sections = extractor.extract_sections(markdown_text)
-    
-    if not sections:
-        logger.warning("LLM extraction returned nothing, using full document")
-        return markdown_text
-    
-    # Combine sections
-    parts = []
-    
-    if sections.get("header"):
-        parts.append("# Document Header\n" + sections["header"])
-    
-    for section_name in ["BS", "PL", "CF"]:
-        if sections.get(section_name):
-            parts.append(f"\n## {section_name}\n\n{sections[section_name]}")
-    
-    combined = "\n\n---\n\n".join(parts)
-    
-    reduction = (1 - len(combined) / len(markdown_text)) * 100 if markdown_text else 0
-    logger.info(f"LLM extraction: {len(markdown_text):,} → {len(combined):,} chars ({reduction:.1f}% reduction)")
-    
-    return combined
 
 
 def detect_unit_llm(markdown_text: str) -> str:

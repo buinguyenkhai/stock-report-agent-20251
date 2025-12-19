@@ -71,7 +71,6 @@ Parse Markdown thành dữ liệu cấu trúc JSON.
   - **Loại kỳ** (Quý riêng lẻ / Lũy kế từ đầu năm)
 - **Smart column selection**: Tự động chọn cột số liệu đúng (kỳ hiện tại, bỏ qua kỳ trước/lũy kế)
 - Xử lý số âm trong ngoặc đơn: `(100)` → `-100`
-- **LLM Table Extraction**: Với tài liệu lớn (>80K chars), dùng LLM để lọc trước
 
 **Sử dụng:**
 - LLM chính: `mistralai/devstral-2512:free` (cấu hình cho parsing task)
@@ -129,7 +128,6 @@ class FinancialReportData(BaseModel):
 Quản lý tạo LLM instances với cấu hình tối ưu theo task.
 
 **Task-specific configs:**
-- `table_extraction`: temp=0, max_tokens=500, top_p=0.9
 - `item_matching`: temp=0, max_tokens=150, frequency_penalty=0.1
 - `unit_detection`: temp=0, max_tokens=100
 - `parsing`: temp=0, max_tokens=8000, timeout=180s
@@ -142,7 +140,6 @@ Parse Markdown → JSON với validation.
 
 **Features:**
 - Retry logic với exponential backoff
-- LLM-based table extraction cho tài liệu lớn
 - Structured output với Pydantic schema
 
 ### Validator Service
@@ -157,7 +154,6 @@ Kiểm tra tính nhất quán của dữ liệu tài chính.
 
 ### LLM Utils
 Các utility functions cho LLM:
-- **Table Extraction**: Tìm sections BS/PL/CF bằng LLM
 - **Item Matching**: Match tên chỉ tiêu với canonical names
 - **Unit Detection**: Xác định đơn vị tiền tệ
 

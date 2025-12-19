@@ -14,7 +14,7 @@
     ]
   },
   "tasks": {
-    "description": "Tasks to benchmark. Options: table_extraction, item_matching, unit_detection, all",
+    "description": "Tasks to benchmark. Options: item_matching, unit_detection, all",
     "enabled": ["all"]
   },
   "settings": {

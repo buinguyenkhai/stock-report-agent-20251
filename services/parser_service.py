@@ -3,12 +3,9 @@ from langchain_core.prompts import ChatPromptTemplate
 from pydantic_models import FinancialReportData
 from config import settings
 from logger import get_logger
-from services.llm_utils import extract_tables_llm
 from services.llm_factory import create_llm_for_task
 
 logger = get_logger(__name__)
-TABLE_EXTRACTION_THRESHOLD = getattr(settings, 'llm_table_extraction_threshold', 80000)
-USE_LLM_EXTRACTION = getattr(settings, 'llm_use_for_extraction', True)
 
 
 class FinancialParser:
@@ -85,19 +82,8 @@ class FinancialParser:
         chain = prompt | self.structured_llm
 
         try:
-            # Extract only financial tables for large documents using LLM
-            content_to_parse = markdown_content
-            should_extract = (
-                USE_LLM_EXTRACTION 
-                and len(markdown_content) > TABLE_EXTRACTION_THRESHOLD
-            )
-            if should_extract:
-                logger.info(f"Large document detected ({len(markdown_content):,} chars), using LLM extraction...")
-                content_to_parse = extract_tables_llm(markdown_content)
-                logger.info(f"Reduced to {len(content_to_parse):,} chars for parsing")
-            
             logger.info("Invoking LLM for structured parsing...")
-            result: FinancialReportData = chain.invoke({"content": content_to_parse})
+            result: FinancialReportData = chain.invoke({"content": markdown_content})
             
             parsed = {
                 "unit": result.unit or "VND",  # Default to VND if not detected

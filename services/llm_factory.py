@@ -31,15 +31,6 @@ class LLMConfig:
     def for_task(cls, task: str) -> "LLMConfig":
         """Get task-specific LLM configuration."""
         task_configs = {
-            "table_extraction": cls(
-                temperature=0.0,
-                max_tokens=500,
-                timeout=90,
-                top_p=0.9,
-                frequency_penalty=0.0,
-                presence_penalty=0.0,
-                max_retries=3,
-            ),
             "item_matching": cls(
                 temperature=0.0,
                 max_tokens=150,

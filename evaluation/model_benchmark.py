@@ -9,10 +9,8 @@ from enum import Enum
 from logger import get_logger
 from services.llm_factory import get_model_info, test_model_structured_output
 from services.llm_utils import (
-    LLMTableExtractor, 
     LLMItemMatcher, 
     LLMUnitDetector,
-    TableExtractionResult,
     MatchResult,
     UnitDetectionResult
 )
@@ -22,7 +20,6 @@ logger = get_logger(__name__)
 
 class BenchmarkTask(str, Enum):
     """Benchmark task types."""
-    TABLE_EXTRACTION = "table_extraction"
     ITEM_MATCHING = "item_matching"
     UNIT_DETECTION = "unit_detection"
     ALL = "all"
@@ -140,9 +137,9 @@ class ModelBenchmark:
         Run benchmarks for specified tasks.
         """
         if tasks is None:
-            tasks = [BenchmarkTask.TABLE_EXTRACTION, BenchmarkTask.ITEM_MATCHING, BenchmarkTask.UNIT_DETECTION]
+            tasks = [BenchmarkTask.ITEM_MATCHING, BenchmarkTask.UNIT_DETECTION]
         elif BenchmarkTask.ALL in tasks:
-            tasks = [BenchmarkTask.TABLE_EXTRACTION, BenchmarkTask.ITEM_MATCHING, BenchmarkTask.UNIT_DETECTION]
+            tasks = [BenchmarkTask.ITEM_MATCHING, BenchmarkTask.UNIT_DETECTION]
         
         report = BenchmarkReport(
             timestamp=datetime.now().isoformat(),
@@ -210,8 +207,6 @@ class ModelBenchmark:
         
         # Determine which schemas to test based on tasks
         schemas_to_test = []
-        if BenchmarkTask.TABLE_EXTRACTION in tasks:
-            schemas_to_test.append(("TableExtraction", TableExtractionResult, "Identify sections in: Balance Sheet, Income Statement"))
         if BenchmarkTask.ITEM_MATCHING in tasks:
             schemas_to_test.append(("ItemMatching", MatchResult, "Compare: 'Tiền mặt' vs 'Cash'"))
         if BenchmarkTask.UNIT_DETECTION in tasks:
@@ -246,63 +241,12 @@ class ModelBenchmark:
             task=task.value
         )
         
-        if task == BenchmarkTask.TABLE_EXTRACTION:
-            return self._benchmark_table_extraction(model, result)
-        elif task == BenchmarkTask.ITEM_MATCHING:
+        if task == BenchmarkTask.ITEM_MATCHING:
             return self._benchmark_item_matching(model, result)
         elif task == BenchmarkTask.UNIT_DETECTION:
             return self._benchmark_unit_detection(model, result)
         else:
             raise ValueError(f"Unknown task: {task}")
-    
-    def _benchmark_table_extraction(self, model: str, result: ModelTaskBenchmark) -> ModelTaskBenchmark:
-        """Benchmark table extraction task."""
-        test_docs = self._load_test_documents()
-        
-        extractor = LLMTableExtractor(model=model)
-        latencies = []
-        sections_found = []
-        
-        for doc in test_docs:
-            doc_id = doc["id"]
-            markdown = doc["content"]
-            expected_sections = doc.get("expected_sections", ["BS", "PL", "CF"])
-            
-            result.total_runs += 1
-            
-            try:
-                start = time.perf_counter()
-                sections = extractor.extract_sections(markdown)
-                elapsed_ms = (time.perf_counter() - start) * 1000
-                
-                latencies.append(elapsed_ms)
-                
-                # Check if expected sections were found
-                found = [s for s in expected_sections if s in sections and sections[s]]
-                sections_found.append(len(found) / len(expected_sections) if expected_sections else 0)
-                
-                result.successful_runs += 1
-                result.run_results.append({
-                    "doc_id": doc_id,
-                    "latency_ms": elapsed_ms,
-                    "sections_found": list(sections.keys()),
-                    "accuracy": sections_found[-1]
-                })
-                
-            except Exception as e:
-                result.failed_runs += 1
-                result.errors.append(f"{doc_id}: {str(e)}")
-        
-        # Calculate aggregate metrics
-        if latencies:
-            result.avg_latency_ms = sum(latencies) / len(latencies)
-            result.min_latency_ms = min(latencies)
-            result.max_latency_ms = max(latencies)
-        
-        if sections_found:
-            result.accuracy_metrics["section_detection_rate"] = sum(sections_found) / len(sections_found)
-        
-        return result
     
     def _benchmark_item_matching(self, model: str, result: ModelTaskBenchmark) -> ModelTaskBenchmark:
         """Benchmark item matching task."""

@@ -54,7 +54,6 @@ def get_tasks_from_config(config: dict) -> list:
     enabled = tasks_config.get("enabled", ["all"])
     
     task_mapping = {
-        "table_extraction": BenchmarkTask.TABLE_EXTRACTION,
         "item_matching": BenchmarkTask.ITEM_MATCHING,
         "unit_detection": BenchmarkTask.UNIT_DETECTION,
         "all": BenchmarkTask.ALL
@@ -81,7 +80,7 @@ def main():
     parser.add_argument(
         "--task",
         type=str,
-        choices=["table_extraction", "item_matching", "unit_detection", "all"],
+        choices=["item_matching", "unit_detection", "all"],
         help="Specific task to benchmark (overrides config)"
     )
     parser.add_argument(
@@ -119,7 +118,6 @@ def main():
     # Determine tasks to run
     if args.task:
         task_mapping = {
-            "table_extraction": BenchmarkTask.TABLE_EXTRACTION,
             "item_matching": BenchmarkTask.ITEM_MATCHING,
             "unit_detection": BenchmarkTask.UNIT_DETECTION,
             "all": BenchmarkTask.ALL

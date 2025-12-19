@@ -51,43 +51,6 @@ class TestLLMUnitDetector:
         assert unit == "VND"
 
 
-class TestLLMTableExtractor:
-    """Tests for LLM-based table extraction."""
-    
-    def test_extract_sections(self):
-        """Test extraction of BS, PL, CF sections."""
-        from services.llm_utils import LLMTableExtractor
-        
-        extractor = LLMTableExtractor()
-
-        markdown = """
-# BẢNG CÂN ĐỐI KẾ TOÁN
-
-| Chỉ tiêu | Mã số | Số cuối kỳ |
-|----------|-------|------------|
-| Tiền và tương đương tiền | 110 | 1,000,000 |
-| Tài sản ngắn hạn | 100 | 5,000,000 |
-
-# BÁO CÁO KẾT QUẢ HOẠT ĐỘNG KINH DOANH
-
-| Chỉ tiêu | Mã số | Số cuối kỳ |
-|----------|-------|------------|
-| Doanh thu | 01 | 10,000,000 |
-| Lợi nhuận | 60 | 500,000 |
-
-# BÁO CÁO LƯU CHUYỂN TIỀN TỆ
-
-| Chỉ tiêu | Mã số | Số cuối kỳ |
-|----------|-------|------------|
-| Tiền thu từ bán hàng | 01 | 8,000,000 |
-"""
-        
-        sections = extractor.extract_sections(markdown)
-        
-        assert "BS" in sections
-        assert "PL" in sections
-        assert "CF" in sections
-
 class TestLLMItemMatcher:
     """Tests for LLM-based item matching."""
     
