@@ -5,12 +5,8 @@
     "openrouter": [
       "mistralai/devstral-2512:free",
       "z-ai/glm-4.5-air:free",
-      "moonshotai/kimi-k2:free",
-      "qwen/qwen3-coder:free",
       "tngtech/deepseek-r1t2-chimera:free",
-      "deepseek/deepseek-r1-0528:free",
-      "qwen/qwen3-235b-a22b:free",
-      "google/gemini-2.0-flash-exp:free"
+      "qwen/qwen3-235b-a22b:free"
     ]
   },
   "tasks": {

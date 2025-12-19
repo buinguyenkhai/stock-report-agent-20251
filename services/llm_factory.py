@@ -33,7 +33,7 @@ class LLMConfig:
         task_configs = {
             "item_matching": cls(
                 temperature=0.0,
-                max_tokens=150,
+                max_tokens=500,
                 timeout=60,
                 top_p=0.9,
                 frequency_penalty=0.1,  # Reduce repetition in reasoning
@@ -42,7 +42,7 @@ class LLMConfig:
             ),
             "unit_detection": cls(
                 temperature=0.0,
-                max_tokens=100,
+                max_tokens=200,
                 timeout=60,
                 top_p=0.9,
                 frequency_penalty=0.0,
@@ -112,25 +112,18 @@ def create_llm(
     # Merge with any provided headers
     headers = {**default_headers, **kwargs.pop("default_headers", {})}
     
-    # Build model kwargs
-    model_kwargs = {}
-    if top_p is not None and top_p != 1.0:
-        model_kwargs["top_p"] = top_p
-    if frequency_penalty is not None and frequency_penalty != 0.0:
-        model_kwargs["frequency_penalty"] = frequency_penalty
-    if presence_penalty is not None and presence_penalty != 0.0:
-        model_kwargs["presence_penalty"] = presence_penalty
-    
     return ChatOpenAI(
         model=model,
         temperature=temperature,
         max_tokens=max_tokens,
         timeout=timeout,
         max_retries=max_retries,
+        top_p=top_p,
+        frequency_penalty=frequency_penalty,
+        presence_penalty=presence_penalty,
         openai_api_key=settings.openrouter_api_key,
         openai_api_base=OPENROUTER_BASE_URL,
         default_headers=headers,
-        model_kwargs=model_kwargs if model_kwargs else None,
         **kwargs
     )
 
