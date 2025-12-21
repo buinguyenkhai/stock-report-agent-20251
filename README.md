@@ -1,6 +1,6 @@
 # Stock Report Agent
 
-Hệ thống AI Agent tự động trích xuất và hỗ trợ phân tích báo cáo tài chính doanh nghiệp Việt Nam bằng LangGraph, với khả năng xử lý đa báo cáo và tự động hóa từ đầu đến cuối.
+Hệ thống AI Agent tự động trích xuất và hỗ trợ phân tích báo cáo tài chính doanh nghiệp Việt Nam, với khả năng xử lý đa báo cáo và tự động hóa từ đầu đến cuối.
 
 ## Tổng quan
 
@@ -8,13 +8,44 @@ Agent tự động:
 1. **Hiểu yêu cầu** người dùng bằng tiếng Việt tự nhiên
 2. **Tìm và tải** báo cáo tài chính PDF từ Vietstock
 3. **Trích xuất nội dung** bằng OCR
-4. **Parse dữ liệu** thành cấu trúc JSON chuẩn
-5. **Kiểm tra tính hợp lệ** dữ liệu theo các phương trình kế toán
-6. **Đang cập nhật**
+4. **Trích xuất cấu trúc** (Extract) - Tách 3 báo cáo chính, thuyết minh và các thông tin khác từ OCR markdown
+5. **Parse dữ liệu** - Chuẩn hóa, chuyển đổi theo format database chuẩn.
+6. **Đánh giá chất lượng pipeline** với benchmark tự động
+7. **Đang cập nhật**
+## Kiến trúc
+
+Hệ thống đã được thiết kế lại với kiến trúc pipeline 2 bước:
+
+### 1. **Extraction Phase** (Parallel Extractors)
+6 extractors chuyên biệt chạy song song để tách riêng từng báo cáo từ OCR Markdown:
+- **BalanceSheetExtractor** - Trích xuất Bảng cân đối kế toán
+- **IncomeStatementExtractor** - Trích xuất Báo cáo kết quả kinh doanh  
+- **CashFlowExtractor** - Trích xuất Báo cáo lưu chuyển tiền tệ
+- **NotesTablesExtractor** - Trích xuất Bảng số liệu trong thuyết minh.
+- **NotesTextExtractor** - Trích xuất Văn bản, giải trình trong thuyết minh.
+- **MetadataExtractor** - Thông tin metadata về công ty, báo cáo.
+
+**Đặc điểm:**
+- Mỗi extractor sử dụng LLM riêng với prompts chuyên biệt
+- Extractor chạy song song
+- Output: Raw markdown tables
+
+### 2. **Parsing Phase** (Aggregated Parser)
+Parser thống nhất nhận output từ cả 6 extractors:
+- **AggregatedParser** - Parse sang JSON chuẩn vnstock
+- Sử dụng Pydantic Structured Output
+- Chuẩn hóa tên chỉ tiêu theo vnstock vocabulary
+- Chuyển đổi đơn vị về VND (triệu VND × 1,000,000, tỷ VND × 1,000,000,000)
+- Xử lý số âm, định dạng tiếng Việt (1.234.567,89)
+
 
 ## Kiến trúc Agent
 
-### Workflow Graph (LangGraph)
+### Stock Report Agent Architecture
+
+![Stock Report Agent Architecture](readme_img\architecture_v2.png)
+
+### LangGraph
 
 ![Agent Graph](readme_img/graph_v3.png)
 
@@ -63,99 +94,34 @@ Trích xuất nội dung PDF thành Markdown.
 #### 6. **parse_report_node**
 Parse Markdown thành dữ liệu cấu trúc JSON.
 
+**Kiến trúc 2-phase pipeline:**
+
+**Phase 1: Extraction**
+- Chạy song song 6 extractors (BS, PL, CF, NotesTable, NotesText, Metadata)
+- Mỗi extractor tìm và trích xuất 1 loại báo cáo cụ thể
+
+**Phase 2: Parsing** 
+- AggregatedParser nhận output từ cả 6 extractors
+- Sử dụng Pydantic Structured Output với schema `ParsedReport`
+- Chuẩn hóa tên chỉ tiêu theo vnstock vocabulary
+- Chuyển đổi đơn vị về VND:
+  - triệu VND → × 1,000,000
+  - tỷ VND → × 1,000,000,000
+  - nghìn VND → × 1,000
+- Xử lý định dạng số Việt Nam: `1.234.567,89` → `1234567.89`
+- Xử lý số âm: `(100)` → `-100`
+
 **Tính năng:**
-- Trích xuất 3 bảng chính: Balance Sheet (BS), Income Statement (PL), Cash Flow (CF)
 - Xác định tự động:
   - **Đơn vị tiền tệ** (VND, triệu VND, tỷ VND, nghìn VND)
-  - **Phạm vi báo cáo** (Hợp nhất / Công ty mẹ)
   - **Loại kỳ** (Quý riêng lẻ / Lũy kế từ đầu năm)
-- **Smart column selection**: Tự động chọn cột số liệu đúng (kỳ hiện tại, bỏ qua kỳ trước/lũy kế)
-- Xử lý số âm trong ngoặc đơn: `(100)` → `-100`
-
-**Sử dụng:**
-- LLM chính: `mistralai/devstral-2512:free` (cấu hình cho parsing task)
-- Output schema: `FinancialReportData` (Pydantic)
+  - **Metadata** (công ty, năm, quý)
 
 #### 7. **collect_result_node**
 Thu thập kết quả đã xử lý vào state.
 
 #### 8. **generate_final_response_node**
 Tạo phản hồi cuối cùng với tóm tắt các báo cáo đã xử lý.
-
-## Cấu trúc dữ liệu
-
-### Input Models
-
-```python
-class ReportRequest(BaseModel):
-    """Yêu cầu tìm một báo cáo cụ thể."""
-    stock_code: str  # "FPT", "VCB"
-    year: int
-    period: Literal["Quý", "6 tháng", "Cả năm", "Mới nhất"]
-    quarter: Optional[int]  # Chỉ với period="Quý"
-    consolidation_status: Optional[Literal["Hợp nhất", "Công ty mẹ"]]
-
-class AnalysisIntent(BaseModel):
-    """Ý định phân tích tổng thể."""
-    requests: List[ReportRequest]
-    comparison_context: str  # "So sánh kết quả kinh doanh"
-```
-
-### Output Models
-
-```python
-class FinancialItem(BaseModel):
-    """Một dòng trong báo cáo."""
-    item_code: Optional[str]  # "110", "01"
-    item_name: str  # "Tiền và các khoản tương đương tiền"
-    value: Optional[float]
-    notes_ref: Optional[str]
-
-class FinancialReportData(BaseModel):
-    """Dữ liệu báo cáo hoàn chỉnh."""
-    unit: Literal["VND", "triệu VND", "tỷ VND", "nghìn VND"]
-    report_scope: Literal["consolidated", "parent"]
-    period_type: Literal["quarterly", "cumulative"]
-    balance_sheet: List[FinancialItem]
-    income_statement: List[FinancialItem]
-    cash_flow: List[FinancialItem]
-    notes: List[FinancialNote]
-```
-
-## Services
-
-### LLM Factory
-Quản lý tạo LLM instances với cấu hình tối ưu theo task.
-
-**Task-specific configs:**
-- `item_matching`: temp=0, max_tokens=150, frequency_penalty=0.1
-- `unit_detection`: temp=0, max_tokens=100
-- `parsing`: temp=0, max_tokens=8000, timeout=180s
-- `query_processing`: temp=0, max_tokens=500
-
-**Default model:** `mistralai/devstral-2512:free` (qua OpenRouter)
-
-### Parser Service
-Parse Markdown → JSON với validation.
-
-**Features:**
-- Retry logic với exponential backoff
-- Structured output với Pydantic schema
-
-### Validator Service
-Kiểm tra tính nhất quán của dữ liệu tài chính.
-
-**Validation rules:**
-- **Balance Sheet**: Tổng tài sản = Tổng nguồn vốn
-- **Income Statement**: Lợi nhuận sau thuế = Lợi nhuận trước thuế - Thuế hiện hành - Thuế hoãn lại
-- **Cash Flow**: Tiền cuối kỳ = Tiền đầu kỳ + Lưu chuyển tiền ròng + Chênh lệch tỷ giá
-
-**Tolerance:** ±1.0 (configurable)
-
-### LLM Utils
-Các utility functions cho LLM:
-- **Item Matching**: Match tên chỉ tiêu với canonical names
-- **Unit Detection**: Xác định đơn vị tiền tệ
 
 ## Cấu hình
 
@@ -166,27 +132,6 @@ Các utility functions cho LLM:
 OPENROUTER_API_KEY=your_key_here
 MARKER_API_KEY=your_marker_key  # Nếu dùng Marker OCR
 ```
-
-### Thay đổi LLM Model
-
-**Cách 1: Environment variable**
-```bash
-LLM_MODEL="z-ai/glm-4.5-air:free"
-```
-
-**Cách 2: Trong code**
-```python
-from config import settings
-settings.llm_model = "openai/gpt-4-turbo"
-```
-
-## Screenshots
-
-### User Clarification
-![Clarification](readme_img/clarification.png)
-
-### LangSmith Monitoring
-![LangSmith](readme_img/langsmith.png)
 
 ## Cài đặt
 
@@ -211,29 +156,56 @@ python agent.py
 
 ## Sử dụng (Đang cập nhật)
 
-```python
-from agent import agent
+## Testing & Evaluation (Đang cập nhật)
 
-# Chạy agent với query
-final_state = agent.invoke({
-    "query": "So sánh FPT và VCB quý 3 năm 2024"
-})
+Hệ thống benchmark LLM pipeline đầy đủ:
 
-# Xem kết quả
-print(final_state["final_response"])
-```
+### Benchmark Architecture
 
-## Testing & Evaluation
+**Test Data:**
+- 4 báo cáo thực tế: DBC Q1/2022, FPT Q4/2024, VCB Q2/2023, VIC Q3/2024
+- Ground truth từ vnstock API (CSV format)
+- OCR output cached trong `evaluation_results_pipeline/`
 
-Agent có hệ thống đánh giá tự động:
-- Ground truth data trong `data/ground_truth/`
-- Evaluation metrics trong `evaluation/`
-- Benchmark results trong `benchmark_results/`
+**Benchmark Tasks:**
+1. **EXTRACTION** - Đánh giá extractors:
+   - Metrics: Required items found (70%+ để pass)
+   - Extractors tìm đúng 35+ required items cho mỗi báo cáo
+
+2. **PARSING** - Đánh giá parser:
+   - Metrics: Match rate (tìm đúng items), Value accuracy (sai số <5%)
+   - Cần extracted files từ extraction benchmark trước
+
+3. **FULL_PIPELINE** - End-to-end test:
+   - Chạy extraction + parsing liền
+   - Đo latency tổng thể và accuracy cuối
+
+### Running Benchmarks
 
 ```bash
-# Chạy benchmark
+# Chạy tất cả tasks với nhiều models
 python run_benchmark.py
+
+# Chỉ chạy extraction
+python run_benchmark.py --task extraction
+
+# Chỉ chạy parsing (cần chạy extraction trước)
+python run_benchmark.py --task parsing
+
+# Chạy với model cụ thể
+python run_benchmark.py --task parsing --models "mistralai/devstral-2512:free"
+
+# Skip OCR preparation (nếu đã có cached)
+python run_benchmark.py --skip-prepare --task extraction
+
+# Chỉ prepare OCR data
+python run_benchmark.py --prepare-only
 ```
+
+### Benchmark Results (testing)
+
+![Benchmark Results](readme_img\benchmark_res.png)
+
 
 ## License
 

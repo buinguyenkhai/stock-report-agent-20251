@@ -1,10 +1,15 @@
 """
+Tests different LLM APIs on real pipeline tasks:
+- Extraction: Finding and extracting financial tables from OCR markdown
+- Parsing: Converting extracted content to structured JSON with correct values
+- Full Pipeline: End-to-end extraction + parsing
 
 Usage:
-    python run_benchmark.py                     # Run all tasks with models from config
-    python run_benchmark.py --task item_matching  # Run specific task
-    python run_benchmark.py --models "gemini-2.0-flash,meta-llama/llama-3.3-70b-instruct:free"
-    python run_benchmark.py --skip-validation   # Skip structured output validation
+    python run_benchmark.py                          # Run all tasks
+    python run_benchmark.py --task extraction        # Extraction only
+    python run_benchmark.py --task parsing           # Parsing only
+    python run_benchmark.py --task full_pipeline     # Full pipeline
+    python run_benchmark.py --models "model1,model2" # Override models
 """
 
 import argparse
@@ -15,10 +20,10 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent))
 
-from evaluation.model_benchmark import (
-    ModelBenchmark,
+from evaluation.pipeline_benchmark import (
+    PipelineBenchmark,
     BenchmarkTask,
-    print_benchmark_summary
+    print_benchmark_summary,
 )
 from logger import get_logger
 
@@ -54,9 +59,10 @@ def get_tasks_from_config(config: dict) -> list:
     enabled = tasks_config.get("enabled", ["all"])
     
     task_mapping = {
-        "item_matching": BenchmarkTask.ITEM_MATCHING,
-        "unit_detection": BenchmarkTask.UNIT_DETECTION,
-        "all": BenchmarkTask.ALL
+        "extraction": BenchmarkTask.EXTRACTION,
+        "parsing": BenchmarkTask.PARSING,
+        "full_pipeline": BenchmarkTask.FULL_PIPELINE,
+        "all": BenchmarkTask.ALL,
     }
     
     return [task_mapping.get(t, BenchmarkTask.ALL) for t in enabled]
@@ -64,7 +70,7 @@ def get_tasks_from_config(config: dict) -> list:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Run LLM model benchmarks for financial report processing tasks"
+        description="Run LLM benchmarks on pipeline extraction and parsing tasks"
     )
     parser.add_argument(
         "--config",
@@ -80,13 +86,8 @@ def main():
     parser.add_argument(
         "--task",
         type=str,
-        choices=["item_matching", "unit_detection", "all"],
+        choices=["extraction", "parsing", "full_pipeline", "all"],
         help="Specific task to benchmark (overrides config)"
-    )
-    parser.add_argument(
-        "--skip-validation",
-        action="store_true",
-        help="Skip structured output validation (test all models even if they might fail)"
     )
     parser.add_argument(
         "--output-dir",
@@ -97,6 +98,16 @@ def main():
         "--quiet",
         action="store_true",
         help="Suppress detailed output, only show summary"
+    )
+    parser.add_argument(
+        "--prepare-only",
+        action="store_true",
+        help="Only prepare OCR test data from PDFs, don't run benchmark"
+    )
+    parser.add_argument(
+        "--skip-prepare",
+        action="store_true",
+        help="Skip automatic test data preparation"
     )
     
     args = parser.parse_args()
@@ -118,9 +129,10 @@ def main():
     # Determine tasks to run
     if args.task:
         task_mapping = {
-            "item_matching": BenchmarkTask.ITEM_MATCHING,
-            "unit_detection": BenchmarkTask.UNIT_DETECTION,
-            "all": BenchmarkTask.ALL
+            "extraction": BenchmarkTask.EXTRACTION,
+            "parsing": BenchmarkTask.PARSING,
+            "full_pipeline": BenchmarkTask.FULL_PIPELINE,
+            "all": BenchmarkTask.ALL,
         }
         tasks = [task_mapping[args.task]]
     else:
@@ -132,34 +144,44 @@ def main():
     # Print configuration
     if not args.quiet:
         print("\n" + "=" * 60)
-        print("LLM MODEL BENCHMARK")
+        print("PIPELINE LLM BENCHMARK")
         print("=" * 60)
         print(f"Models to test: {len(models)}")
         for m in models:
-            print(f"  - {m}")
+            print(f"  • {m}")
         print(f"Tasks: {[t.value for t in tasks]}")
-        print(f"Output directory: {output_dir}")
-        print(f"Validate structured output: {not args.skip_validation}")
+        print(f"Output: {output_dir}")
         print("=" * 60 + "\n")
     
     # Create and run benchmark
-    benchmark = ModelBenchmark(
+    benchmark = PipelineBenchmark(
         models=models,
         ground_truth_dir=settings.get("ground_truth_dir", "data/ground_truth"),
-        evaluation_results_dir=settings.get("evaluation_results_dir", "evaluation_results"),
-        output_dir=output_dir
+        ocr_cache_dir=settings.get("ocr_cache_dir", "evaluation_results_pipeline"),
+        pdf_dir=settings.get("pdf_dir", "data/pdfs"),
+        output_dir=output_dir,
     )
     
+    # Prepare test data (run OCR on PDFs if needed)
+    if not args.skip_prepare:
+        if not args.quiet:
+            print("Preparing test data...")
+        prepared = benchmark.prepare_test_data()
+        if not args.quiet:
+            print(f"   {prepared} test cases ready\n")
+    
+    # If prepare-only mode, stop here
+    if args.prepare_only:
+        print("Test data preparation complete!")
+        return
+    
     try:
-        report = benchmark.run(
-            tasks=tasks,
-            validate_structured_output=not args.skip_validation
-        )
+        report = benchmark.run(tasks=tasks)
         
         # Print summary
         print_benchmark_summary(report)
         
-        print(f"\nDetailed results saved to: {output_dir}/latest.json")
+        print(f"\nResults saved to: {output_dir}/pipeline_benchmark_latest.json")
         
     except KeyboardInterrupt:
         print("\nBenchmark interrupted by user")

@@ -51,8 +51,8 @@ class LLMConfig:
             ),
             "parsing": cls(
                 temperature=0.0,
-                max_tokens=8000,      # Full financial report parsing needs more tokens
-                timeout=180,          # Longer timeout for complex documents
+                max_tokens=32000,     # Full financial report parsing needs more tokens
+                timeout=600,          # Longer timeout for complex documents
                 top_p=0.95,
                 frequency_penalty=0.1,
                 presence_penalty=0.1,  # Encourage diverse item extraction

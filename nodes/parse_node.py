@@ -1,6 +1,5 @@
 from state import StockReportState
-from services.parser_service import FinancialParser
-from services.validator_service import FinancialValidator
+from services.pipeline import create_pipeline
 from config import settings
 from logger import get_logger
 import json
@@ -10,9 +9,10 @@ logger = get_logger(__name__)
 
 def parse_report_node(state: StockReportState) -> StockReportState:
     """
-    Node to parse the OCR Markdown content into structured data and validate it.
+    Node to parse the OCR Markdown content into structured data.
+    Uses the new LLM-based extraction pipeline.
     """
-    logger.info("Bắt đầu Node: Parse & Validate Báo cáo")
+    logger.info("Bắt đầu Node: Parse Báo cáo")
     
     markdown_content = state.get("ocr_markdown_content")
     stock_code = state.get("stock_code", "UNKNOWN")
@@ -24,13 +24,16 @@ def parse_report_node(state: StockReportState) -> StockReportState:
         return {**state, "error_message": "Không có nội dung Markdown để parse."}
 
     try:
-        # Parse
-        parser = FinancialParser()
-        logger.info("Đang trích xuất dữ liệu cấu trúc (Parsing)...")
-        parsed_data = parser.parse(markdown_content)
+        # Create pipeline and process
+        pipeline = create_pipeline(mode="separate", extract_notes=False, extract_metadata=True)
+        logger.info("Đang trích xuất dữ liệu cấu trúc (Parsing with LLM pipeline)...")
+        parsed_report = pipeline.process(markdown_content)
         
-        if not parsed_data or (not parsed_data.get("BS") and not parsed_data.get("PL") and not parsed_data.get("CF")):
-            logger.warning("Parser returned empty or invalid data")
+        # Convert to dict format
+        parsed_data = pipeline.to_dict(parsed_report)
+        
+        if not parsed_data.get("balance_sheet") and not parsed_data.get("income_statement") and not parsed_data.get("cash_flow"):
+            logger.warning("Parser returned empty data")
         
         # Save parsed data
         output_dir = settings.parsed_output_dir
@@ -46,21 +49,11 @@ def parse_report_node(state: StockReportState) -> StockReportState:
             json.dump(parsed_data, f, ensure_ascii=False, indent=4)
         logger.info(f"Đã lưu dữ liệu cấu trúc tại: {filepath}")
 
-        # 2. Validate
-        validator = FinancialValidator()
-        logger.info("Đang kiểm tra tính hợp lệ (Validating)...")
-        validation_errors = validator.validate(parsed_data)
-        
         notification = state.get("notification") or ""
-        notification += "\nĐã trích xuất dữ liệu thành công."
-        
-        if validation_errors:
-            error_msg = "\nCảnh báo dữ liệu:\n- " + "\n- ".join(validation_errors)
-            logger.warning(error_msg)
-            notification += error_msg
-        else:
-            logger.info("Dữ liệu hợp lệ (thỏa mãn các phương trình kế toán cơ bản).")
-            notification += "\nDữ liệu hợp lệ."
+        bs_count = len(parsed_data.get("balance_sheet", {}).get("items", []))
+        pl_count = len(parsed_data.get("income_statement", {}).get("items", []))
+        cf_count = len(parsed_data.get("cash_flow", {}).get("items", []))
+        notification += f"\nĐã trích xuất dữ liệu thành công: BS={bs_count}, PL={pl_count}, CF={cf_count} items."
 
         return {
             **state,
@@ -68,7 +61,7 @@ def parse_report_node(state: StockReportState) -> StockReportState:
         }
 
     except Exception as e:
-        error_msg = f"Lỗi Parse/Validate: {str(e)}"
+        error_msg = f"Lỗi Parse: {str(e)}"
         logger.error(error_msg, exc_info=True)
         return {
             **state,

@@ -1,5 +1,6 @@
 import time
 import requests
+from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 from .base import OCRStrategy
 from config import settings
@@ -22,24 +23,44 @@ class MarkerOCRService(OCRStrategy):
             f"Retrying Marker API call (attempt {retry_state.attempt_number})..."
         )
     )
-    def process_pdf(self, pdf_url: str) -> str:
+    def process_pdf(self, pdf_source: str) -> str:
         """
         Uploads PDF to Marker API and polls for result.
         """
         headers = {"X-Api-Key": self.api_key}
-        form_data = {
-            'file_url': (None, pdf_url),
-            "force_ocr": (None, True),
-            'output_format': (None, 'markdown'),
-            "use_llm": (None, True),
-            "disable_image_extraction": (None, True),
-            "paginate": (None, True),
-            "format_lines": (None, False),
-            "additional_config": (None, "{\"drop_repeated_text\": true}")
-        }
-
-        logger.info(f"MarkerOCR: Sending URL {pdf_url}")
-        response = requests.post(self.url, files=form_data, headers=headers, timeout=60)
+        
+        # Check if it's a local file path
+        is_local_file = Path(pdf_source).exists()
+        
+        if is_local_file:
+            logger.info(f"MarkerOCR: Uploading local file {pdf_source}")
+            with open(pdf_source, 'rb') as f:
+                files = {
+                    'file': (Path(pdf_source).name, f, 'application/pdf'),
+                }
+                data = {
+                    "force_ocr": True,
+                    'output_format': 'markdown',
+                    "use_llm": True,
+                    "disable_image_extraction": True,
+                    "paginate": True,
+                    "format_lines": False,
+                }
+                response = requests.post(self.url, files=files, data=data, headers=headers, timeout=120)
+        else:
+            # Use URL-based upload
+            form_data = {
+                'file_url': (None, pdf_source),
+                "force_ocr": (None, True),
+                'output_format': (None, 'markdown'),
+                "use_llm": (None, True),
+                "disable_image_extraction": (None, True),
+                "paginate": (None, True),
+                "format_lines": (None, False),
+                "additional_config": (None, "{\"drop_repeated_text\": true}")
+            }
+            logger.info(f"MarkerOCR: Sending URL {pdf_source}")
+            response = requests.post(self.url, files=form_data, headers=headers, timeout=60)
 
         if response.status_code != 200:
             logger.error(f"Marker API Error: {response.status_code} - {response.text}")
