@@ -1,47 +1,51 @@
-# Canonical data format
-from .canonical_format import (
-    FinancialItem,
-    FinancialStatement,
-    FinancialReport,
-    normalize_to_billions,
-)
+"""
+Evaluation Module
 
-# Transformers
-from .data_transformers import (
-    VnstockTransformer,
-    OCRTransformer,
-)
+OCR benchmarking tools for Vietnamese financial reports using the VnPDF dataset.
 
-# Pipeline benchmark
-from .pipeline_benchmark import (
-    PipelineBenchmark,
-    BenchmarkTask,
-    print_benchmark_summary,
-)
+Dataset:
+    VnPdfDataset - HuggingFace dataset loader for kiethuynhanh/vnpdf-financial-reports-dataset
 
-# Simple evaluator
-from .simple_evaluator import (
-    SimpleEvaluator,
-    EvaluationResult,
+Primary Metrics (Reported):
+    - Format-Agnostic CER: CER after stripping formatting
+    - Content Word Recall: Bag-of-words recall  
+    - Number F1: Precision/Recall/F1 for digit sequences
+
+Benchmark:
+    PageLevelBenchmark - Page-by-page OCR evaluation with mean ± std
+"""
+
+# OCR Benchmark module
+from .ocr_benchmark import (
+    VnPdfDataset,
+    VnPdfSample,
+    calculate_format_agnostic_cer,
+    calculate_content_word_recall,
+    calculate_number_precision_recall_f1,
+    calculate_all_metrics,
+    PageLevelBenchmark,
+    PageLevelBenchmarkResult,
+    CompanyResult,
+    PageResult,
+    ErrorAnalyzer,
+    ErrorAnalysisResult,
 )
 
 __all__ = [
-    # Canonical format
-    "FinancialItem",
-    "FinancialStatement",
-    "FinancialReport",
-    "normalize_to_billions",
-    
-    # Transformers
-    "VnstockTransformer",
-    "OCRTransformer",
-    
-    # Pipeline benchmark
-    "PipelineBenchmark",
-    "BenchmarkTask",
-    "print_benchmark_summary",
-    
-    # Simple evaluator
-    "SimpleEvaluator",
-    "EvaluationResult",
+    # Dataset
+    "VnPdfDataset",
+    "VnPdfSample",
+    # Metrics
+    "calculate_format_agnostic_cer",
+    "calculate_content_word_recall",
+    "calculate_number_precision_recall_f1",
+    "calculate_all_metrics",
+    # Benchmark
+    "PageLevelBenchmark",
+    "PageLevelBenchmarkResult",
+    "CompanyResult",
+    "PageResult",
+    # Error Analysis
+    "ErrorAnalyzer",
+    "ErrorAnalysisResult",
 ]

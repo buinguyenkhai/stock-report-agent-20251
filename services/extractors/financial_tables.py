@@ -130,6 +130,37 @@ KẾT QUẢ (với markers):"""
             }
         )
     
+    async def extract_combined_async(self, markdown: str) -> FinancialTablesResult:
+        """
+        Extract all 3 tables asynchronously and return structured result.
+        """
+        result = await self.extract_async(markdown)
+        
+        if not result.success:
+            return FinancialTablesResult(
+                success=False,
+                error=result.error or "Extraction failed"
+            )
+        
+        # Parse the response using markers
+        content = result.content
+        
+        bs = self._extract_between_markers(content, self.BS_MARKER, self.BS_END)
+        pl = self._extract_between_markers(content, self.PL_MARKER, self.PL_END)
+        cf = self._extract_between_markers(content, self.CF_MARKER, self.CF_END)
+        
+        return FinancialTablesResult(
+            balance_sheet=bs,
+            income_statement=pl,
+            cash_flow=cf,
+            success=True,
+            metadata={
+                "bs_found": bool(bs),
+                "pl_found": bool(pl),
+                "cf_found": bool(cf),
+            }
+        )
+    
     def _extract_between_markers(self, text: str, start: str, end: str) -> str:
         """Extract text between start and end markers."""
         try:

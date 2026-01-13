@@ -156,6 +156,52 @@ python agent.py
 
 ## Sử dụng (Đang cập nhật)
 
+## OCR Benchmark
+
+Hệ thống benchmark OCR dựa trên dataset **VnPDF Financial Reports** từ HuggingFace.
+
+### Dataset
+
+- **Source**: [kiethuynhanh/vnpdf-financial-reports-dataset](https://huggingface.co/datasets/kiethuynhanh/vnpdf-financial-reports-dataset)
+- **Content**: Vietnamese financial reports with page-level ground truth
+- **Companies**: AAA, ACB, FPT, MBB, MWG, SHB, TCB, VIB, VPB
+
+### Metrics (Primary Reporting)
+
+| Metric | Description | Why It Matters |
+|--------|-------------|----------------|
+| **Format-Agnostic CER** | Character error rate after stripping formatting (pipes, dashes, markdown) | Fair comparison across OCR engines with different table formats |
+| **Content Word Recall** | Fraction of ground truth words found in OCR output | Measures content completeness |
+| **Number F1** | Precision/Recall/F1 for digit sequences | Critical for financial reports - are numbers extracted correctly? |
+
+### Running Benchmark
+
+```bash
+# Quick validation (1 page per company)
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling --max-pages 1
+
+# Full Docling benchmark
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling --output results/docling_full.json
+
+# Full Marker benchmark
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine marker --output results/marker_full.json
+
+# Marker with LLM post-processing (requires OPENROUTER_API_KEY)
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine marker --marker-llm --output results/marker_llm_full.json
+
+# Only benchmark table pages
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling --table-only
+
+# Specific companies
+python -m evaluation.ocr_benchmark.page_level_benchmark --companies AAA FPT VPB --max-pages 5
+```
+
+### Error Analysis
+
+```bash
+python -m evaluation.ocr_benchmark.error_analyzer --input results/docling_full.json --output results/error_analysis.json
+```
+
 ## Testing & Evaluation (Đang cập nhật)
 
 Hệ thống benchmark LLM pipeline đầy đủ:

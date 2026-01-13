@@ -1,7 +1,7 @@
 """
 Services Module
 
-Contains OCR services, extractors, parser, and pipeline.
+Contains OCR services, extractors, and LLM utilities.
 """
 
 # LLM utilities (used by benchmark and extractors)
@@ -24,24 +24,13 @@ from .llm_factory import (
     LLMConfig,
 )
 
-# New pipeline
-from .pipeline import (
-    ExtractionPipeline,
-    PipelineConfig,
-    create_pipeline,
-    process_markdown,
-)
-from .parser import (
-    AggregatedParser,
-    ParsedReport,
-    ExtractionBundle,
-)
-from .vnstock_vocabulary import (
-    BALANCE_SHEET_ITEMS,
-    INCOME_STATEMENT_ITEMS,
-    CASH_FLOW_ITEMS,
-    get_vocabulary_prompt_section,
-)
+# Note: Pipeline and parser are disabled until parser.py is restored or refactored
+# from .pipeline import (
+#     ExtractionPipeline,
+#     PipelineConfig,
+#     create_pipeline,
+#     process_markdown,
+# )
 
 __all__ = [
     # LLM utilities
@@ -59,16 +48,4 @@ __all__ = [
     "get_model_info",
     "test_model_structured_output",
     "LLMConfig",
-    # Pipeline
-    "ExtractionPipeline",
-    "PipelineConfig",
-    "create_pipeline",
-    "process_markdown",
-    "AggregatedParser",
-    "ParsedReport",
-    "ExtractionBundle",
-    "BALANCE_SHEET_ITEMS",
-    "INCOME_STATEMENT_ITEMS",
-    "CASH_FLOW_ITEMS",
-    "get_vocabulary_prompt_section",
 ]
