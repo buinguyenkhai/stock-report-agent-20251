@@ -6,6 +6,7 @@ against the HuggingFace ground truth.
 import json
 import time
 import math
+import re
 import fitz  # PyMuPDF
 from pathlib import Path
 from typing import List, Dict, Any, Optional
@@ -21,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from logger import get_logger
 from .dataset_loader import VnPdfDataset, VnPdfSample
-from .metrics import calculate_all_metrics
+from .metrics import calculate_all_metrics, calculate_content_word_recall, calculate_number_precision_recall_f1
 
 logger = get_logger(__name__)
 
@@ -39,6 +40,41 @@ def compute_std(values: List[float]) -> float:
     mean = sum(values) / len(values)
     variance = sum((x - mean) ** 2 for x in values) / (len(values) - 1)  # Sample std
     return math.sqrt(variance)
+
+
+def extract_table_content(text: str) -> str:
+    """
+    Extract only table content from text.
+    
+    Ground truth only contains table rows (lines starting with '|').
+    This ensures fair comparison by extracting only table content from OCR output.
+    
+    Args:
+        text: Raw OCR output text
+        
+    Returns:
+        Filtered text containing only table rows
+    """
+    lines = text.split('\n')
+    table_lines = []
+    for line in lines:
+        stripped = line.strip()
+        # Table rows start with '|' or contain table separators
+        if stripped.startswith('|') or '|---|' in stripped:
+            table_lines.append(line)
+    return '\n'.join(table_lines)
+
+
+def count_numbers_in_text(text: str) -> int:
+    """
+    Count numerical values in text.
+    
+    Used to determine if a page contains numerical data for NumF1 calculation.
+    """
+    # Match numbers with optional commas/dots (e.g., 1,234.56 or 1.234,56)
+    numbers = re.findall(r'\d[\d,.]*', text)
+    # Filter to only count numbers with at least 1 digit
+    return len([n for n in numbers if any(c.isdigit() for c in n)])
 
 
 @dataclass
@@ -59,6 +95,12 @@ class PageResult:
     processing_time_ms: float = 0.0
     success: bool = True
     error: Optional[str] = None
+    # OCR output text (optional, for debugging)
+    ocr_text: Optional[str] = None
+    # Ground truth text (for aggregation - always stored)
+    gt_text: Optional[str] = None
+    # Flag to indicate if GT has numbers (for conditional NumF1 averaging)
+    gt_has_numbers: bool = True
 
 
 @dataclass
@@ -78,6 +120,13 @@ class CompanyResult:
     std_format_agnostic_cer: float = 0.0
     std_content_word_recall: float = 0.0
     std_number_f1: float = 0.0
+    
+    # Aggregated metrics (calculated over all text/numbers in company, not per-page average)
+    aggregated_word_recall: float = 0.0  # Total matched words / Total GT words
+    aggregated_number_f1: float = 0.0  # F1 over all numbers in company
+    aggregated_number_precision: float = 0.0
+    aggregated_number_recall: float = 0.0
+    pages_with_numbers: int = 0  # Count of pages that have numbers in GT
     
     total_time_seconds: float = 0.0
     
@@ -104,6 +153,13 @@ class PageLevelBenchmarkResult:
     overall_std_content_word_recall: float = 0.0
     overall_std_number_f1: float = 0.0
     
+    # Aggregated metrics (calculated over all text/numbers, not per-page average)
+    overall_aggregated_word_recall: float = 0.0
+    overall_aggregated_number_f1: float = 0.0
+    overall_aggregated_number_precision: float = 0.0
+    overall_aggregated_number_recall: float = 0.0
+    total_pages_with_numbers: int = 0
+    
     total_time_seconds: float = 0.0
     
     company_results: List[CompanyResult] = field(default_factory=list)
@@ -124,12 +180,16 @@ class PageLevelBenchmark:
         dpi: int = 300,
         marker_use_llm: bool = False,  # Use LLM for Marker post-processing (requires OpenRouter API key)
         table_only: bool = False,  # Only benchmark pages with financial tables
+        save_ocr_outputs: bool = False,  # Save OCR text outputs for debugging
+        ocr_outputs_dir: str = None,  # Directory to save OCR outputs
     ):
         self.pdf_dir = Path(pdf_dir) if pdf_dir else PDF_SAMPLES_DIR
         self.ocr_engine = ocr_engine
         self.dpi = dpi
         self.marker_use_llm = marker_use_llm
         self.table_only = table_only
+        self.save_ocr_outputs = save_ocr_outputs
+        self.ocr_outputs_dir = Path(ocr_outputs_dir) if ocr_outputs_dir else Path("results/ocr_outputs")
         self._dataset = None
         self._gt_by_company = None
         self._marker_service = None
@@ -240,6 +300,27 @@ class PageLevelBenchmark:
             if os.path.exists(tmp_path):
                 os.unlink(tmp_path)
     
+    def _save_ocr_output(self, company: str, page_num: int, ocr_text: str, gt_text: str) -> None:
+        """
+        Save OCR output and ground truth text for debugging/analysis.
+        
+        Creates files:
+        - {ocr_outputs_dir}/{engine}/{company}/page_{page_num}_ocr.txt
+        - {ocr_outputs_dir}/{engine}/{company}/page_{page_num}_gt.txt
+        """
+        output_dir = self.ocr_outputs_dir / self.ocr_engine / company
+        output_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Save OCR output
+        ocr_path = output_dir / f"page_{page_num:03d}_ocr.txt"
+        with open(ocr_path, 'w', encoding='utf-8') as f:
+            f.write(ocr_text)
+        
+        # Save ground truth
+        gt_path = output_dir / f"page_{page_num:03d}_gt.txt"
+        with open(gt_path, 'w', encoding='utf-8') as f:
+            f.write(gt_text)
+    
     def benchmark_page(self, company: str, page_num: int, pdf_path: Path, gt_sample: VnPdfSample) -> PageResult:
         """Benchmark a single page."""
         start_time = time.time()
@@ -266,8 +347,15 @@ class PageLevelBenchmark:
                 logger.info(f"  Extracted page {page_num}: {img.size[0]}x{img.size[1]} @ {self.dpi}dpi")
                 ocr_text = self.ocr_image(img)
             
-            # Calculate metrics
-            metrics = calculate_all_metrics(ocr_text, gt_sample.text)
+            # Extract only table content from OCR output (ground truth only has table rows)
+            ocr_table_text = extract_table_content(ocr_text)
+            
+            # Check if ground truth has numbers (for conditional NumF1 averaging)
+            gt_number_count = count_numbers_in_text(gt_sample.text)
+            has_numbers = gt_number_count > 0
+            
+            # Calculate metrics using table-only OCR text
+            metrics = calculate_all_metrics(ocr_table_text, gt_sample.text)
             
             elapsed_ms = (time.time() - start_time) * 1000
             
@@ -285,11 +373,20 @@ class PageLevelBenchmark:
                 number_precision=num_details.get("precision", 0.0),
                 number_recall=num_details.get("recall", 0.0),
                 # Meta
-                ocr_text_length=len(ocr_text),
+                ocr_text_length=len(ocr_table_text),  # Length of table-only text
                 gt_text_length=len(gt_sample.text),
                 processing_time_ms=elapsed_ms,
                 success=True,
+                # Always store OCR and GT text for aggregation
+                ocr_text=ocr_table_text,
+                gt_text=gt_sample.text,
+                # Flag for conditional NumF1 averaging
+                gt_has_numbers=has_numbers,
             )
+            
+            # Save OCR output to file if enabled
+            if self.save_ocr_outputs:
+                self._save_ocr_output(company, page_num, ocr_text, gt_sample.text)
             
             logger.info(f"    FA-CER: {result.format_agnostic_cer:.4f}, WordRecall: {result.content_word_recall:.2%}, NumF1: {result.number_f1:.2%}")
             
@@ -350,27 +447,67 @@ class PageLevelBenchmark:
             
             if page_result.success:
                 result.successful_pages += 1
+            
+            # Clear CUDA cache after each page to prevent OOM from memory fragmentation
+            if self.ocr_engine == "marker":
+                try:
+                    import torch
+                    import gc
+                    if torch.cuda.is_available():
+                        torch.cuda.empty_cache()
+                        gc.collect()
+                except ImportError:
+                    pass
         
         result.total_time_seconds = time.time() - start_time
         
         # Calculate mean ± std for all metrics
         successful = [p for p in result.page_results if p.success]
+        # For NumF1, only include pages where ground truth has numbers
+        pages_with_numbers = [p for p in successful if p.gt_has_numbers]
+        
         if successful:
-            # Mean
+            # Mean (FA-CER and WordRecall use all successful pages)
             result.avg_format_agnostic_cer = sum(p.format_agnostic_cer for p in successful) / len(successful)
             result.avg_content_word_recall = sum(p.content_word_recall for p in successful) / len(successful)
-            result.avg_number_f1 = sum(p.number_f1 for p in successful) / len(successful)
             
             # Std
             result.std_format_agnostic_cer = compute_std([p.format_agnostic_cer for p in successful])
             result.std_content_word_recall = compute_std([p.content_word_recall for p in successful])
-            result.std_number_f1 = compute_std([p.number_f1 for p in successful])
         
-        logger.info(f"\n{company} Summary (mean ± std):")
+        # NumF1: Only average over pages with numbers in ground truth
+        if pages_with_numbers:
+            result.avg_number_f1 = sum(p.number_f1 for p in pages_with_numbers) / len(pages_with_numbers)
+            result.std_number_f1 = compute_std([p.number_f1 for p in pages_with_numbers])
+        
+        result.pages_with_numbers = len(pages_with_numbers)
+        
+        # Calculate AGGREGATED metrics (over all text/numbers, not per-page averages)
+        # This is more robust for pages with few numbers
+        if successful:
+            # Concatenate all OCR and GT text
+            all_ocr_text = '\n'.join(p.ocr_text or '' for p in successful)
+            all_gt_text = '\n'.join(p.gt_text or '' for p in successful)
+            
+            # Aggregated Word Recall
+            agg_word_recall = calculate_content_word_recall(all_ocr_text, all_gt_text)
+            result.aggregated_word_recall = agg_word_recall.value
+            
+            # Aggregated Number F1
+            agg_num_f1 = calculate_number_precision_recall_f1(all_ocr_text, all_gt_text)
+            result.aggregated_number_f1 = agg_num_f1.value
+            result.aggregated_number_precision = agg_num_f1.details.get("precision", 0.0) if agg_num_f1.details else 0.0
+            result.aggregated_number_recall = agg_num_f1.details.get("recall", 0.0) if agg_num_f1.details else 0.0
+        
+        logger.info(f"\n{company} Summary:")
         logger.info(f"  Pages: {result.successful_pages}/{result.total_pages}")
-        logger.info(f"  FA-CER: {result.avg_format_agnostic_cer:.2%} ± {result.std_format_agnostic_cer:.2%}")
-        logger.info(f"  Word Recall: {result.avg_content_word_recall:.2%} ± {result.std_content_word_recall:.2%}")
-        logger.info(f"  Number F1: {result.avg_number_f1:.2%} ± {result.std_number_f1:.2%}")
+        logger.info(f"  Per-Page Avg (mean ± std):")
+        logger.info(f"    FA-CER: {result.avg_format_agnostic_cer:.2%} ± {result.std_format_agnostic_cer:.2%}")
+        logger.info(f"    Word Recall: {result.avg_content_word_recall:.2%} ± {result.std_content_word_recall:.2%}")
+        logger.info(f"    Number F1: {result.avg_number_f1:.2%} ± {result.std_number_f1:.2%} (n={result.pages_with_numbers} pages)")
+        logger.info(f"  Aggregated:")
+        logger.info(f"    Word Recall: {result.aggregated_word_recall:.2%}")
+        logger.info(f"    Number F1: {result.aggregated_number_f1:.2%} (P={result.aggregated_number_precision:.2%}, R={result.aggregated_number_recall:.2%})")
         logger.info(f"  Time: {result.total_time_seconds:.1f}s")
         
         return result
@@ -415,26 +552,54 @@ class PageLevelBenchmark:
         for cr in result.company_results:
             all_successful.extend([p for p in cr.page_results if p.success])
         
+        # For NumF1, only include pages where ground truth has numbers
+        all_with_numbers = [p for p in all_successful if p.gt_has_numbers]
+        
         if all_successful:
-            # Mean
+            # Mean (FA-CER and WordRecall use all successful pages)
             result.overall_avg_format_agnostic_cer = sum(p.format_agnostic_cer for p in all_successful) / len(all_successful)
             result.overall_avg_content_word_recall = sum(p.content_word_recall for p in all_successful) / len(all_successful)
-            result.overall_avg_number_f1 = sum(p.number_f1 for p in all_successful) / len(all_successful)
             
             # Std
             result.overall_std_format_agnostic_cer = compute_std([p.format_agnostic_cer for p in all_successful])
             result.overall_std_content_word_recall = compute_std([p.content_word_recall for p in all_successful])
-            result.overall_std_number_f1 = compute_std([p.number_f1 for p in all_successful])
+        
+        # NumF1: Only average over pages with numbers in ground truth
+        if all_with_numbers:
+            result.overall_avg_number_f1 = sum(p.number_f1 for p in all_with_numbers) / len(all_with_numbers)
+            result.overall_std_number_f1 = compute_std([p.number_f1 for p in all_with_numbers])
+        
+        result.total_pages_with_numbers = len(all_with_numbers)
+        
+        # Calculate OVERALL AGGREGATED metrics
+        if all_successful:
+            # Concatenate all OCR and GT text
+            all_ocr_text = '\n'.join(p.ocr_text or '' for p in all_successful)
+            all_gt_text = '\n'.join(p.gt_text or '' for p in all_successful)
+            
+            # Aggregated Word Recall
+            agg_word_recall = calculate_content_word_recall(all_ocr_text, all_gt_text)
+            result.overall_aggregated_word_recall = agg_word_recall.value
+            
+            # Aggregated Number F1
+            agg_num_f1 = calculate_number_precision_recall_f1(all_ocr_text, all_gt_text)
+            result.overall_aggregated_number_f1 = agg_num_f1.value
+            result.overall_aggregated_number_precision = agg_num_f1.details.get("precision", 0.0) if agg_num_f1.details else 0.0
+            result.overall_aggregated_number_recall = agg_num_f1.details.get("recall", 0.0) if agg_num_f1.details else 0.0
         
         logger.info(f"\n{'='*60}")
         logger.info("PAGE-LEVEL BENCHMARK COMPLETE")
         logger.info(f"{'='*60}")
         logger.info(f"Companies: {result.total_companies}")
         logger.info(f"Pages: {result.successful_pages}/{result.total_pages}")
-        logger.info(f"FA-CER: {result.overall_avg_format_agnostic_cer:.4f} ± {result.overall_std_format_agnostic_cer:.4f}")
-        logger.info(f"Word Recall: {result.overall_avg_content_word_recall:.2%} ± {result.overall_std_content_word_recall:.2%}")
-        logger.info(f"Number F1: {result.overall_avg_number_f1:.2%} ± {result.overall_std_number_f1:.2%}")
-        logger.info(f"Total Time: {result.total_time_seconds:.1f}s")
+        logger.info(f"\nPer-Page Avg (mean ± std):")
+        logger.info(f"  FA-CER: {result.overall_avg_format_agnostic_cer:.4f} ± {result.overall_std_format_agnostic_cer:.4f}")
+        logger.info(f"  Word Recall: {result.overall_avg_content_word_recall:.2%} ± {result.overall_std_content_word_recall:.2%}")
+        logger.info(f"  Number F1: {result.overall_avg_number_f1:.2%} ± {result.overall_std_number_f1:.2%} (n={result.total_pages_with_numbers} pages)")
+        logger.info(f"\nAggregated:")
+        logger.info(f"  Word Recall: {result.overall_aggregated_word_recall:.2%}")
+        logger.info(f"  Number F1: {result.overall_aggregated_number_f1:.2%} (P={result.overall_aggregated_number_precision:.2%}, R={result.overall_aggregated_number_recall:.2%})")
+        logger.info(f"\nTotal Time: {result.total_time_seconds:.1f}s")
         
         return result
     
@@ -456,11 +621,13 @@ def main():
     parser = argparse.ArgumentParser(description="Run page-level OCR benchmark")
     parser.add_argument("--companies", nargs="*", help="Company codes to benchmark")
     parser.add_argument("--max-pages", type=int, default=None, help="Max pages per company")
-    parser.add_argument("--dpi", type=int, default=300, help="DPI for page extraction")
+    parser.add_argument("--dpi", type=int, default=300, help="DPI for page extraction (default: 300, try 400-600 for scanned PDFs)")
     parser.add_argument("--engine", type=str, default="docling", choices=["docling", "marker"], help="OCR engine")
     parser.add_argument("--marker-llm", action="store_true", help="Use LLM with Marker (requires OPENROUTER_API_KEY)")
     parser.add_argument("--table-only", action="store_true", help="Only benchmark pages with financial tables")
     parser.add_argument("--output", type=str, default="results/page_level_benchmark.json")
+    parser.add_argument("--save-outputs", action="store_true", help="Save OCR outputs for debugging/analysis")
+    parser.add_argument("--outputs-dir", type=str, default="results/ocr_outputs", help="Directory to save OCR outputs")
     
     args = parser.parse_args()
     
@@ -469,6 +636,8 @@ def main():
         dpi=args.dpi,
         marker_use_llm=args.marker_llm,
         table_only=args.table_only,
+        save_ocr_outputs=args.save_outputs,
+        ocr_outputs_dir=args.outputs_dir,
     )
     result = benchmark.run(companies=args.companies, max_pages_per_company=args.max_pages)
     benchmark.save_results(result, args.output)
