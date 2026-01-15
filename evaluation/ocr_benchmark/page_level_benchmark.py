@@ -95,17 +95,19 @@ class PageResult:
     processing_time_ms: float = 0.0
     success: bool = True
     error: Optional[str] = None
-    # OCR output text (optional, for debugging)
+    # OCR output text
     ocr_text: Optional[str] = None
-    # Ground truth text (for aggregation - always stored)
+    # Ground truth text
     gt_text: Optional[str] = None
-    # Flag to indicate if GT has numbers (for conditional NumF1 averaging)
+    # Flag to indicate if GT has numbers
     gt_has_numbers: bool = True
+    # Peak VRAM usage in MB
+    peak_vram_mb: Optional[float] = None
 
 
 @dataclass
 class CompanyResult:
-    """Results for a single company with mean ± std."""
+    """Results for a single company with mean, std."""
     company: str
     pdf_path: str
     total_pages: int
@@ -194,6 +196,7 @@ class PageLevelBenchmark:
         self._gt_by_company = None
         self._marker_service = None
         self._docling_service = None
+        self._hybrid_service = None
     
     @property
     def dataset(self) -> VnPdfDataset:
@@ -241,8 +244,6 @@ class PageLevelBenchmark:
                 return None
             
             page = doc[page_num - 1]  # fitz uses 0-indexed
-            
-            # Render at high DPI for better OCR
             zoom = self.dpi / 72  # 72 is default PDF DPI
             mat = fitz.Matrix(zoom, zoom)
             pix = page.get_pixmap(matrix=mat)
@@ -270,9 +271,6 @@ class PageLevelBenchmark:
     def ocr_pdf_page_with_marker(self, pdf_path: Path, page_num: int) -> str:
         """
         Run OCR on a specific PDF page using Marker.
-        
-        Marker processes the entire PDF but we extract just the page we need.
-        For efficiency, we create a single-page PDF extract.
         """
         # Create a temporary single-page PDF for Marker
         with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
@@ -300,6 +298,186 @@ class PageLevelBenchmark:
             if os.path.exists(tmp_path):
                 os.unlink(tmp_path)
     
+    def ocr_pdf_page_with_hybrid(self, pdf_path: Path, page_num: int) -> str:
+        """
+        Run OCR on a specific PDF page using Hybrid (Tesseract + Surya routing).
+        
+        Uses confidence-gated routing:
+        1. Extract page as image
+        2. Run Tesseract to get cells with confidence
+        3. Route low-confidence cells to Surya
+        4. Merge and return text
+        """
+        try:
+            # Extract page as high-resolution image
+            doc = fitz.open(pdf_path)
+            if page_num < 1 or page_num > len(doc):
+                doc.close()
+                return ""
+            
+            page = doc[page_num - 1]
+            zoom = self.dpi / 72  # Convert DPI to zoom factor
+            mat = fitz.Matrix(zoom, zoom)
+            pix = page.get_pixmap(matrix=mat)
+            
+            # Convert to PIL Image
+            img = Image.open(io.BytesIO(pix.tobytes("png")))
+            doc.close()
+            
+            # Lazy-load Hybrid service
+            if self._hybrid_service is None:
+                from services.ocr.confidence_gated import ConfidenceGatedOCRService
+                self._hybrid_service = ConfidenceGatedOCRService()
+            
+            # Process image with confidence-gated routing
+            ocr_text = self._hybrid_service.process_image(img)
+            return ocr_text
+            
+        except Exception as e:
+            logger.error(f"Hybrid OCR failed for page {page_num}: {e}")
+            return ""
+    
+    def ocr_pdf_page_with_hybrid_docling(self, pdf_path: Path, page_num: int) -> str:
+        """
+        Run OCR using Docling's full pipeline with HybridOcrModel.
+        
+        This uses:
+        1. Docling's layout detection
+        2. HybridOcrModel for OCR (Tesseract + Surya routing)
+        3. Docling's table structure recognition
+        4. Markdown export
+        
+        Returns formatted markdown output with table structure.
+        """
+        try:
+            from docling.document_converter import DocumentConverter, PdfFormatOption
+            from docling.datamodel.pipeline_options import PdfPipelineOptions
+            from docling.datamodel.base_models import InputFormat
+            from services.ocr.hybrid_pdf_pipeline import HybridPdfPipeline
+            
+            # Use HybridPdfPipeline which overrides _make_ocr_model()
+            # to inject our confidence-gated HybridOcrModel
+            converter = DocumentConverter(
+                format_options={
+                    InputFormat.PDF: PdfFormatOption(
+                        pipeline_cls=HybridPdfPipeline,
+                    )
+                }
+            )
+            
+            # Convert PDF (single page extraction)
+            # Create a single-page PDF for processing
+            import tempfile
+            import time
+            
+            doc = fitz.open(pdf_path)
+            if page_num < 1 or page_num > len(doc):
+                doc.close()
+                return ""
+            
+            # Create temp file path
+            tmp_path = Path(tempfile.gettempdir()) / f"hybrid_docling_{page_num}_{time.time_ns()}.pdf"
+            
+            # Extract single page to temp file
+            new_doc = fitz.open()
+            new_doc.insert_pdf(doc, from_page=page_num-1, to_page=page_num-1)
+            new_doc.save(str(tmp_path))
+            new_doc.close()
+            doc.close()
+            
+            try:
+                # Run Docling conversion
+                result = converter.convert(str(tmp_path))
+                
+                # Export to markdown
+                md_text = result.document.export_to_markdown()
+                
+                return md_text
+                
+            finally:
+                # Cleanup
+                for _ in range(3):
+                    try:
+                        if tmp_path.exists():
+                            tmp_path.unlink()
+                        break
+                    except PermissionError:
+                        time.sleep(0.1)
+            
+        except Exception as e:
+            logger.error(f"Hybrid Docling OCR failed for page {page_num}: {e}")
+            import traceback
+            traceback.print_exc()
+            return ""
+    
+    def ocr_pdf_page_with_laso(self, pdf_path: Path, page_num: int) -> str:
+        """
+        Run OCR using Docling's pipeline with LASOcrModel (Layout-Aware Speculative OCR).
+        
+        LASO features:
+        1. Pre-OCR layout detection to identify table regions
+        2. Speculative dual-engine execution for table cells
+        3. Vietnamese number format validation for result selection
+        4. Confidence routing for non-table regions
+        """
+        try:
+            from docling.document_converter import DocumentConverter, PdfFormatOption
+            from docling.datamodel.base_models import InputFormat
+            from services.ocr.laso_pdf_pipeline import LASOPdfPipeline
+            
+            # Use LASOPdfPipeline for layout-aware speculative OCR
+            converter = DocumentConverter(
+                format_options={
+                    InputFormat.PDF: PdfFormatOption(
+                        pipeline_cls=LASOPdfPipeline,
+                    )
+                }
+            )
+            
+            # Convert PDF (single page extraction)
+            import tempfile
+            import time
+            
+            doc = fitz.open(pdf_path)
+            if page_num < 1 or page_num > len(doc):
+                doc.close()
+                return ""
+            
+            # Create temp file path
+            tmp_path = Path(tempfile.gettempdir()) / f"laso_{page_num}_{time.time_ns()}.pdf"
+            
+            # Extract single page to temp file
+            new_doc = fitz.open()
+            new_doc.insert_pdf(doc, from_page=page_num-1, to_page=page_num-1)
+            new_doc.save(str(tmp_path))
+            new_doc.close()
+            doc.close()
+            
+            try:
+                # Run Docling conversion with LASO
+                result = converter.convert(str(tmp_path))
+                
+                # Export to markdown
+                md_text = result.document.export_to_markdown()
+                
+                return md_text
+                
+            finally:
+                # Cleanup with retry for Windows
+                for _ in range(3):
+                    try:
+                        if tmp_path.exists():
+                            tmp_path.unlink()
+                        break
+                    except PermissionError:
+                        time.sleep(0.1)
+            
+        except Exception as e:
+            logger.error(f"LASO OCR failed for page {page_num}: {e}")
+            import traceback
+            traceback.print_exc()
+            return ""
+    
     def _save_ocr_output(self, company: str, page_num: int, ocr_text: str, gt_text: str) -> None:
         """
         Save OCR output and ground truth text for debugging/analysis.
@@ -324,12 +502,33 @@ class PageLevelBenchmark:
     def benchmark_page(self, company: str, page_num: int, pdf_path: Path, gt_sample: VnPdfSample) -> PageResult:
         """Benchmark a single page."""
         start_time = time.time()
+        peak_vram_mb = None
         
         try:
+            # Reset VRAM peak stats for accurate per-page measurement
+            try:
+                import torch
+                if torch.cuda.is_available():
+                    torch.cuda.reset_peak_memory_stats()
+            except ImportError:
+                pass
+            
             # Run OCR based on engine
             if self.ocr_engine == "marker":
                 logger.info(f"  Processing page {page_num} with Marker...")
                 ocr_text = self.ocr_pdf_page_with_marker(pdf_path, page_num)
+            elif self.ocr_engine == "hybrid":
+                # Hybrid: Docling + Surya for low-confidence cells
+                logger.info(f"  Processing page {page_num} with Hybrid (Tesseract+Surya)...")
+                ocr_text = self.ocr_pdf_page_with_hybrid(pdf_path, page_num)
+            elif self.ocr_engine == "hybrid_docling":
+                # Hybrid Docling: Full Docling pipeline with HybridOcrModel
+                logger.info(f"  Processing page {page_num} with Hybrid Docling...")
+                ocr_text = self.ocr_pdf_page_with_hybrid_docling(pdf_path, page_num)
+            elif self.ocr_engine == "laso":
+                # LASO: Layout-Aware Speculative OCR
+                logger.info(f"  Processing page {page_num} with LASO...")
+                ocr_text = self.ocr_pdf_page_with_laso(pdf_path, page_num)
             else:
                 # Docling: Extract image and OCR
                 img = self.extract_page_image(pdf_path, page_num)
@@ -348,7 +547,11 @@ class PageLevelBenchmark:
                 ocr_text = self.ocr_image(img)
             
             # Extract only table content from OCR output (ground truth only has table rows)
-            ocr_table_text = extract_table_content(ocr_text)
+            # For hybrid mode, skip table filtering since it outputs raw OCR text
+            if self.ocr_engine == "hybrid":
+                ocr_table_text = ocr_text  # Use raw text for hybrid
+            else:
+                ocr_table_text = extract_table_content(ocr_text)
             
             # Check if ground truth has numbers (for conditional NumF1 averaging)
             gt_number_count = count_numbers_in_text(gt_sample.text)
@@ -356,6 +559,14 @@ class PageLevelBenchmark:
             
             # Calculate metrics using table-only OCR text
             metrics = calculate_all_metrics(ocr_table_text, gt_sample.text)
+            
+            # Capture peak VRAM usage
+            try:
+                import torch
+                if torch.cuda.is_available():
+                    peak_vram_mb = torch.cuda.max_memory_allocated() / (1024 ** 2)
+            except ImportError:
+                pass
             
             elapsed_ms = (time.time() - start_time) * 1000
             
@@ -382,6 +593,8 @@ class PageLevelBenchmark:
                 gt_text=gt_sample.text,
                 # Flag for conditional NumF1 averaging
                 gt_has_numbers=has_numbers,
+                # GPU memory usage
+                peak_vram_mb=peak_vram_mb,
             )
             
             # Save OCR output to file if enabled
@@ -622,7 +835,7 @@ def main():
     parser.add_argument("--companies", nargs="*", help="Company codes to benchmark")
     parser.add_argument("--max-pages", type=int, default=None, help="Max pages per company")
     parser.add_argument("--dpi", type=int, default=300, help="DPI for page extraction (default: 300, try 400-600 for scanned PDFs)")
-    parser.add_argument("--engine", type=str, default="docling", choices=["docling", "marker"], help="OCR engine")
+    parser.add_argument("--engine", type=str, default="docling", choices=["docling", "marker", "hybrid", "hybrid_docling", "laso"], help="OCR engine")
     parser.add_argument("--marker-llm", action="store_true", help="Use LLM with Marker (requires OPENROUTER_API_KEY)")
     parser.add_argument("--table-only", action="store_true", help="Only benchmark pages with financial tables")
     parser.add_argument("--output", type=str, default="results/page_level_benchmark.json")
