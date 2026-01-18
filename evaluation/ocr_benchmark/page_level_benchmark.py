@@ -11,6 +11,7 @@ import fitz  # PyMuPDF
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass, field, asdict
+import unicodedata
 from datetime import datetime
 from PIL import Image
 import io
@@ -50,12 +51,6 @@ def extract_table_content(text: str) -> str:
     
     Ground truth only contains table rows (lines starting with '|').
     This ensures fair comparison by extracting only table content from OCR output.
-    
-    Args:
-        text: Raw OCR output text
-        
-    Returns:
-        Filtered text containing only table rows
     """
     lines = text.split('\n')
     table_lines = []
@@ -68,19 +63,7 @@ def extract_table_content(text: str) -> str:
 
 
 def extract_table_content_robust(text: str) -> str:
-    """Extract table-like content from OCR output in a format-robust way.
-
-    Motivation:
-    - GT for this benchmark contains table content.
-    - Different OCR engines/pipelines may emit tables as:
-      (a) Markdown pipe tables
-      (b) Wrapped/indented pipe rows
-      (c) Plain text with column alignment (multi-space / tabs)
-
-    This extractor is *not* a generic fallback to raw OCR.
-    It returns only lines that satisfy a table-likeness criterion.
-    If no table-like lines are found, it returns "".
-    """
+    """Extract table-like content from OCR output in a format-robust way."""
     if not text:
         return ""
 
@@ -95,13 +78,10 @@ def extract_table_content_robust(text: str) -> str:
             return False
         return True
 
-    # 1) Prefer markdown pipe rows if present
     pipe_rows = [ln for ln in lines if is_markdown_pipe_row(ln)]
     if pipe_rows:
         return "\n".join(pipe_rows)
 
-    # 2) Otherwise, keep only column-aligned lines (multi-space or tab separated)
-    #    AND that look table-like (at least one number or many columns)
     aligned: list[str] = []
     for ln in lines:
         s = ln.strip()
@@ -116,12 +96,7 @@ def extract_table_content_robust(text: str) -> str:
 
 
 def _normalize_markdownish_rows(text: str) -> List[str]:
-    """Best-effort row splitting for pipe-table strings.
-
-    The HF GT in this project is sometimes a *single line* where rows are separated
-    by a space followed by a new row starting with '|', e.g. "...| |---|...| |A ...|".
-    This normalizer inserts newlines before those row starts.
-    """
+    """Best-effort row splitting for pipe-table strings."""
     if not text:
         return []
 
@@ -133,11 +108,7 @@ def _normalize_markdownish_rows(text: str) -> List[str]:
 
 
 def parse_pipe_table_to_grid(text: str) -> List[List[str]]:
-    """Parse a markdown-ish pipe table into a 2D grid of cell strings.
-
-    This is intentionally permissive and only relies on the '|' delimiter.
-    It discards markdown separator rows like: |---|---| or |:---|---:|.
-    """
+    """Parse a markdown-ish pipe table into a 2D grid of cell strings."""
     rows: List[List[str]] = []
     for ln in _normalize_markdownish_rows(text):
         s = ln.strip()
@@ -162,11 +133,7 @@ def parse_pipe_table_to_grid(text: str) -> List[List[str]]:
 
 
 def grid_to_canonical_text(grid: List[List[str]]) -> str:
-    """Canonicalize a 2D grid into a text representation for metrics.
-
-    We join cells with tabs and rows with newlines. This is robust for
-    the existing metrics (format-agnostic CER, word recall, number F1).
-    """
+    """Canonicalize a 2D grid into a text representation for metrics."""
     out_lines: List[str] = []
     for row in grid:
         if not row:
@@ -178,13 +145,73 @@ def grid_to_canonical_text(grid: List[List[str]]) -> str:
     return "\n".join(out_lines)
 
 
+def _strip_accents(s: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
+
+
+def _normalize_for_match(s: str) -> str:
+    s = (s or "").lower()
+    s = _strip_accents(s)
+    s = s.replace("đ", "d")
+    s = re.sub(r"[^0-9a-z]+", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+_FINANCIAL_STATEMENT_KEYWORDS = (
+    # Vietnamese
+    "bang can doi ke toan",
+    "bao cao ket qua hoat dong kinh doanh",
+    "bao cao luu chuyen tien te",
+    "thuyet minh bao cao tai chinh",
+    "bao cao tai chinh",
+    # Common section titles / abbreviations
+    "can doi ke toan",
+    "ket qua hoat dong kinh doanh",
+    "luu chuyen tien te",
+    "thuyet minh",
+    # English
+    "balance sheet",
+    "income statement",
+    "statement of financial position",
+    "cash flow",
+    "notes to the financial statements",
+)
+
+
+def looks_like_financial_statement(text: str) -> bool:
+    """Heuristic: does this page look like a financial statement / notes table page"""
+    s = _normalize_for_match(text)
+    if not s:
+        return False
+    if any(k in s for k in _FINANCIAL_STATEMENT_KEYWORDS):
+        return True
+    # Fallback: table-heavy pages with many numbers are often financial tables.
+    digits = sum(1 for c in s if c.isdigit())
+    if len(s) > 0 and (digits / len(s)) > 0.10:
+        return True
+    return False
+
+
+def _looks_like_financial_from_tsv_words(words: List[Dict[str, Any]]) -> bool:
+    if not words:
+        return False
+    texts = [str(w.get("text") or "").strip() for w in words if str(w.get("text") or "").strip()]
+    if not texts:
+        return False
+    joined = _normalize_for_match(" ".join(texts))
+    if any(k in joined for k in _FINANCIAL_STATEMENT_KEYWORDS):
+        return True
+    # If a substantial fraction of tokens contain digits, it's likely a financial table.
+    digit_tokens = sum(1 for t in texts if re.search(r"\d", t))
+    return (digit_tokens / max(1, len(texts))) > 0.30
+
+
 def _tesseract_tsv_words(
     img: Image.Image,
     lang: str = "vie",
 ) -> List[Dict[str, Any]]:
     """Run Tesseract TSV on an image and return word-level boxes.
-
-    Returns a list of dicts with keys: text, conf, left, top, width, height.
     """
     with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
         tmp_path = tmp.name
@@ -290,8 +317,6 @@ _NUM_ALLOWED = set("0123456789.,()%+-/ ")
 
 def _numeric_candidate_score(text: str) -> tuple[int, int, int]:
     """Heuristic scoring for numeric OCR candidates.
-
-    Higher is better. Tuple order: (digit_count, -illegal_char_count, -paren_penalty)
     """
     if not text:
         return (0, -9999, -9999)
@@ -327,9 +352,6 @@ def _pick_best_candidate_with_baseline(
     baseline: Optional[str] = None,
 ) -> str:
     """Pick a candidate conservatively.
-
-    We strongly bias toward the provided baseline (typically the Docling cell text)
-    to avoid regressions from noisy alternate sources (e.g., Marker).
     """
     if not candidates:
         return ""
@@ -401,13 +423,7 @@ def _extract_pipe_table_blocks(text: str) -> List[List[List[str]]]:
 
 
 def _layout_table_from_words(words: List[Dict[str, Any]]) -> List[List[Dict[str, Any]]]:
-    """Strategy 1: derive a table-like grid (rows x cols) from Tesseract word boxes.
-
-    This is intended as a *fallback* when Docling extracts no tables, but the page
-    still contains a table-like aligned structure (including borderless 2-col lists).
-
-    Returns a grid of cell dicts: {text, bbox:{l,t,r,b,coord_origin}}.
-    """
+    """Strategy 1: derive a table-like grid (rows x cols) from Tesseract word boxes."""
     if not words:
         return []
 
@@ -633,6 +649,10 @@ class PageResult:
     # Peak VRAM usage in MB
     peak_vram_mb: Optional[float] = None
 
+    # Hybrid cascade diagnostics
+    hybrid_a_stage: Optional[str] = None  # docling | s1_layout | marker
+    hybrid_a_reason: Optional[str] = None
+
 
 @dataclass
 class CompanyResult:
@@ -711,23 +731,21 @@ class PageLevelBenchmark:
         dpi: int = 300,
         marker_use_llm: bool = False,  # Use LLM for Marker post-processing (requires OpenRouter API key)
         table_only: bool = False,  # Only benchmark pages with financial tables
+        financial_only: bool = False,  # Only benchmark financial statement/notes pages (Balance Sheet, IS, CF, Notes)
         save_ocr_outputs: bool = False,  # Save OCR text outputs for debugging
         ocr_outputs_dir: str = None,  # Directory to save OCR outputs
         # Strategy flags
         strategy1_layout_fallback: bool = False,
-        strategy2_ensemble_voting: bool = False,
-        strategy2_use_marker: bool = True,
     ):
         self.pdf_dir = Path(pdf_dir) if pdf_dir else PDF_SAMPLES_DIR
         self.ocr_engine = ocr_engine
         self.dpi = dpi
         self.marker_use_llm = marker_use_llm
         self.table_only = table_only
+        self.financial_only = financial_only
         self.save_ocr_outputs = save_ocr_outputs
         self.ocr_outputs_dir = Path(ocr_outputs_dir) if ocr_outputs_dir else Path("results/ocr_outputs")
         self.strategy1_layout_fallback = strategy1_layout_fallback
-        self.strategy2_ensemble_voting = strategy2_ensemble_voting
-        self.strategy2_use_marker = strategy2_use_marker
         self._dataset = None
         self._gt_by_company = None
         self._marker_service = None
@@ -749,6 +767,12 @@ class PageLevelBenchmark:
                 # Filter to table pages only if requested
                 if self.table_only and not sample.is_table_page:
                     continue
+
+                # Filter to financial statement tables/notes only if requested.
+                # This uses GT text to define the evaluation slice (not strategy logic).
+                if self.financial_only and not looks_like_financial_statement(sample.text):
+                    continue
+
                 company = sample.custom_id.split('/')[2]
                 if company not in self._gt_by_company:
                     self._gt_by_company[company] = {}
@@ -762,16 +786,7 @@ class PageLevelBenchmark:
         return matches[0] if matches else None
     
     def extract_page_image(self, pdf_path: Path, page_num: int) -> Optional[Image.Image]:
-        """
-        Extract a specific page from PDF as high-resolution image.
-        
-        Args:
-            pdf_path: Path to PDF file
-            page_num: 1-indexed page number
-            
-        Returns:
-            PIL Image of the page, or None if failed
-        """
+        """Extract a specific page from PDF as high-resolution image."""
         try:
             doc = fitz.open(pdf_path)
             
@@ -876,14 +891,6 @@ class PageLevelBenchmark:
     def ocr_pdf_page_with_hybrid_docling(self, pdf_path: Path, page_num: int) -> str:
         """
         Run OCR using Docling's full pipeline with HybridOcrModel.
-        
-        This uses:
-        1. Docling's layout detection
-        2. HybridOcrModel for OCR (Tesseract + Surya routing)
-        3. Docling's table structure recognition
-        4. Markdown export
-        
-        Returns formatted markdown output with table structure.
         """
         try:
             from docling.document_converter import DocumentConverter, PdfFormatOption
@@ -892,11 +899,6 @@ class PageLevelBenchmark:
             from docling.datamodel.accelerator_options import AcceleratorDevice
             from services.ocr.hybrid_pdf_pipeline import HybridPdfPipeline
             
-            # Use HybridPdfPipeline which overrides _make_ocr_model()
-            # to inject our confidence-gated HybridOcrModel
-            # IMPORTANT: Provide explicit pipeline options.
-            # If we rely on Docling defaults, some PDFs end up with OCR disabled
-            # (export_to_markdown() becomes empty), which incorrectly looks "fast" and "successful".
             pipeline_options = PdfPipelineOptions()
             pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
             pipeline_options.do_ocr = True
@@ -1107,6 +1109,8 @@ class PageLevelBenchmark:
         """Benchmark a single page."""
         start_time = time.time()
         peak_vram_mb = None
+        hybrid_a_stage: Optional[str] = None
+        hybrid_a_reason: Optional[str] = None
         
         try:
             # Reset VRAM peak stats for accurate per-page measurement
@@ -1134,6 +1138,92 @@ class PageLevelBenchmark:
                 logger.info(f"  Processing page {page_num} with Hybrid (Tesseract+Surya)...")
                 ocr_text_raw = self.ocr_pdf_page_with_hybrid(pdf_path, page_num)
                 ocr_doc_dict = None
+            elif self.ocr_engine == "hybrid_a":
+                # Hybrid A (cascade):
+                # 1) Try Docling PDF pipeline table extraction
+                # 2) If no tables: optional S1 layout fallback
+                # 3) If still no tables: fallback to Marker
+                logger.info(f"  Processing page {page_num} with Hybrid A (Docling->S1->Marker cascade)...")
+                from docling.datamodel.pipeline_options import PdfPipelineOptions, TesseractCliOcrOptions
+                from docling.datamodel.accelerator_options import AcceleratorDevice
+                from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
+
+                pipeline_options = PdfPipelineOptions()
+                pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
+                pipeline_options.do_ocr = True
+                pipeline_options.do_table_structure = True
+                pipeline_options.table_structure_options.do_cell_matching = True
+                pipeline_options.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=["vie"])
+
+                docling_md, docling_dict = self._convert_pdf_page_with_docling_pipeline(
+                    pdf_path=pdf_path,
+                    page_num=page_num,
+                    pipeline_cls=StandardPdfPipeline,
+                    pipeline_options=pipeline_options,
+                )
+
+                # Try Docling structured tables first.
+                docling_grid = extract_docling_tables_grid(docling_dict if isinstance(docling_dict, dict) else {})
+                if docling_grid:
+                    hybrid_a_stage = "docling"
+                    ocr_text_raw = docling_md
+                    ocr_doc_dict = docling_dict
+                else:
+                    hybrid_a_reason = "docling_no_tables"
+                    # Optional S1: infer a grid from TSV words.
+                    ocr_text_raw = docling_md
+                    ocr_doc_dict = docling_dict
+
+                    s1_grid: list[list[str]] = []
+                    s1_payload: Any = None
+                    if self.strategy1_layout_fallback:
+                        page_img = self.extract_page_image(pdf_path, page_num)
+                        if page_img is not None:
+                            words = _tesseract_tsv_words(page_img, lang="vie")
+                            if _looks_like_financial_from_tsv_words(words):
+                                grid_cells = _layout_table_from_words(words)
+                                if grid_cells:
+                                    s1_grid = [[c.get("text", "") for c in row] for row in grid_cells]
+                                    s1_payload = [
+                                        {
+                                            "label": "layout_table_fallback",
+                                            "data": {"grid": grid_cells},
+                                        }
+                                    ]
+
+                    if s1_grid:
+                        hybrid_a_stage = "s1_layout"
+                        # Use S1 output as the scored text, but keep Docling raw MD for debugging.
+                        ocr_text_raw = ocr_text_raw
+                        ocr_doc_dict = {"tables": s1_payload} if s1_payload is not None else {}
+                    else:
+                        hybrid_a_stage = "marker"
+                        if hybrid_a_reason is None:
+                            hybrid_a_reason = "docling_no_tables_and_s1_empty"
+                        # Fallback to Marker if Docling yields no tables and S1 did not recover.
+                        marker_text = self.ocr_pdf_page_with_marker(pdf_path, page_num)
+                        ocr_text_raw = marker_text
+                        ocr_doc_dict = None
+            elif self.ocr_engine == "docling_pdf":
+                # Docling PDF pipeline baseline (clean A/B vs hybrid_docling)
+                logger.info(f"  Processing page {page_num} with Docling PDF pipeline...")
+                from docling.datamodel.pipeline_options import PdfPipelineOptions, TesseractCliOcrOptions
+                from docling.datamodel.accelerator_options import AcceleratorDevice
+                from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
+
+                pipeline_options = PdfPipelineOptions()
+                pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
+                pipeline_options.do_ocr = True
+                pipeline_options.do_table_structure = True
+                pipeline_options.table_structure_options.do_cell_matching = True
+                pipeline_options.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=["vie"])
+
+                ocr_text_raw, ocr_doc_dict = self._convert_pdf_page_with_docling_pipeline(
+                    pdf_path=pdf_path,
+                    page_num=page_num,
+                    pipeline_cls=StandardPdfPipeline,
+                    pipeline_options=pipeline_options,
+                )
             elif self.ocr_engine == "hybrid_docling":
                 # Hybrid Docling: Full Docling pipeline with HybridOcrModel
                 logger.info(f"  Processing page {page_num} with Hybrid Docling...")
@@ -1225,7 +1315,7 @@ class PageLevelBenchmark:
             docling_tables_payload: Any = None
             page_img: Optional[Image.Image] = None
 
-            if self.ocr_engine in {"hybrid_docling", "laso"}:
+            if self.ocr_engine in {"docling_pdf", "hybrid_docling", "laso"}:
                 # For Docling-based pipelines, require actual table extraction.
                 doc_dict = ocr_doc_dict if isinstance(ocr_doc_dict, dict) else {}
                 ocr_grid_str = extract_docling_tables_grid(doc_dict)
@@ -1236,6 +1326,23 @@ class PageLevelBenchmark:
                     page_img = self.extract_page_image(pdf_path, page_num)
                     if page_img is not None:
                         words = _tesseract_tsv_words(page_img, lang="vie")
+                        # Avoid turning narrative pages into noisy pseudo-tables.
+                        # Only run fallback when the page looks like a financial statement/notes table.
+                        if not _looks_like_financial_from_tsv_words(words):
+                            return PageResult(
+                                company=company,
+                                page_number=page_num,
+                                format_agnostic_cer=1.0,
+                                content_word_recall=0.0,
+                                number_f1=0.0,
+                                success=False,
+                                error="No tables extracted by Docling (fallback skipped: not financial/table-like)",
+                                ocr_text_raw=ocr_text_raw,
+                                gt_text=gt_eval_text,
+                                gt_text_raw=gt_text_raw,
+                                extraction_mode="docling_no_tables",
+                                docling_tables=docling_tables_payload,
+                            )
                         grid_cells = _layout_table_from_words(words)
                         if grid_cells:
                             ocr_grid_str = [[c.get("text", "") for c in row] for row in grid_cells]
@@ -1268,56 +1375,35 @@ class PageLevelBenchmark:
                 if extraction_mode == "raw":
                     extraction_mode = "docling_grid"
 
-                # Strategy 2: ensemble voting with Marker (when available).
-                marker_grid: Optional[List[List[str]]] = None
-                if self.strategy2_ensemble_voting and self.strategy2_use_marker:
-                    # Only pay the Marker cost when Docling output looks sparse.
-                    total_cells = sum(len(r) for r in ocr_grid_str)
-                    nonempty_cells = sum(1 for r in ocr_grid_str for c in r if (c or "").strip())
-                    sparse = (total_cells == 0) or (nonempty_cells / max(1, total_cells) < 0.55)
-                    if sparse:
-                        try:
-                            marker_md = self.ocr_pdf_page_with_marker(pdf_path, page_num)
-                            marker_grids = _extract_pipe_table_blocks(marker_md)
-                            if marker_grids:
-                                def grid_quality(g: List[List[str]]) -> tuple[int, int, int, int]:
-                                    r = len(g)
-                                    cmax = max((len(rr) for rr in g), default=0)
-                                    tot = sum(len(rr) for rr in g)
-                                    nonempty = sum(1 for rr in g for cc in rr if (cc or "").strip())
-                                    # Prefer denser/larger tables.
-                                    return (nonempty, tot, r, cmax)
-
-                                marker_grid = max(marker_grids, key=grid_quality)
-                        except Exception:
-                            marker_grid = None
-
-                # Strategy 2: fill-only voting (avoid regressions).
-                if self.strategy2_ensemble_voting and marker_grid:
-                    new_grid: List[List[str]] = []
-                    for ri, row in enumerate(ocr_grid_str):
-                        new_row: List[str] = []
-                        for ci, cell_text in enumerate(row):
-                            baseline = cell_text
-                            candidates = [baseline]
-
-                            # Pull a marker candidate only to fill missing cells (avoid regressions).
-                            if (
-                                not (baseline or "").strip()
-                                and ri < len(marker_grid)
-                                and ci < len(marker_grid[ri])
-                            ):
-                                candidates.append(marker_grid[ri][ci])
-
-                            chosen = _pick_best_candidate_with_baseline(
-                                candidates,
-                                prefer_numeric=bool(re.search(r"\d", baseline or "")),
-                                baseline=baseline,
-                            )
-                            new_row.append(chosen)
-                        new_grid.append(new_row)
-                    ocr_grid_str = new_grid
-
+                ocr_eval_text = grid_to_canonical_text(ocr_grid_str)
+            elif self.ocr_engine == "hybrid_a" and isinstance(ocr_doc_dict, dict):
+                # Hybrid A produced Docling-like structured tables (Docling or S1 fallback).
+                doc_dict = ocr_doc_dict
+                ocr_grid_str = extract_docling_tables_grid(doc_dict)
+                docling_tables_payload = doc_dict.get("tables")
+                if not ocr_grid_str:
+                    return PageResult(
+                        company=company,
+                        page_number=page_num,
+                        format_agnostic_cer=1.0,
+                        content_word_recall=0.0,
+                        number_f1=0.0,
+                        success=False,
+                        error="Hybrid A: no tables extracted by Docling/S1",
+                        ocr_text_raw=ocr_text_raw,
+                        gt_text=gt_eval_text,
+                        gt_text_raw=gt_text_raw,
+                        extraction_mode="hybrid_a_no_tables",
+                        docling_tables=docling_tables_payload,
+                        hybrid_a_stage=hybrid_a_stage,
+                        hybrid_a_reason=hybrid_a_reason,
+                    )
+                if hybrid_a_stage == "s1_layout":
+                    extraction_mode = "hybrid_a_s1_grid"
+                elif hybrid_a_stage == "docling":
+                    extraction_mode = "hybrid_a_docling_grid"
+                else:
+                    extraction_mode = "hybrid_a_grid"
                 ocr_eval_text = grid_to_canonical_text(ocr_grid_str)
             else:
                 # Non-Docling engines: best-effort parsing.
@@ -1345,6 +1431,8 @@ class PageLevelBenchmark:
                             gt_text=gt_eval_text,
                             gt_text_raw=gt_text_raw,
                             extraction_mode="no_table_like_content",
+                            hybrid_a_stage=hybrid_a_stage,
+                            hybrid_a_reason=hybrid_a_reason,
                         )
             
             # Check if ground truth has numbers (for conditional NumF1 averaging)
@@ -1393,6 +1481,10 @@ class PageLevelBenchmark:
                 gt_has_numbers=has_numbers,
                 # GPU memory usage
                 peak_vram_mb=peak_vram_mb,
+
+                # Hybrid A cascade diagnostics
+                hybrid_a_stage=hybrid_a_stage,
+                hybrid_a_reason=hybrid_a_reason,
             )
             
             # Save OCR output to file if enabled
@@ -1412,7 +1504,9 @@ class PageLevelBenchmark:
                 content_word_recall=0.0,
                 number_f1=0.0,
                 success=False,
-                error=str(e)
+                error=str(e),
+                hybrid_a_stage=hybrid_a_stage,
+                hybrid_a_reason=hybrid_a_reason,
             )
     
     def benchmark_company(self, company: str, max_pages: int = None) -> Optional[CompanyResult]:
@@ -1633,28 +1727,33 @@ def main():
     parser.add_argument("--companies", nargs="*", help="Company codes to benchmark")
     parser.add_argument("--max-pages", type=int, default=None, help="Max pages per company")
     parser.add_argument("--dpi", type=int, default=300, help="DPI for page extraction (default: 300, try 400-600 for scanned PDFs)")
-    parser.add_argument("--engine", type=str, default="docling", choices=["docling", "marker", "hybrid", "hybrid_docling", "laso"], help="OCR engine")
+    parser.add_argument(
+        "--engine",
+        type=str,
+        default="docling",
+        choices=["docling", "docling_pdf", "hybrid_a", "marker", "hybrid", "hybrid_docling", "laso"],
+        help=(
+            "OCR engine. For paper-fair end-to-end PDF benchmarking, prefer: "
+            "docling_pdf vs hybrid_docling vs marker. "
+            "Note: 'docling' uses the image pipeline (PDF->raster->image->Docling)."
+        ),
+    )
     parser.add_argument("--marker-llm", action="store_true", help="Use LLM with Marker (requires OPENROUTER_API_KEY)")
     parser.add_argument("--table-only", action="store_true", help="Only benchmark pages with financial tables")
+    parser.add_argument(
+        "--financial-only",
+        action="store_true",
+        help="Only benchmark financial statement/notes pages (Balance Sheet, Income Statement, Cash Flow, Notes) based on GT keywords",
+    )
     parser.add_argument("--output", type=str, default="results/page_level_benchmark.json")
     parser.add_argument("--save-outputs", action="store_true", help="Save OCR outputs for debugging/analysis")
     parser.add_argument("--outputs-dir", type=str, default="results/ocr_outputs", help="Directory to save OCR outputs")
 
-    # Strategy flags (1/2)
+    # Strategy flags
     parser.add_argument(
         "--s1-layout-fallback",
         action="store_true",
         help="Strategy 1: if Docling extracts no tables, infer a layout-table grid from Tesseract TSV words",
-    )
-    parser.add_argument(
-        "--s2-ensemble",
-        action="store_true",
-        help="Strategy 2: ensemble voting using Marker as a second candidate table extraction",
-    )
-    parser.add_argument(
-        "--s2-no-marker",
-        action="store_true",
-        help="Disable Marker usage inside Strategy 2 (keeps flag compatibility)",
     )
     
     args = parser.parse_args()
@@ -1664,11 +1763,10 @@ def main():
         dpi=args.dpi,
         marker_use_llm=args.marker_llm,
         table_only=args.table_only,
+        financial_only=args.financial_only,
         save_ocr_outputs=args.save_outputs,
         ocr_outputs_dir=args.outputs_dir,
         strategy1_layout_fallback=args.s1_layout_fallback,
-        strategy2_ensemble_voting=args.s2_ensemble,
-        strategy2_use_marker=(args.s2_ensemble and (not args.s2_no_marker)),
     )
     result = benchmark.run(companies=args.companies, max_pages_per_company=args.max_pages)
     benchmark.save_results(result, args.output)
