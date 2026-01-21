@@ -1727,7 +1727,7 @@ def main():
         action="store_true",
         help="Only benchmark financial statement/notes pages (Balance Sheet, Income Statement, Cash Flow, Notes) based on GT keywords",
     )
-    parser.add_argument("--output", type=str, default="results/page_level_benchmark.json")
+    parser.add_argument("--output", type=str, default=" page_level_benchmark.json")
     parser.add_argument(
         "--minimal-json",
         action="store_true",
