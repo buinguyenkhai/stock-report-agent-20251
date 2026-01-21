@@ -8,8 +8,11 @@ Primary metrics (3 metrics used in benchmark):
 """
 
 import re
+from collections import Counter
 from dataclasses import dataclass
-from typing import Set, Dict, Any, Optional
+
+from typing import Counter as CounterType, Dict, Any, Iterable, List, Optional, Set, Tuple
+
 from jiwer import cer as jiwer_cer
 
 
@@ -20,10 +23,124 @@ class MetricResult:
     details: Optional[Dict[str, Any]] = None
 
 def extract_digit_sequences(text: str) -> Set[str]:
+    """Extract all digit sequences from text (legacy, kept for debugging)."""
+    return set(re.findall(r"\d+", text or ""))
+
+
+_NUMBER_TOKEN_RE = re.compile(
+    r"(?ix)"
+    r"(?P<sign>-|\()??\s*"
+    r"(?P<int>\d{1,3}(?:[.,\s]\d{3})*|\d+)"
+    r"(?P<dec>(?:[.,]\d+))?"
+    r"\s*(?P<suffix>%|\))?"
+)
+
+
+def _normalize_numeric_token(raw: str) -> Optional[str]:
+    """Normalize a numeric token into a canonical string.
+
+    Examples:
+      - "(1.234.567)" -> "-1234567"
+      - "1,234.56" -> "1234.56"
+      - "1.234,56" -> "1234.56"
+      - "12,5%" -> "12.5%"
     """
-    Extract all digit sequences from text.
-    """
-    return set(re.findall(r'\d+', text))
+    s = (raw or "").strip()
+    if not s:
+        return None
+
+    s = s.replace("\u00A0", " ")
+    s = s.replace(" ", "")
+
+    negative = False
+    if s.startswith("(") and s.endswith(")"):
+        negative = True
+        s = s[1:-1]
+    if s.startswith("-"):
+        negative = True
+        s = s[1:]
+
+    is_percent = s.endswith("%")
+    if is_percent:
+        s = s[:-1]
+
+    if not re.search(r"\d", s):
+        return None
+
+    last_dot = s.rfind(".")
+    last_comma = s.rfind(",")
+
+    dec_sep: Optional[str] = None
+    if last_dot != -1 and last_comma != -1:
+        dec_sep = "." if last_dot > last_comma else ","
+    elif last_dot != -1:
+        if len(s) - last_dot - 1 in (1, 2):
+            dec_sep = "."
+        else:
+            dec_sep = None
+    elif last_comma != -1:
+        if len(s) - last_comma - 1 in (1, 2):
+            dec_sep = ","
+        else:
+            dec_sep = None
+
+    if dec_sep is None:
+        int_part = re.sub(r"[.,]", "", s)
+        if not int_part.isdigit():
+            int_part = re.sub(r"\D", "", int_part)
+        if not int_part:
+            return None
+        out = int_part
+    else:
+        parts = s.split(dec_sep)
+        if len(parts) < 2:
+            return None
+        int_raw = "".join(parts[:-1])
+        dec_raw = parts[-1]
+
+        int_part = re.sub(r"[.,]", "", int_raw)
+        int_part = re.sub(r"\D", "", int_part)
+        dec_part = re.sub(r"\D", "", dec_raw)
+        if not int_part:
+            int_part = "0"
+        if not dec_part:
+            out = int_part
+        else:
+            out = f"{int_part}.{dec_part}"
+
+    if negative and out != "0":
+        out = f"-{out}"
+    if is_percent:
+        out = out + "%"
+    return out
+
+
+def extract_numeric_tokens(text: str) -> List[str]:
+    """Extract numeric-like tokens and normalize them."""
+    if not text:
+        return []
+
+    tokens: List[str] = []
+    for m in _NUMBER_TOKEN_RE.finditer(text):
+        raw = m.group(0)
+        norm = _normalize_numeric_token(raw)
+        if norm is None:
+            continue
+        tokens.append(norm)
+    return tokens
+
+
+def _multiset_f1(hyp: Iterable[str], ref: Iterable[str]) -> Tuple[float, float, float, int, int, int]:
+    hyp_c: CounterType[str] = Counter(hyp)
+    ref_c: CounterType[str] = Counter(ref)
+    matched = sum(min(hyp_c[k], ref_c[k]) for k in hyp_c.keys() & ref_c.keys())
+    hyp_total = sum(hyp_c.values())
+    ref_total = sum(ref_c.values())
+
+    precision = matched / hyp_total if hyp_total else (1.0 if ref_total == 0 else 0.0)
+    recall = matched / ref_total if ref_total else 1.0
+    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) else 0.0
+    return f1, precision, recall, matched, hyp_total, ref_total
 
 
 def calculate_format_agnostic_cer(hypothesis: str, reference: str) -> MetricResult:
@@ -34,8 +151,6 @@ def calculate_format_agnostic_cer(hypothesis: str, reference: str) -> MetricResu
     - Replace all non-alphanumeric with space
     - Collapse whitespace
     - Join tokens back into string for CER calculation
-    
-    This makes it truly format-agnostic for comparing different table formats.
     """
     def extract_content(text: str) -> str:
         # Replace all non-alphanum (keeping Vietnamese) with space
@@ -58,68 +173,44 @@ def calculate_format_agnostic_cer(hypothesis: str, reference: str) -> MetricResu
         return MetricResult(value=1.0)
 
 
+def _word_tokens(text: str) -> List[str]:
+    normalized = re.sub(r"[^a-zA-Z0-9\u00C0-\u024F\u1E00-\u1EFF]+", " ", (text or "").lower())
+    return [t for t in normalized.split() if t]
+
+
 def calculate_content_word_recall(hypothesis: str, reference: str) -> MetricResult:
-    """
-    What fraction of reference words appear in hypothesis?
-    Simple bag-of-words recall.
-    
-    Tokenization: replace all non-alphanumeric characters with space, then split.
-    This handles any format (markdown tables, HTML, plain text).
-    """
-    def tokenize(text: str) -> set:
-        # Replace all non-alphanum (including Vietnamese) with space, then split
-        # Keeps: a-z, A-Z, 0-9, Vietnamese characters (unicode)
-        normalized = re.sub(r'[^a-zA-Z0-9\u00C0-\u024F\u1E00-\u1EFF]+', ' ', text.lower())
-        return set(normalized.split())
-    
-    ref_words = tokenize(reference)
-    hyp_words = tokenize(hypothesis)
-    
-    if not ref_words:
+    """Multiset word recall (bag-of-words with multiplicity)."""
+    ref_tokens = _word_tokens(reference)
+    hyp_tokens = _word_tokens(hypothesis)
+
+    if not ref_tokens:
         return MetricResult(value=1.0)
-    
-    matched = ref_words & hyp_words
-    recall = len(matched) / len(ref_words)
-    
-    return MetricResult(
-        value=recall,
-        details={"matched": len(matched), "total": len(ref_words)}
-    )
+
+    _, _, recall, matched, _, ref_total = _multiset_f1(hyp_tokens, ref_tokens)
+    return MetricResult(value=recall, details={"matched": matched, "total": ref_total})
 
 
 def calculate_number_precision_recall_f1(hypothesis: str, reference: str) -> MetricResult:
+    """Precision/Recall/F1 for locale-robust numeric tokens (multiset).
+
+    Matching is performed on normalized token strings (multiset), not raw digit
+    sequences.
     """
-    Precision, Recall, F1 for digit sequences.
-    
-    - Precision = matched / ocr_total (how many OCR numbers are correct)
-    - Recall = matched / gt_total (how many GT numbers were found)
-    - F1 = harmonic mean
-    """
-    gt_nums = extract_digit_sequences(reference)
-    ocr_nums = extract_digit_sequences(hypothesis)
-    
-    if not gt_nums and not ocr_nums:
-        return MetricResult(
-            value=1.0,
-            details={"precision": 1.0, "recall": 1.0, "f1": 1.0}
-        )
-    
-    matched = gt_nums & ocr_nums
-    
-    precision = len(matched) / len(ocr_nums) if ocr_nums else 0.0
-    recall = len(matched) / len(gt_nums) if gt_nums else 0.0
-    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
-    
+    gt_nums = extract_numeric_tokens(reference)
+    ocr_nums = extract_numeric_tokens(hypothesis)
+
+    f1, precision, recall, matched, hyp_total, ref_total = _multiset_f1(ocr_nums, gt_nums)
+
     return MetricResult(
         value=f1,
         details={
             "precision": precision,
             "recall": recall,
             "f1": f1,
-            "matched": len(matched),
-            "gt_count": len(gt_nums),
-            "ocr_count": len(ocr_nums),
-        }
+            "matched": matched,
+            "gt_count": ref_total,
+            "ocr_count": hyp_total,
+        },
     )
 
 
@@ -134,10 +225,10 @@ def calculate_all_metrics(hypothesis: str, reference: str) -> Dict[str, MetricRe
     """
     num_f1_result = calculate_number_precision_recall_f1(hypothesis, reference)
     
-    # Add details for debugging
-    if num_f1_result.details:
-        num_f1_result.details["reference_numbers"] = list(extract_digit_sequences(reference))
-        num_f1_result.details["hypothesis_numbers"] = list(extract_digit_sequences(hypothesis))
+    # Keep legacy digit sequences for debugging comparisons
+    if num_f1_result.details is not None:
+        num_f1_result.details["reference_digit_sequences"] = list(extract_digit_sequences(reference))
+        num_f1_result.details["hypothesis_digit_sequences"] = list(extract_digit_sequences(hypothesis))
     
     return {
         "format_agnostic_cer": calculate_format_agnostic_cer(hypothesis, reference),

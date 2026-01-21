@@ -13,12 +13,10 @@ from typing import List, Dict, Any, Optional
 from dataclasses import dataclass, field, asdict
 import unicodedata
 from datetime import datetime
-from PIL import Image
+from PIL import Image, ImageDraw
 import io
 import tempfile
 import os
-import csv
-import subprocess
 
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
@@ -37,29 +35,12 @@ COMPANY_CODES = ["AAA", "ACB", "FPT", "MBB", "MWG", "SHB", "TCB", "VIB", "VPB"]
 
 
 def compute_std(values: List[float]) -> float:
-    """Compute standard deviation of values."""
+    """Compute sample standard deviation of values."""
     if len(values) < 2:
         return 0.0
     mean = sum(values) / len(values)
-    variance = sum((x - mean) ** 2 for x in values) / (len(values) - 1)  # Sample std
+    variance = sum((x - mean) ** 2 for x in values) / (len(values) - 1)
     return math.sqrt(variance)
-
-
-def extract_table_content(text: str) -> str:
-    """
-    Extract only table content from text.
-    
-    Ground truth only contains table rows (lines starting with '|').
-    This ensures fair comparison by extracting only table content from OCR output.
-    """
-    lines = text.split('\n')
-    table_lines = []
-    for line in lines:
-        stripped = line.strip()
-        # Table rows start with '|' or contain table separators
-        if stripped.startswith('|') or '|---|' in stripped:
-            table_lines.append(line)
-    return '\n'.join(table_lines)
 
 
 def extract_table_content_robust(text: str) -> str:
@@ -73,7 +54,6 @@ def extract_table_content_robust(text: str) -> str:
         s = line.strip()
         if s.count("|") < 2:
             return False
-        # Avoid keeping pure separator lines
         if set(s.replace("|", "").strip()) <= {"-", ":"} and "-" in s:
             return False
         return True
@@ -102,7 +82,6 @@ def _normalize_markdownish_rows(text: str) -> List[str]:
 
     s = text.replace("\r\n", "\n").replace("\r", "\n")
     if "\n" not in s and "|" in s:
-        # Split rows on occurrences of " |" that start a new markdown row.
         s = re.sub(r"\s\|", "\n|", s)
     return s.splitlines()
 
@@ -114,7 +93,6 @@ def parse_pipe_table_to_grid(text: str) -> List[List[str]]:
         s = ln.strip()
         if s.count("|") < 2:
             continue
-        # Split, then remove leading/trailing empties from pipe edges.
         parts = [p.strip() for p in s.split("|")]
         if parts and parts[0] == "":
             parts = parts[1:]
@@ -122,18 +100,14 @@ def parse_pipe_table_to_grid(text: str) -> List[List[str]]:
             parts = parts[:-1]
         if not parts:
             continue
-
-        # Skip markdown separator rows
         if all((set(p.replace(":", "").strip()) <= {"-"} and "-" in p) or p == "" for p in parts):
             continue
-
         rows.append(parts)
-
     return rows
 
 
 def grid_to_canonical_text(grid: List[List[str]]) -> str:
-    """Canonicalize a 2D grid into a text representation for metrics."""
+    """Canonicalize a 2D grid into a stable text representation for metrics."""
     out_lines: List[str] = []
     for row in grid:
         if not row:
@@ -159,18 +133,15 @@ def _normalize_for_match(s: str) -> str:
 
 
 _FINANCIAL_STATEMENT_KEYWORDS = (
-    # Vietnamese
     "bang can doi ke toan",
     "bao cao ket qua hoat dong kinh doanh",
     "bao cao luu chuyen tien te",
     "thuyet minh bao cao tai chinh",
     "bao cao tai chinh",
-    # Common section titles / abbreviations
     "can doi ke toan",
     "ket qua hoat dong kinh doanh",
     "luu chuyen tien te",
     "thuyet minh",
-    # English
     "balance sheet",
     "income statement",
     "statement of financial position",
@@ -180,358 +151,16 @@ _FINANCIAL_STATEMENT_KEYWORDS = (
 
 
 def looks_like_financial_statement(text: str) -> bool:
-    """Heuristic: does this page look like a financial statement / notes table page"""
+    """Heuristic: does this page look like a financial statement / notes table page?"""
     s = _normalize_for_match(text)
     if not s:
         return False
     if any(k in s for k in _FINANCIAL_STATEMENT_KEYWORDS):
         return True
-    # Fallback: table-heavy pages with many numbers are often financial tables.
     digits = sum(1 for c in s if c.isdigit())
     if len(s) > 0 and (digits / len(s)) > 0.10:
         return True
     return False
-
-
-def _looks_like_financial_from_tsv_words(words: List[Dict[str, Any]]) -> bool:
-    if not words:
-        return False
-    texts = [str(w.get("text") or "").strip() for w in words if str(w.get("text") or "").strip()]
-    if not texts:
-        return False
-    joined = _normalize_for_match(" ".join(texts))
-    if any(k in joined for k in _FINANCIAL_STATEMENT_KEYWORDS):
-        return True
-    # If a substantial fraction of tokens contain digits, it's likely a financial table.
-    digit_tokens = sum(1 for t in texts if re.search(r"\d", t))
-    return (digit_tokens / max(1, len(texts))) > 0.30
-
-
-def _tesseract_tsv_words(
-    img: Image.Image,
-    lang: str = "vie",
-) -> List[Dict[str, Any]]:
-    """Run Tesseract TSV on an image and return word-level boxes.
-    """
-    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
-        tmp_path = tmp.name
-
-    try:
-        img.save(tmp_path)
-        # Use TSV for word boxes. Keep defaults; downstream logic is tolerant.
-        cmd = [
-            "tesseract",
-            "-l",
-            lang,
-            tmp_path,
-            "stdout",
-            "tsv",
-        ]
-        proc = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            check=False,
-        )
-        if proc.returncode != 0:
-            logger.warning(f"Tesseract TSV failed (rc={proc.returncode}): {proc.stderr[:2000]}")
-            return []
-
-        rows: List[Dict[str, Any]] = []
-        reader = csv.DictReader(io.StringIO(proc.stdout), delimiter="\t")
-        for row in reader:
-            try:
-                text = (row.get("text") or "").strip()
-                if not text:
-                    continue
-                if int(row.get("word_num") or 0) <= 0:
-                    continue
-                conf = float(row.get("conf") or -1)
-                if conf < 0:
-                    conf = 0.0
-                rows.append(
-                    {
-                        "text": text,
-                        "conf": conf / 100.0,
-                        "left": int(float(row.get("left") or 0)),
-                        "top": int(float(row.get("top") or 0)),
-                        "width": int(float(row.get("width") or 0)),
-                        "height": int(float(row.get("height") or 0)),
-                    }
-                )
-            except Exception:
-                continue
-        return rows
-    finally:
-        try:
-            os.unlink(tmp_path)
-        except Exception:
-            pass
-
-
-def _tesseract_text_for_crop(
-    img: Image.Image,
-    lang: str = "vie",
-    psm: int = 7,
-    whitelist: Optional[str] = None,
-) -> str:
-    """Run Tesseract on a crop and return plain text (single cell)."""
-    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
-        tmp_path = tmp.name
-
-    try:
-        img.save(tmp_path)
-        cmd = [
-            "tesseract",
-            "-l",
-            lang,
-            "--psm",
-            str(psm),
-        ]
-        if whitelist:
-            cmd += ["-c", f"tessedit_char_whitelist={whitelist}"]
-        cmd += [tmp_path, "stdout"]
-
-        proc = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            check=False,
-        )
-        if proc.returncode != 0:
-            return ""
-        return (proc.stdout or "").strip()
-    finally:
-        try:
-            os.unlink(tmp_path)
-        except Exception:
-            pass
-
-
-_NUM_ALLOWED = set("0123456789.,()%+-/ ")
-
-
-def _numeric_candidate_score(text: str) -> tuple[int, int, int]:
-    """Heuristic scoring for numeric OCR candidates.
-    """
-    if not text:
-        return (0, -9999, -9999)
-    s = text.strip()
-    digit_count = sum(ch.isdigit() for ch in s)
-    illegal = sum((ch not in _NUM_ALLOWED) for ch in s)
-    paren_penalty = 0
-    if s.count("(") != s.count(")"):
-        paren_penalty += 5
-    # Penalize obvious OCR junk
-    paren_penalty += sum(ch in {"|", "\\", "_"} for ch in s)
-    return (digit_count, -illegal, -paren_penalty)
-
-
-def _text_candidate_score(text: str) -> tuple[int, int]:
-    """Score general-text candidates: prefer longer, less noisy."""
-    if not text:
-        return (0, -9999)
-    s = text.strip()
-    length = len(s)
-    noise = sum(ch in {"|", "\\", "_"} for ch in s)
-    return (length, -noise)
-
-
-def _pick_best_candidate(candidates: List[str], prefer_numeric: bool) -> str:
-    return _pick_best_candidate_with_baseline(candidates, prefer_numeric=prefer_numeric)
-
-
-def _pick_best_candidate_with_baseline(
-    candidates: List[str],
-    *,
-    prefer_numeric: bool,
-    baseline: Optional[str] = None,
-) -> str:
-    """Pick a candidate conservatively.
-    """
-    if not candidates:
-        return ""
-
-    uniq: List[str] = []
-    seen = set()
-    for c in candidates:
-        c2 = (c or "").strip()
-        if not c2:
-            continue
-        if c2 not in seen:
-            seen.add(c2)
-            uniq.append(c2)
-
-    if not uniq:
-        return ""
-
-    base = (baseline or "").strip() if baseline is not None else ""
-    if not base:
-        base = uniq[0]
-
-    if prefer_numeric:
-        base_score = _numeric_candidate_score(base)
-
-        # If baseline looks clean numeric already, don't override.
-        if base_score[0] > 0 and base_score[1] == 0 and base_score[2] == 0:
-            return base
-
-        best = max(uniq, key=_numeric_candidate_score)
-        best_score = _numeric_candidate_score(best)
-        return best if best_score > base_score else base
-
-    base_score_t = _text_candidate_score(base)
-    best = max(uniq, key=_text_candidate_score)
-    best_score_t = _text_candidate_score(best)
-
-    # Only override baseline for text if we get a meaningful, non-noisier gain.
-    if best != base:
-        if best_score_t[0] >= base_score_t[0] + 8 and best_score_t[1] >= base_score_t[1]:
-            return best
-        return base
-    return base
-
-
-def _extract_pipe_table_blocks(text: str) -> List[List[List[str]]]:
-    """Extract multiple pipe-table blocks from markdown-like text."""
-    if not text:
-        return []
-    blocks: List[str] = []
-    cur: List[str] = []
-    for ln in text.splitlines():
-        s = ln.strip()
-        is_pipey = s.count("|") >= 2
-        if is_pipey:
-            cur.append(ln)
-        else:
-            if cur:
-                blocks.append("\n".join(cur))
-                cur = []
-    if cur:
-        blocks.append("\n".join(cur))
-
-    grids: List[List[List[str]]] = []
-    for b in blocks:
-        g = parse_pipe_table_to_grid(b)
-        if g:
-            grids.append(g)
-    return grids
-
-
-def _layout_table_from_words(words: List[Dict[str, Any]]) -> List[List[Dict[str, Any]]]:
-    """Strategy 1: derive a table-like grid (rows x cols) from Tesseract word boxes."""
-    if not words:
-        return []
-
-    # Build rough text lines by y.
-    words_sorted = sorted(words, key=lambda w: (w["top"], w["left"]))
-    heights = [max(1, int(w["height"])) for w in words_sorted]
-    median_h = sorted(heights)[len(heights) // 2]
-    y_tol = max(8, int(median_h * 0.7))
-
-    lines: List[List[Dict[str, Any]]] = []
-    for w in words_sorted:
-        if not lines:
-            lines.append([w])
-            continue
-        last = lines[-1]
-        last_y = int(sum(x["top"] for x in last) / len(last))
-        if abs(w["top"] - last_y) <= y_tol:
-            last.append(w)
-        else:
-            lines.append([w])
-
-    # Determine column "stops" from left positions.
-    lefts = sorted(w["left"] for w in words_sorted)
-    if not lefts:
-        return []
-
-    # Greedy binning of left positions to reduce noise.
-    bins: List[int] = []
-    bin_tol = max(12, int(median_h * 0.6))
-    for x in lefts:
-        if not bins or abs(x - bins[-1]) > bin_tol:
-            bins.append(x)
-
-    # Identify significant gaps between bins as potential column breaks.
-    gaps = [(bins[i + 1] - bins[i], i) for i in range(len(bins) - 1)]
-    gaps_sorted = sorted(gaps, reverse=True)
-
-    # Choose up to 5 breakpoints, but keep max cols modest.
-    break_idxs = []
-    for gap, idx in gaps_sorted[:8]:
-        if gap >= max(60, int(median_h * 3.5)):
-            break_idxs.append(idx)
-    break_idxs = sorted(set(break_idxs))
-
-    col_starts = [bins[0]]
-    for idx in break_idxs:
-        col_starts.append(bins[idx + 1])
-    col_starts = sorted(col_starts)
-
-    # Cap to avoid pathological over-splitting.
-    if len(col_starts) > 6:
-        col_starts = col_starts[:6]
-    if len(col_starts) < 2:
-        # Not enough evidence of multiple columns from gaps.
-        # Fallback: attempt a simple 2-column split (common for key/value layouts).
-        min_x = min(lefts)
-        max_x = max(lefts)
-        span = max_x - min_x
-        if span < 180:
-            return []
-
-        left_thresh = min_x + 0.45 * span
-        right_thresh = min_x + 0.60 * span
-        left_group = [x for x in lefts if x <= left_thresh]
-        right_group = [x for x in lefts if x >= right_thresh]
-        if len(left_group) < 10 or len(right_group) < 10:
-            return []
-
-        # Use the 10th percentile of the right group as the right column start.
-        right_group_sorted = sorted(right_group)
-        right_start = right_group_sorted[max(0, int(len(right_group_sorted) * 0.10))]
-        col_starts = sorted({int(min_x), int(right_start)})
-
-    # Assign words into cells by nearest column start.
-    grid: List[List[Dict[str, Any]]] = []
-    for line in lines:
-        # For each word, assign to closest column start by x distance.
-        buckets: List[List[Dict[str, Any]]] = [[] for _ in col_starts]
-        for w in sorted(line, key=lambda ww: ww["left"]):
-            distances = [abs(w["left"] - cs) for cs in col_starts]
-            col_idx = distances.index(min(distances))
-            buckets[col_idx].append(w)
-
-        row_cells: List[Dict[str, Any]] = []
-        for col_words in buckets:
-            if not col_words:
-                row_cells.append(
-                    {
-                        "text": "",
-                        "bbox": {"l": 0, "t": 0, "r": 0, "b": 0, "coord_origin": "TOPLEFT"},
-                    }
-                )
-                continue
-            col_words = sorted(col_words, key=lambda ww: ww["left"])
-            text = " ".join(w["text"] for w in col_words).strip()
-            l = min(w["left"] for w in col_words)
-            t = min(w["top"] for w in col_words)
-            r = max(w["left"] + w["width"] for w in col_words)
-            b = max(w["top"] + w["height"] for w in col_words)
-            row_cells.append(
-                {
-                    "text": text,
-                    "bbox": {"l": float(l), "t": float(t), "r": float(r), "b": float(b), "coord_origin": "TOPLEFT"},
-                }
-            )
-        if any(c["text"].strip() for c in row_cells):
-            grid.append(row_cells)
-    return grid
 
 
 def extract_docling_tables_grid(doc_dict: Dict[str, Any]) -> List[List[str]]:
@@ -576,6 +205,33 @@ def extract_docling_tables_grid(doc_dict: Dict[str, Any]) -> List[List[str]]:
                 merged.append(row_texts)
     return merged
 
+
+def _coerce_bbox_to_tuple(bbox: Any) -> Optional[tuple[float, float, float, float]]:
+    if not isinstance(bbox, dict):
+        return None
+    try:
+        return (
+            float(bbox.get("l") or 0.0),
+            float(bbox.get("t") or 0.0),
+            float(bbox.get("r") or 0.0),
+            float(bbox.get("b") or 0.0),
+        )
+    except Exception:
+        return None
+
+
+def _intersect_area_lt(a: tuple[float, float, float, float], b: tuple[float, float, float, float]) -> float:
+    al, at, ar, ab = a
+    bl, bt, br, bb = b
+    x0 = max(al, bl)
+    y0 = max(at, bt)
+    x1 = min(ar, br)
+    y1 = min(ab, bb)
+    if x1 <= x0 or y1 <= y0:
+        return 0.0
+    return float((x1 - x0) * (y1 - y0))
+
+
 def _coerce_cell_to_bbox(cell_obj: Any) -> Optional[Dict[str, Any]]:
     """Return a representative bbox dict for a Docling grid cell.
 
@@ -592,17 +248,372 @@ def _coerce_cell_to_bbox(cell_obj: Any) -> Optional[Dict[str, Any]]:
         if not boxes:
             return None
         try:
-            l = min(float(b.get("l") or 0) for b in boxes)
+            left = min(float(b.get("l") or 0) for b in boxes)
             t = min(float(b.get("t") or 0) for b in boxes)
             r = max(float(b.get("r") or 0) for b in boxes)
             btm = max(float(b.get("b") or 0) for b in boxes)
-            return {"l": l, "t": t, "r": r, "b": btm, "coord_origin": "TOPLEFT"}
+            return {"l": left, "t": t, "r": r, "b": btm, "coord_origin": "TOPLEFT"}
         except Exception:
             return None
     return None
 
 
+def rewrite_docling_table_grid_text_from_ocr_cells(
+    export_dict: Dict[str, Any],
+    *,
+    ocr_cells_debug: Optional[Dict[str, Any]],
+    min_overlap_ratio: float = 0.08,
+) -> bool:
+    """Rewrite export_dict['tables'][*]['data']['grid'][r][c]['text'] using OCR cells.
+
+    Uses overlap between each grid cell bbox and OCR `parsed_textline_cells` bboxes.
+    Returns True if any cell text was changed.
+    """
+    if not isinstance(export_dict, dict):
+        return False
+
+    tables = export_dict.get("tables")
+    if not isinstance(tables, list) or not tables:
+        return False
+
+    cells = []
+    if isinstance(ocr_cells_debug, dict):
+        raw = ocr_cells_debug.get("parsed_textline_cells")
+        if isinstance(raw, list):
+            cells = raw
+
+    def _sanitize_ocr_text(s: str) -> str:
+        s2 = (s or "").replace("|", " ")
+        s2 = re.sub(r"\s+", " ", s2).strip()
+        return s2
+
+    ocr_items: list[tuple[tuple[float, float, float, float], str]] = []
+    for c in cells:
+        if not isinstance(c, dict):
+            continue
+        bbox = _coerce_bbox_to_tuple(c.get("bbox"))
+        if bbox is None:
+            continue
+        text = _sanitize_ocr_text(str(c.get("text") or ""))
+        if not text:
+            continue
+        ocr_items.append((bbox, text))
+
+    if not ocr_items:
+        return False
+
+    changed = False
+
+    for t in tables:
+        if not isinstance(t, dict):
+            continue
+        data = t.get("data")
+        if not isinstance(data, dict):
+            continue
+        grid = data.get("grid")
+        if not isinstance(grid, list) or not grid:
+            continue
+
+        for row in grid:
+            if not isinstance(row, list):
+                continue
+            for cell_obj in row:
+                cell_bbox_dict = _coerce_cell_to_bbox(cell_obj)
+                cell_bbox = _coerce_bbox_to_tuple(cell_bbox_dict)
+                if cell_bbox is None:
+                    continue
+
+                cl, ct, cr, cb = cell_bbox
+                cell_area = max(0.0, (cr - cl)) * max(0.0, (cb - ct))
+                if cell_area <= 0.0:
+                    continue
+
+                hits: list[tuple[float, str]] = []
+                for obox, otext in ocr_items:
+                    ia = _intersect_area_lt(cell_bbox, obox)
+                    if ia <= 0.0:
+                        continue
+                    if ia / cell_area < float(min_overlap_ratio):
+                        continue
+                    hits.append((float(obox[0]), otext))
+
+                if not hits:
+                    continue
+
+                hits.sort(key=lambda x: x[0])
+                new_text = _sanitize_ocr_text(" ".join(h[1] for h in hits))
+                if not new_text:
+                    continue
+
+                if sum(ch.isalnum() for ch in new_text) == 0:
+                    continue
+
+                def _rewrite_one(cell_dict: dict) -> None:
+                    nonlocal changed
+                    old = str(cell_dict.get("text") or "")
+                    if old != new_text:
+                        cell_dict["text"] = new_text
+                        changed = True
+
+                if isinstance(cell_obj, dict):
+                    _rewrite_one(cell_obj)
+                elif isinstance(cell_obj, list):
+                    for x in cell_obj:
+                        if isinstance(x, dict):
+                            _rewrite_one(x)
+
+    return changed
+
+
+def rewrite_docling_table_grid_text_from_surya_updates(
+    export_dict: Dict[str, Any],
+    *,
+    update_diffs: Any,
+    min_overlap_ratio: float = 0.08,
+) -> bool:
+    """Safer rewrite: only touch grid cells overlapped by accepted Surya updates.
+
+    `update_diffs` is expected to be a list of dicts (from HybridOcrModel.get_update_diffs)
+    with keys: bbox{l,t,r,b}, candidate, accepted.
+    """
+
+    if not isinstance(export_dict, dict):
+        return False
+
+    tables = export_dict.get("tables")
+    if not isinstance(tables, list) or not tables:
+        return False
+
+    if not isinstance(update_diffs, list) or not update_diffs:
+        return False
+
+    def _sanitize(s: str) -> str:
+        s2 = (s or "").replace("|", " ")
+        s2 = re.sub(r"\s+", " ", s2).strip()
+        return s2
+
+    updates: list[tuple[tuple[float, float, float, float], str, str]] = []
+    for d in update_diffs:
+        if not isinstance(d, dict):
+            continue
+        if not bool(d.get("accepted")):
+            continue
+        bbox = _coerce_bbox_to_tuple(d.get("bbox"))
+        if bbox is None:
+            continue
+        base_txt = _sanitize(str(d.get("baseline") or ""))
+        cand_txt = _sanitize(str(d.get("candidate") or ""))
+
+        # Ignore no-op updates (including whitespace-only diffs).
+        if base_txt == cand_txt:
+            continue
+
+        if not cand_txt:
+            continue
+        # Numeric-only safety: only use updates that contain at least one digit.
+        if not re.search(r"\d", cand_txt):
+            continue
+        updates.append((bbox, base_txt, cand_txt))
+
+    if not updates:
+        return False
+
+    changed = False
+
+    def _cell_text(cell: Any) -> str:
+        if isinstance(cell, dict):
+            return str(cell.get("text") or "")
+        if isinstance(cell, list):
+            # Merge spans / merged cells best-effort.
+            parts: list[str] = []
+            for x in cell:
+                if isinstance(x, dict) and (x.get("text") or "").strip():
+                    parts.append(str(x.get("text") or "").strip())
+            return " ".join(parts)
+        return ""
+
+    def _area_lt(b: tuple[float, float, float, float]) -> float:
+        l, t0, r, b0 = b
+        return max(0.0, (r - l)) * max(0.0, (b0 - t0))
+
+    def _is_numeric_like_cell_text(s: str) -> bool:
+        # Conservative gate: only allow rewriting cells that are very likely numeric.
+        # Prevent a numeric update bbox from clobbering a text label cell.
+        try:
+            from services.ocr.hybrid_ocr_model import numeric_likeness as _nl
+
+            is_num, is_hdr, _score = _nl(s)
+            return bool(is_num and (not is_hdr))
+        except Exception:
+            # Fallback: digits required and few alpha chars.
+            s2 = (s or "").strip()
+            if not re.search(r"\d", s2):
+                return False
+            alpha = sum(ch.isalpha() for ch in s2)
+            return alpha <= 1
+
+    for t in tables:
+        if not isinstance(t, dict):
+            continue
+        data = t.get("data")
+        if not isinstance(data, dict):
+            continue
+        grid = data.get("grid")
+        if not isinstance(grid, list) or not grid:
+            continue
+
+        for row in grid:
+            if not isinstance(row, list):
+                continue
+            for cell_obj in row:
+                cell_bbox_dict = _coerce_cell_to_bbox(cell_obj)
+                cell_bbox = _coerce_bbox_to_tuple(cell_bbox_dict)
+                if cell_bbox is None:
+                    continue
+
+                old_text = _sanitize(_cell_text(cell_obj))
+                if old_text and (not _is_numeric_like_cell_text(old_text)):
+                    # Only rewrite numeric-like target cells.
+                    continue
+
+                cl, ct, cr, cb = cell_bbox
+                cell_area = max(0.0, (cr - cl)) * max(0.0, (cb - ct))
+                if cell_area <= 0.0:
+                    continue
+
+                matches: list[tuple[float, float, str, str]] = []
+                for ub, ubase, ucand in updates:
+                    ia = _intersect_area_lt(cell_bbox, ub)
+                    if ia <= 0.0:
+                        continue
+                    cell_overlap = ia / cell_area
+                    if cell_overlap < float(min_overlap_ratio):
+                        continue
+
+                    ua = _area_lt(ub)
+                    update_overlap = (ia / ua) if ua > 0 else 0.0
+                    # Require the update box to mostly lie within the chosen cell.
+                    if update_overlap < 0.35:
+                        continue
+
+                    score = cell_overlap * 0.6 + update_overlap * 0.4
+                    matches.append((float(score), float(ub[0]), str(ubase), str(ucand)))
+
+                if not matches:
+                    continue
+
+                # Apply updates in descending score order.
+                # Use string-level substitution to avoid clobbering multi-value cells.
+                matches.sort(key=lambda x: (x[0], x[1]), reverse=True)
+
+                def _apply_updates_to_text(old: str) -> str:
+                    cur = _sanitize(old)
+                    for _score, _x, ubase, ucand in matches:
+                        if not ubase or not ucand:
+                            continue
+                        if ubase == ucand:
+                            continue
+                        # Prefer targeted replacement when the baseline appears as a
+                        # substring inside a merged cell.
+                        if ubase in cur:
+                            cur = cur.replace(ubase, ucand, 1)
+                            continue
+                        # Fallback: only overwrite if this cell is essentially the
+                        # baseline (avoid dropping other numbers).
+                        if cur.strip() == ubase.strip():
+                            cur = ucand
+                    return cur
+
+                def _rewrite_one(cell_dict: dict) -> None:
+                    nonlocal changed
+                    old = str(cell_dict.get("text") or "")
+                    new = _apply_updates_to_text(old)
+                    if new and old != new:
+                        cell_dict["text"] = new
+                        changed = True
+
+                if isinstance(cell_obj, dict):
+                    _rewrite_one(cell_obj)
+                elif isinstance(cell_obj, list):
+                    for x in cell_obj:
+                        if isinstance(x, dict):
+                            _rewrite_one(x)
+
+    return changed
+
+
+def _draw_overlays_for_hybrid_docling(
+    *,
+    pdf_path: Path,
+    page_num: int,
+    dpi: int,
+    export_dict: Dict[str, Any],
+    overlays_dir: Path,
+) -> None:
+    """Optionally export a PNG overlay for the page.
+
+    Draws:
+    - table bbox (yellow) if present in Docling export
+    - routed-to-Surya cell bbox (red) if present in debug snapshot
+    """
+
+    try:
+        doc = fitz.open(pdf_path)
+        if page_num < 1 or page_num > len(doc):
+            doc.close()
+            return
+
+        page = doc[page_num - 1]
+        zoom = dpi / 72
+        mat = fitz.Matrix(zoom, zoom)
+        pix = page.get_pixmap(matrix=mat)
+        img = Image.open(io.BytesIO(pix.tobytes("png"))).convert("RGBA")
+        doc.close()
+
+        draw = ImageDraw.Draw(img, "RGBA")
+
+        # Table boxes from Docling export.
+        tables = export_dict.get("tables") if isinstance(export_dict, dict) else None
+        if isinstance(tables, list):
+            for t in tables:
+                if not isinstance(t, dict):
+                    continue
+                bbox = _coerce_bbox_to_tuple(t.get("bbox"))
+                if bbox is None:
+                    continue
+                l, t0, r, b0 = bbox
+                draw.rectangle((l * zoom, t0 * zoom, r * zoom, b0 * zoom), outline=(255, 215, 0, 220), width=3)
+
+        # Surya-routed cells.
+        snap = export_dict.get("ocr_cells_debug") if isinstance(export_dict, dict) else None
+        if isinstance(snap, dict):
+            routed = snap.get("cells_routed_to_surya")
+            if isinstance(routed, list):
+                for c in routed:
+                    if not isinstance(c, dict):
+                        continue
+                    bbox = _coerce_bbox_to_tuple(c.get("bbox"))
+                    if bbox is None:
+                        continue
+                    l, t0, r, b0 = bbox
+                    draw.rectangle((l * zoom, t0 * zoom, r * zoom, b0 * zoom), outline=(255, 0, 0, 220), width=2)
+
+        company = "unknown"
+        if isinstance(export_dict, dict):
+            company = str(export_dict.get("company") or "unknown")
+
+        out_dir = overlays_dir / company
+        out_dir.mkdir(parents=True, exist_ok=True)
+        out_path = out_dir / f"page_{page_num:03d}.png"
+        img.save(out_path)
+
+    except Exception:
+        # Never fail a benchmark run due to overlay rendering.
+        return
+
+
 def count_numbers_in_text(text: str) -> int:
+
     """
     Count numerical values in text.
     
@@ -623,6 +634,10 @@ class PageResult:
     format_agnostic_cer: float
     content_word_recall: float
     number_f1: float
+
+    # Page number used to extract from the source PDF.
+    # Normally equals page_number, but can differ when a PDF has an extra cover page.
+    pdf_page_number: Optional[int] = None
     # Number F1 details
     number_precision: float = 0.0
     number_recall: float = 0.0
@@ -649,9 +664,12 @@ class PageResult:
     # Peak VRAM usage in MB
     peak_vram_mb: Optional[float] = None
 
-    # Hybrid cascade diagnostics
-    hybrid_a_stage: Optional[str] = None  # docling | s1_layout | marker
-    hybrid_a_reason: Optional[str] = None
+    # Hybrid Docling routing diagnostics (None for other engines)
+    hybrid_ocr_stats: Optional[Dict[str, Any]] = None
+
+    # Debug snapshot of OCR cells after hybrid updates (only for hybrid_docling)
+    ocr_cells_debug: Optional[Dict[str, Any]] = None
+
 
 
 @dataclass
@@ -693,6 +711,10 @@ class PageLevelBenchmarkResult:
     total_companies: int
     total_pages: int
     successful_pages: int
+
+    # HybridDocling tuning knobs (None for other engines)
+    hybrid_confidence_threshold: Optional[float] = None
+    hybrid_number_confidence_threshold: Optional[float] = None
     
     # Mean metrics
     overall_avg_format_agnostic_cer: float = 0.0
@@ -710,6 +732,9 @@ class PageLevelBenchmarkResult:
     overall_aggregated_number_precision: float = 0.0
     overall_aggregated_number_recall: float = 0.0
     total_pages_with_numbers: int = 0
+
+    # Composite score for threshold sweeps
+    quality_score: float = 0.0
     
     total_time_seconds: float = 0.0
     
@@ -726,16 +751,28 @@ class PageLevelBenchmark:
     
     def __init__(
         self, 
-        pdf_dir: str = None, 
-        ocr_engine: str = "docling",  # "docling" or "marker"
+        pdf_dir: Optional[str] = None,
+        ocr_engine: str = "docling_pdf",  # docling_pdf | hybrid_docling | marker
         dpi: int = 300,
         marker_use_llm: bool = False,  # Use LLM for Marker post-processing (requires OpenRouter API key)
         table_only: bool = False,  # Only benchmark pages with financial tables
         financial_only: bool = False,  # Only benchmark financial statement/notes pages (Balance Sheet, IS, CF, Notes)
+        hybrid_confidence_threshold: float = 0.7,
+        hybrid_number_confidence_threshold: float = 0.85,
         save_ocr_outputs: bool = False,  # Save OCR text outputs for debugging
-        ocr_outputs_dir: str = None,  # Directory to save OCR outputs
-        # Strategy flags
-        strategy1_layout_fallback: bool = False,
+        ocr_outputs_dir: Optional[str] = None,  # Directory to save OCR outputs
+        export_overlays: bool = False,  # Export PNG overlays (hybrid only)
+        overlays_dir: Optional[str] = None,
+        export_hybrid_diffs: bool = False,  # Persist Surya update diffs (hybrid only)
+        hybrid_diffs_dir: Optional[str] = None,
+        minimal_json: bool = False,
+        # Per-company PDF page offsets applied as:
+        #   pdf_page = dataset_page + offset
+        # Example: if the dataset page_number is 1-based after removing a cover page,
+        # and your local PDF still includes that cover page, you may need offset=+1.
+        page_offsets: Optional[Dict[str, int]] = None,
+        # Restrict evaluation to specific dataset page numbers (applies to every company).
+        pages: Optional[List[int]] = None,
     ):
         self.pdf_dir = Path(pdf_dir) if pdf_dir else PDF_SAMPLES_DIR
         self.ocr_engine = ocr_engine
@@ -743,15 +780,38 @@ class PageLevelBenchmark:
         self.marker_use_llm = marker_use_llm
         self.table_only = table_only
         self.financial_only = financial_only
+        self.hybrid_confidence_threshold = hybrid_confidence_threshold
+        self.hybrid_number_confidence_threshold = hybrid_number_confidence_threshold
         self.save_ocr_outputs = save_ocr_outputs
         self.ocr_outputs_dir = Path(ocr_outputs_dir) if ocr_outputs_dir else Path("results/ocr_outputs")
-        self.strategy1_layout_fallback = strategy1_layout_fallback
+        self.export_overlays = bool(export_overlays)
+        self.overlays_dir = Path(overlays_dir) if overlays_dir else Path("results/overlays")
+        self.export_hybrid_diffs = bool(export_hybrid_diffs)
+        self.hybrid_diffs_dir = Path(hybrid_diffs_dir) if hybrid_diffs_dir else Path("results/hybrid_diffs")
+        self.minimal_json = bool(minimal_json)
+        self.page_offsets = dict(page_offsets or {})
+        self.pages = list(pages) if pages else None
         self._dataset = None
         self._gt_by_company = None
         self._marker_service = None
         self._docling_service = None
         self._hybrid_service = None
+        self._prefer_cuda = None
     
+    def _get_preferred_docling_device(self):
+        """Choose a stable accelerator for Docling pipelines."""
+        if self._prefer_cuda is not None:
+            return self._prefer_cuda
+
+        try:
+            import torch
+
+            self._prefer_cuda = bool(torch.cuda.is_available())
+        except Exception:
+            self._prefer_cuda = False
+
+        return self._prefer_cuda
+
     @property
     def dataset(self) -> VnPdfDataset:
         if self._dataset is None:
@@ -900,7 +960,9 @@ class PageLevelBenchmark:
             from services.ocr.hybrid_pdf_pipeline import HybridPdfPipeline
             
             pipeline_options = PdfPipelineOptions()
-            pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
+            pipeline_options.accelerator_options.device = (
+                AcceleratorDevice.CUDA if self._get_preferred_docling_device() else AcceleratorDevice.CPU
+            )
             pipeline_options.do_ocr = True
             pipeline_options.do_table_structure = True
             pipeline_options.table_structure_options.do_cell_matching = True
@@ -968,7 +1030,13 @@ class PageLevelBenchmark:
         pipeline_cls: Any,
         pipeline_options: Any,
     ) -> tuple[str, Dict[str, Any]]:
-        """Convert a single PDF page with Docling and return (markdown, export_dict)."""
+        """Convert a single PDF page with Docling and return (markdown, export_dict).
+
+        Note: when using our HybridPdfPipeline, the pipeline instance is cached inside
+        DocumentConverter, so we can also pull routing stats from it and attach to the
+        returned export_dict.
+        """
+
         from docling.document_converter import DocumentConverter, PdfFormatOption
         from docling.datamodel.base_models import InputFormat
 
@@ -998,9 +1066,115 @@ class PageLevelBenchmark:
 
         try:
             result = converter.convert(str(tmp_path))
-            md_text = result.document.export_to_markdown()
             export_dict = result.document.export_to_dict()
+            if not isinstance(export_dict, dict):
+                export_dict = {}
+            export_dict["company"] = str(pdf_path.stem).split("_")[0]
+            export_dict["page_number"] = int(page_num)
+
+
+            # For hybrid validation: also export a table grid text built from export_to_dict.
+            # This makes it easy to check whether Surya-updated cell text flows into the
+            # exported table structures used for scoring.
+            try:
+                grid = extract_docling_tables_grid(export_dict)
+                export_dict["_grid_text_debug"] = grid_to_canonical_text(grid) if grid else ""
+            except Exception:
+                export_dict["_grid_text_debug"] = ""
+
+            # Export to markdown for evaluation/debugging.
+            md_text = result.document.export_to_markdown()
+
+            try:
+                pipeline = None
+                pipeline_get = getattr(converter, "_get_pipeline", None)
+                if callable(pipeline_get):
+                    pipeline = pipeline_get(InputFormat.PDF)
+
+                model = getattr(pipeline, "_hybrid_ocr_model", None) if pipeline is not None else None
+                if model is None:
+                    return md_text, export_dict
+
+                stats_get = getattr(model, "get_stats", None)
+                if callable(stats_get):
+                    try:
+                        export_dict["hybrid_ocr_stats"] = stats_get()
+                    except Exception:
+                        pass
+
+                small_snap_get = getattr(model, "get_debug_snapshot", None)
+                small_snap = None
+                if callable(small_snap_get):
+                    try:
+                        small_snap = small_snap_get()
+                    except Exception:
+                        small_snap = None
+
+                if isinstance(small_snap, dict):
+                    export_dict["ocr_cells_debug"] = small_snap
+
+                diffs = None
+                diffs_get = getattr(model, "get_update_diffs", None)
+                if callable(diffs_get):
+                    try:
+                        diffs = diffs_get()
+                    except Exception:
+                        diffs = None
+
+                # Optional: persist detailed Surya update diffs to sidecar JSON.
+                # This keeps the main results JSON small (especially with --minimal-json)
+                # while enabling targeted debugging of hybrid regressions.
+                try:
+                    if bool(getattr(self, "export_hybrid_diffs", False)):
+                        if isinstance(diffs, list) and diffs:
+                            out_root = Path(getattr(self, "hybrid_diffs_dir", Path("results/hybrid_diffs")))
+                            out_dir = out_root / str(export_dict.get("company") or "unknown")
+                            out_dir.mkdir(parents=True, exist_ok=True)
+                            out_path = out_dir / f"page_{int(page_num):03d}.json"
+                            payload = {
+                                "company": export_dict.get("company"),
+                                "page_number": int(page_num),
+                                "hybrid_ocr_stats": export_dict.get("hybrid_ocr_stats"),
+                                "update_diffs": diffs,
+                            }
+                            with open(out_path, "w", encoding="utf-8") as f:
+                                json.dump(payload, f, indent=2, ensure_ascii=False)
+                except Exception:
+                    pass
+
+                # Use a targeted rewrite that only touches cells overlapped by accepted Surya updates.
+                try:
+                    do_rewrite = False
+                    stats_obj = export_dict.get("hybrid_ocr_stats")
+                    if isinstance(stats_obj, dict):
+                        do_rewrite = int(stats_obj.get("surya_cells_updated", 0) or 0) > 0
+
+                    if do_rewrite and isinstance(diffs, list):
+                        rewrite_docling_table_grid_text_from_surya_updates(
+                            export_dict,
+                            update_diffs=diffs,
+                        )
+                except Exception:
+                    pass
+            except Exception:
+                pass
+
+            # Optional debug overlay export (flag-only).
+            try:
+                if self.export_overlays:
+                    if isinstance(export_dict, dict):
+                        _draw_overlays_for_hybrid_docling(
+                            pdf_path=pdf_path,
+                            page_num=page_num,
+                            dpi=self.dpi,
+                            export_dict=export_dict,
+                            overlays_dir=self.overlays_dir,
+                        )
+            except Exception:
+                pass
+
             return md_text, export_dict
+
         finally:
             for _ in range(3):
                 try:
@@ -1009,80 +1183,6 @@ class PageLevelBenchmark:
                     break
                 except PermissionError:
                     time.sleep(0.1)
-    
-    def ocr_pdf_page_with_laso(self, pdf_path: Path, page_num: int) -> str:
-        """
-        Run OCR using Docling's pipeline with LASOcrModel (Layout-Aware Speculative OCR).
-        
-        LASO features:
-        1. Pre-OCR layout detection to identify table regions
-        2. Speculative dual-engine execution for table cells
-        3. Vietnamese number format validation for result selection
-        4. Confidence routing for non-table regions
-        """
-        try:
-            from docling.document_converter import DocumentConverter, PdfFormatOption
-            from docling.datamodel.base_models import InputFormat
-            try:
-                import importlib
-
-                LASOPdfPipeline = importlib.import_module("services.ocr.laso_pdf_pipeline").LASOPdfPipeline
-            except Exception as e:
-                logger.error(f"LASO pipeline is not available: {e}")
-                return ""
-            
-            # Use LASOPdfPipeline for layout-aware speculative OCR
-            converter = DocumentConverter(
-                format_options={
-                    InputFormat.PDF: PdfFormatOption(
-                        pipeline_cls=LASOPdfPipeline,
-                    )
-                }
-            )
-            
-            # Convert PDF (single page extraction)
-            import tempfile
-            import time
-            
-            doc = fitz.open(pdf_path)
-            if page_num < 1 or page_num > len(doc):
-                doc.close()
-                return ""
-            
-            # Create temp file path
-            tmp_path = Path(tempfile.gettempdir()) / f"laso_{page_num}_{time.time_ns()}.pdf"
-            
-            # Extract single page to temp file
-            new_doc = fitz.open()
-            new_doc.insert_pdf(doc, from_page=page_num-1, to_page=page_num-1)
-            new_doc.save(str(tmp_path))
-            new_doc.close()
-            doc.close()
-            
-            try:
-                # Run Docling conversion with LASO
-                result = converter.convert(str(tmp_path))
-                
-                # Export to markdown
-                md_text = result.document.export_to_markdown()
-                
-                return md_text
-                
-            finally:
-                # Cleanup with retry for Windows
-                for _ in range(3):
-                    try:
-                        if tmp_path.exists():
-                            tmp_path.unlink()
-                        break
-                    except PermissionError:
-                        time.sleep(0.1)
-            
-        except Exception as e:
-            logger.error(f"LASO OCR failed for page {page_num}: {e}")
-            import traceback
-            traceback.print_exc()
-            return ""
     
     def _save_ocr_output(self, company: str, page_num: int, ocr_text: str, gt_text: str) -> None:
         """
@@ -1109,8 +1209,7 @@ class PageLevelBenchmark:
         """Benchmark a single page."""
         start_time = time.time()
         peak_vram_mb = None
-        hybrid_a_stage: Optional[str] = None
-        hybrid_a_reason: Optional[str] = None
+        
         
         try:
             # Reset VRAM peak stats for accurate per-page measurement
@@ -1128,91 +1227,25 @@ class PageLevelBenchmark:
             gt_grid = parse_pipe_table_to_grid(gt_text_raw)
             gt_eval_text = grid_to_canonical_text(gt_grid) if gt_grid else gt_text_raw
 
+            page_offset = int(self.page_offsets.get(company, 0))
+            pdf_page_num = int(page_num + page_offset)
+
             # Run OCR based on engine
             if self.ocr_engine == "marker":
                 logger.info(f"  Processing page {page_num} with Marker...")
-                ocr_text_raw = self.ocr_pdf_page_with_marker(pdf_path, page_num)
+                ocr_text_raw = self.ocr_pdf_page_with_marker(pdf_path, pdf_page_num)
                 ocr_doc_dict = None
-            elif self.ocr_engine == "hybrid":
-                # Hybrid: Docling + Surya for low-confidence cells
-                logger.info(f"  Processing page {page_num} with Hybrid (Tesseract+Surya)...")
-                ocr_text_raw = self.ocr_pdf_page_with_hybrid(pdf_path, page_num)
-                ocr_doc_dict = None
-            elif self.ocr_engine == "hybrid_a":
-                # Hybrid A (cascade):
-                # 1) Try Docling PDF pipeline table extraction
-                # 2) If no tables: optional S1 layout fallback
-                # 3) If still no tables: fallback to Marker
-                logger.info(f"  Processing page {page_num} with Hybrid A (Docling->S1->Marker cascade)...")
-                from docling.datamodel.pipeline_options import PdfPipelineOptions, TesseractCliOcrOptions
-                from docling.datamodel.accelerator_options import AcceleratorDevice
-                from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
-
-                pipeline_options = PdfPipelineOptions()
-                pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
-                pipeline_options.do_ocr = True
-                pipeline_options.do_table_structure = True
-                pipeline_options.table_structure_options.do_cell_matching = True
-                pipeline_options.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=["vie"])
-
-                docling_md, docling_dict = self._convert_pdf_page_with_docling_pipeline(
-                    pdf_path=pdf_path,
-                    page_num=page_num,
-                    pipeline_cls=StandardPdfPipeline,
-                    pipeline_options=pipeline_options,
-                )
-
-                # Try Docling structured tables first.
-                docling_grid = extract_docling_tables_grid(docling_dict if isinstance(docling_dict, dict) else {})
-                if docling_grid:
-                    hybrid_a_stage = "docling"
-                    ocr_text_raw = docling_md
-                    ocr_doc_dict = docling_dict
-                else:
-                    hybrid_a_reason = "docling_no_tables"
-                    # Optional S1: infer a grid from TSV words.
-                    ocr_text_raw = docling_md
-                    ocr_doc_dict = docling_dict
-
-                    s1_grid: list[list[str]] = []
-                    s1_payload: Any = None
-                    if self.strategy1_layout_fallback:
-                        page_img = self.extract_page_image(pdf_path, page_num)
-                        if page_img is not None:
-                            words = _tesseract_tsv_words(page_img, lang="vie")
-                            if _looks_like_financial_from_tsv_words(words):
-                                grid_cells = _layout_table_from_words(words)
-                                if grid_cells:
-                                    s1_grid = [[c.get("text", "") for c in row] for row in grid_cells]
-                                    s1_payload = [
-                                        {
-                                            "label": "layout_table_fallback",
-                                            "data": {"grid": grid_cells},
-                                        }
-                                    ]
-
-                    if s1_grid:
-                        hybrid_a_stage = "s1_layout"
-                        # Use S1 output as the scored text, but keep Docling raw MD for debugging.
-                        ocr_text_raw = ocr_text_raw
-                        ocr_doc_dict = {"tables": s1_payload} if s1_payload is not None else {}
-                    else:
-                        hybrid_a_stage = "marker"
-                        if hybrid_a_reason is None:
-                            hybrid_a_reason = "docling_no_tables_and_s1_empty"
-                        # Fallback to Marker if Docling yields no tables and S1 did not recover.
-                        marker_text = self.ocr_pdf_page_with_marker(pdf_path, page_num)
-                        ocr_text_raw = marker_text
-                        ocr_doc_dict = None
             elif self.ocr_engine == "docling_pdf":
-                # Docling PDF pipeline baseline (clean A/B vs hybrid_docling)
+                # Docling PDF pipeline baseline
                 logger.info(f"  Processing page {page_num} with Docling PDF pipeline...")
                 from docling.datamodel.pipeline_options import PdfPipelineOptions, TesseractCliOcrOptions
                 from docling.datamodel.accelerator_options import AcceleratorDevice
                 from docling.pipeline.standard_pdf_pipeline import StandardPdfPipeline
 
                 pipeline_options = PdfPipelineOptions()
-                pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
+                pipeline_options.accelerator_options.device = (
+                    AcceleratorDevice.CUDA if self._get_preferred_docling_device() else AcceleratorDevice.CPU
+                )
                 pipeline_options.do_ocr = True
                 pipeline_options.do_table_structure = True
                 pipeline_options.table_structure_options.do_cell_matching = True
@@ -1220,87 +1253,59 @@ class PageLevelBenchmark:
 
                 ocr_text_raw, ocr_doc_dict = self._convert_pdf_page_with_docling_pipeline(
                     pdf_path=pdf_path,
-                    page_num=page_num,
+                    page_num=pdf_page_num,
                     pipeline_cls=StandardPdfPipeline,
                     pipeline_options=pipeline_options,
                 )
             elif self.ocr_engine == "hybrid_docling":
                 # Hybrid Docling: Full Docling pipeline with HybridOcrModel
                 logger.info(f"  Processing page {page_num} with Hybrid Docling...")
-                from docling.datamodel.pipeline_options import PdfPipelineOptions, TesseractCliOcrOptions
+                from docling.datamodel.pipeline_options import PdfPipelineOptions
                 from docling.datamodel.accelerator_options import AcceleratorDevice
                 from services.ocr.hybrid_pdf_pipeline import HybridPdfPipeline
+                from services.ocr.hybrid_ocr_model import HybridOcrOptions
 
                 pipeline_options = PdfPipelineOptions()
-                pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
+                pipeline_options.accelerator_options.device = (
+                    AcceleratorDevice.CUDA if self._get_preferred_docling_device() else AcceleratorDevice.CPU
+                )
                 pipeline_options.do_ocr = True
                 pipeline_options.do_table_structure = True
                 pipeline_options.table_structure_options.do_cell_matching = True
-                pipeline_options.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=["vie"])
+                pipeline_options.ocr_options = HybridOcrOptions(
+                    force_full_page_ocr=True,
+                    lang=["vie"],
+                    confidence_threshold=float(self.hybrid_confidence_threshold),
+                    number_confidence_threshold=float(self.hybrid_number_confidence_threshold),
+                    log_routing_stats=True,
+                )
 
                 ocr_text_raw, ocr_doc_dict = self._convert_pdf_page_with_docling_pipeline(
                     pdf_path=pdf_path,
-                    page_num=page_num,
+                    page_num=pdf_page_num,
                     pipeline_cls=HybridPdfPipeline,
                     pipeline_options=pipeline_options,
                 )
-            elif self.ocr_engine == "laso":
-                # LASO: Layout-Aware Speculative OCR
-                logger.info(f"  Processing page {page_num} with LASO...")
-                from docling.datamodel.pipeline_options import PdfPipelineOptions
-                from docling.datamodel.accelerator_options import AcceleratorDevice
-                try:
-                    import importlib
-
-                    LASOPdfPipeline = importlib.import_module("services.ocr.laso_pdf_pipeline").LASOPdfPipeline
-                except Exception as e:
-                    return PageResult(
-                        company=company,
-                        page_number=page_num,
-                        format_agnostic_cer=1.0,
-                        content_word_recall=0.0,
-                        number_f1=0.0,
-                        success=False,
-                        error=f"LASO pipeline is not available: {e}",
-                        gt_text=gt_eval_text,
-                        gt_text_raw=gt_text_raw,
-                    )
-
-                pipeline_options = PdfPipelineOptions()
-                pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
-                pipeline_options.do_ocr = True
-                pipeline_options.do_table_structure = True
-                pipeline_options.table_structure_options.do_cell_matching = True
-
-                ocr_text_raw, ocr_doc_dict = self._convert_pdf_page_with_docling_pipeline(
-                    pdf_path=pdf_path,
-                    page_num=page_num,
-                    pipeline_cls=LASOPdfPipeline,
-                    pipeline_options=pipeline_options,
-                )
             else:
-                # Docling: Extract image and OCR
-                img = self.extract_page_image(pdf_path, page_num)
-                if img is None:
-                    return PageResult(
-                        company=company,
-                        page_number=page_num,
-                        format_agnostic_cer=1.0,
-                        content_word_recall=0.0,
-                        number_f1=0.0,
-                        success=False,
-                        error=f"Failed to extract page {page_num}"
-                    )
-                
-                logger.info(f"  Extracted page {page_num}: {img.size[0]}x{img.size[1]} @ {self.dpi}dpi")
-                ocr_text_raw = self.ocr_image(img)
-                ocr_doc_dict = None
+                return PageResult(
+                    company=company,
+                    page_number=page_num,
+                    pdf_page_number=pdf_page_num,
+                    format_agnostic_cer=1.0,
+                    content_word_recall=0.0,
+                    number_f1=0.0,
+                    success=False,
+                    error=f"Unsupported OCR engine: {self.ocr_engine}",
+                    gt_text=gt_eval_text,
+                    gt_text_raw=gt_text_raw,
+                )
 
             # If OCR produced nothing, treat as a failure (do not score as 0 and mark success).
             if not ocr_text_raw or not ocr_text_raw.strip():
                 return PageResult(
                     company=company,
                     page_number=page_num,
+                    pdf_page_number=pdf_page_num,
                     format_agnostic_cer=1.0,
                     content_word_recall=0.0,
                     number_f1=0.0,
@@ -1313,52 +1318,18 @@ class PageLevelBenchmark:
             # Canonicalize OCR output into a table cell-stream for scoring.
             extraction_mode = "raw"
             docling_tables_payload: Any = None
-            page_img: Optional[Image.Image] = None
 
-            if self.ocr_engine in {"docling_pdf", "hybrid_docling", "laso"}:
+            if self.ocr_engine in {"docling_pdf", "hybrid_docling"}:
                 # For Docling-based pipelines, require actual table extraction.
                 doc_dict = ocr_doc_dict if isinstance(ocr_doc_dict, dict) else {}
                 ocr_grid_str = extract_docling_tables_grid(doc_dict)
                 docling_tables_payload = doc_dict.get("tables")
 
-                # Strategy 1: fallback layout-table extraction if Docling yields no tables.
-                if not ocr_grid_str and self.strategy1_layout_fallback:
-                    page_img = self.extract_page_image(pdf_path, page_num)
-                    if page_img is not None:
-                        words = _tesseract_tsv_words(page_img, lang="vie")
-                        # Avoid turning narrative pages into noisy pseudo-tables.
-                        # Only run fallback when the page looks like a financial statement/notes table.
-                        if not _looks_like_financial_from_tsv_words(words):
-                            return PageResult(
-                                company=company,
-                                page_number=page_num,
-                                format_agnostic_cer=1.0,
-                                content_word_recall=0.0,
-                                number_f1=0.0,
-                                success=False,
-                                error="No tables extracted by Docling (fallback skipped: not financial/table-like)",
-                                ocr_text_raw=ocr_text_raw,
-                                gt_text=gt_eval_text,
-                                gt_text_raw=gt_text_raw,
-                                extraction_mode="docling_no_tables",
-                                docling_tables=docling_tables_payload,
-                            )
-                        grid_cells = _layout_table_from_words(words)
-                        if grid_cells:
-                            ocr_grid_str = [[c.get("text", "") for c in row] for row in grid_cells]
-                            extraction_mode = "layout_table_fallback"
-                            # Synthetic payload for GUI/debug.
-                            docling_tables_payload = [
-                                {
-                                    "label": "layout_table_fallback",
-                                    "data": {"grid": grid_cells},
-                                }
-                            ]
-
                 if not ocr_grid_str:
                     return PageResult(
                         company=company,
                         page_number=page_num,
+                        pdf_page_number=pdf_page_num,
                         format_agnostic_cer=1.0,
                         content_word_recall=0.0,
                         number_f1=0.0,
@@ -1375,35 +1346,6 @@ class PageLevelBenchmark:
                 if extraction_mode == "raw":
                     extraction_mode = "docling_grid"
 
-                ocr_eval_text = grid_to_canonical_text(ocr_grid_str)
-            elif self.ocr_engine == "hybrid_a" and isinstance(ocr_doc_dict, dict):
-                # Hybrid A produced Docling-like structured tables (Docling or S1 fallback).
-                doc_dict = ocr_doc_dict
-                ocr_grid_str = extract_docling_tables_grid(doc_dict)
-                docling_tables_payload = doc_dict.get("tables")
-                if not ocr_grid_str:
-                    return PageResult(
-                        company=company,
-                        page_number=page_num,
-                        format_agnostic_cer=1.0,
-                        content_word_recall=0.0,
-                        number_f1=0.0,
-                        success=False,
-                        error="Hybrid A: no tables extracted by Docling/S1",
-                        ocr_text_raw=ocr_text_raw,
-                        gt_text=gt_eval_text,
-                        gt_text_raw=gt_text_raw,
-                        extraction_mode="hybrid_a_no_tables",
-                        docling_tables=docling_tables_payload,
-                        hybrid_a_stage=hybrid_a_stage,
-                        hybrid_a_reason=hybrid_a_reason,
-                    )
-                if hybrid_a_stage == "s1_layout":
-                    extraction_mode = "hybrid_a_s1_grid"
-                elif hybrid_a_stage == "docling":
-                    extraction_mode = "hybrid_a_docling_grid"
-                else:
-                    extraction_mode = "hybrid_a_grid"
                 ocr_eval_text = grid_to_canonical_text(ocr_grid_str)
             else:
                 # Non-Docling engines: best-effort parsing.
@@ -1422,6 +1364,7 @@ class PageLevelBenchmark:
                         return PageResult(
                             company=company,
                             page_number=page_num,
+                            pdf_page_number=pdf_page_num,
                             format_agnostic_cer=1.0,
                             content_word_recall=0.0,
                             number_f1=0.0,
@@ -1431,8 +1374,6 @@ class PageLevelBenchmark:
                             gt_text=gt_eval_text,
                             gt_text_raw=gt_text_raw,
                             extraction_mode="no_table_like_content",
-                            hybrid_a_stage=hybrid_a_stage,
-                            hybrid_a_reason=hybrid_a_reason,
                         )
             
             # Check if ground truth has numbers (for conditional NumF1 averaging)
@@ -1441,6 +1382,11 @@ class PageLevelBenchmark:
             
             # Calculate metrics using canonicalized table content
             metrics = calculate_all_metrics(ocr_eval_text, gt_eval_text)
+
+            hybrid_stats = None
+            if isinstance(ocr_doc_dict, dict):
+                hybrid_stats = ocr_doc_dict.get("hybrid_ocr_stats")
+
             
             # Capture peak VRAM usage
             try:
@@ -1458,6 +1404,7 @@ class PageLevelBenchmark:
             result = PageResult(
                 company=company,
                 page_number=page_num,
+                pdf_page_number=pdf_page_num,
                 # Primary metrics
                 format_agnostic_cer=metrics["format_agnostic_cer"].value,
                 content_word_recall=metrics["content_word_recall"].value,
@@ -1470,7 +1417,8 @@ class PageLevelBenchmark:
                 gt_text_length=len(gt_eval_text),
                 processing_time_ms=elapsed_ms,
                 success=True,
-                # Always store OCR and GT text for aggregation
+                # Store scoring text for correct aggregated metrics.
+                # Large payloads are pruned at JSON export time when --minimal-json is set.
                 ocr_text=ocr_eval_text,
                 ocr_text_raw=ocr_text_raw,
                 gt_text=gt_eval_text,
@@ -1482,9 +1430,9 @@ class PageLevelBenchmark:
                 # GPU memory usage
                 peak_vram_mb=peak_vram_mb,
 
-                # Hybrid A cascade diagnostics
-                hybrid_a_stage=hybrid_a_stage,
-                hybrid_a_reason=hybrid_a_reason,
+                # Hybrid routing diagnostics (only present for hybrid_docling)
+                hybrid_ocr_stats=hybrid_stats,
+
             )
             
             # Save OCR output to file if enabled
@@ -1505,11 +1453,9 @@ class PageLevelBenchmark:
                 number_f1=0.0,
                 success=False,
                 error=str(e),
-                hybrid_a_stage=hybrid_a_stage,
-                hybrid_a_reason=hybrid_a_reason,
             )
     
-    def benchmark_company(self, company: str, max_pages: int = None) -> Optional[CompanyResult]:
+    def benchmark_company(self, company: str, max_pages: Optional[int] = None) -> Optional[CompanyResult]:
         """Benchmark pages for a company.
         
         Args:
@@ -1526,8 +1472,14 @@ class PageLevelBenchmark:
             logger.warning(f"No ground truth for {company}")
             return None
         
-        # Apply page limit BEFORE processing
+        # Build evaluation slice (dataset page numbers)
         sorted_pages = sorted(gt_pages.items())
+
+        if self.pages is not None:
+            allowed = set(int(p) for p in self.pages)
+            sorted_pages = [(p, s) for (p, s) in sorted_pages if int(p) in allowed]
+
+        # Apply page limit BEFORE processing
         if max_pages is not None:
             sorted_pages = sorted_pages[:max_pages]
         
@@ -1553,16 +1505,18 @@ class PageLevelBenchmark:
             if page_result.success:
                 result.successful_pages += 1
             
-            # Clear CUDA cache after each page to prevent OOM from memory fragmentation
-            if self.ocr_engine == "marker":
-                try:
-                    import torch
-                    import gc
-                    if torch.cuda.is_available():
-                        torch.cuda.empty_cache()
-                        gc.collect()
-                except ImportError:
-                    pass
+        # Clear CUDA cache after each page to prevent OOM from memory fragmentation.
+        # Hybrid/Docling pipelines are sensitive to host/GPU memory pressure, so we
+        # only do this for Marker which loads large models.
+        if self.ocr_engine == "marker":
+            try:
+                import torch
+                import gc
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+                    gc.collect()
+            except ImportError:
+                pass
         
         result.total_time_seconds = time.time() - start_time
         
@@ -1617,7 +1571,7 @@ class PageLevelBenchmark:
         
         return result
     
-    def run(self, companies: List[str] = None, max_pages_per_company: int = None) -> PageLevelBenchmarkResult:
+    def run(self, companies: Optional[List[str]] = None, max_pages_per_company: Optional[int] = None) -> PageLevelBenchmarkResult:
         """
         Run benchmark on specified companies.
         
@@ -1627,6 +1581,10 @@ class PageLevelBenchmark:
         """
         logger.info("Starting Page-Level OCR Benchmark")
         logger.info(f"DPI: {self.dpi}, OCR Engine: {self.ocr_engine}")
+        if self.ocr_engine == "hybrid_docling":
+            logger.info(
+                f"Hybrid thresholds: conf={self.hybrid_confidence_threshold}, num={self.hybrid_number_confidence_threshold}"
+            )
         
         if companies is None:
             companies = COMPANY_CODES
@@ -1635,6 +1593,12 @@ class PageLevelBenchmark:
             timestamp=datetime.now().isoformat(),
             ocr_engine=self.ocr_engine,
             dpi=self.dpi,
+            hybrid_confidence_threshold=(
+                float(self.hybrid_confidence_threshold) if self.ocr_engine == "hybrid_docling" else None
+            ),
+            hybrid_number_confidence_threshold=(
+                float(self.hybrid_number_confidence_threshold) if self.ocr_engine == "hybrid_docling" else None
+            ),
             total_companies=len(companies),
             total_pages=0,
             successful_pages=0,
@@ -1675,6 +1639,10 @@ class PageLevelBenchmark:
             result.overall_std_number_f1 = compute_std([p.number_f1 for p in all_with_numbers])
         
         result.total_pages_with_numbers = len(all_with_numbers)
+
+        # Composite score for tuning: 0.5 * WordRecall + 0.5 * NumF1
+        # NumF1 is averaged only on pages with numbers in GT (by design).
+        result.quality_score = 0.5 * result.overall_avg_content_word_recall + 0.5 * result.overall_avg_number_f1
         
         # Calculate OVERALL AGGREGATED metrics
         if all_successful:
@@ -1708,15 +1676,31 @@ class PageLevelBenchmark:
         
         return result
     
-    def save_results(self, result: PageLevelBenchmarkResult, output_path: str) -> None:
+    def save_results(self, result: PageLevelBenchmarkResult, output_path: str | Path) -> None:
         """Save results to JSON."""
-        output_path = Path(output_path)
-        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path_obj = Path(output_path)
+        output_path_obj.parent.mkdir(parents=True, exist_ok=True)
+
+        payload = result.to_dict()
+
+        if bool(getattr(self, "minimal_json", False)):
+            # Remove large per-page payload fields (keep only metrics/timing/errors/diagnostics).
+            for company in payload.get("company_results", []) or []:
+                for page in company.get("page_results", []) or []:
+                    for k in (
+                        "ocr_text",
+                        "ocr_text_raw",
+                        "gt_text",
+                        "gt_text_raw",
+                        "docling_tables",
+                        "ocr_cells_debug",
+                    ):
+                        page.pop(k, None)
         
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump(result.to_dict(), f, indent=2, ensure_ascii=False)
+        with open(output_path_obj, 'w', encoding='utf-8') as f:
+            json.dump(payload, f, indent=2, ensure_ascii=False)
         
-        logger.info(f"Results saved to {output_path}")
+        logger.info(f"Results saved to {output_path_obj}")
 
 
 def main():
@@ -1730,12 +1714,10 @@ def main():
     parser.add_argument(
         "--engine",
         type=str,
-        default="docling",
-        choices=["docling", "docling_pdf", "hybrid_a", "marker", "hybrid", "hybrid_docling", "laso"],
+        default="docling_pdf",
+        choices=["docling_pdf", "hybrid_docling", "marker"],
         help=(
-            "OCR engine. For paper-fair end-to-end PDF benchmarking, prefer: "
-            "docling_pdf vs hybrid_docling vs marker. "
-            "Note: 'docling' uses the image pipeline (PDF->raster->image->Docling)."
+            "OCR engine for benchmark: docling_pdf vs hybrid_docling vs marker."
         ),
     )
     parser.add_argument("--marker-llm", action="store_true", help="Use LLM with Marker (requires OPENROUTER_API_KEY)")
@@ -1746,27 +1728,101 @@ def main():
         help="Only benchmark financial statement/notes pages (Balance Sheet, Income Statement, Cash Flow, Notes) based on GT keywords",
     )
     parser.add_argument("--output", type=str, default="results/page_level_benchmark.json")
+    parser.add_argument(
+        "--minimal-json",
+        action="store_true",
+        help="Write compact results JSON without per-page OCR/GT text payloads (off by default).",
+    )
     parser.add_argument("--save-outputs", action="store_true", help="Save OCR outputs for debugging/analysis")
     parser.add_argument("--outputs-dir", type=str, default="results/ocr_outputs", help="Directory to save OCR outputs")
 
-    # Strategy flags
     parser.add_argument(
-        "--s1-layout-fallback",
-        action="store_true",
-        help="Strategy 1: if Docling extracts no tables, infer a layout-table grid from Tesseract TSV words",
+        "--pages",
+        nargs="*",
+        type=int,
+        default=None,
+        help="Restrict evaluation to these dataset page numbers (e.g., --pages 2 3 4)",
     )
+
+    parser.add_argument(
+        "--page-offsets",
+        nargs="*",
+        type=str,
+        default=None,
+        help="Per-company PDF page offset(s) as CODE:INT (pdf_page = dataset_page + INT). Example: --page-offsets TCB:1",
+    )
+
+    parser.add_argument(
+        "--export-overlays",
+        action="store_true",
+        help="HybridDocling: export per-page PNG overlays (off by default).",
+    )
+    parser.add_argument(
+        "--overlays-dir",
+        type=str,
+        default="results/overlays",
+        help="Directory to save overlay PNGs when --export-overlays is set.",
+    )
+
+    parser.add_argument(
+        "--export-hybrid-diffs",
+        action="store_true",
+        help="HybridDocling: persist per-page Surya update diffs to JSON sidecar files (off by default).",
+    )
+    parser.add_argument(
+        "--hybrid-diffs-dir",
+        type=str,
+        default="results/hybrid_diffs",
+        help="Directory to save diff JSONs when --export-hybrid-diffs is set.",
+    )
+
+
+    parser.add_argument(
+        "--hybrid-threshold",
+        type=float,
+        default=0.7,
+        help="HybridDocling: confidence threshold for routing a cell to Surya (higher => more Surya).",
+    )
+    parser.add_argument(
+        "--hybrid-number-threshold",
+        type=float,
+        default=0.85,
+        help="HybridDocling: confidence threshold for number-containing cells (higher => more Surya).",
+    )
+
     
     args = parser.parse_args()
     
+    page_offsets: Dict[str, int] = {}
+    if args.page_offsets:
+        for item in args.page_offsets:
+            if not isinstance(item, str) or ":" not in item:
+                raise SystemExit(f"Invalid --page-offsets entry: {item!r} (expected CODE:INT)")
+            code, raw = item.split(":", 1)
+            code = code.strip().upper()
+            try:
+                offset = int(raw.strip())
+            except ValueError as e:
+                raise SystemExit(f"Invalid offset for {code}: {raw!r} (expected int)") from e
+            page_offsets[code] = offset
+
     benchmark = PageLevelBenchmark(
         ocr_engine=args.engine,
         dpi=args.dpi,
         marker_use_llm=args.marker_llm,
         table_only=args.table_only,
         financial_only=args.financial_only,
+        hybrid_confidence_threshold=args.hybrid_threshold,
+        hybrid_number_confidence_threshold=args.hybrid_number_threshold,
         save_ocr_outputs=args.save_outputs,
         ocr_outputs_dir=args.outputs_dir,
-        strategy1_layout_fallback=args.s1_layout_fallback,
+        export_overlays=args.export_overlays,
+        overlays_dir=args.overlays_dir,
+        export_hybrid_diffs=args.export_hybrid_diffs,
+        hybrid_diffs_dir=args.hybrid_diffs_dir,
+        minimal_json=args.minimal_json,
+        page_offsets=page_offsets,
+        pages=args.pages,
     )
     result = benchmark.run(companies=args.companies, max_pages_per_company=args.max_pages)
     benchmark.save_results(result, args.output)

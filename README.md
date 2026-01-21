@@ -172,16 +172,25 @@ Hệ thống benchmark OCR dựa trên dataset **VnPDF Financial Reports** từ 
 |--------|-------------|----------------|
 | **Format-Agnostic CER** | Character error rate after stripping formatting (pipes, dashes, markdown) | Fair comparison across OCR engines with different table formats |
 | **Content Word Recall** | Fraction of ground truth words found in OCR output | Measures content completeness |
-| **Number F1** | Precision/Recall/F1 for digit sequences | Critical for financial reports - are numbers extracted correctly? |
+| **Number F1** | Precision/Recall/F1 for locale-robust numeric tokens (supports thousand/decimal separators, negatives, %) | Critical for financial reports - are numbers extracted correctly? |
 
 ### Running Benchmark
 
 ```bash
 # Quick validation (1 page per company)
-python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling --max-pages 1
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling_pdf --max-pages 1
 
-# Full Docling benchmark
-python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling --output results/docling_full.json
+# Docling PDF baseline benchmark
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling_pdf --output results/docling_pdf_full.json
+
+# Hybrid Docling benchmark (Tesseract + Surya reroute)
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine hybrid_docling --output results/hybrid_docling_full.json
+
+# Hybrid knobs
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine hybrid_docling --hybrid-threshold 0.7 --hybrid-number-threshold 0.85
+
+# Compact JSON
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine hybrid_docling --minimal-json --output results/hybrid_docling_minimal.json
 
 # Full Marker benchmark
 python -m evaluation.ocr_benchmark.page_level_benchmark --engine marker --output results/marker_full.json
@@ -190,11 +199,27 @@ python -m evaluation.ocr_benchmark.page_level_benchmark --engine marker --output
 python -m evaluation.ocr_benchmark.page_level_benchmark --engine marker --marker-llm --output results/marker_llm_full.json
 
 # Only benchmark table pages
-python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling --table-only
+python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling_pdf --table-only
 
 # Specific companies
-python -m evaluation.ocr_benchmark.page_level_benchmark --companies AAA FPT VPB --max-pages 5
+python -m evaluation.ocr_benchmark.page_level_benchmark --companies AAA FPT VPB --max-pages 5 --engine docling_pdf
 ```
+
+### Hybrid Sweep
+
+```bash
+python -m evaluation.ocr_benchmark.hybrid_sweep \
+  --companies AAA ACB FPT \
+  --max-pages 3 \
+  --confidence-thresholds 0.6 0.7 0.8 \
+  --number-thresholds 0.8 0.85 0.9 \
+  --minimal-json \
+  --outdir results/sweeps/s1
+```
+
+The sweep writes:
+- `summary.csv`: one row per config, easy to sort/filter
+- `{config_id}.json`: full benchmark JSON result for that config
 
 ### Error Analysis
 

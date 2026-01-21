@@ -7,19 +7,6 @@ with our HybridOcrModel for confidence-gated engine routing.
 Key Innovation:
 - Overrides _make_ocr_model() to inject HybridOcrModel directly
 - Maintains full Docling pipeline (layout, table structure, markdown)
-- No plugin registration or factory manipulation needed
-
-Usage:
-    from docling.document_converter import DocumentConverter, PdfFormatOption
-    from docling.datamodel.base_models import InputFormat
-    from services.ocr.hybrid_pdf_pipeline import HybridPdfPipeline
-    
-    converter = DocumentConverter(
-        format_options={
-            InputFormat.PDF: PdfFormatOption(pipeline_cls=HybridPdfPipeline)
-        }
-    )
-    result = converter.convert("report.pdf")
 """
 
 import logging
@@ -35,6 +22,8 @@ _log = logging.getLogger(__name__)
 
 
 class HybridPdfPipeline(StandardPdfPipeline):
+    last_ocr_stats: dict[str, Any] | None = None
+
     """
     PDF pipeline with confidence-gated hybrid OCR.
     
@@ -53,28 +42,33 @@ class HybridPdfPipeline(StandardPdfPipeline):
         Override to use our confidence-gated hybrid OCR model.
         """
         _log.info("Initializing HybridOcrModel for confidence-gated OCR")
+
+        if isinstance(self.pipeline_options.ocr_options, HybridOcrOptions):
+            hybrid_options = self.pipeline_options.ocr_options
+        else:
+            # Configure hybrid OCR options from the pipeline's ocr_options if available.
+            lang = ["vie"]
+            if hasattr(self.pipeline_options.ocr_options, "lang"):
+                lang = self.pipeline_options.ocr_options.lang
+
+            hybrid_options = HybridOcrOptions(
+                lang=lang,
+                force_full_page_ocr=getattr(
+                    self.pipeline_options.ocr_options,
+                    "force_full_page_ocr",
+                    True,
+                ),
+                confidence_threshold=0.7,
+                number_confidence_threshold=0.85,
+                log_routing_stats=True,
+            )
         
-        # Configure hybrid OCR options
-        # Extract lang from pipeline's ocr_options if available
-        lang = ["vie"]  # Default for Vietnamese financial reports
-        if hasattr(self.pipeline_options.ocr_options, 'lang'):
-            lang = self.pipeline_options.ocr_options.lang
-        
-        hybrid_options = HybridOcrOptions(
-            lang=lang,
-            force_full_page_ocr=getattr(
-                self.pipeline_options.ocr_options, 
-                'force_full_page_ocr', 
-                True
-            ),
-            confidence_threshold=0.7,
-            number_confidence_threshold=0.85,
-            log_routing_stats=True,
-        )
-        
-        return HybridOcrModel(
+        model = HybridOcrModel(
             enabled=self.pipeline_options.do_ocr,
             artifacts_path=art_path,
             options=hybrid_options,
             accelerator_options=self.pipeline_options.accelerator_options,
         )
+        # Expose stats to the caller via the pipeline instance (DocumentConverter caches pipelines).
+        self._hybrid_ocr_model = model
+        return model
