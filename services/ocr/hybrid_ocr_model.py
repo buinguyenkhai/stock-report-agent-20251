@@ -13,6 +13,7 @@ Key Innovation:
 import logging
 import re
 import gc
+import threading
 import importlib
 import unicodedata
 from typing import TYPE_CHECKING
@@ -92,6 +93,9 @@ def _parse_orientation_compat(df_osd: Any) -> int:
 from docling.utils.profiling import TimeRecorder
 
 _log = logging.getLogger(__name__)
+
+_SURYA_LOCK = threading.Lock()
+_SURYA_SHARED: dict[str, tuple[Any, Any]] = {}
 
 if TYPE_CHECKING:
     from typing import Tuple as _TupleBoolBoolFloat
@@ -273,12 +277,13 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     confidence_threshold: float = 0.7
     number_confidence_threshold: float = 0.85
 
-    # Force Surya for all number-containing cells regardless of confidence
-    force_surya_for_numbers: bool = True
+    # If True, route numeric-like cells to Surya regardless of confidence.
+    # Default False so threshold sweeps are meaningful and faster.
+    force_surya_for_numbers: bool = False
 
-    # Force Surya for all cells inside inferred table regions.
-    # This makes Surya a primary OCR engine for tables while still preserving Docling structure.
-    force_surya_in_table_regions: bool = True
+    # If True, route ALL cells inside inferred table regions.
+    # Default False: only route low-confidence (mostly numeric) cells for speed.
+    force_surya_in_table_regions: bool = False
 
     # Surya batch size for re-OCR
     surya_batch_size: int = 32
@@ -296,16 +301,16 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     route_table_only: bool = True
 
     # Safer-by-default policy: only route numeric-like cells unless confidence is extremely low.
-    route_numeric_only: bool = False
-    non_numeric_confidence_threshold: float = 0.65
+    route_numeric_only: bool = True
+    non_numeric_confidence_threshold: float = 0.35
 
     # Additional safety cap: even if thresholds are high, do not route cells with relatively high Tesseract confidence.
     # This prevents Surya from overwriting already-correct numbers.
     numeric_route_confidence_cap: float = 0.95
 
     # When False, we only apply Surya replacements to numeric-like cells.
-    # This is the main protection against hurting Vietnamese text recall.
-    update_non_numeric: bool = True
+    # This protects Vietnamese text recall and avoids wasting compute.
+    update_non_numeric: bool = False
 
     # Logging
     log_routing_stats: bool = True
@@ -656,25 +661,39 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
     
     @property
     def surya_model(self):
-        """Lazy load Surya recognition model."""
-        if self._surya_model is None:
-            _log.info("Loading Surya recognition model for hybrid OCR...")
-            try:
-                import torch
-                from surya.foundation import FoundationPredictor
-                from surya.recognition import RecognitionPredictor
-                from surya.settings import settings as surya_settings
-                
-                device = 'cuda' if torch.cuda.is_available() else 'cpu'
-                self._surya_foundation = FoundationPredictor(
+        """Lazy load Surya recognition model.
+        """
+        if self._surya_model is not None:
+            return self._surya_model
+
+        try:
+            import torch
+            from surya.foundation import FoundationPredictor
+            from surya.recognition import RecognitionPredictor
+            from surya.settings import settings as surya_settings
+        except Exception as e:
+            _log.error(f"Failed to import Surya: {e}")
+            raise
+
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        cache_key = device
+
+        with _SURYA_LOCK:
+            cached = _SURYA_SHARED.get(cache_key)
+            if cached is None:
+                _log.info("Loading Surya recognition model for hybrid OCR...")
+                foundation = FoundationPredictor(
                     checkpoint=surya_settings.RECOGNITION_MODEL_CHECKPOINT,
                     device=device,
                 )
-                self._surya_model = RecognitionPredictor(self._surya_foundation)
+                model = RecognitionPredictor(foundation)
+                _SURYA_SHARED[cache_key] = (foundation, model)
                 _log.info(f"Surya model loaded on {device}")
-            except Exception as e:
-                _log.error(f"Failed to load Surya model: {e}")
-                raise
+            else:
+                foundation, model = cached
+
+        self._surya_foundation = foundation
+        self._surya_model = model
         return self._surya_model
     
     def _should_route_to_surya(self, cell: TextCell, *, min_numeric_token_conf: Optional[float] = None) -> bool:
@@ -1062,8 +1081,14 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                 import torch
                 if torch.cuda.is_available():
                     torch.cuda.empty_cache()
-                gc.collect()
             except ImportError:
+                pass
+
+            try:
+                import torch
+                if torch.cuda.is_available():
+                    gc.collect()
+            except Exception:
                 pass
     
     def __call__(
