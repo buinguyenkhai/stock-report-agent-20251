@@ -1867,6 +1867,7 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description="Run page-level OCR benchmark")
+    parser.add_argument("--pdf-dir", type=str, default=None, help="Directory containing PDF files")
     parser.add_argument("--companies", nargs="*", help="Company codes to benchmark")
     parser.add_argument("--max-pages", type=int, default=None, help="Max pages per company")
     parser.add_argument("--dpi", type=int, default=300, help="DPI for page extraction (default: 300, try 400-600 for scanned PDFs)")
