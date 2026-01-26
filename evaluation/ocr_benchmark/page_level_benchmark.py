@@ -75,6 +75,88 @@ def extract_table_content_robust(text: str) -> str:
     return "\n".join(aligned)
 
 
+def extract_table_content_fallback(text: str) -> str:
+    """Fallback extraction when no table-like rows are detected."""
+    if not text:
+        return ""
+
+    s = text.replace("\r\n", "\n").replace("\r", "\n")
+    # Drop fenced code blocks.
+    s = re.sub(r"```.*?```", " ", s, flags=re.S)
+    # Drop markdown table separators.
+    s = re.sub(r"^\s*\|?\s*[:-]+\s*(?:\|\s*[:-]+\s*)+\|?\s*$", "", s, flags=re.M)
+    # Drop headings.
+    s = re.sub(r"^\s{0,3}#{1,6}\s+.*$", "", s, flags=re.M)
+
+    kept: list[str] = []
+    for ln in s.splitlines():
+        t = ln.strip()
+        if not t:
+            continue
+        has_digit = bool(re.search(r"\d", t))
+        has_currency = bool(re.search(r"(?i)\b(vnd|vnđ|usd|eur)\b|%|đ", t))
+        has_cols = bool(re.search(r"\S(?:\s{2,}|\t)\S", t))
+        if has_digit or has_currency or has_cols:
+            kept.append(ln)
+
+    return "\n".join(kept)
+
+
+def extract_sectioned_rows(text: str) -> str:
+    """Extract section-numbered rows (e.g. "2.1 ...") as a pseudo table.
+    """
+    if not text:
+        return ""
+
+    s = text.replace("\r\n", "\n").replace("\r", "\n")
+    lines = s.splitlines()
+
+    # Match common section header forms:
+    # - "## 2.1 Title"
+    # - "2.1 Title"
+    # - "2; Title" (OCR noise for "2.")
+    header_re = re.compile(r"^\s*(?:#{1,6}\s*)?(\d+(?:\.\d+)*)\s*[\.;:,;)]?\s+(\S.*)$")
+
+    out: list[str] = []
+    cur_num: Optional[str] = None
+    cur_text_parts: list[str] = []
+
+    def _flush() -> None:
+        nonlocal cur_num, cur_text_parts
+        if cur_num is None:
+            return
+        rhs = " ".join(p for p in (x.strip() for x in cur_text_parts) if p)
+        if rhs:
+            out.append(f"{cur_num}\t{rhs}")
+        cur_num = None
+        cur_text_parts = []
+
+    for ln in lines:
+        t = ln.strip()
+        if not t:
+            continue
+
+        m = header_re.match(t)
+        if m:
+            _flush()
+            num = (m.group(1) or "").strip()
+            # If it's a top-level section number like "2", align with GT "2.".
+            if num.isdigit():
+                num = f"{num}."
+            cur_num = num
+            cur_text_parts = [(m.group(2) or "").strip()]
+            continue
+
+        # Continuation line: attach to the current section (paragraphs / bullets).
+        if cur_num is not None:
+            # Strip common markdown bullet prefixes.
+            t2 = re.sub(r"^\s*(?:[-*•]+)\s+", "", t)
+            cur_text_parts.append(t2)
+
+    _flush()
+    return "\n".join(out)
+
+
 def _normalize_markdownish_rows(text: str) -> List[str]:
     """Best-effort row splitting for pipe-table strings."""
     if not text:
@@ -757,6 +839,14 @@ class PageLevelBenchmark:
         marker_use_llm: bool = False,  # Use LLM for Marker post-processing (requires OpenRouter API key)
         table_only: bool = False,  # Only benchmark pages with financial tables
         financial_only: bool = False,  # Only benchmark financial statement/notes pages (Balance Sheet, IS, CF, Notes)
+        # How to interpret --table-only (based on GT, not model output).
+        # - heuristic: uses VnPdfSample.is_table_page
+        # - gt_pipe_any: require GT parses as a pipe table (>=5 rows, >=3 cols)
+        # - gt_pipe_strict: require GT pipe table with >=min_gt_rows and >=min_gt_cols
+        table_only_mode: str = "heuristic",
+        min_gt_rows: int = 5,
+        min_gt_cols: int = 3,
+        min_gt_numbers: int = 20,
         hybrid_confidence_threshold: float = 0.7,
         hybrid_number_confidence_threshold: float = 0.85,
         save_ocr_outputs: bool = False,  # Save OCR text outputs for debugging
@@ -779,6 +869,10 @@ class PageLevelBenchmark:
         self.dpi = dpi
         self.marker_use_llm = marker_use_llm
         self.table_only = table_only
+        self.table_only_mode = str(table_only_mode or "heuristic")
+        self.min_gt_rows = int(min_gt_rows)
+        self.min_gt_cols = int(min_gt_cols)
+        self.min_gt_numbers = int(min_gt_numbers)
         self.financial_only = financial_only
         self.hybrid_confidence_threshold = hybrid_confidence_threshold
         self.hybrid_number_confidence_threshold = hybrid_number_confidence_threshold
@@ -797,6 +891,38 @@ class PageLevelBenchmark:
         self._docling_service = None
         self._hybrid_service = None
         self._prefer_cuda = None
+
+    def _gt_passes_table_only(self, sample: VnPdfSample) -> bool:
+        if not self.table_only:
+            return True
+
+        mode = (self.table_only_mode or "heuristic").strip().lower()
+        if mode == "heuristic":
+            return bool(sample.is_table_page)
+
+        gt_raw = sample.text or ""
+        grid = parse_pipe_table_to_grid(gt_raw)
+        if not grid:
+            return False
+
+        rows = len(grid)
+        cols = max((len(r) for r in grid), default=0)
+
+        if mode == "gt_pipe_any":
+            if rows < 2 or cols < 2:
+                return False
+        elif mode == "gt_pipe_strict":
+            if rows < int(self.min_gt_rows) or cols < int(self.min_gt_cols):
+                return False
+        else:
+            # Unknown mode => be safe and behave like heuristic.
+            return bool(sample.is_table_page)
+
+        if int(self.min_gt_numbers) > 0:
+            if count_numbers_in_text(gt_raw) < int(self.min_gt_numbers):
+                return False
+
+        return True
     
     def _get_preferred_docling_device(self):
         """Choose a stable accelerator for Docling pipelines."""
@@ -825,7 +951,7 @@ class PageLevelBenchmark:
             self._gt_by_company = {}
             for sample in self.dataset.get_samples():
                 # Filter to table pages only if requested
-                if self.table_only and not sample.is_table_page:
+                if not self._gt_passes_table_only(sample):
                     continue
 
                 # Filter to financial statement tables/notes only if requested.
@@ -1320,33 +1446,46 @@ class PageLevelBenchmark:
             docling_tables_payload: Any = None
 
             if self.ocr_engine in {"docling_pdf", "hybrid_docling"}:
-                # For Docling-based pipelines, require actual table extraction.
                 doc_dict = ocr_doc_dict if isinstance(ocr_doc_dict, dict) else {}
                 ocr_grid_str = extract_docling_tables_grid(doc_dict)
                 docling_tables_payload = doc_dict.get("tables")
 
-                if not ocr_grid_str:
-                    return PageResult(
-                        company=company,
-                        page_number=page_num,
-                        pdf_page_number=pdf_page_num,
-                        format_agnostic_cer=1.0,
-                        content_word_recall=0.0,
-                        number_f1=0.0,
-                        success=False,
-                        error="No tables extracted by Docling",
-                        ocr_text_raw=ocr_text_raw,
-                        gt_text=gt_eval_text,
-                        gt_text_raw=gt_text_raw,
-                        extraction_mode="docling_no_tables",
-                        docling_tables=docling_tables_payload,
-                    )
-
-                # Default extraction mode when Docling tables exist.
-                if extraction_mode == "raw":
+                if ocr_grid_str:
                     extraction_mode = "docling_grid"
-
-                ocr_eval_text = grid_to_canonical_text(ocr_grid_str)
+                    ocr_eval_text = grid_to_canonical_text(ocr_grid_str)
+                else:
+                    # Fallback: parse markdown-ish pipe tables from Docling markdown.
+                    ocr_grid_md = parse_pipe_table_to_grid(ocr_text_raw)
+                    if ocr_grid_md:
+                        ocr_eval_text = grid_to_canonical_text(ocr_grid_md)
+                        extraction_mode = "docling_pipe_table"
+                    else:
+                        # Next, try extracting numbered/section rows (common in GT pipe tables).
+                        sect = extract_sectioned_rows(ocr_text_raw)
+                        if sect.strip():
+                            ocr_eval_text = sect
+                            extraction_mode = "docling_sectioned_rows"
+                        else:
+                            ocr_table_text = extract_table_content_robust(ocr_text_raw)
+                            if ocr_table_text.strip():
+                                ocr_eval_text = ocr_table_text
+                                extraction_mode = "docling_aligned_lines"
+                            else:
+                                return PageResult(
+                                    company=company,
+                                    page_number=page_num,
+                                    pdf_page_number=pdf_page_num,
+                                    format_agnostic_cer=1.0,
+                                    content_word_recall=0.0,
+                                    number_f1=0.0,
+                                    success=False,
+                                    error="No table-like content extracted",
+                                    ocr_text_raw=ocr_text_raw,
+                                    gt_text=gt_eval_text,
+                                    gt_text_raw=gt_text_raw,
+                                    extraction_mode="docling_no_tables",
+                                    docling_tables=docling_tables_payload,
+                                )
             else:
                 # Non-Docling engines: best-effort parsing.
                 ocr_grid_md = parse_pipe_table_to_grid(ocr_text_raw)
@@ -1359,22 +1498,42 @@ class PageLevelBenchmark:
                         ocr_eval_text = ocr_table_text
                         extraction_mode = "aligned_lines"
                     else:
-                        # Fail-closed: for this benchmark, we evaluate table extraction.
-                        # If we can't recover any table-like structure/text, treat as failure.
-                        return PageResult(
-                            company=company,
-                            page_number=page_num,
-                            pdf_page_number=pdf_page_num,
-                            format_agnostic_cer=1.0,
-                            content_word_recall=0.0,
-                            number_f1=0.0,
-                            success=False,
-                            error="No table-like content extracted",
-                            ocr_text_raw=ocr_text_raw,
-                            gt_text=gt_eval_text,
-                            gt_text_raw=gt_text_raw,
-                            extraction_mode="no_table_like_content",
-                        )
+                        if self.ocr_engine == "marker":
+                            fallback = extract_table_content_fallback(ocr_text_raw)
+                            if fallback.strip():
+                                ocr_eval_text = fallback
+                                extraction_mode = "raw_fallback"
+                            else:
+                                return PageResult(
+                                    company=company,
+                                    page_number=page_num,
+                                    pdf_page_number=pdf_page_num,
+                                    format_agnostic_cer=1.0,
+                                    content_word_recall=0.0,
+                                    number_f1=0.0,
+                                    success=False,
+                                    error="No table-like content extracted",
+                                    ocr_text_raw=ocr_text_raw,
+                                    gt_text=gt_eval_text,
+                                    gt_text_raw=gt_text_raw,
+                                    extraction_mode="no_table_like_content",
+                                )
+                        else:
+                            # Fail-closed for other engines.
+                            return PageResult(
+                                company=company,
+                                page_number=page_num,
+                                pdf_page_number=pdf_page_num,
+                                format_agnostic_cer=1.0,
+                                content_word_recall=0.0,
+                                number_f1=0.0,
+                                success=False,
+                                error="No table-like content extracted",
+                                ocr_text_raw=ocr_text_raw,
+                                gt_text=gt_eval_text,
+                                gt_text_raw=gt_text_raw,
+                                extraction_mode="no_table_like_content",
+                            )
             
             # Check if ground truth has numbers (for conditional NumF1 averaging)
             gt_number_count = count_numbers_in_text(gt_sample.text)
@@ -1723,6 +1882,34 @@ def main():
     parser.add_argument("--marker-llm", action="store_true", help="Use LLM with Marker (requires OPENROUTER_API_KEY)")
     parser.add_argument("--table-only", action="store_true", help="Only benchmark pages with financial tables")
     parser.add_argument(
+        "--table-only-mode",
+        type=str,
+        default="heuristic",
+        choices=["heuristic", "gt_pipe_any", "gt_pipe_strict"],
+        help=(
+            "Interpretation of --table-only based on GT. "
+            "heuristic uses GT heuristics; gt_pipe_* require GT pipe table parsing."
+        ),
+    )
+    parser.add_argument(
+        "--min-gt-rows",
+        type=int,
+        default=3,
+        help="With --table-only-mode gt_pipe_strict: minimum GT table rows.",
+    )
+    parser.add_argument(
+        "--min-gt-cols",
+        type=int,
+        default=3,
+        help="With --table-only-mode gt_pipe_strict: minimum GT table columns.",
+    )
+    parser.add_argument(
+        "--min-gt-numbers",
+        type=int,
+        default=0,
+        help="With --table-only-mode gt_pipe_*: minimum number tokens in GT.",
+    )
+    parser.add_argument(
         "--financial-only",
         action="store_true",
         help="Only benchmark financial statement/notes pages (Balance Sheet, Income Statement, Cash Flow, Notes) based on GT keywords",
@@ -1807,10 +1994,15 @@ def main():
             page_offsets[code] = offset
 
     benchmark = PageLevelBenchmark(
+        pdf_dir=args.pdf_dir,
         ocr_engine=args.engine,
         dpi=args.dpi,
         marker_use_llm=args.marker_llm,
         table_only=args.table_only,
+        table_only_mode=args.table_only_mode,
+        min_gt_rows=int(args.min_gt_rows),
+        min_gt_cols=int(args.min_gt_cols),
+        min_gt_numbers=int(args.min_gt_numbers),
         financial_only=args.financial_only,
         hybrid_confidence_threshold=args.hybrid_threshold,
         hybrid_number_confidence_threshold=args.hybrid_number_threshold,

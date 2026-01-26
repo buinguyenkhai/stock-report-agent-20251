@@ -14,6 +14,7 @@ import logging
 import re
 import gc
 import importlib
+import unicodedata
 from typing import TYPE_CHECKING
 
 from docling_core.types.doc.base import BoundingBox
@@ -108,6 +109,11 @@ def _normalize_for_numeric_likeness(s: str) -> str:
 
 
 _NUMERIC_TOKEN_RE = re.compile(r"(?ix)(?:\(\s*)?-?\s*\d[\d\s.,/%đvndusdEUR]*\d\s*\)?")
+
+
+def _strip_accents_basic(s: str) -> str:
+    s = s or ""
+    return "".join(ch for ch in unicodedata.normalize("NFKD", s) if not unicodedata.combining(ch))
 
 
 def numeric_likeness(text: str) -> tuple[bool, bool, float]:
@@ -225,6 +231,17 @@ def _is_plausible_surya_replacement(
     if "|" in c:
         return False
 
+    for ch in c:
+        if not ch.isalpha():
+            continue
+        try:
+            name = unicodedata.name(ch)
+        except ValueError:
+            # Unnamed alpha codepoints are extremely unlikely here; reject.
+            return False
+        if "LATIN" not in name:
+            return False
+
     if b:
         nb = re.sub(r"\s+", " ", b).strip().lower()
         nc = re.sub(r"\s+", " ", c).strip().lower()
@@ -257,7 +274,11 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     number_confidence_threshold: float = 0.85
 
     # Force Surya for all number-containing cells regardless of confidence
-    force_surya_for_numbers: bool = False
+    force_surya_for_numbers: bool = True
+
+    # Force Surya for all cells inside inferred table regions.
+    # This makes Surya a primary OCR engine for tables while still preserving Docling structure.
+    force_surya_in_table_regions: bool = True
 
     # Surya batch size for re-OCR
     surya_batch_size: int = 32
@@ -275,16 +296,16 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     route_table_only: bool = True
 
     # Safer-by-default policy: only route numeric-like cells unless confidence is extremely low.
-    route_numeric_only: bool = True
-    non_numeric_confidence_threshold: float = 0.35
+    route_numeric_only: bool = False
+    non_numeric_confidence_threshold: float = 0.65
 
     # Additional safety cap: even if thresholds are high, do not route cells with relatively high Tesseract confidence.
     # This prevents Surya from overwriting already-correct numbers.
-    numeric_route_confidence_cap: float = 0.65
+    numeric_route_confidence_cap: float = 0.95
 
     # When False, we only apply Surya replacements to numeric-like cells.
     # This is the main protection against hurting Vietnamese text recall.
-    update_non_numeric: bool = False
+    update_non_numeric: bool = True
 
     # Logging
     log_routing_stats: bool = True
@@ -734,6 +755,39 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             s2 = re.sub(r"\s+", " ", s2)
             return s2
 
+        def _sanitize_surya_text(s: str) -> str:
+            """Normalize common Surya artifacts (HTML-ish tags, hard line breaks)."""
+            s2 = (s or "")
+            if not s2:
+                return ""
+            # Normalize HTML-ish line breaks to spaces.
+            s2 = re.sub(r"(?i)<\s*br\s*/?\s*>", " ", s2)
+            # Drop other tags (we don't want markup in table cells).
+            s2 = re.sub(r"<[^>]+>", " ", s2)
+            # Normalize whitespace.
+            s2 = s2.replace("\u00a0", " ")
+            s2 = re.sub(r"\s+", " ", s2).strip()
+            return s2
+
+        def _digits_only(s: str) -> str:
+            return "".join(ch for ch in (s or "") if ch.isdigit())
+
+        def _numeric_digit_ratio_ok(baseline: str, candidate: str) -> bool:
+            """Reject catastrophic truncations like 8.283.166.222 -> 789."""
+            b = (baseline or "").strip()
+            c = (candidate or "").strip()
+            bd = _digits_only(b)
+            cd = _digits_only(c)
+            if len(bd) < 4 or len(cd) < 1:
+                return True
+            # Candidate must retain most digits; allow small drops for OCR noise.
+            if len(cd) < int(0.80 * len(bd)):
+                return False
+            # Also prevent large spurious expansions.
+            if len(cd) > int(1.25 * len(bd)):
+                return False
+            return True
+
         def _bbox_obj(cell: TextCell) -> dict[str, float]:
             bb = cell.rect.to_bounding_box()
             return {
@@ -754,18 +808,76 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
         
         try:
             import torch
-            
-            # Prepare polygons for Surya (scaled coordinates)
-            polygons = []
+
+            # Prepare polygons for Surya in the *region image* coordinate system.
+            # Note: `page_image` here is a cropped, high-res OCR region image (possibly rotated).
+            # Tesseract's TSV coordinates (left/top/width/height) are already in this coordinate
+            # system. We attach those coords to each TextCell as `_region_bbox` at creation time.
+            w, h = page_image.size
+
+            cell_polys: list[tuple[TextCell, list[list[int]]]] = []
             for cell in cells:
-                bbox = cell.rect.to_bounding_box()
-                # Scale coordinates to match high-res image
-                l = int(bbox.l * scale)
-                t = int(bbox.t * scale)
-                r = int(bbox.r * scale)
-                b = int(bbox.b * scale)
+                rb = getattr(cell, "_region_bbox", None)
+                if rb is None:
+                    if isinstance(self._last_update_diffs, list):
+                        self._last_update_diffs.append(
+                            {
+                                "bbox": _bbox_obj(cell),
+                                "baseline": str(cell.text or ""),
+                                "candidate": "",
+                                "candidate_raw": "",
+                                "accepted": False,
+                                "reason": "skip_missing_region_bbox",
+                            }
+                        )
+                    continue
+
+                try:
+                    l = int(round(float(rb.l)))
+                    t = int(round(float(rb.t)))
+                    r = int(round(float(rb.r)))
+                    b = int(round(float(rb.b)))
+                except Exception:
+                    if isinstance(self._last_update_diffs, list):
+                        self._last_update_diffs.append(
+                            {
+                                "bbox": _bbox_obj(cell),
+                                "baseline": str(cell.text or ""),
+                                "candidate": "",
+                                "candidate_raw": "",
+                                "accepted": False,
+                                "reason": "skip_invalid_region_bbox",
+                            }
+                        )
+                    continue
+
+                # Clamp to image bounds (Surya will fail if polygons are out-of-bounds).
+                l = max(0, min(l, max(0, w - 1)))
+                r = max(0, min(r, max(0, w - 1)))
+                t = max(0, min(t, max(0, h - 1)))
+                b = max(0, min(b, max(0, h - 1)))
+
+                if r <= l or b <= t or (r - l) < 2 or (b - t) < 2:
+                    if isinstance(self._last_update_diffs, list):
+                        self._last_update_diffs.append(
+                            {
+                                "bbox": _bbox_obj(cell),
+                                "baseline": str(cell.text or ""),
+                                "candidate": "",
+                                "candidate_raw": "",
+                                "accepted": False,
+                                "reason": "skip_too_small_bbox",
+                            }
+                        )
+                    continue
+
                 polygon = [[l, t], [r, t], [r, b], [l, b]]
-                polygons.append(polygon)
+                cell_polys.append((cell, polygon))
+
+            if not cell_polys:
+                return
+
+            polygons = [p for _c, p in cell_polys]
             
             # Batch OCR with Surya
             results = self.surya_model(
@@ -777,27 +889,30 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             # Update cell text with Surya results
             if results and results[0].text_lines:
                 text_lines = results[0].text_lines
-                if len(text_lines) != len(cells):
+                if len(text_lines) != len(cell_polys):
                     self._stats["surya_update_skipped_count_mismatch"] += 1
                     _log.warning(
                         "Surya output count mismatch: got %d text lines for %d cells; skipping update",
                         len(text_lines),
-                        len(cells),
+                        len(cell_polys),
                     )
                     return
- 
+  
                 for idx, text_line in enumerate(text_lines):
-                    original_text = str(cells[idx].text or "")
-                    new_text = str(getattr(text_line, "text", "") or "")
+                    cell = cell_polys[idx][0]
+                    original_text = str(cell.text or "")
+                    new_text_raw = str(getattr(text_line, "text", "") or "")
+                    new_text = _sanitize_surya_text(new_text_raw)
 
                     # Skip no-op updates (Surya sometimes returns the exact same string, or only differs in leading/trailing whitespace).
                     if _canon_noop(original_text) == _canon_noop(new_text):
                         if isinstance(self._last_update_diffs, list):
                             self._last_update_diffs.append(
                                 {
-                                    "bbox": _bbox_obj(cells[idx]),
+                                    "bbox": _bbox_obj(cell),
                                     "baseline": original_text,
                                     "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
                                     "accepted": False,
                                     "reason": "no_change",
                                 }
@@ -810,9 +925,10 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                         if isinstance(self._last_update_diffs, list):
                             self._last_update_diffs.append(
                                 {
-                                    "bbox": _bbox_obj(cells[idx]),
+                                    "bbox": _bbox_obj(cell),
                                     "baseline": original_text,
                                     "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
                                     "accepted": False,
                                     "reason": "skip_non_numeric",
                                 }
@@ -826,14 +942,70 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                             if isinstance(self._last_update_diffs, list):
                                 self._last_update_diffs.append(
                                     {
-                                        "bbox": _bbox_obj(cells[idx]),
+                                        "bbox": _bbox_obj(cell),
                                         "baseline": original_text,
                                         "candidate": new_text,
+                                        "candidate_raw": new_text_raw,
                                         "accepted": False,
                                         "reason": "skip_candidate_not_numeric",
                                     }
                                 )
                             continue
+
+                        if not _numeric_digit_ratio_ok(original_text, new_text):
+                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                            if isinstance(self._last_update_diffs, list):
+                                self._last_update_diffs.append(
+                                    {
+                                        "bbox": _bbox_obj(cell),
+                                        "baseline": original_text,
+                                        "candidate": new_text,
+                                        "candidate_raw": new_text_raw,
+                                        "accepted": False,
+                                        "reason": "skip_numeric_truncation",
+                                    }
+                                )
+                            continue
+
+                    # Non-numeric hardening when enabled: only accept small, "diacritic-like" corrections.
+                    if (not base_header_num) and (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False)):
+                        b = (original_text or "").strip()
+                        c = (new_text or "").strip()
+                        if b and len(c) < int(0.50 * len(b)):
+                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                            if isinstance(self._last_update_diffs, list):
+                                self._last_update_diffs.append(
+                                    {
+                                        "bbox": _bbox_obj(cell),
+                                        "baseline": original_text,
+                                        "candidate": new_text,
+                                        "candidate_raw": new_text_raw,
+                                        "accepted": False,
+                                        "reason": "skip_text_truncation",
+                                    }
+                                )
+                            continue
+
+                        # Require strong overlap in accent-stripped form (prevents unrelated replacements).
+                        nb = re.sub(r"\s+", " ", _strip_accents_basic(b)).strip().lower()
+                        nc = re.sub(r"\s+", " ", _strip_accents_basic(c)).strip().lower()
+                        if nb and nc:
+                            lcs = _lcs_len(nb, nc)
+                            denom = max(1, min(len(nb), len(nc)))
+                            if (lcs / denom) < 0.35:
+                                self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                                if isinstance(self._last_update_diffs, list):
+                                    self._last_update_diffs.append(
+                                        {
+                                            "bbox": _bbox_obj(cell),
+                                            "baseline": original_text,
+                                            "candidate": new_text,
+                                            "candidate_raw": new_text_raw,
+                                            "accepted": False,
+                                            "reason": "skip_text_low_overlap",
+                                        }
+                                    )
+                                continue
 
                     if not _is_plausible_surya_replacement(
                         baseline=original_text,
@@ -841,31 +1013,38 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                         max_len_ratio=float(getattr(self.hybrid_options, "max_replacement_len_ratio", 3.0)),
                         max_abs_len=int(getattr(self.hybrid_options, "max_replacement_abs_len", 128)),
                         require_same_charclass=bool(getattr(self.hybrid_options, "require_same_charclass", True)),
-                        min_normalized_lcs_ratio=float(getattr(self.hybrid_options, "min_normalized_lcs_ratio", 0.15)),
+                        # For non-numeric updates we want near-identity (mostly diacritics/typos).
+                        min_normalized_lcs_ratio=(
+                            0.35
+                            if (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False))
+                            else float(getattr(self.hybrid_options, "min_normalized_lcs_ratio", 0.15))
+                        ),
                     ):
                         self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
                         if isinstance(self._last_update_diffs, list):
                             self._last_update_diffs.append(
                                 {
-                                    "bbox": _bbox_obj(cells[idx]),
+                                    "bbox": _bbox_obj(cell),
                                     "baseline": original_text,
                                     "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
                                     "accepted": False,
                                     "reason": "skip_plausibility",
                                 }
                             )
                         continue
 
-                    cells[idx].text = new_text
-                    cells[idx].orig = new_text  # Also update original
+                    cell.text = new_text
+                    cell.orig = new_text  # Also update original
                     self._stats["surya_cells_updated"] += 1
 
                     if isinstance(self._last_update_diffs, list):
                         self._last_update_diffs.append(
                             {
-                                "bbox": _bbox_obj(cells[idx]),
+                                "bbox": _bbox_obj(cell),
                                 "baseline": original_text,
                                 "candidate": new_text,
+                                "candidate_raw": new_text_raw,
                                 "accepted": True,
                                 "reason": "updated",
                             }
@@ -995,6 +1174,9 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                 confidence=float(conf) / 100.0,
                                 rect=rect,
                             )
+                            # Store Tesseract TSV bbox in the *region image* coordinate system.
+                            # This is what Surya needs when `page_image` is a cropped OCR region.
+                            setattr(cell, "_region_bbox", bbox)
                             region_cells.append(cell)
 
                         # HYBRID ROUTING: Filter and re-OCR
@@ -1015,6 +1197,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
 
 
                             route_table_only = bool(getattr(self.hybrid_options, "route_table_only", True))
+                            force_surya_in_tables = bool(getattr(self.hybrid_options, "force_surya_in_table_regions", False))
 
                             cells_to_reocr: List[TextCell] = []
                             for c in region_cells:
@@ -1033,7 +1216,11 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                     self._stats["skipped_header_numeric"] += 1
 
                                 min_num_conf = _tesseract_word_min_conf_in_bbox(df_result, cb)
-                                should_route = self._should_route_to_surya(c, min_numeric_token_conf=min_num_conf)
+                                should_route = False
+                                if in_table and force_surya_in_tables and (not is_header_num):
+                                    should_route = True
+                                else:
+                                    should_route = self._should_route_to_surya(c, min_numeric_token_conf=min_num_conf)
                                 if should_route:
                                     cells_to_reocr.append(c)
                                     self._stats["eligible_cells"] += 1
