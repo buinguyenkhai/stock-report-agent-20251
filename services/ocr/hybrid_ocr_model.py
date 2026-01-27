@@ -1453,7 +1453,6 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                     # Shouldn't happen for freshly created cells, but be safe.
                                     self._stats["skipped_missing_region_bbox"] = int(self._stats.get("skipped_missing_region_bbox", 0)) + 1
                                     continue
-
                                 in_table = any(_intersect_area(rb, tb) > 0 for tb in table_boxes)
                                 setattr(c, "_in_table_region", bool(in_table))
 
@@ -1467,7 +1466,6 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                 is_num_like, is_header_num, _ = numeric_likeness(c.text)
                                 if is_header_num:
                                     self._stats["skipped_header_numeric"] += 1
-
                                 key = getattr(c, "_tsv_line_key", None)
                                 min_num_conf = line_min_num_conf.get(key) if isinstance(key, tuple) else None
                                 setattr(c, "_min_numeric_token_conf", min_num_conf)
@@ -1493,19 +1491,18 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                             )
                                         except Exception:
                                             text_thr = float(getattr(self.hybrid_options, "confidence_threshold", 0.7) or 0.7)
-
                                         should_route = float(getattr(c, "confidence", 0.0) or 0.0) < text_thr
                                     else:
                                         should_route = self._should_route_to_surya(c, min_numeric_token_conf=min_num_conf)
-                            if should_route:
-                                cells_to_reocr.append(c)
-                                self._stats["eligible_cells"] += 1
-                                if min_num_conf is not None and (not is_header_num) and (
-                                    min_num_conf < float(self.hybrid_options.number_confidence_threshold)
-                                ):
-                                    self._stats["routed_low_num_conf"] += 1
-                                else:
-                                    self._stats["routed_low_conf"] += 1
+                                if should_route:
+                                    cells_to_reocr.append(c)
+                                    self._stats["eligible_cells"] += 1
+                                    if min_num_conf is not None and (not is_header_num) and (
+                                        min_num_conf < float(self.hybrid_options.number_confidence_threshold)
+                                    ):
+                                        self._stats["routed_low_num_conf"] += 1
+                                    else:
+                                        self._stats["routed_low_conf"] += 1
                             
                             # Update statistics
                             self._stats['total_cells'] += len(region_cells)
