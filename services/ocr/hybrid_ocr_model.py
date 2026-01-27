@@ -310,7 +310,27 @@ class HybridOcrOptions(TesseractCliOcrOptions):
 
     # When False, we only apply Surya replacements to numeric-like cells.
     # This protects Vietnamese text recall and avoids wasting compute.
-    update_non_numeric: bool = False
+    update_non_numeric: bool = True
+
+    # If True, only apply non-numeric updates for cells inferred to be inside a table region.
+    # This keeps hybrid behavior focused on the benchmark target (financial tables) and
+    # reduces the risk of overwriting running text.
+    update_non_numeric_table_only: bool = True
+
+    # Routing/acceptance knobs for Vietnamese text inside tables.
+    # Only consider re-OCR for non-numeric table cells below this confidence.
+    table_text_confidence_threshold: float = 0.50
+    # Acceptance gate: require strong overlap in accent-stripped form.
+    table_text_min_accent_stripped_lcs_ratio: float = 0.65
+
+    # Numeric acceptance hardening: only accept numeric replacements when token-level
+    # evidence suggests the baseline is unreliable.
+    accept_numeric_only_if_low_token_conf: bool = True
+
+    # Separate acceptance threshold for numeric token confidence.
+    # This should usually be <= number_confidence_threshold, otherwise we may overwrite
+    # correct numbers that Tesseract scored moderately-high.
+    numeric_accept_token_confidence_threshold: float = 0.75
 
     # Logging
     log_routing_stats: bool = True
@@ -554,6 +574,57 @@ def _tesseract_word_min_conf_for_text(df_result) -> Optional[float]:
         return None
 
 
+def _build_line_min_numeric_conf(df_result) -> dict[tuple[int, int, int], float]:
+    """Return min numeric-like token confidence per TSV (block, par, line).
+
+    Tesseract TSV contains multi-level rows. For routing, using the *minimum* numeric-like
+    word confidence inside a whole cell bbox is often too pessimistic (large boxes overlap
+    many words). Instead, we compute a per-line key and use that as a proxy for
+    token-level evidence for that cell.
+    """
+    out: dict[tuple[int, int, int], float] = {}
+    try:
+        if df_result is None or getattr(df_result, "empty", False):
+            return out
+
+        for _ix, row in df_result.iterrows():
+            try:
+                word_num = int(float(row.get("word_num") or 0))
+            except Exception:
+                word_num = 0
+            if word_num <= 0:
+                continue
+
+            txt = str(row.get("text") or "").strip()
+            if not txt:
+                continue
+
+            is_num_like, is_header, _ = numeric_likeness(txt)
+            if not is_num_like or is_header:
+                continue
+
+            try:
+                block_num = int(float(row.get("block_num") or 0))
+                par_num = int(float(row.get("par_num") or 0))
+                line_num = int(float(row.get("line_num") or 0))
+            except Exception:
+                continue
+
+            if block_num <= 0 or par_num <= 0 or line_num <= 0:
+                continue
+
+            conf_raw = float(row.get("conf") or 0.0)
+            conf = max(0.0, min(conf_raw / 100.0, 1.0))
+            key = (block_num, par_num, line_num)
+            prev = out.get(key)
+            if prev is None or conf < prev:
+                out[key] = conf
+
+        return out
+    except Exception:
+        return out
+
+
 class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
     def _make_debug_snapshot(self, page: Page, all_ocr_cells: List[TextCell]) -> dict[str, Any]:
         def _cell_to_obj(c: TextCell) -> dict[str, Any]:
@@ -649,6 +720,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "routed_low_num_conf": 0,
             "skipped_no_table_clusters": 0,
             "skipped_header_numeric": 0,
+            "skipped_missing_region_bbox": 0,
             "inferred_table_boxes": 0,
             "surya_cells_updated": 0,
             "surya_update_skipped_sanity": 0,
@@ -788,6 +860,29 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             s2 = re.sub(r"\s+", " ", s2).strip()
             return s2
 
+        def _normalize_numeric_replacement(*, baseline: str, candidate: str) -> str:
+            """Canonicalize numeric strings to reduce separator noise."""
+            b = (baseline or "").strip()
+            c = (candidate or "").strip()
+            if not c:
+                return ""
+
+            c2 = re.sub(r"\s+", " ", c).strip()
+
+            # If the candidate is purely numeric-ish, strip all whitespace.
+            if re.fullmatch(r"[0-9\s.,/%()\-+đvnusdeur]*", c2.lower()):
+                c2 = re.sub(r"\s+", "", c2)
+
+            # Unify mixed separators based on baseline style.
+            if "." in b and ("," in c2) and ("." in c2):
+                c2 = c2.replace(",", ".")
+            elif "," in b and ("," in c2) and ("." in c2):
+                c2 = c2.replace(".", ",")
+
+            c2 = re.sub(r"\.{2,}", ".", c2)
+            c2 = re.sub(r",{2,}", ",", c2)
+            return c2
+
         def _digits_only(s: str) -> str:
             return "".join(ch for ch in (s or "") if ch.isdigit())
 
@@ -923,6 +1018,13 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                     new_text_raw = str(getattr(text_line, "text", "") or "")
                     new_text = _sanitize_surya_text(new_text_raw)
 
+                    in_table_region = bool(getattr(cell, "_in_table_region", False))
+                    routed_min_num_conf = getattr(cell, "_min_numeric_token_conf", None)
+
+                    base_num_like, base_header_num, _ = numeric_likeness(original_text)
+                    if base_num_like and (not base_header_num):
+                        new_text = _normalize_numeric_replacement(baseline=original_text, candidate=new_text)
+
                     # Skip no-op updates (Surya sometimes returns the exact same string, or only differs in leading/trailing whitespace).
                     if _canon_noop(original_text) == _canon_noop(new_text):
                         if isinstance(self._last_update_diffs, list):
@@ -938,8 +1040,11 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                             )
                         continue
 
-                    base_num_like, base_header_num, _ = numeric_likeness(original_text)
-                    if (not base_header_num) and (not base_num_like) and (not bool(getattr(self.hybrid_options, "update_non_numeric", False))):
+                    if (
+                        (not base_header_num)
+                        and (not base_num_like)
+                        and (not bool(getattr(self.hybrid_options, "update_non_numeric", False)))
+                    ):
                         self._stats["surya_update_skipped_non_numeric"] = int(self._stats.get("surya_update_skipped_non_numeric", 0)) + 1
                         if isinstance(self._last_update_diffs, list):
                             self._last_update_diffs.append(
@@ -953,6 +1058,58 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                 }
                             )
                         continue
+
+                    # If enabled, only apply Vietnamese text updates inside inferred table regions.
+                    if (
+                        (not base_header_num)
+                        and (not base_num_like)
+                        and bool(getattr(self.hybrid_options, "update_non_numeric", False))
+                        and bool(getattr(self.hybrid_options, "update_non_numeric_table_only", True))
+                        and (not in_table_region)
+                    ):
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_text_not_in_table",
+                                }
+                            )
+                        continue
+
+                    # Numeric acceptance hardening: if the baseline numeric tokens looked confident,
+                    # do not overwrite the cell even if it was routed due to table heuristics / high thresholds.
+                    if base_num_like and (not base_header_num) and bool(
+                        getattr(self.hybrid_options, "accept_numeric_only_if_low_token_conf", True)
+                    ):
+                        try:
+                            thr = float(
+                                getattr(
+                                    self.hybrid_options,
+                                    "numeric_accept_token_confidence_threshold",
+                                    min(0.75, float(getattr(self.hybrid_options, "number_confidence_threshold", 0.85))),
+                                )
+                            )
+                            if isinstance(routed_min_num_conf, (int, float)) and float(routed_min_num_conf) >= thr:
+                                self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                                if isinstance(self._last_update_diffs, list):
+                                    self._last_update_diffs.append(
+                                        {
+                                            "bbox": _bbox_obj(cell),
+                                            "baseline": original_text,
+                                            "candidate": new_text,
+                                            "candidate_raw": new_text_raw,
+                                            "accepted": False,
+                                            "reason": "skip_numeric_high_token_conf",
+                                        }
+                                    )
+                                continue
+                        except Exception:
+                            pass
 
                     # Additional numeric hardening: if the baseline looks numeric-like, only accept candidates that also look strictly numeric.
                     if base_num_like and (not base_header_num):
@@ -990,6 +1147,50 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                     if (not base_header_num) and (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False)):
                         b = (original_text or "").strip()
                         c = (new_text or "").strip()
+
+                        # Only attempt to "fix" text when the baseline was low-confidence.
+                        try:
+                            conf_thr = float(
+                                getattr(
+                                    self.hybrid_options,
+                                    "table_text_confidence_threshold",
+                                    getattr(self.hybrid_options, "confidence_threshold", 0.7),
+                                )
+                            )
+                        except Exception:
+                            conf_thr = float(getattr(self.hybrid_options, "confidence_threshold", 0.7) or 0.7)
+
+                        base_conf = float(getattr(cell, "confidence", 0.0) or 0.0)
+                        if base_conf >= conf_thr:
+                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                            if isinstance(self._last_update_diffs, list):
+                                self._last_update_diffs.append(
+                                    {
+                                        "bbox": _bbox_obj(cell),
+                                        "baseline": original_text,
+                                        "candidate": new_text,
+                                        "candidate_raw": new_text_raw,
+                                        "accepted": False,
+                                        "reason": "skip_text_high_conf",
+                                    }
+                                )
+                            continue
+
+                        # Prevent large spurious expansions.
+                        if b and len(c) > int(1.6 * len(b)):
+                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                            if isinstance(self._last_update_diffs, list):
+                                self._last_update_diffs.append(
+                                    {
+                                        "bbox": _bbox_obj(cell),
+                                        "baseline": original_text,
+                                        "candidate": new_text,
+                                        "candidate_raw": new_text_raw,
+                                        "accepted": False,
+                                        "reason": "skip_text_expansion",
+                                    }
+                                )
+                            continue
                         if b and len(c) < int(0.50 * len(b)):
                             self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
                             if isinstance(self._last_update_diffs, list):
@@ -1011,7 +1212,12 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                         if nb and nc:
                             lcs = _lcs_len(nb, nc)
                             denom = max(1, min(len(nb), len(nc)))
-                            if (lcs / denom) < 0.35:
+                            try:
+                                min_ratio = float(getattr(self.hybrid_options, "table_text_min_accent_stripped_lcs_ratio", 0.65))
+                            except Exception:
+                                min_ratio = 0.65
+
+                            if (lcs / denom) < min_ratio:
                                 self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
                                 if isinstance(self._last_update_diffs, list):
                                     self._last_update_diffs.append(
@@ -1033,11 +1239,11 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                         max_abs_len=int(getattr(self.hybrid_options, "max_replacement_abs_len", 128)),
                         require_same_charclass=bool(getattr(self.hybrid_options, "require_same_charclass", True)),
                         # For non-numeric updates we want near-identity (mostly diacritics/typos).
-                        min_normalized_lcs_ratio=(
-                            0.35
-                            if (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False))
-                            else float(getattr(self.hybrid_options, "min_normalized_lcs_ratio", 0.15))
-                        ),
+                            min_normalized_lcs_ratio=(
+                                0.35
+                                if (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False))
+                                else float(getattr(self.hybrid_options, "min_normalized_lcs_ratio", 0.15))
+                            ),
                     ):
                         self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
                         if isinstance(self._last_update_diffs, list):
@@ -1170,6 +1376,14 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                             text = row["text"]
                             conf = row["conf"]
 
+                            # TSV structural ids (used for per-line confidence aggregation).
+                            try:
+                                block_num = int(float(row.get("block_num") or 0))
+                                par_num = int(float(row.get("par_num") or 0))
+                                line_num = int(float(row.get("line_num") or 0))
+                            except Exception:
+                                block_num, par_num, line_num = 0, 0, 0
+
                             left, top = float(row["left"]), float(row["top"])
                             right = left + float(row["width"])
                             bottom = top + row["height"]
@@ -1202,11 +1416,16 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                             # Store Tesseract TSV bbox in the *region image* coordinate system.
                             # This is what Surya needs when `page_image` is a cropped OCR region.
                             setattr(cell, "_region_bbox", bbox)
+
+                            if block_num > 0 and par_num > 0 and line_num > 0:
+                                setattr(cell, "_tsv_line_key", (block_num, par_num, line_num))
                             region_cells.append(cell)
 
                         # HYBRID ROUTING: Filter and re-OCR
                         table_boxes = []
                         if region_cells:
+                            line_min_num_conf = _build_line_min_numeric_conf(df_result)
+
                             # Routing policy: by default, route only inside inferred table regions.
                             # Docling layout/table predictions are not available yet at OCR stage,
                             # so we infer table regions directly from the TSV words.
@@ -1226,8 +1445,17 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
 
                             cells_to_reocr: List[TextCell] = []
                             for c in region_cells:
-                                cb = c.rect.to_bounding_box()
-                                in_table = any(_intersect_area(cb, tb) > 0 for tb in table_boxes)
+                                # IMPORTANT: routing/table overlap must use the same coordinate system.
+                                # - `table_boxes` are inferred from TSV word boxes (region-image pixel coords).
+                                # - We store each cell's original TSV bbox as `c._region_bbox` (same system).
+                                rb = getattr(c, "_region_bbox", None)
+                                if rb is None:
+                                    # Shouldn't happen for freshly created cells, but be safe.
+                                    self._stats["skipped_missing_region_bbox"] = int(self._stats.get("skipped_missing_region_bbox", 0)) + 1
+                                    continue
+
+                                in_table = any(_intersect_area(rb, tb) > 0 for tb in table_boxes)
+                                setattr(c, "_in_table_region", bool(in_table))
 
                                 if in_table:
                                     self._stats["table_cells"] += 1
@@ -1240,21 +1468,44 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                 if is_header_num:
                                     self._stats["skipped_header_numeric"] += 1
 
-                                min_num_conf = _tesseract_word_min_conf_in_bbox(df_result, cb)
+                                key = getattr(c, "_tsv_line_key", None)
+                                min_num_conf = line_min_num_conf.get(key) if isinstance(key, tuple) else None
+                                setattr(c, "_min_numeric_token_conf", min_num_conf)
                                 should_route = False
                                 if in_table and force_surya_in_tables and (not is_header_num):
                                     should_route = True
                                 else:
-                                    should_route = self._should_route_to_surya(c, min_numeric_token_conf=min_num_conf)
-                                if should_route:
-                                    cells_to_reocr.append(c)
-                                    self._stats["eligible_cells"] += 1
-                                    if min_num_conf is not None and (not is_header_num) and (
-                                        min_num_conf < float(self.hybrid_options.number_confidence_threshold)
+                                    # Allow Vietnamese text improvements inside tables when enabled.
+                                    # This bypasses `route_numeric_only` for table text cells.
+                                    if (
+                                        in_table
+                                        and (not is_header_num)
+                                        and (not is_num_like)
+                                        and bool(getattr(self.hybrid_options, "update_non_numeric", False))
                                     ):
-                                        self._stats["routed_low_num_conf"] += 1
+                                        try:
+                                            text_thr = float(
+                                                getattr(
+                                                    self.hybrid_options,
+                                                    "table_text_confidence_threshold",
+                                                    getattr(self.hybrid_options, "confidence_threshold", 0.7),
+                                                )
+                                            )
+                                        except Exception:
+                                            text_thr = float(getattr(self.hybrid_options, "confidence_threshold", 0.7) or 0.7)
+
+                                        should_route = float(getattr(c, "confidence", 0.0) or 0.0) < text_thr
                                     else:
-                                        self._stats["routed_low_conf"] += 1
+                                        should_route = self._should_route_to_surya(c, min_numeric_token_conf=min_num_conf)
+                            if should_route:
+                                cells_to_reocr.append(c)
+                                self._stats["eligible_cells"] += 1
+                                if min_num_conf is not None and (not is_header_num) and (
+                                    min_num_conf < float(self.hybrid_options.number_confidence_threshold)
+                                ):
+                                    self._stats["routed_low_num_conf"] += 1
+                                else:
+                                    self._stats["routed_low_conf"] += 1
                             
                             # Update statistics
                             self._stats['total_cells'] += len(region_cells)
@@ -1310,6 +1561,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "routed_low_num_conf": int(self._stats.get("routed_low_num_conf", 0)),
             "skipped_no_table_clusters": int(self._stats.get("skipped_no_table_clusters", 0)),
             "skipped_header_numeric": int(self._stats.get("skipped_header_numeric", 0)),
+            "skipped_missing_region_bbox": int(self._stats.get("skipped_missing_region_bbox", 0)),
             "inferred_table_boxes": int(self._stats.get("inferred_table_boxes", 0)),
             "surya_cells_updated": int(self._stats.get("surya_cells_updated", 0)),
             "surya_update_skipped_sanity": int(self._stats.get("surya_update_skipped_sanity", 0)),
@@ -1338,6 +1590,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "routed_low_num_conf": 0,
             "skipped_no_table_clusters": 0,
             "skipped_header_numeric": 0,
+            "skipped_missing_region_bbox": 0,
             "inferred_table_boxes": 0,
             "surya_cells_updated": 0,
             "surya_update_skipped_sanity": 0,
