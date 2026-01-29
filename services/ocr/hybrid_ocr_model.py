@@ -112,6 +112,231 @@ _HEADER_NUMERIC_RE = re.compile(
 )
 
 
+_STRICT_NUMERIC_CANDIDATE_RE = re.compile(r"(?i)^[0-9\s.,/%()\-+đvnusdeur]*$")
+_SHORT_ALNUM_CODE_RE = re.compile(r"(?i)^[a-z]{1,3}\d{1,3}$")
+
+
+_STRICT_NUMERIC_NO_LETTERS_RE = re.compile(r"(?i)^[0-9\s.,/%()\-+đ₫]*$")
+_STRICT_NUMERIC_GARBLED_RE = re.compile(r"(?i)^[0-9\s.,/%()\-+đ₫]*(?:vnd|usd|eur)?$")
+
+
+def _compact_ws(s: str) -> str:
+    return re.sub(r"\s+", "", (s or "").strip())
+
+
+def _digits_only(s: str) -> str:
+    return "".join(ch for ch in (s or "") if ch.isdigit())
+
+
+def _canon_noop(s: str) -> str:
+    """Treat whitespace-only differences as no-ops."""
+    s2 = (s or "").strip()
+    return re.sub(r"\s+", " ", s2)
+
+
+def _normalize_numeric_replacement(*, baseline: str, candidate: str) -> str:
+    """Canonicalize numeric strings to reduce separator noise."""
+    b = (baseline or "").strip()
+    c = (candidate or "").strip()
+    if not c:
+        return ""
+
+    c2 = re.sub(r"\s+", " ", c).strip()
+
+    # If the candidate is purely numeric-ish, strip all whitespace.
+    if re.fullmatch(r"[0-9\s.,/%()\-+đvnusdeur]*", c2.lower()):
+        c2 = re.sub(r"\s+", "", c2)
+
+    # Unify mixed separators based on baseline style.
+    if "." in b and ("," in c2) and ("." in c2):
+        c2 = c2.replace(",", ".")
+    elif "," in b and ("," in c2) and ("." in c2):
+        c2 = c2.replace(".", ",")
+
+    c2 = re.sub(r"\.{2,}", ".", c2)
+    c2 = re.sub(r",{2,}", ",", c2)
+    return c2
+
+
+def _is_one_digit_substitution(baseline: str, candidate: str) -> bool:
+    """True if numeric digit strings differ by exactly one digit (same length)."""
+    bd = _digits_only(baseline)
+    cd = _digits_only(candidate)
+    if not bd or not cd:
+        return False
+    if len(bd) != len(cd):
+        return False
+    diffs = sum(1 for a, b in zip(bd, cd) if a != b)
+    return diffs == 1
+
+
+def _numeric_digit_ratio_ok(baseline: str, candidate: str) -> bool:
+    """Reject catastrophic truncations like 8.283.166.222 -> 789."""
+    b = (baseline or "").strip()
+    c = (candidate or "").strip()
+    bd = _digits_only(b)
+    cd = _digits_only(c)
+    if len(bd) < 4 or len(cd) < 1:
+        return True
+    # Candidate must retain most digits; allow small drops for OCR noise.
+    if len(cd) < int(0.80 * len(bd)):
+        return False
+    # Also prevent large spurious expansions.
+    if len(cd) > int(1.25 * len(bd)):
+        return False
+    return True
+
+
+def _numeric_signature(s: str) -> tuple[bool, bool, str]:
+    s0 = (s or "").strip()
+    neg = False
+    if s0.startswith("(") and s0.endswith(")"):
+        neg = True
+    if s0.startswith("-"):
+        neg = True
+    pct = ("%" in s0)
+    digs = _digits_only(s0)
+    return (bool(neg), bool(pct), str(digs))
+
+
+def _digit_count_plausible(candidate: str, *, median: Optional[int]) -> bool:
+    if not isinstance(median, int) or median <= 0:
+        return True
+    d = len(_digits_only(candidate))
+    if d <= 0:
+        return True
+    allowed = max(1, int(round(0.25 * float(median))))
+    return abs(d - int(median)) <= allowed
+
+
+def _translate_ocr_lookalikes(s: str) -> str:
+    trans = str.maketrans({"O": "0", "o": "0", "I": "1", "l": "1", "S": "5", "B": "8"})
+    return (s or "").translate(trans)
+
+
+def _is_strict_numeric_candidate(s: str) -> bool:
+    s2 = (s or "").strip().lower()
+    if not s2:
+        return False
+    if not any(ch.isdigit() for ch in s2):
+        return False
+    return bool(_STRICT_NUMERIC_CANDIDATE_RE.fullmatch(s2))
+
+
+def _is_strict_numeric_candidate_no_letters(s: str) -> bool:
+    """Stricter numeric gate for garbled pages: no alphabetic suffixes."""
+    s2 = (s or "").strip().lower()
+    if not s2:
+        return False
+    if not any(ch.isdigit() for ch in s2):
+        return False
+    return bool(_STRICT_NUMERIC_NO_LETTERS_RE.fullmatch(s2))
+
+
+def _is_strict_numeric_candidate_garbled(s: str) -> bool:
+    """Numeric gate for garbled pages.
+
+    Reject arbitrary alphabetic suffixes (e.g. "876.AET"), but allow a small,
+    explicit set of currency markers that commonly appear in financial tables.
+    """
+    s2 = (s or "").strip().lower()
+    if not s2:
+        return False
+    if not any(ch.isdigit() for ch in s2):
+        return False
+    return bool(_STRICT_NUMERIC_GARBLED_RE.fullmatch(s2))
+
+
+def _sanitize_surya_text(s: str) -> str:
+    """Normalize common Surya artifacts (HTML-ish tags, hard line breaks)."""
+    s2 = (s or "")
+    if not s2:
+        return ""
+    # Normalize HTML-ish line breaks to spaces.
+    s2 = re.sub(r"(?i)<\s*br\s*/?\s*>", " ", s2)
+    # Drop other tags (we don't want markup in table cells).
+    s2 = re.sub(r"<[^>]+>", " ", s2)
+    # Normalize whitespace.
+    s2 = s2.replace("\u00a0", " ")
+    s2 = re.sub(r"\s+", " ", s2).strip()
+
+    # Normalize non-ASCII digits to ASCII (e.g., Arabic-Indic digits).
+    out_chars: list[str] = []
+    for ch in s2:
+        if ch.isdigit() and (ch < "0" or ch > "9"):
+            try:
+                out_chars.append(str(unicodedata.digit(ch)))
+                continue
+            except Exception:
+                pass
+        out_chars.append(ch)
+    s2 = "".join(out_chars)
+
+    # Numeric cleanup: Surya sometimes emits quote-like separators (" / ' / ` / ’).
+    # Only strip them when the string is otherwise numeric-ish (no alphabetic letters).
+    if any(ch.isdigit() for ch in s2) and (not any(ch.isalpha() for ch in s2)):
+        cleaned = re.sub(r"[\"'`’]", "", s2)
+        if cleaned and _STRICT_NUMERIC_CANDIDATE_RE.fullmatch(cleaned.lower()):
+            s2 = cleaned
+    return s2
+
+
+def _looks_like_short_alnum_code(s: str) -> bool:
+    compact = _compact_ws(s)
+    if not compact:
+        return False
+    if not _SHORT_ALNUM_CODE_RE.fullmatch(compact):
+        return False
+    # Disambiguate from numeric cells with separators/currency; those should be treated as numbers.
+    if re.search(r"[\.,/%()\-+]", compact):
+        return False
+    return True
+
+
+def _looks_like_numeric_with_alpha_suffix_junk(s: str) -> bool:
+    """Detect numeric-looking tokens with an unexpected alpha suffix.
+
+    Examples we want to reject (common OCR junk on garbled pages):
+    - "876.AET"
+    - "123ABC" (unless the suffix is an allowed currency token)
+    """
+    compact = _compact_ws(s)
+    if not compact:
+        return False
+    if not compact[0].isdigit():
+        return False
+    if not any(ch.isalpha() for ch in compact):
+        return False
+
+    first_alpha = None
+    for i, ch in enumerate(compact):
+        if ch.isalpha():
+            first_alpha = int(i)
+            break
+    if first_alpha is None:
+        return False
+
+    prefix = compact[:first_alpha]
+    suffix = compact[first_alpha:]
+    if sum(ch.isdigit() for ch in prefix) < 3:
+        return False
+
+    # Prefix must be numeric-ish (digits + common separators).
+    if re.search(r"[a-z]", prefix, flags=re.IGNORECASE):
+        return False
+    if re.search(r"[^0-9.,/%()\-+]", prefix):
+        return False
+
+    # Suffix must be purely letters.
+    if not suffix.isalpha():
+        return False
+
+    # Allow explicit currency tokens.
+    if suffix.lower() in ("vnd", "usd", "eur"):
+        return False
+    return True
+
+
 def _normalize_for_numeric_likeness(s: str) -> str:
     s = (s or "").strip()
     if not s:
@@ -238,10 +463,18 @@ def numeric_likeness(text: str) -> tuple[bool, bool, float]:
     if not raw:
         return False, False, 0.0
 
+    raw2 = re.sub(r"\s+", " ", raw).strip().lower()
+
+    # Treat short alnum codes (e.g., S80, A12) as non-numeric-like by default.
+    # These are common in Vietnamese financial tables (row/column codes, note markers).
+    # We still return is_header_numeric=True so routing/acceptance stays conservative.
+    if _looks_like_short_alnum_code(raw2):
+        return False, True, 0.0
+
+    is_header_numeric = bool(_HEADER_NUMERIC_RE.match(raw2))
+
     s = _normalize_for_numeric_likeness(raw)
     s2 = re.sub(r"\s+", " ", s).strip().lower()
-
-    is_header_numeric = bool(_HEADER_NUMERIC_RE.match(s2))
 
     digit_count = sum(1 for c in s if c.isdigit())
     alpha_count = sum(1 for c in s if c.isalpha())
@@ -271,6 +504,245 @@ def numeric_likeness(text: str) -> tuple[bool, bool, float]:
     is_numeric_like = score >= 0.45
 
     return is_numeric_like, is_header_numeric, score
+
+
+def _annotate_table_column_numericness(cells: list[TextCell], table_boxes: list[BoundingBox]) -> None:
+    """Annotate cells with a coarse per-column numeric ratio.
+
+    This is used as a semantic guardrail: do not allow alnum codes like "S80" to be
+    overwritten as numbers unless the surrounding column is predominantly numeric.
+    """
+
+    if not cells or not table_boxes:
+        return
+
+    def _x_center(rb: BoundingBox) -> float:
+        return (float(rb.l) + float(rb.r)) * 0.5
+
+    def _height(rb: BoundingBox) -> float:
+        return max(1.0, float(rb.b) - float(rb.t))
+
+    for tb in table_boxes:
+        tb_cells: list[TextCell] = []
+        for c in cells:
+            rb = getattr(c, "_region_bbox", None)
+            if rb is None:
+                continue
+            if _intersect_area(rb, tb) <= 0:
+                continue
+            tb_cells.append(c)
+
+        if len(tb_cells) < 12:
+            continue
+
+        hs = sorted(_height(getattr(c, "_region_bbox")) for c in tb_cells if getattr(c, "_region_bbox", None) is not None)
+        if not hs:
+            continue
+        median_h = hs[len(hs) // 2]
+        gap_thr = max(40.0, float(median_h) * 3.0)
+
+        xs = sorted((_x_center(getattr(c, "_region_bbox")), c) for c in tb_cells if getattr(c, "_region_bbox", None) is not None)
+        if not xs:
+            continue
+
+        clusters: list[list[TextCell]] = []
+        cur: list[TextCell] = [xs[0][1]]
+        prev_x = float(xs[0][0])
+        for x, c in xs[1:]:
+            x = float(x)
+            if (x - prev_x) >= gap_thr:
+                clusters.append(cur)
+                cur = [c]
+            else:
+                cur.append(c)
+            prev_x = x
+        if cur:
+            clusters.append(cur)
+
+        for col_cells in clusters:
+            if not col_cells:
+                continue
+            strict_num = 0
+            digit_heavy = 0
+            denom = 0
+            digit_counts: list[int] = []
+            for c in col_cells:
+                txt = str(getattr(c, "text", "") or "")
+                _is_num_like, is_hdr, _ = numeric_likeness(txt)
+                if is_hdr:
+                    continue
+                denom += 1
+
+                # Strict numeric count (low false positives).
+                if _is_strict_numeric_candidate(txt):
+                    strict_num += 1
+
+                # Digit-heavy count (more robust on garbled pages where letters leak into numeric cells).
+                compact = _compact_ws(txt)
+                if compact:
+                    digs = sum(ch.isdigit() for ch in compact)
+                    alphas = sum(ch.isalpha() for ch in compact)
+                    dig_ratio = digs / max(1, len(compact))
+                    if (digs >= 3) and (dig_ratio >= 0.45):
+                        digit_heavy += 1
+                        if digs > 0:
+                            digit_counts.append(int(digs))
+
+            ratio = (strict_num / denom) if denom > 0 else 0.0
+            digit_heavy_ratio = (digit_heavy / denom) if denom > 0 else 0.0
+            digit_median: Optional[int] = None
+            if digit_counts:
+                digit_counts.sort()
+                digit_median = int(digit_counts[len(digit_counts) // 2])
+            for c in col_cells:
+                prev = getattr(c, "_table_col_numeric_ratio", None)
+                prev_dh = getattr(c, "_table_col_digit_heavy_ratio", None)
+                if (
+                    (prev is None)
+                    or (ratio > float(prev))
+                    or (prev_dh is None)
+                    or (digit_heavy_ratio > float(prev_dh))
+                ):
+                    setattr(c, "_table_col_numeric_ratio", float(ratio))
+                    setattr(c, "_table_col_digit_heavy_ratio", float(digit_heavy_ratio))
+                    if digit_median is not None:
+                        setattr(c, "_table_col_digit_median", int(digit_median))
+
+
+def _tsv_looks_garbled(df_result) -> bool:
+    try:
+        if df_result is None or getattr(df_result, "empty", False):
+            return False
+
+        word_count = 0
+        conf_sum = 0.0
+        conf_n = 0
+        low_conf = 0
+        weird_mixed = 0
+        weird_symbol = 0
+        weird_non_latin_alpha = 0
+        for _ix, row in df_result.iterrows():
+            try:
+                word_num = int(float(row.get("word_num") or 0))
+            except Exception:
+                word_num = 0
+            if word_num <= 0:
+                continue
+
+            txt = str(row.get("text") or "").strip()
+            if not txt:
+                continue
+            word_count += 1
+
+            # Confidence (Tesseract word conf 0..100, -1 for invalid)
+            try:
+                conf = float(row.get("conf"))
+            except Exception:
+                conf = -1.0
+            if conf >= 0:
+                conf_sum += conf
+                conf_n += 1
+                if conf < 30:
+                    low_conf += 1
+
+            compact = _compact_ws(txt)
+            has_weird_symbol = False
+            has_non_latin_alpha = False
+            for ch in compact:
+                if ch == "₫":
+                    continue
+                cat = unicodedata.category(ch)
+                if cat and cat[0] == "S":
+                    has_weird_symbol = True
+                if ch.isalpha():
+                    try:
+                        name = unicodedata.name(ch)
+                    except ValueError:
+                        name = ""
+                    if name and ("LATIN" not in name):
+                        has_non_latin_alpha = True
+            if has_weird_symbol:
+                weird_symbol += 1
+            if has_non_latin_alpha:
+                weird_non_latin_alpha += 1
+
+            # Mixed digit+alpha tokens without common separators are often garbage.
+            if len(compact) >= 6:
+                digs = sum(ch.isdigit() for ch in compact)
+                alphas = sum(ch.isalpha() for ch in compact)
+                if digs >= 2 and alphas >= 2 and (not re.search(r"[\.,/%()\-+]", compact)):
+                    weird_mixed += 1
+
+        if word_count < 30:
+            return False
+        wm = weird_mixed / max(1, word_count)
+        ws = weird_symbol / max(1, word_count)
+        wnl = weird_non_latin_alpha / max(1, word_count)
+
+        avg_conf = (conf_sum / conf_n) if conf_n > 0 else 100.0
+        low_conf_frac = low_conf / max(1, conf_n)
+
+        return (
+            (wm >= 0.20)
+            or (ws >= 0.05)
+            or (wnl >= 0.03)
+            or ((word_count >= 60) and (avg_conf < 35.0) and (low_conf_frac >= 0.55))
+        )
+    except Exception:
+        return False
+
+
+def _cell_looks_garbled(text: str, conf01: float) -> bool:
+    """Cell-level garble heuristic for acceptance gating.
+
+    Intentionally conservative: only triggers on very low-confidence cells with
+    a high ratio of symbols/non-alnum noise.
+    """
+    try:
+        t = str(text or "").strip()
+        if not t:
+            return False
+        c = float(conf01 or 0.0)
+        compact = _compact_ws(t)
+        if len(compact) < 4:
+            return False
+
+        alnum = _alnum_count(compact)
+        alnum_ratio = alnum / max(1, len(compact))
+
+        has_symbol = False
+        has_non_latin_alpha = False
+        for ch in compact:
+            if ch == "₫":
+                continue
+            cat = unicodedata.category(ch)
+            if cat and cat[0] == "S":
+                has_symbol = True
+            if ch.isalpha():
+                try:
+                    name = unicodedata.name(ch)
+                except ValueError:
+                    name = ""
+                if name and ("LATIN" not in name):
+                    has_non_latin_alpha = True
+
+        if c <= 0.15:
+            return True
+        if c <= 0.25 and (has_non_latin_alpha or has_symbol):
+            return True
+        if c <= 0.25 and alnum_ratio < 0.55:
+            return True
+
+        # High-risk numeric junk: digit-heavy strings with alphabetic suffixes
+        # (common on garbled pages, e.g. "876.AET"). Mark as garbled even if the
+        # cell confidence isn't extremely low so numeric-context gating can apply.
+        if _digits_only(compact) and (sum(ch.isdigit() for ch in compact) >= 3) and any(ch.isalpha() for ch in compact):
+            dig_ratio = sum(ch.isdigit() for ch in compact) / max(1, len(compact))
+            if dig_ratio >= 0.45:
+                return True
+        return False
+    except Exception:
+        return False
 
 
 def _alnum_count(s: str) -> int:
@@ -436,6 +908,12 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     # Acceptance gate: require strong overlap in accent-stripped form.
     table_text_min_accent_stripped_lcs_ratio: float = 0.65
 
+    # Tail rescue: allow much looser overlap when a cell looks garbled.
+    garbled_text_min_accent_stripped_lcs_ratio: float = 0.20
+
+    # Table numeric context: inferred per-column numericness threshold.
+    numeric_context_min_col_ratio: float = 0.60
+
     # Numeric acceptance hardening: only accept numeric replacements when token-level
     # evidence suggests the baseline is unreliable.
     accept_numeric_only_if_low_token_conf: bool = True
@@ -444,6 +922,34 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     # This should usually be <= number_confidence_threshold, otherwise we may overwrite
     # correct numbers that Tesseract scored moderately-high.
     numeric_accept_token_confidence_threshold: float = 0.85
+
+    # Semantic guardrail: only allow alnum->numeric rewrites in columns that are
+    # predominantly numeric (estimated from TSV word x-clusters inside inferred tables).
+    numeric_column_min_ratio_for_alnum_to_numeric: float = 0.70
+
+    # Numeric recovery: allow non-numeric/garbled baselines to be replaced with numeric
+    # candidates only when the column is strongly numeric.
+    numeric_column_min_ratio_for_numeric_recovery: float = 0.85
+    numeric_recovery_max_baseline_confidence: float = 0.50
+
+    # Extra safety for high-impact numeric overwrites: re-OCR a subset of numeric cells
+    # twice with a small polygon padding and require agreement.
+    enable_numeric_self_consistency: bool = True
+    numeric_self_consistency_pad_px: int = 2
+
+    # Tail rescue: detect garbled TSV regions and force Surya for in-table cells.
+    enable_garble_rescue: bool = True
+
+    # Tail rescue (garbled TSV): Surya can be sensitive to contrast. Optionally run a
+    # second Surya pass on a lightly enhanced image and choose the better candidate.
+    enable_garbled_surya_enhanced_pass: bool = True
+    garbled_surya_enhanced_contrast: float = 1.6
+    garbled_surya_enhanced_sharpness: float = 1.4
+    garbled_surya_polygon_pad_px: int = 1
+
+    # Semantic safety: reject digit+alpha junk in numeric table contexts (e.g., "876.AET").
+    digit_alpha_junk_min_digits: int = 3
+    digit_alpha_junk_min_digit_ratio: float = 0.45
 
     # Logging
     log_routing_stats: bool = True
@@ -850,6 +1356,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "skipped_header_numeric": 0,
             "skipped_missing_region_bbox": 0,
             "inferred_table_boxes": 0,
+            "garbled_regions": 0,
             "surya_cells_updated": 0,
             "surya_update_skipped_sanity": 0,
             "surya_update_skipped_count_mismatch": 0,
@@ -968,90 +1475,89 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
 
         self._last_update_diffs = []
 
-        def _canon_noop(s: str) -> str:
-            # Treat whitespace-only changes as no-ops.
-            s2 = (s or "").strip()
-            s2 = re.sub(r"\s+", " ", s2)
-            return s2
+        def _run_surya_pass(img: Image.Image) -> Optional[tuple[list[str], list[str], list[float]]]:
+            results = self.surya_model(
+                images=[img],
+                polygons=[polygons],
+                recognition_batch_size=self.hybrid_options.surya_batch_size,
+            )
+            if not results or (not getattr(results[0], "text_lines", None)):
+                return None
+            text_lines = list(results[0].text_lines or [])
+            if len(text_lines) != len(cell_polys):
+                return None
 
-        def _sanitize_surya_text(s: str) -> str:
-            """Normalize common Surya artifacts (HTML-ish tags, hard line breaks)."""
-            s2 = (s or "")
-            if not s2:
-                return ""
-            # Normalize HTML-ish line breaks to spaces.
-            s2 = re.sub(r"(?i)<\s*br\s*/?\s*>", " ", s2)
-            # Drop other tags (we don't want markup in table cells).
-            s2 = re.sub(r"<[^>]+>", " ", s2)
-            # Normalize whitespace.
-            s2 = s2.replace("\u00a0", " ")
-            s2 = re.sub(r"\s+", " ", s2).strip()
+            out_raw: list[str] = []
+            out: list[str] = []
+            out_conf: list[float] = []
+            for tl in text_lines:
+                raw_txt = str(getattr(tl, "text", "") or "")
+                out_raw.append(raw_txt)
+                out.append(_sanitize_surya_text(raw_txt))
+                try:
+                    out_conf.append(float(getattr(tl, "confidence")))
+                except Exception:
+                    out_conf.append(1.0)
+            return out_raw, out, out_conf
 
-            # Normalize non-ASCII digits to ASCII (e.g., Arabic-Indic digits).
-            out_chars: list[str] = []
-            for ch in s2:
-                if ch.isdigit() and (ch < "0" or ch > "9"):
-                    try:
-                        out_chars.append(str(unicodedata.digit(ch)))
-                        continue
-                    except Exception:
-                        pass
-                out_chars.append(ch)
-            s2 = "".join(out_chars)
-            return s2
+        def _choose_garbled_candidate(
+            *,
+            idx: int,
+            pass1: tuple[list[str], list[str], list[float]],
+            pass2: tuple[list[str], list[str], list[float]],
+        ) -> tuple[str, str, float]:
+            p1_raw, p1, p1_conf = pass1
+            p2_raw, p2, p2_conf = pass2
 
-        def _normalize_numeric_replacement(*, baseline: str, candidate: str) -> str:
-            """Canonicalize numeric strings to reduce separator noise."""
-            b = (baseline or "").strip()
-            c = (candidate or "").strip()
-            if not c:
-                return ""
+            c1 = str(p1[idx] or "").strip()
+            c2 = str(p2[idx] or "").strip()
+            if (not c2) or (c1 == c2):
+                return p1_raw[idx], p1[idx], float(p1_conf[idx])
+            if not c1:
+                return p2_raw[idx], p2[idx], float(p2_conf[idx])
 
-            c2 = re.sub(r"\s+", " ", c).strip()
+            cell = cell_polys[idx][0]
+            in_table = bool(getattr(cell, "_in_table_region", False))
+            col_ratio = float(getattr(cell, "_table_col_numeric_ratio", 0.0) or 0.0)
+            col_dh_ratio = float(getattr(cell, "_table_col_digit_heavy_ratio", 0.0) or 0.0)
+            col_ratio_eff = max(col_ratio, col_dh_ratio)
+            base_num_like, base_header_num, _ = numeric_likeness(str(getattr(cell, "text", "") or ""))
 
-            # If the candidate is purely numeric-ish, strip all whitespace.
-            if re.fullmatch(r"[0-9\s.,/%()\-+đvnusdeur]*", c2.lower()):
-                c2 = re.sub(r"\s+", "", c2)
+            garbled_cell = bool(getattr(cell, "_garbled_region", False)) or bool(getattr(cell, "_garbled_cell", False))
 
-            # Unify mixed separators based on baseline style.
-            if "." in b and ("," in c2) and ("." in c2):
-                c2 = c2.replace(",", ".")
-            elif "," in b and ("," in c2) and ("." in c2):
-                c2 = c2.replace(".", ",")
+            try:
+                col_thr = float(getattr(self.hybrid_options, "numeric_context_min_col_ratio", 0.60))
+            except Exception:
+                col_thr = 0.60
+            # Treat strongly-numeric table columns as numeric context even if the
+            # baseline/candidates are OCR-garbled (digit+letter junk can confuse
+            # numeric_likeness). Final acceptance is still gated downstream.
+            numeric_context = bool(
+                (base_num_like and (not base_header_num))
+                or (
+                    in_table
+                    and (col_ratio_eff >= col_thr)
+                    and (not _looks_like_short_alnum_code(str(getattr(cell, "text", "") or "")))
+                    # In garbled contexts, numeric_likeness() can misclassify junk as "header".
+                    # If the column is strongly numeric, still treat it as numeric context so we
+                    # can block digit+letter junk.
+                    and ((not base_header_num) or garbled_cell)
+                )
+            )
 
-            c2 = re.sub(r"\.{2,}", ".", c2)
-            c2 = re.sub(r",{2,}", ",", c2)
-            return c2
+            if numeric_context:
+                strict1 = _is_strict_numeric_candidate_garbled(c1) if garbled_cell else _is_strict_numeric_candidate(c1)
+                strict2 = _is_strict_numeric_candidate_garbled(c2) if garbled_cell else _is_strict_numeric_candidate(c2)
+                if strict2 and (not strict1):
+                    return p2_raw[idx], p2[idx], float(p2_conf[idx])
+                if strict1 and (not strict2):
+                    return p1_raw[idx], p1[idx], float(p1_conf[idx])
 
-        def _digits_only(s: str) -> str:
-            return "".join(ch for ch in (s or "") if ch.isdigit())
+            # Otherwise, pick the higher-confidence candidate.
+            if float(p2_conf[idx]) > float(p1_conf[idx]) + 1e-6:
+                return p2_raw[idx], p2[idx], float(p2_conf[idx])
+            return p1_raw[idx], p1[idx], float(p1_conf[idx])
 
-        def _is_one_digit_substitution(baseline: str, candidate: str) -> bool:
-            """True if numeric digit strings differ by exactly one digit (same length)."""
-            bd = _digits_only(baseline)
-            cd = _digits_only(candidate)
-            if not bd or not cd:
-                return False
-            if len(bd) != len(cd):
-                return False
-            diffs = sum(1 for a, b in zip(bd, cd) if a != b)
-            return diffs == 1
-
-        def _numeric_digit_ratio_ok(baseline: str, candidate: str) -> bool:
-            """Reject catastrophic truncations like 8.283.166.222 -> 789."""
-            b = (baseline or "").strip()
-            c = (candidate or "").strip()
-            bd = _digits_only(b)
-            cd = _digits_only(c)
-            if len(bd) < 4 or len(cd) < 1:
-                return True
-            # Candidate must retain most digits; allow small drops for OCR noise.
-            if len(cd) < int(0.80 * len(bd)):
-                return False
-            # Also prevent large spurious expansions.
-            if len(cd) > int(1.25 * len(bd)):
-                return False
-            return True
 
         def _bbox_obj(cell: TextCell) -> dict[str, float]:
             bb = cell.rect.to_bounding_box()
@@ -1062,15 +1568,6 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                 "b": float(bb.b),
             }
 
-        def _is_strict_numeric_candidate(s: str) -> bool:
-            s2 = (s or "").strip().lower()
-            if not s2:
-                return False
-            if not any(ch.isdigit() for ch in s2):
-                return False
-            # Permit separators, percent, currency markers, parentheses.
-            return bool(re.fullmatch(r"[0-9\s.,/%()\-+đvnusdeur]*", s2))
-        
         try:
             import torch
 
@@ -1079,6 +1576,13 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             # Tesseract's TSV coordinates (left/top/width/height) are already in this coordinate
             # system. We attach those coords to each TextCell as `_region_bbox` at creation time.
             w, h = page_image.size
+
+            region_garbled = any(bool(getattr(c, "_garbled_region", False)) for c in (cells or []))
+            try:
+                garbled_pad = int(getattr(self.hybrid_options, "garbled_surya_polygon_pad_px", 1) or 0)
+            except Exception:
+                garbled_pad = 0
+            garbled_pad = max(0, min(garbled_pad, 6))
 
             cell_polys: list[tuple[TextCell, list[list[int]]]] = []
             for cell in cells:
@@ -1116,11 +1620,17 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                         )
                     continue
 
+                # Garbled-rescue: add a tiny pad to reduce crop tightness.
+                pad = 0
+                if region_garbled and garbled_pad > 0:
+                    if bool(getattr(cell, "_garbled_cell", False)) or bool(getattr(cell, "_garbled_region", False)):
+                        pad = garbled_pad
+
                 # Clamp to image bounds (Surya will fail if polygons are out-of-bounds).
-                l = max(0, min(l, max(0, w - 1)))
-                r = max(0, min(r, max(0, w - 1)))
-                t = max(0, min(t, max(0, h - 1)))
-                b = max(0, min(b, max(0, h - 1)))
+                l = max(0, min(l - pad, max(0, w - 1)))
+                r = max(0, min(r + pad, max(0, w - 1)))
+                t = max(0, min(t - pad, max(0, h - 1)))
+                b = max(0, min(b + pad, max(0, h - 1)))
 
                 if r <= l or b <= t or (r - l) < 2 or (b - t) < 2:
                     if isinstance(self._last_update_diffs, list):
@@ -1144,80 +1654,228 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
 
             polygons = [p for _c, p in cell_polys]
             
-            # Batch OCR with Surya
-            results = self.surya_model(
-                images=[page_image],
-                polygons=[polygons],
-                recognition_batch_size=self.hybrid_options.surya_batch_size,
-            )
-            
-            # Update cell text with Surya results
-            if results and results[0].text_lines:
-                text_lines = results[0].text_lines
-                if len(text_lines) != len(cell_polys):
-                    self._stats["surya_update_skipped_count_mismatch"] += 1
-                    _log.warning(
-                        "Surya output count mismatch: got %d text lines for %d cells; skipping update",
-                        len(text_lines),
-                        len(cell_polys),
+            # First-pass OCR with Surya
+            pass1 = _run_surya_pass(page_image)
+            if pass1 is None:
+                return
+            cand1_raw, cand1, cand1_conf = pass1
+
+            if len(cand1) != len(cell_polys):
+                self._stats["surya_update_skipped_count_mismatch"] = int(
+                    self._stats.get("surya_update_skipped_count_mismatch", 0)
+                ) + 1
+                _log.warning(
+                    "Surya output count mismatch: got %d text lines for %d cells; skipping update",
+                    len(cand1),
+                    len(cell_polys),
+                )
+                return
+
+            # Optional garbled rescue: run a second pass on a lightly enhanced image.
+            cand_raw = list(cand1_raw)
+            cand = list(cand1)
+            cand_conf = list(cand1_conf)
+
+            if region_garbled and bool(getattr(self.hybrid_options, "enable_garbled_surya_enhanced_pass", True)):
+                try:
+                    from PIL import ImageEnhance, ImageOps
+
+                    try:
+                        contrast = float(getattr(self.hybrid_options, "garbled_surya_enhanced_contrast", 1.6) or 1.6)
+                    except Exception:
+                        contrast = 1.6
+                    try:
+                        sharpness = float(getattr(self.hybrid_options, "garbled_surya_enhanced_sharpness", 1.4) or 1.4)
+                    except Exception:
+                        sharpness = 1.4
+
+                    def _enhance_for_surya(img: Image.Image) -> Image.Image:
+                        g = img.convert("L")
+                        g = ImageOps.autocontrast(g, cutoff=2)
+                        g = ImageEnhance.Contrast(g).enhance(max(0.8, min(contrast, 3.0)))
+                        g = ImageEnhance.Sharpness(g).enhance(max(0.8, min(sharpness, 3.0)))
+                        return g.convert("RGB")
+
+                    enhanced = _enhance_for_surya(page_image)
+                    pass2 = _run_surya_pass(enhanced)
+                    if pass2 is not None:
+                        for idx in range(len(cell_polys)):
+                            raw_sel, txt_sel, conf_sel = _choose_garbled_candidate(idx=idx, pass1=pass1, pass2=pass2)
+                            cand_raw[idx] = raw_sel
+                            cand[idx] = txt_sel
+                            cand_conf[idx] = float(conf_sel)
+                except Exception:
+                    # Enhancement is best-effort; fall back to first-pass output.
+                    pass
+
+            # Optional numeric self-consistency: re-OCR a subset of risky numeric overwrites.
+            sc_required: dict[int, bool] = {}
+            sc_cand2_raw: dict[int, str] = {}
+            sc_cand2: dict[int, str] = {}
+            if bool(getattr(self.hybrid_options, "enable_numeric_self_consistency", True)):
+                try:
+                    pad = int(getattr(self.hybrid_options, "numeric_self_consistency_pad_px", 2) or 0)
+                except Exception:
+                    pad = 0
+                if pad > 0:
+                    for idx in range(len(cell_polys)):
+                        cell = cell_polys[idx][0]
+                        original_text = str(cell.text or "")
+                        new_text = cand[idx]
+                        if _canon_noop(original_text) == _canon_noop(new_text):
+                            continue
+                        garbled_cell = bool(getattr(cell, "_garbled_region", False)) or bool(
+                            getattr(cell, "_garbled_cell", False)
+                        )
+                        if garbled_cell:
+                            if not _is_strict_numeric_candidate_garbled(new_text):
+                                continue
+                        else:
+                            if not _is_strict_numeric_candidate(new_text):
+                                continue
+
+                        base_num_like, base_header_num, _ = numeric_likeness(original_text)
+                        routed_min_num_conf = getattr(cell, "_min_numeric_token_conf", None)
+
+                        # Require self-consistency for:
+                        # - alnum-code -> numeric rewrites (high semantic risk)
+                        # - overwriting high-confidence numeric tokens (tail rescue)
+                        base_is_code = _looks_like_short_alnum_code(original_text)
+                        high_conf_numeric = False
+                        if base_num_like and (not base_header_num):
+                            try:
+                                thr = float(
+                                    getattr(
+                                        self.hybrid_options,
+                                        "numeric_accept_token_confidence_threshold",
+                                        min(0.75, float(getattr(self.hybrid_options, "number_confidence_threshold", 0.85))),
+                                    )
+                                )
+                            except Exception:
+                                thr = 0.85
+                            if isinstance(routed_min_num_conf, (int, float)) and float(routed_min_num_conf) >= thr:
+                                if not _is_one_digit_substitution(original_text, new_text):
+                                    high_conf_numeric = True
+
+                        in_table_region = bool(getattr(cell, "_in_table_region", False))
+                        col_num_ratio = float(getattr(cell, "_table_col_numeric_ratio", 0.0) or 0.0)
+                        col_dh_ratio = float(getattr(cell, "_table_col_digit_heavy_ratio", 0.0) or 0.0)
+                        col_ratio_eff = max(col_num_ratio, col_dh_ratio)
+                        base_conf = float(getattr(cell, "confidence", 0.0) or 0.0)
+
+                        try:
+                            rec_col_thr = float(
+                                getattr(self.hybrid_options, "numeric_column_min_ratio_for_numeric_recovery", 0.85)
+                            )
+                        except Exception:
+                            rec_col_thr = 0.85
+                        try:
+                            rec_conf_thr = float(
+                                getattr(self.hybrid_options, "numeric_recovery_max_baseline_confidence", 0.50)
+                            )
+                        except Exception:
+                            rec_conf_thr = 0.50
+
+                        numeric_recovery = bool(
+                            (not base_num_like)
+                            and (not base_is_code)
+                            and in_table_region
+                            and (col_ratio_eff >= rec_col_thr)
+                            and ((base_conf <= rec_conf_thr) or garbled_cell)
+                        )
+
+                        if base_is_code or high_conf_numeric or numeric_recovery:
+                            sc_required[idx] = True
+
+                    if sc_required:
+                        sc_polys: list[list[list[int]]] = []
+                        sc_map: list[int] = []
+                        for idx in sc_required.keys():
+                            poly = polygons[idx]
+                            l = max(0, min(int(poly[0][0]) - pad, max(0, w - 1)))
+                            t = max(0, min(int(poly[0][1]) - pad, max(0, h - 1)))
+                            r = max(0, min(int(poly[2][0]) + pad, max(0, w - 1)))
+                            b = max(0, min(int(poly[2][1]) + pad, max(0, h - 1)))
+                            if r <= l or b <= t or (r - l) < 2 or (b - t) < 2:
+                                continue
+                            sc_polys.append([[l, t], [r, t], [r, b], [l, b]])
+                            sc_map.append(int(idx))
+
+                        if sc_polys and sc_map:
+                            results2 = self.surya_model(
+                                images=[page_image],
+                                polygons=[sc_polys],
+                                recognition_batch_size=self.hybrid_options.surya_batch_size,
+                            )
+                            if results2 and getattr(results2[0], "text_lines", None) and len(results2[0].text_lines) == len(sc_map):
+                                for j, tl in enumerate(list(results2[0].text_lines or [])):
+                                    idx = sc_map[j]
+                                    raw_txt = str(getattr(tl, "text", "") or "")
+                                    sc_cand2_raw[idx] = raw_txt
+                                    sc_cand2[idx] = _sanitize_surya_text(raw_txt)
+
+            # Update cells with acceptance gates
+            for idx in range(len(cell_polys)):
+                cell = cell_polys[idx][0]
+                original_text = str(cell.text or "")
+                new_text_raw = cand_raw[idx]
+                new_text = cand[idx]
+
+                in_table_region = bool(getattr(cell, "_in_table_region", False))
+                routed_min_num_conf = getattr(cell, "_min_numeric_token_conf", None)
+                col_num_ratio = float(getattr(cell, "_table_col_numeric_ratio", 0.0) or 0.0)
+                sc_text2 = sc_cand2.get(idx)
+                sc_required_here = bool(sc_required.get(idx))
+                sc_agree = True
+                if sc_required_here:
+                    sc_agree = False
+                    if isinstance(sc_text2, str) and sc_text2:
+                        try:
+                            n1 = _normalize_numeric_replacement(baseline=original_text, candidate=new_text)
+                            n2 = _normalize_numeric_replacement(baseline=original_text, candidate=sc_text2)
+                            sc_agree = _numeric_signature(n1) == _numeric_signature(n2)
+                        except Exception:
+                            sc_agree = False
+
+                base_num_like, base_header_num, _ = numeric_likeness(original_text)
+                cand_num_like, cand_header_num, _ = numeric_likeness(new_text)
+
+                garbled_ctx = bool(getattr(cell, "_garbled_region", False)) or bool(getattr(cell, "_garbled_cell", False))
+                try:
+                    col_digit_median = int(getattr(cell, "_table_col_digit_median"))
+                except Exception:
+                    col_digit_median = None
+
+                col_dh_ratio = float(getattr(cell, "_table_col_digit_heavy_ratio", 0.0) or 0.0)
+                col_ratio_eff = max(col_num_ratio, col_dh_ratio)
+
+                try:
+                    col_thr = float(getattr(self.hybrid_options, "numeric_context_min_col_ratio", 0.60))
+                except Exception:
+                    col_thr = 0.60
+
+                numeric_context_col = bool(in_table_region and (col_ratio_eff >= col_thr))
+                # Treat strongly-numeric table columns as numeric context even if
+                # numeric_likeness fails on garbled strings. This ensures we never
+                # accept digit+letter junk (e.g. "876.AET") as a table numeric.
+                effective_numeric = bool(
+                    (base_num_like and (not base_header_num))
+                    or (
+                        numeric_context_col
+                        and (not _looks_like_short_alnum_code(original_text))
+                        and ((not base_header_num) or garbled_ctx)
                     )
-                    return
-  
-                for idx, text_line in enumerate(text_lines):
-                    cell = cell_polys[idx][0]
-                    original_text = str(cell.text or "")
-                    new_text_raw = str(getattr(text_line, "text", "") or "")
-                    new_text = _sanitize_surya_text(new_text_raw)
+                )
 
-                    in_table_region = bool(getattr(cell, "_in_table_region", False))
-                    routed_min_num_conf = getattr(cell, "_min_numeric_token_conf", None)
+                if effective_numeric:
+                    new_text = _normalize_numeric_replacement(baseline=original_text, candidate=new_text)
 
-                    base_num_like, base_header_num, _ = numeric_likeness(original_text)
-                    if base_num_like and (not base_header_num):
-                        new_text = _normalize_numeric_replacement(baseline=original_text, candidate=new_text)
-
-                    # Skip no-op updates (Surya sometimes returns the exact same string, or only differs in leading/trailing whitespace).
-                    if _canon_noop(original_text) == _canon_noop(new_text):
-                        if isinstance(self._last_update_diffs, list):
-                            self._last_update_diffs.append(
-                                {
-                                    "bbox": _bbox_obj(cell),
-                                    "baseline": original_text,
-                                    "candidate": new_text,
-                                    "candidate_raw": new_text_raw,
-                                    "accepted": False,
-                                    "reason": "no_change",
-                                }
-                            )
-                        continue
-
-                    if (
-                        (not base_header_num)
-                        and (not base_num_like)
-                        and (not bool(getattr(self.hybrid_options, "update_non_numeric", False)))
-                    ):
-                        self._stats["surya_update_skipped_non_numeric"] = int(self._stats.get("surya_update_skipped_non_numeric", 0)) + 1
-                        if isinstance(self._last_update_diffs, list):
-                            self._last_update_diffs.append(
-                                {
-                                    "bbox": _bbox_obj(cell),
-                                    "baseline": original_text,
-                                    "candidate": new_text,
-                                    "candidate_raw": new_text_raw,
-                                    "accepted": False,
-                                    "reason": "skip_non_numeric",
-                                }
-                            )
-                        continue
-
-                    # If enabled, only apply Vietnamese text updates inside inferred table regions.
-                    if (
-                        (not base_header_num)
-                        and (not base_num_like)
-                        and bool(getattr(self.hybrid_options, "update_non_numeric", False))
-                        and bool(getattr(self.hybrid_options, "update_non_numeric_table_only", True))
-                        and (not in_table_region)
-                    ):
+                    # In numeric context, only accept strictly numeric candidates.
+                    # This is critical for garbled pages where Surya may emit digit+letter junk (e.g. "876.AET").
+                    strict_ok = _is_strict_numeric_candidate(new_text)
+                    if garbled_ctx:
+                        strict_ok = _is_strict_numeric_candidate_garbled(new_text)
+                    if not strict_ok:
                         self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
                         if isinstance(self._last_update_diffs, list):
                             self._last_update_diffs.append(
@@ -1227,29 +1885,28 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                     "candidate": new_text,
                                     "candidate_raw": new_text_raw,
                                     "accepted": False,
-                                    "reason": "skip_text_not_in_table",
+                                    "reason": "skip_candidate_not_numeric",
                                 }
                             )
                         continue
 
-                    # Numeric acceptance hardening: if the baseline numeric tokens looked confident,
-                    # do not overwrite the cell even if it was routed due to table heuristics / high thresholds.
-                    if base_num_like and (not base_header_num) and bool(
-                        getattr(self.hybrid_options, "accept_numeric_only_if_low_token_conf", True)
-                    ):
-                        try:
-                            thr = float(
-                                getattr(
-                                    self.hybrid_options,
-                                    "numeric_accept_token_confidence_threshold",
-                                    min(0.75, float(getattr(self.hybrid_options, "number_confidence_threshold", 0.85))),
-                                )
-                            )
-                            if isinstance(routed_min_num_conf, (int, float)) and float(routed_min_num_conf) >= thr:
-                                # Exception: allow tiny, high-value numeric fixes (single digit flip)
-                                # even when token confidence is high.
-                                # This catches cases like 110.858.786 -> 110.859.786.
-                                if not _is_one_digit_substitution(original_text, new_text):
+                # Fail-closed: in garbled contexts or strongly-numeric table contexts, reject digit+alpha junk.
+                # This blocks Surya artifacts like "876.AET" that may otherwise pass text plausibility.
+                if garbled_ctx or base_num_like or (in_table_region and (col_ratio_eff >= col_thr)):
+                    cand_compact = _compact_ws(new_text)
+                    if cand_compact:
+                        cand_digs = sum(ch.isdigit() for ch in cand_compact)
+                        cand_alpha = sum(ch.isalpha() for ch in cand_compact)
+                        if (cand_digs >= int(getattr(self.hybrid_options, "digit_alpha_junk_min_digits", 3))) and (cand_alpha >= 1):
+                            dig_ratio = cand_digs / max(1, len(cand_compact))
+                            try:
+                                min_dr = float(getattr(self.hybrid_options, "digit_alpha_junk_min_digit_ratio", 0.45))
+                            except Exception:
+                                min_dr = 0.45
+                            if (dig_ratio >= min_dr) and (not cand_header_num) and (not base_header_num):
+                                # If it's a permitted numeric form (e.g. "123USD"), do not treat as junk.
+                                allowed = _is_strict_numeric_candidate(new_text) or _is_strict_numeric_candidate_garbled(new_text)
+                                if not allowed:
                                     self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
                                     if isinstance(self._last_update_diffs, list):
                                         self._last_update_diffs.append(
@@ -1259,147 +1916,51 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                                 "candidate": new_text,
                                                 "candidate_raw": new_text_raw,
                                                 "accepted": False,
-                                                "reason": "skip_numeric_high_token_conf",
+                                                "reason": "skip_digit_alpha_junk",
                                             }
                                         )
                                     continue
-                        except Exception:
-                            pass
 
-                    # Additional numeric hardening: if the baseline looks numeric-like, only accept candidates that also look strictly numeric.
-                    if base_num_like and (not base_header_num):
-                        if not _is_strict_numeric_candidate(new_text):
-                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
-                            if isinstance(self._last_update_diffs, list):
-                                self._last_update_diffs.append(
-                                    {
-                                        "bbox": _bbox_obj(cell),
-                                        "baseline": original_text,
-                                        "candidate": new_text,
-                                        "candidate_raw": new_text_raw,
-                                        "accepted": False,
-                                        "reason": "skip_candidate_not_numeric",
-                                    }
-                                )
-                            continue
+                # Skip no-op updates (Surya sometimes returns the exact same string, or only differs in leading/trailing whitespace).
+                if _canon_noop(original_text) == _canon_noop(new_text):
+                    if isinstance(self._last_update_diffs, list):
+                        self._last_update_diffs.append(
+                            {
+                                "bbox": _bbox_obj(cell),
+                                "baseline": original_text,
+                                "candidate": new_text,
+                                "candidate_raw": new_text_raw,
+                                "accepted": False,
+                                "reason": "no_change",
+                            }
+                        )
+                    continue
 
-                        if not _numeric_digit_ratio_ok(original_text, new_text):
-                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
-                            if isinstance(self._last_update_diffs, list):
-                                self._last_update_diffs.append(
-                                    {
-                                        "bbox": _bbox_obj(cell),
-                                        "baseline": original_text,
-                                        "candidate": new_text,
-                                        "candidate_raw": new_text_raw,
-                                        "accepted": False,
-                                        "reason": "skip_numeric_truncation",
-                                    }
-                                )
-                            continue
+                # Universal semantic safety: never accept numeric-looking tokens with unexpected alpha suffixes.
+                # This catches high-risk Surya artifacts even when table inference / numeric context is ambiguous.
+                if (not cand_header_num) and (not base_header_num) and _looks_like_numeric_with_alpha_suffix_junk(new_text):
+                    self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                    if isinstance(self._last_update_diffs, list):
+                        self._last_update_diffs.append(
+                            {
+                                "bbox": _bbox_obj(cell),
+                                "baseline": original_text,
+                                "candidate": new_text,
+                                "candidate_raw": new_text_raw,
+                                "accepted": False,
+                                "reason": "skip_numeric_alpha_suffix",
+                            }
+                        )
+                    continue
 
-                    # Non-numeric hardening when enabled: only accept small, "diacritic-like" corrections.
-                    if (not base_header_num) and (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False)):
-                        b = (original_text or "").strip()
-                        c = (new_text or "").strip()
-
-                        # Only attempt to "fix" text when the baseline was low-confidence.
-                        try:
-                            conf_thr = float(
-                                getattr(
-                                    self.hybrid_options,
-                                    "table_text_confidence_threshold",
-                                    getattr(self.hybrid_options, "confidence_threshold", 0.7),
-                                )
-                            )
-                        except Exception:
-                            conf_thr = float(getattr(self.hybrid_options, "confidence_threshold", 0.7) or 0.7)
-
-                        base_conf = float(getattr(cell, "confidence", 0.0) or 0.0)
-                        if base_conf >= conf_thr:
-                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
-                            if isinstance(self._last_update_diffs, list):
-                                self._last_update_diffs.append(
-                                    {
-                                        "bbox": _bbox_obj(cell),
-                                        "baseline": original_text,
-                                        "candidate": new_text,
-                                        "candidate_raw": new_text_raw,
-                                        "accepted": False,
-                                        "reason": "skip_text_high_conf",
-                                    }
-                                )
-                            continue
-
-                        # Prevent large spurious expansions.
-                        if b and len(c) > int(1.6 * len(b)):
-                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
-                            if isinstance(self._last_update_diffs, list):
-                                self._last_update_diffs.append(
-                                    {
-                                        "bbox": _bbox_obj(cell),
-                                        "baseline": original_text,
-                                        "candidate": new_text,
-                                        "candidate_raw": new_text_raw,
-                                        "accepted": False,
-                                        "reason": "skip_text_expansion",
-                                    }
-                                )
-                            continue
-                        if b and len(c) < int(0.50 * len(b)):
-                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
-                            if isinstance(self._last_update_diffs, list):
-                                self._last_update_diffs.append(
-                                    {
-                                        "bbox": _bbox_obj(cell),
-                                        "baseline": original_text,
-                                        "candidate": new_text,
-                                        "candidate_raw": new_text_raw,
-                                        "accepted": False,
-                                        "reason": "skip_text_truncation",
-                                    }
-                                )
-                            continue
-
-                        # Require strong overlap in accent-stripped form (prevents unrelated replacements).
-                        nb = re.sub(r"\s+", " ", _strip_accents_basic(b)).strip().lower()
-                        nc = re.sub(r"\s+", " ", _strip_accents_basic(c)).strip().lower()
-                        if nb and nc:
-                            lcs = _lcs_len(nb, nc)
-                            denom = max(1, min(len(nb), len(nc)))
-                            try:
-                                min_ratio = float(getattr(self.hybrid_options, "table_text_min_accent_stripped_lcs_ratio", 0.65))
-                            except Exception:
-                                min_ratio = 0.65
-
-                            if (lcs / denom) < min_ratio:
-                                self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
-                                if isinstance(self._last_update_diffs, list):
-                                    self._last_update_diffs.append(
-                                        {
-                                            "bbox": _bbox_obj(cell),
-                                            "baseline": original_text,
-                                            "candidate": new_text,
-                                            "candidate_raw": new_text_raw,
-                                            "accepted": False,
-                                            "reason": "skip_text_low_overlap",
-                                        }
-                                    )
-                                continue
-
-                    if not _is_plausible_surya_replacement(
-                        baseline=original_text,
-                        candidate=new_text,
-                        max_len_ratio=float(getattr(self.hybrid_options, "max_replacement_len_ratio", 3.0)),
-                        max_abs_len=int(getattr(self.hybrid_options, "max_replacement_abs_len", 128)),
-                        require_same_charclass=bool(getattr(self.hybrid_options, "require_same_charclass", True)),
-                        # For non-numeric updates we want near-identity (mostly diacritics/typos).
-                            min_normalized_lcs_ratio=(
-                                0.35
-                                if (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False))
-                                else float(getattr(self.hybrid_options, "min_normalized_lcs_ratio", 0.15))
-                            ),
-                    ):
+                # Semantic guardrail: never rewrite short alnum codes as numbers unless the column
+                # is predominantly numeric and the rewrite is a plausible lookalike correction.
+                if _looks_like_short_alnum_code(original_text) and _is_strict_numeric_candidate(new_text):
+                    try:
+                        col_thr = float(getattr(self.hybrid_options, "numeric_column_min_ratio_for_alnum_to_numeric", 0.70))
+                    except Exception:
+                        col_thr = 0.70
+                    if (not in_table_region) or (col_num_ratio < col_thr):
                         self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
                         if isinstance(self._last_update_diffs, list):
                             self._last_update_diffs.append(
@@ -1409,15 +1970,51 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                     "candidate": new_text,
                                     "candidate_raw": new_text_raw,
                                     "accepted": False,
-                                    "reason": "skip_plausibility",
+                                    "reason": "skip_alnum_to_numeric_non_numeric_col",
                                 }
                             )
                         continue
 
-                    cell.text = new_text
-                    cell.orig = new_text  # Also update original
-                    self._stats["surya_cells_updated"] += 1
+                    # Require lookalike-consistent digits (e.g., S80 -> 580). If this doesn't hold,
+                    # the rewrite is likely a semantic change (code/label -> number).
+                    bd = _digits_only(_translate_ocr_lookalikes(original_text))
+                    cd = _digits_only(new_text)
+                    if (not bd) or (bd != cd):
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_alnum_to_numeric_not_lookalike",
+                                }
+                            )
+                        continue
 
+                    if sc_required_here and (not sc_agree):
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_numeric_self_inconsistent",
+                                }
+                            )
+                        continue
+
+                if (
+                    (not base_header_num)
+                    and (not base_num_like)
+                    and (not bool(getattr(self.hybrid_options, "update_non_numeric", False)))
+                ):
+                    self._stats["surya_update_skipped_non_numeric"] = int(self._stats.get("surya_update_skipped_non_numeric", 0)) + 1
                     if isinstance(self._last_update_diffs, list):
                         self._last_update_diffs.append(
                             {
@@ -1425,13 +2022,275 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                 "baseline": original_text,
                                 "candidate": new_text,
                                 "candidate_raw": new_text_raw,
-                                "accepted": True,
-                                "reason": "updated",
+                                "accepted": False,
+                                "reason": "skip_non_numeric",
                             }
                         )
+                    continue
 
-                    if self.hybrid_options.log_routing_stats:
-                        _log.debug(f"Surya re-OCR: '{original_text}' -> '{new_text}'")
+                # If enabled, only apply Vietnamese text updates inside inferred table regions.
+                if (
+                    (not base_header_num)
+                    and (not base_num_like)
+                    and bool(getattr(self.hybrid_options, "update_non_numeric", False))
+                    and bool(getattr(self.hybrid_options, "update_non_numeric_table_only", True))
+                    and (not in_table_region)
+                ):
+                    self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                    if isinstance(self._last_update_diffs, list):
+                        self._last_update_diffs.append(
+                            {
+                                "bbox": _bbox_obj(cell),
+                                "baseline": original_text,
+                                "candidate": new_text,
+                                "candidate_raw": new_text_raw,
+                                "accepted": False,
+                                "reason": "skip_text_not_in_table",
+                            }
+                        )
+                    continue
+
+                # Numeric acceptance hardening: if the baseline numeric tokens looked confident,
+                # do not overwrite the cell even if it was routed due to table heuristics / high thresholds.
+                if base_num_like and (not base_header_num) and bool(
+                    getattr(self.hybrid_options, "accept_numeric_only_if_low_token_conf", True)
+                ):
+                    try:
+                        thr = float(
+                            getattr(
+                                self.hybrid_options,
+                                "numeric_accept_token_confidence_threshold",
+                                min(0.75, float(getattr(self.hybrid_options, "number_confidence_threshold", 0.85))),
+                            )
+                        )
+                        if isinstance(routed_min_num_conf, (int, float)) and float(routed_min_num_conf) >= thr:
+                            # Exceptions for high-confidence baselines:
+                            # - tiny, high-value numeric fixes (single digit flip)
+                            # - self-consistent two-pass numeric recognition
+                            if (not _is_one_digit_substitution(original_text, new_text)) and (not sc_agree):
+                                self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                                if isinstance(self._last_update_diffs, list):
+                                    self._last_update_diffs.append(
+                                        {
+                                            "bbox": _bbox_obj(cell),
+                                            "baseline": original_text,
+                                            "candidate": new_text,
+                                            "candidate_raw": new_text_raw,
+                                            "accepted": False,
+                                            "reason": "skip_numeric_high_token_conf",
+                                        }
+                                    )
+                                continue
+                    except Exception:
+                        pass
+
+                # Additional numeric hardening: if the baseline looks numeric-like, only accept candidates that also look strictly numeric.
+                if base_num_like and (not base_header_num):
+                    strict_ok = _is_strict_numeric_candidate(new_text)
+                    if bool(getattr(cell, "_garbled_region", False)) or bool(getattr(cell, "_garbled_cell", False)):
+                        strict_ok = _is_strict_numeric_candidate_garbled(new_text)
+
+                    if not strict_ok:
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_candidate_not_numeric",
+                                }
+                            )
+                        continue
+
+                    if not _numeric_digit_ratio_ok(original_text, new_text):
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_numeric_truncation",
+                                }
+                            )
+                        continue
+
+                    # Additional digit-count plausibility in strongly numeric columns on garbled pages.
+                    # This helps prevent accepting short garbage numerics (e.g., '789') in a column of long amounts.
+                    if garbled_ctx and (col_ratio_eff >= 0.85) and (not _digit_count_plausible(new_text, median=col_digit_median)):
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_numeric_digit_count_implausible",
+                                }
+                            )
+                        continue
+
+                # Non-numeric hardening when enabled: only accept small, "diacritic-like" corrections.
+                if (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False)):
+                    b = (original_text or "").strip()
+                    c = (new_text or "").strip()
+
+                    # Only attempt to "fix" text when the baseline was low-confidence.
+                    try:
+                        conf_thr = float(
+                            getattr(
+                                self.hybrid_options,
+                                "table_text_confidence_threshold",
+                                getattr(self.hybrid_options, "confidence_threshold", 0.7),
+                            )
+                        )
+                    except Exception:
+                        conf_thr = float(getattr(self.hybrid_options, "confidence_threshold", 0.7) or 0.7)
+
+                    base_conf = float(getattr(cell, "confidence", 0.0) or 0.0)
+                    if base_conf >= conf_thr:
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_text_high_conf",
+                                }
+                            )
+                        continue
+
+                    # Prevent large spurious expansions.
+                    if b and len(c) > int(1.6 * len(b)):
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_text_expansion",
+                                }
+                            )
+                        continue
+                    if b and len(c) < int(0.50 * len(b)):
+                        self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                        if isinstance(self._last_update_diffs, list):
+                            self._last_update_diffs.append(
+                                {
+                                    "bbox": _bbox_obj(cell),
+                                    "baseline": original_text,
+                                    "candidate": new_text,
+                                    "candidate_raw": new_text_raw,
+                                    "accepted": False,
+                                    "reason": "skip_text_truncation",
+                                }
+                            )
+                        continue
+
+                    # Require strong overlap in accent-stripped form (prevents unrelated replacements).
+                    nb = re.sub(r"\s+", " ", _strip_accents_basic(b)).strip().lower()
+                    nc = re.sub(r"\s+", " ", _strip_accents_basic(c)).strip().lower()
+                    if nb and nc and (not bool(getattr(cell, "_garbled_cell", False))):
+                        lcs = _lcs_len(nb, nc)
+                        denom = max(1, min(len(nb), len(nc)))
+                        try:
+                            min_ratio = float(getattr(self.hybrid_options, "table_text_min_accent_stripped_lcs_ratio", 0.65))
+                        except Exception:
+                            min_ratio = 0.65
+
+                        if bool(getattr(cell, "_garbled_region", False)) or bool(getattr(cell, "_garbled_cell", False)):
+                            try:
+                                min_ratio = float(
+                                    getattr(
+                                        self.hybrid_options,
+                                        "garbled_text_min_accent_stripped_lcs_ratio",
+                                        min_ratio,
+                                    )
+                                )
+                            except Exception:
+                                pass
+ 
+                        if (lcs / denom) < min_ratio:
+                            self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                            if isinstance(self._last_update_diffs, list):
+                                self._last_update_diffs.append(
+                                    {
+                                        "bbox": _bbox_obj(cell),
+                                        "baseline": original_text,
+                                        "candidate": new_text,
+                                        "candidate_raw": new_text_raw,
+                                        "accepted": False,
+                                        "reason": "skip_text_low_overlap",
+                                    }
+                                )
+                            continue
+
+                if not _is_plausible_surya_replacement(
+                    baseline=original_text,
+                    candidate=new_text,
+                    max_len_ratio=float(getattr(self.hybrid_options, "max_replacement_len_ratio", 3.0)),
+                    max_abs_len=int(getattr(self.hybrid_options, "max_replacement_abs_len", 128)),
+                    require_same_charclass=bool(getattr(self.hybrid_options, "require_same_charclass", True)),
+                    # For non-numeric updates we want near-identity (mostly diacritics/typos).
+                    min_normalized_lcs_ratio=(
+                        0.0
+                        if (not base_num_like)
+                        and bool(getattr(self.hybrid_options, "update_non_numeric", False))
+                        and bool(getattr(cell, "_garbled_cell", False))
+                        else (
+                            0.35
+                            if (not base_num_like) and bool(getattr(self.hybrid_options, "update_non_numeric", False))
+                            else float(getattr(self.hybrid_options, "min_normalized_lcs_ratio", 0.15))
+                        )
+                    ),
+                ):
+                    self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                    if isinstance(self._last_update_diffs, list):
+                        self._last_update_diffs.append(
+                            {
+                                "bbox": _bbox_obj(cell),
+                                "baseline": original_text,
+                                "candidate": new_text,
+                                "candidate_raw": new_text_raw,
+                                "accepted": False,
+                                "reason": "skip_plausibility",
+                            }
+                        )
+                    continue
+
+                cell.text = new_text
+                cell.orig = new_text  # Also update original
+                self._stats["surya_cells_updated"] += 1
+
+                if isinstance(self._last_update_diffs, list):
+                    obj: dict[str, Any] = {
+                        "bbox": _bbox_obj(cell),
+                        "baseline": original_text,
+                        "candidate": new_text,
+                        "candidate_raw": new_text_raw,
+                        "accepted": True,
+                        "reason": "updated",
+                    }
+                    if sc_required_here:
+                        obj["candidate2"] = str(sc_text2 or "")
+                        obj["candidate2_raw"] = str(sc_cand2_raw.get(idx) or "")
+                    self._last_update_diffs.append(obj)
+
+                if self.hybrid_options.log_routing_stats:
+                    _log.debug(f"Surya re-OCR: '{original_text}' -> '{new_text}'")
             
         except Exception as e:
             self._stats["surya_failures"] += 1
@@ -1581,11 +2440,67 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                         if region_cells:
                             line_min_num_conf = _build_line_min_numeric_conf(df_result)
 
+                            garbled = bool(
+                                getattr(self.hybrid_options, "enable_garble_rescue", True)
+                            ) and bool(_tsv_looks_garbled(df_result))
+                            if garbled:
+                                self._stats["garbled_regions"] = int(self._stats.get("garbled_regions", 0)) + 1
+                            for c in region_cells:
+                                setattr(c, "_garbled_region", bool(garbled))
+                                try:
+                                    setattr(
+                                        c,
+                                        "_garbled_cell",
+                                        bool(
+                                            _cell_looks_garbled(
+                                                str(getattr(c, "text", "") or ""),
+                                                float(getattr(c, "confidence", 0.0) or 0.0),
+                                            )
+                                        ),
+                                    )
+                                except Exception:
+                                    setattr(c, "_garbled_cell", False)
+
                             # Routing policy: by default, route only inside inferred table regions.
                             # Docling layout/table predictions are not available yet at OCR stage,
                             # so we infer table regions directly from the TSV words.
                             table_boxes = _infer_table_boxes_from_tsv(df_result)
                             self._stats["inferred_table_boxes"] += len(table_boxes)
+
+                            # Garble rescue: when the TSV looks corrupted, fall back to treating the
+                            # entire region as table-like so Surya can act as a second-pass recognizer.
+                            if garbled and (not table_boxes):
+                                try:
+                                    from docling_core.types.doc.base import CoordOrigin
+
+                                    boxes: list[BoundingBox] = []
+                                    for _ix, row in df_result.iterrows():
+                                        try:
+                                            word_num = int(float(row.get("word_num") or 0))
+                                        except Exception:
+                                            word_num = 0
+                                        if word_num <= 0:
+                                            continue
+                                        left = float(row.get("left") or 0.0)
+                                        top = float(row.get("top") or 0.0)
+                                        width = float(row.get("width") or 0.0)
+                                        height = float(row.get("height") or 0.0)
+                                        if width <= 0 or height <= 0:
+                                            continue
+                                        boxes.append(
+                                            BoundingBox(
+                                                l=left,
+                                                t=top,
+                                                r=left + width,
+                                                b=top + height,
+                                                coord_origin=CoordOrigin.TOPLEFT,
+                                            )
+                                        )
+                                    u = _union_box(boxes)
+                                    if u is not None:
+                                        table_boxes = [u]
+                                except Exception:
+                                    pass
 
                             if not table_boxes:
                                 if bool(getattr(self.hybrid_options, "route_table_only", True)):
@@ -1597,8 +2512,16 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
 
                             route_table_only = bool(getattr(self.hybrid_options, "route_table_only", True))
                             force_surya_in_tables = bool(getattr(self.hybrid_options, "force_surya_in_table_regions", False))
+                            if garbled:
+                                force_surya_in_tables = True
 
                             cells_to_reocr: List[TextCell] = []
+
+                            # Column-type inference (numericness) for semantic guardrails.
+                            try:
+                                _annotate_table_column_numericness(region_cells, table_boxes)
+                            except Exception:
+                                pass
                             for c in region_cells:
                                 # IMPORTANT: routing/table overlap must use the same coordinate system.
                                 # - `table_boxes` are inferred from TSV word boxes (region-image pixel coords).
@@ -1757,6 +2680,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "skipped_header_numeric": int(self._stats.get("skipped_header_numeric", 0)),
             "skipped_missing_region_bbox": int(self._stats.get("skipped_missing_region_bbox", 0)),
             "inferred_table_boxes": int(self._stats.get("inferred_table_boxes", 0)),
+            "garbled_regions": int(self._stats.get("garbled_regions", 0)),
             "surya_cells_updated": int(self._stats.get("surya_cells_updated", 0)),
             "surya_update_skipped_sanity": int(self._stats.get("surya_update_skipped_sanity", 0)),
             "surya_update_skipped_count_mismatch": int(self._stats.get("surya_update_skipped_count_mismatch", 0)),
@@ -1787,6 +2711,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "skipped_header_numeric": 0,
             "skipped_missing_region_bbox": 0,
             "inferred_table_boxes": 0,
+            "garbled_regions": 0,
             "surya_cells_updated": 0,
             "surya_update_skipped_sanity": 0,
             "surya_update_skipped_count_mismatch": 0,
