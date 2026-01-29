@@ -155,6 +155,7 @@ def _normalize_for_numeric_likeness(s: str) -> str:
 
 _SUSPICIOUS_NUMERIC_LOOKALIKE_RE = re.compile(r"[OoIlSB]")
 _SUSPICIOUS_NUMERIC_SEP_GLITCH_RE = re.compile(r"[.,]\s*[.,]")
+_SUSPICIOUS_NUMERIC_THOUSANDS_RE = re.compile(r"(?x)^(?:\(\s*)?-?\s*\d{1,3}(?:[\.,]\d{3}){2,}\s*(?:\))?$")
 
 
 def _is_suspicious_numeric_ocr(text: str) -> bool:
@@ -169,6 +170,17 @@ def _is_suspicious_numeric_ocr(text: str) -> bool:
         return False
 
     has_digit = any(ch.isdigit() for ch in s)
+
+    # Missing thousands separators is a common OCR error (e.g., "24327" vs "2.327").
+    # Route long digit-only tokens so Surya can restore formatting.
+    compact_ws = re.sub(r"\s+", "", s)
+    if compact_ws.isdigit() and len(compact_ws) >= 5:
+        return True
+
+    # Thousand-grouped large numbers are high-impact; route for a second opinion even when
+    # Tesseract confidence is high (acceptance still remains conservative).
+    if _SUSPICIOUS_NUMERIC_THOUSANDS_RE.fullmatch(compact_ws):
+        return True
 
     # Unbalanced parentheses in numeric cells are common OCR artifacts.
     if has_digit and ((s.startswith("(") and (not s.endswith(")"))) or (s.endswith(")") and (not s.startswith("(")))):
@@ -431,7 +443,7 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     # Separate acceptance threshold for numeric token confidence.
     # This should usually be <= number_confidence_threshold, otherwise we may overwrite
     # correct numbers that Tesseract scored moderately-high.
-    numeric_accept_token_confidence_threshold: float = 0.75
+    numeric_accept_token_confidence_threshold: float = 0.85
 
     # Logging
     log_routing_stats: bool = True
@@ -545,7 +557,7 @@ def _infer_table_boxes_from_tsv(df_result) -> List[BoundingBox]:
             rows.append(cur)
 
         def row_is_table_like(r: List[dict[str, Any]]) -> bool:
-            if len(r) < 6:
+            if len(r) < 5:
                 return False
             r_sorted = sorted(r, key=lambda w: w["x"])
             xs = [w["x"] for w in r_sorted]
@@ -561,7 +573,7 @@ def _infer_table_boxes_from_tsv(df_result) -> List[BoundingBox]:
             num_ratio = num_like / max(1, len(r))
 
             # tables tend to have >=3 columns and decent numeric density
-            return (col_groups >= 3 and num_ratio >= 0.15) or (col_groups >= 4)
+            return (col_groups >= 3 and num_ratio >= 0.12) or (col_groups >= 4)
 
         row_boxes: List[Optional[BoundingBox]] = []
         row_flags: List[bool] = []
@@ -593,7 +605,21 @@ def _infer_table_boxes_from_tsv(df_result) -> List[BoundingBox]:
         if sum(1 for f in row_flags if f) < 2:
             return []
 
-        return bands
+        # Pad bands so edge cells (row labels / rightmost numbers) are still considered in-table.
+        pad_x = max(10.0, float(median_h) * 1.0)
+        pad_y = max(4.0, float(median_h) * 0.35)
+        padded: List[BoundingBox] = []
+        for b in bands:
+            padded.append(
+                BoundingBox(
+                    l=float(b.l) - pad_x,
+                    t=float(b.t) - pad_y,
+                    r=float(b.r) + pad_x,
+                    b=float(b.b) + pad_y,
+                    coord_origin=b.coord_origin,
+                )
+            )
+        return padded
     except Exception:
         return []
 
@@ -960,6 +986,18 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             # Normalize whitespace.
             s2 = s2.replace("\u00a0", " ")
             s2 = re.sub(r"\s+", " ", s2).strip()
+
+            # Normalize non-ASCII digits to ASCII (e.g., Arabic-Indic digits).
+            out_chars: list[str] = []
+            for ch in s2:
+                if ch.isdigit() and (ch < "0" or ch > "9"):
+                    try:
+                        out_chars.append(str(unicodedata.digit(ch)))
+                        continue
+                    except Exception:
+                        pass
+                out_chars.append(ch)
+            s2 = "".join(out_chars)
             return s2
 
         def _normalize_numeric_replacement(*, baseline: str, candidate: str) -> str:
@@ -987,6 +1025,17 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
 
         def _digits_only(s: str) -> str:
             return "".join(ch for ch in (s or "") if ch.isdigit())
+
+        def _is_one_digit_substitution(baseline: str, candidate: str) -> bool:
+            """True if numeric digit strings differ by exactly one digit (same length)."""
+            bd = _digits_only(baseline)
+            cd = _digits_only(candidate)
+            if not bd or not cd:
+                return False
+            if len(bd) != len(cd):
+                return False
+            diffs = sum(1 for a, b in zip(bd, cd) if a != b)
+            return diffs == 1
 
         def _numeric_digit_ratio_ok(baseline: str, candidate: str) -> bool:
             """Reject catastrophic truncations like 8.283.166.222 -> 789."""
@@ -1197,19 +1246,23 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                 )
                             )
                             if isinstance(routed_min_num_conf, (int, float)) and float(routed_min_num_conf) >= thr:
-                                self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
-                                if isinstance(self._last_update_diffs, list):
-                                    self._last_update_diffs.append(
-                                        {
-                                            "bbox": _bbox_obj(cell),
-                                            "baseline": original_text,
-                                            "candidate": new_text,
-                                            "candidate_raw": new_text_raw,
-                                            "accepted": False,
-                                            "reason": "skip_numeric_high_token_conf",
-                                        }
-                                    )
-                                continue
+                                # Exception: allow tiny, high-value numeric fixes (single digit flip)
+                                # even when token confidence is high.
+                                # This catches cases like 110.858.786 -> 110.859.786.
+                                if not _is_one_digit_substitution(original_text, new_text):
+                                    self._stats["surya_update_skipped_sanity"] = int(self._stats.get("surya_update_skipped_sanity", 0)) + 1
+                                    if isinstance(self._last_update_diffs, list):
+                                        self._last_update_diffs.append(
+                                            {
+                                                "bbox": _bbox_obj(cell),
+                                                "baseline": original_text,
+                                                "candidate": new_text,
+                                                "candidate_raw": new_text_raw,
+                                                "accepted": False,
+                                                "reason": "skip_numeric_high_token_conf",
+                                            }
+                                        )
+                                    continue
                         except Exception:
                             pass
 
@@ -1570,6 +1623,26 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                     self._stats["skipped_header_numeric"] += 1
                                 key = getattr(c, "_tsv_line_key", None)
                                 min_num_conf = line_min_num_conf.get(key) if isinstance(key, tuple) else None
+                                # If line-level confidence is not low enough to trigger routing, fall back to
+                                # a bbox-scoped min confidence over numeric-like TSV words. This helps catch
+                                # cases where a single digit is misread with low confidence even when the
+                                # overall cell confidence is high.
+                                if (
+                                    in_table
+                                    and is_num_like
+                                    and (not is_header_num)
+                                    and (
+                                        (min_num_conf is None)
+                                        or (min_num_conf >= float(getattr(self.hybrid_options, "number_confidence_threshold", 0.85)))
+                                    )
+                                ):
+                                    try:
+                                        bbox_min_conf = _tesseract_word_min_conf_in_bbox(df_result, rb)
+                                        if isinstance(bbox_min_conf, (int, float)):
+                                            if (min_num_conf is None) or (float(bbox_min_conf) < float(min_num_conf)):
+                                                min_num_conf = float(bbox_min_conf)
+                                    except Exception:
+                                        pass
                                 setattr(c, "_min_numeric_token_conf", min_num_conf)
 
                                 is_suspicious_num = False

@@ -288,6 +288,37 @@ def extract_docling_tables_grid(doc_dict: Dict[str, Any]) -> List[List[str]]:
     return merged
 
 
+def _markdown_table_to_rows(md_text: str) -> List[List[str]]:
+    """Best-effort parse of the first markdown table block.
+    """
+    lines = (md_text or "").splitlines()
+    table_lines: List[str] = []
+    in_table = False
+
+    for ln in lines:
+        s = ln.strip("\n")
+        if not s:
+            if in_table:
+                break
+            continue
+        if "|" in s and s.lstrip().startswith("|"):
+            in_table = True
+            table_lines.append(s)
+        elif in_table:
+            break
+
+    rows: List[List[str]] = []
+    for tl in table_lines:
+        # Skip separator rows like: | --- | --- |
+        if re.fullmatch(r"\|?\s*[-: ]+(\|\s*[-: ]+)+\|?\s*", tl):
+            continue
+        parts = [p.strip() for p in tl.strip().strip("|").split("|")]
+        if parts:
+            rows.append(parts)
+
+    return rows
+
+
 def _coerce_bbox_to_tuple(bbox: Any) -> Optional[tuple[float, float, float, float]]:
     if not isinstance(bbox, dict):
         return None
@@ -1091,7 +1122,7 @@ class PageLevelBenchmark:
             )
             pipeline_options.do_ocr = True
             pipeline_options.do_table_structure = True
-            pipeline_options.table_structure_options.do_cell_matching = True
+            # Docling table structure options vary across versions; keep defaults.
             # HybridPdfPipeline will read lang/force_full_page_ocr from these options.
             pipeline_options.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=["vie"])
 
@@ -1180,12 +1211,26 @@ class PageLevelBenchmark:
             doc.close()
             return "", {}
 
+        import os
         import tempfile
         import time as _time
+        import uuid
 
-        tmp_path = Path(tempfile.gettempdir()) / f"docling_single_{page_num}_{_time.time_ns()}.pdf"
+        # Temp file must be unique across concurrent benchmark processes.
+        # time_ns() alone can collide on Windows when multiple processes start together.
+        tmp_path = (
+            Path(tempfile.gettempdir())
+            / f"docling_single_{page_num}_{os.getpid()}_{_time.time_ns()}_{uuid.uuid4().hex}.pdf"
+        )
         new_doc = fitz.open()
         new_doc.insert_pdf(doc, from_page=page_num - 1, to_page=page_num - 1)
+
+        # Best-effort cleanup in case a prior crash left a file behind.
+        try:
+            tmp_path.unlink(missing_ok=True)
+        except Exception:
+            pass
+
         new_doc.save(str(tmp_path))
         new_doc.close()
         doc.close()
@@ -1374,7 +1419,7 @@ class PageLevelBenchmark:
                 )
                 pipeline_options.do_ocr = True
                 pipeline_options.do_table_structure = True
-                pipeline_options.table_structure_options.do_cell_matching = True
+                # Docling table structure options vary across versions; keep defaults.
                 pipeline_options.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=["vie"])
 
                 ocr_text_raw, ocr_doc_dict = self._convert_pdf_page_with_docling_pipeline(
@@ -1397,7 +1442,7 @@ class PageLevelBenchmark:
                 )
                 pipeline_options.do_ocr = True
                 pipeline_options.do_table_structure = True
-                pipeline_options.table_structure_options.do_cell_matching = True
+                # Docling table structure options vary across versions; keep defaults.
                 pipeline_options.ocr_options = HybridOcrOptions(
                     force_full_page_ocr=True,
                     lang=["vie"],
