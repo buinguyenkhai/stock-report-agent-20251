@@ -101,15 +101,112 @@ if TYPE_CHECKING:
     from typing import Tuple as _TupleBoolBoolFloat
 
 
-_HEADER_NUMERIC_RE = re.compile(r"(?ix)^(?:q[1-4][./-]?\d{4}|note\s*\d+(?:\.\d+)*|ghi\s*chu\s*\d+(?:\.\d+)*)$")
+_HEADER_NUMERIC_RE = re.compile(
+    r"(?ix)^(?:"
+    r"q[1-4][./-]?\d{4}"
+    r"|note\s*\d+(?:\.\d+)*"
+    r"|ghi\s*chu\s*\d+(?:\.\d+)*"
+    r"|[ivxlcdm]{1,10}"
+    r"|[a-z]{1,3}\s*\d{1,3}"
+    r")$"
+)
 
 
 def _normalize_for_numeric_likeness(s: str) -> str:
     s = (s or "").strip()
     if not s:
         return ""
+
+    s_low = s.lower()
+    has_digit = any(ch.isdigit() for ch in s)
+    has_currency_token = bool(re.search(r"(?i)\b(vnd|vnđ|usd|eur)\b", s))
+    # Treat 'đ' as a currency symbol only when there is numeric context.
+    has_currency_symbol = ("₫" in s) or (("đ" in s_low) and has_digit)
+    has_currency = has_currency_token or has_currency_symbol
+
+    # Avoid mapping arbitrary Vietnamese words into digits.
+    # Only translate lookalikes when the token is already numeric (has digits/currency), or when
+    # it is a long token composed entirely of OCR lookalikes (+ optional numeric punctuation).
+    if not has_digit and not has_currency:
+        compact = re.sub(r"\s+", "", s)
+
+        # Don't reinterpret roman numerals as arabic digits.
+        if re.fullmatch(r"(?i)[ivxlcdm]+", compact or ""):
+            return s
+
+        if len(compact) < 4:
+            return s
+
+        # Pure lookalike-only token (common OCR: "lOOO" => "1000").
+        if re.fullmatch(r"[OoIlSB]+", compact):
+            trans = str.maketrans({"O": "0", "o": "0", "I": "1", "l": "1", "S": "5", "B": "8"})
+            return s.translate(trans)
+
+        # Lookalikes with punctuation (e.g. "O.OO" / "l,OOO").
+        if re.fullmatch(r"[OoIlSB\.,/%()\+\-]+", compact) and re.search(r"[OoIlSB]", compact):
+            trans = str.maketrans({"O": "0", "o": "0", "I": "1", "l": "1", "S": "5", "B": "8"})
+            return s.translate(trans)
+
+        return s
+
     trans = str.maketrans({"O": "0", "o": "0", "I": "1", "l": "1", "S": "5", "B": "8"})
     return s.translate(trans)
+
+
+_SUSPICIOUS_NUMERIC_LOOKALIKE_RE = re.compile(r"[OoIlSB]")
+_SUSPICIOUS_NUMERIC_SEP_GLITCH_RE = re.compile(r"[.,]\s*[.,]")
+
+
+def _is_suspicious_numeric_ocr(text: str) -> bool:
+    """Heuristic: a numeric-like token that is likely wrong despite high confidence."""
+
+    s = (text or "").strip()
+    if not s:
+        return False
+
+    is_num_like, is_header_num, _ = numeric_likeness(s)
+    if (not is_num_like) or is_header_num:
+        return False
+
+    has_digit = any(ch.isdigit() for ch in s)
+
+    # Unbalanced parentheses in numeric cells are common OCR artifacts.
+    if has_digit and ((s.startswith("(") and (not s.endswith(")"))) or (s.endswith(")") and (not s.startswith("(")))):
+        return True
+
+    # Separator glitches.
+    if _SUSPICIOUS_NUMERIC_SEP_GLITCH_RE.search(s):
+        return True
+
+    # Unexpected junk characters in an otherwise numeric-like token.
+    # Keep this conservative: only trigger when we actually have digits.
+    remainder = s
+    remainder = re.sub(r"(?i)\b(vnd|vnđ|usd|eur)\b", "", remainder)
+    remainder = remainder.replace("đ", "").replace("Đ", "").replace("₫", "")
+    remainder = re.sub(r"[0-9\s\.,/%()\+\-]", "", remainder)
+    if has_digit and remainder and (not remainder.isalpha()):
+        return True
+
+    compact = re.sub(r"\s+", "", s)
+    if not _SUSPICIOUS_NUMERIC_LOOKALIKE_RE.search(compact):
+        return False
+
+    # Exclude short alnum codes like "A1" / "B12" (often row/column markers).
+    if re.fullmatch(r"(?i)[a-z]{1,3}\d{1,3}", compact) and len(compact) <= 4:
+        return False
+
+    has_digit = any(ch.isdigit() for ch in compact)
+    has_cue = any(ch in compact for ch in (".", ",", "%", "/", "(", ")", "+", "-"))
+    if has_digit or has_cue:
+        return True
+
+    # Pure lookalike tokens: require length to avoid routing single-letter labels.
+    if len(compact) >= 4 and re.fullmatch(r"[OoIlSB]+", compact):
+        if re.fullmatch(r"(?i)[ivxlcdm]+", compact):
+            return False
+        return True
+
+    return False
 
 
 _NUMERIC_TOKEN_RE = re.compile(r"(?ix)(?:\(\s*)?-?\s*\d[\d\s.,/%đvndusdEUR]*\d\s*\)?")
@@ -140,7 +237,7 @@ def numeric_likeness(text: str) -> tuple[bool, bool, float]:
 
     digit_ratio = digit_count / length
 
-    has_currency = any(x in s2 for x in ("vnd", "vnđ", "usd", "eur", "đ"))
+    has_currency = any(x in s2 for x in ("vnd", "vnđ", "usd", "eur")) or (("đ" in s2) and (digit_count > 0))
     has_percent = "%" in s2
     has_paren_neg = raw.startswith("(") and raw.endswith(")")
     has_sep = "," in s2 or "." in s2
@@ -307,6 +404,10 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     # Additional safety cap: even if thresholds are high, do not route cells with relatively high Tesseract confidence.
     # This prevents Surya from overwriting already-correct numbers.
     numeric_route_confidence_cap: float = 0.95
+
+    # If True, route numeric-like cells that look suspicious even when confidence is high.
+    route_suspicious_numeric: bool = True
+    suspicious_numeric_confidence_cap: float = 1.0
 
     # When False, we only apply Surya replacements to numeric-like cells.
     # This protects Vietnamese text recall and avoids wasting compute.
@@ -718,6 +819,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "eligible_cells": 0,
             "routed_low_conf": 0,
             "routed_low_num_conf": 0,
+            "routed_suspicious_numeric": 0,
             "skipped_no_table_clusters": 0,
             "skipped_header_numeric": 0,
             "skipped_missing_region_bbox": 0,
@@ -1469,34 +1571,55 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                 key = getattr(c, "_tsv_line_key", None)
                                 min_num_conf = line_min_num_conf.get(key) if isinstance(key, tuple) else None
                                 setattr(c, "_min_numeric_token_conf", min_num_conf)
+
+                                is_suspicious_num = False
+                                if (
+                                    in_table
+                                    and is_num_like
+                                    and (not is_header_num)
+                                    and bool(getattr(self.hybrid_options, "route_suspicious_numeric", True))
+                                ):
+                                    is_suspicious_num = _is_suspicious_numeric_ocr(str(c.text or ""))
+
                                 should_route = False
                                 if in_table and force_surya_in_tables and (not is_header_num):
                                     should_route = True
                                 else:
-                                    # Allow Vietnamese text improvements inside tables when enabled.
-                                    # This bypasses `route_numeric_only` for table text cells.
-                                    if (
-                                        in_table
-                                        and (not is_header_num)
-                                        and (not is_num_like)
-                                        and bool(getattr(self.hybrid_options, "update_non_numeric", False))
-                                    ):
+                                    # Ceiling-plan routing: if a numeric-like token looks suspicious, route it even if
+                                    # Tesseract confidence is high (still capped to avoid extreme over-routing).
+                                    if is_suspicious_num:
                                         try:
-                                            text_thr = float(
-                                                getattr(
-                                                    self.hybrid_options,
-                                                    "table_text_confidence_threshold",
-                                                    getattr(self.hybrid_options, "confidence_threshold", 0.7),
-                                                )
-                                            )
+                                            cap = float(getattr(self.hybrid_options, "suspicious_numeric_confidence_cap", 0.99))
                                         except Exception:
-                                            text_thr = float(getattr(self.hybrid_options, "confidence_threshold", 0.7) or 0.7)
-                                        should_route = float(getattr(c, "confidence", 0.0) or 0.0) < text_thr
+                                            cap = 0.99
+                                        should_route = float(getattr(c, "confidence", 0.0) or 0.0) <= cap
                                     else:
-                                        should_route = self._should_route_to_surya(c, min_numeric_token_conf=min_num_conf)
+                                        # Allow Vietnamese text improvements inside tables when enabled.
+                                        # This bypasses `route_numeric_only` for table text cells.
+                                        if (
+                                            in_table
+                                            and (not is_header_num)
+                                            and (not is_num_like)
+                                            and bool(getattr(self.hybrid_options, "update_non_numeric", False))
+                                        ):
+                                            try:
+                                                text_thr = float(
+                                                    getattr(
+                                                        self.hybrid_options,
+                                                        "table_text_confidence_threshold",
+                                                        getattr(self.hybrid_options, "confidence_threshold", 0.7),
+                                                    )
+                                                )
+                                            except Exception:
+                                                text_thr = float(getattr(self.hybrid_options, "confidence_threshold", 0.7) or 0.7)
+                                            should_route = float(getattr(c, "confidence", 0.0) or 0.0) < text_thr
+                                        else:
+                                            should_route = self._should_route_to_surya(c, min_numeric_token_conf=min_num_conf)
                                 if should_route:
                                     cells_to_reocr.append(c)
                                     self._stats["eligible_cells"] += 1
+                                    if is_suspicious_num:
+                                        self._stats["routed_suspicious_numeric"] = int(self._stats.get("routed_suspicious_numeric", 0)) + 1
                                     if min_num_conf is not None and (not is_header_num) and (
                                         min_num_conf < float(self.hybrid_options.number_confidence_threshold)
                                     ):
@@ -1556,6 +1679,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "eligible_cells": int(self._stats.get("eligible_cells", 0)),
             "routed_low_conf": int(self._stats.get("routed_low_conf", 0)),
             "routed_low_num_conf": int(self._stats.get("routed_low_num_conf", 0)),
+            "routed_suspicious_numeric": int(self._stats.get("routed_suspicious_numeric", 0)),
             "skipped_no_table_clusters": int(self._stats.get("skipped_no_table_clusters", 0)),
             "skipped_header_numeric": int(self._stats.get("skipped_header_numeric", 0)),
             "skipped_missing_region_bbox": int(self._stats.get("skipped_missing_region_bbox", 0)),
@@ -1585,6 +1709,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
             "eligible_cells": 0,
             "routed_low_conf": 0,
             "routed_low_num_conf": 0,
+            "routed_suspicious_numeric": 0,
             "skipped_no_table_clusters": 0,
             "skipped_header_numeric": 0,
             "skipped_missing_region_bbox": 0,
