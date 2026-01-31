@@ -1,0 +1,171 @@
+{
+  "company": "VPB",
+  "page_number": 55,
+  "hybrid_ocr_stats": {
+    "total_cells": 266,
+    "surya_cells": 11,
+    "tesseract_cells": 255,
+    "table_cells": 146,
+    "non_table_cells": 120,
+    "eligible_cells": 11,
+    "routed_low_conf": 2,
+    "routed_low_num_conf": 9,
+    "routed_suspicious_numeric": 2,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 6,
+    "garbled_regions": 0,
+    "surya_cells_updated": 5,
+    "surya_update_skipped_sanity": 0,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 4.135338345864661
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 76.66666666666667,
+        "t": 98.0,
+        "r": 90.0,
+        "b": 105.66666666666667
+      },
+      "baseline": "46.",
+      "candidate": "16.",
+      "candidate_raw": "16.",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 77.33333333333333,
+        "t": 121.0,
+        "r": 95.66666666666667,
+        "b": 129.0
+      },
+      "baseline": "76.4",
+      "candidate": "16.4",
+      "candidate_raw": "16.4",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 393.3333333333333,
+        "t": 237.66666666666666,
+        "r": 427.0,
+        "b": 245.33333333333334
+      },
+      "baseline": "1452.256",
+      "candidate": "152,256",
+      "candidate_raw": "152,256",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 248.33333333333334,
+        "t": 249.66666666666666,
+        "r": 266.0,
+        "b": 257.3333333333333
+      },
+      "baseline": "năm",
+      "candidate": "năm",
+      "candidate_raw": "năm",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 200.33333333333334,
+        "t": 287.0,
+        "r": 213.66666666666666,
+        "b": 296.3333333333333
+      },
+      "baseline": "36)",
+      "candidate": "36)",
+      "candidate_raw": "36)",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 397.0,
+        "t": 288.3333333333333,
+        "r": 425.3333333333333,
+        "b": 295.6666666666667
+      },
+      "baseline": "73.493",
+      "candidate": "73.493",
+      "candidate_raw": "73.493",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 200.33333333333334,
+        "t": 312.0,
+        "r": 213.66666666666666,
+        "b": 321.6666666666667
+      },
+      "baseline": "38)",
+      "candidate": "35)",
+      "candidate_raw": "35)",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 395.3333333333333,
+        "t": 437.6666666666667,
+        "r": 425.0,
+        "b": 445.3333333333333
+      },
+      "baseline": "36.756",
+      "candidate": "36.756",
+      "candidate_raw": "36.756",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 502.3333333333333,
+        "t": 238.0,
+        "r": 531.0,
+        "b": 245.66666666666666
+      },
+      "baseline": "79.6876",
+      "candidate": "79.676",
+      "candidate_raw": "79.676",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 497.0,
+        "t": 331.6666666666667,
+        "r": 530.6666666666666,
+        "b": 339.3333333333333
+      },
+      "baseline": "152.256",
+      "candidate": "152.256",
+      "candidate_raw": "152.256",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 496.3333333333333,
+        "t": 464.6666666666667,
+        "r": 530.0,
+        "b": 472.3333333333333
+      },
+      "baseline": "104.857",
+      "candidate": "104.857",
+      "candidate_raw": "104.857",
+      "accepted": false,
+      "reason": "no_change"
+    }
+  ]
+}

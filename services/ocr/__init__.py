@@ -23,7 +23,7 @@ except ImportError:
     HybridPdfPipeline = None
 
 
-def get_ocr_service(service_type: str = "docling") -> OCRStrategy:
+def get_ocr_service(service_type: str = "hybrid") -> OCRStrategy:
     """
     Factory function to get OCR service.
     
@@ -36,11 +36,13 @@ def get_ocr_service(service_type: str = "docling") -> OCRStrategy:
     if service_type == "docling":
         return DoclingOCRService()
     elif service_type == "marker":
-        return MarkerOCRService(use_llm=False)  # No LLM by default for speed
+        return MarkerOCRService()
     elif service_type == "hybrid":
-        return ConfidenceGatedOCRService()
+        # Use the high-quality Docling-integrated Hybrid pipeline
+        return DoclingOCRService(use_hybrid=True)
     else:
         raise ValueError(f"Unknown OCR service: {service_type}. Available: docling, marker, hybrid")
+
 
 
 __all__ = [

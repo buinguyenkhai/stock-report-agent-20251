@@ -1,0 +1,54 @@
+{
+  "company": "TCB",
+  "page_number": 59,
+  "hybrid_ocr_stats": {
+    "total_cells": 387,
+    "surya_cells": 2,
+    "tesseract_cells": 385,
+    "table_cells": 214,
+    "non_table_cells": 173,
+    "eligible_cells": 2,
+    "routed_low_conf": 2,
+    "routed_low_num_conf": 0,
+    "routed_suspicious_numeric": 0,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 5,
+    "garbled_regions": 0,
+    "surya_cells_updated": 2,
+    "surya_update_skipped_sanity": 0,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 0.516795865633075
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 353.6666666666667,
+        "t": 330.3333333333333,
+        "r": 372.0,
+        "b": 339.6666666666667
+      },
+      "baseline": "gồm",
+      "candidate": "gôm",
+      "candidate_raw": "gôm",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 362.6666666666667,
+        "t": 342.0,
+        "r": 381.3333333333333,
+        "b": 349.0
+      },
+      "baseline": "thiệt",
+      "candidate": "thiêt",
+      "candidate_raw": "thiêt",
+      "accepted": true,
+      "reason": "updated"
+    }
+  ]
+}

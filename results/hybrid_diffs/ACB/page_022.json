@@ -1,0 +1,1874 @@
+{
+  "company": "ACB",
+  "page_number": 22,
+  "hybrid_ocr_stats": {
+    "total_cells": 275,
+    "surya_cells": 142,
+    "tesseract_cells": 133,
+    "table_cells": 142,
+    "non_table_cells": 133,
+    "eligible_cells": 142,
+    "routed_low_conf": 62,
+    "routed_low_num_conf": 80,
+    "routed_suspicious_numeric": 19,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 1,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 5,
+    "garbled_regions": 1,
+    "surya_cells_updated": 12,
+    "surya_update_skipped_sanity": 37,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 51.63636363636363
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 87.33333333333333,
+        "t": 41.333333333333336,
+        "r": 118.0,
+        "b": 52.0
+      },
+      "baseline": "NGÂN",
+      "candidate": "NGÂN",
+      "candidate_raw": "NGÂN",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 122.66666666666667,
+        "t": 41.666666666666664,
+        "r": 153.66666666666666,
+        "b": 52.0
+      },
+      "baseline": "HÀNG",
+      "candidate": "HÀNG",
+      "candidate_raw": "HÀNG",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 157.66666666666666,
+        "t": 43.666666666666664,
+        "r": 206.33333333333334,
+        "b": 52.0
+      },
+      "baseline": "THƯƠNG",
+      "candidate": "THƯƠNG",
+      "candidate_raw": "THƯƠNG",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 210.66666666666666,
+        "t": 44.0,
+        "r": 229.0,
+        "b": 54.333333333333336
+      },
+      "baseline": "MẠI",
+      "candidate": "MĄI",
+      "candidate_raw": "MĄI",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 233.33333333333334,
+        "t": 42.0,
+        "r": 248.66666666666666,
+        "b": 52.0
+      },
+      "baseline": "CỎ",
+      "candidate": "СÒ",
+      "candidate_raw": "СÒ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 253.0,
+        "t": 42.0,
+        "r": 282.3333333333333,
+        "b": 52.333333333333336
+      },
+      "baseline": "PHÀN",
+      "candidate": "PHẦN",
+      "candidate_raw": "PHẦN",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 286.0,
+        "t": 41.666666666666664,
+        "r": 293.3333333333333,
+        "b": 52.333333333333336
+      },
+      "baseline": "Á",
+      "candidate": "Á",
+      "candidate_raw": "Á",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 297.6666666666667,
+        "t": 41.666666666666664,
+        "r": 327.6666666666667,
+        "b": 52.333333333333336
+      },
+      "baseline": "CHÂU",
+      "candidate": "CHÂU",
+      "candidate_raw": "CHÂU",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 110.66666666666667,
+        "t": 181.66666666666666,
+        "r": 123.33333333333333,
+        "b": 191.66666666666666
+      },
+      "baseline": "Số",
+      "candidate": "Số",
+      "candidate_raw": "Số",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 127.33333333333333,
+        "t": 183.33333333333334,
+        "r": 155.33333333333334,
+        "b": 194.0
+      },
+      "baseline": "lượng",
+      "candidate": "lượng",
+      "candidate_raw": "lượng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 159.66666666666666,
+        "t": 181.66666666666666,
+        "r": 170.66666666666666,
+        "b": 191.66666666666666
+      },
+      "baseline": "cổ",
+      "candidate": "СÕ",
+      "candidate_raw": "СÕ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 174.66666666666666,
+        "t": 181.66666666666666,
+        "r": 200.0,
+        "b": 194.0
+      },
+      "baseline": "phiếu",
+      "candidate": "phiếu",
+      "candidate_raw": "phiếu",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 204.0,
+        "t": 183.66666666666666,
+        "r": 227.33333333333334,
+        "b": 194.0
+      },
+      "baseline": "đăng",
+      "candidate": "đăng",
+      "candidate_raw": "đăng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 231.33333333333334,
+        "t": 183.33333333333334,
+        "r": 241.33333333333334,
+        "b": 194.0
+      },
+      "baseline": "ký",
+      "candidate": "ký",
+      "candidate_raw": "ký",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 245.66666666666666,
+        "t": 183.33333333333334,
+        "r": 266.0,
+        "b": 194.0
+      },
+      "baseline": "phát",
+      "candidate": "phát",
+      "candidate_raw": "phát",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 269.6666666666667,
+        "t": 183.33333333333334,
+        "r": 292.6666666666667,
+        "b": 192.0
+      },
+      "baseline": "hành",
+      "candidate": "hành",
+      "candidate_raw": "hành",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 110.66666666666667,
+        "t": 197.33333333333334,
+        "r": 123.0,
+        "b": 207.33333333333334
+      },
+      "baseline": "Số",
+      "candidate": "Số",
+      "candidate_raw": "Số",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 127.33333333333333,
+        "t": 199.0,
+        "r": 155.33333333333334,
+        "b": 209.66666666666666
+      },
+      "baseline": "lượng",
+      "candidate": "lượng",
+      "candidate_raw": "lượng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 159.66666666666666,
+        "t": 197.0,
+        "r": 170.66666666666666,
+        "b": 207.33333333333334
+      },
+      "baseline": "cổ",
+      "candidate": "сô",
+      "candidate_raw": "сô",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 174.66666666666666,
+        "t": 197.33333333333334,
+        "r": 200.0,
+        "b": 209.66666666666666
+      },
+      "baseline": "phiếu",
+      "candidate": "phiếu",
+      "candidate_raw": "phiếu",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 253.0,
+        "t": 199.0,
+        "r": 275.6666666666667,
+        "b": 209.66666666666666
+      },
+      "baseline": "công",
+      "candidate": "công",
+      "candidate_raw": "công",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 280.0,
+        "t": 199.33333333333334,
+        "r": 308.3333333333333,
+        "b": 209.66666666666666
+      },
+      "baseline": "chúng",
+      "candidate": "chúng",
+      "candidate_raw": "chúng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 124.33333333333333,
+        "t": 216.33333333333334,
+        "r": 129.66666666666666,
+        "b": 222.0
+      },
+      "baseline": "+",
+      "candidate": "+",
+      "candidate_raw": "+",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 133.66666666666666,
+        "t": 213.0,
+        "r": 147.0,
+        "b": 223.0
+      },
+      "baseline": "Cổ",
+      "candidate": "Сổ",
+      "candidate_raw": "Сổ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 151.0,
+        "t": 213.0,
+        "r": 176.66666666666666,
+        "b": 225.33333333333334
+      },
+      "baseline": "phiếu",
+      "candidate": "phiếu",
+      "candidate_raw": "phiếu",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 181.0,
+        "t": 213.0,
+        "r": 198.33333333333334,
+        "b": 225.33333333333334
+      },
+      "baseline": "phổ",
+      "candidate": "phổ",
+      "candidate_raw": "phổ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 201.66666666666666,
+        "t": 215.0,
+        "r": 228.33333333333334,
+        "b": 225.33333333333334
+      },
+      "baseline": "thông",
+      "candidate": "thông",
+      "candidate_raw": "thông",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 133.66666666666666,
+        "t": 228.66666666666666,
+        "r": 147.0,
+        "b": 239.0
+      },
+      "baseline": "Cổ",
+      "candidate": "Cổ",
+      "candidate_raw": "Cổ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 151.0,
+        "t": 228.66666666666666,
+        "r": 176.66666666666666,
+        "b": 241.0
+      },
+      "baseline": "phiếu",
+      "candidate": "phiếu",
+      "candidate_raw": "phiếu",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 127.33333333333333,
+        "t": 246.33333333333334,
+        "r": 155.33333333333334,
+        "b": 257.0
+      },
+      "baseline": "lượng",
+      "candidate": "lượng",
+      "candidate_raw": "lượng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 174.33333333333334,
+        "t": 244.66666666666666,
+        "r": 200.0,
+        "b": 257.0
+      },
+      "baseline": "phiếu",
+      "candidate": "phiếu",
+      "candidate_raw": "phiếu",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 204.0,
+        "t": 246.33333333333334,
+        "r": 227.33333333333334,
+        "b": 257.0
+      },
+      "baseline": "đang",
+      "candidate": "đang",
+      "candidate_raw": "đang",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 124.0,
+        "t": 263.3333333333333,
+        "r": 129.66666666666666,
+        "b": 269.0
+      },
+      "baseline": "+",
+      "candidate": "+",
+      "candidate_raw": "+",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 133.66666666666666,
+        "t": 260.0,
+        "r": 146.66666666666666,
+        "b": 270.3333333333333
+      },
+      "baseline": "Cổ",
+      "candidate": "Cổ",
+      "candidate_raw": "Cổ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 151.0,
+        "t": 260.0,
+        "r": 176.66666666666666,
+        "b": 272.3333333333333
+      },
+      "baseline": "phiếu",
+      "candidate": "phiếu",
+      "candidate_raw": "phiếu",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 181.0,
+        "t": 260.0,
+        "r": 198.0,
+        "b": 272.6666666666667
+      },
+      "baseline": "phổ",
+      "candidate": "phổ",
+      "candidate_raw": "phổ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 201.66666666666666,
+        "t": 262.0,
+        "r": 228.33333333333334,
+        "b": 272.3333333333333
+      },
+      "baseline": "thông",
+      "candidate": "thông",
+      "candidate_raw": "thông",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 386.0,
+        "t": 184.0,
+        "r": 455.3333333333333,
+        "b": 192.33333333333334
+      },
+      "baseline": "4.466.657.912",
+      "candidate": "4.466.657.912",
+      "candidate_raw": "4.466.657.912",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 386.0,
+        "t": 215.33333333333334,
+        "r": 455.3333333333333,
+        "b": 223.66666666666666
+      },
+      "baseline": "4.466.657.912",
+      "candidate": "4.466.657.912",
+      "candidate_raw": "4.466.657.912",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 386.0,
+        "t": 262.6666666666667,
+        "r": 455.0,
+        "b": 270.6666666666667
+      },
+      "baseline": "4.466.657.912",
+      "candidate": "4.466.657.912",
+      "candidate_raw": "4.466.657.912",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 479.6666666666667,
+        "t": 184.0,
+        "r": 548.3333333333334,
+        "b": 192.33333333333334
+      },
+      "baseline": "3.884.050.358",
+      "candidate": "3.884.050.358",
+      "candidate_raw": "3.884.050.358",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 479.6666666666667,
+        "t": 215.33333333333334,
+        "r": 548.3333333333334,
+        "b": 223.66666666666666
+      },
+      "baseline": "3.884.050.358",
+      "candidate": "3.884.050.358",
+      "candidate_raw": "3.884.050.358",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 479.6666666666667,
+        "t": 262.6666666666667,
+        "r": 548.3333333333334,
+        "b": 271.0
+      },
+      "baseline": "3.884.050.358",
+      "candidate": "3.884.050.358",
+      "candidate_raw": "3.884.050.358",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 133.66666666666666,
+        "t": 275.6666666666667,
+        "r": 146.66666666666666,
+        "b": 286.0
+      },
+      "baseline": "Cổ",
+      "candidate": "Сổ",
+      "candidate_raw": "Сổ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 151.0,
+        "t": 276.0,
+        "r": 176.66666666666666,
+        "b": 288.0
+      },
+      "baseline": "phiếu",
+      "candidate": "phiếu",
+      "candidate_raw": "phiếu",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 110.0,
+        "t": 372.6666666666667,
+        "r": 130.0,
+        "b": 383.0
+      },
+      "baseline": "Viên",
+      "candidate": "Vốn",
+      "candidate_raw": "Vốn",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 134.33333333333334,
+        "t": 374.3333333333333,
+        "r": 152.66666666666666,
+        "b": 383.0
+      },
+      "baseline": "sil",
+      "candidate": "chủ",
+      "candidate_raw": "chủ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 156.66666666666666,
+        "t": 374.3333333333333,
+        "r": 170.66666666666666,
+        "b": 383.0
+      },
+      "baseline": "s3",
+      "candidate": "sở",
+      "candidate_raw": "sở",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 174.33333333333334,
+        "t": 375.0,
+        "r": 194.0,
+        "b": 383.0
+      },
+      "baseline": "#iÊu",
+      "candidate": "hữu",
+      "candidate_raw": "hữu",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 305.0,
+        "t": 365.3333333333333,
+        "r": 318.3333333333333,
+        "b": 375.6666666666667
+      },
+      "baseline": "Số",
+      "candidate": "Số",
+      "candidate_raw": "Số",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 322.0,
+        "t": 367.3333333333333,
+        "r": 336.3333333333333,
+        "b": 375.6666666666667
+      },
+      "baseline": "dư",
+      "candidate": "dư",
+      "candidate_raw": "dư",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 378.0,
+        "t": 367.6666666666667,
+        "r": 403.0,
+        "b": 378.0
+      },
+      "baseline": "Tăng",
+      "candidate": "Tăng",
+      "candidate_raw": "Tăng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 447.3333333333333,
+        "t": 367.3333333333333,
+        "r": 473.6666666666667,
+        "b": 376.0
+      },
+      "baseline": "Giảm",
+      "candidate": "Giảm",
+      "candidate_raw": "Giảm",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 514.0,
+        "t": 365.6666666666667,
+        "r": 527.0,
+        "b": 376.0
+      },
+      "baseline": "Số",
+      "candidate": "Số",
+      "candidate_raw": "Số",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 531.0,
+        "t": 367.6666666666667,
+        "r": 545.0,
+        "b": 376.0
+      },
+      "baseline": "dư",
+      "candidate": "dư",
+      "candidate_raw": "dư",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 294.3333333333333,
+        "t": 381.0,
+        "r": 336.0,
+        "b": 394.6666666666667
+      },
+      "baseline": "1.1.2024",
+      "candidate": "1.1.2024",
+      "candidate_raw": "1.1.2024",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 361.0,
+        "t": 383.0,
+        "r": 388.0,
+        "b": 393.0
+      },
+      "baseline": "trong",
+      "candidate": "trong",
+      "candidate_raw": "trong",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 392.3333333333333,
+        "t": 382.3333333333333,
+        "r": 403.0,
+        "b": 393.0
+      },
+      "baseline": "kỳ",
+      "candidate": "kỳ",
+      "candidate_raw": "kỳ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 431.3333333333333,
+        "t": 383.0,
+        "r": 458.6666666666667,
+        "b": 393.0
+      },
+      "baseline": "trong",
+      "candidate": "trong",
+      "candidate_raw": "trong",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 463.0,
+        "t": 382.6666666666667,
+        "r": 474.0,
+        "b": 393.3333333333333
+      },
+      "baseline": "kỳ",
+      "candidate": "kỳ",
+      "candidate_raw": "kỳ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 474.3333333333333,
+        "t": 381.3333333333333,
+        "r": 483.3333333333333,
+        "b": 394.6666666666667
+      },
+      "baseline": "|",
+      "candidate": "",
+      "candidate_raw": "",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 491.0,
+        "t": 382.6666666666667,
+        "r": 545.0,
+        "b": 391.0
+      },
+      "baseline": "31.12.2024",
+      "candidate": "31.12.2024",
+      "candidate_raw": "31.12.2024",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 109.66666666666667,
+        "t": 408.3333333333333,
+        "r": 128.66666666666666,
+        "b": 418.3333333333333
+      },
+      "baseline": "Vốn",
+      "candidate": "Vốn",
+      "candidate_raw": "Vốn",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 132.66666666666666,
+        "t": 408.3333333333333,
+        "r": 152.66666666666666,
+        "b": 418.6666666666667
+      },
+      "baseline": "điều",
+      "candidate": "điều",
+      "candidate_raw": "điều",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 157.0,
+        "t": 410.3333333333333,
+        "r": 164.66666666666666,
+        "b": 420.0
+      },
+      "baseline": "lệ",
+      "candidate": "Ιệ",
+      "candidate_raw": "Ιệ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 275.6666666666667,
+        "t": 423.6666666666667,
+        "r": 279.3333333333333,
+        "b": 424.3333333333333
+      },
+      "baseline": "|.",
+      "candidate": "****",
+      "candidate_raw": "****",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 281.3333333333333,
+        "t": 409.0,
+        "r": 295.3333333333333,
+        "b": 424.3333333333333
+      },
+      "baseline": "38.",
+      "candidate": "38.",
+      "candidate_raw": "38.",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 297.0,
+        "t": 409.0,
+        "r": 335.6666666666667,
+        "b": 417.3333333333333
+      },
+      "baseline": "840.504",
+      "candidate": "840.504",
+      "candidate_raw": "840.504",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 355.6666666666667,
+        "t": 409.0,
+        "r": 403.0,
+        "b": 417.3333333333333
+      },
+      "baseline": "5.826.075",
+      "candidate": "5.826.075",
+      "candidate_raw": "5.826.075",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 471.6666666666667,
+        "t": 413.6666666666667,
+        "r": 475.0,
+        "b": 415.0
+      },
+      "baseline": "-",
+      "candidate": "-",
+      "candidate_raw": "-",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 491.6666666666667,
+        "t": 409.3333333333333,
+        "r": 504.6666666666667,
+        "b": 424.6666666666667
+      },
+      "baseline": "4.",
+      "candidate": "44.",
+      "candidate_raw": "44.",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 506.0,
+        "t": 409.3333333333333,
+        "r": 544.6666666666666,
+        "b": 417.6666666666667
+      },
+      "baseline": "666.579",
+      "candidate": "666.579",
+      "candidate_raw": "666.579",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 109.66666666666667,
+        "t": 429.3333333333333,
+        "r": 140.33333333333334,
+        "b": 439.6666666666667
+      },
+      "baseline": "Thặng",
+      "candidate": "Thặng",
+      "candidate_raw": "Thặng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 144.33333333333334,
+        "t": 429.3333333333333,
+        "r": 157.33333333333334,
+        "b": 437.6666666666667
+      },
+      "baseline": "dư",
+      "candidate": "dư",
+      "candidate_raw": "dư",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 161.0,
+        "t": 427.6666666666667,
+        "r": 177.66666666666666,
+        "b": 437.6666666666667
+      },
+      "baseline": "vốn",
+      "candidate": "vốn",
+      "candidate_raw": "vốn",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 181.66666666666666,
+        "t": 427.3333333333333,
+        "r": 192.66666666666666,
+        "b": 437.6666666666667
+      },
+      "baseline": "cỗ",
+      "candidate": "СÔ",
+      "candidate_raw": "СÔ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 185.33333333333334,
+        "t": 423.6666666666667,
+        "r": 189.0,
+        "b": 424.3333333333333
+      },
+      "baseline": "›ổ",
+      "candidate": "---",
+      "candidate_raw": "---",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 193.66666666666666,
+        "t": 422.3333333333333,
+        "r": 216.33333333333334,
+        "b": 441.6666666666667
+      },
+      "baseline": "phần",
+      "candidate": "phầr",
+      "candidate_raw": "phầr",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 217.66666666666666,
+        "t": 423.6666666666667,
+        "r": 227.0,
+        "b": 437.6666666666667
+      },
+      "baseline": "-",
+      "candidate": "1",
+      "candidate_raw": "1",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 289.6666666666667,
+        "t": 422.6666666666667,
+        "r": 312.6666666666667,
+        "b": 444.6666666666667
+      },
+      "baseline": "271.",
+      "candidate": "271",
+      "candidate_raw": "271",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 308.3333333333333,
+        "t": 422.6666666666667,
+        "r": 337.3333333333333,
+        "b": 445.0
+      },
+      "baseline": "1779",
+      "candidate": "1.779",
+      "candidate_raw": "1.779",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 400.0,
+        "t": 434.3333333333333,
+        "r": 403.0,
+        "b": 435.6666666666667
+      },
+      "baseline": "-",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 471.6666666666667,
+        "t": 434.3333333333333,
+        "r": 475.0,
+        "b": 435.6666666666667
+      },
+      "baseline": "-",
+      "candidate": "-",
+      "candidate_raw": "-",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 506.0,
+        "t": 424.0,
+        "r": 546.0,
+        "b": 438.0
+      },
+      "baseline": "271.779)|",
+      "candidate": "271.779",
+      "candidate_raw": "271.779",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 102.33333333333333,
+        "t": 447.0,
+        "r": 108.33333333333333,
+        "b": 464.0
+      },
+      "baseline": "|",
+      "candidate": "....",
+      "candidate_raw": "....",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 108.0,
+        "t": 448.3333333333333,
+        "r": 124.33333333333333,
+        "b": 462.6666666666667
+      },
+      "baseline": "Quỹ",
+      "candidate": "Qu",
+      "candidate_raw": "Qu",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 126.66666666666667,
+        "t": 448.6666666666667,
+        "r": 135.0,
+        "b": 462.6666666666667
+      },
+      "baseline": "‹",
+      "candidate": "Ž (",
+      "candidate_raw": "Ž (",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 133.33333333333334,
+        "t": 448.3333333333333,
+        "r": 146.33333333333334,
+        "b": 462.6666666666667
+      },
+      "baseline": "dự",
+      "candidate": "dự",
+      "candidate_raw": "dự",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 150.0,
+        "t": 448.3333333333333,
+        "r": 179.66666666666666,
+        "b": 459.0
+      },
+      "baseline": "phòng",
+      "candidate": "phòng",
+      "candidate_raw": "phòng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 183.33333333333334,
+        "t": 448.3333333333333,
+        "r": 194.0,
+        "b": 456.6666666666667
+      },
+      "baseline": "tài",
+      "candidate": "tài",
+      "candidate_raw": "tài",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 198.33333333333334,
+        "t": 448.3333333333333,
+        "r": 225.0,
+        "b": 462.6666666666667
+      },
+      "baseline": "chính",
+      "candidate": "chính",
+      "candidate_raw": "chính",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 279.3333333333333,
+        "t": 442.6666666666667,
+        "r": 295.3333333333333,
+        "b": 462.6666666666667
+      },
+      "baseline": "T",
+      "candidate": "7.",
+      "candidate_raw": "7.",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 296.6666666666667,
+        "t": 442.6666666666667,
+        "r": 322.3333333333333,
+        "b": 462.6666666666667
+      },
+      "baseline": "660.3",
+      "candidate": "660.3",
+      "candidate_raw": "660.3",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 318.3333333333333,
+        "t": 448.6666666666667,
+        "r": 336.6666666666667,
+        "b": 462.6666666666667
+      },
+      "baseline": "332",
+      "candidate": "332",
+      "candidate_raw": "332",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 355.6666666666667,
+        "t": 443.0,
+        "r": 362.0,
+        "b": 457.0
+      },
+      "baseline": "1.",
+      "candidate": "1.",
+      "candidate_raw": "1.",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 364.3333333333333,
+        "t": 441.6666666666667,
+        "r": 384.3333333333333,
+        "b": 464.3333333333333
+      },
+      "baseline": "608.",
+      "candidate": "608.",
+      "candidate_raw": "608.",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 384.3333333333333,
+        "t": 441.6666666666667,
+        "r": 398.0,
+        "b": 464.3333333333333
+      },
+      "baseline": "520",
+      "candidate": "52",
+      "candidate_raw": "52",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 471.6666666666667,
+        "t": 453.6666666666667,
+        "r": 475.0,
+        "b": 454.6666666666667
+      },
+      "baseline": "-",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 497.0,
+        "t": 449.0,
+        "r": 544.3333333333334,
+        "b": 457.3333333333333
+      },
+      "baseline": "9.268.852",
+      "candidate": "9.268.852",
+      "candidate_raw": "9.268.852",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 106.66666666666667,
+        "t": 467.6666666666667,
+        "r": 127.66666666666667,
+        "b": 481.6666666666667
+      },
+      "baseline": "Quỹ",
+      "candidate": "Quỹ",
+      "candidate_raw": "Quỹ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 130.33333333333334,
+        "t": 481.0,
+        "r": 135.0,
+        "b": 481.6666666666667
+      },
+      "baseline": "‹",
+      "candidate": "---",
+      "candidate_raw": "---",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 133.33333333333334,
+        "t": 461.6666666666667,
+        "r": 144.66666666666666,
+        "b": 477.3333333333333
+      },
+      "baseline": "dự",
+      "candidate": "dụ",
+      "candidate_raw": "dụ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 149.33333333333334,
+        "t": 467.6666666666667,
+        "r": 160.66666666666666,
+        "b": 476.0
+      },
+      "baseline": "trữ",
+      "candidate": "trũ",
+      "candidate_raw": "trũ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 167.33333333333334,
+        "t": 465.6666666666667,
+        "r": 178.33333333333334,
+        "b": 476.0
+      },
+      "baseline": "bổ",
+      "candidate": "bổ",
+      "candidate_raw": "bổ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 178.66666666666666,
+        "t": 470.0,
+        "r": 205.0,
+        "b": 481.6666666666667
+      },
+      "baseline": " SUng",
+      "candidate": "sung",
+      "candidate_raw": "sung",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 209.0,
+        "t": 465.6666666666667,
+        "r": 225.66666666666666,
+        "b": 476.0
+      },
+      "baseline": "vốn",
+      "candidate": "vốn",
+      "candidate_raw": "vốn",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 225.33333333333334,
+        "t": 462.0,
+        "r": 251.66666666666666,
+        "b": 476.0
+      },
+      "baseline": "điều.",
+      "candidate": "điều",
+      "candidate_raw": "điều",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 252.0,
+        "t": 462.0,
+        "r": 262.0,
+        "b": 481.6666666666667
+      },
+      "baseline": "lệ",
+      "candidate": "lệ",
+      "candidate_raw": "lệ",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 281.0,
+        "t": 462.0,
+        "r": 335.0,
+        "b": 476.0
+      },
+      "baseline": "3.459.083",
+      "candidate": "3.459.083",
+      "candidate_raw": "3.459.083",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 353.0,
+        "t": 466.6666666666667,
+        "r": 359.0,
+        "b": 483.0
+      },
+      "baseline": "1.",
+      "candidate": "1",
+      "candidate_raw": "1",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 362.3333333333333,
+        "t": 462.0,
+        "r": 383.0,
+        "b": 482.0
+      },
+      "baseline": "608.",
+      "candidate": ".608",
+      "candidate_raw": ".608",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 383.6666666666667,
+        "t": 462.3333333333333,
+        "r": 402.6666666666667,
+        "b": 482.0
+      },
+      "baseline": "820",
+      "candidate": ".520",
+      "candidate_raw": ".520",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 402.3333333333333,
+        "t": 462.3333333333333,
+        "r": 409.3333333333333,
+        "b": 482.0
+      },
+      "baseline": "|",
+      "candidate": ")",
+      "candidate_raw": ")",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 471.6666666666667,
+        "t": 472.6666666666667,
+        "r": 474.6666666666667,
+        "b": 474.0
+      },
+      "baseline": "-",
+      "candidate": "-",
+      "candidate_raw": "-",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 497.0,
+        "t": 468.3333333333333,
+        "r": 544.3333333333334,
+        "b": 476.3333333333333
+      },
+      "baseline": "5.067.603",
+      "candidate": "5.067.603",
+      "candidate_raw": "5.067.603",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 296.3333333333333,
+        "t": 485.0,
+        "r": 335.3333333333333,
+        "b": 499.0
+      },
+      "baseline": "438.020",
+      "candidate": "438.020",
+      "candidate_raw": "438.020",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 369.0,
+        "t": 481.0,
+        "r": 401.6666666666667,
+        "b": 495.3333333333333
+      },
+      "baseline": "15.093",
+      "candidate": "15.093",
+      "candidate_raw": "15.093",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 402.0,
+        "t": 481.3333333333333,
+        "r": 411.3333333333333,
+        "b": 482.0
+      },
+      "baseline": "|",
+      "candidate": "----",
+      "candidate_raw": "----",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 471.3333333333333,
+        "t": 491.6666666666667,
+        "r": 474.6666666666667,
+        "b": 493.0
+      },
+      "baseline": "-",
+      "candidate": "-",
+      "candidate_raw": "-",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 505.6666666666667,
+        "t": 487.3333333333333,
+        "r": 544.3333333333334,
+        "b": 495.3333333333333
+      },
+      "baseline": "453.113",
+      "candidate": "453.113",
+      "candidate_raw": "453.113",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 105.33333333333333,
+        "t": 519.0,
+        "r": 124.33333333333333,
+        "b": 535.0
+      },
+      "baseline": "Lợi",
+      "candidate": "Lợi",
+      "candidate_raw": "Lợi",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 128.66666666666666,
+        "t": 519.0,
+        "r": 158.0,
+        "b": 535.0
+      },
+      "baseline": "nhuận",
+      "candidate": "nhuận",
+      "candidate_raw": "nhuận",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 162.33333333333334,
+        "t": 519.3333333333334,
+        "r": 186.66666666666666,
+        "b": 533.3333333333334
+      },
+      "baseline": "chưa",
+      "candidate": "chưa",
+      "candidate_raw": "chưa",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 173.0,
+        "t": 505.3333333333333,
+        "r": 206.0,
+        "b": 535.3333333333334
+      },
+      "baseline": "TT",
+      "candidate": "ỷ giá hớ ưa phâ",
+      "candidate_raw": "ỷ giá hớ<br>ưa phâ",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 218.0,
+        "t": 519.3333333333334,
+        "r": 243.66666666666666,
+        "b": 535.6666666666666
+      },
+      "baseline": "phối",
+      "candidate": "phối",
+      "candidate_raw": "phối",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 253.66666666666666,
+        "t": 519.3333333333334,
+        "r": 263.6666666666667,
+        "b": 520.0
+      },
+      "baseline": "—-",
+      "candidate": "----",
+      "candidate_raw": "----",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 266.3333333333333,
+        "t": 518.0,
+        "r": 276.3333333333333,
+        "b": 537.3333333333334
+      },
+      "baseline": "|",
+      "candidate": "",
+      "candidate_raw": "",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 281.3333333333333,
+        "t": 519.3333333333334,
+        "r": 349.3333333333333,
+        "b": 533.6666666666666
+      },
+      "baseline": "20.286.243",
+      "candidate": "20.286.243",
+      "candidate_raw": "20.286.243",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 335.6666666666667,
+        "t": 518.0,
+        "r": 342.3333333333333,
+        "b": 537.3333333333334
+      },
+      "baseline": "|",
+      "candidate": "9",
+      "candidate_raw": "9",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 349.6666666666667,
+        "t": 519.3333333333334,
+        "r": 449.3333333333333,
+        "b": 536.0
+      },
+      "baseline": "16.789.768",
+      "candidate": "16.789.768(13.342",
+      "candidate_raw": "16.789.768 (13.342",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 403.3333333333333,
+        "t": 518.0,
+        "r": 410.0,
+        "b": 537.3333333333334
+      },
+      "baseline": "|",
+      "candidate": "Ī",
+      "candidate_raw": "Ī",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 410.0,
+        "t": 519.3333333333334,
+        "r": 477.0,
+        "b": 536.0
+      },
+      "baseline": "(13.342.259)",
+      "candidate": "(13.342.259)",
+      "candidate_raw": "(13.342.259)",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 476.0,
+        "t": 518.0,
+        "r": 479.3333333333333,
+        "b": 537.3333333333334
+      },
+      "baseline": "|",
+      "candidate": "",
+      "candidate_raw": "",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 480.0,
+        "t": 519.6666666666666,
+        "r": 544.3333333333334,
+        "b": 533.6666666666666
+      },
+      "baseline": "23.733.752",
+      "candidate": "23.733.752",
+      "candidate_raw": "23.733.752",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 109.33333333333333,
+        "t": 545.0,
+        "r": 135.66666666666666,
+        "b": 557.3333333333334
+      },
+      "baseline": "Tổng",
+      "candidate": "Tổng",
+      "candidate_raw": "Tổng",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 281.0,
+        "t": 547.3333333333334,
+        "r": 334.0,
+        "b": 555.6666666666666
+      },
+      "baseline": "70.955.961",
+      "candidate": "70.955.961",
+      "candidate_raw": "70.955.961",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 335.6666666666667,
+        "t": 545.6666666666666,
+        "r": 345.0,
+        "b": 559.6666666666666
+      },
+      "baseline": "|",
+      "candidate": "",
+      "candidate_raw": "",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 349.0,
+        "t": 547.3333333333334,
+        "r": 402.6666666666667,
+        "b": 555.6666666666666
+      },
+      "baseline": "25.847.976",
+      "candidate": "25.847.976",
+      "candidate_raw": "25.847.976",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 401.0,
+        "t": 545.6666666666666,
+        "r": 410.3333333333333,
+        "b": 559.6666666666666
+      },
+      "baseline": "|",
+      "candidate": "5",
+      "candidate_raw": "5",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 413.3333333333333,
+        "t": 547.3333333333334,
+        "r": 474.3333333333333,
+        "b": 558.0
+      },
+      "baseline": "(13.342.259)",
+      "candidate": "(13.342.259)",
+      "candidate_raw": "(13.342.259)",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 475.6666666666667,
+        "t": 545.6666666666666,
+        "r": 480.3333333333333,
+        "b": 559.6666666666666
+      },
+      "baseline": "|",
+      "candidate": "ı",
+      "candidate_raw": "ı",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 490.6666666666667,
+        "t": 547.6666666666666,
+        "r": 544.0,
+        "b": 555.6666666666666
+      },
+      "baseline": "83.461.678",
+      "candidate": "83.461.678",
+      "candidate_raw": "83.461.678",
+      "accepted": false,
+      "reason": "no_change"
+    }
+  ]
+}

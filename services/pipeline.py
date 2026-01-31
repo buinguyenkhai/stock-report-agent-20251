@@ -22,8 +22,10 @@ from services.extractors import (
     MetadataExtractor,
 )
 from services.parser import AggregatedParser, ExtractionBundle, ParsedReport
+from services.utils import clean_markdown_tables
 
 logger = get_logger(__name__)
+
 
 
 # Pipeline modes
@@ -121,8 +123,12 @@ class ExtractionPipeline:
         """
         logger.info(f"Starting pipeline processing of {len(markdown):,} chars")
         
+        # Step 0: Pre-clean markdown
+        markdown = clean_markdown_tables(markdown)
+        
         # Step 1: Run all extractors in parallel
         extraction_results = await self._run_extractors(markdown)
+
         
         # Step 2: Build extraction bundle
         bundle = self._build_bundle(extraction_results)

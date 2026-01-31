@@ -1,0 +1,21 @@
+## THUYÉT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo)
+
+tại 31 tháng 12 năm 2024 và cho giai đoạn từ 1 tháng 1 năm 2024 đến 31 tháng 12 năm 2024
+
+## 41. RỦI RO TÍN DỤNG
+
+Ngân hàng chịu rủi ro tín dụng trong quá trình cho vay, đầu tư cũng như khi Ngân hàng đóng vai trò trung gian thay mặt khách hàng hay các bên thứ ba khác hay khi Ngân hàng cấp bảo lãnh. Rủi ro tín dụng là rủi ro do khách hàng hoặc đối tác không thực hiện hoặc không có khả năng thực hiện một phần hoặc toàn bộ nghĩa vụ trả nợ hoặc thanh toán theo hợp đồng hoặc thỏa thuận với Ngân hàng. Để quản lý được mức độ rủi ro tín dụng, Ngân hàng chỉ giao dịch với các đối tác có uy tín tín dụng cao và khi thích hợp, sẽ yêu cầu có tài sản đảm bảo. Rủi ro tín dụng chính mà Ngân hàng gặp phải phát sinh từ các khoản cho vay của Ngân hàng. Mức độ rủi ro tín dụng: này được phản ánh theo giá trị ghi số của các tài sản trên báo cáo tình hình tài chính hợp nhất. Ngoài ra, Ngân hàng còn gặp phải rủi ro tín dụng ngoại bảng dưới dạng các cam kết cấp tín dụng và cấp bảo lãnh.
+
+Để quản lý rủi ro tín dụng Ngân hàng sử dụng các công cụ: xây dựng chính sách và ban hành các quy định liên quan công tác quản lý rủi ro tín dụng; xây dựng các quy trình tín dụng; thực hiện rà soát rủi ro tín dụng; xây dựng hệ thống xếp hạng tín dụng và phân loại nợ; phân cấp thâm quyền trong hoạt động tín dụng.
+
+Ngân hàng đã duy trì một chính sách quản lý rủi ro tín dụng đảm bảo những nguyên tắc cơ bản sau: thiết lập một môi trường quản lý rủi ro tín dụng phù hợp; hoạt động theo một quy trình cấp tín dụng lành mạnh; duy trì một quy trình quản lý, đo lường và giám sát tín dụng phù hợp; và đảm bảo kiểm soát đầy đủ đối với rủi ro tín dụng.
+
+Chỉ tiết về các tài sản đảm bảo của Ngân hàng nắm giữ làm tài sản thế chấp tại ngày kết thúc kỳ kê toán như sau:
+
+|                          | 31/12/2024 triệu đông   | 31/12/2023 triệu đông   |
+|--------------------------|-------------------------|-------------------------|
+| Bất động sản             | 535.520.450             | 541.301.351             |
+| Động sản                 | 28.234.109              | 24.199.153              |
+| Giấy tờ có giá           | 149.098.610             | 130.155.637             |
+| Các tài sản đảm bảo khác | 551.777.092             | 383.690.147             |
+|                          | 1.264.630.261           | 1.079.346.288           |

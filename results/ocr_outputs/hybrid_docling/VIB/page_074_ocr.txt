@@ -1,0 +1,28 @@
+Ngân hàng thương mại cổ phần Quốc Tế Việt Nam Thuyết minh báo cáo tài chính hợp nhất tại ngày 31 tháng 12 năm 2024 và cho Quý kết thúc cùng ngày (tiếp theo)
+
+## 48. Cam kết thuê hoạt động
+
+|                    | 31/12/2024 Triệu VND   | 31/12/2023 Triệu VND   |
+|--------------------|------------------------|------------------------|
+| Đến một năm        | 615.504                | 596.677                |
+| Từ một đến năm năm | 1.119.443              | 1.306.782              |
+| Trên năm năm       | 140.707                | 222.390                |
+|                    | 1.875.654              | 2.125.849              |
+
+## 49. Thông tin so sánh
+
+Một số thông tin so sánh được phân loại lại cho phù hợp với quy định về trình bày báo cáo tài chính. Bảng so sánh số liệu đã trình bày trong năm trước, trước và sau khi được phân loại lại như sau:
+
+|                                                       | Năm kết thúc ngày 31/12/2023 Triệu VND (Phân loại lại)   | Năm kết thúc ngày 31/12/2023 Triệu VND (Như đã trình bày trước đây)   |
+|-------------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------------------|
+| BÁO CÁO KẾT QUẢ HOẠT ĐỘNG HỢP NHẤT                    |                                                          |                                                                       |
+| Thu nhập lãi và các khoản thu nhập tương tự           | 36.691.187                                               | 35.567.669                                                            |
+| Thu nhập từ hoạt động dịch vự                         | 3.613.539                                                | 4.801.297                                                             |
+| Chí phí từ hoạt động dịch vụ                          | (1.410.276)                                              | (1.474.516)                                                           |
+| BÁO CÁO LƯU CHUYỂN TIỀN TỆ HỢP NHẤT                   |                                                          |                                                                       |
+| Thu nhập lãi và các khoản thu nhập tương tự nhận được | 35.460.196                                               | 34.336.678                                                            |
+| Thu nhập từ hoạt động dịch vụ nhận được               | 2.203.263                                                | 3.326.781                                                             |
+
+## Mẫu B05/TCTD-HN
+
+(Ban hành theo Thông tư số 49/2014/TT-NHNN ngày 31 tháng 12 năm 2014 của Ngân hàng Nhà nước Việt Nam)

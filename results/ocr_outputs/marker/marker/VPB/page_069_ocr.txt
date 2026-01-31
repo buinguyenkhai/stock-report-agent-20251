@@ -1,0 +1,31 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẮT (tiếp theo) Tại ngày 31 tháng 12 năm 2024 và cho năm tải chính kết thúc cùng ngày
+
+## 36. CHI PHÍ DỰ PHÒNG RÙI RO TÍN DUNG
+
+|                                                   | Cho năm tài chính | Cho năm tài chính |
+|---------------------------------------------------|-------------------|-------------------|
+|                                                   | kết thúc ngày     | kết thúc ngày     |
+|                                                   | 31 tháng 12       | 31 tháng 12       |
+|                                                   | năm 2024          | năm 2023          |
+|                                                   | Triệu đồng        | Triệu đồng        |
+| Chỉ phí dự phòng rủi ro cho vay khách hàng        |                   |                   |
+| (Thuyết minh số 11)                               | 27.796.974        | 24.896.613        |
+| Chi phí dự phòng cho vay giao dịch kỷ quỹ và      |                   |                   |
+| ứng trước (Thuyết minh số 11)                     | 32.323            | 51.439            |
+| Hoàn nhập dự phòng rủi ro hoạt động mua nợ        |                   |                   |
+| (Thuyết minh số 12)                               | (166)             | (540)             |
+| Chi phí dự phỏng rủi ro cho tài sản có rủi ro tín |                   |                   |
+| dụng khác (Thuyết minh số 16.4)                   | 73.493            | 46,862            |
+|                                                   | 27.902.624        | 24.994.374        |
+
+## 37. TIÈN VÀ CÁC KHOẢN TƯƠNG ĐƯƠNG TIỀN
+
+Tiền và các khoản tương đương tiền thể hiện trên báo cáo lưu chuyển tiền tệ hợp nhất bao gồm các khoản trên báo cáo tình hình tài chính hợp nhất sau đây:
+
+|     | •                                                                                                                                                                                                                                                               | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng                                  | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng                                   |
+|-----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------|
+|     | Tiền mặt, vàng bạc, đá quý Tiền gửi tại Ngân hàng Nhà nước Việt Nam Tiền gửi thanh toán tại các TCTD khác Tiền gửi tại các TCTD khác có kỳ hạn không quá ba tháng kể từ ngày gửi Chứng khoán có thời hạn thu hồi hoặc đáo hạn không quá ba tháng kể từ ngày mua | 2.148.289<br>14.327.215<br>11.216.445<br>115.310.835                        | 2.284.990<br>8.422.511<br>9.627.143<br>71.671.930<br>1.660.896<br>93.667.470 |
+| 38. | TÌNH HÌNH THU NHẬP CỦA NHÂN VIÊN                                                                                                                                                                                                                                |                                                                             |                                                                              |
+|     |                                                                                                                                                                                                                                                                 | Cho năm tải chính<br>kết thúc ngày<br>31 tháng 12<br>năm 2024<br>Triệu đồng | Cho năm tải chính<br>kết thúc ngày<br>31 tháng 12<br>năm 2023<br>Triệu đồng  |
+|     | l. Tổng số nhân viên bình quân (người)<br>(Chỉ bao gồm các nhân viên chính thức)                                                                                                                                                                                | 26.199                                                                      | 27.042                                                                       |
+|     | <ul> <li>II. Thu nhập của nhân viên (Triệu đồng)</li> <li>1. Tiền lương</li> <li>2. Thu nhập khác</li> <li>3. Tổng thu nhập (1+2)</li> <li>4. Tiền lương bình quân tháng</li> <li>5. Thu nhập bình quân tháng</li> </ul>                                        | 7.416.358<br>979.205<br>8.395.563<br>23,59<br>26,70                         | 7.615.260<br>387.378<br>8.002.638<br>23,47<br>24,66                          |

@@ -11,24 +11,25 @@ from pydantic import BaseModel, Field
 
 from logger import get_logger
 from services.llm_factory import create_structured_llm
-from services.vnstock_vocabulary import get_vocabulary_prompt_section
 
 logger = get_logger(__name__)
 
 # Default model for parsing (smart, accurate)
-DEFAULT_PARSER_MODEL = "mistralai/devstral-2512:free"
+DEFAULT_PARSER_MODEL = "mistralai/mistral-small-3.1-24b-instruct:free"
 
 
-# Pydantic Models for Structured Output
+# Pydantic Models for Structured Output (Aligned with UI requirements)
 class FinancialItem(BaseModel):
-    """Single financial line item in vnstock format."""
-    name: str = Field(description="Tên chỉ tiêu (chuẩn hóa theo vnstock)")
+    """Single financial line item."""
+    item_code: Optional[str] = Field(default=None, description="Mã số chỉ tiêu")
+    item_name: str = Field(description="Tên chỉ tiêu")
     value: Optional[float] = Field(default=None, description="Giá trị số (đã chuyển về VND)")
+    notes_ref: Optional[str] = Field(default=None, description="Thuyết minh")
     original_name: Optional[str] = Field(default=None, description="Tên gốc trong báo cáo nếu khác")
 
 
 class ParsedStatement(BaseModel):
-    """Parsed financial statement."""
+    """Parsed financial statement wrapper."""
     items: List[FinancialItem] = Field(default_factory=list)
 
 
@@ -126,7 +127,8 @@ class AggregatedParser:
             
             logger.info(f"Parsing {len(bundle.get_tables_content()):,} chars of extracted content")
             
-            result: ParsedReport = self.llm.invoke(messages)
+            # Invoke LLM
+            result: ParsedReport = self.llm.invoke(messages) # type: ignore
             
             # Apply metadata if available
             if bundle.metadata:
@@ -161,44 +163,40 @@ class AggregatedParser:
             return ParsedReport(warnings=[f"Parsing error: {str(e)}"])
     
     def _get_system_prompt(self) -> str:
-        """Generate system prompt with vnstock vocabulary."""
-        vocab_section = get_vocabulary_prompt_section()
+        """Generate system prompt for financial report parsing."""
         
         return f"""Bạn là chuyên gia phân tích báo cáo tài chính Việt Nam.
-Nhiệm vụ: Trích xuất và chuẩn hóa dữ liệu từ 3 báo cáo tài chính chính.
+Nhiệm vụ: Trích xuất dữ liệu từ 3 báo cáo tài chính chính sang định dạng cấu trúc.
 
 ## QUY TẮC QUAN TRỌNG:
 
-### 1. Chuẩn hóa tên chỉ tiêu
-- Sử dụng CHÍNH XÁC tên chỉ tiêu trong danh mục chuẩn bên dưới
-- Nếu tên trong báo cáo khác, chuyển về tên chuẩn gần nhất
-- Lưu tên gốc vào trường "original_name" nếu khác
+### 1. Trích xuất chỉ tiêu
+- Trích xuất trung thực tên chỉ tiêu, mã số (nếu có) và thuyết minh (nếu có) từ báo cáo.
+- Không cần chuẩn hóa tên theo danh mục bên thứ ba, ưu tiên giữ đúng tên gốc trong báo cáo.
 
 ### 2. Xử lý số liệu
-- Chuyển TẤT CẢ giá trị về đơn vị VND (đồng)
-- Nếu đơn vị là "triệu VND": nhân 1,000,000
-- Nếu đơn vị là "tỷ VND": nhân 1,000,000,000
-- Nếu đơn vị là "nghìn VND": nhân 1,000
-- Số âm: giữ nguyên dấu (chi phí, chi tiền là số âm)
-- Số trong ngoặc đơn (1,234) = số âm -1234
+- Chuyển TẤT CẢ giá trị về đơn vị VND (đồng).
+- Nếu đơn vị là "triệu VND": nhân 1,000,000.
+- Nếu đơn vị là "tỷ VND": nhân 1,000,000,000.
+- Nếu đơn vị là "nghìn VND": nhân 1,000.
+- Số âm: giữ nguyên dấu (chi phí, chi tiền thường là số âm).
+- Số trong ngoặc đơn (1,234) = số âm -1234.
 
 ### 3. Xử lý định dạng số Việt Nam
-- Dấu chấm (.) là phân cách hàng nghìn: 1.234.567 = 1234567
-- Dấu phẩy (,) là phân cách thập phân: 1.234,56 = 1234.56
-- Bỏ qua các ký tự không phải số
+- Dấu chấm (.) thường là phân cách hàng nghìn trong báo cáo VN: 1.234.567 = 1234567.
+- Dấu phẩy (,) thường là phân cách thập phân: 1.234,56 = 1234.56.
+- Lưu ý: Một số báo cáo theo chuẩn quốc tế có thể dùng ngược lại. Hãy kiểm tra ngữ cảnh.
 
 ### 4. Xác định YTD (lũy kế)
-- Nếu thấy "Lũy kế từ đầu năm" hoặc giá trị lớn bất thường cho báo cáo quý → is_ytd = true
-- Nếu là Q4 và có cột "Quý 4" riêng → lấy số quý, không lấy lũy kế
+- Nếu thấy "Lũy kế từ đầu năm" hoặc giá trị lớn bất thường cho báo cáo quý → is_ytd = true.
+- Nếu là Q4 và có cột "Quý 4" riêng → lấy số quý, không lấy lũy kế.
 
 ### 5. Quy ước dấu (Sign convention)
-- Chi phí, chi tiền: SỐ ÂM
-- Doanh thu, thu nhập, thu tiền: SỐ DƯƠNG
-- Giữ nguyên dấu như trong báo cáo gốc
-
-{vocab_section}
+- Chi phí, chi tiền: SỐ ÂM.
+- Doanh thu, thu nhập, thu tiền: SỐ DƯƠNG.
+- Giữ nguyên dấu logic như trong báo cáo gốc.
 """
-    
+
     def _get_user_prompt(self, bundle: ExtractionBundle) -> str:
         """Generate user prompt with extracted content."""
         content = bundle.get_tables_content()
@@ -223,14 +221,14 @@ Nhiệm vụ: Trích xuất và chuẩn hóa dữ liệu từ 3 báo cáo tài c
 {content}
 
 ## YÊU CẦU:
-1. Trích xuất TẤT CẢ chỉ tiêu từ 3 báo cáo
-2. Chuẩn hóa tên theo danh mục vnstock
-3. Chuyển đổi giá trị về VND
-4. Xác định thông tin metadata (tên công ty, năm, quý, đơn vị, YTD)"""
-    
+1. Trích xuất TẤT CẢ chỉ tiêu từ 3 báo cáo.
+2. Với mỗi chỉ tiêu, lấy: item_name, item_code (mã số), value (giá trị VND), notes_ref (thuyết minh).
+3. Chuyển đổi giá trị về VND dựa trên đơn vị tính của báo cáo.
+4. Xác định thông tin metadata nếu chưa có."""
+
     def to_dict(self, report: ParsedReport) -> Dict[str, Any]:
         """
-        Convert ParsedReport to dictionary format compatible with evaluation.
+        Convert ParsedReport to dictionary format compatible with UI and Evaluation.
         """
         return {
             "metadata": {
@@ -241,18 +239,42 @@ Nhiệm vụ: Trích xuất và chuẩn hóa dữ liệu từ 3 báo cáo tài c
                 "unit": report.unit,
                 "is_ytd": report.is_ytd,
             },
-            "balance_sheet": [
-                {"name": item.name, "value": item.value, "original_name": item.original_name}
-                for item in report.balance_sheet.items
-            ],
-            "income_statement": [
-                {"name": item.name, "value": item.value, "original_name": item.original_name}
-                for item in report.income_statement.items
-            ],
-            "cash_flow": [
-                {"name": item.name, "value": item.value, "original_name": item.original_name}
-                for item in report.cash_flow.items
-            ],
+            "balance_sheet": {
+                "items": [
+                    {
+                        "item_code": item.item_code,
+                        "item_name": item.item_name,
+                        "value": item.value,
+                        "notes_ref": item.notes_ref,
+                        "original_name": item.original_name
+                    }
+                    for item in report.balance_sheet.items
+                ]
+            },
+            "income_statement": {
+                "items": [
+                    {
+                        "item_code": item.item_code,
+                        "item_name": item.item_name,
+                        "value": item.value,
+                        "notes_ref": item.notes_ref,
+                        "original_name": item.original_name
+                    }
+                    for item in report.income_statement.items
+                ]
+            },
+            "cash_flow": {
+                "items": [
+                    {
+                        "item_code": item.item_code,
+                        "item_name": item.item_name,
+                        "value": item.value,
+                        "notes_ref": item.notes_ref,
+                        "original_name": item.original_name
+                    }
+                    for item in report.cash_flow.items
+                ]
+            },
             "status": {
                 "bs_found": report.bs_found,
                 "pl_found": report.pl_found,
@@ -260,3 +282,4 @@ Nhiệm vụ: Trích xuất và chuẩn hóa dữ liệu từ 3 báo cáo tài c
                 "warnings": report.warnings,
             }
         }
+

@@ -1,0 +1,43 @@
+THUYÉT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo)
+
+tại 31 tháng 12 năm 2024 và cho giai đoạn từ 1 tháng 1 năm 2024 đến 31 tháng 12 năm 2024
+
+## 28. LÃI THUÀN TỪ MUA BÁN CHỨNG KHOÁN KINH DOANH
+
+|                                                                    | _ Từ 1/1/2024 đên 31/12/2024 triệu đông   | _ Từ 1/1/2023 đên 31/12/2023 triệu đông   |
+|--------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|
+| Thu nhập từ mua bán chứng khoán kinh doanh                         | 235.365                                   | 131.783                                   |
+| Chi phí về mua bán chứng khoán kinh doanh                          | (153.813)                                 | (67.163)                                  |
+| Trích lập dự phòng giảm giá chứng khoán kinh doanh (Thuyết minh 8) | (251)                                     | -                                         |
+|                                                                    | 81.301                                    | 64.620                                    |
+
+## 29. LÃI THUÀN TỪ MUA BÁN CHỨNG KHOÁN ĐÀU TƯ
+
+|                                                                                                    | _ Từ 1/1/2024 đên 31/12/2024 triệu đông   | _ Từ 1/1/2023 đên 31/12/2023 triệu đông   |
+|----------------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|
+| Thu nhập từ mua bán chứng khoán đầu tư                                                             | 3.392.047                                 | 2.551.469                                 |
+| Chi phí về mua bán chứng khoán đầu tư                                                              | (916.137)                                 | (1.643.334)                               |
+| Trích lập dự phòng chung cho trái phiếu doanh nghiệp chưa niêm yết (Thuyết minh 12.3)              | (73.959)                                  | (9.115)                                   |
+| (Trích lập)/hoàn nhập dự phòng cụ thể cho trái phiếu doanh nghiệp chưa niêm yết (Thuyết minh 12.3) | (64.159)                                  | 28.304                                    |
+| Hoàn nhập/(trích lập) dự phòng giảm giá chứng khoán đầu tư ( Thuyết minh 12.3)                     | 21.265                                    | (1.491)                                   |
+|                                                                                                    | 2.359.057                                 | 925.833                                   |
+
+## 30. LÃI THUÀN TỪ HOẠT ĐỘNG KHÁC
+
+|                                                            | . Từ 1/1/2024 đên 31/12/2024 triệu đông   | . Từ 1/1/2023 đền 31/12/2023 triệu đông   |
+|------------------------------------------------------------|-------------------------------------------|-------------------------------------------|
+| Thu nhập từ hoạt động khác                                 | 9.324.928                                 | 6.459.694                                 |
+| Thu từ các công cụ tài chính phái sinh khác                | 5.171.634                                 | 2.562.614                                 |
+| Thu hồi nợ đã xử lý rủi ro                                 | 1.138.200                                 | 831.790                                   |
+| Thu nhập từ bán bắt động sản đầu tư                        | -                                         | 1.775.298                                 |
+| Thu nhập từ bán nhà cửa vật kiến trúc và quyền sử dụng đất | 1.732.136                                 | -                                         |
+| Thu nhập khác (”)                                          | 1.282.958                                 | 1.289.992                                 |
+| Chi phí hoạt động khác                                     | (8.982.217)                               | (4.025.578)                               |
+| Chi từ các công cụ tài chính phái sinh khác                | (5.436.100)                               | (2.335.914)                               |
+| Chi từ bán bắt động sản đầu tư                             | -                                         | (1.044.271)                               |
+| Chi từ bán nhà cửa vật kiến trúc và quyền sử dụng đất      | (1.235.101)                               | -                                         |
+| Chỉ trả chấm dứt hợp đồng đối tác bảo hiểm                 | (1.808.413)                               | -                                         |
+| Chỉ khác (*)                                               | (502.603                                  | (645.393)                                 |
+|                                                            | 342.711                                   | 2.434.116                                 |
+
+(°\_ Bao gôm thu nhập, chi phí bồi hoàn do tắt toán trước hạn các hợp đồng phái sinh

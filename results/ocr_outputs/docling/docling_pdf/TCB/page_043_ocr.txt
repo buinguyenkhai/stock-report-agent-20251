@@ -1,0 +1,46 @@
+THUYÉT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo)
+
+tại 31 tháng 12 năm 2024 và cho giai đoạn từ 1 tháng 1 năm 2024 đến 31 tháng 12 năm 2024
+
+## 15. TÀI SẢN CÓ KHÁC
+
+|                                                                                               | 31/12/2024 triệu đông   | 31/12/2023 triệu đông   |
+|-----------------------------------------------------------------------------------------------|-------------------------|-------------------------|
+| Các khoản phải thu                                                                            | 29.540.943              | 69.834.157              |
+| Các khoản phải thu nội bộ                                                                     | 58.426                  | 37.939                  |
+| Các khoản phải thu bên ngoài                                                                  | 29.482.517              | 69.796.218              |
+| Các khoản thuế phải thu (Thuyết minh 22)                                                      | 1.467                   |                         |
+| - Đặt cọc thuê văn phòng                                                                      | 1.753.237               | 1.567.818               |
+| Đặt cọc mua văn phòng                                                                         | 9.570.484               | 9.760.567               |
+| Phải thu liên quan đến các chương trình hỗ trợ lãi suất                                       | 33.937                  | 74.832                  |
+| Tạm ứng hợp đòng                                                                              | 811.941                 | 453.733                 |
+| Các khoản tiền đặt cọc cho các giao dịch vàng, hàng hóa và ngoại tệ trên thị trường tương lai | 150.600                 | 265.098                 |
+| Tạm ứng nộp Ngân sách Nhà nước                                                                |                         | 244.928                 |
+| -_ Tạm ứng mua sắm tài sản có định                                                            | 1.245.016               | 1.576.912               |
+| - Xây dựng cơ bản dở dang                                                                     | 145.612                 | 3.970.310               |
+| Phải thu từ hợp đồng bán nợ                                                                   | 37.361                  | 280.311                 |
+| Các khoản phải thu có rủi ro tín dụng liên quan đến thư tín dụng                              | 7.874.929               | 47.930.453              |
+| Mua hẳn miễn truy đòi bộ chứng từ                                                             | 7.070.103               |                         |
+| Phải thu từ hoạt động kinh doanh chứng khoán                                                  |                         | 2.313.348               |
+| Phải thu từ bán bắt động sản đầu tư                                                           |                         | 735.668                 |
+| - Các khoản phải thu khác từ bên ngoài                                                        | 787.830                 | 622.240                 |
+| Các khoản lãi, phí phải thu                                                                   | 8.125.964               | 9.681.140               |
+| Tài sản thuế thu nhập doanh nghiệp hoãn lại (Thuyết minh 22.3)                                | 79.856                  | 70.409                  |
+| Tài sản Có khác                                                                               | 1.818.676               | 1.650.584               |
+| - Vật liệu                                                                                    | 14.431                  | 15.826                  |
+| - Chi phí trả trước                                                                           | 1.771.348               | 1.634.683               |
+| -_ Tài sản có khác                                                                            | 32.897                  | 75                      |
+| Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác (¡)                                | (64.874)                | (692.866)               |
+|                                                                                               | 39.500.565              | 80.543.424              |
+
+- ()\_ Dự phòng rủi ro cho các tài sản Có nội bảng khác bao gồm dự phòng cho các tài sản có rủi ro tín dụng khác và phải thu từ hợp đồng bán nợ như sau:
+
+|                                                         | 31⁄12/2024 triệu đồng   | 31⁄12/2023 triệu đồng   |
+|---------------------------------------------------------|-------------------------|-------------------------|
+| Dự phòng rủi ro cho khoản phải thu từ hợp đồng bán nợ   | 280                     | 280.311                 |
+| - Dự phòng chung                                        | 280                     |                         |
+| - Dự phòng cụ thê                                       |                         | 280.311                 |
+| Dự phòng rủi ro cho các tài sản có rủi ro tín dụng khác | 59.062                  | 359.479                 |
+| - Dự phòng chung                                        | 59.062                  | 359.479                 |
+| Dự phòng cho các tài sản Có khác                        | 5.932                   | 53.076                  |
+|                                                         | 64.874                  | 692.866                 |

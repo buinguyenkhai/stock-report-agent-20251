@@ -1,0 +1,48 @@
+## IV- Thông tin bổ sung cho các khoản mục trình bày trong Báo cáo kết quả hoạt động
+
+## 1. Thu nhập lãi thuần
+
+|    | Lãi thuần từ hoạt động dịch vụ                                                    | 4.368.249                  | 4.085.225                  |
+|----|-----------------------------------------------------------------------------------|----------------------------|----------------------------|
+|    |                                                                                   | (10.234.353)               | (9.052.399)                |
+|    | Chi các dịch vụ khác                                                              | (122.802)                  | (165.298)                  |
+|    | Chi về hoạt động môi giới chứng khoán                                             | (146.539)                  | (124.391)                  |
+|    | tài sản                                                                           | (440.761)                  | (263, 166)                 |
+|    | Chi về xử lý nợ, thẩm định giá và khai thác                                       | (0.177.019)                | (0.104.803)                |
+|    | Chi về hoạt động kinh doanh bảo hiểm                                              | (1.046.664)<br>(6.174.019) | (1.389.164)<br>(5.164.963) |
+|    | Chi về dịch vụ tư vấn<br>Chi phí hoa hồng môi giới                                | (1 0/6 66/)                | (23.486)                   |
+|    | Chi về nghiệp vụ ủy thác và đại lý                                                | (18.063)                   | (15.091)                   |
+|    | Chi về dịch vụ thanh toán và ngân quỹ                                             | (2.285.505)                | (1.906.840)                |
+|    | Chi phí hoạt động dịch vụ                                                         |                            |                            |
+|    | -                                                                                 | 14.602.602                 | 13.137.624                 |
+|    | Thu các dịch vụ khác                                                              | 1.370.827                  | 979.472                    |
+|    | Thu từ hoạt động môi giới chứng khoán                                             | 628.155                    | 614.616                    |
+|    | tài sản                                                                           | 494.094                    | 369.032                    |
+|    | Thu từ dịch vụ đại lý nhận ủy thác<br>Thu từ xử lý nợ, thẩm định giá và khai thác | 27.002                     | 23.764                     |
+|    | Thu từ kinh doanh và dịch vụ bảo hiểm                                             | 8.443.178                  | 8.228.367                  |
+|    | Thu từ dịch vụ tư vấn                                                             | 280.325                    | 177.958                    |
+|    | Thu từ dịch vụ thanh toán và ngân quỹ                                             | 3.359.021                  | 2.744.415                  |
+|    | Thu nhập từ hoạt động dịch vụ                                                     |                            |                            |
+|    |                                                                                   | Triệu đồng                 | Triệu đồng                 |
+|    |                                                                                   | đến 31/12/2024             | đến 31/12/2023             |
+|    |                                                                                   | Từ 01/01/2024              | Từ 01/01/2023              |
+| 2. | Lãi thuần từ hoạt động dịch vụ:                                                   |                            |                            |
+|    |                                                                                   |                            | 2210001010                 |
+|    | Thu nhập từ lãi thuần                                                             | 41.152.219                 | 38.683.848                 |
+|    |                                                                                   | (27.909.674)               | (30.459.195)               |
+|    | Chi các hoạt động tín dụng khác                                                   | (928.765)                  | (569.256)                  |
+|    | Chi lãi phát hành giấy tờ có giá                                                  | (1.988.997)<br>(6.559.439) | (2.114.207)<br>(6.948.592) |
+|    | Chi lãi tiền gửi<br>Chi lãi tiền vay                                              | (18.432.473)               | (20.827.140)               |
+|    | Chi phí lãi và các chi phí tương tự                                               |                            |                            |
+|    |                                                                                   |                            |                            |
+|    |                                                                                   | 69.061.893                 | 69.143.043                 |
+|    | Thu các hoạt động tín dụng khác                                                   | 925.470                    | 753.933                    |
+|    | Thu phí từ nghiệp vụ bảo lãnh<br>Thu lãi từ nghiệp vụ mua bán nợ                  | 1.511.556<br>119.924       | 1.500.202<br>174.326       |
+|    | Thu lãi từ đầu tư chứng khoán nợ                                                  | 10.116.084                 | 12.509.992                 |
+|    | Thu nhập lãi cho vay                                                              | 54.446.408                 | 53.081.097                 |
+|    | Thu nhập lãi tiền gửi                                                             | 1.942.451                  | 1.123.493                  |
+|    | Thu nhập lãi và các khoản thu nhập tương tự                                       |                            |                            |
+|    |                                                                                   | Triệu đồng                 | Triệu đồng                 |
+|    |                                                                                   | đến 31/12/2024             | đến 31/12/2023             |
+|    |                                                                                   | Từ 01/01/2024              | Từ 01/01/2023              |
+|    | i nu nnapiai thuan                                                                |                            |                            |

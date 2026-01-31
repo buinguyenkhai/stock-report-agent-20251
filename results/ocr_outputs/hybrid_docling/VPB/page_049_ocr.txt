@@ -1,0 +1,36 @@
+## THUYÉT MINH BẢO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo)
+
+Tại ngày 31 tháng 12 năm 2024 và cho năm tải chỉnh kết thúc cùng ngày
+
+## 13. CHỨNG KHOÁN ĐÀU TƯ (tiếp theo)
+
+## 13.2 Dự phòng rủi ro chứng khoán đầu tư sẵn sàng đề bán
+
+Thay đổi dự phỏng chứng khoán đầu tư sẵn sàng để bán trong năm kết thúc ngày 31 tháng 12 năm 2024 như sau:
+
+|                                                                               | Dựphỏng chung Triệu đồng   | Dự phòng cụ thể Triệu đồng   |   Dự phòng giảm giá Triệu đồng | Tổng cộng Triệu đồng   |
+|-------------------------------------------------------------------------------|----------------------------|------------------------------|--------------------------------|------------------------|
+| Số dư đầu năm                                                                 | 177.043                    | 27.932                       |                          8.241 | 210.216                |
+| Dự phòng rủi ro trích lập/(hoàn nhập) -, £ $, 4 trong năm (Thuyết mỉnh số 32) | (117.292)                  | — (27.932)                   |                          2.309 | (142.915)              |
+| Số dự cuối năm                                                                | 59.751                     | -                            |                          7.55  | 67.301                 |
+
+Thay đổi dự phòng chứng khoán đầu tư sẵn sàng để bán trong năm kết thúc ngày 31 tháng 12 năm 2023 như sau:
+
+|                                                                     | Dựphòng chung Triệu đồng   | — Dự phòng cụ thể Trệu đồng   | Dự phòng giảm giá Triệu đồng   | — Tổng cộng Triệu đồng   |
+|---------------------------------------------------------------------|----------------------------|-------------------------------|--------------------------------|--------------------------|
+| Số dư đầu năm                                                       | 246.689                    | -                             | 5.911                          | 252.600                  |
+| Dự phòng rủi ro trích lập/(hoàn nhập) trong năm (Thuyết mính số 32) | (69.646)                   | 27.932                        | (670)                          | — (42.384)               |
+| Số dư cuối năm                                                      | P1043                      | 27.932                        | 7 B241                         | 210.216                  |
+
+## 13.3 Phân tích chất lượng chứng khoán đầu tư sẵn sàng để bán
+
+Phân tích chất lượng chứng khoán đầu tự sẵn sàng để bán là kỳ phiều, tín phiếu, chứng chỉ tiễn gửi do TCTD, chỉ nhánh ngân hàng nước ngoải khác phát hành và trái phiếu doanh nghiệp chưa niêm yết được phân loại là tài sản có rùi ro tín dụng tại thời điểm cuỗi năm như sau:
+
+|                        | Ngày 31 thâng 12 năm 2024 Triệu đồng   | Ngày 31 tháng 12 năm 2023 Triệu đồng   |
+|------------------------|----------------------------------------|----------------------------------------|
+| Nợ đủ tiêu chuẩn       | 14.997.399                             | 37.827.345                             |
+| Nợ cần chú ý           | 1.300.000                              | 8.696.500                              |
+| Nợ dưới tiêu chuẩn     | 36.000                                 | 1.880.500                              |
+| Nợ nghỉ ngờ            | 720.000                                | 1.000.000                              |
+| Nợ có khả năng mắt vốn | -                                      | 500.000                                |
+|                        | 17.053.399                             | 49.904.345                             |

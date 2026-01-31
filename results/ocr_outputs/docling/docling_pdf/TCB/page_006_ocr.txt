@@ -1,0 +1,31 @@
+BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHẤT (tiếp theo) tại ngày 31 tháng 12 năm 2024
+
+## CÁC CHỈ TIỂU NGOÀI BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHÁT
+
+|                                                                       | Thuyết minh   | 31⁄12/2024 triệu đồng   | 31/12/2023 triệu đồng   |
+|-----------------------------------------------------------------------|---------------|-------------------------|-------------------------|
+| Bảo lãnh vay vốn                                                      |               | 11.507.947              | 14.935.065              |
+| Cam kết giao dịch hối đoái                                            |               | 269.393.662             | 350.601.542             |
+| - Cam két mua ngoại tệ giao ngay - Cam kết bán ngoại tệ giao ngay — _ |               | 3.062.641               | 4.593.012               |
+|                                                                       |               | 3.511.618               | 4.415.918               |
+| - Cam kêt mua - giao dịch hoán đôi tiên tệ                            |               | 131.340.913             | 171.163.643             |
+| - Cam kết bán - giao dịch hoán đôi tiên tệ                            |               | 131.478.490             | 170.428.969             |
+| Cam kết trong nghiệp vụ thư tín dụng (L/C)                            |               | 38.065.747              | 67.845.653              |
+| Bảo lãnh khác                                                         |               | 58.558.478              | 57.648.065              |
+| Các cam kết khác                                                      |               | 213.069.830             | 176.065.387             |
+| - Cam két hoán đổi tiền tệ chéo bằng ngoại tệ                         |               | 91.410.203              | 68.061.694              |
+| - Cam kêt hoán đôi tiên tệ chéo bằng VND                              |               | 86.776.329              | 67.392.288              |
+| - Cam kêt hoán đôi lãi suất bằng ngoại tệ                             |               | 19.499.211              | 10.734.257              |
+| - Cam kêt hoán đôi lãi suât bằng VND                                  |               | 7.774.226               | 13.541.644              |
+| - Cam kết kỳ hạn giáy tờ có giá                                       |               | 5.157.684               | 12.988.841              |
+| - Cam kêt khác                                                        |               | 2.452.177               | 3.349.663               |
+| Hạn mức tín dụng chưa sử dụng                                         |               | 313.179.746             | 305.332.136             |
+| Lãi cho vay và phí phải thu chưa thu được                             | 36            | 2.877.966               | 2.287.980               |
+| Nợ khó đòi đã xử lý                                                   | 37            | 58.234.347              | 52.224.706              |
+| Tài sản và từ khác                                                    | 38            | 166.251.765             | 198.926.346             |
+| chứng                                                                 |               | 1.131.139.488           | 1.225.866.880           |
+
+| Người lập:                    | Người phê duyệt:                    | Người phê duyệt:               |
+|-------------------------------|-------------------------------------|--------------------------------|
+| Bà Hoàng Thị Thu Hằng Kế toán | Bà Nguyễn Thị Trà My Kế toán Trưởng | Ông Jens Lottner Tổng Giám đốc |
+| Hà Nội, Việt Nam              |                                     |                                |

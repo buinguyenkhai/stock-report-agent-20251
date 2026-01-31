@@ -1,0 +1,33 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo) Tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 19. TIÈN GỬI VÀ VAY CÁC TÓ CHỨC TÀI CHÍNH, TÓ CHỨC TÍN DỤNG KHÁC
+
+## 19.1 Tiền gửi của các tổ chức tín dụng khác
+
+|                                                    | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng |
+|----------------------------------------------------|--------------------------------------------|--------------------------------------------|
+| Tiền gửi không kỳ hạn<br>Bằng VND<br>Bằng ngoại tệ | 6.936.034<br>6.936.020<br>14               | 6.917.556<br>6.917.543<br>13               |
+| Tiền gửi có kỳ hạn<br>Bằng VND<br>Bằng ngoại tệ    | 104.927.175<br>96.030.000<br>8.897.175     | <b>76.317.200 72.450.000 3.867.200</b>     |
+|                                                    | 111.863.209                                | 83.234.756                                 |
+
+## 19.2 Vay các tổ chức tài chính, tổ chức tín dụng khác
+
+|                                                                                    | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng |
+|------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------|
+| Phải trà về nghiệp vự thư tín dụng trả chậm<br>Vay các Tổ chức tài chính ("TCTC"), | 16.219.307                                 | 25.371.494                                 |
+| Tổ chức tín dụng ("TCTD") khác                                                     | 73.673.905                                 | 47.750.401                                 |
+| Bằng VND                                                                           | 13.650.923                                 | 4.304.954                                  |
+| - Trong đó: vay cầm cố                                                             | 3.741.200                                  | 1.394.205                                  |
+| Bằng ngoại tệ<br>- Trong đó: vốn vay từ Công ty Tài chính                          | 60.022.982                                 | 43.445.447                                 |
+| Quốc tế ("IFC")                                                                    | 2.723.298                                  | 4.746.837                                  |
+|                                                                                    | 89.893.212                                 | 73.121.895                                 |
+
+Các khoản vay các TCTC, TCTD khác theo kỳ hạn gốc tại thời điểm cuối năm như sau:
+
+|                              | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng |
+|------------------------------|--------------------------------------------|--------------------------------------------|
+| Đến 6 tháng                  | 17.347.610                                 | 5.032.482                                  |
+| Từ trên 6 tháng đến 12 tháng | 13.760.492                                 | 8.497.107                                  |
+| Từ trên 12 tháng đến 5 năm   | 34.935.087                                 | 34.201.079                                 |
+| Từ trên 5 năm trở lên        | 7.630.716                                  | 19.733                                     |
+|                              | 73.673.905                                 | 47.750.401                                 |

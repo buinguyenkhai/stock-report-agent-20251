@@ -1,0 +1,27 @@
+Ngân hàng thương mại cổ phần Quốc Tế Việt Nam Thuyết mình báo cáo tài chính hợp nhất tại ngày 31 tháng 12 năm 2024 và cho Quý kết thúc cùng ngày (tiếp theo}
+
+## Mẫu B05/TCTD-HN
+
+(Ban hành theo Thông tư số 49/2014/TT-NHNN ngày 31 tháng 12 năm 2014 của Ngân hàng Nhà nước Việt Nam)
+
+| Tại ngày 31 tháng 12 năm 2024                                 | USD Triệu VND   | EUR Triệu VND   | Tiền tệ khác Triệu VND   | Tổng cộng Triệu VND   |
+|---------------------------------------------------------------|-----------------|-----------------|--------------------------|-----------------------|
+| Tài sản                                                       |                 |                 |                          |                       |
+| Tiền mặt và vàng                                              | 359.720         | 56.577          | 27.871                   | 444.168               |
+| Tiền gửi tại NHNNVN                                           | 485.655         | 37              | ˆ                        | 485.692               |
+| Tiền gửi và cho vay các TCTD khác - gộp                       | 434.680         | 114.223         | 112.601                  | 661.504               |
+| Các công cụ tài chính phái sinh và các tài sản tài chính khác | 39.536.612      | 318.942         | 857.512                  | 40.713.066            |
+| Cho vay khách hàng và hoạt động mua nợ - gộp                  | 3,423,588       | -               | -                        | 3.423.588             |
+| Góp vốn, đầu tư dài hạn                                       | 542             | -               | -                        | 542                   |
+| Tài sản Có khác - gộp                                         | 334.289         | 328             | 307                      | 334.924               |
+| Tổng tài sản                                                  | 44.575.086      | 490.107         | 998.291                  | 46.063.484            |
+| Nợ phải trả                                                   |                 |                 |                          |                       |
+| Tiền gửi của và vay từ NHNN và các TCTD khác                  | 27.004.804      | ˆ               | ¬                        | 27.004.804            |
+| Tiền gửi của khách hàng                                       | 16.868.441      | 485.586         | 312.348                  | 17.666.375            |
+| Các khoản nợ khác                                             | 206,484         | 1.743           | 7.383                    | 215.610               |
+| Tổng nợ phải trả                                              | 44.079.729      | 487.329         | 319.731                  | 44.886.789            |
+| Trạng thái tiền tệ nội bảng                                   | 495.357         | 2.778           | 678.560                  | 1.176.695             |
+| Trạng thái tiền tệ ngoại bảng                                 | 203.577         | 319             | (651.246)                | (447.350)             |
+| Trạng thái tiền tệ nội, ngoại bắng                            | 698.934         | 3.097           | 27.314                   | 729.345               |
+
+ị

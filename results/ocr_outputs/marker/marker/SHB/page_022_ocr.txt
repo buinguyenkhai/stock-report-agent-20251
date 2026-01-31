@@ -1,0 +1,37 @@
+## NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN SÀI GÒN – HÀ NỘI THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (Tiếp theo)
+
+## 7. TIỀN GỬI VÀ CHO VAY CÁC TCTD KHÁC
+
+|                                        | 31/12/2024  | 31/12/2023 |
+|----------------------------------------|-------------|------------|
+|                                        | Triệu đồng  | Triệu đồng |
+| Tiền gửi tại các TCTD khác             |             |            |
+| Tiền gửi không kỳ hạn                  | 12.693.972  | 11.894.463 |
+| - Bằng VND                             | 12.022.684  | 9.967.425  |
+| - Bằng ngoại tệ                        | 671.288     | 1.927.038  |
+| Tiền gửi có kỳ hạn                     | 79.941.591  | 42.931.442 |
+| - Bằng VND                             | 73.459.669  | 42.810.000 |
+| - Bằng ngoại tệ                        | 6.481.922   | 121.442    |
+|                                        | 92.635.563  | 54.825.905 |
+| Cho vay các TCTD khác                  |             |            |
+| - Bằng VND                             | 24.713.260  | 8.841.433  |
+| - Bằng ngoại tệ, vàng                  |             |            |
+| Dự phòng rủi ro                        | 320         | (118.410)  |
+|                                        | 24.713.260  | 8.723.023  |
+| Tổng tiền gửi và cho vay các TCTD khác | 117.348.823 | 63.548.928 |
+
+## 8. CHỨNG KHOÁN KINH DOANH
+
+|                                                    | 31/12/2024 | 31/12/2023 |
+|----------------------------------------------------|------------|------------|
+|                                                    | Triệu đồng | Triệu đồng |
+| Chứng khoán Nợ                                     | 4.945.728  | 7.849.272  |
+| - Chứng khoán Nợ do các TCKT trong nước phát hành  | 4.945.728  | 7.849.272  |
+| Chứng khoán Vốn                                    | 3.880      | 3.880      |
+| - Chứng khoán Vốn do các TCKT trong nước phát hành | 3.880      | 3.880      |
+|                                                    | 4.949.608  | 7.853.152  |
+| Dự phòng rủi ro chứng khoán kinh doanh             | (39.152)   | (60.410)   |
+| Dự phòng giảm giá                                  | (2.059)    | (1.540)    |
+| Dự phòng chung                                     | (37.093)   | (58.870)   |
+|                                                    | 4.910.456  | 7.792.742  |
+|                                                    |            |            |

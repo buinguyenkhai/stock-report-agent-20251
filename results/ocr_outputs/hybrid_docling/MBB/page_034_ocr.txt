@@ -1,0 +1,33 @@
+## 8.2 Chứng khoán đầu tư giữ đến ngày đáo hạn
+
+Chỉ tiết các khoản chứng khoán đầu tự giữ đến ngày đáo hạn của MB như sau:
+
+|                                                             | 37/12/2024 Triệu đồng   | 31/12/2023 Triệu đồng   |
+|-------------------------------------------------------------|-------------------------|-------------------------|
+| Chứng khoán đầu tư giữ đến ngày đáo hạn                     |                         |                         |
+| Chứng khoán nợ do Chính phủ phát hành                       | 269.654                 | 270.211                 |
+| Chứng khoán nợ do các TCTD khác phát hành                   | 2.385.376               | 2.435.307               |
+| Chứng khoán nợ do các TCKT trong nước phát hành             | 1.957.474               | 2.682.434               |
+|                                                             | 4.612.504               | 5.387.952               |
+| ` Dự phòng giảm giá chứng khoán đầu tư giữ đên ngày đáo hạn | (240.445)               | (105.445)               |
+|                                                             | 4.372.059               | 8.282.507               |
+
+(i) Chứng khoán nợ do các TCTD khác phát hành có kỳ hạn 5 năm và có lãi suất 9,00%/năm.
+
+() Chứng khoán nợ do các TCKT trong nước phát hành có kỳ hạn từ 07 năm đến 10 năm và có lãi suất từ 8,90% đến 10,10%/năm.
+
+## 9. \_\_ Góp vốn, đầu tư dài hạn
+
+Chi tiết các khoản đầu tư dài hạn như sau:
+
+|     |                                           | 31/12/2024 Triệu đông   | 31/12/2023 Triệu đồng   |
+|-----|-------------------------------------------|-------------------------|-------------------------|
+|     | Đầu tư dài hạn khác                       | 775.670                 | 779.587                 |
+|     |                                           | 775.670                 | 779.587                 |
+|     | Dự phòng giảm giá                         | (166.193)               | (163.802)               |
+|     |                                           | 609.477                 | 615.785                 |
+| 9.1 | Đầu tư dài hạn khác                       |                         |                         |
+|     |                                           | 37/12/2024              | 31/12/2023              |
+|     |                                           | Triệu đồng              | Triệu đồng              |
+|     | Đầu tư vào tổ chức kinh tế, dự án dài hạn | 687.266                 | 713.681                 |
+|     | Đầu tư vào các Quỹ đầu tư                 | 88.404                  | 65.906                  |

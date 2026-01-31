@@ -1,0 +1,28 @@
+Ngân hàng thương mại cổ phần Quốc Tế Việt Nam Thuyết minh báo cáo tài chính hợp nhất tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày (tiếp theo)
+
+(Ban hành theo Thông tư số 49/2014/TT-NHNN ngày 31 tháng 12 năm 2014 của Ngân hàng Nhà nước Việt Nam)
+
+Mẫu B05/TCTD-HN
+
+16. Tài sản cố định hữu hình
+
+Biến động của tài sản cố định hữu hình trong năm tài chính kết thúc ngày 31 tháng 12 năm 2024 như sau:
+
+|                    | Nhà cửa và    | Máy móc   | Phương tiện | Thiết bị  | Tài sản cố định | Tổng cộng |
+|--------------------|---------------|-----------|-------------|-----------|-----------------|-----------|
+|                    | vật kiến trúc | thiết bị  | vận tải     | văn phòng | hữu hình khác   |           |
+|                    | Triệu VND     | Triệu VND | Triệu VND   | Triệu VND | Triệu VND       | Triệu VND |
+| Nguyên giá         |               |           |             |           |                 |           |
+| Số dư đầu năm      | 106.755       | 690.197   | 83.124      | 128.413   | 111.183         | 1.119.672 |
+| Tăng trong năm     | 3.999         | 96.913    | 18.018      | 21.492    | 2.982           | 143.404   |
+| Thanh lý trong năm | (2.002)       | (1.619)   | (710)       | (761)     | (5.476)         | (10.568)  |
+| Số dư cuối năm     | 108.752       | 785.491   | 100.432     | 149.144   | 108.689         | 1.252.508 |
+| Hao mòn lũy kế     |               |           |             |           |                 |           |
+| Số dư đầu năm      | 61.111        | 376.693   | 36.966      | 81.966    | 96.227          | 652.963   |
+| Khấu hao trong năm | 6.772         | 69.210    | 10.046      | 23.901    | 6.894           | 116.823   |
+| Thanh lý trong năm | (1.953)       | (1.619)   | (710)       | (727)     | (5.476)         | (10.485)  |
+| Số dư cuối năm     | 65.930        | 444.284   | 46.302      | 105.140   | 97.645          | 759.301   |
+| Giá trị còn lại    |               |           |             |           |                 |           |
+| Số dư đầu năm      | 45.644        | 313.504   | 46.158      | 46.447    | 14.956          | 466.709   |
+| Số dư cuối năm     | 42.822        | 341.207   | 54.130      | 44.004    | 11.044          | 493.207   |
+|                    |               |           |             |           |                 |           |

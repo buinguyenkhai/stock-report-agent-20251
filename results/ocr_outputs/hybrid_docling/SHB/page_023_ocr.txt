@@ -1,0 +1,29 @@
+## NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN SÀI GỒN -HÀ NỘI THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (Tiếp theo}
+
+## 9. CÁC CÔNG CỤ TÀI CHÍNH PHÁI SINH VÀ CÁC TÀI SẢN/(CÔNG NỢI TÀI CHÍNH KHÁC
+
+Chi tiết giá trị các công cụ tài chính phái sinh tại các thời điểm như sau:
+
+## Tổng giá trị ghi số kế toán (theo tỷ giá tại ngày lập báo củo} (triệu đồng)
+
+|                               | Tài sản   | Công nợ   |
+|-------------------------------|-----------|-----------|
+| Tại ngày 31 tháng 12 năm 2024 |           |           |
+| Công cụ TC phái sinh tiền tệ  |           | 61.927    |
+| Giao dịch kỳ hạn tiền tệ      |           | 21.584    |
+| Giao dịch hoán đổi tiền tệ    |           | 40.343    |
+| Tại ngày 31 tháng 12 năm 2023 |           |           |
+| Công cụ TC phái sinh tiền tệ  |           | 97.152    |
+| Giao dịch kỳ hạn tiền tệ      |           | 9.083     |
+| Giao dịch hoán đổi tiền tệ    |           | 88.069    |
+
+## 10. CHO VAY KHÁCH HÀNG
+
+## 10.1. Phân tích dư nợ theo thời gian gốc của khoản vay
+
+|              | 31/12/2024 Triệu đồng   | 31/12/2023 Triệu đồng   |
+|--------------|-------------------------|-------------------------|
+| Nợ ngắn hạn  | 204.689.879             | 184.512.736             |
+| Nợ trung hạn | 124.733.647             | 97.604.740              |
+| Nợ dài hạn   | 190.526.465             | 156.346.671             |
+|              | 519.949.991             | 438.464.147             |

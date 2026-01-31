@@ -1,0 +1,93 @@
+{
+  "company": "VPB",
+  "page_number": 73,
+  "hybrid_ocr_stats": {
+    "total_cells": 328,
+    "surya_cells": 5,
+    "tesseract_cells": 323,
+    "table_cells": 150,
+    "non_table_cells": 178,
+    "eligible_cells": 5,
+    "routed_low_conf": 3,
+    "routed_low_num_conf": 2,
+    "routed_suspicious_numeric": 0,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 7,
+    "garbled_regions": 0,
+    "surya_cells_updated": 2,
+    "surya_update_skipped_sanity": 1,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 1.524390243902439
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 264.6666666666667,
+        "t": 587.0,
+        "r": 290.6666666666667,
+        "b": 594.6666666666666
+      },
+      "baseline": "\"Thành",
+      "candidate": "Thành",
+      "candidate_raw": "Thành",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 293.6666666666667,
+        "t": 587.3333333333334,
+        "r": 309.6666666666667,
+        "b": 595.3333333333334
+      },
+      "baseline": "vên",
+      "candidate": "νiện",
+      "candidate_raw": "νiện",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 516.0,
+        "t": 592.6666666666666,
+        "r": 519.6666666666666,
+        "b": 594.3333333333334
+      },
+      "baseline": "-",
+      "candidate": "-",
+      "candidate_raw": "-",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 406.0,
+        "t": 699.3333333333334,
+        "r": 441.3333333333333,
+        "b": 709.0
+      },
+      "baseline": "(63.431)",
+      "candidate": "(63.431)",
+      "candidate_raw": "(63.431)",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 497.3333333333333,
+        "t": 699.6666666666666,
+        "r": 532.0,
+        "b": 709.3333333333334
+      },
+      "baseline": "(67.428)",
+      "candidate": "(57.428)",
+      "candidate_raw": "(57.428)",
+      "accepted": true,
+      "reason": "updated"
+    }
+  ]
+}

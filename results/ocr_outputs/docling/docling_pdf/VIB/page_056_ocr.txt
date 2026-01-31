@@ -1,0 +1,34 @@
+## 4A. Mức độ tập trung của tài sắn, nợ phải trả và các cam kết ngoại bảng theo khu vực địa lý
+
+| Tại ngày 31 tháng 12 năm 2024                                 | Trong nước Triệu VND   | Ngoài nước Triệu VND   | Tổng cộng Triệu VND   |
+|---------------------------------------------------------------|------------------------|------------------------|-----------------------|
+| Tài sản                                                       |                        |                        |                       |
+| Tiền mặt và vàng                                              | 1.639.368              | "                      | 1.639.368             |
+| Tiền gửi tại NHNNVN                                           | 9.909.074              | -                      | 9.909.074             |
+| Tiền gửi và cho vay các TCTD khác                             | 105.316.330            | 272.186                | 105.588.516           |
+| Các công cụ tài chính phái sinh và các tài sản tài chính khác | 821.872                | -                      | 821.872               |
+| Cho vay khách hàng                                            | 324.009.713            | -                      | 324.009.713           |
+| Hoạt động mua nợ                                              | 8.846                  | -                      | 8.846                 |
+| Chứng khoán đầu tư                                            | 50.388.192             | -                      | 50.388.192            |
+| Góp vốn đầu tư dài hạn                                        | 69.125                 | 542                    | 69.667                |
+| Tài sản cố định và bất động sản đầu tư                        | 797.630                | ˆ                      | 797.630               |
+| Tài sản Có khác                                               | 5.663.523              | ˆ                      | 5.663.523             |
+|                                                               | 498.623.673            | 272.728                | 498.896.401           |
+| Nợ phải trả                                                   |                        |                        |                       |
+| Các khoản nợ chính phủ và NHNN                                | 18.586.891             | -                      | 18.586.891            |
+| Tiền gửi và vay các TCTD khác                                 | 100.720.347            | 22.480.238             | 123.200.585           |
+| Tiền gửi của khách hàng                                       | 276.054.050            | 254.272                | 276.308.322           |
+| Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro         | 5.368                  | -                      | 5368                  |
+| Phát hành giấy tờ có giá                                      | 23.262.579             | “                      | 23.262.579            |
+| Các khoản nợ khác                                             | 9.932.815              | ˆ                      | 9.932.815             |
+|                                                               | 428.562.050            | 22.734.510             | 451.296.560           |
+| Các cam kết ngoại bảng                                        |                        |                        |                       |
+| Cam kết giao dịch hối đoái                                    | 345.248.653            | -                      | 345.248.653           |
+| Cam kết trong nghiệp vụ thư tín dụng                          | 2.750.600              | -                      | 2.750.600             |
+| Bảo lãnh khác                                                 | 7.185.571              | ~                      | 7.185.571             |
+| Các cam kết khác                                              | 68.292.253             | -                      | 68.292.253            |
+| Lãi cho vay và phí phải thu chưa thu được                     | 3.517.652              | ˆ                      | 3.517.652             |
+| Nợ khó đòi đã xử lý                                           | 21.628.603             | -                      | 21.628.603            |
+| Tài sản và chứng từ khác                                      | 20.795.232             | "                      | 20.795.232            |
+
+Số liệu được trình bày theo khu vực địa lý của khách hàng/đối tác.

@@ -1,0 +1,16 @@
+## 48. Cam kết thuê hoạt động
+
+|                                    | 31/12/2024<br>Triệu VND | 31/12/2023<br>Triệu VND |
+|------------------------------------|-------------------------|-------------------------|
+| Đến một năm                        | 615.504                 | 596.677                 |
+| Từ một đến năm năm<br>Trên năm năm | 1.119.443<br>140.707    | 1.306.782<br>222.390    |
+|                                    | 1.875.654               | 2.125.849               |
+
+## 49. Thông tin so sánh
+
+Một số thông tin so sánh được phân loại lại cho phù hợp với quy định về trình bày báo cáo tài chính. Bảng so sánh số liệu đã trình bày trong năm trước, trước và sau khi được phân loại lại như sau:
+
+| BÁO CÁO KẾT QUẢ HOẠT ĐỘNG HỢP NHẤT                                                                                                                  | Năm kết thúc<br>ngày 31/12/2023<br>Triệu VND<br>(Phân loại lại) | Năm kết thúc<br>ngày 31/12/2023<br>Triệu VND<br>(Như đã trình<br>bày trước đây) |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------|
+| Thu nhập lãi và các khoản thu nhập tương tự<br>Thu nhập từ hoạt động dịch vụ<br>Chi phí từ hoạt động dịch vụ<br>BÁO CÁO LƯU CHUYỂN TIỀN TỆ HƠP NHẤT | 36.691.187<br>3.613.539<br>(1.410.276)                          | 35.567.669<br>4.801.297<br>(1.474.516)                                          |
+| Thu nhập lãi và các khoản thu nhập tương tự nhận được<br>Thu nhập từ hoạt động dịch vụ nhận được                                                    | 35.460.196<br>2.203.263                                         | 34.336.678<br>3.326.781                                                         |

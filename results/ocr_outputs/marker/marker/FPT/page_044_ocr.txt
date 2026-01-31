@@ -1,0 +1,44 @@
+## CÔNG TY CỔ PHẦN FPT
+
+Số 10 phố Phạm Văn Bạch Phường Dịch Vọng, Quận Cầu Giấy Thành phố Hà Nội, Việt Nam
+
+Báo cáo tài chính hợp nhất Cho kỳ hoạt động từ ngày 01 tháng 01 năm 2024 đến ngày 31 tháng 12 năm 2024
+
+MẫU SỐ B 09-DN/HN
+
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (tiếp theo) Các thuyết minh này là một bộ phận hợp thành và cần được đọc đồng thời với báo cáo tài chính hợp nhất kèm theo
+
+| STT | Công ty                                          | Hoạt động chính                        | Nơi thành    | Tại ngày 31/12/2024 |            | Tại ngày 31/12/2023 |            |
+|-----|--------------------------------------------------|----------------------------------------|--------------|---------------------|------------|---------------------|------------|
+|     |                                                  |                                        | lập, đăng ký | Tỷ lệ               | Tỷ lệ      | Tỷ lệ               | Tỷ lệ      |
+| 57  | Câng tu TNIUI Câng mah â m (c 507                | and of the h                           | hoạt động    | sở hữu              | biểu quyết | sở hữu              | biểu quyết |
+| 58  | Công ty TNHH Công nghệ mới FPT                   | Sản xuất phần mềm                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 59  | Công ty TNHH FPT Software Scandinavia ApS        | Sản xuất phần mềm                      | Đan Mạch     | 100%                | 100%       | Chưa thành lập      |            |
+| 60  | Công ty TNHH FPT Smart Cloud Japan               | Sản xuất phần mềm                      | Nhật Bản     | 100%                | 100%       | Chưa thành lập      |            |
+|     | Công ty TNHH Bất động sản FPT                    | Kinh doanh, môi giới BĐS               | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 61  | Công ty Cổ phần An toàn Thông tin Cyradar        | Dịch vụ CNTT                           | Việt Nam     | 77,78%              | 77,78%     | 77,78%              | 77,78%     |
+| 62  | Công ty Cổ phần Công nghệ UTOP                   | Lập trình máy vi tính                  | Việt Nam     | 55,63%              | 55,63%     | 54,67%              | 54,67%     |
+| 63  | Trường Trung học phổ thông FPT                   | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 64  | Công ty TNHH Sáng tạo Công nghệ FPT Toàn cầu     | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 65  | Trường Tiểu học và Trung học cơ sở FPT           | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 66  | Trường Trung học Phổ thông FPT (Đà Nẵng)         | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 67  | Trường Trung học Phổ thông FPT (Cần Thơ)         | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 68  | Trường Đại học FPT                               | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 69  | Công ty TNHH Đầu tư Thanh Sang                   | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 70  | Trường Cao đẳng FPT Polytechnic                  | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 71  | Trường Tiểu học và Trung học cờ sở FPT Cầu Giấy  | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 72  | Công ty TNHH Thương mại và Dịch vụ Trung tâm Lợi | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 73  | Trường Trung học Phổ thông FPT (Bình Định)       | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 74  | Trường Tiểu học, THCS và THPT FPT Bắc Ninh       | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 75  | Trường THCS và THPT FPT Hải Phòng                | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 76  | Trường Tiểu học, THCS và THPT FPT Bắc Giang      | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 77  | Trường Tiểu học, THCS và THPT FPT Hà Nam         | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 78  | Công ty cổ phần giáo dục và đào tạo TVB          | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 99,86%              | 99,86%     |
+| 79  | Trường Cao Đẳng Y Dược Thăng Long                | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 99,86%              | 99,86%     |
+| 80  | Trường THPT Tây Hà Nội                           | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | 100%                | 100%       |
+| 81  | Công ty TNHH Giáo dục FPT Nghệ An                | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | Chưa thành lập      |            |
+| 82  | Trường Tiểu học, THCS và THPT FPT Thanh Hóa      | Giáo dục, đào tạo                      | Việt Nam     | 100%                | 100%       | Chưa thành lập      |            |
+| 83  | Công ty Cổ phần Quốc tế Telehouse Vietnam        | Dịch vụ trung tâm dữ liệu              | Việt Nam     | 51%                 | 51%        | 51%                 | 51%        |
+| 84  | Công ty TNHH Hệ thống Thông tin Campuchia        | Tích hợp hệ thống, dịch vụ phần<br>mềm | Campuchia    | 100%                | 100%       | 100%                | 100%       |
+
+14 15

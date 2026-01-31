@@ -1,0 +1,40 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo)
+Tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 8. CHỨNG KHOÁN KINH DOANH
+
+## 8.1 Chứng khoán kinh doanh
+
+|                                               | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng |
+|-----------------------------------------------|--------------------------------------------|--------------------------------------------|
+| Chứng khoán kinh doanh                        |                                            |                                            |
+| Chứng khoán Chính phủ, chính quyền địa phương | -                                          | 581.548                                    |
+| Chứng khoản nợ do các TCTD khác phát hành     | 3,202,820                                  | 1.565.554                                  |
+| Chứng khoán nợ do các TCKT khác phát hành     | 8.337.286                                  | 8.749.317                                  |
+| Chứng khoán vốn do các TCKT khác phát hành    | <u>1.64</u> 0.615                          | 1.509.855                                  |
+|                                               | 13.180.721                                 | 12.406.274                                 |
+| Dự phòng rủi ro chứng khoán kinh doanh        | (69.750)                                   | (80.465)                                   |
+| Dự phòng chung                                | (57.176)                                   | (14.845)                                   |
+| Dự phòng cụ thể                               | -                                          | (65.620)                                   |
+| Dự phòng giảm giá                             | (12.574)                                   | -                                          |
+| -<br>-                                        | 13.110.971                                 | 12.325.809                                 |
+
+Tổng mệnh giá của các giấy tờ có giá mang đi thế chấp, cầm cố tại các TCTD khác tại 31 tháng 12 năm 2024 là 3.110.000 triệu đồng (ngày 31 tháng 12 năm 2023; 1.550.000 triệu đồng)
+
+## 8.2 Dự phòng chứng khoán kinh doanh
+
+Thay đổi dự phòng chứng khoán kinh doanh trong năm tài chính kết thúc ngày 31 tháng 12 năm 2024 như sau:
+
+|                                                                        | Dự phòng<br>chung<br>Triệu đồng | Dự phòng<br>cụ thể<br>Triệu đồng | Dự phòng<br>giảm giá<br>Triệu đồng | Tổng cộng<br>Triệu đồng |
+|------------------------------------------------------------------------|---------------------------------|----------------------------------|------------------------------------|-------------------------|
+| Số dư đầu năm                                                          | 65,620                          | 14.845                           |                                    | 80.465                  |
+| Dự phòng rủi ro trích lập/(hoàn nhập)<br>trong năm (Thuyết minh số 31) | (8.444)                         | (14.845)                         | 12.574                             | (10.715)                |
+| Số dư cuối năm                                                         | 57.176                          |                                  | 12.574                             | 69.750                  |
+
+Thay đổi dự phòng chứng khoán kinh doanh trong năm tài chính kết thúc ngày 31 tháng 12 năm 2023 như sau:
+
+|                                                            | Dự phòng<br>chung<br>Triệu đồng | Dự phòng<br>cụ thể<br>Triệu đồng | Dự phòng<br>giảm giá<br>Triệu đồng | Tổng cộng<br>Triệu đồng |
+|------------------------------------------------------------|---------------------------------|----------------------------------|------------------------------------|-------------------------|
+| Số dư đầu năm                                              | 57.192                          | -                                | -                                  | 57.192                  |
+| Dự phòng rùi ro trích lập trong năm<br>(Thuyết minh số 31) | 8.428                           | 14.845                           | -                                  | 23.273                  |
+| Số dư cuối năm                                             | 65.620                          | 14.845                           |                                    | 80,465                  |

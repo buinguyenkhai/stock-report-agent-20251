@@ -1,0 +1,23 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẮT (tiếp theo) Tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 24. TÌNH HÌNH THỰC HIỆN NGHĨA VỤ VỚI NGÂN SÁCH NHÀ NƯỚC (tiếp theo)
+
+## 24.2 Thuế thu nhập doanh nghiệp hoặn lại
+
+Tài sàn thuế thu nhập doanh nghiệp hoặn lại của Ngân hàng chi tiết như sau:
+
+|                                                                                           | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng |
+|-------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------|
+| Tài sản thuế thu nhập hoãn lại liên quan đến<br>khoản lỗ tính thuế chưa sử dụng           | 1.183.517                                  | 1.300.221                                  |
+| Tài sản thuế thu nhập hoãn lại liên quan đến                                              | 1. 100.011                                 | 1.000.221                                  |
+| khoản chênh lệch tạm thời được khấu trừ<br>Khoản hoàn nhập tải sản thuế thu nhập hoãn lại | 12.319                                     | 8.153                                      |
+| đã được ghi nhận từ các kỳ trước                                                          | -                                          | (10.650)                                   |
+| Tài sản thuế thu nhập doanh nghiệp hoãn lại                                               | 1.195.836                                  | 1.297.724                                  |
+
+Thuế thu nhập doanh nghiệp hoãn lại phải trả của Ngân hàng chi tiết như sau:
+
+|                                                                                                                                        | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>лăm 2023<br>Triệu đồng |
+|----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|--------------------------------------------|
+| Thuế thu nhập hoãn lại phải trà phát sinh từ các<br>khoản chênh lệch tạm thời chịu thuế<br>Khoản hoàn nhập thuế thu nhập hoãn lại phải | 26.517                                     | 74.154                                     |
+| trà đã được ghi nhận từ các kỳ trước                                                                                                   | -                                          | (8.844)                                    |
+| Thuế thu nhập doanh nghiệp hoãn lại phải trà                                                                                           | 26.517                                     | 65.310                                     |

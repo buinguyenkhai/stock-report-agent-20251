@@ -1,0 +1,31 @@
+## 6. Thu nhập từ góp vốn, mua cổ phần
+
+|                                                            | Từ 01/01/2024<br>đến 31/12/2024<br>Triệu đồng | Từ 01/01/2023<br>đến 31/12/2023<br>Triệu đồng |
+|------------------------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+| Thu cổ tức<br>Thu khác từ góp vốn mua cổ phần              | 48.540<br>4.103                               | 42.097<br>14.986                              |
+|                                                            | 52.643                                        | 57.083                                        |
+| 7. Chi phí hoạt động                                       |                                               |                                               |
+|                                                            | Từ 01/01/2024<br>đến 31/12/2024<br>Triệu đồng | Từ 01/01/2023<br>đến 31/12/2023<br>Triệu đồng |
+| Chi nộp thuế và các khoản phí, lệ phí<br>Chi cho nhân viên | 156.767<br>9.381.602                          | 157.503<br>7.996.974                          |
+| Chi về tài sản                                             | 3.156.134                                     | 2.843.585                                     |
+| Trong đó:<br>- Chi phí khấu hao và khấu trừ                | 1.623.989                                     | 1.462.673                                     |
+| Chi cho hoạt động quản lý công vụ                          | 3.733.773                                     | 3.466.912                                     |
+| Chi nộp phí bảo hiểm, bảo toàn tiền gửi của khách hàng     | 578.974                                       | 447.967                                       |
+|                                                            | 17.007.250                                    | 14.912.941                                    |
+
+## 8. Giải trình biến động lợi nhuận:
+
+Lợi nhuận sau thuế hợp nhất của MB quỷ IV năm 2024 so với quỷ IV năm 2023 tăng **1.336.534** triệu đồng tương đương mức **26,49%** do các nguyên nhân sau:
+
+| Khoản mục có biến động lớn                                                                                                                                     | Ánh hưởng<br>Lợi nhuận sau thuế<br>Triệu đồng |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| Tăng lợi nhuận do thu nhập lãi thuần tăng<br>Giảm lợi nhuận do giảm lãi thuần từ hoạt động dịch vụ<br>Tăng lợi nhuận do tăng lãi thuần từ hoạt động kinh doanh | 1.978.686<br>(274.960)                        |
+| ngoại hối<br>Giảm lợi nhuận do giảm lãi thuần từ mua bán chứng khoán                                                                                           | 194.915                                       |
+| kinh doanh<br>Tăng lợi nhuận do tăng lãi thuần từ mua bán chứng khoán                                                                                          | (77.892)                                      |
+| đầu tư và góp vốn, đầu tư dài hạn                                                                                                                              | 2.536.365                                     |
+| Tăng lợi nhuận do tăng lãi thuần từ hoạt động khác                                                                                                             | 441.566                                       |
+| Tăng lợi nhuận do tăng thu nhập từ góp vốn mua cổ phần                                                                                                         | 14.471                                        |
+| Giảm lợi nhuận do tăng chi phí hoạt động                                                                                                                       | (1.370.337)                                   |
+| Giảm lợi nhuận do tăng chi phí dự phòng                                                                                                                        | (1.636.966)                                   |
+| Giảm lợi nhuận do tăng chi phí thuế TNDN                                                                                                                       | (469.314)                                     |
+| Tổng ảnh hưởng đến kết quả kinh doanh                                                                                                                          | 1.336.534                                     |

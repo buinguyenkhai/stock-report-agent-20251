@@ -1,0 +1,80 @@
+{
+  "company": "VIB",
+  "page_number": 75,
+  "hybrid_ocr_stats": {
+    "total_cells": 157,
+    "surya_cells": 4,
+    "tesseract_cells": 153,
+    "table_cells": 75,
+    "non_table_cells": 82,
+    "eligible_cells": 4,
+    "routed_low_conf": 0,
+    "routed_low_num_conf": 4,
+    "routed_suspicious_numeric": 0,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 3,
+    "garbled_regions": 0,
+    "surya_cells_updated": 0,
+    "surya_update_skipped_sanity": 1,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 2.547770700636943
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 352.0,
+        "t": 70.33333333333333,
+        "r": 417.3333333333333,
+        "b": 78.0
+      },
+      "baseline": "49/2014/TT-NHNN",
+      "candidate": "49/2014/TT-NHNN",
+      "candidate_raw": "49/2014/TT-NHNN",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 438.3333333333333,
+        "t": 70.33333333333333,
+        "r": 446.0,
+        "b": 76.66666666666667
+      },
+      "baseline": "31",
+      "candidate": "31",
+      "candidate_raw": "31",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 473.0,
+        "t": 69.66666666666667,
+        "r": 480.0,
+        "b": 76.0
+      },
+      "baseline": "12",
+      "candidate": "12",
+      "candidate_raw": "12",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 499.6666666666667,
+        "t": 69.33333333333333,
+        "r": 517.0,
+        "b": 75.66666666666667
+      },
+      "baseline": "2014",
+      "candidate": "2014",
+      "candidate_raw": "2014",
+      "accepted": false,
+      "reason": "no_change"
+    }
+  ]
+}

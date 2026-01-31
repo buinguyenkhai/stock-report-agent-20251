@@ -1,0 +1,132 @@
+{
+  "company": "TCB",
+  "page_number": 67,
+  "hybrid_ocr_stats": {
+    "total_cells": 444,
+    "surya_cells": 8,
+    "tesseract_cells": 436,
+    "table_cells": 213,
+    "non_table_cells": 231,
+    "eligible_cells": 8,
+    "routed_low_conf": 8,
+    "routed_low_num_conf": 0,
+    "routed_suspicious_numeric": 8,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 6,
+    "garbled_regions": 0,
+    "surya_cells_updated": 0,
+    "surya_update_skipped_sanity": 0,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 1.8018018018018018
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 356.0,
+        "t": 439.6666666666667,
+        "r": 410.6666666666667,
+        "b": 452.0
+      },
+      "baseline": "535.520.450",
+      "candidate": "535.520.450",
+      "candidate_raw": "535.520.450",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 464.0,
+        "t": 441.6666666666667,
+        "r": 517.3333333333334,
+        "b": 448.6666666666667
+      },
+      "baseline": "541.301.351",
+      "candidate": "541.301.351",
+      "candidate_raw": "541.301.351",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 361.3333333333333,
+        "t": 453.0,
+        "r": 411.0,
+        "b": 460.0
+      },
+      "baseline": "28.234.109",
+      "candidate": "28.234.109",
+      "candidate_raw": "28.234.109",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 469.3333333333333,
+        "t": 453.0,
+        "r": 519.0,
+        "b": 460.0
+      },
+      "baseline": "24.199.153",
+      "candidate": "24.199.153",
+      "candidate_raw": "24.199.153",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 356.6666666666667,
+        "t": 464.0,
+        "r": 410.6666666666667,
+        "b": 476.3333333333333
+      },
+      "baseline": "149.098.610",
+      "candidate": "149.098.610",
+      "candidate_raw": "149.098.610",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 464.6666666666667,
+        "t": 465.6666666666667,
+        "r": 519.0,
+        "b": 473.0
+      },
+      "baseline": "130.155.637",
+      "candidate": "130.155.637",
+      "candidate_raw": "130.155.637",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 356.0,
+        "t": 477.0,
+        "r": 410.6666666666667,
+        "b": 484.3333333333333
+      },
+      "baseline": "551.777.092",
+      "candidate": "551.777.092",
+      "candidate_raw": "551.777.092",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 464.0,
+        "t": 477.0,
+        "r": 519.0,
+        "b": 484.3333333333333
+      },
+      "baseline": "383.690.147",
+      "candidate": "383.690.147",
+      "candidate_raw": "383.690.147",
+      "accepted": false,
+      "reason": "no_change"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+THUYÉT MINH BẢO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo) Tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 15. TÀI SẢN CÓ ĐỊNH (tiếp theo)
+
+## 15.2 Tài sản cố định vô hình
+
+Biến động của tài sản cố định vô hình trong năm như sau:
+
+|                        | Quyển sử<br>dụng đất<br>Triệu đồng | Phần mềm<br>máy vi tính<br>Triệu đồng | Tổng cộng<br>Triệu đồng |
+|------------------------|------------------------------------|---------------------------------------|-------------------------|
+| Nguyên giá             |                                    | ,                                     |                         |
+| Số dư đầu năm          | 65.127                             | 1.843.421                             | 1.908.548               |
+| Mua trong năm          | -                                  | 28.685                                | 28.685                  |
+| Tăng khác              | -                                  | 148.958                               | 148.958                 |
+| Số đư cuối năm         | 65.127                             | 2.021.064                             | 2.086.191               |
+| Giá trị hao mòn lũy kế |                                    |                                       |                         |
+| Số dư đầu năm          | 868                                | 1.281.978                             | 1.282.846               |
+| Hao mòn trong năm      | -                                  | 216.528                               | 216.528                 |
+| Số dư cuối năm         | 868                                | 1.498.506                             | 1.499.374               |
+| Giá trị còn lại        |                                    |                                       | •                       |
+| Số dư đầu năm          | 64.259                             | 561.443                               | 625.702                 |
+| Số đư cuối năm         | 64.259                             | 522.558                               | 586.817                 |
+|                        |                                    |                                       |                         |
+
+Nguyên giá tài sản cố định vô hình đã khấu hao hết nhưng vẫn còn sử dụng tại ngày 31 tháng 12 năm 2024 là 809.788 triệu đồng (31 tháng 12 năm 2023: 688.966 triệu đồng).
+
+## 16. TÀ! SẢN CÓ KHÁC
+
+## 16.1 Các khoản phải thu
+
+|                                                          | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng |
+|----------------------------------------------------------|--------------------------------------------|--------------------------------------------|
+| Các khoản phải thu nội bộ                                | 281.942                                    | 218.912                                    |
+| Các khoản phải thu bên ngoài                             | 11.039.290                                 | 33.611.235                                 |
+| <ul> <li>Phải thu về thư tín dụng trả chậm</li> </ul>    | 4.895.385                                  | 28.000.136                                 |
+| <ul> <li>Ký quỹ và khoản phải thu hợp đồng</li> </ul>    |                                            |                                            |
+| tương lai Trái phiếu Chính phủ                           | 21.168                                     | 3,503                                      |
+| <ul> <li>Đặt cọc theo các hợp đồng kinh tế</li> </ul>    | 1.365.794                                  | 1.404.973                                  |
+| - Phải thu bán tải sản tài chính                         | 84.077                                     | 84.567                                     |
+| <ul> <li>Phải thu về hoạt động thanh toán</li> </ul>     | 1.414.058                                  | 1.928.290                                  |
+| - Tạm ứng nhà cung cấp                                   | 363.998                                    | 393.098                                    |
+| <ul> <li>Dự phòng phi và bồi thường nghiệp vụ</li> </ul> |                                            |                                            |
+| nhượng tái bảo hiểm                                      | 518.012                                    | 384.160                                    |
+| <ul> <li>Các khoản phải thu bên ngoài khác</li> </ul>    | 2.376.798                                  | 1.412.508                                  |
+| Mua sắm tải sản cố định                                  | 85.071                                     | 134.526                                    |
+| Xây dựng cơ bàn đỡ dang                                  | 5.017                                      | 4.768                                      |
+|                                                          | 11.411.320                                 | 33,969,441                                 |

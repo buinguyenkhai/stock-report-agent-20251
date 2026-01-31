@@ -1,0 +1,47 @@
+## CÔNG TY CỔ PHẦN FPT
+
+Số 10 phố Phạm Văn Bạch Phường Dịch Vọng, Quận Cầu Giấy Thành phố Hà Nội, Việt Nam
+
+Báo cáo tài chính hợp nhất Cho kỳ hoạt động từ ngày 01 tháng 01 năm 2024 đến ngày 31 tháng 12 năm 2024
+
+## THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (tiếp theo)
+
+Các thuyết minh này là một bộ phận hợp thành và cần được đọc đồng thời với báo cáo tài chính hợp nhất kèm theo
+
+MẪU SỐ B 09-DN/HN
+
+| STT | Công ty                                    | Hoạt động chính                       | Nơi thành           | Tại ngày 31/12/2024 |             | Tại ngày 31/12/2023              |               |
+|-----|--------------------------------------------|---------------------------------------|---------------------|---------------------|-------------|----------------------------------|---------------|
+|     |                                            |                                       | lập, đăng ký        | Tỷ lệ               | Tỷ lệ       | Tỷ lệ                            | Tỷ lệ         |
+| 26  | Câng tu TNIIII DE Samura EDT DE III        |                                       | hoạt động           | sở hữu              | biểu quyết  | sở hữu                           | biểu quyết    |
+| 27  | Công ty TNHH Phần mềm FPT Philippines      | Sản xuất phần mềm                     | Philippines         | 100%                | 100%        | 100%                             | 100%          |
+| 28  | Công ty TNHH FPT Slovakia                  | Sản xuất phần mềm                     | Slovakia            | 100%                | 100%        | 100%                             | 100%          |
+| 29  | Công ty TNHH FPT Cộng hòa Séc              | Sản xuất phần mềm                     | Cộng hòa Séc        | 100%                | 100%        | 100%                             | 100%          |
+| 30  | Công ty TNHH FPT Châu Á Thái Bình Đương    | Sản xuất phần mềm                     | Singapore           | 100%                | 100%        | 100%                             | 100%          |
+|     | Công ty TNHH FPT Siam                      | Sản xuất phần mềm                     | Thái Lan            | 99,97%              | 99,97%      | 99,97%                           | 99,97%        |
+| 31  | Công ty TNHH Công nghệ FPT DMCC            | Sản xuất phần mềm                     | UAE                 | 100%                | 100%        | 100%                             | 100%          |
+| 32  | Công ty TNHH Tư vấn FPT LLC                | Sản xuất phần mềm                     | UAE                 | 100%                | 100%        | 100%                             | 100%          |
+| 33  | Công ty TNHH Dịch vụ Tư vấn FPT            | Sản xuất phần mềm                     | HongKong            | 100%                | 100%        | 100%                             | 100%          |
+| 34  | Công ty TNHH Hệ thống thông tin Singapore  | Sản xuất phần mềm                     | Singapore           | 100%                | 100%        | 100%                             | 100%          |
+| 35  | Công ty TNHH FPT Myanmar                   | Sản xuất phần mềm                     | Myanmar             | 100%                | 100%        | 100%                             | 100%          |
+| 36  | Công ty TNHH Phần mềm FPT Hồ Chí Minh      | Sản xuất phần mềm                     | Việt Nam            | 100%                | 100%        | 100%                             | 100%          |
+| 37  | Công ty TNHH Phần mềm FPT Hà Nội           | Sản xuất phần mềm                     | Việt Nam            | 100%                | 100%        | 100%                             | 100%          |
+| 38  | Công ty TNHH Phần mềm FPT Miền Trung       | Sản xuất phần mềm                     | Việt Nam            | 100%                | 100%        | 100%                             | 100%          |
+| 39  | Công ty TNHH Phần mềm FPT Thăng Long       | Sản xuất phần mềm                     | Việt Nam            | 100%                | 100%        | 100%                             | 100%          |
+| 40  | Công ty TNHH Phần mềm sáng tạo FPT         | Sản xuất phần mềm                     | Việt Nam            | 100%                | 100%        | 100%                             | 100%          |
+| 41  | Công ty Cổ phần Công nghệ HOMA             | Sản xuất, kinh doanh thiết bị điện tử | Việt Nam            | 75%                 | <b>7</b> 5% | 75%                              | 75%           |
+| 42  | Công ty TNHH Phần mềm FPT Quy Nhơn         | Sản xuất phần mềm                     | Việt Nam            | 100%                | 100%        | 100%                             | 100%          |
+| 43  | Công ty Phần mềm FPT Tô Châu               | Sản xuất phần mềm                     | Trung Quốc          | 100%                | 100%        | 100%                             | 100%          |
+| 44  | Công ty TNHH Akavault                      | Tư vấn công nghệ                      | Singapore           | 100%                | 100%        | 100%                             | 100%          |
+| 45  | Công ty Phần mềm FPT Hà Lan                | Sản xuất phần mềm                     | Hà Lan              | 100%                | 100%        | 100%                             | 100%          |
+| 46  | Công ty Base Platform Pte                  | Sản xuất phần mềm                     | Singapore           | 90%                 | 90%         | 90%                              | 90%           |
+| 47  | Công ty Cổ phần Base Enterprise            | Sản xuất phần mềm                     | Việt Nam            | 89,99%              | 99,98%      | 89,99%                           | 99,98%        |
+| 48  | Công ty TNHH Phần mềm FPT Huế              | Sản xuất phần mềm                     | Việt Nam            | 100%                | 100%        | 100%                             | 100%          |
+| 49  | Công ty TNHH Công nghệ Thông tin FPT       | Sản xuất phần mềm                     | Ả rập x <b>ê</b> út | 100%                | 100%        | 100%                             | 100%          |
+| 50  | Công ty TNHH Phần mềm FPT Quảng Tây        | Sản xuất phần mềm                     | Trung Quốc          | 100%                | 100%        | 100%                             | 100%          |
+| 51  | Công ty TNHH Phát triển Dịch vụ Soft front | Sản xuất phần mềm                     | Nhật Bản            | Đã giải             |             | 100%                             | 100%          |
+| 52  | Công ty TNHH NAC                           | Sản xuất phần mềm                     | Nhật Bản            | 100%                | 100%        | 0%                               | 0%            |
+| 53  | Công ty TNHH Tư vấn AOSIS                  | Sản xuất phần mềm                     | Pháp                | 80%                 | 80%         | 0%                               | 0%            |
+| 54  | Công ty TNHH Phần mềm FPT Đại Liên         | Sản xuất phần mềm                     | Trung Quốc          | 100%                | 100%        |                                  |               |
+| 55  | Công ty FPT Automotive                     | Sản xuất phần mềm                     | Hoa Kỳ              | 100%                | 100%        | Chưa thành lập<br>Chưa thành lập |               |
+| 56  | Công ty Phần mềm FPT Romania               | Sản xuất phần mềm                     | Romania             | 100%                | 100%        |                                  | nưa thành lập |

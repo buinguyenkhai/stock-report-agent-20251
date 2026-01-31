@@ -1,0 +1,4617 @@
+{
+  "company": "FPT",
+  "page_number": 34,
+  "hybrid_ocr_stats": {
+    "total_cells": 371,
+    "surya_cells": 353,
+    "tesseract_cells": 18,
+    "table_cells": 357,
+    "non_table_cells": 14,
+    "eligible_cells": 353,
+    "routed_low_conf": 35,
+    "routed_low_num_conf": 318,
+    "routed_suspicious_numeric": 71,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 18,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 5,
+    "garbled_regions": 1,
+    "surya_cells_updated": 44,
+    "surya_update_skipped_sanity": 304,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 95.14824797843666
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 471.3333333333333,
+        "t": 392.0,
+        "r": 487.0,
+        "b": 399.3333333333333
+      },
+      "baseline": "\"UỢA",
+      "candidate": ".nôv",
+      "candidate_raw": ".nôv",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 458.0,
+        "t": 392.3333333333333,
+        "r": 468.6666666666667,
+        "b": 399.3333333333333
+      },
+      "baseline": "314",
+      "candidate": "tùn",
+      "candidate_raw": "tùn",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 444.3333333333333,
+        "t": 391.6666666666667,
+        "r": 455.0,
+        "b": 399.3333333333333
+      },
+      "baseline": "UỆ|",
+      "candidate": "uğl",
+      "candidate_raw": "uğl",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 427.6666666666667,
+        "t": 391.0,
+        "r": 441.0,
+        "b": 399.3333333333333
+      },
+      "baseline": "J0U1",
+      "candidate": "iỗm",
+      "candidate_raw": "iỗm",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 407.0,
+        "t": 392.3333333333333,
+        "r": 424.6666666666667,
+        "b": 399.0
+      },
+      "baseline": "0903",
+      "candidate": "theo",
+      "candidate_raw": "theo",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 392.0,
+        "t": 391.0,
+        "r": 404.6666666666667,
+        "b": 399.0
+      },
+      "baseline": "803",
+      "candidate": "şųı",
+      "candidate_raw": "şųı",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 381.6666666666667,
+        "t": 394.0,
+        "r": 389.3333333333333,
+        "b": 399.6666666666667
+      },
+      "baseline": "83",
+      "candidate": "ŉэ",
+      "candidate_raw": "ŉэ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 362.3333333333333,
+        "t": 391.6666666666667,
+        "r": 378.3333333333333,
+        "b": 399.3333333333333
+      },
+      "baseline": "quịp",
+      "candidate": "циiр",
+      "candidate_raw": "циiр",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 346.0,
+        "t": 393.3333333333333,
+        "r": 359.6666666666667,
+        "b": 400.0
+      },
+      "baseline": "Ánb",
+      "candidate": "λnb",
+      "candidate_raw": "λnb",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 323.6666666666667,
+        "t": 391.3333333333333,
+        "r": 343.0,
+        "b": 399.3333333333333
+      },
+      "baseline": "2971p",
+      "candidate": "απάς",
+      "candidate_raw": "απάς",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 305.0,
+        "t": 390.3333333333333,
+        "r": 320.6666666666667,
+        "b": 398.0
+      },
+      "baseline": "3enS",
+      "candidate": "täus",
+      "candidate_raw": "täus",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 294.3333333333333,
+        "t": 391.0,
+        "r": 302.0,
+        "b": 397.6666666666667
+      },
+      "baseline": "!e|",
+      "candidate": "!빛!",
+      "candidate_raw": "!빛!",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 283.0,
+        "t": 391.0,
+        "r": 290.6666666666667,
+        "b": 397.6666666666667
+      },
+      "baseline": "eA",
+      "candidate": "Ŕν",
+      "candidate_raw": "Ŕν",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 267.0,
+        "t": 390.3333333333333,
+        "r": 280.3333333333333,
+        "b": 397.3333333333333
+      },
+      "baseline": "o£q",
+      "candidate": "pşo",
+      "candidate_raw": "pşo",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 247.33333333333334,
+        "t": 390.0,
+        "r": 263.3333333333333,
+        "b": 397.0
+      },
+      "baseline": "Uệp",
+      "candidate": "mśb",
+      "candidate_raw": "mśb",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 236.33333333333334,
+        "t": 390.3333333333333,
+        "r": 244.66666666666666,
+        "b": 397.0
+      },
+      "baseline": "02",
+      "candidate": "ÒΟ",
+      "candidate_raw": "ÒΟ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 211.33333333333334,
+        "t": 390.0,
+        "r": 233.33333333333334,
+        "b": 398.6666666666667
+      },
+      "baseline": "8UO03",
+      "candidate": "қµçи§",
+      "candidate_raw": "қµçи§",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 195.0,
+        "t": 390.0,
+        "r": 208.0,
+        "b": 398.3333333333333
+      },
+      "baseline": "ÁệU",
+      "candidate": "γén",
+      "candidate_raw": "γén",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 179.66666666666666,
+        "t": 391.6666666666667,
+        "r": 192.33333333333334,
+        "b": 398.0
+      },
+      "baseline": "ÁeA",
+      "candidate": "ляλ",
+      "candidate_raw": "ляλ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 154.33333333333334,
+        "t": 389.0,
+        "r": 176.66666666666666,
+        "b": 396.0
+      },
+      "baseline": "ueo3",
+      "candidate": "khoản",
+      "candidate_raw": "khoản",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 138.33333333333334,
+        "t": 389.0,
+        "r": 151.33333333333334,
+        "b": 396.0
+      },
+      "baseline": "2g2",
+      "candidate": "эèЭ",
+      "candidate_raw": "эèЭ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 118.33333333333333,
+        "t": 389.6666666666667,
+        "r": 135.33333333333334,
+        "b": 395.6666666666667
+      },
+      "baseline": "'qsn",
+      "candidate": "usp.",
+      "candidate_raw": "usp.",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 787.0,
+        "t": 384.3333333333333,
+        "r": 804.6666666666666,
+        "b": 392.0
+      },
+      "baseline": "2‡OU",
+      "candidate": "boặc",
+      "candidate_raw": "boặc",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 746.0,
+        "t": 382.6666666666667,
+        "r": 764.0,
+        "b": 392.0
+      },
+      "baseline": "8UỆd",
+      "candidate": "gnắd",
+      "candidate_raw": "gnắd",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 731.6666666666666,
+        "t": 383.6666666666667,
+        "r": 742.3333333333334,
+        "b": 390.6666666666667
+      },
+      "baseline": "3n",
+      "candidate": "rút",
+      "candidate_raw": "rút",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 716.0,
+        "t": 382.6666666666667,
+        "r": 728.6666666666666,
+        "b": 390.3333333333333
+      },
+      "baseline": "81",
+      "candidate": "âф",
+      "candidate_raw": "âф",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 704.6666666666666,
+        "t": 383.3333333333333,
+        "r": 713.0,
+        "b": 390.3333333333333
+      },
+      "baseline": "o2",
+      "candidate": "ĊΟ",
+      "candidate_raw": "ĊΟ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 689.0,
+        "t": 383.3333333333333,
+        "r": 701.6666666666666,
+        "b": 391.6666666666667
+      },
+      "baseline": "Áeu",
+      "candidate": "λęu",
+      "candidate_raw": "λęu",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 667.0,
+        "t": 383.0,
+        "r": 685.3333333333334,
+        "b": 391.3333333333333
+      },
+      "baseline": "8uñp",
+      "candidate": "Ձսոր",
+      "candidate_raw": "Ձսոր",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 653.3333333333334,
+        "t": 383.0,
+        "r": 663.0,
+        "b": 389.6666666666667
+      },
+      "baseline": "uJ",
+      "candidate": "ujţ",
+      "candidate_raw": "ujţ",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 627.6666666666666,
+        "t": 382.3333333333333,
+        "r": 650.0,
+        "b": 389.6666666666667
+      },
+      "baseline": "ueou",
+      "candidate": "khoản",
+      "candidate_raw": "khoản",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 611.3333333333334,
+        "t": 382.6666666666667,
+        "r": 624.0,
+        "b": 389.6666666666667
+      },
+      "baseline": "22",
+      "candidate": "оèЭ",
+      "candidate_raw": "оèЭ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 592.3333333333334,
+        "t": 382.3333333333333,
+        "r": 607.6666666666666,
+        "b": 389.3333333333333
+      },
+      "baseline": "003",
+      "candidate": "thu.",
+      "candidate_raw": "thu.",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 570.6666666666666,
+        "t": 382.3333333333333,
+        "r": 589.3333333333334,
+        "b": 390.6666666666667
+      },
+      "baseline": "8unp",
+      "candidate": "Ձսոր",
+      "candidate_raw": "Ձսոր",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 557.3333333333334,
+        "t": 382.0,
+        "r": 567.0,
+        "b": 389.0
+      },
+      "baseline": "tị)",
+      "candidate": "ujļ",
+      "candidate_raw": "ujļ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 546.3333333333334,
+        "t": 382.0,
+        "r": 554.0,
+        "b": 388.6666666666667
+      },
+      "baseline": "gA",
+      "candidate": "Śν",
+      "candidate_raw": "Śν",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 525.0,
+        "t": 381.3333333333333,
+        "r": 543.0,
+        "b": 390.3333333333333
+      },
+      "baseline": "đ§U2",
+      "candidate": "cµgb",
+      "candidate_raw": "cµgb",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 512.0,
+        "t": 381.6666666666667,
+        "r": 521.6666666666666,
+        "b": 388.6666666666667
+      },
+      "baseline": "Uạ",
+      "candidate": "nìt",
+      "candidate_raw": "nìt",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 491.6666666666667,
+        "t": 381.3333333333333,
+        "r": 509.0,
+        "b": 388.3333333333333
+      },
+      "baseline": "3401",
+      "candidate": "thúrc",
+      "candidate_raw": "thúrc",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 472.3333333333333,
+        "t": 381.3333333333333,
+        "r": 488.3333333333333,
+        "b": 387.6666666666667
+      },
+      "baseline": "tuI",
+      "candidate": "นุนเน",
+      "candidate_raw": "นุนเน",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 451.6666666666667,
+        "t": 381.0,
+        "r": 468.6666666666667,
+        "b": 387.6666666666667
+      },
+      "baseline": "Jọn0",
+      "candidate": "iòʻub",
+      "candidate_raw": "iòʻub",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 434.6666666666667,
+        "t": 380.0,
+        "r": 448.0,
+        "b": 389.3333333333333
+      },
+      "baseline": "nạÁ",
+      "candidate": "ηġλ",
+      "candidate_raw": "ηġλ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 418.3333333333333,
+        "t": 380.0,
+        "r": 431.0,
+        "b": 387.3333333333333
+      },
+      "baseline": "nu",
+      "candidate": "ņцэ",
+      "candidate_raw": "ņцэ",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 399.3333333333333,
+        "t": 380.6666666666667,
+        "r": 414.3333333333333,
+        "b": 388.6666666666667
+      },
+      "baseline": "uộiu",
+      "candidate": "uģļų",
+      "candidate_raw": "uģļų",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 378.3333333333333,
+        "t": 380.3333333333333,
+        "r": 395.6666666666667,
+        "b": 388.3333333333333
+      },
+      "baseline": "243",
+      "candidate": "դիդւշ",
+      "candidate_raw": "դիդւշ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 355.6666666666667,
+        "t": 380.0,
+        "r": 375.0,
+        "b": 387.6666666666667
+      },
+      "baseline": "26np",
+      "candidate": "αικός",
+      "candidate_raw": "αικός",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 344.6666666666667,
+        "t": 379.0,
+        "r": 352.6666666666667,
+        "b": 386.6666666666667
+      },
+      "baseline": "3",
+      "candidate": "ξį",
+      "candidate_raw": "ξį",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 326.6666666666667,
+        "t": 379.6666666666667,
+        "r": 341.6666666666667,
+        "b": 386.3333333333333
+      },
+      "baseline": "QUĐj",
+      "candidate": "Κinh",
+      "candidate_raw": "Κinh",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 305.0,
+        "t": 379.3333333333333,
+        "r": 323.0,
+        "b": 386.3333333333333
+      },
+      "baseline": "5002",
+      "candidate": "oùdo",
+      "candidate_raw": "oùdo",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 294.0,
+        "t": 378.3333333333333,
+        "r": 301.6666666666667,
+        "b": 386.0
+      },
+      "baseline": "03",
+      "candidate": "ÕĴ",
+      "candidate_raw": "ÕĴ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 279.0,
+        "t": 379.0,
+        "r": 291.0,
+        "b": 386.0
+      },
+      "baseline": "282",
+      "candidate": "các",
+      "candidate_raw": "các",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 267.6666666666667,
+        "t": 379.0,
+        "r": 275.6666666666667,
+        "b": 385.6666666666667
+      },
+      "baseline": "gA",
+      "candidate": "ęν",
+      "candidate_raw": "ęν",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 247.0,
+        "t": 378.6666666666667,
+        "r": 264.6666666666667,
+        "b": 387.0
+      },
+      "baseline": "8ueu",
+      "candidate": "Զսբկ",
+      "candidate_raw": "Զսբկ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 225.33333333333334,
+        "t": 378.6666666666667,
+        "r": 242.66666666666666,
+        "b": 387.0
+      },
+      "baseline": "ug8u",
+      "candidate": "บธิรูน",
+      "candidate_raw": "บธิรูน",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 210.33333333333334,
+        "t": 378.3333333333333,
+        "r": 222.0,
+        "b": 385.3333333333333
+      },
+      "baseline": "2g2",
+      "candidate": "эèэ",
+      "candidate_raw": "эèэ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 198.33333333333334,
+        "t": 378.3333333333333,
+        "r": 207.0,
+        "b": 385.0
+      },
+      "baseline": "z1",
+      "candidate": "ŉΙ",
+      "candidate_raw": "ŉΙ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 182.0,
+        "t": 378.0,
+        "r": 195.33333333333334,
+        "b": 386.0
+      },
+      "baseline": "tiêu",
+      "candidate": "uėų",
+      "candidate_raw": "uėų",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 160.33333333333334,
+        "t": 376.6666666666667,
+        "r": 178.0,
+        "b": 386.3333333333333
+      },
+      "baseline": "ue8u",
+      "candidate": "nšgu",
+      "candidate_raw": "nšgu",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 144.33333333333334,
+        "t": 379.6666666666667,
+        "r": 157.33333333333334,
+        "b": 386.0
+      },
+      "baseline": "ÁzA",
+      "candidate": "8e8",
+      "candidate_raw": "۸e۸",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 118.33333333333333,
+        "t": 377.3333333333333,
+        "r": 141.0,
+        "b": 384.3333333333333
+      },
+      "baseline": "ueou)",
+      "candidate": "Khoản",
+      "candidate_raw": "Khoản",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 107.0,
+        "t": 377.3333333333333,
+        "r": 113.66666666666667,
+        "b": 385.6666666666667
+      },
+      "baseline": "(I)",
+      "candidate": "(!)",
+      "candidate_raw": "(!)",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 753.3333333333334,
+        "t": 354.3333333333333,
+        "r": 803.0,
+        "b": 364.0
+      },
+      "baseline": "S/0°/£S'STT'T0S",
+      "candidate": "201.115.537.075",
+      "candidate_raw": "201.115.537.075",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 679.3333333333334,
+        "t": 353.6666666666667,
+        "r": 729.0,
+        "b": 363.3333333333333
+      },
+      "baseline": "S/0'/£S'STT'I0S",
+      "candidate": "201.115.537.075",
+      "candidate_raw": "201.115.537.075",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 610.6666666666666,
+        "t": 352.6666666666667,
+        "r": 653.0,
+        "b": 362.3333333333333
+      },
+      "baseline": "S€S'TT8'098'8",
+      "candidate": "8.860.811.535",
+      "candidate_raw": "8.860.811.535",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 535.0,
+        "t": 352.0,
+        "r": 581.3333333333334,
+        "b": 364.0
+      },
+      "baseline": "{69y'36T'0£E'6)",
+      "candidate": "(9,320,196,469)",
+      "candidate_raw": "(9,320,196,469)",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 467.6666666666667,
+        "t": 351.3333333333333,
+        "r": 504.6666666666667,
+        "b": 361.0
+      },
+      "baseline": "80E'£0T'Z£9",
+      "candidate": "632.103.308",
+      "candidate_raw": "632.103.308",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 454.6666666666667,
+        "t": 354.3333333333333,
+        "r": 467.0,
+        "b": 359.3333333333333
+      },
+      "baseline": "09T",
+      "candidate": "760°",
+      "candidate_raw": "760°",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 380.3333333333333,
+        "t": 350.6666666666667,
+        "r": 430.3333333333333,
+        "b": 360.3333333333333
+      },
+      "baseline": "SS£'8Z0'ZET'Sy",
+      "candidate": "454,132,028.355",
+      "candidate_raw": "454,132,028.355",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 304.3333333333333,
+        "t": 349.6666666666667,
+        "r": 354.3333333333333,
+        "b": 359.6666666666667
+      },
+      "baseline": "€96'966'tz0'80Z",
+      "candidate": "296.966.470.80S",
+      "candidate_raw": "296.<b>9</b>66.470.80S",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 230.33333333333334,
+        "t": 348.6666666666667,
+        "r": 280.3333333333333,
+        "b": 358.3333333333333
+      },
+      "baseline": "€96'966't/0'80¿",
+      "candidate": "296.966.470.802",
+      "candidate_raw": "296.966.470.802",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 778.0,
+        "t": 338.3333333333333,
+        "r": 802.3333333333334,
+        "b": 348.0
+      },
+      "baseline": "9T962E",
+      "candidate": "9T9.67E",
+      "candidate_raw": "9T9.67E",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 759.6666666666666,
+        "t": 341.3333333333333,
+        "r": 777.3333333333334,
+        "b": 346.3333333333333
+      },
+      "baseline": "ZPtT",
+      "candidate": "77 445",
+      "candidate_raw": "77 445",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 704.0,
+        "t": 337.6666666666667,
+        "r": 728.3333333333334,
+        "b": 347.3333333333333
+      },
+      "baseline": "9T9'6PE",
+      "candidate": "979-67E",
+      "candidate_raw": "979<sup>-</sup>67E",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 686.0,
+        "t": 340.6666666666667,
+        "r": 703.3333333333334,
+        "b": 345.6666666666667
+      },
+      "baseline": "ZtyT",
+      "candidate": "`T7 75",
+      "candidate_raw": "<i>`T7</i>75",
+      "accepted": false,
+      "reason": "skip_digit_alpha_junk"
+    },
+    {
+      "bbox": {
+        "l": 650.0,
+        "t": 342.6666666666667,
+        "r": 651.6666666666666,
+        "b": 343.6666666666667
+      },
+      "baseline": "7",
+      "candidate": "-",
+      "candidate_raw": "-",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 555.0,
+        "t": 336.0,
+        "r": 580.3333333333334,
+        "b": 347.0
+      },
+      "baseline": "(680'88T",
+      "candidate": "(680-881",
+      "candidate_raw": "(680-881",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 539.6666666666666,
+        "t": 338.6666666666667,
+        "r": 553.6666666666666,
+        "b": 345.3333333333333
+      },
+      "baseline": "Ty)",
+      "candidate": "'T+T)",
+      "candidate_raw": "'T+T)",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 479.3333333333333,
+        "t": 335.3333333333333,
+        "r": 506.3333333333333,
+        "b": 345.0
+      },
+      "baseline": "€PS8TE",
+      "candidate": "378.543",
+      "candidate_raw": "378.543",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 461.0,
+        "t": 338.3333333333333,
+        "r": 478.6666666666667,
+        "b": 343.3333333333333
+      },
+      "baseline": "/08T",
+      "candidate": ".708.1",
+      "candidate_raw": ".708.1",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 427.3333333333333,
+        "t": 340.6666666666667,
+        "r": 429.3333333333333,
+        "b": 341.3333333333333
+      },
+      "baseline": "-",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 310.3333333333333,
+        "t": 333.6666666666667,
+        "r": 357.0,
+        "b": 343.3333333333333
+      },
+      "baseline": "8PZ'958'06E'E",
+      "candidate": "842.328.0ee.e",
+      "candidate_raw": "842.328.0ee.e",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 236.66666666666666,
+        "t": 333.0,
+        "r": 279.0,
+        "b": 342.6666666666667
+      },
+      "baseline": "8?Z'958'06E'£",
+      "candidate": "842.328.0ee.e",
+      "candidate_raw": "842.328.0ee.e",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 142.66666666666666,
+        "t": 334.6666666666667,
+        "r": 158.33333333333334,
+        "b": 340.0
+      },
+      "baseline": "4/2",
+      "candidate": "цијцэ",
+      "candidate_raw": "цијцэ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 133.33333333333334,
+        "t": 334.3333333333333,
+        "r": 141.0,
+        "b": 340.0
+      },
+      "baseline": "¡0",
+      "candidate": "ίÓΙ",
+      "candidate_raw": "ίÓΙ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 107.66666666666667,
+        "t": 334.3333333333333,
+        "r": 131.33333333333334,
+        "b": 340.3333333333333
+      },
+      "baseline": "ạn43.ÓN",
+      "candidate": "NO thuê",
+      "candidate_raw": "NO thuê",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 795.0,
+        "t": 325.6666666666667,
+        "r": 802.0,
+        "b": 331.0
+      },
+      "baseline": "6S",
+      "candidate": "69",
+      "candidate_raw": "69",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 778.3333333333334,
+        "t": 322.3333333333333,
+        "r": 790.0,
+        "b": 332.3333333333333
+      },
+      "baseline": "¿8T",
+      "candidate": "Z8T",
+      "candidate_raw": "Z8T",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 752.0,
+        "t": 325.3333333333333,
+        "r": 777.3333333333334,
+        "b": 330.3333333333333
+      },
+      "baseline": "£/9'66y",
+      "candidate": "EL9:667",
+      "candidate_raw": "EL9:667",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 717.0,
+        "t": 325.0,
+        "r": 728.0,
+        "b": 330.0
+      },
+      "baseline": "6Sỳ",
+      "candidate": "6St",
+      "candidate_raw": "6St",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 678.3333333333334,
+        "t": 324.6666666666667,
+        "r": 716.3333333333334,
+        "b": 330.0
+      },
+      "baseline": "/8T'E/966y",
+      "candidate": "Z8T.EZ9.664",
+      "candidate_raw": "Z8T.EZ9.664",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 615.0,
+        "t": 324.0,
+        "r": 651.6666666666666,
+        "b": 329.3333333333333
+      },
+      "baseline": "S€S'TT8'098",
+      "candidate": "SES:TT8:098",
+      "candidate_raw": "SES:TT8:098",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 609.3333333333334,
+        "t": 324.0,
+        "r": 614.0,
+        "b": 329.0
+      },
+      "baseline": "8",
+      "candidate": ".8",
+      "candidate_raw": ".8",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 533.6666666666666,
+        "t": 320.3333333333333,
+        "r": 580.3333333333334,
+        "b": 331.0
+      },
+      "baseline": "(08£'800'6¿T'6)",
+      "candidate": "(085-800-671-6)",
+      "candidate_raw": "(085-800-671-6)",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 453.3333333333333,
+        "t": 322.3333333333333,
+        "r": 503.6666666666667,
+        "b": 328.0
+      },
+      "baseline": "$9/8/'PZ8'89ST",
+      "candidate": "S9L'48L'478'8ST",
+      "candidate_raw": "S9L'48L'478'8ST",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 392.6666666666667,
+        "t": 318.6666666666667,
+        "r": 429.3333333333333,
+        "b": 328.6666666666667
+      },
+      "baseline": "$S£'8¿0'2ET",
+      "candidate": "137.028.325",
+      "candidate_raw": "137.028.325",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 379.3333333333333,
+        "t": 321.6666666666667,
+        "r": 391.3333333333333,
+        "b": 326.6666666666667
+      },
+      "baseline": "tSr",
+      "candidate": "757",
+      "candidate_raw": "757",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 329.3333333333333,
+        "t": 321.0,
+        "r": 352.6666666666667,
+        "b": 326.3333333333333
+      },
+      "baseline": "P7¿'0PI",
+      "candidate": "bTZ*0bI",
+      "candidate_raw": "bTZ*0bI",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 303.0,
+        "t": 318.0,
+        "r": 328.3333333333333,
+        "b": 327.6666666666667
+      },
+      "baseline": "t89't0Z",
+      "candidate": ".489.402",
+      "candidate_raw": ".489.402",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 268.3333333333333,
+        "t": 320.3333333333333,
+        "r": 279.0,
+        "b": 325.3333333333333
+      },
+      "baseline": "?¿",
+      "candidate": "ÞτZ",
+      "candidate_raw": "ÞτZ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 255.33333333333334,
+        "t": 320.3333333333333,
+        "r": 267.3333333333333,
+        "b": 325.0
+      },
+      "baseline": "0T",
+      "candidate": "Ot T",
+      "candidate_raw": "Ot T",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 242.33333333333334,
+        "t": 320.0,
+        "r": 254.0,
+        "b": 325.0
+      },
+      "baseline": "v89",
+      "candidate": "789",
+      "candidate_raw": "789",
+      "accepted": false,
+      "reason": "skip_alnum_to_numeric_non_numeric_col"
+    },
+    {
+      "bbox": {
+        "l": 229.33333333333334,
+        "t": 319.6666666666667,
+        "r": 241.33333333333334,
+        "b": 325.0
+      },
+      "baseline": "t0z",
+      "candidate": "‘t0Z",
+      "candidate_raw": "‘t0Z",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 137.0,
+        "t": 319.0,
+        "r": 152.0,
+        "b": 325.0
+      },
+      "baseline": "Đupu",
+      "candidate": "քսըկ",
+      "candidate_raw": "քսըկ",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 120.33333333333333,
+        "t": 318.6666666666667,
+        "r": 135.0,
+        "b": 325.0
+      },
+      "baseline": "ugôu",
+      "candidate": "սքնս",
+      "candidate_raw": "սքնս",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 107.66666666666667,
+        "t": 318.6666666666667,
+        "r": 118.66666666666667,
+        "b": 325.0
+      },
+      "baseline": "Áp,",
+      "candidate": "Λολ",
+      "candidate_raw": "Λολ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 792.3333333333334,
+        "t": 294.3333333333333,
+        "r": 803.0,
+        "b": 299.6666666666667
+      },
+      "baseline": "££€",
+      "candidate": "373",
+      "candidate_raw": "373",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 744.0,
+        "t": 291.3333333333333,
+        "r": 791.6666666666666,
+        "b": 301.0
+      },
+      "baseline": "TSV'8EZ'9bt'tT",
+      "candidate": "Td.446.238.451.",
+      "candidate_raw": "Td.446.238.451.",
+      "accepted": false,
+      "reason": "skip_digit_alpha_junk"
+    },
+    {
+      "bbox": {
+        "l": 692.3333333333334,
+        "t": 290.3333333333333,
+        "r": 729.0,
+        "b": 300.0
+      },
+      "baseline": "£¿£'TSt'§EZ",
+      "candidate": "238.451.323",
+      "candidate_raw": "238.451.323",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 670.3333333333334,
+        "t": 290.3333333333333,
+        "r": 691.6666666666666,
+        "b": 300.0
+      },
+      "baseline": "9yV'v1",
+      "candidate": "14.446.",
+      "candidate_raw": "14.446.",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 610.6666666666666,
+        "t": 290.0,
+        "r": 653.0,
+        "b": 299.3333333333333
+      },
+      "baseline": "IS£'8ES'tEE'9",
+      "candidate": "122.852.455.6",
+      "candidate_raw": "122.852.455.6",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 531.0,
+        "t": 289.0,
+        "r": 581.3333333333334,
+        "b": 299.6666666666667
+      },
+      "baseline": "(T0'£TE'ttz's£)",
+      "candidate": "(35.241.312.401)",
+      "candidate_raw": "(35.241.312.401)",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 445.0,
+        "t": 288.3333333333333,
+        "r": 504.3333333333333,
+        "b": 298.0
+      },
+      "baseline": "€/T'8t1'898'T/6'0E",
+      "candidate": "20.971.868.148.0£",
+      "candidate_raw": "20.971.868.148.0£",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 371.0,
+        "t": 287.3333333333333,
+        "r": 430.3333333333333,
+        "b": 297.3333333333333
+      },
+      "baseline": "6£S'668'8TT'609ˆTE",
+      "candidate": "91,609.118.899.539",
+      "candidate_raw": "91,609.118.899.539",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 295.0,
+        "t": 286.6666666666667,
+        "r": 354.0,
+        "b": 296.3333333333333
+      },
+      "baseline": "¿0T't¿b't68'/£8'€T",
+      "candidate": "701.474.468.7E8.EL",
+      "candidate_raw": "701.474.468.7E8.EL",
+      "accepted": false,
+      "reason": "skip_digit_alpha_junk"
+    },
+    {
+      "bbox": {
+        "l": 221.66666666666666,
+        "t": 285.6666666666667,
+        "r": 279.0,
+        "b": 295.3333333333333
+      },
+      "baseline": "0T't£t't68'/€8'ET",
+      "candidate": "701.474.468.758.EL",
+      "candidate_raw": "701.474.468.758.EL",
+      "accepted": false,
+      "reason": "skip_digit_alpha_junk"
+    },
+    {
+      "bbox": {
+        "l": 778.3333333333334,
+        "t": 280.0,
+        "r": 790.3333333333334,
+        "b": 290.0
+      },
+      "baseline": "Than",
+      "candidate": "T9T",
+      "candidate_raw": "T9T",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 702.3333333333334,
+        "t": 279.0,
+        "r": 716.0,
+        "b": 289.3333333333333
+      },
+      "baseline": "tzm",
+      "candidate": "T91:",
+      "candidate_raw": "T91:",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 649.6666666666666,
+        "t": 280.6666666666667,
+        "r": 651.6666666666666,
+        "b": 281.3333333333333
+      },
+      "baseline": "-",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 552.6666666666666,
+        "t": 281.0,
+        "r": 566.3333333333334,
+        "b": 282.0
+      },
+      "baseline": "TT",
+      "candidate": "・ムファ・",
+      "candidate_raw": "・ムファ・",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 465.0,
+        "t": 277.0,
+        "r": 491.3333333333333,
+        "b": 287.0
+      },
+      "baseline": "Tre.",
+      "candidate": ".305.346.",
+      "candidate_raw": ".305.346.",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 391.0,
+        "t": 276.0,
+        "r": 417.3333333333333,
+        "b": 286.3333333333333
+      },
+      "baseline": "The:",
+      "candidate": ".81E.708.",
+      "candidate_raw": ".81E.708.",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 327.0,
+        "t": 275.3333333333333,
+        "r": 341.3333333333333,
+        "b": 285.6666666666667
+      },
+      "baseline": "TT.",
+      "candidate": "ETE:",
+      "candidate_raw": "ETE:",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 240.33333333333334,
+        "t": 277.3333333333333,
+        "r": 267.3333333333333,
+        "b": 279.0
+      },
+      "baseline": "Ta",
+      "candidate": "·CTC:+^+",
+      "candidate_raw": "·CTC:+^+",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 120.66666666666667,
+        "t": 276.3333333333333,
+        "r": 128.66666666666666,
+        "b": 282.3333333333333
+      },
+      "baseline": "p8",
+      "candidate": "trđ",
+      "candidate_raw": "trđ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 108.66666666666667,
+        "t": 276.6666666666667,
+        "r": 118.33333333333333,
+        "b": 283.0
+      },
+      "baseline": "uữu",
+      "candidate": "ирц",
+      "candidate_raw": "ирц",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 791.0,
+        "t": 279.3333333333333,
+        "r": 801.6666666666666,
+        "b": 284.6666666666667
+      },
+      "baseline": "£6Z",
+      "candidate": "£6₹",
+      "candidate_raw": "£6₹",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 765.0,
+        "t": 279.3333333333333,
+        "r": 788.3333333333334,
+        "b": 284.3333333333333
+      },
+      "baseline": "T97'9T6",
+      "candidate": "T9T 9T6",
+      "candidate_raw": "T9T 9T6",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 691.0,
+        "t": 278.6666666666667,
+        "r": 728.0,
+        "b": 284.0
+      },
+      "baseline": "£6Z'T9T'976",
+      "candidate": "816.161.293",
+      "candidate_raw": "816.161.293",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 567.3333333333334,
+        "t": 277.0,
+        "r": 580.0,
+        "b": 283.3333333333333
+      },
+      "baseline": "(9EE",
+      "candidate": "(9EE",
+      "candidate_raw": "(9EE",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 554.3333333333334,
+        "t": 277.0,
+        "r": 565.0,
+        "b": 282.3333333333333
+      },
+      "baseline": "'?ẽ",
+      "candidate": "ケとエ",
+      "candidate_raw": "ケとエ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 543.0,
+        "t": 276.6666666666667,
+        "r": 552.3333333333334,
+        "b": 283.3333333333333
+      },
+      "baseline": "0S)",
+      "candidate": "05)",
+      "candidate_raw": "05)",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 492.3333333333333,
+        "t": 276.3333333333333,
+        "r": 503.3333333333333,
+        "b": 281.3333333333333
+      },
+      "baseline": "S98",
+      "candidate": "598",
+      "candidate_raw": "598",
+      "accepted": false,
+      "reason": "skip_alnum_to_numeric_non_numeric_col"
+    },
+    {
+      "bbox": {
+        "l": 479.3333333333333,
+        "t": 276.3333333333333,
+        "r": 490.3333333333333,
+        "b": 281.3333333333333
+      },
+      "baseline": "9yE",
+      "candidate": "9tE",
+      "candidate_raw": "9tE",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 460.6666666666667,
+        "t": 276.0,
+        "r": 477.3333333333333,
+        "b": 281.0
+      },
+      "baseline": "S0E'Z",
+      "candidate": "50£.2",
+      "candidate_raw": "50£.2",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 405.0,
+        "t": 275.6666666666667,
+        "r": 429.0,
+        "b": 280.6666666666667
+      },
+      "baseline": "£?S'8IE",
+      "candidate": "878.543",
+      "candidate_raw": "878.543",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 386.6666666666667,
+        "t": 275.3333333333333,
+        "r": 403.3333333333333,
+        "b": 280.3333333333333
+      },
+      "baseline": "/08'T",
+      "candidate": "Z08.1",
+      "candidate_raw": "Z08.1",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 342.0,
+        "t": 275.0,
+        "r": 352.3333333333333,
+        "b": 280.0
+      },
+      "baseline": "S6",
+      "candidate": "T$6",
+      "candidate_raw": "T$6",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 310.6666666666667,
+        "t": 274.6666666666667,
+        "r": 339.6666666666667,
+        "b": 279.6666666666667
+      },
+      "baseline": "'ETE'b9V'T",
+      "candidate": "ETE D9D T",
+      "candidate_raw": "ETE D9D T",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 236.66666666666666,
+        "t": 273.3333333333333,
+        "r": 278.3333333333333,
+        "b": 279.0
+      },
+      "baseline": "TS6'ETEy9VT",
+      "candidate": "I 56'EIE' ⊅9⊅'I",
+      "candidate_raw": "I<i>56'EIE'</i>⊅9⊅'I",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 184.66666666666666,
+        "t": 267.6666666666667,
+        "r": 195.33333333333334,
+        "b": 273.6666666666667
+      },
+      "baseline": "Uập",
+      "candidate": "uąp",
+      "candidate_raw": "uąp",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 171.66666666666666,
+        "t": 268.0,
+        "r": 182.66666666666666,
+        "b": 274.0
+      },
+      "baseline": "uòi",
+      "candidate": "uby",
+      "candidate_raw": "uby",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 160.66666666666666,
+        "t": 267.6666666666667,
+        "r": 169.66666666666666,
+        "b": 273.3333333333333
+      },
+      "baseline": "(0p",
+      "candidate": "įφp",
+      "candidate_raw": "įφp",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 142.66666666666666,
+        "t": 267.6666666666667,
+        "r": 158.33333333333334,
+        "b": 273.0
+      },
+      "baseline": "(JUJ02",
+      "candidate": "yujyə",
+      "candidate_raw": "yujyə",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 133.33333333333334,
+        "t": 267.6666666666667,
+        "r": 141.0,
+        "b": 273.0
+      },
+      "baseline": "(03",
+      "candidate": "ĮQĮ",
+      "candidate_raw": "ĮQĮ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 118.0,
+        "t": 267.3333333333333,
+        "r": 131.0,
+        "b": 273.0
+      },
+      "baseline": "ạn2",
+      "candidate": "∂nyı",
+      "candidate_raw": "∂nyı",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 107.66666666666667,
+        "t": 267.3333333333333,
+        "r": 116.66666666666667,
+        "b": 273.3333333333333
+      },
+      "baseline": "ÔN",
+      "candidate": "ÞΝ",
+      "candidate_raw": "ÞΝ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 777.6666666666666,
+        "t": 261.0,
+        "r": 801.3333333333334,
+        "b": 271.0
+      },
+      "baseline": "†P£'996",
+      "candidate": "T t E-996",
+      "candidate_raw": "T<i>t</i>E-996",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 765.0,
+        "t": 261.0,
+        "r": 777.0,
+        "b": 271.0
+      },
+      "baseline": "98T",
+      "candidate": "186,",
+      "candidate_raw": "186,",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 752.6666666666666,
+        "t": 263.6666666666667,
+        "r": 764.0,
+        "b": 269.3333333333333
+      },
+      "baseline": "8¿T",
+      "candidate": ".821",
+      "candidate_raw": ".821",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 704.3333333333334,
+        "t": 260.3333333333333,
+        "r": 727.3333333333334,
+        "b": 270.3333333333333
+      },
+      "baseline": "TbÊ£'996",
+      "candidate": "TtE 996",
+      "candidate_raw": "TtE 996",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 691.0,
+        "t": 263.3333333333333,
+        "r": 703.0,
+        "b": 268.6666666666667
+      },
+      "baseline": "98T",
+      "candidate": "'98T",
+      "candidate_raw": "'98T",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 678.3333333333334,
+        "t": 263.0,
+        "r": 690.3333333333334,
+        "b": 268.6666666666667
+      },
+      "baseline": "8ZT",
+      "candidate": ".8ZI",
+      "candidate_raw": ".8ZI",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 649.6666666666666,
+        "t": 265.6666666666667,
+        "r": 651.3333333333334,
+        "b": 266.3333333333333
+      },
+      "baseline": "T",
+      "candidate": "-",
+      "candidate_raw": "-",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 534.6666666666666,
+        "t": 261.6666666666667,
+        "r": 580.3333333333334,
+        "b": 267.3333333333333
+      },
+      "baseline": "0Zÿ'T99'8965'6T",
+      "candidate": "0Z†'T99'86S'6T",
+      "candidate_raw": "0Z†'T99'86S'6T",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 492.3333333333333,
+        "t": 261.3333333333333,
+        "r": 503.3333333333333,
+        "b": 266.3333333333333
+      },
+      "baseline": "696",
+      "candidate": "696",
+      "candidate_raw": "696",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 479.6666666666667,
+        "t": 261.3333333333333,
+        "r": 491.3333333333333,
+        "b": 266.3333333333333
+      },
+      "baseline": "S0Y",
+      "candidate": "‘S0Þ",
+      "candidate_raw": "‘S0Þ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 466.6666666666667,
+        "t": 258.0,
+        "r": 478.3333333333333,
+        "b": 267.6666666666667
+      },
+      "baseline": "18T",
+      "candidate": "181",
+      "candidate_raw": "181",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 448.0,
+        "t": 258.0,
+        "r": 466.0,
+        "b": 267.6666666666667
+      },
+      "baseline": "'SSE'T",
+      "candidate": "'55E'T",
+      "candidate_raw": "'55E'T",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 379.3333333333333,
+        "t": 257.0,
+        "r": 429.3333333333333,
+        "b": 267.0
+      },
+      "baseline": "S9/'78/'P¿8'8ST",
+      "candidate": "59L't8L't78'8ST",
+      "candidate_raw": "59L't8L't78'8ST",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 342.3333333333333,
+        "t": 259.6666666666667,
+        "r": 353.0,
+        "b": 265.0
+      },
+      "baseline": "SếT",
+      "candidate": "SZI",
+      "candidate_raw": "SZI",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 316.0,
+        "t": 259.3333333333333,
+        "r": 341.0,
+        "b": 264.6666666666667
+      },
+      "baseline": "9766",
+      "candidate": "976776",
+      "candidate_raw": "<i>'976'776</i>",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 303.0,
+        "t": 259.0,
+        "r": 312.6666666666667,
+        "b": 264.3333333333333
+      },
+      "baseline": "0E",
+      "candidate": "506",
+      "candidate_raw": "५०६",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 297.6666666666667,
+        "t": 259.0,
+        "r": 302.3333333333333,
+        "b": 264.3333333333333
+      },
+      "baseline": "T",
+      "candidate": "τ",
+      "candidate_raw": "τ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 225.0,
+        "t": 255.33333333333334,
+        "r": 278.6666666666667,
+        "b": 265.3333333333333
+      },
+      "baseline": "SZT'9Z6'btB't0E'T",
+      "candidate": "521.304.944.926.125",
+      "candidate_raw": "521.304.944.926.125",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 170.33333333333334,
+        "t": 257.3333333333333,
+        "r": 178.66666666666666,
+        "b": 263.0
+      },
+      "baseline": "1",
+      "candidate": "ρĲ",
+      "candidate_raw": "ρĲ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 157.33333333333334,
+        "t": 257.3333333333333,
+        "r": 168.0,
+        "b": 263.3333333333333
+      },
+      "baseline": "Uòt",
+      "candidate": "ирц",
+      "candidate_raw": "ирц",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 144.33333333333334,
+        "t": 256.6666666666667,
+        "r": 154.66666666666666,
+        "b": 262.6666666666667
+      },
+      "baseline": "uập",
+      "candidate": "uąp",
+      "candidate_raw": "uąp",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 131.33333333333334,
+        "t": 257.0,
+        "r": 142.0,
+        "b": 263.0
+      },
+      "baseline": "ubt",
+      "candidate": "ирц",
+      "candidate_raw": "ирц",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 120.33333333333333,
+        "t": 257.0,
+        "r": 129.33333333333334,
+        "b": 262.3333333333333
+      },
+      "baseline": "lọp",
+      "candidate": "iób",
+      "candidate_raw": "iób",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 107.66666666666667,
+        "t": 257.0,
+        "r": 118.66666666666667,
+        "b": 263.3333333333333
+      },
+      "baseline": "ÁDA",
+      "candidate": "Λαλ",
+      "candidate_raw": "Λαλ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 171.33333333333334,
+        "t": 245.66666666666666,
+        "r": 179.66666666666666,
+        "b": 251.66666666666666
+      },
+      "baseline": "4)",
+      "candidate": "trå",
+      "candidate_raw": "trå",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 158.33333333333334,
+        "t": 246.0,
+        "r": 169.33333333333334,
+        "b": 252.33333333333334
+      },
+      "baseline": "uễu",
+      "candidate": "uėų",
+      "candidate_raw": "uėų",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 144.66666666666666,
+        "t": 245.33333333333334,
+        "r": 156.0,
+        "b": 251.33333333333334
+      },
+      "baseline": "uạp",
+      "candidate": "qęu",
+      "candidate_raw": "qęu",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 131.66666666666666,
+        "t": 245.66666666666666,
+        "r": 142.33333333333334,
+        "b": 252.0
+      },
+      "baseline": "uêu",
+      "candidate": "uėų",
+      "candidate_raw": "uėų",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 120.33333333333333,
+        "t": 245.33333333333334,
+        "r": 129.33333333333334,
+        "b": 251.0
+      },
+      "baseline": "|ẹp",
+      "candidate": "iśb",
+      "candidate_raw": "iśb",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 107.33333333333333,
+        "t": 245.66666666666666,
+        "r": 118.66666666666667,
+        "b": 252.0
+      },
+      "baseline": "ÁeA",
+      "candidate": "γεν",
+      "candidate_raw": "γεν",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 763.0,
+        "t": 240.66666666666666,
+        "r": 790.0,
+        "b": 242.0
+      },
+      "baseline": "nen",
+      "candidate": "./-----",
+      "candidate_raw": "./-----",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 751.6666666666666,
+        "t": 237.33333333333334,
+        "r": 762.3333333333334,
+        "b": 247.66666666666666
+      },
+      "baseline": "rn",
+      "candidate": "ΖΙΈ",
+      "candidate_raw": "ΖΙΈ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 689.3333333333334,
+        "t": 240.0,
+        "r": 716.0,
+        "b": 241.0
+      },
+      "baseline": "2a",
+      "candidate": "·/~~/~/~~~",
+      "candidate_raw": "·/~~/~/~~~",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 639.0,
+        "t": 239.66666666666666,
+        "r": 640.0,
+        "b": 240.33333333333334
+      },
+      "baseline": "Theo",
+      "candidate": "0",
+      "candidate_raw": "۰",
+      "accepted": false,
+      "reason": "skip_text_truncation"
+    },
+    {
+      "bbox": {
+        "l": 612.6666666666666,
+        "t": 239.33333333333334,
+        "r": 614.0,
+        "b": 240.0
+      },
+      "baseline": "nen",
+      "candidate": "•",
+      "candidate_raw": "•",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 529.6666666666666,
+        "t": 234.0,
+        "r": 580.0,
+        "b": 241.0
+      },
+      "baseline": "(S8'6b8'8/'?5}",
+      "candidate": "(587.648.687.42)",
+      "candidate_raw": "(587.648.687.42)",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 477.6666666666667,
+        "t": 237.66666666666666,
+        "r": 491.3333333333333,
+        "b": 239.0
+      },
+      "baseline": "Tranh",
+      "candidate": ".___.",
+      "candidate_raw": ".___.",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 452.0,
+        "t": 234.33333333333334,
+        "r": 464.3333333333333,
+        "b": 244.66666666666666
+      },
+      "baseline": "ng,",
+      "candidate": "⊅ [9'",
+      "candidate_raw": "<b>⊅</b>[9'",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 416.3333333333333,
+        "t": 237.0,
+        "r": 417.3333333333333,
+        "b": 238.0
+      },
+      "baseline": "nh",
+      "candidate": "•",
+      "candidate_raw": "•",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 403.3333333333333,
+        "t": 236.66666666666666,
+        "r": 404.3333333333333,
+        "b": 238.0
+      },
+      "baseline": "an",
+      "candidate": "0",
+      "candidate_raw": "٠",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 377.3333333333333,
+        "t": 236.66666666666666,
+        "r": 391.3333333333333,
+        "b": 238.0
+      },
+      "baseline": "on,",
+      "candidate": "· O + + -",
+      "candidate_raw": "· O + + -",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 327.0,
+        "t": 236.0,
+        "r": 341.0,
+        "b": 237.33333333333334
+      },
+      "baseline": "Thoa",
+      "candidate": "----",
+      "candidate_raw": "----",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 301.0,
+        "t": 235.66666666666666,
+        "r": 315.3333333333333,
+        "b": 236.66666666666666
+      },
+      "baseline": "rao:",
+      "candidate": "----",
+      "candidate_raw": "----",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 253.0,
+        "t": 235.33333333333334,
+        "r": 267.3333333333333,
+        "b": 236.33333333333334
+      },
+      "baseline": "Tn",
+      "candidate": "·4. ~ 7 ·",
+      "candidate_raw": "·4. ~ 7 ·",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 229.0,
+        "t": 232.0,
+        "r": 239.66666666666666,
+        "b": 242.33333333333334
+      },
+      "baseline": "nn",
+      "candidate": "TES",
+      "candidate_raw": "TES",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 173.66666666666666,
+        "t": 235.0,
+        "r": 179.33333333333334,
+        "b": 241.33333333333334
+      },
+      "baseline": "Ú)",
+      "candidate": "(!)",
+      "candidate_raw": "(!)",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 166.0,
+        "t": 234.33333333333334,
+        "r": 172.66666666666666,
+        "b": 240.33333333333334
+      },
+      "baseline": "?1",
+      "candidate": "91",
+      "candidate_raw": "<i>9</i>1",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 151.33333333333334,
+        "t": 234.66666666666666,
+        "r": 163.33333333333334,
+        "b": 240.0
+      },
+      "baseline": "quBỊ",
+      "candidate": "үиія",
+      "candidate_raw": "үиія",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 136.0,
+        "t": 231.33333333333334,
+        "r": 149.66666666666666,
+        "b": 242.66666666666666
+      },
+      "baseline": "2142",
+      "candidate": "ομηο",
+      "candidate_raw": "ομηο",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 127.66666666666667,
+        "t": 233.66666666666666,
+        "r": 134.33333333333334,
+        "b": 239.66666666666666
+      },
+      "baseline": "Ø3",
+      "candidate": "Ĝĵ",
+      "candidate_raw": "Ĝĵ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 116.33333333333333,
+        "t": 234.33333333333334,
+        "r": 126.0,
+        "b": 239.66666666666666
+      },
+      "baseline": "2p2",
+      "candidate": "כמָכ",
+      "candidate_raw": "כמָכ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 107.33333333333333,
+        "t": 234.33333333333334,
+        "r": 114.0,
+        "b": 239.66666666666666
+      },
+      "baseline": "0A",
+      "candidate": "ÓΛ",
+      "candidate_raw": "ÓΛ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 777.6666666666666,
+        "t": 236.66666666666666,
+        "r": 801.3333333333334,
+        "b": 242.33333333333334
+      },
+      "baseline": "689'€Z£",
+      "candidate": "689.EZE",
+      "candidate_raw": "689.EZE",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 765.0,
+        "t": 236.66666666666666,
+        "r": 776.0,
+        "b": 242.0
+      },
+      "baseline": "'SET",
+      "candidate": "SET",
+      "candidate_raw": "SET",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 742.6666666666666,
+        "t": 236.33333333333334,
+        "r": 763.0,
+        "b": 242.0
+      },
+      "baseline": "/TE'tT",
+      "candidate": "ZTE'DI",
+      "candidate_raw": "ZTE'DI",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 691.0,
+        "t": 236.0,
+        "r": 727.6666666666666,
+        "b": 241.33333333333334
+      },
+      "baseline": "689'€Z£'SET",
+      "candidate": "689'EZE'SEI",
+      "candidate_raw": "689'EZE'SEI",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 678.0,
+        "t": 235.66666666666666,
+        "r": 689.3333333333334,
+        "b": 241.0
+      },
+      "baseline": "/TE",
+      "candidate": "zte",
+      "candidate_raw": "zte",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 669.0,
+        "t": 235.66666666666666,
+        "r": 676.0,
+        "b": 240.66666666666666
+      },
+      "baseline": "tT",
+      "candidate": "ÞΙ",
+      "candidate_raw": "ÞΙ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 640.6666666666666,
+        "t": 235.33333333333334,
+        "r": 651.0,
+        "b": 240.66666666666666
+      },
+      "baseline": "ISZ",
+      "candidate": "rs7",
+      "candidate_raw": "rs7",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 627.6666666666666,
+        "t": 235.33333333333334,
+        "r": 638.3333333333334,
+        "b": 240.66666666666666
+      },
+      "baseline": "8ES",
+      "candidate": "885",
+      "candidate_raw": "885",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 609.3333333333334,
+        "t": 235.33333333333334,
+        "r": 625.3333333333334,
+        "b": 240.33333333333334
+      },
+      "baseline": "'pEE'9",
+      "candidate": "₽EE'9",
+      "candidate_raw": "₽EE'9",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 554.3333333333334,
+        "t": 234.66666666666666,
+        "r": 574.3333333333334,
+        "b": 240.0
+      },
+      "baseline": "§#'68",
+      "candidate": "846.48",
+      "candidate_raw": "846.48",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 541.6666666666666,
+        "t": 234.66666666666666,
+        "r": 552.3333333333334,
+        "b": 239.66666666666666
+      },
+      "baseline": "68/",
+      "candidate": "68Z",
+      "candidate_raw": "68Z",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 532.0,
+        "t": 234.66666666666666,
+        "r": 539.3333333333334,
+        "b": 239.33333333333334
+      },
+      "baseline": "v9,",
+      "candidate": "75",
+      "candidate_raw": "75",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 479.3333333333333,
+        "t": 233.66666666666666,
+        "r": 503.3333333333333,
+        "b": 239.33333333333334
+      },
+      "baseline": "6£E'S6E",
+      "candidate": "6EE'56E",
+      "candidate_raw": "6EE'56E",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 444.0,
+        "t": 233.0,
+        "r": 476.6666666666667,
+        "b": 239.0
+      },
+      "baseline": "18E'yT9'6ể",
+      "candidate": "786.413.91",
+      "candidate_raw": "786.413.91",
+      "accepted": false,
+      "reason": "skip_numeric_truncation"
+    },
+    {
+      "bbox": {
+        "l": 392.0,
+        "t": 232.66666666666666,
+        "r": 428.6666666666667,
+        "b": 238.33333333333334
+      },
+      "baseline": "TEZ96/'98P",
+      "candidate": "TEZ:962:984",
+      "candidate_raw": "TEZ:962:984",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 369.6666666666667,
+        "t": 232.33333333333334,
+        "r": 390.0,
+        "b": 238.0
+      },
+      "baseline": "8yt'TE",
+      "candidate": "844.IE",
+      "candidate_raw": "844.IE",
+      "accepted": false,
+      "reason": "skip_digit_alpha_junk"
+    },
+    {
+      "bbox": {
+        "l": 342.0,
+        "t": 232.33333333333334,
+        "r": 352.3333333333333,
+        "b": 237.66666666666666
+      },
+      "baseline": "E0",
+      "candidate": "τεο",
+      "candidate_raw": "τεο",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 316.0,
+        "t": 232.0,
+        "r": 339.6666666666667,
+        "b": 237.33333333333334
+      },
+      "baseline": "vEZS8V",
+      "candidate": "ÞEZ’S8Þ",
+      "candidate_raw": "ÞEZ’S8Þ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 303.0,
+        "t": 231.66666666666666,
+        "r": 313.3333333333333,
+        "b": 237.33333333333334
+      },
+      "baseline": "TES",
+      "candidate": "TES",
+      "candidate_raw": "TES",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 294.0,
+        "t": 231.66666666666666,
+        "r": 301.0,
+        "b": 236.66666666666666
+      },
+      "baseline": "ZT",
+      "candidate": "ΖŢ",
+      "candidate_raw": "ΖŢ",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 255.0,
+        "t": 231.33333333333334,
+        "r": 278.3333333333333,
+        "b": 236.33333333333334
+      },
+      "baseline": "TE0'PEZ",
+      "candidate": "TE0°⊅EZ",
+      "candidate_raw": "TE0°⊅EZ",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 242.0,
+        "t": 231.0,
+        "r": 253.33333333333334,
+        "b": 236.33333333333334
+      },
+      "baseline": "SBV",
+      "candidate": "S87",
+      "candidate_raw": "S87",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 229.0,
+        "t": 231.0,
+        "r": 239.66666666666666,
+        "b": 236.0
+      },
+      "baseline": "TES",
+      "candidate": "TES",
+      "candidate_raw": "TES",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 220.0,
+        "t": 231.0,
+        "r": 227.0,
+        "b": 236.0
+      },
+      "baseline": "¿1",
+      "candidate": "21",
+      "candidate_raw": "21",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 178.33333333333334,
+        "t": 225.33333333333334,
+        "r": 193.33333333333334,
+        "b": 232.0
+      },
+      "baseline": "Buột",
+      "candidate": "рапд",
+      "candidate_raw": "рапд",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 161.66666666666666,
+        "t": 225.33333333333334,
+        "r": 176.0,
+        "b": 231.66666666666666
+      },
+      "baseline": "upôu",
+      "candidate": "սֆճս",
+      "candidate_raw": "սֆճս",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 150.0,
+        "t": 225.33333333333334,
+        "r": 159.66666666666666,
+        "b": 230.33333333333334
+      },
+      "baseline": "2p2",
+      "candidate": "cąc",
+      "candidate_raw": "cąc",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 137.0,
+        "t": 225.0,
+        "r": 148.0,
+        "b": 231.0
+      },
+      "baseline": "uòu",
+      "candidate": "uby",
+      "candidate_raw": "uby",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 120.33333333333333,
+        "t": 223.66666666666666,
+        "r": 135.0,
+        "b": 231.33333333333334
+      },
+      "baseline": "tgÔu",
+      "candidate": "นอุดิน",
+      "candidate_raw": "นอุดิน",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 107.66666666666667,
+        "t": 225.0,
+        "r": 118.66666666666667,
+        "b": 231.0
+      },
+      "baseline": "Á0A,",
+      "candidate": "ΛΦΛ",
+      "candidate_raw": "ΛΦΛ",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 125.0,
+        "t": 204.0,
+        "r": 136.0,
+        "b": 210.0
+      },
+      "baseline": "uêu",
+      "candidate": "uėų",
+      "candidate_raw": "uėų",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 107.33333333333333,
+        "t": 202.33333333333334,
+        "r": 122.66666666666667,
+        "b": 210.0
+      },
+      "baseline": "uEẩN",
+      "candidate": "nšgVi",
+      "candidate_raw": "nšgVi",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 788.6666666666666,
+        "t": 200.66666666666666,
+        "r": 802.3333333333334,
+        "b": 205.33333333333334
+      },
+      "baseline": "qNA",
+      "candidate": "ΛИБ",
+      "candidate_raw": "ΛИБ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 715.3333333333334,
+        "t": 197.0,
+        "r": 728.0,
+        "b": 206.0
+      },
+      "baseline": "QqNA",
+      "candidate": "ΛND",
+      "candidate_raw": "ΛND",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 490.3333333333333,
+        "t": 197.66666666666666,
+        "r": 504.0,
+        "b": 202.66666666666666
+      },
+      "baseline": "GNA",
+      "candidate": "qNV",
+      "candidate_raw": "qNV",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 340.0,
+        "t": 196.0,
+        "r": 353.6666666666667,
+        "b": 201.0
+      },
+      "baseline": "qNA",
+      "candidate": "ΛND",
+      "candidate_raw": "ΛND",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 266.0,
+        "t": 192.0,
+        "r": 280.3333333333333,
+        "b": 201.33333333333334
+      },
+      "baseline": "qdNA",
+      "candidate": "ΛND",
+      "candidate_raw": "ΛND",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 768.6666666666666,
+        "t": 190.66666666666666,
+        "r": 776.6666666666666,
+        "b": 196.0
+      },
+      "baseline": "CHỊ",
+      "candidate": "Òυ",
+      "candidate_raw": "Òυ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 696.6666666666666,
+        "t": 185.0,
+        "r": 703.3333333333334,
+        "b": 190.33333333333334
+      },
+      "baseline": "13",
+      "candidate": "įuą",
+      "candidate_raw": "įuą",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 690.0,
+        "t": 185.66666666666666,
+        "r": 694.6666666666666,
+        "b": 189.33333333333334
+      },
+      "baseline": "EỊ",
+      "candidate": "19",
+      "candidate_raw": "19",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 632.0,
+        "t": 190.0,
+        "r": 642.3333333333334,
+        "b": 193.66666666666666
+      },
+      "baseline": "U05",
+      "candidate": "น0ว",
+      "candidate_raw": "น๐ว",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 624.3333333333334,
+        "t": 188.66666666666666,
+        "r": 630.0,
+        "b": 194.66666666666666
+      },
+      "baseline": "3",
+      "candidate": "ÁΙ",
+      "candidate_raw": "ÁΙ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 608.0,
+        "t": 187.66666666666666,
+        "r": 622.6666666666666,
+        "b": 194.66666666666666
+      },
+      "baseline": "8002",
+      "candidate": "guôo",
+      "candidate_raw": "guôo",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 594.3333333333334,
+        "t": 187.66666666666666,
+        "r": 606.0,
+        "b": 193.33333333333334
+      },
+      "baseline": "24",
+      "candidate": "iòm",
+      "candidate_raw": "iòm",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 562.3333333333334,
+        "t": 184.0,
+        "r": 567.0,
+        "b": 189.33333333333334
+      },
+      "baseline": "IỂ",
+      "candidate": "18",
+      "candidate_raw": "18",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 554.6666666666666,
+        "t": 183.66666666666666,
+        "r": 560.6666666666666,
+        "b": 189.33333333333334
+      },
+      "baseline": "Á3",
+      "candidate": "Ų4",
+      "candidate_raw": "Ų٤",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 543.6666666666666,
+        "t": 184.0,
+        "r": 548.6666666666666,
+        "b": 189.0
+      },
+      "baseline": "u2ả|",
+      "candidate": "Эá",
+      "candidate_raw": "Эá",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 527.3333333333334,
+        "t": 184.0,
+        "r": 534.3333333333334,
+        "b": 187.66666666666666
+      },
+      "baseline": "qua",
+      "candidate": "uə",
+      "candidate_raw": "uə",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 468.0,
+        "t": 180.33333333333334,
+        "r": 480.3333333333333,
+        "b": 189.66666666666666
+      },
+      "baseline": "LIỆI",
+      "candidate": "mś",
+      "candidate_raw": "mś",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 392.0,
+        "t": 179.33333333333334,
+        "r": 405.6666666666667,
+        "b": 188.66666666666666
+      },
+      "baseline": "đug.",
+      "candidate": "anš",
+      "candidate_raw": "anš",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 309.0,
+        "t": 184.33333333333334,
+        "r": 328.0,
+        "b": 191.0
+      },
+      "baseline": "ED”U",
+      "candidate": "trả nợ",
+      "candidate_raw": "trả nợ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 250.66666666666666,
+        "t": 181.0,
+        "r": 254.33333333333334,
+        "b": 185.66666666666666
+      },
+      "baseline": "j1",
+      "candidate": "ĳ",
+      "candidate_raw": "ĳ",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 241.33333333333334,
+        "t": 181.0,
+        "r": 245.66666666666666,
+        "b": 184.66666666666666
+      },
+      "baseline": "gỊ",
+      "candidate": "ध",
+      "candidate_raw": "ध",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 775.3333333333334,
+        "t": 180.0,
+        "r": 790.0,
+        "b": 186.66666666666666
+      },
+      "baseline": "8ueu",
+      "candidate": "gušn",
+      "candidate_raw": "gušn",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 762.6666666666666,
+        "t": 179.33333333333334,
+        "r": 773.0,
+        "b": 185.33333333333334
+      },
+      "baseline": "eu){",
+      "candidate": "KPŞ",
+      "candidate_raw": "KPŞ",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 753.6666666666666,
+        "t": 179.33333333333334,
+        "r": 760.3333333333334,
+        "b": 185.33333333333334
+      },
+      "baseline": "92",
+      "candidate": "ÒΣ",
+      "candidate_raw": "ÒΣ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 744.6666666666666,
+        "t": 179.0,
+        "r": 752.0,
+        "b": 185.0
+      },
+      "baseline": "0S",
+      "candidate": "95",
+      "candidate_raw": "95",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 702.3333333333334,
+        "t": 184.33333333333334,
+        "r": 703.3333333333334,
+        "b": 185.33333333333334
+      },
+      "baseline": "Nhu",
+      "candidate": "•",
+      "candidate_raw": "•",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 633.0,
+        "t": 180.0,
+        "r": 645.6666666666666,
+        "b": 184.0
+      },
+      "baseline": "enut",
+      "candidate": "enw",
+      "candidate_raw": "enw",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 623.3333333333334,
+        "t": 178.66666666666666,
+        "r": 630.6666666666666,
+        "b": 184.0
+      },
+      "baseline": "9b",
+      "candidate": "op",
+      "candidate_raw": "op",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 606.0,
+        "t": 178.33333333333334,
+        "r": 621.0,
+        "b": 185.0
+      },
+      "baseline": "8uộp",
+      "candidate": "ggug",
+      "candidate_raw": "ggug",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 591.0,
+        "t": 177.66666666666666,
+        "r": 603.3333333333334,
+        "b": 183.33333333333334
+      },
+      "baseline": "ua‡g",
+      "candidate": "nšia",
+      "candidate_raw": "nšia",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 519.3333333333334,
+        "t": 182.33333333333334,
+        "r": 570.6666666666666,
+        "b": 188.0
+      },
+      "baseline": "———",
+      "candidate": "kig ýt doệl dnêđO",
+      "candidate_raw": "kig ýt doệl dnêđO",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 461.6666666666667,
+        "t": 182.0,
+        "r": 467.3333333333333,
+        "b": 187.0
+      },
+      "baseline": "9",
+      "candidate": "!9",
+      "candidate_raw": "!9",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 388.0,
+        "t": 181.0,
+        "r": 394.6666666666667,
+        "b": 186.0
+      },
+      "baseline": "kI",
+      "candidate": "ĔΤ",
+      "candidate_raw": "ĔΤ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 326.6666666666667,
+        "t": 175.0,
+        "r": 341.3333333333333,
+        "b": 182.0
+      },
+      "baseline": "8ueu",
+      "candidate": "gušn",
+      "candidate_raw": "gušn",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 313.6666666666667,
+        "t": 174.66666666666666,
+        "r": 324.3333333333333,
+        "b": 180.66666666666666
+      },
+      "baseline": "pụ%",
+      "candidate": "КУŞ",
+      "candidate_raw": "КУŞ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 305.3333333333333,
+        "t": 173.0,
+        "r": 313.6666666666667,
+        "b": 183.33333333333334
+      },
+      "baseline": "02",
+      "candidate": "òэ",
+      "candidate_raw": "òэ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 295.6666666666667,
+        "t": 174.33333333333334,
+        "r": 303.3333333333333,
+        "b": 180.33333333333334
+      },
+      "baseline": "ọs",
+      "candidate": "95",
+      "candidate_raw": "95",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 244.0,
+        "t": 179.0,
+        "r": 254.33333333333334,
+        "b": 184.66666666666666
+      },
+      "baseline": "Lớn",
+      "candidate": "irt è",
+      "candidate_raw": "irt è",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 155.33333333333334,
+        "t": 172.66666666666666,
+        "r": 166.66666666666666,
+        "b": 178.0
+      },
+      "baseline": "nạ!",
+      "candidate": "uŝit",
+      "candidate_raw": "uŝit",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 144.33333333333334,
+        "t": 172.33333333333334,
+        "r": 153.33333333333334,
+        "b": 177.66666666666666
+      },
+      "baseline": "¡2",
+      "candidate": "ĮЧЭ",
+      "candidate_raw": "ĮЧЭ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 713.3333333333334,
+        "t": 165.33333333333334,
+        "r": 747.6666666666666,
+        "b": 177.0
+      },
+      "baseline": "z0Z/E1/T€",
+      "candidate": "31/15/505",
+      "candidate_raw": "31/15/505",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 763.6666666666666,
+        "t": 112.66666666666667,
+        "r": 803.3333333333334,
+        "b": 120.66666666666667
+      },
+      "baseline": "NH/NG-60",
+      "candidate": "08-DN\\HN",
+      "candidate_raw": "08-DN\\HN",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 756.3333333333334,
+        "t": 113.0,
+        "r": 760.6666666666666,
+        "b": 119.0
+      },
+      "baseline": "8",
+      "candidate": "8",
+      "candidate_raw": "8",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 743.3333333333334,
+        "t": 110.66666666666667,
+        "r": 753.0,
+        "b": 119.0
+      },
+      "baseline": "OS",
+      "candidate": "Q5",
+      "candidate_raw": "Q۵",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 721.3333333333334,
+        "t": 110.0,
+        "r": 740.3333333333334,
+        "b": 119.0
+      },
+      "baseline": "ñVIA",
+      "candidate": "UÂM",
+      "candidate_raw": "UÂM",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 785.3333333333334,
+        "t": 94.66666666666667,
+        "r": 803.6666666666666,
+        "b": 101.33333333333333
+      },
+      "baseline": "£0Z",
+      "candidate": "707",
+      "candidate_raw": "707",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 766.3333333333334,
+        "t": 94.33333333333333,
+        "r": 782.0,
+        "b": 101.0
+      },
+      "baseline": "tuệu",
+      "candidate": "măn",
+      "candidate_raw": "măn",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 755.0,
+        "t": 94.66666666666667,
+        "r": 763.3333333333334,
+        "b": 100.66666666666667
+      },
+      "baseline": "zT",
+      "candidate": "77",
+      "candidate_raw": "77",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 730.0,
+        "t": 94.0,
+        "r": 751.6666666666666,
+        "b": 102.33333333333333
+      },
+      "baseline": "8upt1",
+      "candidate": "gnèdt",
+      "candidate_raw": "gnèdt",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 718.6666666666666,
+        "t": 94.0,
+        "r": 727.3333333333334,
+        "b": 100.66666666666667
+      },
+      "baseline": "re",
+      "candidate": "τε",
+      "candidate_raw": "τε",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 698.6666666666666,
+        "t": 93.66666666666667,
+        "r": 716.0,
+        "b": 101.66666666666667
+      },
+      "baseline": "Ấe§u",
+      "candidate": "υgşλ",
+      "candidate_raw": "υgşλ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 681.6666666666666,
+        "t": 92.66666666666667,
+        "r": 695.0,
+        "b": 100.33333333333333
+      },
+      "baseline": "uạp",
+      "candidate": "qę̯u",
+      "candidate_raw": "qę̯u",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 785.3333333333334,
+        "t": 83.66666666666667,
+        "r": 803.6666666666666,
+        "b": 89.66666666666667
+      },
+      "baseline": "£0£",
+      "candidate": "7024",
+      "candidate_raw": "7024",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 766.3333333333334,
+        "t": 83.0,
+        "r": 782.0,
+        "b": 89.33333333333333
+      },
+      "baseline": "uueu",
+      "candidate": "mĔñ",
+      "candidate_raw": "mĔñ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 730.0,
+        "t": 82.33333333333333,
+        "r": 751.6666666666666,
+        "b": 91.0
+      },
+      "baseline": "8ueU1",
+      "candidate": "gnķdt",
+      "candidate_raw": "gnķdt",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 698.6666666666666,
+        "t": 82.33333333333333,
+        "r": 716.0,
+        "b": 90.66666666666667
+      },
+      "baseline": "Áe8u",
+      "candidate": "υgşλ",
+      "candidate_raw": "υgşλ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 687.3333333333334,
+        "t": 82.0,
+        "r": 695.6666666666666,
+        "b": 88.66666666666667
+      },
+      "baseline": "mì",
+      "candidate": "ŉΪ",
+      "candidate_raw": "ŉΪ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 666.0,
+        "t": 81.66666666666667,
+        "r": 685.0,
+        "b": 90.0
+      },
+      "baseline": "8uộp",
+      "candidate": "ֆսֆֆ",
+      "candidate_raw": "ֆսֆֆ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 646.3333333333334,
+        "t": 81.66666666666667,
+        "r": 663.3333333333334,
+        "b": 89.33333333333333
+      },
+      "baseline": "1#oU",
+      "candidate": "hoạt",
+      "candidate_raw": "hoạt",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 635.6666666666666,
+        "t": 81.33333333333333,
+        "r": 643.3333333333334,
+        "b": 89.66666666666667
+      },
+      "baseline": "Á»",
+      "candidate": "ΚŅ",
+      "candidate_raw": "ΚŅ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 618.6666666666666,
+        "t": 81.33333333333333,
+        "r": 632.3333333333334,
+        "b": 88.0
+      },
+      "baseline": "o2",
+      "candidate": "очэ",
+      "candidate_raw": "очэ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 786.6666666666666,
+        "t": 71.0,
+        "r": 803.6666666666666,
+        "b": 78.33333333333333
+      },
+      "baseline": "1gqu",
+      "candidate": "16dn",
+      "candidate_raw": "16dn",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 768.3333333333334,
+        "t": 71.66666666666667,
+        "r": 783.3333333333334,
+        "b": 79.66666666666667
+      },
+      "baseline": "du",
+      "candidate": "d,òų",
+      "candidate_raw": "d,òų",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 744.3333333333334,
+        "t": 71.0,
+        "r": 765.0,
+        "b": 78.0
+      },
+      "baseline": "(uJM2",
+      "candidate": "yujyə",
+      "candidate_raw": "yujyə",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 732.0,
+        "t": 71.0,
+        "r": 741.6666666666666,
+        "b": 77.66666666666667
+      },
+      "baseline": "$3",
+      "candidate": "iśt",
+      "candidate_raw": "iśt",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 716.3333333333334,
+        "t": 71.0,
+        "r": 729.3333333333334,
+        "b": 77.66666666666667
+      },
+      "baseline": "og2",
+      "candidate": "cáo",
+      "candidate_raw": "cáo",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 699.3333333333334,
+        "t": 70.66666666666667,
+        "r": 713.3333333333334,
+        "b": 77.66666666666667
+      },
+      "baseline": "ogg",
+      "candidate": "oè8",
+      "candidate_raw": "oè8",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 460.6666666666667,
+        "t": 120.66666666666667,
+        "r": 475.3333333333333,
+        "b": 127.0
+      },
+      "baseline": "221",
+      "candidate": "оәці",
+      "candidate_raw": "оәці",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 443.6666666666667,
+        "t": 120.33333333333333,
+        "r": 457.6666666666667,
+        "b": 126.66666666666667
+      },
+      "baseline": "Liọy",
+      "candidate": "қуш",
+      "candidate_raw": "қуш",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 426.0,
+        "t": 119.33333333333333,
+        "r": 442.0,
+        "b": 126.33333333333333
+      },
+      "baseline": "1000",
+      "candidate": "դքկս",
+      "candidate_raw": "դքկս",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 410.3333333333333,
+        "t": 120.0,
+        "r": 423.0,
+        "b": 127.66666666666667
+      },
+      "baseline": "đÔt",
+      "candidate": "dòy",
+      "candidate_raw": "dòy",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 390.0,
+        "t": 120.0,
+        "r": 407.6666666666667,
+        "b": 126.0
+      },
+      "baseline": "(JU)02",
+      "candidate": "цијцэ",
+      "candidate_raw": "цијцэ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 379.0,
+        "t": 119.66666666666667,
+        "r": 387.6666666666667,
+        "b": 125.66666666666667
+      },
+      "baseline": "(9)",
+      "candidate": "ĮQĮ",
+      "candidate_raw": "ĮQĮ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 365.0,
+        "t": 119.33333333333333,
+        "r": 376.3333333333333,
+        "b": 125.33333333333333
+      },
+      "baseline": "002",
+      "candidate": "دۈە",
+      "candidate_raw": "دۈە",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 349.6666666666667,
+        "t": 119.33333333333333,
+        "r": 362.3333333333333,
+        "b": 125.33333333333333
+      },
+      "baseline": "Opq",
+      "candidate": "орq",
+      "candidate_raw": "орq",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 337.6666666666667,
+        "t": 119.33333333333333,
+        "r": 347.6666666666667,
+        "b": 125.33333333333333
+      },
+      "baseline": "jọA",
+      "candidate": "ļΦΛ",
+      "candidate_raw": "ļΦΛ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 322.0,
+        "t": 119.0,
+        "r": 335.3333333333333,
+        "b": 125.0
+      },
+      "baseline": "JQu3",
+      "candidate": "i QY1",
+      "candidate_raw": "<u>i</u>QY1",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 302.3333333333333,
+        "t": 118.0,
+        "r": 319.3333333333333,
+        "b": 126.66666666666667
+      },
+      "baseline": "Bugp",
+      "candidate": "видр",
+      "candidate_raw": "видр",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 287.3333333333333,
+        "t": 118.66666666666667,
+        "r": 299.6666666666667,
+        "b": 125.66666666666667
+      },
+      "baseline": "2òp",
+      "candidate": "эòр",
+      "candidate_raw": "эòр",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 267.6666666666667,
+        "t": 118.66666666666667,
+        "r": 285.3333333333333,
+        "b": 125.66666666666667
+      },
+      "baseline": "2ónp",
+      "candidate": "οριός",
+      "candidate_raw": "<i>οριός</i>",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 254.0,
+        "t": 117.33333333333333,
+        "r": 265.0,
+        "b": 124.33333333333333
+      },
+      "baseline": "002",
+      "candidate": "นฮูว",
+      "candidate_raw": "นฮูว",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 243.66666666666666,
+        "t": 118.0,
+        "r": 251.33333333333334,
+        "b": 124.0
+      },
+      "baseline": "0A",
+      "candidate": "ĎΛ",
+      "candidate_raw": "ĎΛ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 221.33333333333334,
+        "t": 117.66666666666667,
+        "r": 241.0,
+        "b": 124.0
+      },
+      "baseline": "(Juot)",
+      "candidate": "цифир",
+      "candidate_raw": "цифир",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 206.0,
+        "t": 117.66666666666667,
+        "r": 219.0,
+        "b": 125.33333333333333
+      },
+      "baseline": "đôi",
+      "candidate": "dóч",
+      "candidate_raw": "dóч",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 186.33333333333334,
+        "t": 117.66666666666667,
+        "r": 203.0,
+        "b": 125.0
+      },
+      "baseline": "uộud",
+      "candidate": "uġyd",
+      "candidate_raw": "uġyd",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 176.0,
+        "t": 117.33333333333333,
+        "r": 184.33333333333334,
+        "b": 124.66666666666667
+      },
+      "baseline": "Ôq",
+      "candidate": "ġq",
+      "candidate_raw": "ġq",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 160.33333333333334,
+        "t": 117.33333333333333,
+        "r": 174.33333333333334,
+        "b": 124.33333333333333
+      },
+      "baseline": "1Ôu!",
+      "candidate": "10M",
+      "candidate_raw": "10M",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 152.33333333333334,
+        "t": 117.0,
+        "r": 158.0,
+        "b": 123.33333333333333
+      },
+      "baseline": "ộị",
+      "candidate": "QΙ",
+      "candidate_raw": "QΙ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 137.66666666666666,
+        "t": 117.0,
+        "r": 150.0,
+        "b": 124.66666666666667
+      },
+      "baseline": "Ápu",
+      "candidate": "λρυ",
+      "candidate_raw": "λρυ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 118.66666666666667,
+        "t": 117.0,
+        "r": 135.0,
+        "b": 123.0
+      },
+      "baseline": "guịuu",
+      "candidate": "чиіш",
+      "candidate_raw": "чиіш",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 94.33333333333333,
+        "t": 116.0,
+        "r": 116.66666666666667,
+        "b": 124.0
+      },
+      "baseline": "18ÁnU",
+      "candidate": "ւրոλել",
+      "candidate_raw": "ւրոλել",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 80.33333333333333,
+        "t": 116.33333333333333,
+        "r": 92.33333333333333,
+        "b": 122.66666666666667
+      },
+      "baseline": "202",
+      "candidate": "כפָכ",
+      "candidate_raw": "כפָכ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 282.6666666666667,
+        "t": 107.66666666666667,
+        "r": 303.0,
+        "b": 115.66666666666667
+      },
+      "baseline": "(o2u1",
+      "candidate": "theo)",
+      "candidate_raw": "theo)",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 263.6666666666667,
+        "t": 107.0,
+        "r": 280.3333333333333,
+        "b": 115.66666666666667
+      },
+      "baseline": "dạn)",
+      "candidate": "(tiếp",
+      "candidate_raw": "(tiếp",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 239.0,
+        "t": 105.33333333333333,
+        "r": 260.6666666666667,
+        "b": 114.0
+      },
+      "baseline": "LVHN",
+      "candidate": "TÄHN",
+      "candidate_raw": "TÄHN",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 219.66666666666666,
+        "t": 107.0,
+        "r": 236.0,
+        "b": 115.0
+      },
+      "baseline": "dÖH",
+      "candidate": "НÓЪ",
+      "candidate_raw": "НÓЪ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 191.66666666666666,
+        "t": 105.66666666666667,
+        "r": 216.0,
+        "b": 113.33333333333333
+      },
+      "baseline": "HNJHO",
+      "candidate": "сніин",
+      "candidate_raw": "сніин",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 176.33333333333334,
+        "t": 105.33333333333333,
+        "r": 188.33333333333334,
+        "b": 113.33333333333333
+      },
+      "baseline": "IýL",
+      "candidate": "ΙÁΤ",
+      "candidate_raw": "ΙÁΤ",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 157.33333333333334,
+        "t": 104.66666666666667,
+        "r": 173.66666666666666,
+        "b": 112.66666666666667
+      },
+      "baseline": "O2",
+      "candidate": "OÀO",
+      "candidate_raw": "OÀO",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 113.33333333333333,
+        "t": 106.33333333333333,
+        "r": 135.0,
+        "b": 112.33333333333333
+      },
+      "baseline": "HNIIAI",
+      "candidate": "\\mathsf{MIM}",
+      "candidate_raw": "<math>\\mathsf{MIM}</math>",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 79.66666666666667,
+        "t": 103.33333333333333,
+        "r": 110.66666666666667,
+        "b": 112.0
+      },
+      "baseline": "L3ÀNHL",
+      "candidate": "T ä YUHT",
+      "candidate_raw": "T<u>ä</u>YUHT",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 171.33333333333334,
+        "t": 88.33333333333333,
+        "r": 188.0,
+        "b": 94.33333333333333
+      },
+      "baseline": "LUEN",
+      "candidate": "Nam",
+      "candidate_raw": "Nam",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 153.33333333333334,
+        "t": 87.66666666666667,
+        "r": 167.66666666666666,
+        "b": 95.33333333333333
+      },
+      "baseline": "11A",
+      "candidate": "Υiệt",
+      "candidate_raw": "Υiệt",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 136.33333333333334,
+        "t": 87.66666666666667,
+        "r": 150.0,
+        "b": 95.33333333333333
+      },
+      "baseline": "1N",
+      "candidate": "ίộΝ",
+      "candidate_raw": "ίộΝ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 123.66666666666667,
+        "t": 87.33333333333333,
+        "r": 132.66666666666666,
+        "b": 94.0
+      },
+      "baseline": "9H",
+      "candidate": "έH",
+      "candidate_raw": "έH",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 106.66666666666667,
+        "t": 86.33333333333333,
+        "r": 121.0,
+        "b": 95.33333333333333
+      },
+      "baseline": "Quở",
+      "candidate": "оцd",
+      "candidate_raw": "оцd",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 79.66666666666667,
+        "t": 86.66666666666667,
+        "r": 103.33333333333333,
+        "b": 93.66666666666667
+      },
+      "baseline": "quyu",
+      "candidate": "Thành",
+      "candidate_raw": "Thành",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 195.0,
+        "t": 76.0,
+        "r": 211.33333333333334,
+        "b": 85.0
+      },
+      "baseline": "ÁgIÐ",
+      "candidate": "γĔiĐ",
+      "candidate_raw": "γĔiĐ",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 178.33333333333334,
+        "t": 75.66666666666667,
+        "r": 192.0,
+        "b": 83.33333333333333
+      },
+      "baseline": "nẹ2",
+      "candidate": "uếD",
+      "candidate_raw": "uếD",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 155.66666666666666,
+        "t": 76.33333333333333,
+        "r": 175.33333333333334,
+        "b": 84.0
+      },
+      "baseline": "uệfD",
+      "candidate": "Quşu",
+      "candidate_raw": "Quşu",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 131.33333333333334,
+        "t": 76.33333333333333,
+        "r": 152.66666666666666,
+        "b": 84.33333333333333
+      },
+      "baseline": "“8uöA",
+      "candidate": "‘∄uō∧",
+      "candidate_raw": "‘∄uō∧",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 113.33333333333333,
+        "t": 75.66666666666667,
+        "r": 128.33333333333334,
+        "b": 83.66666666666667
+      },
+      "baseline": "u2jq",
+      "candidate": "Dịcµ",
+      "candidate_raw": "Dịcµ",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 80.33333333333333,
+        "t": 75.33333333333333,
+        "r": 109.66666666666667,
+        "b": 83.66666666666667
+      },
+      "baseline": "8uonua",
+      "candidate": "Ցոծոժ",
+      "candidate_raw": "Ցոծոժ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 161.66666666666666,
+        "t": 64.66666666666667,
+        "r": 178.66666666666666,
+        "b": 72.33333333333333
+      },
+      "baseline": "tlĐÉg",
+      "candidate": "вэср",
+      "candidate_raw": "вэср",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 144.0,
+        "t": 64.33333333333333,
+        "r": 157.66666666666666,
+        "b": 71.33333333333333
+      },
+      "baseline": "UEA",
+      "candidate": "nĕV",
+      "candidate_raw": "nĕV",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 120.66666666666667,
+        "t": 64.33333333333333,
+        "r": 141.0,
+        "b": 72.0
+      },
+      "baseline": "uIêtd",
+      "candidate": "Երցա",
+      "candidate_raw": "Երցա",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 103.33333333333333,
+        "t": 63.333333333333336,
+        "r": 117.66666666666667,
+        "b": 72.0
+      },
+      "baseline": "0úd",
+      "candidate": "ο̈Υd",
+      "candidate_raw": "ο̈Υd",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 91.66666666666667,
+        "t": 64.33333333333333,
+        "r": 100.33333333333333,
+        "b": 70.66666666666667
+      },
+      "baseline": "0T",
+      "candidate": "OŢ",
+      "candidate_raw": "OŢ",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 80.0,
+        "t": 63.0,
+        "r": 88.66666666666667,
+        "b": 70.66666666666667
+      },
+      "baseline": "9S",
+      "candidate": "95",
+      "candidate_raw": "95",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 155.66666666666666,
+        "t": 53.666666666666664,
+        "r": 169.33333333333334,
+        "b": 60.0
+      },
+      "baseline": "1d3",
+      "candidate": "Tq₹",
+      "candidate_raw": "Tq₹",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    },
+    {
+      "bbox": {
+        "l": 131.0,
+        "t": 50.666666666666664,
+        "r": 152.66666666666666,
+        "b": 60.0
+      },
+      "baseline": "NÿHả",
+      "candidate": "ИА́НЧ",
+      "candidate_raw": "ИА́НЧ",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 105.33333333333333,
+        "t": 53.333333333333336,
+        "r": 114.66666666666667,
+        "b": 59.0
+      },
+      "baseline": "AL",
+      "candidate": "ΥT",
+      "candidate_raw": "ΥT",
+      "accepted": false,
+      "reason": "skip_text_high_conf"
+    },
+    {
+      "bbox": {
+        "l": 80.0,
+        "t": 51.0,
+        "r": 102.66666666666667,
+        "b": 59.0
+      },
+      "baseline": "ĐNQ2",
+      "candidate": "соие",
+      "candidate_raw": "соие",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    }
+  ]
+}

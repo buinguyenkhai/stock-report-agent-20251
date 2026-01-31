@@ -1,0 +1,62 @@
+## BÁO CÁO LƯU CHUYỂN TIỀN TỆ HỢP NHẤT (Tiếp theo)
+
+|    | Chỉ tiễu                                                                                                          | Mã chỉ<br>tiểu | ĐVT: Triệu đồng<br>Luỹ kế từ đầu năm đến cuối Quý IV |           |
+|----|-------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------------|-----------|
+|    |                                                                                                                   |                | Năm 2024                                             | Năm 2023  |
+| 11 | LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG ĐẦU TƯ                                                                               |                |                                                      |           |
+| 1  | Mua sắm tài sản cố định                                                                                           | 25             | (210.659)                                            | (240.841) |
+| 2  | Tiền thu từ thanh lý, nhượng bán TSCĐ                                                                             | 26             | 2.474                                                | 1.780     |
+| 3  | Tiền chi từ thanh lý, nhượng bán TSCĐ (*)                                                                         | 27             | (1.232)                                              | (1.895)   |
+| 4  | Mua sắm bất động sản đầu tư (*)                                                                                   | 28             | -                                                    |           |
+| 5  | Tiền thu từ bán, thanh lý bất động sản đầu tư                                                                     | 29             |                                                      |           |
+| 6  | Tiền chi ra do bán, thanh lý bất động sản đầu tư (*)                                                              | 30             |                                                      |           |
+| 7  | Tiền chi đầu tư, góp vốn vào các đơn vị khác                                                                      | 31             |                                                      |           |
+| 8  | Tiền thu đầu tư, góp vốn vào các đơn vị khác                                                                      | 32             |                                                      | 825.440   |
+| 9  | Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn $$                                    | 33             | 20.908                                               | 4.958     |
+|    | Lưu chuyển tiền thuần từ hoạt động đầu tư                                                                         | 34             | (188.509)                                            | 589.442   |
+| ш  | LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG TÀI CHÍNH                                                                            |                |                                                      |           |
+| 1  | Tăng vốn điều lệ                                                                                                  | 35             | 435.104                                              |           |
+| 2  | Tiền thu từ phát hành giấy tờ có giá dài hạn có đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác | 36             | -                                                    | 34        |
+| 3  | Tiền chi thanh toán giấy tờ có giá dài hạn có đủ điều kiện tính vào vốn tự có và các khoản vốn vay dài hạn khác   | 37             |                                                      |           |
+| 4  | Cổ tức trả cho cổ đồng, lợi nhuận đã chia (*)                                                                     | 38             | (35.406)                                             | (165)     |
+| 5  | Tiền chi ra mua cổ phiếu ngân quỹ (*)                                                                             | 39             |                                                      |           |
+| 6  | Tiền thu được do bán cổ phiếu ngân quỹ                                                                            | 40             |                                                      | 0         |
+|    | Lưu chuyển tiền thuần từ hoạt động tài chính                                                                      | 41             | 399.698                                              | (165)     |
+
+Người lập
+
+Người kiểm soát
+
+Trần Thanh Thủy
+
+IV Lưu chuyển tiền thuần trong kỳ
+
+VI Điều chính ảnh hưởng của thay đổi tỷ giá
+
+V Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ
+
+VII Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ
+
+Ngô Thị Vân Kế toán trưởng 1800278830 phê duyệt
+
+10.474.462
+
+110.859.786
+
+121.334.248
+
+41.359.694
+
+69.500.092
+
+110.859.786
+
+THƯƠNG MẠI CỔ PHẨN SÀI GÒN-HA NỘI
+
+42
+
+45
+
+Ngô Thu Hà Tổng Giám đốc
+
+Ngày20tháng Inăm 2025

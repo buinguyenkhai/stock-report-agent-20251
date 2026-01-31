@@ -1,0 +1,46 @@
+## Ngân hàng Thương mại Cổ phần Việt Nam Thịnh Vượng
+
+BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHÁT
+
+Tại ngày 31 tháng 12 năm 2024
+
+|                                                               | Thuyết _ mình —   | Ngày 31 tháng 12 năm 2024 Triệu đồng   | Ngày 31 tháng 12 năm 2023 Triệu đồng   |
+|---------------------------------------------------------------|-------------------|----------------------------------------|----------------------------------------|
+| TÀI SẢN                                                       |                   |                                        |                                        |
+| Tiền mặt, vàng bạc, đá quý                                    | 5                 | 2.148.289                              | 2.284.990                              |
+| Tiền gửi tại Ngân hàng Nhà nước Việt Nam                      | 6                 | 14.327.215                             | 8.422.511                              |
+| Tiền gửi và cho vay các tổ chức tín dụng khác Tiền gửi các tổ |                   | 134.643.662                            | 94.093.778                             |
+| tại chức tín dụng ("TCTD") khác                               | 7.1               | 126.527.280                            | 81.299.073                             |
+| Cho vay các TCTD khác                                         | b2                | 8.116.382                              | 12.794.705                             |
+| Chứng khoán kinh doanh                                        | 8                 | 13.110.971                             | 12.325.809                             |
+| Chứng khoán kinh doanh                                        | 8.1               | 13.180.721                             | 12.406.274                             |
+| Dự phòng rủi ro chứng khoán kinh doanh                        | 8.2               | (69.750)                               | (80.465)                               |
+| Cho vay khách hàng                                            |                   | 676.545.598                            | 551.472.066                            |
+| Cho vay khách hàng                                            | 10                | 692.875.738                            | 566.271.290                            |
+| Dự phòng rủi ro cho vay khách hàng                            | 11                | (16.330. 140)                          | (14.799.224)                           |
+| Hoạt động mua nợ                                              | 12                | 799.825                                | 821.761                                |
+| Mua nợ                                                        |                   | 805.869                                | 827.971                                |
+| Dự phòng mua nợ                                               |                   | (6.044)                                | (6.210)                                |
+| Chứng khoán đầu tư                                            |                   | 52.783.054                             | 94.587.476                             |
+| Chứng khoán đầu tư sẵn sàng để bán                            | 13.1              | 51.857.428                             | 88.050.457                             |
+| Chứng khoán đầu tư giữ đến ngày đáo hạn                       | 13.4              | 992.927                                | 6.755.260                              |
+| Dự phòng rủi ro chứng khoán đầu tư                            | 13.2,12:5         | (67.301)                               | (218.241)                              |
+| Góp vốn, đầu tư dài hạn                                       | 14                | 189.210                                | 189.210                                |
+| Đầu tư dài hạn khác                                           |                   | 189.210                                | 189.210                                |
+| Tài sản cố định                                               |                   | 2.023.899                              | 1.923.801                              |
+| Tài sản có định hữu hình                                      | 157               | 1.437.082                              | 1.298.099                              |
+| Nguyên giá                                                    |                   | 3.406.801                              | 2.994.200                              |
+| Hao mòn                                                       |                   | (1.969.719)                            | (1.696.101)                            |
+| Tài sản cố định vô hình                                       | 15.2              | 586.817                                | 625.702                                |
+| Nguyên giá                                                    |                   | 2.086.191                              | 1.908.548                              |
+| Hao mòn                                                       |                   | (1.499.374)                            | (1.282.846)                            |
+| Tài sản Có khác                                               |                   | 27.275.914                             | 51.445.520                             |
+| Các khoản phải thu                                            | 16.1              | 11.411.320                             | 33.969.441                             |
+| Các khoản lãi, phí phải thu                                   | 16.2              | 8.384.069                              | 8.976.228                              |
+| Tài sản thuế thu nhập doanh nghiệp £ Ạ ("Thuê TNDN") hoãn lại | .2 sở             | 1.195.8: P                             | 1.297.724                              |
+| Tài sản Có khác                                               | 16.3              | 6.547.735                              | 7.354.383                              |
+| Trong đó: Lợi thế thương mại                                  | Tự                | 41.310                                 | 118.507                                |
+| Dự phòng rủi ro cho các tài sản Có nội bảng khác              | 16.4              | (263.046)                              | (152.256)                              |
+| TÓNG TÀI SÀN                                                  |                   | 923.847.637                            | 817.566.922                            |
+
+B02a/TCTD-HN

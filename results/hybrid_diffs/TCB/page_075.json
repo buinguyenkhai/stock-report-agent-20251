@@ -1,0 +1,41 @@
+{
+  "company": "TCB",
+  "page_number": 75,
+  "hybrid_ocr_stats": {
+    "total_cells": 143,
+    "surya_cells": 1,
+    "tesseract_cells": 142,
+    "table_cells": 89,
+    "non_table_cells": 54,
+    "eligible_cells": 1,
+    "routed_low_conf": 1,
+    "routed_low_num_conf": 0,
+    "routed_suspicious_numeric": 0,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 2,
+    "garbled_regions": 0,
+    "surya_cells_updated": 1,
+    "surya_update_skipped_sanity": 0,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 0.6993006993006993
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 399.3333333333333,
+        "t": 504.0,
+        "r": 420.0,
+        "b": 511.3333333333333
+      },
+      "baseline": ".Jens",
+      "candidate": "Jens",
+      "candidate_raw": "Jens",
+      "accepted": true,
+      "reason": "updated"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+THUYÉT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo)
+
+tại 31 tháng 12 năm 2024 và cho giai đoạn từ 1 tháng 1 năm 2024 đến 31 tháng 12 năm 2024
+
+## 33. CHI PHÍ DỰ PHÒNG RỦI RO TÍN DỤNG
+
+|                                                                                     | Thuyết minh   | _ Từ 1/1/2024 đên 31/12/2024 triệu đồng   | _ Từ 1/1/2023 đên 31/12/2023 triệu đồng   |
+|-------------------------------------------------------------------------------------|---------------|-------------------------------------------|-------------------------------------------|
+| Trích lập dự phòng cụ thể cấp tín dụng cho các TCTD khác                            | 7.3           | 29.880                                    | -                                         |
+| Trích lập dự phòng chung cho vay khách hàng                                         | 10            | 763.042                                   | 679.579                                   |
+| Trích lập dự phòng cụ thể cho vay khách hàng                                        | 10            | 3.866.493                                 | 3.529.151                                 |
+| Trích lập/(hoàn nhập) dự phòng cho vay giao dịch ký quỹ và ứng trước cho khách hàng | 10            | 2.877                                     | (181.356)                                 |
+| Trích lập/(hoàn nhập) dự phòng cho hoạt động mua nợ                                 | 11            | 450                                       | (194)                                     |
+| Hoàn nhập dự phòng cho khoản phải thu từ hợp đồng bán nợ                            | 15            | (280.031)                                 | (50.000)                                  |
+| Hoàn nhập dự phòng cho các tài sản có rủi ro tín dụng khác                          | 15            | (300.417)                                 | (56.112)                                  |
+|                                                                                     |               | 4.082.294                                 | 3.921.068                                 |
+
+## 34. TIỀN VÀ CÁC KHOẢN TƯƠNG ĐƯƠNG TIỀN
+
+|                                                                  | 31⁄12/2024 triệu đồng   | 31⁄12/2023 triệu đồng   |
+|------------------------------------------------------------------|-------------------------|-------------------------|
+| Tiền mặt, vàng                                                   | 3.384.770               | 3.620.695               |
+| Tiền gửi tại NHNN                                                | 54.353.153              | 27.140.592              |
+| Chứng khoán có thời hạn đáo hạn không quá 3 tháng kể từ ngày mua | 17.591.513              | 904.081                 |
+| Tiền gửi tại các TCTD khác với kỳ hạn gốc không quá 3 tháng      | 72.154.979              | 78.834.851              |
+|                                                                  | 147.484.415             | 110.500.219             |
+
+## 35. TÌNH HÌNH THU NHẬP CỦA CÁN BỘ, NHÂN VIÊN
+
+|                                                   | Từ 1/1/2024 đến 31/12/2024 triệu đồng   | Từ 1/1/2023 đến 31/12/2023 triệu đồng   |
+|---------------------------------------------------|-----------------------------------------|-----------------------------------------|
+| Số cán bộ, nhân viên tại ngày 31 tháng 12 (người) | 11.848                                  | 11.614                                  |
+| I. Bình quân số cán bộ, nhân viên (người)         | 11.731                                  | 11.977                                  |
+| II. Thu nhập của cán bộ, nhân viên                |                                         |                                         |
+| 1. Tổng quỹ lương                                 | 5.914.970                               | 5.596.413                               |
+| 2. Phụ cấp và thu nhập khác                       | 979.049                                 | 977.156                                 |
+| 3. Tổng thu nhập (1+2)                            | 6.894.019                               | 6.573.569                               |
+| 4. Tiền lương bình quân/tháng                     | 42                                      | 39                                      |
+| 5. Thu nhập bình quân/tháng                       | 49                                      | 46                                      |

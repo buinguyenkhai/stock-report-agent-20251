@@ -1,0 +1,23 @@
+THUYÉT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo)
+
+tại 31 tháng 12 năm 2024 và cho giai đoạn từ 1 tháng 1 năm 2024 đến 31 tháng 12 năm 2024
+
+## 21. CÁC KHOẢN NỢ KHÁC
+
+|                                                  | 31⁄ 12/2024 triệu đông   | 31⁄ 12/2023 triệu đông   |
+|--------------------------------------------------|--------------------------|--------------------------|
+| Các khoản lãi, phí phải trả                      | 7.281.567                | 9.418.750                |
+| Các khoản phải trả và công nợ khác               | 16.580.840               | 15.909.985               |
+| Các khoản phải trả nội bộ                        | 35.805                   | 6.259                    |
+| Các khoản phải trả bên ngoài                     | 16.545.035               | 15.903.726               |
+| - Chuyển tiền phải trả                           | 829.535                  | 1.755.383                |
+| -_ Phải trả nhân viên                            | 3.126.827                | 2.573.368                |
+| - Các khoản thuế phải nộp (Thuyết minh 22)       | 5.663.680                | 4.278.169                |
+| -_ Doanh thu chưa thực hiện                      | 683.612                  | 473.843                  |
+| -_ Quỹ khen thưởng, phúc lợi                     | 11.474                   | 24.394                   |
+| - Tiền thu từ việc bán tài sản đảm bảo chờ xử lý | 61.216                   | 43.845                   |
+| - Chỉ phí trích trước                            | 2.380.941                | 1.324.334                |
+| -_ Thu chi hộ giữa các TCTD                      | 419.292                  | 386.570                  |
+| - Vay khác                                       | 2.658.840                | 4.414.622                |
+| - Các khoản phải trả khác                        | 709.618                  | 629.198                  |
+|                                                  | 23.862.407               | 25.328.735               |

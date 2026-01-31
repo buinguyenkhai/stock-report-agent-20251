@@ -1,0 +1,67 @@
+{
+  "company": "VIB",
+  "page_number": 65,
+  "hybrid_ocr_stats": {
+    "total_cells": 361,
+    "surya_cells": 3,
+    "tesseract_cells": 358,
+    "table_cells": 94,
+    "non_table_cells": 267,
+    "eligible_cells": 3,
+    "routed_low_conf": 3,
+    "routed_low_num_conf": 0,
+    "routed_suspicious_numeric": 0,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 1,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 4,
+    "garbled_regions": 0,
+    "surya_cells_updated": 0,
+    "surya_update_skipped_sanity": 3,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 0.8310249307479225
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 370.3333333333333,
+        "t": 297.6666666666667,
+        "r": 379.0,
+        "b": 310.0
+      },
+      "baseline": "—",
+      "candidate": "",
+      "candidate_raw": "",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 580.6666666666666,
+        "t": 307.6666666666667,
+        "r": 587.0,
+        "b": 325.3333333333333
+      },
+      "baseline": "z.Ì",
+      "candidate": "7.7",
+      "candidate_raw": "7.7",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 580.0,
+        "t": 301.3333333333333,
+        "r": 585.6666666666666,
+        "b": 304.0
+      },
+      "baseline": "X",
+      "candidate": ", , ,",
+      "candidate_raw": ", , ,",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    }
+  ]
+}

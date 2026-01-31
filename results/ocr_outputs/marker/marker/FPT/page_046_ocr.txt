@@ -1,0 +1,30 @@
+## CÔNG TY CỔ PHẦN FPT
+
+Số 10 phố Phạm Văn Bạch Phường Dịch Vọng, Quận Cầu Giấy Thành phố Hà Nội, Việt Nam
+
+Báo cáo tài chính hợp nhất Cho kỳ hoạt động từ ngày 01 tháng 01 năm 2024 đến ngày 31 tháng 12 năm 2024
+
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (tiếp theo)
+
+Các thuyết minh này là một bộ phận hợp thành và cần được đọc đồng thời với báo cáo tài chính hợp nhất kèm theo
+
+MẪU SỐ B 09-DN/HN
+
+## B. CÔNG TY LIÊN DOANH, LIÊN KẾT KHÁC
+
+| STT | Công ty                                       | Hoạt động chính                        | Nơi thành lập, | Tại ngày 31/12/2024 |              | Tại ngày 31/12/2023 |              |
+|-----|-----------------------------------------------|----------------------------------------|----------------|---------------------|--------------|---------------------|--------------|
+|     |                                               |                                        | đăng ký hoạt   | Tỷ lệ               | -3.0         | Tỷ lệ               |              |
+|     |                                               |                                        | động           | sở hữu              | Tỷ lệ quyết  | sở hữu              | Tỷ lệ quyết  |
+| 1   | Công ty Cổ phần Quản lý quỹ Đầu tư FPT        | Quản lý quỹ đầu tư, quản lý danh mục   | Việt Nam       | 25%                 | 25%          | 25%                 | 25%          |
+|     |                                               | đầu tư và các dịch vụ khác             |                |                     |              |                     | 2270         |
+| 2   | Công ty TNHH SBI FPT                          | Sản xuất phần mềm                      | Việt Nam       | 30%                 | 30%          | 30%                 | 30%          |
+| 3   | Công ty TNHH MJS FPT                          | Sản xuất phần mềm                      | Nhật Bản       | 50%                 | 50%          | 50%                 | 50%          |
+| 4   | Công ty TNHH FPT Smart Technologies           | Sản xuất phần mềm                      | Viêt Nam       | 50%                 | 50%          | 50%                 | 50%          |
+| 5   | Công ty TNHH Trí tuệ nhân tạo Quy Nhơn        | Kinh doanh bất động sản                | Việt Nam       | 49%                 | 49%          |                     |              |
+| 6   | Công ty Cổ phần Công nghệ Nami                | Sản xuất phần mềm                      | Việt Nam       | 4370                |              | 49%                 | 49%          |
+| 7   | Công ty Cổ phần Next Robotics                 | •                                      | •              |                     | Đã thoái vốn | 49,15%              | 49,15%       |
+| 8   |                                               | Sản xuất thiết bị tự hành, tự động hóa | Việt Nam       | 26,70%              | 26,70%       | 32,93%              | 32,93%       |
+|     | Công ty Dịch vụ Công nghệ Ackerton            | Sản xuất phần mềm                      | Hàn Quốc       | 50%                 | 50%          | 50%                 | 50%          |
+| 9   | Công ty Konica Minolta FPT Solution Labs, Inc | Sản xuất phần mềm                      | Nhật Bản       | 41%                 | 41%          | Ch                  | ưa thành lập |
+| 10  | Công ty PT FPT Metrodata Indonesia            | Tích hợp hệ thống, dịch vụ phần mềm    | Indonesia      | 40%                 | 40%          |                     | ưa thành lập |

@@ -1,0 +1,37 @@
+## BÁO CÁO LƯU CHUYỂN TIỀN TỆ HỢP NHẤT
+
+Cho kỳ hoạt động 12 tháng kết thúc ngày 31 tháng 12 năm 2024
+
+ĐVT: Triệu đồng
+
+|    | Chỉ tiêu                                                                                                    | Mã chỉ<br>tiêu | Luỹ kế từ đầu năm đến cuối Quý IV       |              |
+|----|-------------------------------------------------------------------------------------------------------------|----------------|-----------------------------------------|--------------|
+|    |                                                                                                             |                | Năm 2024                                | Năm 2023     |
+| 1  | LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG KINH DOANH                                                                     |                |                                         |              |
+| 1  | Thu nhập lãi và các khoản thu nhập tương tự nhận được                                                       | 01             | 52.258.477                              | 58.898.319   |
+| 2  | Chi phí lãi và các chi phí tương tự đã trả                                                                  | 02             | (32.796.701)                            | (33.347.727) |
+| 3  | Thu nhập từ hoạt động dịch vụ nhận được                                                                     | 03             | 1.337.182                               | 582.559      |
+| 4  | Chênh lệch số tiền thực thu/thực chi từ hoạt động kinh doanh chứng khoán, vàng bạc, ngoại tệ                | 04             | 224.005                                 | 425.519      |
+| 5  | Thu nhập khác                                                                                               | 05             | 622.885                                 | 243.550      |
+| 6  | Tiền thu các khoản nợ đã được xử lý xoá, bù đấp bằng nguồn dự phòng rủi ro                                  | 06             | 478.098                                 | 190.201      |
+| 7  | Tiền chi trả cho nhân viên và hoạt động quản lý, công vụ (*)                                                | 07             | (5.580.229)                             | (4.945.722)  |
+| 8  | Tiền thuế thu nhập thực nộp trong kỳ (*)                                                                    | 08             | (1.863.214)                             | (2.437.226)  |
+|    | Lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đối<br>về tài sản và vốn lưu động            | 09             | 14.680.503                              | 19.609.473   |
+|    | Những thay đổi về tài sản hoạt động                                                                         |                | (114.448.283)                           | (55.153.267) |
+| 9  | (Tăng)/Giảm các khoản tiền, vàng gửi và cho vay các TCTD khác                                               | 10             | (16.076.974)                            | 1.709.924    |
+| 10 | (Tăng)/Giảm các khoản về kinh doanh chứng khoán                                                             | 11             | 2.341.062                               | (7.004.389)  |
+| 11 | (Tăng)/Giảm các công cụ tài chính phái sinh và các tài sản tài chính khác                                   | 12             |                                         | 269.772      |
+| 12 | (Tăng)/Giảm các khoản cho vay khách hàng                                                                    | 13             | (81.485.845)                            | (52.830.933) |
+| 13 | (Tăng)/Giảm nguồn dự phòng để bù đắp tổn thất các khoản (tín dụng, chứng khoán, đầu tư dài hạn)             | 14             | (6.574.492)                             | (4.465.088)  |
+| 14 | (Tăng)/Giảm khác về tài sản hoạt động                                                                       | 15             | (12.652.034)                            | 7.167.447    |
+|    | Những thay đối về công nợ hoạt động                                                                         |                | 110.031.053                             | 76.314.211   |
+|    | Tăng/(Giảm) các khoản nợ Chính phủ và NHNN                                                                  | 16             | (90.794)                                | (8.381.535)  |
+|    | Tăng/(Giảm) các khoản tiền gửi, tiền vay các TCTD                                                           | 17             | 63.324.194                              | (7.517.641)  |
+| 17 | Tăng/(Giảm) tiền gửi của khách hàng (bao gồm cả KBNN)                                                       | 18             | 52.394.022                              | 85.827.834   |
+| 18 | Tăng/(Giảm) phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính) | 19             | (3.573.532)                             | 6.381.519    |
+| 19 | Tăng/(Giảm) vốn tài trợ, uỷ thác đầu tư, cho vay mà TCTD chịu rủi ro                                        | 20             | (181.584)                               | (4.370)      |
+| 20 | Tăng/(Giảm) các công cụ tài chính phái sinh và các khoản nợ tài chính khác                                  | 21             | (35.225)                                | 97.152       |
+| 21 | Tăng/(Giảm) khác về công nợ hoạt động                                                                       | 22             | (1.806.028)                             | (88.748)     |
+| 22 | Chi tử các quỹ của TCTD (*)                                                                                 | 23             | , , , , , , , , , , , , , , , , , , , , | (55 10)      |
+|    | Lưu chuyển tiền thuần từ hoạt động kinh doanh                                                               | 24             | 10.263.273                              | 40.770.417   |
+|    |                                                                                                             |                |                                         |              |

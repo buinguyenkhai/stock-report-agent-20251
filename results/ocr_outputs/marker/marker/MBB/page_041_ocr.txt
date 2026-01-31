@@ -1,0 +1,39 @@
+## 17. Tiền gửi của khách hàng
+
+## - Thuyết minh theo loại tiền gửi:
+
+|                                           | 31/12/2024            | 31/12/2023  |
+|-------------------------------------------|-----------------------|-------------|
+|                                           | Triệu đồng            | Triệu đồng  |
+| Tiền, vàng gửi không kỳ hạn               | 271.579.760           | 216.092.296 |
+| -Tiền gửi không kỳ hạn bằng VND           | 248.892.601           | 197.782.244 |
+| -Tiền gửi không kỳ hạn bằng ngoại tệ      | 22.687.159            | 18.310.052  |
+| Tiển, vàng gửi có kỳ hạn                  | 433.476.766           | 339.421.432 |
+| -Tiền gửi có kỳ hạn bằng VND              | 424.703.281           | 333.446.177 |
+| -Tiền gửi có kỳ hạn bằng ngoại tệ         | 8.773.485             | 5.975.255   |
+| Tiền gửi vốn chuyên dùng                  | 1.790.955             | 3.263.844   |
+| Tiền ký quỹ                               | 7.306.998             | 8.755.005   |
+| -Tiền gửi ký quỹ bằng VND                 | 4.045.662             | 6.768.913   |
+| -Tiền gửi ký quỹ bằng ngoại tệ            | 3.261.336             | 1.986.092   |
+|                                           | 714.154.479           | 567.532.577 |
+| Thuyết minh theo đối tượng khách hàng, lo | pại hình doanh nghiệp |             |
+|                                           | 31/12/2024            | 31/12/2023  |
+|                                           | Triệu đồng            | Triệu đồng  |
+| Tiền gửi của TCKT                         | 293.633.827           | 238.813.451 |
+| Tiền gửi của cá nhân                      | 420.520.652           | 328.719.126 |
+|                                           | 714.154.479           | 567.532.577 |
+|                                           |                       |             |
+
+## 18. Các công cụ tài chính phái sinh và các tài sản/(công nợ) tài chính khác
+
+|     | _                                                                                                  | Tài sản                  | lày lập báo cáo)<br>Giá trị ròng |                                   |  |
+|-----|----------------------------------------------------------------------------------------------------|--------------------------|----------------------------------|-----------------------------------|--|
+|     |                                                                                                    | Triệu đồng               | Công nợ<br>Triệu đồng            | Triệu đồng                        |  |
+|     | Tại ngày 31 tháng 12 năm 2024                                                                      |                          |                                  |                                   |  |
+|     | <b>Công cụ TC phái sinh tiền tệ</b><br>Giao dịch kỳ hạn tiền tệ<br>Giao dịch hoán đổi tiền tệ      | <b>173.425</b> - 173.425 | <b>(364.970)</b> (364.970)       | (191.545)<br>(364.970)<br>173.425 |  |
+|     | Tại ngày 31 tháng 12 năm 2023                                                                      |                          |                                  |                                   |  |
+|     | Công cụ TC phái sinh tiền tệ<br>Giao dịch kỳ hạn tiền tệ                                           | 205.742                  | <b>(64.448)</b><br>(64.448)      | <b>141.294</b> (64.448)           |  |
+| 19. | Giao dịch hoán đổi tiền tệ 205.742 - 205.742  Vốn tài trợ ủy thác đầu tư, cho vay TCTD chịu rủi ro |                          |                                  |                                   |  |
+|     |                                                                                                    |                          | 31/12/2024<br>Triệu đồng         | 31/12/2023<br>Triệu đồng          |  |
+|     | Vốn nhận của tổ chức, cá nhân khác                                                                 |                          | 2.793.453                        | 2.799.863                         |  |
+|     |                                                                                                    |                          | 2.793.453                        | 2.799.863                         |  |

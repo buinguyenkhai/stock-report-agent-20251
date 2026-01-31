@@ -1,0 +1,275 @@
+{
+  "company": "ACB",
+  "page_number": 16,
+  "hybrid_ocr_stats": {
+    "total_cells": 327,
+    "surya_cells": 19,
+    "tesseract_cells": 308,
+    "table_cells": 189,
+    "non_table_cells": 138,
+    "eligible_cells": 19,
+    "routed_low_conf": 12,
+    "routed_low_num_conf": 7,
+    "routed_suspicious_numeric": 11,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 1,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 11,
+    "garbled_regions": 0,
+    "surya_cells_updated": 2,
+    "surya_update_skipped_sanity": 7,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 5.81039755351682
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 91.66666666666667,
+        "t": 116.33333333333333,
+        "r": 100.0,
+        "b": 124.33333333333333
+      },
+      "baseline": "3...",
+      "candidate": "3.",
+      "candidate_raw": "3.",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 331.3333333333333,
+        "t": 276.6666666666667,
+        "r": 379.0,
+        "b": 285.0
+      },
+      "baseline": "2.853.216",
+      "candidate": "2.853.216",
+      "candidate_raw": "2.853.216",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 325.3333333333333,
+        "t": 294.6666666666667,
+        "r": 379.0,
+        "b": 303.0
+      },
+      "baseline": "95.715.115",
+      "candidate": "95.715.115",
+      "candidate_raw": "95.715.115",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 331.0,
+        "t": 327.3333333333333,
+        "r": 378.6666666666667,
+        "b": 343.0
+      },
+      "baseline": "8.086.677",
+      "candidate": "8.086.677",
+      "candidate_raw": "8.086.677",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 327.0,
+        "t": 482.3333333333333,
+        "r": 374.3333333333333,
+        "b": 491.0
+      },
+      "baseline": "1.965.933",
+      "candidate": "1.965.933",
+      "candidate_raw": "1.965.933",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 320.0,
+        "t": 498.6666666666667,
+        "r": 373.6666666666667,
+        "b": 512.6666666666666
+      },
+      "baseline": "66.224.739",
+      "candidate": "66.224.739",
+      "candidate_raw": "66.224.739",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 459.0,
+        "t": 506.3333333333333,
+        "r": 462.3333333333333,
+        "b": 507.3333333333333
+      },
+      "baseline": "-",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 325.6666666666667,
+        "t": 536.3333333333334,
+        "r": 373.6666666666667,
+        "b": 545.0
+      },
+      "baseline": "3.193.859",
+      "candidate": "3.193.859",
+      "candidate_raw": "3.193.859",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 458.6666666666667,
+        "t": 542.0,
+        "r": 462.0,
+        "b": 543.3333333333334
+      },
+      "baseline": "-",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 87.0,
+        "t": 565.6666666666666,
+        "r": 95.33333333333333,
+        "b": 573.6666666666666
+      },
+      "baseline": "4.",
+      "candidate": "4.",
+      "candidate_raw": "4.",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 100.66666666666667,
+        "t": 562.6666666666666,
+        "r": 110.66666666666667,
+        "b": 577.6666666666666
+      },
+      "baseline": "_",
+      "candidate": "",
+      "candidate_raw": "",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 403.0,
+        "t": 625.0,
+        "r": 463.0,
+        "b": 638.0
+      },
+      "baseline": "577.680.454",
+      "candidate": "577.680.454",
+      "candidate_raw": "577.680.454",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 485.6666666666667,
+        "t": 627.3333333333334,
+        "r": 546.0,
+        "b": 636.0
+      },
+      "baseline": "485.198.653",
+      "candidate": "485.198.653",
+      "candidate_raw": "485.198.653",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 414.6666666666667,
+        "t": 670.3333333333334,
+        "r": 462.0,
+        "b": 683.0
+      },
+      "baseline": "2.261.865",
+      "candidate": "2.261.865",
+      "candidate_raw": "2.261.865",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 498.6666666666667,
+        "t": 671.0,
+        "r": 545.0,
+        "b": 684.0
+      },
+      "baseline": "1.7/50:717",
+      "candidate": "1.750.717",
+      "candidate_raw": "1.750.717",
+      "accepted": true,
+      "reason": "updated"
+    },
+    {
+      "bbox": {
+        "l": 313.3333333333333,
+        "t": 684.6666666666666,
+        "r": 314.0,
+        "b": 685.3333333333334
+      },
+      "baseline": ":",
+      "candidate": "",
+      "candidate_raw": "",
+      "accepted": false,
+      "reason": "skip_plausibility"
+    },
+    {
+      "bbox": {
+        "l": 542.0,
+        "t": 707.0,
+        "r": 545.3333333333334,
+        "b": 708.3333333333334
+      },
+      "baseline": "=",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 458.3333333333333,
+        "t": 751.0,
+        "r": 461.6666666666667,
+        "b": 752.3333333333334
+      },
+      "baseline": "#",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 541.6666666666666,
+        "t": 752.0,
+        "r": 544.6666666666666,
+        "b": 753.0
+      },
+      "baseline": "8",
+      "candidate": "_",
+      "candidate_raw": "_",
+      "accepted": false,
+      "reason": "skip_candidate_not_numeric"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+Lô CNI1+CN12, Cụm CN An Đồng, thị trần Nam Sách, huyện Nam Sách, Hải Dương
+
+Ban hành theo Thông tư số 202/2014/TT-BTC ngày 22/12/2014 của Bộ Tài chính
+
+## BÁO CÁO LƯU CHUYÊN TIỀN TỆ HỢP NHÁT
+
+(Theo phương pháp gián tiếp)
+
+Cho giai đoạn hoạt động từ ngày 01/01/2024 đến ngày 31/12/2024
+
+Đơn vị tính:
+
+VND
+
+| Sẻ   | lcmi TIÊU                                                                               |    | Thuyết minh   | Từ ngày 01/01/2024&#124; đến ngày 31/12/2024&#124;   | Từ ngày 01/01/2023 đến ngày 31/12/2023   |
+|------|-----------------------------------------------------------------------------------------|----|---------------|------------------------------------------------------|------------------------------------------|
+|      | Lưu chuyển tiền từ hoạt động kinh doanh                                                 |    |               |                                                      |                                          |
+| 1    | &#124;Lợi nhuận trước thuế                                                              | 01 |               | 407,929,704,810                                      | 371,895,554,949                          |
+| 2    | &#124;Điều chỉnh cho các khoản:                                                         |    |               |                                                      |                                          |
+| ~_   | &#124;Khấu hao tài sản cố định                                                          | 02 |               | 392,935,082,692                                      | 330,970,771,702                          |
+| ~_   | &#124;Các khoản dự phòng                                                                | 03 |               | 5,061,257,355                                        | (56,710,295,885)                         |
+| "    | Lãi, lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản là (Ssô giosaei tê         | 04 |               | 7,660,873,173                                        | (12,523,193,184)                         |
+| ~_   | &#124;Lãi, lỗ từ hoạt động đầu tư                                                       | 05 |               | (133,477,204,373)                                    | (231,549,336,110)                        |
+| ~_   | &#124;Chỉ phí lãi vay                                                                   | 06 |               | 167,944,415,958                                      | 210,817,673,605                          |
+| ~_   | &#124;Các khoản điều chỉnh khác                                                         | 07 |               | -                                                    | ụ                                        |
+| 3    | uụ ng từ hoạt động kinh doanh trước thay đỗi vốn                                        | 08 |               | 848,054,129,615                                      | 618,901,175,077                          |
+| ~_   | &#124;Tăng, giảm các khoản phải thu                                                     | 09 |               | (272,796,155,615)                                    | 493,380,052,845                          |
+| ~ _  | &#124;Tăng, giảm hàng tồn kho                                                           | 10 |               | (229,240,512,953)                                    | 934,094,908,854                          |
+| ~_   | &#124;Tăng, giảm các khoản phải trả                                                     | 1  |               | 822,208,356,298                                      | 897,226,271,918                          |
+| ~_   | &#124;Tăng, giảm chỉ phí trả trước                                                      | l2 |               | (227,246,060,480)                                    | (49,793,260,364)                         |
+| ~_   | &#124;Tăng giảm chứng khoán kinh doanh                                                  | 13 |               | -                                                    | -                                        |
+| ~_   | &#124;Tiền lãi vay đã trả                                                               | 14 |               | (178,970,559,166)                                    | (189,465,740,542)                        |
+| ~ _  | &#124;Thuế thu nhập doanh nghiệp đã nộp                                                 | l5 |               | (32,064,530,244)                                     | (60,118,099,537)                         |
+| ~_   | &#124;Tiền thu khác từ hoạt động kinh doanh                                             | 16 |               | -                                                    | -                                        |
+| ~_   | &#124;Tiền chỉ khác cho hoạt động kinh doanh                                            | 17 |               | (35,854,527,783)                                     | (29,009,489,738)                         |
+|      | Lưu chuyển tiền thuần từ hoạt động kinh doanh                                           | 20 |               | 694,089,539,672                                      | 2,615,215,818,513                        |
+| II   | &#124;Lưu chuyển tiền từ hoạt động đầu tư                                               |    |               |                                                      |                                          |
+| I    | _. Xi _ dựng tài sản cố định và                                                         | 21 |               | (838,759,386,525)                                    | (643,183,016,026)                        |
+| 2    | TH han Ì bán tài sản cố định và                                                         | 22 |               | 23,131,262,833                                       | 8,127,328,351                            |
+| 3    | B.—e Vay, mua các công Cụ nợ của                                                        | 23 |               | (2,373,728,801,178)&#124;                            | (2,260,926,390,806)                      |
+| 4    | &#124;Tiền thu hồi cho vay, bán lại các công cụ nợ của đơn vị khác &#124;               | 24 |               | 2,971,976,088,808                                    | 1,870,983,530,000                        |
+| 5_   | &#124;Tiền chỉ đầu tư, góp vốn vào đơn vị khác                                          | 25 |               | (944,336,365,498)                                    | (141,422,914,038)                        |
+| 6    | &#124;Tiền thu hồi đầu tư, góp vốn vào đơn vị khác                                      | 26 |               | 11,167,500,000                                       | 1,700,000,000                            |
+| 7    | &#124;Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia                               | 27 |               | 167,553,927,087                                      | 171,361,258,250                          |
+|      | Lưu chuyển tiền thuần từ hoạt động đầu tư                                               | 30 |               | (982,995,774,473)&#124;                              | (1,599,360,204,269)                      |
+| HI   | &#124;Lưu chuyển tiền từ hoạt động tài chính                                            |    |               |                                                      |                                          |
+|      | Tiền thu từ phát hành cỗ phiếu, nhận góp vốn của chủ sở hữu                             | 31 |               | -                                                    | -                                        |
+|      | Tiền chỉ trả góp vốn cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành | 32 |               | -                                                    | -                                        |

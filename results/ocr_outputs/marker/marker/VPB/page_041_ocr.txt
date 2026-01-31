@@ -1,0 +1,20 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẮT (tiếp theo) Tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 8. CHỨNG KHOÁN KINH DOANH (tiếp theo)
+
+## 8.3 Thuyết minh về tình trạng niệm yết của các chứng khoản kinh doanh
+
+|                                                                                                                                                                                 | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng  | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng  |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|---------------------------------------------|
+| Trái phiếu đã niêm yết Trái phiếu chưa niêm yết (Thuyết minh 8.4) Chứng khoán vốn đã niêm yết Chứng khoán vốn chưa niêm yét Giấy tờ có giá khác chưa niêm yét (Thuyết minh 8.4) | 713.869<br>7.623.416<br>25.771<br>1.614.845 | 581.548<br>8.749.317<br>25.771<br>1.484.084 |
+|                                                                                                                                                                                 | 3.202.820<br>13.180.721                     | 1.565.554<br>12.406.274                     |
+
+## 8.4 Phân tích về chất lượng chứng khoán kinh doanh
+
+Phân tích chất lượng chứng khoán kinh doanh được phân loại là tài sản có rủi ro tín dụng tại thời điểm cuối năm như sau:
+
+| Nợ đủ tiêu chuẩn<br>Nợ dưới tiêu chuẩn | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng |
+|----------------------------------------|--------------------------------------------|--------------------------------------------|
+|                                        | 10.826.236                                 | 10.240.644                                 |
+|                                        | <u>-</u>                                   | 74.227                                     |
+|                                        | 10.826.236                                 | 10.314.871                                 |

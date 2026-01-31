@@ -1,0 +1,35 @@
+## THUYÉT MINH BÁO CÁO TÀI CHÍNH CHỌN LỌC HỢP NHÁT QUÝ IV NĂM 2024
+
+- V. THÔNG TIN BỎ SUNG CHO CÁC KHOẢN MỤC TRÌNH BÀY TRONG BÁO CÁO TÌNH HÌNH TÀI CHÍNH
+4. TIỀN GỬI VÀ CHO VAY CÁC TỎ CHỨC TÍN DỤNG KHÁC:
+
+|    |                                                                  | 31.12.2024   | 31.12.2023   |
+|----|------------------------------------------------------------------|--------------|--------------|
+|    |                                                                  | Triệu đồng   | Triệu đồng   |
+|    | Tiền gửi tại các TCTD khác                                       |              |              |
+|    | Tiền gửi không kỳ hạn                                            | 21.411.418   | 19.800.984   |
+|    | - Bằng đồng Việt Nam                                             | 323.755      | 107.126      |
+|    | - Bằng ngoại tệ                                                  | 21.087.663   | 19.693.858   |
+|    | Tiền gửi có kỳ hạn                                               | 96.369.862   | 94.843.018   |
+|    | - Bằng đồng Việt Nam                                             | 91.589.774   | 75.912.418   |
+|    | - Bằng ngoại tệ                                                  | 4.780.088    | 18.930.600   |
+|    | - Dự phòng rủi ro                                                | -            | -            |
+|    |                                                                  | 117.781.280  | 114.644.002  |
+|    | Cho vay các TCTD khác                                            |              |              |
+|    | - Bằng đồng Việt Nam                                             | 150.979      | 279.929      |
+|    | - Bằng ngoại tệ                                                  | g            | E            |
+|    | - Dự phòng rủi ro cho vay các TCTD khác                          | (50.000)     | (50.000)     |
+|    |                                                                  | 400.979      | 229.929      |
+|    | Tổng tiền gửi và cho vay các TCTD khác                           | 4417.882259  | 114.873.931  |
+| 2. | CHỨNG KHOÁN KINH DOANH:                                          |              |              |
+|    |                                                                  | 31.12.2024   | 31.12.2023   |
+|    |                                                                  | Triệu đồng   | Triệu đồng   |
+|    | Chứng khoán nợ                                                   | 841.743      | 5.879.766    |
+|    | Chứng khoán Chính phủ                                            | 841.743      | 1.879.766    |
+|    | Chứng khoán do các TCTD khác trong nước phát hành                | -            | 4.000.000    |
+|    | Chứng khoán do các tổ chức kinh té (“TCKT”) trong nước phát hành | -            | _            |
+|    | Chứng khoán vốn                                                  | 3.187.345    | 1.443.723    |
+|    | Chứng khoán vốn do các TCTD khác trong nước phát hành            | 1.330.831    | 791.985      |
+|    | Chứng khoán vốn do các TCKT trong nước phát hành                 | 1.856.514    | 651.738      |
+|    | Dự phòng rủi ro chứng khoán kinh doanh                           | (147.937)    | (146.420)    |
+|    |                                                                  | 3.881.151    | 7.177.069    |

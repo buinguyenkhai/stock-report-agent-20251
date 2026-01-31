@@ -13,9 +13,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-class MarkerOCRService:
+from .base import OCRStrategy
+
+class MarkerOCRService(OCRStrategy):
     """
     OCR service using marker-pdf with OpenRouter API for LLM post-processing.
+
     
     Marker uses:
     - Surya OCR models for text detection
@@ -99,26 +102,27 @@ class MarkerOCRService:
         
         return self._converter
     
-    def process_pdf(self, pdf_path: str) -> str:
+    def process_pdf(self, pdf_url: str) -> str:
         """
         Process a PDF file and return markdown text.
         
         Args:
-            pdf_path: Path to PDF file
+            pdf_url: Path or URL to PDF file
             
         Returns:
             Extracted markdown text
         """
         from marker.output import text_from_rendered
         
-        pdf_path = Path(pdf_path)
-        if not pdf_path.exists():
-            raise FileNotFoundError(f"PDF not found: {pdf_path}")
+        p = Path(pdf_url)
+        if not p.exists():
+            raise FileNotFoundError(f"PDF not found: {p}")
         
-        rendered = self.converter(str(pdf_path))
+        rendered = self.converter(str(p))
         text, _, images = text_from_rendered(rendered)
         
         return text
+
     
     def process_image(self, image_path: str) -> str:
         """

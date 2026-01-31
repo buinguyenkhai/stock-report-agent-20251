@@ -1,0 +1,54 @@
+{
+  "company": "MBB",
+  "page_number": 59,
+  "hybrid_ocr_stats": {
+    "total_cells": 104,
+    "surya_cells": 2,
+    "tesseract_cells": 102,
+    "table_cells": 44,
+    "non_table_cells": 60,
+    "eligible_cells": 2,
+    "routed_low_conf": 2,
+    "routed_low_num_conf": 0,
+    "routed_suspicious_numeric": 0,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 1,
+    "garbled_regions": 0,
+    "surya_cells_updated": 0,
+    "surya_update_skipped_sanity": 2,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 1.9230769230769231
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 560.3333333333334,
+        "t": 424.3333333333333,
+        "r": 566.0,
+        "b": 437.6666666666667
+      },
+      "baseline": "dì",
+      "candidate": "5",
+      "candidate_raw": "5",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 560.6666666666666,
+        "t": 439.6666666666667,
+        "r": 566.3333333333334,
+        "b": 446.3333333333333
+      },
+      "baseline": "Ẳ",
+      "candidate": ". ס",
+      "candidate_raw": ".<br>ס",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    }
+  ]
+}

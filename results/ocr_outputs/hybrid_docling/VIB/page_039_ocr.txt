@@ -1,0 +1,35 @@
+## 17. Tài sản cố định vô hình
+
+Biến động của tài sản cố định vô hình trong năm tài chính kết thúc ngày 31 tháng 12 năm 2024 như sau:
+
+|                    | Phần mềm máy vỉ tính Triệu VND   | Tài sản cố định vô hình khác Triệu VND   | Tổng cộng Triệu VND   |
+|--------------------|----------------------------------|------------------------------------------|-----------------------|
+| Nguyên giá         |                                  |                                          |                       |
+| Số dư đầu năm      | 687.609                          | 7.246                                    | 694.855               |
+| Tăng trong năm     | 82.176                           | -                                        | 82.176                |
+| Số dư cuối năm     | 769.785                          | 7.246                                    | 777.031               |
+| Hao mòn lũy kế     |                                  |                                          |                       |
+| Số dư đầu năm      | 398.151                          | 7.246                                    | 405.397               |
+| Khấu hao trong năm | 69.571                           | -                                        | 69.571                |
+| Số dư cuối năm     | 467.722                          | 7.246                                    | 474.968               |
+| Giá trị còn lại    |                                  |                                          |                       |
+| Số dư đầu năm      | 289.458                          | “                                        | 289.458               |
+| Số dư cuối năm     | 302.063                          | ˆ                                        | 302.063               |
+
+Biến động của tài sản cố định vô hình trong năm tài chính kết thúc ngày 31 tháng 12 năm 2023 như sau:
+
+|                    | Phân mềm máy vi tính Triệu VND   | Tài sản cố định vô hình khác Triệu VND   | Tổng cộng Triệu VND   |
+|--------------------|----------------------------------|------------------------------------------|-----------------------|
+| Nguyên giá         |                                  |                                          |                       |
+| Số dư đầu năm      | 626.078                          | 7.246                                    | 633.324               |
+| Tăng trong năm     | 61.531                           | “                                        | 61.531                |
+| Số dư cuối năm     | 687.609                          | 7.246                                    | 694.855               |
+| Hao mòn lũy kế     |                                  |                                          |                       |
+| Số dư đầu năm      | 334.161                          | 7.243                                    | 341.404               |
+| Khấu hao trong năm | 63.990                           | 3                                        | 63.993                |
+| Số dư cuối năm     | 398.151                          | 7.246                                    | 405.397               |
+| Giá trị còn lại    |                                  |                                          |                       |
+| Số dư đầu năm      | 291.917                          | 3                                        | 291.920               |
+| Số dư cuối năm     | 289.458                          | -                                        | 289.458               |
+
+Tại ngày 31 tháng 12 năm 2024, nguyên giá các tài sản cố định vô hình đã khấu hao hết nhưng vẫn đang được sử dụng là 244.652 triệu VND (31/12/2023: 174.438 triệu VND).

@@ -1,0 +1,99 @@
+## 8. Các công cụ tài chính phái sinh và các tài sản tài chính khác
+
+Chỉ tiết giá trị các công cụ tài chính phái sinh và các tài sản tài chính khác như sau:
+
+|                             | Tổng giá trị của hợp đồng (theo tỷ giá tạingày hiệu lực hợp đồng) Triệu VND   | Tổng giá trị ghi số kế toán (theo tỷ giá tại ngày lập báo cáo) Tài sản/(Nợ phải trả) Triệu VND   |
+|-----------------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| ngày 31 tháng 12 năm 2024   |                                                                               |                                                                                                  |
+| Giao dịch kỳ hạn tiền tệ    | 15.309.657                                                                    | 12.148                                                                                           |
+| Giao dịch hoán đổi tiền tệ  | 163.623.724                                                                   | 831.138                                                                                          |
+| Giao dịch hoán đổi lãi suất | 13.594.442                                                                    | (21.414)                                                                                         |
+|                             | 192.527.823                                                                   | 821.872                                                                                          |
+| ngày 31 tháng 12 năm 2023   |                                                                               |                                                                                                  |
+| Giao dịch kỳ hạn tiền tệ    | 3.453.760                                                                     | (726)                                                                                            |
+| Giao dịch hoán đổi tiền tệ  | 111.453.064                                                                   | 141.488                                                                                          |
+| Giao dịch hoán đổi lãi suất | 3.354.490                                                                     | 15.959                                                                                           |
+|                             | 118.261.314                                                                   | 156.721                                                                                          |
+
+## Cho vay khách hàng
+
+Cho vay
+
+các tổ
+
+chức kinh
+
+Cho
+
+Cho vay
+
+vay bằng
+
+vốn chiết
+
+tài khấu
+
+trợ, công
+
+tế,
+
+ủy cụ
+
+cá
+
+nhân thác
+
+đầu chuyển
+
+tư
+
+nhượng và
+
+các giấy
+
+tờ
+
+có
+
+giá
+
+31/12/2024
+
+Triệu
+
+VND
+
+323.813.344
+
+5.330
+
+191.039
+
+324.009.713
+
+Phân tích chất lượng dư nợ cho vay khách hàng được trình bày tại Thuyết minh 46.2.
+
+Phân tích dư nợ cho vay khách hàng theo kỳ hạn gốc:
+
+|              | 31/12/2024 Triệu VND   | 31/12/2023 Triệu VND   |
+|--------------|------------------------|------------------------|
+| Nợ ngắn hạn  | 142.051.273            | 102.695.749            |
+| Nợ trung hạn | 20.244.697             | 15.123.396             |
+| Nợ dài hạn   | 161.713.743            | 148.526.400            |
+|              | 324.009.713            | 266.345.545            |
+
+31/12/2023
+
+Triệu
+
+VND
+
+266.318.277
+
+6.886
+
+20.382
+
+266.345.545
+
+-\_

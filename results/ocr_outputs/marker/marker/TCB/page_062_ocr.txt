@@ -1,0 +1,59 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (tiếp theo) tại 31 tháng 12 năm 2024 và cho giai đoạn từ 1 tháng 1 năm 2024 đến 31 tháng 12 năm 2024
+
+## 39. GIAO DỊCH VỚI CÁC BÊN LIÊN QUAN (tiếp theo)
+
+## Giá tri hợp đồng phái sinh
+
+| Gia trị nợp dòng phái sinh                 | Đơn vị: triệu đồng |            |                  |
+|--------------------------------------------|--------------------|------------|------------------|
+| Bên liên quan                              | Quan hệ            | 31/12/2024 | 31/12/2023       |
+| Giao dịch kỳ hạn tiền tệ                   |                    |            |                  |
+| Công ty Cổ phần Tập đoàn Masan             | (i)                | -          | 3.076.654        |
+| Giao dịch hoán đổi lãi suất                |                    |            |                  |
+| Công ty Cổ phần Tập đoàn Masan             | (i)                | 11.264.548 | 8.290.798        |
+| Công ty Cổ phần Hàng tiêu dùng Masan       | (ii)               | 1.015.300  | -                |
+| Giá trị hợp đồng bảo lãnh, phát hành thư t | tín duna           |            |                  |
+| Cia a; nyp aong zao iam, phatham ara t     | u.p.1.9            | Đo         | n vị: triệu đồng |
+| Bên liên quan                              | Quan hệ            | 31/12/2024 | 31/12/2023       |
+| Công ty Cổ phần Eurowindow                 | (ii), (iii)        | 127.693    | 317.672          |
+| Công ty Cổ phần Mobicast                   | (ii)               | -          | 207.375          |
+| Công ty TNHH Khai thác Chế biến Khoáng s   | ản                 |            |                  |
+| Núi Pháo                                   | (iii)              | 93.334     | 125.090          |
+| Công ty Cổ phần One Mount Distribution     | (ii)               | 34.668     | 49.258           |
+| Công ty TNHH Đầu tư Sản xuất Phát triển Nó | òng                |            |                  |
+| nghiệp WinEco                              | (iii)              | 6.856      | -                |
+| Công ty Cổ phần One Mount Consumer         | (ii)               | 106.000    | -                |
+| Nhóm các công ty liên quan đến             |                    |            |                  |
+| Công ty Cố phần Tập đoàn Masan             | (iv)               | -          | 10.493           |
+|                                            |                    |            |                  |
+
+## Số dư tiền gửi không kỳ hạn từ khách hàng
+
+Đơn vị: triệu đồng
+
+| Bên liên quan                                | Quan hệ     | 31/12/2024 | 31/12/2023 |
+|----------------------------------------------|-------------|------------|------------|
+| Công ty Cổ phần Eurowindow                   | (ii), (iii) | 1.007      | 1.848      |
+| Công ty Cổ phần One Mount Group              | (ii)        | 2.049      | 74.543     |
+| Công ty Cổ phần One Mount Distribution       | (ii)        | 126.530    | 23.518     |
+| Công ty Cổ phần One Mount Consumer           | (ii)        | 4.187      | 161.464    |
+| Công ty cổ phần One Mount Logistics          | (ii)        | 129        | 7.739      |
+| Công ty Cổ phần Dịch vụ Di động trực tuyến   | (ii)        | 189.267    | 50.690     |
+| Công ty TNHH Việt Thành – Sài Đồng           | (iii)       | 1.842      | 1.143      |
+| Công ty Cổ phần TC Advisors                  | (iii)       | 46.401     | 1.487      |
+| Công ty Cổ phần Bột giặt NET                 | (iii)       | 13.778     | 29         |
+| Công ty TNHH Hợp tác kinh doanh và           |             |            |            |
+| phát triển ISADO                             | (iii)       | 806        | 1.348      |
+| Công ty Cổ phần Phong Phú - Lâm Đồng         | (ii)        | 4.638      | 218        |
+| Công ty Cổ phần Giáo Dục Millennia           | (iii)       | 1.907      | -          |
+| Công ty Cổ phần Giáo dục Masterise Education | ı (iii)     | 6.488      | 6.088      |
+| Công ty Cổ phần Tập Đoàn Masterise           | (ii)        | 23.714     | 20.321     |
+| Công ty TNHH Đầu Tư Quang San                | (iii)       | 325        | 40         |
+| Công ty Cổ phần Thương mại Tổng hợp          |             |            |            |
+| và Dịch vụ An Bình                           | (ii)        | 240        | 534        |
+| Công ty Cổ phần Đầu tư Trung tâm             |             |            |            |
+| thương mại Vinh (Vicentra)                   | (ii)        | 20         | 3          |
+| Công ty Cổ phần Mobicast                     | (ii)        | 5.700      | 8.176      |
+| Công ty Cổ phần Eurowindow Holding           | (ii)        | 220.021    | 18.282     |
+| Công ty Cổ phần Tập đoàn Masan               | (i)         | 693.029    | 311.593    |
+| Công ty TNHH Vonfram Masan                   | (iii)       | 1.320.978  | 64.658     |

@@ -1,0 +1,19 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẬT (tiếp theo) vào ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 9. PHẢI THU VÈ CHO VAY NGẮN HẠN
+
+Khoản phải thu về cho vay ngắn hạn thể hiện các khoản cho vay ngắn hạn với các công ty đối tác, có kỳ hạn còn lại dưới 12 tháng và hưởng lãi suất áp dụng.
+
+## 10. PHẢI THU NGẮN HẠN KHÁC
+
+|                                                                                                                   | Số cuối năm                         | VND<br>Số đầu năm                    |
+|-------------------------------------------------------------------------------------------------------------------|-------------------------------------|--------------------------------------|
+| Phải thu từ các nhà cung cấp                                                                                      | 1.678.124.625.158                   | 1.630.510.291.045                    |
+| <ul> <li>Công ty TNHH LG Electronics Việt Nam<br/>Hải Phòng</li> <li>Công ty TNHH Điện tử Samsung HCMC</li> </ul> | 123.491.899.918                     | 154.622.689.360                      |
+| CE Complex - Công ty TNHH Samsung Electronics                                                                     | 95.772.412.644                      | 200.572.240.839                      |
+| Việt Nam Thái Nguyên<br>- Công ty TNHH Panasonic Việt Nam                                                         | 76.666.694.500<br>35.126.516.454    | 86.026.845.242<br>50.782.779.573     |
+| <ul> <li>Công ty TNHH Sony Electronics Việt Nam</li> <li>Khác</li> </ul>                                          | 22.853.281.807<br>1.324.213.819.835 | 45.428.646.522                       |
+| Phải thu lãi tiền gửi, cho vay<br>Phải thu từ nhân viên                                                           | 701.761.964.393                     | 1.093.077.089.509<br>923.425.750.418 |
+| Tạm ứng nhân viên                                                                                                 | 6.685.794.187<br>5.420.918.005      | 11.328.613.603<br>6.413.657.109      |
+| Khác                                                                                                              | 38.894.546.929                      | 96.801.890.794                       |
+| TÓNG CỘNG                                                                                                         | 2.430.887.848.672                   | 2.668.480.202.969                    |

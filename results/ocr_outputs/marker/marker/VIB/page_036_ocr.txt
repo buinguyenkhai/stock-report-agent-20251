@@ -1,0 +1,38 @@
+| (b)  | Dự phòng rủi ro chứng khoán đầu tư giữ đến ngày đáo hạn                                                                    |                         |                         |
+|------|----------------------------------------------------------------------------------------------------------------------------|-------------------------|-------------------------|
+|      |                                                                                                                            | 31/12/2024<br>Triệu VND | 31/12/2023<br>Triệu VND |
+|      | Dự phòng chung chứng khoán đầu tư giữ đến ngày đáo hạn (i)<br>Dự phòng cụ thể chứng khoán đầu tư giữ đến ngày đáo hạn (ii) | 42.380                  | 318<br>8.476            |
+|      |                                                                                                                            | 42.380                  | 8.794                   |
+| (i)  | Biến động dự phòng chung chứng khoán đầu tư giữ đến ngày đáo hạn như sau:                                                  |                         |                         |
+| ``   |                                                                                                                            | Năm                     | Năm                     |
+|      |                                                                                                                            | kết thúc ngày           | kết thúc ngày           |
+|      |                                                                                                                            |                         | 31/12/2023              |
+|      |                                                                                                                            | 31/12/2024              |                         |
+|      |                                                                                                                            | Triệu VND               | Triệu VND               |
+|      | Số dư đầu năm                                                                                                              | 318                     | 318                     |
+|      |                                                                                                                            | (318)                   |                         |
+|      | Hoàn nhập dự phòng trong năm                                                                                               | (510)                   |                         |
+|      |                                                                                                                            | M4                      | 318                     |
+| (ii) | Biến động dự phòng cụ thể chứng khoán đầu tư giữ đến ngày đáo hạn như sau:                                                 |                         |                         |
+|      |                                                                                                                            | Năm                     | Năm                     |
+|      |                                                                                                                            | kết thúc ngày           | kết thúc ngày           |
+|      |                                                                                                                            |                         | 31/12/2023              |
+|      |                                                                                                                            | 31/12/2024              |                         |
+|      |                                                                                                                            | Triệu VND               | Triệu VND               |
+|      | Số dư đầu năm                                                                                                              | 8.476                   | <b>→</b>                |
+|      | Trích lập dự phòng trong năm                                                                                               | 33.904                  | 8.476                   |
+|      | 7. T. T. T. T. T. T. T. T. T. T. T. T. T.                                                                                  | 42.380                  | 8.476                   |
+| 15.  | Góp vốn, đầu tư dài hạn                                                                                                    |                         |                         |
+|      | •                                                                                                                          | 31/12/2024              | 31/12/2023              |
+|      |                                                                                                                            |                         | Triệu VND               |
+|      |                                                                                                                            | Triệu VND               | THỆU VIVO               |
+|      | Đầu tư dài hạn khác (a)                                                                                                    | 69.667                  | 69,667                  |
+|      | Dự phòng giảm giá đầu tư dài hạn                                                                                           | (210)                   | (210)                   |
+|      | Dự phong giam gia dau từ dai nặn                                                                                           | 69.457                  | 69.457                  |
+|      |                                                                                                                            |                         |                         |
+| (a)  | Chi tiết các khoản đầu tư dài hạn khác như sau:                                                                            |                         |                         |
+|      |                                                                                                                            | 31/12/2024              | 31/12/2023              |
+|      |                                                                                                                            | Triệu VND               | Triệu VND               |
+|      | Đầu tư vào các tổ chức kinh tế                                                                                             | 69.667                  | 69.667                  |
+|      |                                                                                                                            | 69.667                  | 69.667                  |
+|      |                                                                                                                            |                         |                         |

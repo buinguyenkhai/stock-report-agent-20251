@@ -1,0 +1,37 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (tiếp theo) tại 31 tháng 12 năm 2024 và cho giai đoạn từ 1 tháng 1 năm 2024 đến 31 tháng 12 năm 2024
+
+## 26. LÃI THUẦN TỪ HOẠT ĐỘNG DỊCH VỤ
+
+|                                         | Từ 1/1/2024<br>đến 31/12/2024<br>triệu đồng | Từ 1/1/2023<br>đến 31/12/2023<br>triệu đồng |
+|-----------------------------------------|---------------------------------------------|---------------------------------------------|
+| Thu nhập từ hoạt động dịch vụ           | 10.961.642                                  | 11.378.085                                  |
+| Dịch vụ thanh toán và tiền mặt          | 8.118.354                                   | 9.022.626                                   |
+| Dịch vụ ngân quỹ                        | 190                                         | 274                                         |
+| Dịch vụ ủy thác và đại lý               | 617.337                                     | 583.047                                     |
+| Dịch vụ tư vấn                          | 163.261                                     | 87.121                                      |
+| Dịch vụ hợp tác bảo hiểm                | 605.677                                     | 667.334                                     |
+| Dịch vụ bảo lãnh phát hành chứng khoán  | 561.259                                     | 359.130                                     |
+| Dịch vụ môi giới kinh doanh chứng khoán | 544.416                                     | 423.435                                     |
+| Dịch vụ ủy thác quản lý quỹ             | 126.704                                     | 97.283                                      |
+| Dịch vụ khác                            | 224.444                                     | 137.835                                     |
+| Chi phí hoạt động dịch vụ               | (2.919.394)                                 | (2.663.188)                                 |
+| Dịch vụ thanh toán và tiền mặt          | (2.559.197)                                 | (2.304.495)                                 |
+| Dịch vụ ngân quỹ                        | (62.840)                                    | (61.844)                                    |
+| Dịch vụ môi giới kinh doanh chứng khoán | (259.237)                                   | (183.783)                                   |
+| Dịch vụ tư vấn                          | (1.277)                                     | (140)                                       |
+| Dịch vụ khác                            | (36.843)                                    | (112.926)                                   |
+|                                         | 8.042.248                                   | 8.714.897                                   |
+
+## 27. LÃI THUẦN TỪ HOẠT ĐỘNG KINH DOANH NGOẠI HỐI
+
+| -                                              | 592.556        | 195.750        |
+|------------------------------------------------|----------------|----------------|
+| Lỗ từ các công cụ tài chính phái sinh tiền tệ  | (4.645.962)    | (3.820.037)    |
+| Lỗ từ kinh doanh ngoại tệ giao ngay            | (950.518)      | (594.974)      |
+| Lỗ từ hoạt động kinh doanh ngoại hối           | (5.596.480)    | (4.415.011)    |
+| Lãi từ các công cụ tài chính phái sinh tiền tệ | 3.556.068      | 3.477.455      |
+| Lãi từ kinh doanh ngoại tệ giao ngay           | 2.632.968      | 1.133.306      |
+| Lãi từ hoạt động kinh doanh ngoại hối          | 6.189.036      | 4.610.761      |
+|                                                | triệu đồng     | triệu đồng     |
+|                                                | đến 31/12/2024 | đến 31/12/2023 |
+|                                                | Từ 1/1/2024    | Từ 1/1/2023    |

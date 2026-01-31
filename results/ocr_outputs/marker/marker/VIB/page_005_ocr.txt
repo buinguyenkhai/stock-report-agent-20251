@@ -1,0 +1,21 @@
+## Ngân hàng thương mại cổ phần Quốc Tế Việt Nam Báo cáo tình hình tài chính hợp nhất tại ngày 31 tháng 12 năm 2024 (tiếp theo)
+
+## **Mẫu B02/TCTD-HN** (Ban hành theo Thông tư số 49/2014/TT-NHNN ngày 31 tháng 12 năm 2014 của Ngân hàng Nhà nước Việt Nam)
+
+|                                                                                               | Thuyết<br>minh | 31/12/2024<br>Triệu VND                        | 31/12/2023<br>Triệu VND                 |
+|-----------------------------------------------------------------------------------------------|----------------|------------------------------------------------|-----------------------------------------|
+| NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU                                                                 |                |                                                |                                         |
+| NỢ PHẢI TRẢ                                                                                   |                |                                                |                                         |
+| Các khoản nợ Chính phủ và NHNNVN                                                              | 19             | 18.586.891                                     | -                                       |
+| <b>Tiền gửi và vay các TCTD khác</b><br>Tiền gửi của các TCTD khác<br>Vay các TCTD khác       | 20             | <b>123.200.585</b><br>94.513.735<br>28.686.850 | <b>98.639.721</b> 74.755.571 23.884.150 |
+| Tiền gửi của khách hàng                                                                       | 21             | 276.308.322                                    | 236.577.266                             |
+| Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro                                         | 22             | 5.368                                          | 6.930                                   |
+| Phát hành giấy tờ có giá                                                                      | 23             | 23.262.579                                     | 23.896.936                              |
+| <b>Các khoản nợ khác</b><br>Các khoản lãi, phí phải trả<br>Các khoản phải trả và công nợ khác | 24             | <b>9.932.815</b> 3.382.767 6.550.048           | <b>12.820.933</b> 4.218.295 8.602.638   |
+| TổNG NỢ PHẢI TRẢ                                                                              |                | 451.296.560                                    | 371.941.786                             |
+| <b>v</b> ốn chủ sở hữu                                                                        |                |                                                |                                         |
+| <b>Vốn của TCTD</b><br>Vốn điều lệ<br>Thặng dư vốn cổ phần                                    | 25             | <b>29.793.045</b><br>29.791.278<br>1.767       | <b>25.369.708</b> 25.368.075 1.633      |
+| Các quỹ của TCTD                                                                              | 25             | 4.333.344                                      | 3.470.408                               |
+| Lợi nhuận chưa phân phối                                                                      | 25             | 7.735.417                                      | 9.099.471                               |
+| TỔNG VỐN CHỦ SỞ HỮU                                                                           |                | 41.861.806                                     | 37.939.587                              |
+| TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU                                                            |                | 493.158.366                                    | 409.881.373                             |

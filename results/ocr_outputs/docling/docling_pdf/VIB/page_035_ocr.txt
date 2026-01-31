@@ -1,0 +1,131 @@
+## 12. Chứng khoán đầu tư sẵn sàng để bán
+
+|                                                              | 31/12/2024 Triệu VND   | 31/12/2023   |
+|--------------------------------------------------------------|------------------------|--------------|
+| Chứng khoán nợ                                               |                        |              |
+| - Trái phiếu Chính phủ                                       | 9.933.479              | 12.262.480   |
+| -__ Trái phiếu do các TCTD khác trong nước phát hành         | 12.712.080             | 18.250.000   |
+| -__ Chứng chỉ tiền gửi do các TCTD khác trong nước phát hành | 27.150.253             | 29.718.798   |
+| - __ Trái phiếu do các TCKT trong nước phát hành             | 550.000                | 725.000      |
+|                                                              | 50.345.812             | 60.956.278   |
+
+Phân tích chất lượng nợ của chứng khoán nợ đầu tư sẵn sàng để bán được trình bày tại Thuyết minh 46.2.
+
+## 13. Chứng khoán đầu tư giữ đến ngày đáo hạn
+
+|                                                          |   31/12/2024 |   31/12/2023 Triệu VND |
+|----------------------------------------------------------|--------------|------------------------|
+| Trái phiếu do Công ty TNHH Mua bán nợ Việt Nam phát hành |        42.38 |                  42.38 |
+|                                                          |        42.38 |                  42.38 |
+
+Trái phiếu do Công ty TNHH Mua bán nợ Việt Nam phát hành là trái phiếu chuyển đổi cho các khoản cho vay Tổng Công ty Công nghiệp Tàu thủy Việt Nam được chính phủ bảo lãnh, có kỳ hạn 10 năm từ 2013 đến 2023, lãi suất là 8,9%/năm. Trái phiếu này đã đến hạn thanh toán vào ngày 12 tháng 9 năm 2023.
+
+Phân tích chất lượng nợ của chứng khoán đầu tư giữ đến ngày đáo hạn được trình bày tại Thuyết mình 46.2.
+
+## 14. Dự phòng rủi ro chứng khoán đầu tư
+
+Dự
+
+Dự
+
+phòng phòng
+
+rúi rủi
+
+ro ro
+
+chứng chứng
+
+khoán khoán
+
+đầu
+
+đầu tư
+
+tư
+
+sẵn giữ
+
+sàng
+
+đến
+
+để
+
+bán ngày
+
+(a)
+
+đáo hạn
+
+## (a) Dự phòng rủi ro chứng khoán đầu tư sẵn sàng để bán
+
+Dự
+
+phòng chung
+
+chứng khoán
+
+đầu tư
+
+sẵn sàng
+
+để
+
+bán
+
+(i)
+
+## () Biến động dự phòng chung chứng khoán đầu tư sẵn sàng để bán như sau:
+
+|                              | Năm kết thúc ngày 31/12/2024   | Năm kết thúc ngày 31/12/2023   |
+|------------------------------|--------------------------------|--------------------------------|
+| Số dư đầu năm                | 1.500                          | 13.725                         |
+| Hoàn nhập dự phòng trong năm |                                | (12.225)                       |
+|                              | 1.500                          | 1.500                          |
+
+(b)
+
+31/12/2024
+
+Triệu
+
+VND
+
+1.500
+
+42.380
+
+43.880
+
+31/12/2024
+
+Triệu
+
+VND
+
+1.500
+
+1.500
+
+31/12/2023
+
+Triệu
+
+VND
+
+1.500
+
+8.794
+
+10.294
+
+31/12/2023
+
+Triệu
+
+VND
+
+1.500
+
+1.500

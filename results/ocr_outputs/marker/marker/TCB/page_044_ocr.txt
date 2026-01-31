@@ -1,0 +1,31 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (tiếp theo) tại 31 tháng 12 năm 2024 và cho giai đoạn từ 1 tháng 1 năm 2024 đến 31 tháng 12 năm 2024
+
+## 15. TÀI SẢN CÓ KHÁC (tiếp theo)
+
+Biến động dự phòng rủi ro cho các tài sản Có nội bảng khác như sau:
+
+|                                                                                                                                                            | Từ 1/1/2024<br>đến 31/12/2024<br>triệu đồng | Từ 1/1/2023<br>đến 31/12/2023<br>triệu đồng |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|---------------------------------------------|
+| Số dư đầu kỳ                                                                                                                                               | 692.866                                     | 798.423                                     |
+| Hoàn nhập dự phòng rủi ro cho khoản phải thu từ<br>hợp đồng bán nợ trong kỳ ( <i>Thuyết minh 33</i> )<br><i>Dự phòng chung</i><br><i>Dự phòng cụ thể</i>   | (280.031)<br>280<br>(280.311)               | (50.000)<br>-<br>(50.000)                   |
+| Hoàn nhập dự phòng rủi ro cho các tài sản có rủi ro<br>tín dụng khác trong kỳ ( <i>Thuyết minh 33</i> )<br><i>Dự phòng chung</i><br><i>Dự phòng cụ thể</i> | (300.417)<br>(300.417)                      | (56.112)<br>43.248<br>(99.360)              |
+| Trích lập dự phòng cho các tài sản Có khác<br>trong kỳ ( <i>Thuyết minh 32</i> )                                                                           | 3.792                                       | 555                                         |
+| Sử dụng dự phòng cho các tài sản Có khác trong kỳ                                                                                                          | (1.166)                                     | -                                           |
+| Phân loại lại từ dự phòng cho các tài sản Có khác sang dự phòng rủi ro cấp tín dụng cho các TCTD khác                                                      | (50.170)                                    | <u>-</u>                                    |
+| Số dư cuối kỳ                                                                                                                                              | 64.874                                      | 692.866                                     |
+
+Phân tích chất lượng tài sản Có khác được phân loại là tài sản có rủi ro tín dụng tại thời điểm cuối kỳ kế toán như sau:
+
+|                                              | 31/12/2024 |        | 31/12/2023            |               |
+|----------------------------------------------|------------|--------|-----------------------|---------------|
+| _                                            | triệu đồng | %      | triệu đồng            | %             |
+| Nợ đủ tiêu chuẩn<br>Nợ có khả năng mất vốn _ | 7.912.290  | 100,00 | 47.930.453<br>280.311 | 99,42<br>0,58 |
+| _                                            | 7.912.290  | 100,00 | 48.210.764            | 100,00        |
+
+## 16. CÁC KHOẢN NỢ CHÍNH PHỦ VÀ NHNN
+
+|                               | 31/12/2024<br>triệu đồng | 31/12/2023<br>triệu đồng |
+|-------------------------------|--------------------------|--------------------------|
+| Tiền gửi của Kho bạc Nhà nước |                          |                          |
+| - Bằng VND                    | 11.531                   | 131                      |
+|                               | 11.531                   | 131                      |

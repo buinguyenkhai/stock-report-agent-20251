@@ -1,0 +1,42 @@
+## BÁO CÁO LƯU CHUYỀN TIỀN TỆ HỢP NHÁT
+
+cho giai đoạn tài chính từ ngày 1 tháng 1 năm 2024 đến ngày 31 tháng 12 năm 2024
+
+|                                                                                                      | - Thuyết minh   | _ Từ 1/1/2024 đên 31⁄1 2/2024 triệu đông   | _ Từ 1/1/2023 đên 31⁄1 2/2023 triệu đông   |
+|------------------------------------------------------------------------------------------------------|-----------------|--------------------------------------------|--------------------------------------------|
+| LƯU CHUYÉN TIỀN TỪ HOẠT ĐỘNG KINH DOANH                                                              |                 |                                            |                                            |
+| Thu nhập lãi và các khoản thu nhập tương tự nhận được                                                |                 | 61.748.921                                 | 53.749.365                                 |
+| Chi phí lãi và các chỉ phí tương tự đã trả                                                           |                 | (26.088.084)                               | (25.941.911)                               |
+| Thu nhập từ hoạt động dịch vụ nhận được                                                              |                 | 7.643.553                                  | 9.134.752                                  |
+| Chênh lệch số tiền thực thu từ hoạt động kinh doanh và                                               |                 |                                            |                                            |
+| (ngoại tệ chứng khoán)                                                                               |                 | 3.150.018                                  | 1.168.505                                  |
+| Thu nhập/(chi phí) khác                                                                              |                 | (2.359.679)                                | 1.384.616                                  |
+| ‹ - Tiên thu các khoản nợ đã được xử lý bằng nguôn ro                                                |                 |                                            |                                            |
+| dự phòng rủi                                                                                         | 30              | 1.138.200                                  | 831.790                                    |
+| Tiền chỉ trả cho nhân viên và hoạt động quản lý, công vụ                                             |                 | (10.106.171)                               | (10.339.365)                               |
+| Tiền thuế thu nhập thực nộp trong kỳ                                                                 | 22.1            | (4.089.321)                                | (5.048.936)                                |
+| Lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động        |                 | 31.037.437                                 | 24.938.816                                 |
+| Những thay đồi về tài sản hoạt động                                                                  |                 |                                            |                                            |
+| (Tăng)/giảm các khoản tiền gửi và cấp tín dụng cho các TCTD khác                                     |                 | 12.721.924                                 | (12.287.858)                               |
+| Tăng các khoản về kinh doanh chứng khoán                                                             |                 | (31.627.229)                               | (19.582.416)                               |
+| (Tăng)/giảm các công cụ tài chính phái sinh và các tài sản tài chính khác                            |                 | 143.611                                    | (143.611)                                  |
+| Tăng các khoản cho vay khách hàng                                                                    |                 | (113.083.396)                              | (98.117.863)                               |
+| Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tốn                                               |                 |                                            |                                            |
+| thât các khoản                                                                                       | 10, 15          | (2.670.781)                                | (2.667.877)                                |
+| (Tăng)/giảm khác về tài sản hoạt động                                                                |                 | 34.701.809                                 | (9.317.279)                                |
+| Những thay đồi về công nợ hoạt động                                                                  |                 |                                            |                                            |
+| Giảm các khoản tiền gửi, tiền vay các TCTD khác                                                      |                 | (20.933.914)                               | (14.389.967)                               |
+| Tăng tiền gửi của khách hàng                                                                         |                 | 78.742.971                                 | 96.249.299                                 |
+| Tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính) |                 | 55.719.021                                 | 50.696.681                                 |
+| Tăng/(giảm) các công cụ tài chính phái sinh và các khoản nợ tài chính khác                           |                 | 931.231                                    | (1.851.213)                                |
+| Giảm khác về công nợ hoạt động                                                                       |                 | (3.303.550)                                | (1.468.412)                                |
+| Chi từ các quỹ                                                                                       | 23.1            | (2.579)                                    | (5.013)                                    |
+| Lưu chuyển tiền thuần từ hoạt động kinh doanh                                                        |                 | 42.376.555                                 | 12.053.287                                 |
+| LƯU CHUYẺN TIỀN TỪ HOẠT ĐỘNG ĐÀU TỪ                                                                  |                 |                                            |                                            |
+| Mua sắm tài sản cố định                                                                              |                 | (1.618.886)                                | (1.232.358)                                |
+| Tiền thu từ thanh lý tài sản cố định                                                                 |                 | 1.741.528                                  | 22.156                                     |
+| Tiền chỉ từ thanh lý tài sản cố định                                                                 |                 | (1.249.743)                                | (35)                                       |
+| Tiền thu từ bán bất động sản đầu tư                                                                  |                 | 736.219                                    | 1.296.447                                  |
+| Tiền chi đầu tư, góp vốn vào các đơn vị khác                                                         |                 | (56.278)                                   | (3.033.432)                                |
+| Tiền thu cổ tức và lợi nhuận được chia từ các khoản đâu tư, góp vôn dài hạn                          | 31              | 64.561                                     | 34.756                                     |
+| Lưu chuyển tiền thuần sử dụng vào hoạt động đâu tư                                                   |                 | (382.599)                                  | (2.912.466)                                |

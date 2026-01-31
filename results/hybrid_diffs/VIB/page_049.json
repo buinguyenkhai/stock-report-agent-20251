@@ -1,0 +1,106 @@
+{
+  "company": "VIB",
+  "page_number": 49,
+  "hybrid_ocr_stats": {
+    "total_cells": 329,
+    "surya_cells": 6,
+    "tesseract_cells": 323,
+    "table_cells": 278,
+    "non_table_cells": 51,
+    "eligible_cells": 6,
+    "routed_low_conf": 4,
+    "routed_low_num_conf": 2,
+    "routed_suspicious_numeric": 6,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 9,
+    "garbled_regions": 0,
+    "surya_cells_updated": 0,
+    "surya_update_skipped_sanity": 0,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 1.82370820668693
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 408.6666666666667,
+        "t": 346.3333333333333,
+        "r": 446.3333333333333,
+        "b": 353.3333333333333
+      },
+      "baseline": "1.247.253",
+      "candidate": "1.247.253",
+      "candidate_raw": "1.247.253",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 405.3333333333333,
+        "t": 474.6666666666667,
+        "r": 447.6666666666667,
+        "b": 481.6666666666667
+      },
+      "baseline": "1.300.499",
+      "candidate": "1.300.499",
+      "candidate_raw": "1.300.499",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 409.0,
+        "t": 563.3333333333334,
+        "r": 448.0,
+        "b": 570.3333333333334
+      },
+      "baseline": "4.708.480",
+      "candidate": "4.708.480",
+      "candidate_raw": "4.708.480",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 410.0,
+        "t": 575.3333333333334,
+        "r": 447.0,
+        "b": 582.3333333333334
+      },
+      "baseline": "1.390.001",
+      "candidate": "1.390.001",
+      "candidate_raw": "1.390.001",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 487.0,
+        "t": 562.6666666666666,
+        "r": 526.3333333333334,
+        "b": 569.6666666666666
+      },
+      "baseline": "4.350.225",
+      "candidate": "4.350.225",
+      "candidate_raw": "4.350.225",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 488.0,
+        "t": 574.6666666666666,
+        "r": 526.6666666666666,
+        "b": 582.0
+      },
+      "baseline": "1.290.219",
+      "candidate": "1.290.219",
+      "candidate_raw": "1,290.219",
+      "accepted": false,
+      "reason": "no_change"
+    }
+  ]
+}

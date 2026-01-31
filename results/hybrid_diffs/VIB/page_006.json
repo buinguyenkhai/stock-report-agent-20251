@@ -1,0 +1,340 @@
+{
+  "company": "VIB",
+  "page_number": 6,
+  "hybrid_ocr_stats": {
+    "total_cells": 230,
+    "surya_cells": 24,
+    "tesseract_cells": 206,
+    "table_cells": 186,
+    "non_table_cells": 44,
+    "eligible_cells": 24,
+    "routed_low_conf": 22,
+    "routed_low_num_conf": 2,
+    "routed_suspicious_numeric": 20,
+    "skipped_no_table_clusters": 0,
+    "skipped_header_numeric": 0,
+    "skipped_missing_region_bbox": 0,
+    "inferred_table_boxes": 4,
+    "garbled_regions": 0,
+    "surya_cells_updated": 0,
+    "surya_update_skipped_sanity": 3,
+    "surya_update_skipped_count_mismatch": 0,
+    "surya_update_skipped_non_numeric": 0,
+    "surya_failures": 0,
+    "surya_percentage": 10.434782608695652
+  },
+  "update_diffs": [
+    {
+      "bbox": {
+        "l": 395.3333333333333,
+        "t": 168.0,
+        "r": 444.0,
+        "b": 175.66666666666666
+      },
+      "baseline": "345.248.653",
+      "candidate": "345.248.653",
+      "candidate_raw": "345.248.653",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 407.0,
+        "t": 179.66666666666666,
+        "r": 444.3333333333333,
+        "b": 187.33333333333334
+      },
+      "baseline": "9.093.526",
+      "candidate": "9.093.526",
+      "candidate_raw": "9.093.526",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 407.0,
+        "t": 192.0,
+        "r": 445.0,
+        "b": 199.33333333333334
+      },
+      "baseline": "7.688.387",
+      "candidate": "7.688.387",
+      "candidate_raw": "7.688.387",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 397.3333333333333,
+        "t": 204.0,
+        "r": 445.0,
+        "b": 211.66666666666666
+      },
+      "baseline": "328.466.740",
+      "candidate": "328.466.740",
+      "candidate_raw": "328,466.740",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 406.0,
+        "t": 216.0,
+        "r": 445.0,
+        "b": 223.33333333333334
+      },
+      "baseline": "2.750.600",
+      "candidate": "2.750.600",
+      "candidate_raw": "2.750.600",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 406.0,
+        "t": 228.0,
+        "r": 443.6666666666667,
+        "b": 235.66666666666666
+      },
+      "baseline": "7.185.571",
+      "candidate": "7.185.571",
+      "candidate_raw": "7.185.571",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 401.0,
+        "t": 240.0,
+        "r": 445.0,
+        "b": 247.66666666666666
+      },
+      "baseline": "68.292.253",
+      "candidate": "68.292.253",
+      "candidate_raw": "68,292.253",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 346.0,
+        "t": 253.33333333333334,
+        "r": 355.6666666666667,
+        "b": 260.0
+      },
+      "baseline": "40",
+      "candidate": "40",
+      "candidate_raw": "40",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 406.3333333333333,
+        "t": 252.0,
+        "r": 445.3333333333333,
+        "b": 259.3333333333333
+      },
+      "baseline": "3.517.652",
+      "candidate": "3.517.652",
+      "candidate_raw": "3.517.652",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 401.6666666666667,
+        "t": 264.0,
+        "r": 445.3333333333333,
+        "b": 271.6666666666667
+      },
+      "baseline": "21.628.603",
+      "candidate": "21.628.603",
+      "candidate_raw": "21.628.603",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 401.6666666666667,
+        "t": 276.0,
+        "r": 445.6666666666667,
+        "b": 283.6666666666667
+      },
+      "baseline": "20.795.232",
+      "candidate": "20.795.232",
+      "candidate_raw": "20.795.232",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 473.0,
+        "t": 166.66666666666666,
+        "r": 521.6666666666666,
+        "b": 174.0
+      },
+      "baseline": "227.964.990",
+      "candidate": "227.964.990",
+      "candidate_raw": "227.964.990",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 485.6666666666667,
+        "t": 178.66666666666666,
+        "r": 522.0,
+        "b": 186.33333333333334
+      },
+      "baseline": "1.762.364",
+      "candidate": "1.762.364",
+      "candidate_raw": "1.762.364",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 486.0,
+        "t": 190.66666666666666,
+        "r": 522.0,
+        "b": 198.33333333333334
+      },
+      "baseline": "1.775.463",
+      "candidate": "1.775.463",
+      "candidate_raw": "1<i>.775</i>.463",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 475.0,
+        "t": 202.66666666666666,
+        "r": 522.0,
+        "b": 210.33333333333334
+      },
+      "baseline": "224.427.163",
+      "candidate": "224.427.163",
+      "candidate_raw": "<i>224.427.163</i>",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 484.6666666666667,
+        "t": 214.66666666666666,
+        "r": 522.3333333333334,
+        "b": 222.33333333333334
+      },
+      "baseline": "1.943.650",
+      "candidate": "1.943.650",
+      "candidate_raw": "1.943.650",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 484.3333333333333,
+        "t": 227.0,
+        "r": 522.3333333333334,
+        "b": 234.66666666666666
+      },
+      "baseline": "7.025.057",
+      "candidate": "7.025.057",
+      "candidate_raw": "7.025.057",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 479.3333333333333,
+        "t": 239.0,
+        "r": 523.0,
+        "b": 246.33333333333334
+      },
+      "baseline": "38.380.834",
+      "candidate": "38.380.834",
+      "candidate_raw": "38.380.834",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 484.6666666666667,
+        "t": 251.0,
+        "r": 523.0,
+        "b": 258.3333333333333
+      },
+      "baseline": "3.162.280",
+      "candidate": "3.162.280",
+      "candidate_raw": "3.162.280",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 480.3333333333333,
+        "t": 263.0,
+        "r": 522.6666666666666,
+        "b": 270.6666666666667
+      },
+      "baseline": "18.479.513",
+      "candidate": "18.479.513",
+      "candidate_raw": "18.479.513",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 480.0,
+        "t": 275.0,
+        "r": 523.6666666666666,
+        "b": 282.3333333333333
+      },
+      "baseline": "29.531.434",
+      "candidate": "29.531.434",
+      "candidate_raw": "29.531.434",
+      "accepted": false,
+      "reason": "no_change"
+    },
+    {
+      "bbox": {
+        "l": 337.6666666666667,
+        "t": 398.3333333333333,
+        "r": 339.3333333333333,
+        "b": 399.6666666666667
+      },
+      "baseline": "ồ",
+      "candidate": "^",
+      "candidate_raw": "^",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    },
+    {
+      "bbox": {
+        "l": 345.3333333333333,
+        "t": 407.6666666666667,
+        "r": 358.3333333333333,
+        "b": 412.6666666666667
+      },
+      "baseline": ">",
+      "candidate": "Ž. ~",
+      "candidate_raw": "Ž. ~",
+      "accepted": false,
+      "reason": "skip_text_expansion"
+    },
+    {
+      "bbox": {
+        "l": 349.6666666666667,
+        "t": 406.0,
+        "r": 364.0,
+        "b": 426.3333333333333
+      },
+      "baseline": "xử:",
+      "candidate": "·7P",
+      "candidate_raw": "·7P",
+      "accepted": false,
+      "reason": "skip_text_low_overlap"
+    }
+  ]
+}

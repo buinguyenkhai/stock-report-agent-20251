@@ -1,0 +1,23 @@
+## 22. Vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro
+
+|                                                                                                   |   31/12/2024 Triệu VND |   31/12/2023 Triệu VND |
+|---------------------------------------------------------------------------------------------------|------------------------|------------------------|
+| Chương trình cho vay hỗ trợ nhà ở theo Nghị quyết số 02/NO-CP do Chính phủ ban hành ngày 7/1/2013 |                  5.368 |                   6.93 |
+|                                                                                                   |                  5.368 |                   6.93 |
+
+Vốn nhận ủy thác là các khoản nhận vốn ủy thác từ NHNNVN theo Chương trình vay hỗ trợ nhà ở theo Nghị quyết số 02/NQ-CP của Chính phủ ngày 7 tháng 1 năm 2013 có kỳ hạn từ 1 đến 5 năm, lãi suất 3,3%/năm.
+
+## 23. Phát hành giấy tờ có giá
+
+|                              | 31/12/2024 Triệu VND   | 31/12/2023 Triệu VND   |
+|------------------------------|------------------------|------------------------|
+| Trái phiếu                   |                        |                        |
+| Từ 12 tháng đến dưới 5 năm   | 16.948.000             | 17.948.000             |
+| Từ 5 năm trở lên             | 4.000.000              | 2.160.000              |
+| Chứng chỉ tiền gửi           |                        |                        |
+| Từ 6 tháng đến dưới 12 tháng | -                      | 3.000.500              |
+| Từ 12 tháng đến dưới 5 năm   | 2.260.000              | 500.010                |
+| Từ 5 năm trở lên             | 54.579                 | 288.426                |
+|                              | 23.262.579             | 23.896.936             |
+
+Tại ngày 31 tháng 12 năm 2024, chứng chỉ tiền gửi có lãi suất từ 5,2%/năm đến 9,1%/năm và trái phiếu có lãi suất từ 3,9%/năm đến 8,0%/năm (31/12/2023: từ 5,0%/năm đến 9,1%/năm và từ 3,3%/năm đến 9,2%/năm).

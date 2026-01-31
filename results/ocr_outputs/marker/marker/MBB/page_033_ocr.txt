@@ -1,0 +1,36 @@
+## 7. Hoạt động mua nợ
+
+|                                    | 31/12/2024<br>Triệu đồng | 31/12/2023<br>Triệu đồng |
+|------------------------------------|--------------------------|--------------------------|
+| Mua nợ bằng VND<br>Dự phòng rủi ro | 1.041.362<br>(89.853)    | 1.848.863<br>(58.995)    |
+|                                    | 951.509                  | 1.789.868                |
+
+Chi tiết giá trị nợ gốc, lãi của các khoản nợ đã mua của Ngân hàng như sau:
+
+|                         | 31/12/2024<br>Triệu đồng | 31/12/2023<br>Triệu đồng |
+|-------------------------|--------------------------|--------------------------|
+| Nợ gốc đã mua           | 1.041.069                | 1.848.533                |
+| Lãi của khoản nợ đã mua | 293                      | 330                      |
+|                         | 1.041.362                | 1.848.863                |
+
+## 8. Chứng khoán đầu tư
+
+## 8.1 Chứng khoán đầu tư sẵn sàng để bán
+
+Chi tiết các khoản chứng khoán đầu tư sẵn sàng để bán của MB như sau:
+
+|                                                                                                                                        |       | 31/12/2024<br>Triệu đồng | 31/12/2023<br>Triệu đồng |
+|----------------------------------------------------------------------------------------------------------------------------------------|-------|--------------------------|--------------------------|
+| Chứng khoán đầu tư sẵn sàng để bán                                                                                                     |       |                          |                          |
+| Chứng khoán nợ do Chính phủ phát hành                                                                                                  | (i)   | 46.403.490               | 35.868.286               |
+| Chứng khoán nợ do Chính phủ bảo lãnh<br>Chứng khoán nợ do các TCTD khác phát<br>hành<br>Chứng khoán nợ do TCKT trong nước phát<br>hành | (i)   | 24.052.995               | 23.596.717               |
+|                                                                                                                                        | (ii)  | 103.565.847              | 47.779.951               |
+|                                                                                                                                        | (iii) | 31.485.624               | 35.765.757               |
+|                                                                                                                                        |       | 205.507.956              | 143.010.711              |
+| Dự phòng giảm giá chứng khoán sẵn                                                                                                      |       |                          |                          |
+| sàng để bán                                                                                                                            |       | (242.638)                | (370.013)                |
+|                                                                                                                                        | 1     | 205.265.318              | 142.640.698              |
+
+- (i) Chứng khoán nợ do Chính phủ phát hành và Chứng khoán nợ do Chính phủ bảo lãnh bao gồm trái phiếu phát hành có kỳ hạn từ 03 năm đến 20 năm và có lãi suất từ 2,00% đến 8,10%/năm.
+- (ii) Chứng khoán nợ do các TCTD khác phát hành bao gồm trái phiếu có kỳ hạn từ 06 tháng đến 07 năm và có lãi suất từ 4,10% đến 7,50%/năm.
+- (iii) Chứng khoán nợ do các TCKT trong nước phát hành bao gồm trái phiếu có kỳ hạn từ 03 năm đến 16 năm và có lãi suất từ 5,00% đến 12,20%/năm.

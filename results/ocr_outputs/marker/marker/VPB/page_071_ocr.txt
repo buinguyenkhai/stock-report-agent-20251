@@ -1,0 +1,50 @@
+THUYẾT MINH BÁO CÁO TẢI CHÍNH HỢP NHẬT (tiếp theo) Tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 40 NGHĨA VỤ NỢ TIÈM ẨN VÀ CÁC CAM KÉT ĐƯA RA
+
+Chi tiết các khoản công nợ tiềm ẩn và cam kết đưa ra tại thời điểm cuối năm như sau:
+
+|      |                                                                      | Ngày 31 tháng 12<br>năm 2024<br>Triệu đồng | Ngày 31 tháng 12<br>năm 2023<br>Triệu đồng |
+|------|----------------------------------------------------------------------|--------------------------------------------|--------------------------------------------|
+|      | Bảo lãnh vay vốn                                                     |                                            |                                            |
+|      | Cam kết giao dịch hối đoái                                           | 848.721                                    | 1.754.978                                  |
+|      | - Cam kết mua ngoại tệ                                               | 298.220.810                                | 296.858.798                                |
+|      | - Cam kết bán ngoại tệ                                               | 2.972.620                                  | 264.965                                    |
+|      | - Cam kết nhận - giao dịch hoán đổi ngoại tệ                         | 1.955.905                                  | 992.663                                    |
+|      | - Cam kết trả - giao dịch hoàn đồi ngoại tệ                          | 146.921.567                                | 147.839.284                                |
+|      | Cam kết trong nghiệp vụ L/C                                          | 146.370.718                                | 147.761.886                                |
+|      | Cam kết trong nghiệp vụ L/C                                          | 16.461,049<br>16.518.381                   | 38.680.116                                 |
+|      | - Trừ: Tiền ký quỹ                                                   |                                            | 38.826.301                                 |
+|      | Bảo lãnh khác                                                        | (57.332)                                   | (146.185)                                  |
+|      | - Cam kết bảo lãnh thanh toán                                        | 26.008.227                                 | 19.546.205                                 |
+|      | - Cam kết bảo lãnh thực hiện hợp đồng                                | 6.945.197                                  | 6.796.559                                  |
+|      | - Cam kết bảo lãnh dự thầu                                           | 9.331.348<br>470.492                       | 4.410.630                                  |
+|      | - Cam kết bảo lãnh khác                                              |                                            | 371.974                                    |
+|      | - Trừ: Tiển ký quỹ                                                   | 9,932,865                                  | 8.370.870                                  |
+|      | Cam kết khác                                                         | (671.675)                                  | (403.828)                                  |
+|      | - Cam kết hoán đổi lãi suất tiền tệ chéo - nhận                      | 347.434.640                                | 285.115.836                                |
+|      | - Cam kết hoán đổi lãi suất tiền tệ chéo - trả                       | 35.324.065                                 | 26.662.517                                 |
+|      | - Cam két hoán đổi lãi suất một đồng tiền                            | 36.760.922                                 | 27.153.623                                 |
+|      | - Cam kết mua bán giấy tở có giá                                     | 39.136.588                                 | 21.973.473                                 |
+|      | - Cam kết khác                                                       | 6.558.266                                  | 3.366.684                                  |
+|      | Trong đó: hạn mức tín dụng chưa sử dụng có                           | 229.654.799                                | 205.959.539                                |
+|      | thể hủy ngang                                                        | 229.511.446                                | 205.810.854                                |
+|      |                                                                      | 688.973.447                                | 641.955.933                                |
+| 41.  | CÁC KHOÀN MỤC NGOẠI BÀNG KHÁC                                        | -                                          |                                            |
+| 41.1 | Lãi cho vay và phi phải thu chưa thu được                            |                                            |                                            |
+|      |                                                                      | Ngày 31 tháng 12                           | Ngày 31 tháng 12                           |
+|      |                                                                      | năm 2024                                   | năm 2023                                   |
+|      |                                                                      | Triệu đồng                                 | Triệu đồng                                 |
+|      | Lãi cho vay chưa thu được                                            | 7.163.528                                  | 7.854.292                                  |
+|      | Lãi chứng khoán chưa thu được                                        | 122.176                                    | 40.252                                     |
+|      | Phí phải thu chưa thu được                                           | 382.479                                    | 317.263                                    |
+|      |                                                                      | 7.668.183                                  | 8.211.807                                  |
+| 44.0 | Education of the second second                                       |                                            |                                            |
+| 41.2 | Nợ khó đòi đã xử lý                                                  |                                            |                                            |
+|      |                                                                      | Ngày 31 tháng 12                           | Ngày 31 tháng 12                           |
+|      |                                                                      | năm 2024                                   | năm 2023                                   |
+|      |                                                                      | Triệu đồng                                 | Triệu đồng                                 |
+|      | Nợ gốc của khoản nợ đã xử lý rủi ro đang trong<br>thời gian theo dõi | 44.140.435                                 | 27.104.854                                 |
+|      | Nợ lãi của khoàn nợ đã xử lý rửi ro đang trong<br>thời gian theo dõi | 38.046.965                                 | 23.995.273                                 |
+|      | •                                                                    | 82.187.400                                 | 51.100.127                                 |
+|      | •                                                                    | 22.101.400                                 | 31.100.127                                 |

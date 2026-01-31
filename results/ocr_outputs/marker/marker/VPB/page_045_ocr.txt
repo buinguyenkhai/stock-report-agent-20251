@@ -1,0 +1,36 @@
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẬT (tiếp theo) Tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 10. CHO VAY KHÁCH HÀNG (tiếp theo)
+
+## 10.4 Phân tích dư nợ cho vay theo ngành
+
+|                                                                                                                     | Ngày 31 tháng 12<br>пăт 2024 |              | Ngày 31 tháng 12<br>năm 2023 |       |
+|---------------------------------------------------------------------------------------------------------------------|------------------------------|--------------|------------------------------|-------|
+|                                                                                                                     | Triệu đồng                   | %            | Triệu đồng                   | %     |
+| Nông nghiệp, lâm nghiệp và thủy sản                                                                                 | 2.054.559                    | 0,30         | 3.041.136                    | 0,54  |
+| Khai khoáng                                                                                                         | 1.519.641                    | 0,22         | 1.502.568                    | 0,27  |
+| Công nghiệp chế biến, chế tạo                                                                                       | 30.747.223                   | 4,44         | 26,526,255                   | 4,68  |
+| Sản xuất và phân phối điện, khí đốt,<br>nước nóng, hơi nước và điều hoà                                             | 3317 171223                  | .,           | 25,025,255                   | 1100  |
+| không khí<br>Cung cấp nước; hoạt động quản lý và                                                                    | 861.118                      | 0,12         | 1.408.650                    | 0,25  |
+| xử lý rác thải, nước thải                                                                                           | 146.670                      | 0,02         | 692.813                      | 0,12  |
+| Xây dựng<br>Bán buôn và bán lẻ; sửa chữa ô tô,                                                                      | 38.725.127                   | 5,59         | 28.271.295                   | 4,99  |
+| mô tô, xe máy và xe có động cơ khác                                                                                 | 70.911.252                   | 10,23        | 53.438.420                   | 9,44  |
+| Vận tải kho bãi                                                                                                     | 12.164.350                   | 1,76         | 9.817.781                    | 1,73  |
+| Dịch vụ lưu trú và ăn uống                                                                                          | 18,952,714                   | 2,74         | 13.296.812                   | 2,35  |
+| Thông tin và truyền thông<br>Hoạt động tài chính, ngân hàng và                                                      | 1.042.484                    | 0,15         | 911.727                      | 0,16  |
+| bảo hiểm                                                                                                            | 17.985.239                   | 2,6          | 21.236.503                   | 3,75  |
+| Hoạt động kinh doanh bắt động sản                                                                                   | 186.736.821                  | 26,95        | 114.894.070                  | 20,29 |
+| Hoạt động chuyên môn, khoa học và                                                                                   |                              | ·            |                              | ,     |
+| công nghệ                                                                                                           | 3.320.412                    | 0,48         | 1.634.569                    | 0,29  |
+| Hoạt động hành chính và dịch vụ hỗ trợ                                                                              | 2.937.827                    | 0,42         | 1.495.928                    | 0,26  |
+| Hoạt động của Đàng cộng sản, tổ<br>chức chính trị-xã hội, quản lý Nhà<br>nước, an ninh quốc phòng; bảo đảm          |                              |              |                              | ·     |
+| xã hội bắt buộc                                                                                                     | 10.696                       | 0.00         | 4 970                        | 0.00  |
+| Giáo dục và đào tạo                                                                                                 | 1.072.488                    | 0,00<br>0,15 | 4.870                        | 0,00  |
+| Y tế và hoạt động trợ giúp xã hội                                                                                   | 591.474                      | 0,13         | 2.645.282                    | 0,47  |
+| Nghệ thuật, vui chơi và giải trí                                                                                    | 3.546.017                    | 0,03         | 1.219.198<br>3.891.018       | 0,22  |
+| Hoạt động dịch vụ khác                                                                                              | 2.274.013                    | 0,33         |                              | 0,69  |
+| Hoạt động làm thuê các công việc<br>trong hộ gia đình, sản xuất sản phẩm<br>vật chất và dịch vụ tự tiêu dùng của hộ | 2.214.013                    | u,ss         | 2.012.512                    | 0,36  |
+| gia đình                                                                                                            | 193.909.402                  | 27,98        | 185.376.652                  | 32,72 |
+| Cho vay cá nhân để mua nhà ở, nhận<br>quyền sử dụng đất để xây nhà ở<br>Cho vay giao dịch ký quỹ và ứng             | 93.853.675                   | 13,55        | 85.785.626                   | 15,15 |
+| trước cho khách hàng                                                                                                | 9.512.536                    | 1,37         | 7.167.605                    | 1,27  |
+|                                                                                                                     |                              |              |                              |       |

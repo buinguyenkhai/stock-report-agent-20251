@@ -1,0 +1,37 @@
+## BÁO CÁO LƯU CHUYỂN TIỀN TỆ HỢP NHẤT
+
+Cho kỳ hoạt động từ ngày 01 tháng 01 năm 2024 đến ngày 31 tháng 12 năm 2024
+
+| MÂU | SÖ | В | 01  | -DI | V/ | HN  |  |
+|-----|----|---|-----|-----|----|-----|--|
+|     |    | Đ | oʻr | vi: | ν  | 'ND |  |
+
+|                                                                                                    |            | Đơn vị: VND                        |                      |  |  |
+|----------------------------------------------------------------------------------------------------|------------|------------------------------------|----------------------|--|--|
+| CHỈ TIÊU                                                                                           | Mã số      | Lũy kế từ đầu năm đến cuối quý này |                      |  |  |
+| CHI IILO                                                                                           |            | Năm 2024                           | Năm 2023             |  |  |
+| I. LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG KINH DOANH                                                         |            |                                    |                      |  |  |
+| 1. Lợi nhuận trước thuế<br>2. Điều chỉnh cho các khoản:                                            | 01         | 11.070.838.730.842                 | 9.203.006.098.570    |  |  |
+| Khấu hao tài sản cố định và bất động sản đầu tư                                                    | 02         | 2.560.060.901.665                  | 2.286.514.158.688    |  |  |
+| Các khoản dự phòng                                                                                 | 03         | 1.090.451.390.915                  | 677.928.749.053      |  |  |
+| (Lãi)/lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các<br>khoản mục tiền tệ có gốc ngoại tệ       | 04         | 46.311.803.197                     | (34.070.358.211)     |  |  |
+| (Lãi)/lỗ từ hoạt động đầu tư                                                                       | 05         | (1.719.665.849.787)                | (1.976.268.355.482)  |  |  |
+| Chi phí lãi vay                                                                                    | 06         | 551.639.361.786                    | 832.648.611.261      |  |  |
+| 3. Lợi nhuận từ hoạt động kinh doanh trước thay đổi<br>vốn lưu động                                | 08         | 13.599.636.338.618                 | 10.989.758.903.879   |  |  |
+| (Tăng)/giảm các khoản phải thu                                                                     | 09         | (1.891.783.017.042)                | (1.163.209.212.196)  |  |  |
+| (Tăng)/giảm hàng tồn kho                                                                           | 10         | (244.311.061.478)                  | 396,161.114.891      |  |  |
+| Tăng/(giảm) các khoản phải trả (Không kể lãi vay phải<br>trả, thuế thu nhập doanh nghiệp phải nộp) | 11         | 3.929.994.615.791                  | 1.380.255.770.889    |  |  |
+| (Tăng)/giảm chi phí trả trước                                                                      | 12         | (417.826.947.808)                  | 65.247.409.505       |  |  |
+| Tiền lãi vay đã trả                                                                                | 14         | (607.154.747.076)                  | (832.038.375.945)    |  |  |
+| Thuế thu nhập doanh nghiệp đã nộp                                                                  | 15         | (1.210.831.548.449)                | (971.344.830.054)    |  |  |
+| Tiền chi khác cho hoạt động kinh doanh                                                             | <b>1</b> 7 | (468.344.743.027)                  | (347.735.082.564)    |  |  |
+| Lưu chuyển tiền thuần từ hoạt động kinh doanh                                                      | 20         | 12.689.378.889.529                 | 9.517.095.698.405    |  |  |
+| II. LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG ĐẦU TƯ                                                            |            |                                    |                      |  |  |
+| 1. Tiền chi mua sắm, xây dựng tài sản cố định và các tài<br>sản dài hạn khác                       | 21         | (4.260.829.170.057)                | (3.978.252.082.224)  |  |  |
+| 2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản<br>dài hạn khác                               | 22         | 14.227.383.215                     | 29.269.655.015       |  |  |
+| 3. Tiền chi cho vay, mua công cụ nợ của đơn vị khác                                                | 23         | (42.719.959.806.556)               | (33.536.189.070.356) |  |  |
+| 4. Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị<br>khác                                     | 24         | 37.047.149.067.817                 | 30.458.251.083.042   |  |  |
+| 5. Tiền chi đầu tư góp vốn vào các đơn vị khác                                                     | 25         | (1.173.202.586.172)                | (1.753.619.182.518)  |  |  |
+| 6. Tiền thu hồi đầu tư vốn vào đơn vị khác                                                         | 26         | 48.102.486.048                     | 94.939.906.000       |  |  |
+| 7. Thu lãi tiền cho vay, cổ tức và lợi nhuận được chia                                             | 27         | 1.597.095.527.760                  | 2.137.225.525.330    |  |  |
+| Lưu chuyển tiền thuần từ hoạt động đầu tư                                                          | 30         | (9.447.417.097.945)                | (6.548.374.165.711)  |  |  |

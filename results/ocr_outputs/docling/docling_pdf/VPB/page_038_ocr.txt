@@ -1,0 +1,38 @@
+## Ngân hàng Thương mại Cổ phần Việt Nam Thịnh Vượng
+
+THUYÉT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo) Tại ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 5, TIỀN MẶT, VÀNG BẠC, ĐÁ QUÝ
+
+|                        | Ngày 31 tháng 12 năm 2024 Triệu đồng   | Ngày 31 tháng 12 năm 2023 Triệu đồng   |
+|------------------------|----------------------------------------|----------------------------------------|
+| Tiền mặt bằng VND      | 1.891.475                              | 2.076.239                              |
+| Tiền mặt bằng ngoại tệ | 228.426                                | 208.662                                |
+| Vàng tiên tệ           | 28.388                                 | 89                                     |
+|                        | 2.148.289                              | 2.284.990                              |
+
+## 6. TIỀN GỬI TẠI NGÂN HÀNG NHÀ NƯỚC VIỆT NAM
+
+|                   | Ngày 31 tháng 12 năm 2024 Triệu đẳng   | Ngày 31 tháng 12 năm 2023 Triệu đồng   |
+|-------------------|----------------------------------------|----------------------------------------|
+| Tiền gửi tại NHNN |                                        |                                        |
+| - Bằng VND        | 14.118.276                             | 8.090.914                              |
+| ~- Bằng ngoại tệ  | 208.939                                | 337.597                                |
+|                   | 14.327.215                             | 8.422.511                              |
+
+Tiền gửi tại NHNN bao gồm tiền gửi thanh toán và dự trữ bắt buộc tại NHNN. Tại thời điểm 31 tháng 12 năm 2024, các khoản tiền gửi dự trữ bắt buộc bằng VND và tiền gửi thanh toán bằng ngoại tệ được hưởng lãi suất tương ứng là 0,50%/năm và 0,00%/năm (tại ngảy 31 tháng 12 năm 2023: 0,50//năm và 0,00%/năm).
+
+Tỷ lệ DTBB tại thời điểm năm như sau:
+
+|                                                  | Tỷ lệ dự trữ bắt buộc (%)   | Tỷ lệ dự trữ bắt buộc (%)   |
+|--------------------------------------------------|-----------------------------|-----------------------------|
+|                                                  | Ngày 31 tháng 12 năm 2024   | Ngày 31 tháng 12 năm 2023   |
+| Số dư bình quân tháng trước của:                 |                             |                             |
+| Tiền gửi bằng ngoại tệ của TCTD nước ngoài       | 1,00                        | 1,00                        |
+| Tiền gửi khác bằng ngoại tệ kỳ hạn dưới 12 tháng | 8,00                        | 8,00                        |
+| Tiên gửi khác bằng ngoại tệ kỳ hạn từ 12 tháng   | `                           |                             |
+| trở lên                                          | 6,00                        | 6,00                        |
+| Tiền gửi bằng VND kỳ hạn dưới 12 tháng           | 3,00                        | 3,00                        |
+| Tiên gửi bằng VND kỳ hạn từ 12 tháng trở lên     | 1,00                        | 1,00                        |
+
+B05/TCTD-HN

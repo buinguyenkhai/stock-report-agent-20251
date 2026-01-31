@@ -1,0 +1,28 @@
+## Công ty Cổ phần Đầu tư Thế Giới Di Động
+
+THUYÉT MINH BÁO CÁO TÀI CHÍNH HỢP NHÁT (tiếp theo) vào ngày 31 tháng 12 năm 2024 và cho năm tài chính kết thúc cùng ngày
+
+## 30. THUÉ THU NHẬP DOANH NGHIỆP (tiếp theo)
+
+## 30.2 Thuế TNDN hiện hành
+
+Thuế TNDN hiện hành phải trả được xác định dựa trên thu nhập chịu thuế của năm hiện hành. Thu nhập chịu thuế của Nhóm Công ty khác với lợi nhuận kế toán được báo cáo trong báo cáo kết quả hoạt động kinh doanh hợp nhất vì thu nhập chịu thuế không bao gồm các khoản mục thu nhập chịu thuế hay chỉ phí được khấu trừ cho mục đích tính thuế trong các năm khác và cũng không bao gồm các khoản mục không phải chịu thuế hay không được khấu trừ cho mục đích tính thuế. Thuế TNDN hiện hành phải trả của Nhóm Công ty được tính theo thuế suất đã ban hành đến ngày kết thúc kỳ kế toán năm.
+
+## 30.3 Thuế thu nhập hoãn lại
+
+Nhóm Công ty đã ghi nhận một số khoản tài sản thuế TNDN hoãn lại và thu nhập thuế TNDN hoãn lại với các biến động trong năm báo cáo và năm trước như sau:
+
+|                                | Bảng cân đối kế toán hợp nhất   | Bảng cân đối kế toán hợp nhất   | VND Báo cáo kết quả hoạt động kinh doanh hợp nhất   | VND Báo cáo kết quả hoạt động kinh doanh hợp nhất   |
+|--------------------------------|---------------------------------|---------------------------------|-----------------------------------------------------|-----------------------------------------------------|
+|                                | Số cuối năm                     | Só đầu năm                      | Năm nay                                             | Năm trước                                           |
+| Tài sản thuế TNDN hoãn lại     | Tài sản thuế TNDN hoãn lại      |                                 |                                                     |                                                     |
+| Dự phòng giảm giá              | Dự phòng giảm giá               |                                 |                                                     |                                                     |
+| hàng tồn kho                   | 84.619.537.188                  | 40.889.779.384                  | 43.729.757.804                                      | (31.520.952.897)                                    |
+| Lợi nhuận chưa thực hiện       | 28.323.082.014                  | 43.586.445.235                  | (15.263.363.220)                                    | (24.587.525.411)                                    |
+| Các khoản chỉ phí phải trả     | 6.175.722.100                   | 3.099.299.272                   | 3.076.422.828                                       | (29.577.676.628)                                    |
+| Dự phòng chỉ phí bảo hành      | 14.047.933.383                  | 13.587.160.869                  | 460.772.514                                         | (1.665.060.697)                                     |
+| Chênh lệch tỷ giá hối đoái     | (20.826.708)                    | (73.745.560)                    | 52.918.852                                          | (86.129.395)                                        |
+|                                | 133.145.447.977                 | 101.088.939.200                 |                                                     |                                                     |
+| Thuế TNDN hoãn lại phải trả    | Thuế TNDN hoãn lại phải trả     |                                 |                                                     |                                                     |
+| Trích trước lãi tiền gửi       |                                 | (1.168.691.414)                 | 1.168691444                                         | (1.168.691.414)                                     |
+| Chỉ phí thuế thu nhập hoãn lại | Chỉ phí thuế thu nhập hoãn lại  |                                 | 33.225.200.192                                      | (88.606.036.442)                                    |

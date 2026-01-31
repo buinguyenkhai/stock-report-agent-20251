@@ -1,0 +1,34 @@
+## Ngân hàng Thương mại Cổ phần Quân đội
+
+Địa chỉ: Số 18 Lê Văn Lương – Trung Hòa – Cầu Giấy – Hà Nội
+
+## BÁO CÁO TÌNH HÌNH TÀI CHÍNH HỢP NHẤT (tiếp theo)
+
+Tại ngày 31 tháng 12 năm 2024
+
+|                                                                                              | Thuyết<br>minh   | 31/12/2024           | 31/12/2023<br>đã kiểm toán |
+|----------------------------------------------------------------------------------------------|------------------|----------------------|----------------------------|
+|                                                                                              |                  | triệu đồng           | triệu đồng                 |
+| NỢ PHẢI TRẢ                                                                                  |                  |                      |                            |
+| Các khoản nợ Chính phủ và NHNN                                                               | III.15           | 8.156.285            | 8.738                      |
+| Tiền gửi và vay các TCTD khác                                                                | III.16           | 110.169.585          | 99.810.466                 |
+| Tiền gửi của khách hàng<br>Các công cụ tài chính phái sinh và các khoản nợ tài<br>chính khác | 111.17           | 714.154.479          | 567.532.577                |
+| vốn tài trợ, ủy thác đầu tư, cho vay TCTD chịu rủi ro                                        | III.18           | 191.545<br>2.793.453 | 2.799.863                  |
+| Phát hành giấy tờ có giá                                                                     | III.19<br>III.20 | 128.964.033          |                            |
+| Các khoản nợ khác                                                                            | 111.20           | 47.312.101           | 51.627.727                 |
+| Các khoản lãi, phí phải trả                                                                  |                  | 9.899.902            | 13.390.191                 |
+| Các khoản phải trả và công nợ khác                                                           | III.21           | 37.411.147           | 38.236.542                 |
+| Dự phòng các khoản nợ khác                                                                   |                  | 1.052                | 994                        |
+| TÔNG NƠ PHẢI TRẢ                                                                             |                  | 1.011.741.481        | 848.242.481                |
+| VÓN CHỦ SỞ HỮU                                                                               |                  |                      |                            |
+| Vốn và các quỹ                                                                               |                  |                      |                            |
+| Vốn của TCTD                                                                                 | III.22           | 56.295.833           | 54.938.426                 |
+| Vốn điều lệ                                                                                  |                  | 53.063.241           | 52.140.841                 |
+| Thặng dư vốn cổ phần                                                                         |                  | 1.304.334            | 869.327                    |
+| Vốn khác                                                                                     |                  | 1.928.258            | 1.928.258                  |
+| Quỹ của TCTD                                                                                 |                  | 14.996.847           | 12.193.931                 |
+| Chênh lệch tỷ giá hối đoái                                                                   |                  | 137.797              | 45.939                     |
+| Lợi nhuận chưa phân phối                                                                     |                  | 40.718.224           | 25.559.753                 |
+| LỢI ÍCH CỦA CÓ ĐÔNG KHÔNG KIẾM SOÁT                                                          |                  | 4.910.880            | 3.973.110                  |
+| TỔNG VỚN CHỦ SỞ HỮU                                                                          |                  | 117.059.581          | 96.711.159                 |
+| TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU                                                           |                  | 1.128.801.062        | 944.953.640                |

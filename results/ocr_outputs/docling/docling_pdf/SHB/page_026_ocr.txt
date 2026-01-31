@@ -1,0 +1,36 @@
+## NGÂN HÀNG THƯƠNG MẠI CỔ PHẦN SÀI GÒN -HÀ NỘI THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT [Tiếp theo}
+
+## 10.5 Phân tích chất lượng nợ cho vay (theo TT31/2024/TT NHNN}
+
+|                        | 31/12/2024 Triệu đồng   | 31/12/2023 Triệu đồng   |
+|------------------------|-------------------------|-------------------------|
+| Nợ đủ tiêu chuẩn       | 628.453.781             | 492.259.480             |
+| Nợ cần chú ý           | 5.290.247               | 8.532.748               |
+| Nợ dưới tiêu chuẩn     | 1.868.448               | 1.287.643               |
+| Nợ nghỉ ngờ            | 2.052.503               | 2.496.586               |
+| Nợ có khả năng mất vốn | 11.569.660              | 10.102.826              |
+|                        | 650.335.638             | 514.679.394             |
+
+## 11, DỰ PHÒNG RỦI RO CHO VAY KHÁCH HÀNG
+
+Biến động dự phòng rủi ro cho vay khách hàng cho kỳ hoạt động 12 tháng kết thúc ngày 31 tháng 12 năm 2024 như sau:
+
+|                                           | Dự phòng chung Triệu đồng   | Dự phòng cụ thế Triệu đồng   | Tổng cộng Triệu đồng   |
+|-------------------------------------------|-----------------------------|------------------------------|------------------------|
+| Số dư đầu kỳ                              | 3.211.595                   | 5.889.823                    | 9.101.418              |
+| Dự phòng trích lập trong kỳ               | 603.017                     | 5.821.228                    | 6.424.245              |
+| Sử dụng dự phòng rủi ro tin dụng trong kỳ |                             | (6.574.492)                  | (6.574.482)            |
+| Số dư cuối kỳ                             | 3.814.612                   | 5.136.559                    | 8.951.171              |
+
+Biến động dự phòng rủi ro cho vay khách hàng cho kỳ hoạt động 12 tháng kết thúc ngày 31 tháng 12 năm 2023 như sau:
+
+|                                           | Dự phòng chung Triệu đồng   | Dự phòng cụ thể Triệu đồng   | Tổng cộng Triệu đồng   |
+|-------------------------------------------|-----------------------------|------------------------------|------------------------|
+| Số dư đầu kỳ                              | 2.843.216                   | 4.214.556                    | 7.057.772              |
+| Dự phòng trích lập trong kỳ               | 409.411                     | 6.632.383                    | 7.041.784              |
+| Sử dụng dự phòng rủi ro tín dụng trong kỳ | -                           | (4.432.650]                  | (4.432.650)            |
+| Ảnh hưởng do thoái FC                     | (43.797)                    | (533.615)                    | (577.412)              |
+| Điều chỉnh khác                           | 2.765                       | 9.149                        | 11.914                 |
+| Số dư cuối kỳ                             | 3.211.595                   | 5.889.823                    | 9.101.418              |
+
+ˆ

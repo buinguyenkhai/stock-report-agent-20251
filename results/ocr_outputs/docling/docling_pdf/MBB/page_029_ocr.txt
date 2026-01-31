@@ -1,0 +1,48 @@
+## 4. Chứng khoán kinh doanh
+
+Đầu tư vào chứng khoán kinh doanh chỉ tiết như sau:
+
+|                                                         | 31/12/2024   | 31/12/2023   |
+|---------------------------------------------------------|--------------|--------------|
+|                                                         | Triệu đồng   | Triệu đông   |
+| Chứng khoán Nợ                                          |              |              |
+| Đã niêm yết                                             | 999.786      | 1.554.418    |
+| Chưa niêm yết                                           | 6.719.896    | 42.541.062   |
+| Chứng khoán Vốn                                         |              |              |
+| Đã niêm yết                                             | 212.027      | 128.801      |
+| Chưa niêm yết                                           | 125          | 27.419       |
+|                                                         | 7.931.834    | 44.251.400   |
+| Dự phòng giảm giá chứng khoán kinh doanh                | (179)        | (612)        |
+|                                                         | 7.931.655    | 44.250.788   |
+| Cho vay khách hàng                                      |              |              |
+|                                                         | 31/12/2024   | 31/12/2023   |
+|                                                         | Triệu đồng   | Triệu đồng   |
+| Dư nợ cho vay                                           | l            |              |
+| Cho vay các TCKT, cá nhân trong nước                    | 756.463.013  | 596.632.628  |
+| - Cho vay chiết khấu thương phiếu và các giấy tờ có giá | 2.500.151    | 1.717.308    |
+| Cho vay bằng vốn tài trợ, ủy thác đầu tư                | 44.166       | 63.587       |
+| Các khoản trả thay khách hàng                           | 62.439       | 42.785       |
+| Cho vay các TCKT, cá nhân nước ngoài                    | 7.294.348    | 3.374.039    |
+| Các khoản cho margin chứng khoán và trước               | 766.364.117  | 601.830.347  |
+| vay ứng khách hàng tại MBS                              | 10.293.729   | 9.218.483    |
+|                                                         | 776.657.846  | 611.048.830  |
+| __ Phân tích chất lượng nợ cho vay:                     | 31/12/2024   | 31/12/2023   |
+|                                                         | Triệu đồng   | Triệu đồng   |
+| Dư nợ cho vay                                           |              |              |
+| Nợ đủ tiêu chuẩn                                        | 751.875.632  | 587.326.305  |
+| + Trong đó các khoản cho vay tại MBS                    | 10.293.729   | 9.218.483    |
+| Nợ cân chú ý                                            | 12.196.782   | 13.917.867   |
+| Nợ dưới tiêu chuẩn                                      | 3.379.646    | 3.210.741    |
+| Nợ nghi ngờ                                             | 4.599.274    | 3.704.226    |
+| Nợ có khả năng mắt vốn                                  | 4.608.512    | 2.889.691    |
+|                                                         | 776.657.846  | 611.048.830  |
+| Phân tích dư nợ theo thời gian:                         |              |              |
+|                                                         | 31/12/2024   | 31/12/2023   |
+|                                                         | Triệu đồng   | Triệu đồng   |
+| Dư nợ cho vay                                           |              |              |
+| Nợ ngăn hạn                                             | 413.956.564  | 314.080.999  |
+| Nợ trung hạn                                            | 88.454.207   | 75.334.377   |
+| Nợ dài hạn                                              | 263.953.346  | 212.414.971  |
+| Các khoản cho vay margin chứng khoán và ứng trước       | 766.364.117  | 601.830.347  |
+| khách hàng tại MBS                                      | 10.293.729   | 9.218.483    |
+|                                                         | 776.657.846  | 611.048.830  |

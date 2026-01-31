@@ -1,0 +1,45 @@
+## **Mẫu B05/TCTD-HN** (Ban hành theo Thông tư số 49/2014/TT-NHNN ngày 31 tháng 12 năm 2014 của Ngân hàng Nhà nước Việt Nam)
+
+## 12. Chứng khoán đầu tư sẵn sàng để bán
+
+|                                                                              | 50.345.812 | 60.956.278 |
+|------------------------------------------------------------------------------|------------|------------|
+| - Trái phiếu do các TCKT trong nước phát hành                                | 550.000    | 725.000    |
+| <ul> <li>Chứng chỉ tiền gửi do các TCTD khác trong nước phát hành</li> </ul> | 27.150.253 | 29.718.798 |
+| - Trái phiếu do các TCTD khác trong nước phát hành                           | 12.712.080 | 18.250.000 |
+| - Trái phiếu Chính phủ                                                       | 9.933.479  | 12.262.480 |
+| Chứng khoán nợ                                                               |            |            |
+|                                                                              | Triệu VND  | Triệu VND  |
+|                                                                              | 31/12/2024 | 31/12/2023 |
+
+Phân tích chất lượng nợ của chứng khoán nợ đầu tư sẵn sàng để bán được trình bày tại Thuyết minh 46.2.
+
+## 13. Chứng khoán đầu tư giữ đến ngày đáo hạn
+
+|                                                          | 42.380                  | 42.380                  |
+|----------------------------------------------------------|-------------------------|-------------------------|
+| Trái phiếu do Công ty TNHH Mua bán nợ Việt Nam phát hành | 42.380                  | 42.380                  |
+|                                                          | 31/12/2024<br>Triệu VND | 31/12/2023<br>Triệu VND |
+
+Trái phiếu do Công ty TNHH Mua bán nợ Việt Nam phát hành là trái phiếu chuyển đổi cho các khoản cho vay Tổng Công ty Công nghiệp Tàu thủy Việt Nam được chính phủ bảo lãnh, có kỳ hạn 10 năm từ 2013 đến 2023, lãi suất là 8,9%/năm. Trái phiếu này đã đến hạn thanh toán vào ngày 12 tháng 9 năm 2023.
+
+Phân tích chất lượng nợ của chứng khoán đầu tư giữ đến ngày đáo hạn được trình bày tại Thuyết minh 46.2.
+
+## 14. Dự phòng rủi ro chứng khoán đầu tư
+
+|     |                                                                                                                       | 31/12/2024<br>Triệu VND | 31/12/2023<br>Triệu VND |
+|-----|-----------------------------------------------------------------------------------------------------------------------|-------------------------|-------------------------|
+|     | Dự phòng rủi ro chứng khoán đầu tư sẵn sàng để bán (a)<br>Dự phòng rủi ro chứng khoán đầu tư giữ đến ngày đáo hạn (b) | 1.500<br>42.380         | 1.500<br>8.794          |
+|     | <u>-</u>                                                                                                              | 43.880                  | 10.294                  |
+| (a) | Dự phòng rủi ro chứng khoán đầu tư sẵn sàng để bán                                                                    |                         |                         |
+|     |                                                                                                                       | 31/12/2024<br>Triệu VND | 31/12/2023<br>Triệu VND |
+|     | Dự phòng chung chứng khoán đầu tư sẵn sàng để bán (i)                                                                 | 1.500                   | 1.500                   |
+|     |                                                                                                                       | 1.500                   | 1.500                   |
+| (i) | Biến động dự phòng chung chứng khoán đầu tư sẵn sàng để bán như sau                                                   | :                       |                         |
+|     |                                                                                                                       | Năm                     | Năm                     |
+|     |                                                                                                                       | kết thúc ngày           | kết thúc ngày           |
+|     |                                                                                                                       | 31/12/2024              | 31/12/2023              |
+|     | ***                                                                                                                   | Triệu VND               | Triệu VND               |
+|     | Số dư đầu năm                                                                                                         | 1.500                   | 13.725                  |
+|     | Hoàn nhập dự phòng trong năm                                                                                          |                         | (12.225)                |
+|     |                                                                                                                       | 1.500                   | 1.500                   |

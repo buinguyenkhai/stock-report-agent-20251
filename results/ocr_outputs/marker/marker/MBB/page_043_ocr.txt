@@ -1,0 +1,13 @@
+## 22.2 Lãi trên mỗi cổ phiếu
+
+|      |                                                                                              | Từ 01/01/2024<br>đến 31/12/2024<br>Triệu đồng | Từ 01/01/2023<br>đến 31/12/2023<br>Triệu đồng |
+|------|----------------------------------------------------------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+|      | Lợi nhuận sau thuế (thuộc về ngân hàng,<br>không bao gồm lợi ích cổ đông không kiểm<br>soát) | 22.633.757                                    | 19.012.931                                    |
+|      | Bình quân gia quyền của số cổ phiếu phổ thông đang lưu hành (cổ phiếu)                       | 5.281.935.200                                 | 5.214.084.052                                 |
+|      | Lãi cơ bản trên mỗi cổ phiếu (đồng/cổ<br>phiếu)                                              | 4.285                                         | 3.646                                         |
+| 22.3 | Cổ phiếu:                                                                                    |                                               |                                               |
+|      |                                                                                              | 31/12/2024                                    | 31/12/2023                                    |
+|      | Số lượng cổ phiếu đăng ký phát hành                                                          |                                               |                                               |
+|      | Số lượng cổ phiếu đã bán ra công chúng<br>- <i>Cổ phiếu phổ thông</i>                        | 5.306.324.052<br>5.306.324.052                | 5.214.084.052<br>5.214.084.052                |
+|      | Số lượng cổ phiếu được mua lại<br>- Cổ phiếu phổ thông<br>- Cổ phiếu ưu đãi                  | -<br>-<br>-                                   | -<br>-<br>-                                   |
+|      | Số lượng cổ phiếu đang lưu hành<br>- Cổ phiếu phổ thông<br>- Cổ phiếu ưu đãi                 | 5.306.324.052<br>5.306.324.052                | 5.214.084.052<br>5.214.084.052                |

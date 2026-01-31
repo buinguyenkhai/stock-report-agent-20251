@@ -1,0 +1,36 @@
+## THUYẾT MINH BÁO CÁO TÀI CHÍNH CHỌN LỌC HỢP NHẤT QUÝ IV NĂM 2024
+
+## 12. CÁC KHOẢN NỢ KHÁC:
+
+|                                      | <u>31.12.2024</u> | <u>31.12.2023</u> |
+|--------------------------------------|-------------------|-------------------|
+|                                      | Triệu đồng        | Triệu đồng        |
+| Các khoản phải trả nội bộ            | 1.280.584         | 1.491.719         |
+| Các khoản phải trả bên ngoài         | 12.170.560        | 12.531.706        |
+| Thu nhập chưa thực hiện              | 6.235.417         | 6.812.909         |
+| Quỹ khen thưởng phúc lợi             | 847.299           | 448.547           |
+| Quỹ phát triển khoa học và công nghệ | 1.480.612         | 1.775.592         |
+| Dự phòng rủi ro khác                 |                   | -                 |
+|                                      | 22.014.472        | 23.060.473        |
+|                                      |                   |                   |
+
+## 13. TÌNH HÌNH THỰC HIỆN NGHĨA VỤ VỚI NGÂN SÁCH NHÀ NƯỚC VÀ THUẾ THU NHẬP HOÃN LẠI:
+
+Tình hình thực hiện nghĩa vụ với Ngân sách Nhà nước:
+
+|                                   |                | Phát sinh   |              |            |
+|-----------------------------------|----------------|-------------|--------------|------------|
+|                                   | 1.1.2024       | Số phải nộp | Số đã nộp    | 31.12.2024 |
+|                                   | Triệu đồng     | Triệu đồng  | Triệu đồng   | Triệu đồng |
+| Thuế giá trị gia tăng             | 91.361         | 402.547     | 440.716      | 53.192     |
+| Thuế thu nhập doanh nghiệp        | 2.293.886      | 4.199.699   | 4.108.348    | 2.385.237  |
+| Thuế nhà – đất                    | -              | =           | <del>-</del> | -          |
+| Các loại thuế khác                | 137.596        | 965.109     | 958.259      | 144.446    |
+| Tổng cộng                         | 2.522.843      | 5.567.355   | 5.507.323    | 2.582.875  |
+| Thuế thu nhập hoãn lại:           |                | Ś           | 31.12.2024   | 31.12.2023 |
+|                                   |                |             | Triệu đồng   | Triệu đồng |
+| Tài sản thuế thu nhập hoãn lại li | ên quan đến k  | hoản        |              |            |
+| chênh lệch tạm thời được khấu     |                |             | 51.040       | 97.688     |
+| Khoản hoàn nhập tài sản thuế th   | nu nhập hoãn l | ại đã       |              |            |
+| được ghi nhận từ các kỳ trước     |                |             | (33.722)     | (63.966)   |
+| Tài sản thuế thu nhập hoãn lạ     | 0 - 1 - 1      |             | 17.318       | 33.722     |

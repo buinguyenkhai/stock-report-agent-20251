@@ -1,0 +1,98 @@
+## 10. Dự phòng rửi ro cho vay khách hàng
+
+Dự phòng rủi ro cho vay khách hàng bao gồm:
+
+Dự
+
+Dự
+
+phòng phòng
+
+chung cụ
+
+thể
+
+(a)
+
+(b)
+
+## (a) Biến động dự phòng chung cho các khoản cho vay khách hàng như sau:
+
+Số
+
+dư
+
+Trích
+
+đầu lập
+
+năm dự
+
+phòng trong
+
+nắm
+
+## (b) Biến động dự phòng cụ thể cho các khoản cho vay khách hàng như sau:
+
+|                              | Năm kết thúc ngày 31/12/2024 Triệu VND   | Năm kết thúc ngày 31/12/2023 Triệu VND   |
+|------------------------------|------------------------------------------|------------------------------------------|
+| Số dư đầu năm                | 2.289.424                                | 1.343.466                                |
+| Trích lập dự phòng trong năm | 3.963.423                                | 4.555.758                                |
+| Sử dụng dự phòng trong năm   | (2.941.305)                              | (3.609.800)                              |
+|                              | 3.311.542                                | 2.289.424                                |
+
+31/12/2024
+
+Triệu
+
+VND
+
+2.382.092
+
+3.311.542
+
+5.693.634
+
+Nằm kết
+
+thúc ngày
+
+31/12/2024
+
+Triệu
+
+VND
+
+1.981.106
+
+400.986
+
+2.382.092
+
+31/12/2023
+
+Triệu
+
+VND
+
+1.981.106
+
+2.289.424
+
+4.270.530
+
+Năm kết
+
+thúc ngày
+
+31/12/2023
+
+Triệu
+
+VND
+
+1.721.307
+
+259.799
+
+1.981.106

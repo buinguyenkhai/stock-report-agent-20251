@@ -1,0 +1,30 @@
+**Mẫu B05/TCTD-HN** (Ban hành theo Thông tư số 49/2014/TT-NHNN ngày 31 tháng 12 năm 2014 của Ngân hàng Nhà nước Việt Nam)
+
+## 38. Tài sản, giấy tờ có giá ("GTCG") thế chấp, cầm cố và chiết khấu, tái chiết khấu
+
+## Tài sản, GTCG nhận thế chấp, cầm cố và chiết khấu, tái chiết khấu
+
+|                                                                     | 31/12/2024<br>Triêu VND | 31/12/2023<br>Triệu VND |
+|---------------------------------------------------------------------|-------------------------|-------------------------|
+| Của khách hàng                                                      | · · · · · ·             | · ·                     |
+| Bất động sản                                                        | 415.144.780             | 375.298.028             |
+| Phương tiện vận tải                                                 | 76.096.187              | 83.813.423              |
+| Máy móc thiết bị                                                    | 26.277.312              | 20.441,178              |
+| Quyển khai thác tài sản                                             | 20.111.880              | 17.078.213              |
+| Bảo lãnh                                                            | 16,920,803              | 24.194.584              |
+| Vàng, ngoại tệ, giấy tờ có giá                                      | 44.024.363              | 25.034.399              |
+| Hàng hóa lưu kho                                                    | 19.272.474              | 14.776.809              |
+| Các tài sản đảm bảo khác                                            | 8.303.474               | 7.029.205               |
+|                                                                     | 626.151.273             | 567.665.839             |
+| Của các TCTD khác                                                   |                         |                         |
+| Bảo lãnh                                                            | 480.633                 | 466.000                 |
+| Quyền khai thác tài sản                                             | 26,403                  | 26.403                  |
+| Giấy tờ có giá                                                      | 50.724.000              | 2.200.000               |
+|                                                                     | 51.231.036              | 2.692.403               |
+|                                                                     | 677.382.309             | 570.358.242             |
+| Tài sản, GTCG đưa đi thế chấp, cầm cố và chiết khấu, tái chiết khấu |                         |                         |
+|                                                                     | 31/12/2024              | 31/12/2023              |
+|                                                                     | Triệu VND               | Triệu VND               |
+| Giấy tờ có giá đưa đi thế chấp, cầm cố                              | 15.620.000              | 14.350.000              |
+| Giấy tờ có giá đưa đi chiết khấu, tái chiết khấu                    | 22.338.207              | -                       |
+|                                                                     | 37.958.207              | 14.350.000              |

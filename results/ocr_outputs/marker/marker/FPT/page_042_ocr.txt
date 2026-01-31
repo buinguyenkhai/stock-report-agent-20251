@@ -1,0 +1,49 @@
+## CÔNG TY CỔ PHẦN FPT
+
+Số 10 phố Phạm Văn Bạch Phường Dịch Vọng, Quận Cầu Giấy Thành phố Hà Nội, Việt Nam
+
+Báo cáo tài chính hợp nhất Cho kỳ hoạt động từ ngày 01 tháng 01 năm 2024 đến ngày 31 tháng 12 năm 2024
+
+## THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (tiếp theo)
+
+Các thuyết minh này là một bộ phận hợp thành và cần được đọc đồng thời với báo cáo tài chính hợp nhất kèm theo
+
+MẪU SỐ B 09-DN/HN
+
+## PHỤ LỤC 1 – DANH SÁCH CÔNG TY CON VÀ CÔNG TY LIÊN DOANH, LIÊN KẾT KHÁC THUỘC SỞ HỮU CỦA CÁC CÔNG TY CON CỦA CÔNG TY TẠI NGÀY 31 tháng 12 năm 2024
+
+## A. CÔNG TY CON KHÁC
+
+| STT | Công ty                                             | Hoạt động chính   | Nơi thành<br>lập, đăng ký | Tại ngày 31/12/2024 |                | Tại ngày 31/12/2023 |            |
+|-----|-----------------------------------------------------|-------------------|---------------------------|---------------------|----------------|---------------------|------------|
+|     |                                                     |                   |                           | Tỷ lệ               | Tỷ lệ          | Tỷ lệ               | Tỷ lệ      |
+|     |                                                     |                   | hoạt động                 | sở hữu              | biểu quyết     | sở hữu              | biểu quyết |
+| 1   | Công ty TNHH FPT Nhật Bản                           | Sản xuất phần mềm | Nhât Bản                  | 100%                | 100%           | 100%                | 1000/      |
+| 2   | Công ty TNHH FPT Nearshore Nhật Bản                 | Sản xuất phần mềm | Nhật Bản                  | 100%                | 100%           |                     | 100%       |
+| 3   | Công ty TNHH Phần mềm FPT Thượng Hải                | Sản xuất phần mềm | Nhật Bản                  | 100%                | 100%           | 100%<br>100%        | 100%       |
+| 4   | Công ty TNHH FPT Techno Nhật Bản                    | Sản xuất phần mềm | Nhật Bản                  | 100%                | 100%           |                     | 100%       |
+| 5   | Công ty TNHH Phần mềm FPT Indonesia                 | Sản xuất phần mềm | Nhật Bản                  | 99,88%              |                | 100%                | 100%       |
+| 6   | Công ty TNHH Phần mềm FPT Nhật Bản                  | Sản xuất phần mềm | Nhật Bản                  | 100%                | 99,88%<br>100% | 99,88%              | 99,88%     |
+| 7   | Công ty TNHH FPT Taiwan                             | Sản xuất phần mềm | Đài Loan                  | 100%                | 100%           | 100%                | 100%       |
+| 8   | Công ty TNHH Tư vấn FPT Nhật Bản                    | Tư vấn công nghệ  | Nhật Bản                  | 80%                 | 80%            | 100%                | 100%       |
+| 9   | Công ty TNHH Phần mềm FPT Korea                     | Sản xuất phần mềm | Hàn Quốc                  | 100%                | 100%           | 80%                 | 80%        |
+| 10  | Công ty TNHH FPT USA                                | Sản xuất phần mềm | Hoa Kỳ                    | 100%                | 100%           | 100%                | 100%       |
+| 11  | Công ty TNHH FPT Canada                             | Sản xuất phần mềm | Canada                    | 100%                | 100%           | 100%                | 100%       |
+| 12  | Công ty TNHH Tư vấn Intellinet                      | Tư vấn công nghệ  | Hoa Kỳ                    | 98,18%              |                | 100%                | 100%       |
+| 13  | Công ty TNHH Tư vấn Intertec                        | Sản xuất phần mềm | Hoa Kỳ                    | 70%                 | 98,18%<br>70%  | 97,27%              | 97,27%     |
+| 14  | Công ty TNHH Intertec International                 | Sản xuất phần mềm | Anh                       | 70%                 | 70%<br>70%     | 70%                 | 70%        |
+| 15  | Công ty TNHH Tư vấn Micra International             | Sản xuất phần mềm | Costa Rica                | 70%                 |                | 70%                 | 70%        |
+| 16  | Công ty TNHH Intertec International S.A.S           | Sản xuất phần mềm | Columbia                  | 70%                 | 70%            | 70%                 | 70%        |
+| 17  | Công ty TNHH Intertec International S de R.L de C.V | Sản xuất phần mềm | Mexico                    | 70%                 | 70%            | 70%                 | 70%        |
+| 18  | Công ty Cardinal Peak LLC                           | Sản xuất phần mềm | Hoa Kỳ                    |                     | 70%            | 70%                 | 70%        |
+| 19  | Công ty TNHH FPT India                              | Sản xuất phần mềm | Ãn Độ                     | 100%                | 100%           | 100%                | 100%       |
+| 20  | Công ty TNHH FPT Đức                                | Sản xuất phần mềm | -                         | 100%                | 100%           | 100%                | 100%       |
+| 21  | Công ty TNHH FPT Anh                                | Sản xuất phần mềm | Đức                       | 100%                | 100%           | 100%                | 100%       |
+| 22  | Công ty TNHH Phần mềm FPT Malaysia                  | Sản xuất phần mềm | Anh                       | 100%                | 100%           | 100%                | 100%       |
+| 23  | Công ty TNHH Giải pháp Phần mềm FPT Châu Á          |                   | Malaysia                  | 100%                | 100%           | 100%                | 100%       |
+|     | Thái Bình Dương                                     | Sản xuất phần mềm | Singapore                 | 100%                | 100%           | 100%                | 100%       |
+| 24  | Công ty TNHH Phần mềm FPT Australia                 | Sản xuất phần mềm | Úc                        | 100%                | 100%           | 100%                | 100%       |
+| 25  | Công ty TNHH Phần mềm FPT Châu Âu                   | Sản xuất phần mềm | Pháp                      | 100%                | 100%           | 100%                | 100%       |
+|     |                                                     | •                 | 40                        | 20070               | 10070          | 100/8               | 100%       |
+
+300 15 15 15 15 15 15 15 15 15 15 15 15 15

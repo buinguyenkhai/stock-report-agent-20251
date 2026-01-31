@@ -1,0 +1,39 @@
+## CÔNG TY CỔ PHẦN FPT
+
+Số 10 phố Phạm Văn Bạch Phường Dịch Vọng, Quận Cầu Giấy Thành phố Hà Nội, Việt Nam
+
+Báo cáo tài chính hợp nhất Cho kỳ hoạt động từ ngày 01 tháng 01 năm 2024 đến ngày 31 tháng 12 năm 2024
+
+THUYẾT MINH BÁO CÁO TÀI CHÍNH HỢP NHẤT (tiếp theo)
+
+Các thuyết minh này là một bộ phận hợp thành và cần được đọc đồng thời với báo cáo tài chính hợp nhất kèm theo
+
+MẫU SỐ B 09-DN/HN
+
+## 4. BÁO CÁO BỘ PHẬN (Tiếp theo)
+
+Báo cáo bộ phận
+
+Kỳ này
+
+Đơn vị: triệu đồng
+
+| Chỉ tiêu                                                                                           | Công nghệ thông tin và viễn thông         |                                           |              |             |                             |                      |              |
+|----------------------------------------------------------------------------------------------------|-------------------------------------------|-------------------------------------------|--------------|-------------|-----------------------------|----------------------|--------------|
+|                                                                                                    | Sản phẩm và<br>dịch vụ CNTT<br>nước ngoài | Sản phẩm và<br>dịch vụ CNTT<br>trong nước | Viễn thông   | Nội dung số | Đầu tư, giáo<br>dục và khác | Loại trừ<br>hợp nhất | Tổng cộng    |
+| Doanh thu theo bộ phận                                                                             | 30.952.512                                | 8.157.364                                 | 16.905.897   | 704.503     | 7.444.159                   | (1.315.641)          | 62.848.794   |
+| Chi phí theo bộ phận (i)                                                                           |                                           |                                           |              |             |                             | _                    |              |
+| Chi phí phân bổ trực tiếp cho bộ phận                                                              | (26.216.706)                              | (7.774.979)                               | (13.728.756) | (573.344)   | (5.308.016)                 | 1.267.883            | (52.333.918) |
+| Trong đó:                                                                                          |                                           |                                           |              |             |                             |                      | •            |
+| - Tổng chi phí khấu hao tài sản cố định                                                            | (658.053)                                 | (212.261)                                 | (1.368.719)  | (3.565)     | (346.445)                   | 28.982               | (2.560.061)  |
+| - Tổng phân bổ chi phí trả trước dài hạn của bộ phận                                               | (200.481)                                 | (28.966)                                  | (1.674.772)  | (3.148)     | (172.009)                   | 11.107               | (2.068.269)  |
+| Phần lãi trong công ty liên kết                                                                    | 2.119                                     | (56)                                      | -            | -           | 391.388                     | _                    | 393,451      |
+| Kết quả hoạt động kinh doanh theo bộ phận (ii)                                                     | 4.737.925                                 | 382.329                                   | 3.177.142    | 131.159     | 2.527.531                   | (47.758)             | 10.908.328   |
+| Lợi nhuận trước thuế theo bộ phận                                                                  | 4.769.681                                 | 459.763                                   | 3.420.133    | 167.465     | 7.494.875                   | (5.241.078)          | 11.070.839   |
+| Tài sản bộ phận tại ngày 31/12/2024                                                                | 24.644.300                                | 9.418.410                                 | 23.649.241   | 1.012.765   | 26.338.478                  | (13.049.955)         | 72.013.238   |
+| Nợ phải trả bộ phận tại ngày 31/12/2024                                                            | 14.886.312                                | 6.300.399                                 | 13.173.832   | 174.064     | 14.162.851                  | (12.480.846)         | 36.216.612   |
+| Tổng chi phí đã phát sinh để mua tài sản cố định và chi phí<br>trả trước dài hạn 12 tháng năm 2024 | 1.448.869                                 | 1.369.956                                 | 3.067.731    | 5.081       | 1.233.301                   | (64.892)             | 7.060.045    |
+
+<sup>(</sup>i) Chi phí theo bộ phận là chỉ phí phát sinh từ các hoạt động kinh doanh của bộ phận được tính trực tiếp cho bộ phận đó và phần chi phí của doanh nghiệp được phân bổ cho bộ phận đó, bao gồm cả chi phí bán hàng ra bên ngoài và chi phí có liên quan đến những giao dịch với bộ phận khác của doanh nghiệp. Theo đó, chi phí theo bộ phận này bao gồm giá vốn, chi phí bán hàng và chi phí quản lý.
+
+<sup>(</sup>ii) Kết quả hoạt động kinh doanh theo bộ phận là doanh thu theo bộ phận trừ đi chi phí theo bộ phận, không bao gồm doanh thu, chi phí tài chính và thu nhập, chi phí khác. Do vậy, tại bộ phận "Đầu tư, giáo dục và khác", Kết quả kinh doanh theo bộ phận chênh lệch so với Lợi nhuận trước thuế theo bộ phận do khoản lợi nhuận tài chính và lợi nhuận khác là 4.967 tỷ đồng, chủ yếu do hoạt động thu cổ tức từ các đơn vị thành viên của công ty mẹ.
