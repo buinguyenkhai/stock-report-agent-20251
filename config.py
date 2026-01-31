@@ -52,6 +52,9 @@ class Settings(BaseSettings):
         description="Vietstock base URL"
     )
     
+    # UI Settings
+    ui_max_reports: int = Field(default=4, description="Maximum reports for comparison")
+    
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
@@ -64,6 +67,28 @@ def get_settings() -> Settings:
     return Settings()
 
 settings = get_settings()
+
+# OCR Engine Options for UI
+OCR_ENGINE_OPTIONS = [
+    ("Hybrid (Docling + Surya)", "hybrid"),
+    ("Docling", "docling"),
+    ("Marker", "marker"),
+]
+
+# LLM Model Options for UI (demo feature)
+LLM_MODEL_OPTIONS = [
+    ("Mistral Small 3.1 24B (Free)", "mistralai/mistral-small-3.1-24b-instruct:free"),
+    ("Mistral Small 3.1 24B", "mistralai/mistral-small-3.1-24b-instruct"),
+    ("GLM 4.5 Air", "z-ai/glm-4.5-air"),
+    ("Mistral Small 3.2 24B", "mistralai/mistral-small-3.2-24b-instruct"),
+    ("Qwen3 30B A3B", "qwen/qwen3-30b-a3b"),
+    ("GLM 4.7 Flash", "z-ai/glm-4.7-flash"),
+    ("Qwen3 235B A22B", "qwen/qwen3-235b-a22b-2507"),
+    ("Gemini 2.5 Flash Lite", "google/gemini-2.5-flash-lite-preview-09-2025"),
+    ("GPT-4.1 Nano", "openai/gpt-4.1-nano"),
+]
+
+DEFAULT_LLM_MODEL = "mistralai/mistral-small-3.1-24b-instruct:free"
 
 # Financial Report Constants
 class ReportConstants:

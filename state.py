@@ -1,4 +1,4 @@
-from typing import TypedDict, List, Dict, Optional, Literal
+from typing import TypedDict, List, Dict, Optional, Literal, Any
 from pydantic_models import ReportRequest
 
 # Agent State
@@ -20,3 +20,8 @@ class StockReportState(TypedDict):
     possible_choices: Optional[List[dict]]
     notification: Optional[str]
     final_response: Optional[str]
+    ocr_engine: Optional[Literal["hybrid", "docling", "marker"]]
+    llm_model: Optional[str]
+    ocr_stats: Optional[Dict[str, Any]]
+    parsed_data: Optional[Dict[str, Any]]
+    collected_results: Optional[List[Dict[str, Any]]]
