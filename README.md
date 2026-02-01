@@ -1,6 +1,6 @@
 # Stock Report Agent
 
-Hệ thống AI Agent tự động trích xuất và hỗ trợ phân tích báo cáo tài chính doanh nghiệp Việt Nam, với khả năng xử lý đa báo cáo và tự động hóa từ đầu đến cuối.
+Hệ thống AI Agent tự động trích xuất và hỗ trợ phân tích báo cáo tài chính doanh nghiệp Việt Nam, tối ưu cho luồng xử lý end-to-end.
 
 ## Tổng quan
 
@@ -8,21 +8,20 @@ Agent tự động:
 1. **Hiểu yêu cầu** người dùng bằng tiếng Việt tự nhiên
 2. **Tìm và tải** báo cáo tài chính PDF từ Vietstock
 3. **Trích xuất nội dung** bằng OCR
-4. **Trích xuất cấu trúc** (Extract) - Tách 3 báo cáo chính, thuyết minh và các thông tin khác từ OCR markdown
-5. **Parse dữ liệu** - Chuẩn hóa, chuyển đổi theo format database chuẩn.
-6. **Đánh giá chất lượng pipeline** với benchmark tự động
-7. **Đang cập nhật**
+4. **Trích xuất cấu trúc** (Extract) - Tách 3 báo cáo chính từ OCR markdown
+5. **Parse dữ liệu** - Chuẩn hóa, chuyển đổi sang format JSON cấu trúc.
+6. **Tra cứu TM (Thuyết minh)** - Trích xuất TM dạng bảng theo `notes_ref` phát hiện trong 3 báo cáo
+7. **Đánh giá chất lượng pipeline** với benchmark tự động
+8. **UI Stock Report Agent**
 ## Kiến trúc
 
 Hệ thống đã được thiết kế lại với kiến trúc pipeline 2 bước:
 
 ### 1. **Extraction Phase** (Parallel Extractors)
-6 extractors chuyên biệt chạy song song để tách riêng từng báo cáo từ OCR Markdown:
+Các extractors chạy song song để tách riêng từng báo cáo từ OCR Markdown:
 - **BalanceSheetExtractor** - Trích xuất Bảng cân đối kế toán
 - **IncomeStatementExtractor** - Trích xuất Báo cáo kết quả kinh doanh  
 - **CashFlowExtractor** - Trích xuất Báo cáo lưu chuyển tiền tệ
-- **NotesTablesExtractor** - Trích xuất Bảng số liệu trong thuyết minh.
-- **NotesTextExtractor** - Trích xuất Văn bản, giải trình trong thuyết minh.
 - **MetadataExtractor** - Thông tin metadata về công ty, báo cáo.
 
 **Đặc điểm:**
@@ -30,11 +29,16 @@ Hệ thống đã được thiết kế lại với kiến trúc pipeline 2 bư�
 - Extractor chạy song song
 - Output: Raw markdown tables
 
+**TM (Thuyết minh):**
+- Không "index" toàn bộ thuyết minh.
+- TM được trích xuất **sau khi parse** và chỉ theo các `notes_ref` thực sự được tham chiếu trong BS/PL/CF.
+- Output TM là **tables-only** để tránh phình context và giảm rủi ro bị cắt/truncate.
+
 ### 2. **Parsing Phase** (Aggregated Parser)
-Parser thống nhất nhận output từ cả 6 extractors:
+Parser thống nhất nhận output từ các extractors (BS/PL/CF + metadata):
 - **AggregatedParser** - Parse sang JSON chuẩn vnstock
 - Sử dụng Pydantic Structured Output
-- Chuẩn hóa tên chỉ tiêu theo vnstock vocabulary
+- Giữ tên chỉ tiêu trung thực theo báo cáo
 - Chuyển đổi đơn vị về VND (triệu VND × 1,000,000, tỷ VND × 1,000,000,000)
 - Xử lý số âm, định dạng tiếng Việt (1.234.567,89)
 
@@ -43,7 +47,7 @@ Parser thống nhất nhận output từ cả 6 extractors:
 
 ### Stock Report Agent Architecture
 
-![Stock Report Agent Architecture](readme_img\architecture_v2.png)
+![Stock Report Agent Architecture](readme_img/architecture_v2.png)
 
 ### LangGraph
 
@@ -59,7 +63,7 @@ Xử lý câu hỏi bằng tiếng Việt và chuyển thành yêu cầu cấu t
 - Tích hợp tool `get_current_time` để xử lý thời gian động
 - Parse thành `AnalysisIntent` với danh sách `ReportRequest`
 - Tự động lọc báo cáo chưa tồn tại (ví dụ: Q4 2024 khi đang là tháng 10)
-- Hỗ trợ đa yêu cầu (so sánh nhiều công ty, nhiều quý)
+- Do giới hạn UI: danh sách `requests` chỉ có tối đa 1 yêu cầu; nếu người dùng yêu cầu nhiều báo cáo, hệ thống chọn yêu cầu đầu tiên và hiển thị cảnh báo.
 
 **Ví dụ input:**
 - "Phân tích BCTC FPT quý 3 năm 2024"
@@ -74,36 +78,35 @@ Scrape Vietstock để tìm link PDF báo cáo chính xác.
 
 **Tính năng:**
 - **Không dùng LLM** (tăng tốc độ và độ chính xác, giảm chi phí)
+- Dùng requests + endpoint `/data/getdocument` để lấy danh sách tài liệu
 - Tìm theo năm hoặc mới nhất
 - Lọc theo loại: Hợp nhất / Công ty mẹ
 - Lọc theo kỳ: Quý / 6 tháng / Cả năm
 - **Auto-fallback**: Tự động chọn báo cáo thay thế nếu không tìm thấy đúng loại
 
-#### 4. **ask_user_for_clarification_node**
-Hỏi người dùng khi có nhiều lựa chọn (ví dụ: Hợp nhất vs Công ty mẹ).
+Lưu ý: Streamlit UI không hỗ trợ block để hỏi qua stdin. Khi có nhiều lựa chọn, hệ thống sẽ **tự chọn mặc định hợp lý** và hiển thị thông báo để người dùng có thể yêu cầu lại rõ hơn.
 
-#### 5. **ocr_report_node**
+#### 4. **ocr_report_node**
 Trích xuất nội dung PDF thành Markdown.
 
 **Hỗ trợ nhiều OCR providers:**
-- **Marker** (mặc định) - API cloud
-- **Docling** - IBM open-source
-- **VIntern** - Vietnamese-optimized
-- **PaddleOCR** - Lightweight local
+- **Hybrid (Docling + Surya)** - Docling PDF pipeline + Tesseract (vie) + Surya reroute/update cho các cell (đặc biệt số) có confidence thấp
+- **Docling** - Docling PDF pipeline + Tesseract (vie)
+- **Marker** - `marker-pdf` OCR
 
-#### 6. **parse_report_node**
+#### 5. **parse_report_node**
 Parse Markdown thành dữ liệu cấu trúc JSON.
 
 **Kiến trúc 2-phase pipeline:**
 
 **Phase 1: Extraction**
-- Chạy song song 6 extractors (BS, PL, CF, NotesTable, NotesText, Metadata)
+- Chạy song song các extractors chính (BS, PL, CF, Metadata)
 - Mỗi extractor tìm và trích xuất 1 loại báo cáo cụ thể
 
 **Phase 2: Parsing** 
-- AggregatedParser nhận output từ cả 6 extractors
+- AggregatedParser nhận output từ các extractors
 - Sử dụng Pydantic Structured Output với schema `ParsedReport`
-- Chuẩn hóa tên chỉ tiêu theo vnstock vocabulary
+- Giữ tên chỉ tiêu trung thực theo báo cáo (không ép map theo danh mục cố định)
 - Chuyển đổi đơn vị về VND:
   - triệu VND → × 1,000,000
   - tỷ VND → × 1,000,000,000
@@ -111,16 +114,19 @@ Parse Markdown thành dữ liệu cấu trúc JSON.
 - Xử lý định dạng số Việt Nam: `1.234.567,89` → `1234567.89`
 - Xử lý số âm: `(100)` → `-100`
 
+**TM (Thuyết minh):**
+- Sau khi parse, hệ thống có thể trích xuất TM dạng bảng theo `notes_ref` (tables-only).
+
 **Tính năng:**
 - Xác định tự động:
   - **Đơn vị tiền tệ** (VND, triệu VND, tỷ VND, nghìn VND)
   - **Loại kỳ** (Quý riêng lẻ / Lũy kế từ đầu năm)
   - **Metadata** (công ty, năm, quý)
 
-#### 7. **collect_result_node**
+#### 6. **collect_result_node**
 Thu thập kết quả đã xử lý vào state.
 
-#### 8. **generate_final_response_node**
+#### 7. **generate_final_response_node**
 Tạo phản hồi cuối cùng với tóm tắt các báo cáo đã xử lý.
 
 ## Cấu hình
@@ -130,7 +136,6 @@ Tạo phản hồi cuối cùng với tóm tắt các báo cáo đã xử lý.
 ```bash
 # API Keys
 OPENROUTER_API_KEY=your_key_here
-MARKER_API_KEY=your_marker_key  # Nếu dùng Marker OCR
 ```
 
 ## Cài đặt
@@ -150,7 +155,10 @@ pip install -r requirements.txt
 
 # Chỉnh sửa .env với API keys của bạn
 
-# Chạy agent
+# Chạy Streamlit UI
+streamlit run app.py
+
+# (Tuỳ chọn) Chạy agent CLI demo
 python agent.py
 ```
 
@@ -205,78 +213,26 @@ python -m evaluation.ocr_benchmark.page_level_benchmark --engine docling_pdf --t
 python -m evaluation.ocr_benchmark.page_level_benchmark --companies AAA FPT VPB --max-pages 5 --engine docling_pdf
 ```
 
-### Hybrid Sweep
+### Analyze Multiple Runs (Compare Engines)
 
 ```bash
-python -m evaluation.ocr_benchmark.hybrid_sweep \
-  --companies AAA ACB FPT \
-  --max-pages 3 \
-  --confidence-thresholds 0.6 0.7 0.8 \
-  --number-thresholds 0.8 0.85 0.9 \
-  --minimal-json \
-  --outdir results/sweeps/s1
-```
+python -m evaluation.ocr_benchmark.analyze_results \
+  --docling results/docling_pdf_full.json \
+  --hybrid results/hybrid_docling_full.json \
+  --marker results/marker_full.json
 
-The sweep writes:
-- `summary.csv`: one row per config, easy to sort/filter
-- `{config_id}.json`: full benchmark JSON result for that config
+# Optional: hybrid diff reason breakdown (requires running hybrid with --export-hybrid-diffs)
+python -m evaluation.ocr_benchmark.analyze_results \
+  --docling results/docling_pdf_full.json \
+  --hybrid results/hybrid_docling_full.json \
+  --diffs-root results/hybrid_diffs
+```
 
 ### Error Analysis
 
 ```bash
-python -m evaluation.ocr_benchmark.error_analyzer --input results/docling_full.json --output results/error_analysis.json
+python -m evaluation.ocr_benchmark.error_analyzer --input results/docling_pdf_full.json --output results/error_analysis.json
 ```
-
-## Testing & Evaluation (Đang cập nhật)
-
-Hệ thống benchmark LLM pipeline đầy đủ:
-
-### Benchmark Architecture
-
-**Test Data:**
-- 4 báo cáo thực tế: DBC Q1/2022, FPT Q4/2024, VCB Q2/2023, VIC Q3/2024
-- Ground truth từ vnstock API (CSV format)
-- OCR output cached trong `evaluation_results_pipeline/`
-
-**Benchmark Tasks:**
-1. **EXTRACTION** - Đánh giá extractors:
-   - Metrics: Required items found (70%+ để pass)
-   - Extractors tìm đúng 35+ required items cho mỗi báo cáo
-
-2. **PARSING** - Đánh giá parser:
-   - Metrics: Match rate (tìm đúng items), Value accuracy (sai số <5%)
-   - Cần extracted files từ extraction benchmark trước
-
-3. **FULL_PIPELINE** - End-to-end test:
-   - Chạy extraction + parsing liền
-   - Đo latency tổng thể và accuracy cuối
-
-### Running Benchmarks
-
-```bash
-# Chạy tất cả tasks với nhiều models
-python run_benchmark.py
-
-# Chỉ chạy extraction
-python run_benchmark.py --task extraction
-
-# Chỉ chạy parsing (cần chạy extraction trước)
-python run_benchmark.py --task parsing
-
-# Chạy với model cụ thể
-python run_benchmark.py --task parsing --models "mistralai/devstral-2512:free"
-
-# Skip OCR preparation (nếu đã có cached)
-python run_benchmark.py --skip-prepare --task extraction
-
-# Chỉ prepare OCR data
-python run_benchmark.py --prepare-only
-```
-
-### Benchmark Results (testing)
-
-![Benchmark Results](readme_img\benchmark_res.png)
-
 
 ## License
 

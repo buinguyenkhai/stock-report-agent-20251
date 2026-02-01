@@ -11,16 +11,16 @@ class Settings(BaseSettings):
     openrouter_api_key: str = Field(default="", description="OpenRouter API key for LLMs")
     
     # LLM Settings
-    llm_model: str = Field(default="mistralai/devstral-2512:free", description="LLM model for main parsing")
+    llm_model: str = Field(default="google/gemini-2.5-flash-lite-preview-09-2025", description="LLM model for main parsing")
     llm_temperature: float = Field(default=0.0, description="LLM temperature setting")
     
     # LLM Utility Settings (for matching, unit detection)
-    llm_utils_model: str = Field(default="mistralai/devstral-2512:free", description="Fast model for utilities")
+    llm_utils_model: str = Field(default="google/gemini-2.5-flash-lite-preview-09-2025", description="Fast model for utilities")
     llm_use_for_matching: bool = Field(default=True, description="Use LLM for item matching")
     
     # OCR Settings
-    default_ocr_service: Literal["marker", "docling", "vintern", "paddle"] = Field(
-        default="marker", description="Default OCR service to use"
+    default_ocr_service: Literal["hybrid", "docling", "marker"] = Field(
+        default="hybrid", description="Default OCR service to use"
     )
     ocr_max_polls: int = Field(default=175, description="Maximum polling attempts for OCR")
     ocr_poll_interval: int = Field(default=2, description="Polling interval in seconds")
@@ -53,7 +53,7 @@ class Settings(BaseSettings):
     )
     
     # UI Settings
-    ui_max_reports: int = Field(default=4, description="Maximum reports for comparison")
+    ui_max_reports: int = Field(default=1, description="Maximum reports to process")
     
     class Config:
         env_file = ".env"
@@ -77,18 +77,11 @@ OCR_ENGINE_OPTIONS = [
 
 # LLM Model Options for UI (demo feature)
 LLM_MODEL_OPTIONS = [
-    ("Mistral Small 3.1 24B (Free)", "mistralai/mistral-small-3.1-24b-instruct:free"),
-    ("Mistral Small 3.1 24B", "mistralai/mistral-small-3.1-24b-instruct"),
-    ("GLM 4.5 Air", "z-ai/glm-4.5-air"),
-    ("Mistral Small 3.2 24B", "mistralai/mistral-small-3.2-24b-instruct"),
-    ("Qwen3 30B A3B", "qwen/qwen3-30b-a3b"),
-    ("GLM 4.7 Flash", "z-ai/glm-4.7-flash"),
     ("Qwen3 235B A22B", "qwen/qwen3-235b-a22b-2507"),
     ("Gemini 2.5 Flash Lite", "google/gemini-2.5-flash-lite-preview-09-2025"),
-    ("GPT-4.1 Nano", "openai/gpt-4.1-nano"),
 ]
 
-DEFAULT_LLM_MODEL = "mistralai/mistral-small-3.1-24b-instruct:free"
+DEFAULT_LLM_MODEL = "google/gemini-2.5-flash-lite-preview-09-2025"
 
 # Financial Report Constants
 class ReportConstants:

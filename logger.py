@@ -1,12 +1,15 @@
 import logging
 import sys
+from typing import Optional
+
 from config import settings
 
-def setup_logging(name: str = None) -> logging.Logger:
+def setup_logging(name: Optional[str] = None) -> logging.Logger:
     """
     Set up and return a configured logger.
     """
-    logger = logging.getLogger(name)
+    logger = logging.getLogger(name or "")
+    logger.propagate = False
 
     if not logger.handlers:
         logger.setLevel(getattr(logging, settings.log_level.upper(), logging.INFO))

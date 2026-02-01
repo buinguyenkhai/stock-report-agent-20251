@@ -15,17 +15,33 @@ def parse_report_node(state: StockReportState) -> StockReportState:
     logger.info("Bắt đầu Node: Parse Báo cáo")
     
     markdown_content = state.get("ocr_markdown_content")
+    markdown_path = state.get("ocr_markdown_path")
     stock_code = state.get("stock_code", "UNKNOWN")
     year = state.get("year", "NA")
     period = state.get("period", "NA")
-    
+
+    if not markdown_content and markdown_path:
+        try:
+            with open(markdown_path, "r", encoding="utf-8") as f:
+                markdown_content = f.read()
+        except Exception as e:
+            logger.error(f"Không thể đọc OCR markdown từ file: {markdown_path}. Error: {e}")
+            return {**state, "error_message": f"Không thể đọc OCR markdown từ file: {markdown_path}"}
+
     if not markdown_content:
         logger.warning("Không có nội dung Markdown để parse.")
         return {**state, "error_message": "Không có nội dung Markdown để parse."}
 
     try:
         # Create pipeline and process
-        pipeline = create_pipeline(mode="separate", extract_notes=False, extract_metadata=True)
+        llm_model = state.get("llm_model") or settings.llm_model
+        pipeline = create_pipeline(
+            mode="separate",
+            extract_notes=True,
+            extract_metadata=True,
+            extractor_model=str(llm_model),
+            parser_model=str(llm_model),
+        )
         logger.info("Đang trích xuất dữ liệu cấu trúc (Parsing with LLM pipeline)...")
         parsed_report = pipeline.process(markdown_content)
         

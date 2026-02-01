@@ -2,7 +2,7 @@ from typing import TypedDict, List, Dict, Optional, Literal, Any
 from pydantic_models import ReportRequest
 
 # Agent State
-class StockReportState(TypedDict):
+class StockReportState(TypedDict, total=False):
     query: str
     pending_requests: List[ReportRequest]
     collected_links: Dict[str, str]
@@ -15,6 +15,8 @@ class StockReportState(TypedDict):
     consolidation_status: Optional[Literal["Hợp nhất", "Công ty mẹ"]]
     report_link: Optional[str]
     ocr_markdown_content: Optional[str]
+    ocr_markdown_path: Optional[str]
+    ocr_markdown_preview: Optional[str]
     error_message: Optional[str]
     clarification_prompt: Optional[str]
     possible_choices: Optional[List[dict]]

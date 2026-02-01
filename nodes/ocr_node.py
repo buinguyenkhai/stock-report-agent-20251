@@ -23,7 +23,8 @@ def ocr_report_node(state: StockReportState) -> StockReportState:
 
     try:
         # Initialize OCR Service
-        ocr_service = get_ocr_service(settings.default_ocr_service)    
+        ocr_engine = state.get("ocr_engine") or settings.default_ocr_service
+        ocr_service = get_ocr_service(str(ocr_engine))
         logger.info(f"Đang gửi yêu cầu OCR cho: {report_link}")
         markdown_content = ocr_service.process_pdf(pdf_url=report_link)
         
@@ -47,9 +48,15 @@ def ocr_report_node(state: StockReportState) -> StockReportState:
             
         logger.info(f"OCR hoàn tất. Đã lưu tại: {filepath}")
         
+        preview_limit = 20_000
+        preview = markdown_content[:preview_limit]
+
+        # Avoid storing the full OCR text in state/session to reduce memory.
         return {
             **state,
-            "ocr_markdown_content": markdown_content,
+            "ocr_markdown_path": filepath,
+            "ocr_markdown_preview": preview,
+            "ocr_engine": str(ocr_engine),
             "notification": (state.get("notification") or "") + "\nĐã xử lý OCR thành công."
         }
         

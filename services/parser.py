@@ -1,24 +1,21 @@
-"""
-Aggregated Financial Report Parser
-
-Smart LLM parser that takes extracted content from all extractors
-and produces canonical output aligned with vnstock vocabulary.
+"""Aggregated Financial Report Parser.
 """
 
 from typing import List, Dict, Optional, Any
 from dataclasses import dataclass, field
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
+import re
 
 from logger import get_logger
-from services.llm_factory import create_structured_llm
+from services.llm_factory import create_llm_for_task, create_structured_llm_for_task
 
 logger = get_logger(__name__)
 
-# Default model for parsing (smart, accurate)
-DEFAULT_PARSER_MODEL = "mistralai/mistral-small-3.1-24b-instruct:free"
+# Default model for parsing
+DEFAULT_PARSER_MODEL = "google/gemini-2.5-flash-lite-preview-09-2025"
 
 
-# Pydantic Models for Structured Output (Aligned with UI requirements)
+# Pydantic Models for Structured Output
 class FinancialItem(BaseModel):
     """Single financial line item."""
     item_code: Optional[str] = Field(default=None, description="Mã số chỉ tiêu")
@@ -53,6 +50,26 @@ class ParsedReport(BaseModel):
     pl_found: bool = Field(default=False)
     cf_found: bool = Field(default=False)
     warnings: List[str] = Field(default_factory=list)
+    
+    @field_validator('quarter', mode='before')
+    @classmethod
+    def parse_quarter(cls, v):
+        """Convert quarter strings like 'Q4', 'Q1', 'Quý 3' to int."""
+        if v is None:
+            return None
+        if isinstance(v, int):
+            return v
+        if isinstance(v, str):
+            # Try to extract digit from strings like "Q4", "Q1", "Quý 3"
+            match = re.search(r'(\d+)', v)
+            if match:
+                return int(match.group(1))
+            # Try direct conversion
+            try:
+                return int(v)
+            except ValueError:
+                return None
+        return None
 
 
 # Extraction Results Container
@@ -87,8 +104,7 @@ class ExtractionBundle:
 
 class AggregatedParser:
     """
-    Smart parser that processes extracted content and produces
-    vnstock-aligned output with proper normalization.
+    Smart parser that processes extracted content and produces structured output with proper normalization.
     """
     
     def __init__(self, model: Optional[str] = None):
@@ -100,10 +116,12 @@ class AggregatedParser:
     def llm(self):
         """Lazy-load structured LLM."""
         if self._llm is None:
-            self._llm = create_structured_llm(
+            # Use task config (larger max_tokens + longer timeout) to avoid
+            # truncated/invalid structured outputs on long documents.
+            self._llm = create_structured_llm_for_task(
+                task="parsing",
                 model=self.model,
                 schema=ParsedReport,
-                temperature=0.0,
             )
         return self._llm
     
@@ -111,14 +129,18 @@ class AggregatedParser:
         """
         Parse extraction bundle into structured report.
         """
+        system_prompt: str = ""
+        user_prompt: str = ""
+
         if not bundle.has_content():
             logger.warning("No content to parse")
             return ParsedReport(warnings=["No financial tables found in extraction"])
         
+        # Build the prompt
+        system_prompt = self._get_system_prompt()
+        user_prompt = self._get_user_prompt(bundle)
+
         try:
-            # Build the prompt
-            system_prompt = self._get_system_prompt()
-            user_prompt = self._get_user_prompt(bundle)
             
             messages = [
                 ("system", system_prompt),
@@ -157,15 +179,48 @@ class AggregatedParser:
             )
             
             return result
-            
+
         except Exception as e:
             logger.error(f"Parsing failed: {e}")
-            return ParsedReport(warnings=[f"Parsing error: {str(e)}"])
+
+            # Fallback: ask the model for raw JSON and parse manually.
+            try:
+                raw_llm = create_llm_for_task("parsing", model=self.model)
+                fallback_messages = [
+                    (
+                        "system",
+                        system_prompt
+                        + "\n\nBẠN PHẢI trả về DUY NHẤT một JSON object hợp lệ, không markdown, không giải thích.",
+                    ),
+                    ("human", user_prompt + "\n\nChỉ trả về JSON."),
+                ]
+                resp = raw_llm.invoke(fallback_messages)
+                content = (getattr(resp, "content", None) or "").strip()
+
+                # Try to extract JSON from code fences or surrounding text.
+                import re
+                json_text = ""
+                m = re.search(r"```json\s*(\{.*?\})\s*```", content, flags=re.DOTALL | re.IGNORECASE)
+                if m:
+                    json_text = m.group(1)
+                else:
+                    start = content.find("{")
+                    end = content.rfind("}")
+                    if start != -1 and end != -1 and end > start:
+                        json_text = content[start : end + 1]
+                    else:
+                        json_text = content
+
+                data = ParsedReport.model_validate_json(json_text)
+                data.warnings.append(f"Parser fallback used due to structured parse error: {str(e)}")
+                return data
+            except Exception as e2:
+                return ParsedReport(warnings=[f"Parsing error: {str(e)}", f"Fallback parsing error: {str(e2)}"])
     
     def _get_system_prompt(self) -> str:
         """Generate system prompt for financial report parsing."""
         
-        return f"""Bạn là chuyên gia phân tích báo cáo tài chính Việt Nam.
+        return """Bạn là chuyên gia phân tích báo cáo tài chính Việt Nam.
 Nhiệm vụ: Trích xuất dữ liệu từ 3 báo cáo tài chính chính sang định dạng cấu trúc.
 
 ## QUY TẮC QUAN TRỌNG:
@@ -282,4 +337,3 @@ Nhiệm vụ: Trích xuất dữ liệu từ 3 báo cáo tài chính chính sang
                 "warnings": report.warnings,
             }
         }
-

@@ -4,14 +4,12 @@ OCR Services Module
 Provides OCR strategies for processing financial report PDFs.
 - MarkerOCRService: Local Marker with OpenRouter LLM (local)  
 - DoclingOCRService: Local Docling with Tesseract Vietnamese (local)
-- ConfidenceGatedOCRService: Hybrid Tesseract+Surya with confidence routing
 - HybridOcrModel: Docling-integrated hybrid OCR model (drop-in replacement)
 """
 
 from .base import OCRStrategy
 from .marker import MarkerOCRService  # Local Marker with OpenRouter
 from .docling import DoclingOCRService
-from .confidence_gated import ConfidenceGatedOCRService, ConfidenceGatedOptions
 
 # Docling-integrated hybrid OCR model (requires docling)
 try:
@@ -49,8 +47,6 @@ __all__ = [
     "OCRStrategy",
     "MarkerOCRService",
     "DoclingOCRService",
-    "ConfidenceGatedOCRService",
-    "ConfidenceGatedOptions",
     "HybridOcrModel",
     "HybridOcrOptions",
     "HybridPdfPipeline",

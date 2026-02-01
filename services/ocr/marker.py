@@ -8,12 +8,10 @@ Marker provides high-quality OCR with table structure recognition.
 import os
 from pathlib import Path
 from typing import Optional
+from .base import OCRStrategy
 from dotenv import load_dotenv
 
 load_dotenv()
-
-
-from .base import OCRStrategy
 
 class MarkerOCRService(OCRStrategy):
     """
@@ -113,15 +111,47 @@ class MarkerOCRService(OCRStrategy):
             Extracted markdown text
         """
         from marker.output import text_from_rendered
-        
-        p = Path(pdf_url)
-        if not p.exists():
-            raise FileNotFoundError(f"PDF not found: {p}")
-        
-        rendered = self.converter(str(p))
-        text, _, images = text_from_rendered(rendered)
-        
-        return text
+
+        def _is_http_url(s: str) -> bool:
+            return s.startswith("http://") or s.startswith("https://")
+
+        tmp_path: Optional[str] = None
+        try:
+            # Marker expects a local file path. If we receive a URL (e.g. Vietstock),
+            # download it to a temp file first.
+            if _is_http_url(pdf_url):
+                import tempfile
+                import requests
+
+                headers = {"User-Agent": "Mozilla/5.0"}
+                resp = requests.get(pdf_url, stream=True, headers=headers, timeout=60)
+                resp.raise_for_status()
+
+                with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+                    for chunk in resp.iter_content(chunk_size=1024 * 1024):
+                        if chunk:
+                            tmp.write(chunk)
+                    tmp_path = tmp.name
+                try:
+                    resp.close()
+                except Exception:
+                    pass
+                p = Path(tmp_path)
+            else:
+                p = Path(pdf_url)
+
+            if not p.exists():
+                raise FileNotFoundError(f"PDF not found: {p}")
+
+            rendered = self.converter(str(p))
+            text, _, _images = text_from_rendered(rendered)
+            return text
+        finally:
+            if tmp_path:
+                try:
+                    os.unlink(tmp_path)
+                except Exception:
+                    pass
 
     
     def process_image(self, image_path: str) -> str:
@@ -148,13 +178,6 @@ class MarkerOCRService(OCRStrategy):
 def marker_ocr(pdf_path: str, use_llm: bool = True) -> str:
     """
     Quick function to OCR a PDF with Marker.
-    
-    Args:
-        pdf_path: Path to PDF file
-        use_llm: Whether to use LLM for post-processing
-        
-    Returns:
-        Extracted markdown text
     """
     service = MarkerOCRService(use_llm=use_llm)
     return service.process_pdf(pdf_path)

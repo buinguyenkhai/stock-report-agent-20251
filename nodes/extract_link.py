@@ -1,8 +1,10 @@
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 from state import StockReportState
 from config import settings
 from logger import get_logger
 import regex as re
+from typing import Any, Dict, List, Optional, cast
+
+import requests
 
 logger = get_logger(__name__)
 
@@ -12,11 +14,11 @@ def prepare_next_extraction_node(state: StockReportState) -> StockReportState:
     pending = list(state.get("pending_requests", []))
     if not pending:
         logger.warning("No pending requests found")
-        return {**state, "error_message": "Không có yêu cầu nào đang chờ."}
+        return cast(StockReportState, {**state, "error_message": "Không có yêu cầu nào đang chờ."})
     next_request = pending.pop(0)
     logger.info(f"Đang xử lý yêu cầu: {next_request.request_id} - {next_request.stock_code} {next_request.period} {next_request.quarter}/{next_request.year}")
 
-    return {
+    return cast(StockReportState, {
         **state,
         "pending_requests": pending,
         "current_request_id": next_request.request_id,
@@ -25,12 +27,11 @@ def prepare_next_extraction_node(state: StockReportState) -> StockReportState:
         "period": next_request.period,
         "quarter": next_request.quarter,
         "consolidation_status": next_request.consolidation_status,
-        # Reset
         "report_link": None,
         "error_message": None,
         "clarification_prompt": None,
         "notification": None,
-    }
+    })
 
 def extract_report_link_node(state: StockReportState) -> StockReportState:
     """Node để trích xuất link PDF."""
@@ -39,63 +40,131 @@ def extract_report_link_node(state: StockReportState) -> StockReportState:
     
     if not stock_code:
         logger.error("Missing stock_code in state")
-        return {**state, "error_message": "Thiếu mã chứng khoán."}
+        return cast(StockReportState, {**state, "error_message": "Thiếu mã chứng khoán."})
     
     # Khởi tạo
     year = state.get("year")
     period = state.get("period")
     user_consol_status = state.get("consolidation_status")
-    output_state = { "report_link": None, "error_message": None, "clarification_prompt": None, "notification": None }
+    output_state: Dict[str, Any] = {"report_link": None, "error_message": None, "clarification_prompt": None, "notification": None}
+
+    def _merge(updates: Dict[str, Any]) -> StockReportState:
+        return cast(StockReportState, {**state, **updates})
+
+    def _get_token(session: requests.Session, page_url: str) -> str:
+        html = session.get(
+            page_url,
+            headers={"User-Agent": "Mozilla/5.0"},
+            timeout=max(10, int(settings.scraper_timeout / 1000)),
+        ).text
+        m = re.search(r"name=__RequestVerificationToken[^>]*value=([^\s>]+)", html)
+        if not m:
+            raise ValueError("Không lấy được __RequestVerificationToken từ trang Vietstock")
+        return m.group(1).strip("\"'")
+
+    def _fetch_documents(
+        session: requests.Session,
+        *,
+        code: str,
+        year: Optional[int],
+        doc_type: int = 1,
+        max_pages: int = 30,
+    ) -> List[Dict[str, Any]]:
+        page_url = f"{settings.vietstock_base_url}/{code.upper()}/tai-tai-lieu.htm?doctype={doc_type}"
+        token = _get_token(session, page_url)
+
+        headers = {
+            "User-Agent": "Mozilla/5.0",
+            "X-Requested-With": "XMLHttpRequest",
+            "Referer": page_url,
+        }
+
+        all_items: List[Dict[str, Any]] = []
+        seen_ids = set()
+        total_row: Optional[int] = None
+        page_size: Optional[int] = None
+
+        for page in range(1, max_pages + 1):
+            payload: Dict[str, Any] = {
+                "code": code.upper(),
+                "page": page,
+                "type": doc_type,
+                "__RequestVerificationToken": token,
+            }
+            if year:
+                payload["year"] = int(year)
+
+            resp = session.post(
+                f"{settings.vietstock_base_url}/data/getdocument",
+                data=payload,
+                headers=headers,
+                timeout=max(10, int(settings.scraper_wait_timeout / 1000)),
+            )
+            ct = (resp.headers.get("content-type") or "").lower()
+            if "application/json" not in ct:
+                raise ValueError(f"Vietstock API trả về content-type không hợp lệ: {ct}")
+
+            items = resp.json()
+            if not isinstance(items, list) or not items:
+                break
+
+            if page_size is None:
+                page_size = len(items)
+
+            # TotalRow is repeated on each item
+            if total_row is None:
+                try:
+                    total_row = int(items[0].get("TotalRow") or 0)
+                except Exception:
+                    total_row = 0
+
+            for it in items:
+                file_id = it.get("FileInfoID")
+                if file_id in seen_ids:
+                    continue
+                seen_ids.add(file_id)
+                all_items.append(it)
+
+            if total_row and len(all_items) >= total_row:
+                break
+
+            if page_size and len(items) < page_size:
+                break
+
+        return all_items
+
     try:
-        with sync_playwright() as p:
-            # Truy cập vietstock
-            browser = p.chromium.launch(headless=settings.scraper_headless)
-            page = browser.new_page()
-            url = f"{settings.vietstock_base_url}/{stock_code.upper()}/tai-tai-lieu.htm?doctype=1"
-            logger.debug(f"Navigating to: {url}")
-            page.goto(url, wait_until="domcontentloaded", timeout=settings.scraper_timeout)
-            if period != "Mới nhất" and year:
-                # Chọn năm
-                year_selector = 'select.dropdown-year'
-                page.wait_for_selector(year_selector, timeout=settings.scraper_timeout) 
-                page.select_option(year_selector, str(year))
-                page.wait_for_function("""
-                            (year) => {
-                                const firstReport = document.querySelector("div.p-t-xs p.i-b-d a");
-                                return firstReport && firstReport.innerText.includes(year);
-                            }
-                        """, arg=str(year), timeout=settings.scraper_wait_timeout)
-            reports_data = page.query_selector_all("div.p-t-xs p.i-b-d")
-            # Lấy tên và link của tất cả pdf báo cáo trong năm
-            scraped_reports = []
-            for row in reports_data:
-                title_element = row.query_selector("a")
-                if title_element:
-                    title = title_element.inner_text().strip()
-                    link = title_element.get_attribute('href')
-                    if link and not link.startswith('http'):
-                        link = "https://finance.vietstock.vn" + link
-                    # Bỏ thời gian tạo
-                    cleaned_title = re.sub(r'\s*\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2}\s*$', '', title)
-                    scraped_reports.append({"title": cleaned_title, "link": link})
-            browser.close()
-            logger.debug(f"Found {len(scraped_reports)} reports")
-            if not scraped_reports:
-                output_state["error_message"] = f"Không tìm thấy báo cáo nào cho mã {stock_code} năm {year}."
-                return {**state, **output_state}
-    except PlaywrightTimeoutError:
-        logger.error(f"Playwright timeout for stock {stock_code}")
-        output_state["error_message"] = f"Không tìm thấy thông tin cho mã chứng khoán '{stock_code}'. Vui lòng kiểm tra lại mã."
-        return {**state, **output_state}
+        session = requests.Session()
+        # If year not specified ("Mới nhất"), fetch without year filter.
+        api_items = _fetch_documents(session, code=stock_code, year=year if (period != "Mới nhất") else None)
+
+        scraped_reports = []
+        for it in api_items:
+            title = (it.get("Title") or "").strip()
+            link = (it.get("Url") or "").strip()
+            if not title or not link:
+                continue
+            cleaned_title = re.sub(r"\s*\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2}\s*$", "", title)
+            scraped_reports.append({"title": cleaned_title, "link": link, "_sort": it.get("LastUpdate") or it.get("FileInfoID")})
+
+        # Prefer newest first
+        scraped_reports.sort(key=lambda r: str(r.get("_sort") or ""), reverse=True)
+        for r in scraped_reports:
+            r.pop("_sort", None)
+
+        logger.debug(f"Found {len(scraped_reports)} reports")
+        if not scraped_reports:
+            output_state["error_message"] = f"Không tìm thấy báo cáo nào cho mã {stock_code}{' năm ' + str(year) if year else ''}."
+            return _merge(output_state)
     except Exception as e:
         logger.error(f"Scraping error: {e}", exc_info=True)
         output_state["error_message"] = f"Lỗi khi scraping web: {str(e)}"
-        return {**state, **output_state}
+        return _merge(output_state)
     
     if period == "Mới nhất":
         if not scraped_reports:
             output_state["error_message"] = f"Không tìm thấy báo cáo nào cho mã {stock_code}."
-            return {**state, **output_state}
+            return _merge(output_state)
             
         # Lọc theo Hợp nhất/Công ty mẹ nếu có yêu cầu
         if user_consol_status:
@@ -103,16 +172,16 @@ def extract_report_link_node(state: StockReportState) -> StockReportState:
                 if user_consol_status.lower() in report["title"].lower():
                     output_state["report_link"] = report["link"]
                     output_state["notification"] = f"Đã tìm thấy báo cáo mới nhất theo yêu cầu: '{report['title']}'."
-                    return {**state, **output_state}
+                    return _merge(output_state)
 
             output_state["error_message"] = f"Không tìm thấy báo cáo '{user_consol_status}' mới nhất cho mã {stock_code}."
-            return {**state, **output_state}
+            return _merge(output_state)
         else:
             # Nếu không yêu cầu, lấy cái đầu tiên (mới nhất)
             selected_report = scraped_reports[0]
             output_state["report_link"] = selected_report["link"]
             output_state["notification"] = f"Đã tìm thấy báo cáo mới nhất: '{selected_report['title']}'. (Mặc định lấy báo cáo đầu tiên trong danh sách)."
-            return {**state, **output_state}
+            return _merge(output_state)
 
     available_reports = {
         "Cả năm": {"Hợp nhất": [], "Công ty mẹ": []},
@@ -153,11 +222,11 @@ def extract_report_link_node(state: StockReportState) -> StockReportState:
             selected_report = found_reports[0]
             output_state["report_link"] = selected_report["link"]
             output_state["notification"] = f"Đã tìm thấy báo cáo '{selected_report['title']}' theo yêu cầu."
-            return {**state, **output_state}
+            return _merge(output_state)
         else:
             req_str = f"{period} Quý {user_quarter}" if period == "Quý" else period
             output_state["error_message"] = f"Không tìm thấy báo cáo '{req_str} - {user_consol_status}' bạn yêu cầu."
-            return {**state, **output_state}
+            return _merge(output_state)
 
     # Trường hợp 2: Agent tự tìm và hỏi lại
     possible_choices = []
@@ -209,17 +278,27 @@ def extract_report_link_node(state: StockReportState) -> StockReportState:
         if requested_quarter_failed:
              notification_text = f"Không tìm thấy báo cáo Quý {user_quarter}. " + notification_text
         output_state["notification"] = notification_text
-        output_state["possible_choices"] = possible_choices
-    else: 
-        prompt_text = ""
-        if requested_quarter_failed:
-            prompt_text = f"Không tìm thấy báo cáo cho Quý {user_quarter} Năm {year}. \nTuy nhiên, tôi đã tìm thấy các báo cáo gần nhất sau:\n"
-        else:
-            prompt_text = f"Tôi đã tìm thấy các báo cáo sau cho {stock_code.upper()} năm {year}:\n"
+        output_state["consolidation_status"] = selected.get("consolidation_status")
+        output_state["quarter"] = selected.get("quarter")
+    else:
+        # Streamlit UI cannot block on console input; auto-pick a reasonable default.
+        preferred = None
+        for c in possible_choices:
+            if c.get("consolidation_status") == "Hợp nhất":
+                preferred = c
+                break
+        selected = preferred or possible_choices[0]
 
-        for i, choice in enumerate(possible_choices):
-            prompt_text += f"{i+1}. {choice['title']}\n"
-        prompt_text += "Bạn muốn tôi phân tích báo cáo nào?"
-        output_state["clarification_prompt"] = prompt_text
-        output_state["possible_choices"] = possible_choices
-    return {**state, **output_state}
+        output_state["report_link"] = selected.get("link")
+        output_state["consolidation_status"] = selected.get("consolidation_status")
+        output_state["quarter"] = selected.get("quarter")
+
+        titles = ", ".join([c.get("title", "") for c in possible_choices[:3] if c.get("title")])
+        more = "" if len(possible_choices) <= 3 else f" (+{len(possible_choices) - 3} khác)"
+        output_state["notification"] = (
+            f"Tìm thấy nhiều báo cáo phù hợp ({len(possible_choices)}). "
+            f"Mặc định chọn: '{selected.get('title', '')}'. "
+            f"Các lựa chọn khác: {titles}{more}. "
+            "Nếu muốn chọn khác, hãy ghi rõ 'Hợp nhất' hoặc 'Công ty mẹ' trong truy vấn."
+        )
+    return _merge(output_state)

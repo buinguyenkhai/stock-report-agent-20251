@@ -7,8 +7,8 @@ from services.llm_factory import create_llm
 
 logger = get_logger(__name__)
 
-# Default model for extraction (cheap, long context)
-DEFAULT_EXTRACTION_MODEL = "mistralai/devstral-2512:free"
+# Default model for extraction
+DEFAULT_EXTRACTION_MODEL = "google/gemini-2.5-flash-lite-preview-09-2025"
 
 
 @dataclass
@@ -49,7 +49,7 @@ class BaseExtractor(ABC):
             self._llm = create_llm(
                 model=self.model,
                 temperature=0.0,
-                max_tokens=16000,  # Extractors return large chunks
+                max_tokens=64000,  # Extractors return large chunks
                 timeout=120,
             )
         return self._llm

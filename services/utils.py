@@ -28,13 +28,9 @@ def clean_markdown_tables(text: str) -> str:
 
     # 2. Join numeric tokens split by newlines (common in narrow columns)
     # Pattern: digit + . or , + newline + digit
-    # We only do this if it's within a pipe table row context
     def join_split_numbers(match):
         return match.group(1) + match.group(2)
 
-    # Simplified approach: join any digit., + newline + digit
-    # Risk: may join year and something else. Guard with table pipe check.
-    # For now, let's use a very safe version: only if it's like "1." \n "234"
     text = re.sub(r'(\d+[.,])\n(\d{3})(?=\s*\|)', r'\1\2', text)
 
     # 3. Normalize Vietnamese currency formatting (remove spaces in numbers)
@@ -57,3 +53,39 @@ def normalize_financial_text(text: str) -> str:
     text = re.sub(r'[ \t]+', ' ', text)
     
     return text.strip()
+
+
+def normalize_note_ref(ref: str) -> str:
+    """
+    Normalize a note reference for consistent lookup.
+    
+    Handles:
+    - OCR errors: "S1" -> "5.1", "s43" -> "5.43"
+    - Missing decimals: "53" -> "5.3", "510" -> "5.10" (common OCR error in BCTC)
+    - Leading zeros: "5.01" -> "5.1"
+    - Whitespace removal
+    - Uppercase for roman numerals
+    """
+    if not ref:
+        return ""
+    
+    ref = str(ref).strip()
+    
+    # Fix common OCR error: 'S' or 's' at start often means '5.'
+    ref = re.sub(r'^[sS](\d)', r'5.\1', ref)
+    
+    # Fix missing decimal point in note references like "53" -> "5.3", "510" -> "5.10"
+    # Only apply for patterns that look like note refs (5X, 5XX) not general numbers
+    if re.match(r'^5\d{1,2}$', ref) and '.' not in ref:
+        ref = '5.' + ref[1:]
+    
+    # Remove leading zeros after decimal: 5.01 -> 5.1
+    ref = re.sub(r'\.0+(\d)', r'.\1', ref)
+    
+    # Remove internal whitespace
+    ref = re.sub(r'\s+', '', ref)
+    
+    # Uppercase for consistency (V.01, v.01 -> V.01)
+    ref = ref.upper()
+    
+    return ref

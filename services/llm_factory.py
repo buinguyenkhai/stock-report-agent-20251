@@ -51,7 +51,7 @@ class LLMConfig:
             ),
             "parsing": cls(
                 temperature=0.0,
-                max_tokens=32000,     # Full financial report parsing needs more tokens
+                max_tokens=64000,     # Full financial report parsing needs more tokens
                 timeout=600,          # Longer timeout for complex documents
                 top_p=0.95,
                 frequency_penalty=0.1,
@@ -62,6 +62,16 @@ class LLMConfig:
                 temperature=0.0,
                 max_tokens=500,
                 timeout=60,
+                top_p=0.9,
+                frequency_penalty=0.0,
+                presence_penalty=0.0,
+                max_retries=3,
+            ),
+            # Single-call extraction of TM tables grouped by referenced notes_ref.
+            "notes_tables_by_ref": cls(
+                temperature=0.0,
+                max_tokens=64000,
+                timeout=300,
                 top_p=0.9,
                 frequency_penalty=0.0,
                 presence_penalty=0.0,

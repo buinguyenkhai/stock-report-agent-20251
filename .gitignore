@@ -1,9 +1,10 @@
 .env
-.venv
+.venv/
 **/__pycache__/
-.vscode
-.pytest_cache
-docling_source
-marker_source
-#results
-tests
+.vscode/
+.pytest_cache/
+data/
+results/
+docling_source/
+marker_source/
+tests/

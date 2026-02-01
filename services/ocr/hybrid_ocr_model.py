@@ -254,7 +254,7 @@ def _sanitize_surya_text(s: str) -> str:
         return ""
     # Normalize HTML-ish line breaks to spaces.
     s2 = re.sub(r"(?i)<\s*br\s*/?\s*>", " ", s2)
-    # Drop other tags (we don't want markup in table cells).
+    # Drop other tags.
     s2 = re.sub(r"<[^>]+>", " ", s2)
     # Normalize whitespace.
     s2 = s2.replace("\u00a0", " ")
@@ -416,7 +416,6 @@ def _is_suspicious_numeric_ocr(text: str) -> bool:
         return True
 
     # Unexpected junk characters in an otherwise numeric-like token.
-    # Keep this conservative: only trigger when we actually have digits.
     remainder = s
     remainder = re.sub(r"(?i)\b(vnd|vnđ|usd|eur)\b", "", remainder)
     remainder = remainder.replace("đ", "").replace("Đ", "").replace("₫", "")
@@ -855,8 +854,8 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     kind: ClassVar[Literal["tesseract"]] = "tesseract"
 
     # Confidence thresholds (0.0 - 1.0)
-    confidence_threshold: float = 0.7
-    number_confidence_threshold: float = 0.85
+    confidence_threshold: float = 0.9
+    number_confidence_threshold: float = 0.95
 
     # If True, route numeric-like cells to Surya regardless of confidence.
     # Default False so threshold sweeps are meaningful and faster.
@@ -874,7 +873,6 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     max_replacement_abs_len: int = 128
 
     # Match-back safety knobs
-    # NOTE: `require_same_charclass=False` by default because the baseline can be OCR garbage (e.g., '0y0tD024') while Surya produces valid digits.
     require_same_charclass: bool = False
     min_normalized_lcs_ratio: float = 0.15
 
@@ -923,8 +921,7 @@ class HybridOcrOptions(TesseractCliOcrOptions):
     # correct numbers that Tesseract scored moderately-high.
     numeric_accept_token_confidence_threshold: float = 0.85
 
-    # Semantic guardrail: only allow alnum->numeric rewrites in columns that are
-    # predominantly numeric (estimated from TSV word x-clusters inside inferred tables).
+    # Semantic guardrail: only allow alnum->numeric rewrites in columns that are predominantly numeric.
     numeric_column_min_ratio_for_alnum_to_numeric: float = 0.70
 
     # Numeric recovery: allow non-numeric/garbled baselines to be replaced with numeric
@@ -1142,7 +1139,7 @@ def _tesseract_word_min_conf_in_bbox(df_result, cell_bbox: BoundingBox) -> Optio
             if not txt:
                 continue
 
-            # Word bbox in the *region image* coordinate system (same as we use for cell bboxes below).
+            # Word bbox in the region image coordinate system.
             left = float(row.get("left") or 0.0)
             top = float(row.get("top") or 0.0)
             width = float(row.get("width") or 0.0)
@@ -1210,7 +1207,7 @@ def _tesseract_word_min_conf_for_text(df_result) -> Optional[float]:
 def _build_line_min_numeric_conf(df_result) -> dict[tuple[int, int, int], float]:
     """Return min numeric-like token confidence per TSV (block, par, line).
 
-    Tesseract TSV contains multi-level rows. For routing, using the *minimum* numeric-like
+    Tesseract TSV contains multi-level rows. For routing, using the minimum numeric-like
     word confidence inside a whole cell bbox is often too pessimistic (large boxes overlap
     many words). Instead, we compute a per-line key and use that as a proxy for
     token-level evidence for that cell.
@@ -2427,7 +2424,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                                 confidence=float(conf) / 100.0,
                                 rect=rect,
                             )
-                            # Store Tesseract TSV bbox in the *region image* coordinate system.
+                            # Store Tesseract TSV bbox in the region image coordinate system.
                             # This is what Surya needs when `page_image` is a cropped OCR region.
                             setattr(cell, "_region_bbox", bbox)
 
@@ -2523,12 +2520,11 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                             except Exception:
                                 pass
                             for c in region_cells:
-                                # IMPORTANT: routing/table overlap must use the same coordinate system.
+                                # routing/table overlap must use the same coordinate system.
                                 # - `table_boxes` are inferred from TSV word boxes (region-image pixel coords).
                                 # - We store each cell's original TSV bbox as `c._region_bbox` (same system).
                                 rb = getattr(c, "_region_bbox", None)
                                 if rb is None:
-                                    # Shouldn't happen for freshly created cells, but be safe.
                                     self._stats["skipped_missing_region_bbox"] = int(self._stats.get("skipped_missing_region_bbox", 0)) + 1
                                     continue
                                 in_table = any(_intersect_area(rb, tb) > 0 for tb in table_boxes)

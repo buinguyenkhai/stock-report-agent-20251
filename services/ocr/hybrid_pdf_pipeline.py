@@ -58,8 +58,8 @@ class HybridPdfPipeline(StandardPdfPipeline):
                     "force_full_page_ocr",
                     True,
                 ),
-                confidence_threshold=0.7,
-                number_confidence_threshold=0.85,
+                confidence_threshold=0.9,
+                number_confidence_threshold=0.95,
                 log_routing_stats=True,
             )
         
@@ -69,6 +69,6 @@ class HybridPdfPipeline(StandardPdfPipeline):
             options=hybrid_options,
             accelerator_options=self.pipeline_options.accelerator_options,
         )
-        # Expose stats to the caller via the pipeline instance (DocumentConverter caches pipelines).
+        # Expose stats to the caller via the pipeline instance.
         self._hybrid_ocr_model = model
         return model

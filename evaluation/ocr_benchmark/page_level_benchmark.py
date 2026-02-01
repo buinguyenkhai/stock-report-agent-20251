@@ -889,8 +889,6 @@ class PageLevelBenchmark:
         minimal_json: bool = False,
         # Per-company PDF page offsets applied as:
         #   pdf_page = dataset_page + offset
-        # Example: if the dataset page_number is 1-based after removing a cover page,
-        # and your local PDF still includes that cover page, you may need offset=+1.
         page_offsets: Optional[Dict[str, int]] = None,
         # Restrict evaluation to specific dataset page numbers (applies to every company).
         pages: Optional[List[int]] = None,
@@ -920,7 +918,6 @@ class PageLevelBenchmark:
         self._gt_by_company = None
         self._marker_service = None
         self._docling_service = None
-        self._hybrid_service = None
         self._prefer_cuda = None
 
     def _gt_passes_table_only(self, sample: VnPdfSample) -> bool:
@@ -1065,45 +1062,6 @@ class PageLevelBenchmark:
         finally:
             if os.path.exists(tmp_path):
                 os.unlink(tmp_path)
-    
-    def ocr_pdf_page_with_hybrid(self, pdf_path: Path, page_num: int) -> str:
-        """
-        Run OCR on a specific PDF page using Hybrid (Tesseract + Surya routing).
-        
-        Uses confidence-gated routing:
-        1. Extract page as image
-        2. Run Tesseract to get cells with confidence
-        3. Route low-confidence cells to Surya
-        4. Merge and return text
-        """
-        try:
-            # Extract page as high-resolution image
-            doc = fitz.open(pdf_path)
-            if page_num < 1 or page_num > len(doc):
-                doc.close()
-                return ""
-            
-            page = doc[page_num - 1]
-            zoom = self.dpi / 72  # Convert DPI to zoom factor
-            mat = fitz.Matrix(zoom, zoom)
-            pix = page.get_pixmap(matrix=mat)
-            
-            # Convert to PIL Image
-            img = Image.open(io.BytesIO(pix.tobytes("png")))
-            doc.close()
-            
-            # Lazy-load Hybrid service
-            if self._hybrid_service is None:
-                from services.ocr.confidence_gated import ConfidenceGatedOCRService
-                self._hybrid_service = ConfidenceGatedOCRService()
-            
-            # Process image with confidence-gated routing
-            ocr_text = self._hybrid_service.process_image(img)
-            return ocr_text
-            
-        except Exception as e:
-            logger.error(f"Hybrid OCR failed for page {page_num}: {e}")
-            return ""
     
     def ocr_pdf_page_with_hybrid_docling(self, pdf_path: Path, page_num: int) -> str:
         """
