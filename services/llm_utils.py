@@ -165,6 +165,9 @@ def extract_notes_tables_by_ref(
 
 Task: From the THUYET MINH (Notes) section of a Vietnamese BCTC, extract ONLY the markdown TABLES that belong to specific note references (TM refs).
 
+IMPORTANT: The 'notes' field must be a JSON ARRAY of objects, NOT a dictionary.
+Each object must have the structure: {{"ref": "...", "title": "...", "content": "..."}}
+
 Rules:
 - Output must be clean markdown tables only (pipes). Do NOT include narrative paragraphs.
 - Group tables under the requested note ref.
