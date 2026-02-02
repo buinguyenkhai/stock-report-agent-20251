@@ -1,13 +1,13 @@
-# Stock Report Agent
+# Stock Report Agent with Confidence-Gated Hybrid OCR
 
-Hệ thống AI Agent tự động trích xuất và hỗ trợ phân tích báo cáo tài chính doanh nghiệp Việt Nam, tối ưu cho luồng xử lý end-to-end.
+Hệ thống AI Agent tự động trích xuất và hỗ trợ phân tích báo cáo tài chính doanh nghiệp Việt Nam, tối ưu cho luồng xử lý end-to-end với Hybrid OCR (Docling + Surya).
 
 ## Tổng quan
 
 Agent tự động:
 1. **Hiểu yêu cầu** người dùng bằng tiếng Việt tự nhiên
 2. **Tìm và tải** báo cáo tài chính PDF từ Vietstock
-3. **Trích xuất nội dung** bằng OCR
+3. **Trích xuất nội dung** bằng Hybrid OCR (Docling + Surya)
 4. **Trích xuất cấu trúc** (Extract) - Tách 3 báo cáo chính từ OCR markdown
 5. **Parse dữ liệu** - Chuẩn hóa, chuyển đổi sang format JSON cấu trúc.
 6. **Tra cứu TM (Thuyết minh)** - Trích xuất TM dạng bảng theo `notes_ref` phát hiện trong 3 báo cáo
@@ -42,16 +42,17 @@ Parser thống nhất nhận output từ các extractors (BS/PL/CF + metadata):
 - Chuyển đổi đơn vị về VND (triệu VND × 1,000,000, tỷ VND × 1,000,000,000)
 - Xử lý số âm, định dạng tiếng Việt (1.234.567,89)
 
+## Kiến trúc OCR
+
+### Confidence-Gated Hybrid OCR
+
+![Hybrid OCR Architecture](readme_img/hybrid_ocr.png)
 
 ## Kiến trúc Agent
 
 ### Stock Report Agent Architecture
 
-![Stock Report Agent Architecture](readme_img/architecture_v2.png)
-
-### LangGraph
-
-![Agent Graph](readme_img/graph_v3.png)
+![Stock Report Agent Architecture](readme_img/architecture_v3.png)
 
 ### Các Node chính
 
@@ -151,6 +152,24 @@ python -m venv .venv
 # source .venv/bin/activate  # Linux/Mac
 
 # Cài đặt dependencies
+
+# Tesserocr
+
+# (Windows)
+pip install "https://github.com/simonflueckiger/tesserocr-windows_build/releases/download/tesserocr-v2.9.1-tesseract-5.5.1/tesserocr-2.9.1-cp314-cp314-win_amd64.whl"
+
+# (Linux)
+apt-get update -qq
+apt-get install -y -qq tesseract-ocr tesseract-ocr-vie libtesseract-dev libleptonica-dev
+
+# Torch (depends on your CUDA support)
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+
+# Fitz
+pip install fitz
+
+# Các thư viện còn lại
+
 pip install -r requirements.txt
 
 # Chỉnh sửa .env với API keys của bạn
@@ -162,8 +181,6 @@ streamlit run app.py
 python agent.py
 ```
 
-## Sử dụng (Đang cập nhật)
-
 ## OCR Benchmark
 
 Hệ thống benchmark OCR dựa trên dataset **VnPDF Financial Reports** từ HuggingFace.
@@ -174,7 +191,7 @@ Hệ thống benchmark OCR dựa trên dataset **VnPDF Financial Reports** từ 
 - **Content**: Vietnamese financial reports with page-level ground truth
 - **Companies**: AAA, ACB, FPT, MBB, MWG, SHB, TCB, VIB, VPB
 
-### Metrics (Primary Reporting)
+### Metrics
 
 | Metric | Description | Why It Matters |
 |--------|-------------|----------------|

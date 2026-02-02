@@ -8,7 +8,6 @@ datasets==4.5.0
 jiwer==4.0.0
 pytest==9.0.2
 pytest-cov==7.0.0
-fitz==0.0.1.dev2
 unidecode==1.4.0
 pymupdf==1.26.7
 streamlit==1.53.1
