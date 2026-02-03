@@ -155,8 +155,9 @@ python -m venv .venv
 
 # Tesserocr
 
-# (Windows)
-pip install "https://github.com/simonflueckiger/tesserocr-windows_build/releases/download/tesserocr-v2.9.1-tesseract-5.5.1/tesserocr-2.9.1-cp314-cp314-win_amd64.whl"
+# (Windows) 
+# Depends on python version check https://github.com/simonflueckiger/tesserocr-windows_build/releases
+pip install "https://github.com/simonflueckiger/tesserocr-windows_build/releases/download/tesserocr-v2.9.1-tesseract-5.5.1/tesserocr-2.9.1-cp311-cp311-win_amd64.whl"
 
 # (Linux)
 apt-get update -qq
