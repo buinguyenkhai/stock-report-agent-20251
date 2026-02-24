@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BenchmarkV2TableCells",
+  "type": "object",
+  "required": ["rows"],
+  "properties": {
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": { "$ref": "#/$defs/cell" }
+      }
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "cell": {
+      "type": "object",
+      "required": ["text"],
+      "properties": {
+        "text": { "type": "string" },
+        "row_span": { "type": "integer", "minimum": 1 },
+        "col_span": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}
+

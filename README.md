@@ -186,6 +186,61 @@ python agent.py
 
 Hệ thống benchmark OCR dựa trên dataset **VnPDF Financial Reports** từ HuggingFace.
 
+## OCR Benchmark v2 (Paper-Ready)
+
+Benchmark v2 tách khỏi dataset HF cũ để hỗ trợ bộ dữ liệu tự gán nhãn có nguồn gốc rõ ràng:
+- Bắt buộc `dev + test`
+- Split theo **company-heldout** (không overlap công ty giữa dev/test)
+- Protocol **single annotator, two-pass QA**
+- Đánh giá 2 tầng:
+  - Raw OCR markdown/table fidelity
+  - End-to-end structured output fidelity (đầu ra UI)
+
+Tài liệu protocol và schema:
+- `evaluation/benchmark_v2/PROTOCOL.md`
+- `evaluation/benchmark_v2/ANNOTATION_GUIDE.md`
+- `evaluation/benchmark_v2/schema/manifest.schema.json`
+- `evaluation/benchmark_v2/schema/structured.schema.json`
+- `evaluation/benchmark_v2/schema/table_cells.schema.json`
+
+Ví dụ manifest:
+- `evaluation/benchmark_v2/examples/manifest.example.json`
+
+Chạy benchmark v2:
+
+```bash
+python -m evaluation.benchmark_v2.predict \
+  --dataset-root data/benchmark_v2 \
+  --output-root results/hybrid_predictions \
+  --engine hybrid \
+  --split test \
+  --device cuda \
+  --hybrid-threshold 0.90 \
+  --hybrid-number-threshold 0.95
+```
+
+Sau đó chấm điểm:
+
+```bash
+python -m evaluation.benchmark_v2.run \
+  --dataset-root data/benchmark_v2 \
+  --predictions-root results/hybrid_predictions \
+  --engine-name hybrid_docling \
+  --split test \
+  --output results/benchmark_v2_hybrid_test.json
+```
+
+Tune hybrid knobs on `dev`:
+```bash
+python -m evaluation.benchmark_v2.tune_hybrid \
+  --dataset-root data/benchmark_v2 \
+  --work-root results/tuning_hybrid \
+  --device cuda \
+  --hybrid-thresholds 0.70,0.80,0.90 \
+  --hybrid-number-thresholds 0.85,0.90,0.95 \
+  --objective blended
+```
+
 ### Dataset
 
 - **Source**: [kiethuynhanh/vnpdf-financial-reports-dataset](https://huggingface.co/datasets/kiethuynhanh/vnpdf-financial-reports-dataset)

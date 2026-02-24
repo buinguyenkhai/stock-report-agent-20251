@@ -30,6 +30,16 @@ try:
         ErrorAnalyzer,
         ErrorAnalysisResult,
     )
+    from .benchmark_v2 import (
+        BenchmarkDatasetV2,
+        TableSample,
+        RawMetricResult,
+        calculate_raw_metrics,
+        StructuredMetricResult,
+        calculate_structured_metrics,
+        generate_predictions,
+        run_benchmark,
+    )
     
     __all__ = [
         # Dataset
@@ -48,6 +58,15 @@ try:
         # Error Analysis
         "ErrorAnalyzer",
         "ErrorAnalysisResult",
+        # Benchmark v2
+        "BenchmarkDatasetV2",
+        "TableSample",
+        "RawMetricResult",
+        "calculate_raw_metrics",
+        "StructuredMetricResult",
+        "calculate_structured_metrics",
+        "generate_predictions",
+        "run_benchmark",
     ]
 except ImportError as e:
     import sys

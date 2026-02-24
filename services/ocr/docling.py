@@ -9,6 +9,7 @@ from .base import OCRStrategy
 from PIL import Image
 import tempfile
 import os
+from typing import Any, Dict, Optional
 
 try:
     from .hybrid_ocr_model import HybridOcrOptions
@@ -18,9 +19,20 @@ except ImportError:
     HAS_HYBRID = False
 
 class DoclingOCRService(OCRStrategy):
-    def __init__(self, use_hybrid: bool = False):
+    def __init__(
+        self,
+        use_hybrid: bool = False,
+        device: str = "cuda",
+        lang: Optional[list[str]] = None,
+        hybrid_confidence_threshold: float = 0.9,
+        hybrid_number_confidence_threshold: float = 0.95,
+        hybrid_option_overrides: Optional[Dict[str, Any]] = None,
+    ):
+        lang = lang or ["vie"]
         self.pipeline_options = PdfPipelineOptions()
-        self.pipeline_options.accelerator_options.device = AcceleratorDevice.CUDA
+        self.pipeline_options.accelerator_options.device = (
+            AcceleratorDevice.CUDA if str(device).lower() == "cuda" else AcceleratorDevice.CPU
+        )
         self.pipeline_options.do_ocr = True
         self.pipeline_options.do_table_structure = True
         # Docling table post-processing: match detected text boxes into table cells.
@@ -33,14 +45,18 @@ class DoclingOCRService(OCRStrategy):
             from .hybrid_ocr_model import HybridOcrOptions
             from .hybrid_pdf_pipeline import HybridPdfPipeline
             self.ocr_options = HybridOcrOptions(
-                lang=['vie'],
+                lang=lang,
                 force_full_page_ocr=True,
-                confidence_threshold=0.9,
-                number_confidence_threshold=0.95
+                confidence_threshold=float(hybrid_confidence_threshold),
+                number_confidence_threshold=float(hybrid_number_confidence_threshold),
             )
+            if isinstance(hybrid_option_overrides, dict):
+                for key, value in hybrid_option_overrides.items():
+                    if hasattr(self.ocr_options, key):
+                        setattr(self.ocr_options, key, value)
             pipeline_cls = HybridPdfPipeline
         else:
-            self.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=['vie'])
+            self.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=lang)
             pipeline_cls = None
 
         self.pipeline_options.ocr_options = self.ocr_options
