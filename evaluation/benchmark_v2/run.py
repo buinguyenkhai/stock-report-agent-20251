@@ -12,7 +12,6 @@ from __future__ import annotations
 import argparse
 import json
 import random
-import statistics
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Literal, Optional
@@ -20,7 +19,7 @@ from typing import Any, Dict, Iterable, List, Literal, Optional
 from logger import get_logger
 
 from .dataset import BenchmarkDatasetV2, TableSample
-from .metrics_raw import calculate_raw_metrics
+from .metrics_raw import RawScope, calculate_raw_metrics
 from .metrics_structured import calculate_structured_metrics
 
 logger = get_logger(__name__)
@@ -91,8 +90,8 @@ def _bootstrap_ci(
 
 def _aggregate_results(results: List[SampleEvalResult], bootstrap_iters: int, seed: int) -> Dict[str, Any]:
     raw_fields = [
-        "format_agnostic_cer",
-        "format_agnostic_wer",
+        "table_only_cer",
+        "table_only_wer",
         "table_cell_f1",
         "number_f1",
     ]
@@ -164,6 +163,7 @@ def run_benchmark(
     strict_missing: bool = False,
     bootstrap_iters: int = 1000,
     seed: int = 42,
+    raw_scope: RawScope = "table_only",
 ) -> Dict[str, Any]:
     ds = BenchmarkDatasetV2(dataset_root)
     ds.validate(check_files=False)
@@ -189,7 +189,7 @@ def run_benchmark(
             try:
                 gt_md = _read_text(gt_md_path)
                 pred_md = _read_text(pred_md_path)
-                raw_metrics = calculate_raw_metrics(pred_md, gt_md).to_dict()
+                raw_metrics = calculate_raw_metrics(pred_md, gt_md, scope=raw_scope).to_dict()
             except Exception as e:
                 errors.append(f"raw_metrics_error: {e}")
         else:
@@ -230,6 +230,7 @@ def run_benchmark(
         "benchmark_version": "v2",
         "engine_name": engine_name,
         "split": split,
+        "raw_scope": raw_scope,
         "dataset_root": str(Path(dataset_root).resolve()),
         "predictions_root": str(pred_root.resolve()),
         "dataset_stats": dataset_stats,
@@ -250,6 +251,13 @@ def main() -> None:
     parser.add_argument("--strict-missing", action="store_true", help="Fail if any prediction file is missing")
     parser.add_argument("--bootstrap-iters", type=int, default=1000, help="Bootstrap iterations for confidence intervals")
     parser.add_argument("--seed", type=int, default=42, help="Random seed")
+    parser.add_argument(
+        "--raw-scope",
+        type=str,
+        default="table_only",
+        choices=["table_only"],
+        help="Raw OCR scoring scope",
+    )
     parser.add_argument("--output", type=str, default="results/benchmark_v2_results.json", help="Output JSON file path")
     args = parser.parse_args()
 
@@ -263,6 +271,7 @@ def main() -> None:
         strict_missing=bool(args.strict_missing),
         bootstrap_iters=int(args.bootstrap_iters),
         seed=int(args.seed),
+        raw_scope=args.raw_scope,  # type: ignore[arg-type]
     )
 
     out_path = Path(args.output)
@@ -281,4 +290,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

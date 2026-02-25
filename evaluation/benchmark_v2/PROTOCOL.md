@@ -4,7 +4,7 @@
 - Evaluate `balance_sheet`, `income_statement`, `cash_flow` tables only.
 - Exclude notes (`thuyet minh`) from core benchmark v1.
 - Report two layers:
-  - Raw OCR markdown/table fidelity
+  - Raw OCR table-only fidelity
   - End-to-end structured output fidelity
 
 ## Split Policy
@@ -27,15 +27,44 @@ Detailed annotation guide:
 - `evaluation/benchmark_v2/ANNOTATION_GUIDE.md`
 
 ## Dataset Artifacts Per Sample
+- `gt_csv/<sample_id>/cells.csv`
+- `gt_csv/<sample_id>/spans.csv`
+- `gt_csv/<sample_id>/rows.csv`
+- optional: `gt_csv/<sample_id>/meta.json`
 - `page_image_path`
 - `gt_markdown_path`
 - `gt_structured_path`
 - Optional: `gt_table_cells_path`
 - Optional: `source_pdf_path`
 
+If `source_pdf_path` is present, you can auto-render `page_image_path` for all samples:
+```bash
+python -m evaluation.benchmark_v2.render_page_images \
+  --dataset-root data/benchmark_v2 \
+  --split all \
+  --dpi 200
+```
+
+CSV-first annotation app:
+```bash
+streamlit run evaluation/benchmark_v2/annotation_app.py
+```
+
 ## Prediction File Convention
 - `<predictions_root>/<sample_id>.raw.md`
 - `<predictions_root>/<sample_id>.structured.json`
+
+## Raw Scoring Policy
+- Default raw scope is `table_only`.
+- CLI:
+```bash
+python -m evaluation.benchmark_v2.run \
+  --dataset-root data/benchmark_v2 \
+  --predictions-root results/hybrid_predictions \
+  --split test \
+  --raw-scope table_only \
+  --output results/benchmark_v2_hybrid_test.json
+```
 
 ## Running Evaluation
 Generate predictions first:

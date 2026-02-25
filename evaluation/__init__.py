@@ -15,6 +15,8 @@ Benchmark:
     PageLevelBenchmark - Page-by-page OCR evaluation with mean ± std
 """
 
+__all__ = []
+
 try:
     from .ocr_benchmark import (
         VnPdfDataset,
@@ -30,9 +32,35 @@ try:
         ErrorAnalyzer,
         ErrorAnalysisResult,
     )
+
+    __all__.extend(
+        [
+            "VnPdfDataset",
+            "VnPdfSample",
+            "calculate_format_agnostic_cer",
+            "calculate_content_word_recall",
+            "calculate_number_precision_recall_f1",
+            "calculate_all_metrics",
+            "PageLevelBenchmark",
+            "PageLevelBenchmarkResult",
+            "CompanyResult",
+            "PageResult",
+            "ErrorAnalyzer",
+            "ErrorAnalysisResult",
+        ]
+    )
+except ImportError as e:
+    import sys
+
+    print(f"Warning: could not import evaluation.ocr_benchmark: {e}", file=sys.stderr)
+
+try:
     from .benchmark_v2 import (
         BenchmarkDatasetV2,
         TableSample,
+        csv_to_canonical,
+        canonical_to_csv,
+        compute_pilot_metrics,
         RawMetricResult,
         calculate_raw_metrics,
         StructuredMetricResult,
@@ -40,35 +68,23 @@ try:
         generate_predictions,
         run_benchmark,
     )
-    
-    __all__ = [
-        # Dataset
-        "VnPdfDataset",
-        "VnPdfSample",
-        # Metrics
-        "calculate_format_agnostic_cer",
-        "calculate_content_word_recall",
-        "calculate_number_precision_recall_f1",
-        "calculate_all_metrics",
-        # Benchmark
-        "PageLevelBenchmark",
-        "PageLevelBenchmarkResult",
-        "CompanyResult",
-        "PageResult",
-        # Error Analysis
-        "ErrorAnalyzer",
-        "ErrorAnalysisResult",
-        # Benchmark v2
-        "BenchmarkDatasetV2",
-        "TableSample",
-        "RawMetricResult",
-        "calculate_raw_metrics",
-        "StructuredMetricResult",
-        "calculate_structured_metrics",
-        "generate_predictions",
-        "run_benchmark",
-    ]
+
+    __all__.extend(
+        [
+            "BenchmarkDatasetV2",
+            "TableSample",
+            "csv_to_canonical",
+            "canonical_to_csv",
+            "compute_pilot_metrics",
+            "RawMetricResult",
+            "calculate_raw_metrics",
+            "StructuredMetricResult",
+            "calculate_structured_metrics",
+            "generate_predictions",
+            "run_benchmark",
+        ]
+    )
 except ImportError as e:
     import sys
-    print(f"Error importing OCR benchmark: {e}", file=sys.stderr)
-    raise
+
+    print(f"Warning: could not import evaluation.benchmark_v2: {e}", file=sys.stderr)

@@ -147,7 +147,7 @@ git clone https://github.com/buinguyenkhai/stock-report-agent-20251.git
 cd stock-report-agent-20251
 
 # Tạo virtual environment
-python -m venv .venv
+python3 -m venv .venv
 .venv\Scripts\activate  # Windows
 # source .venv/bin/activate  # Linux/Mac
 
@@ -160,8 +160,8 @@ python -m venv .venv
 pip install "https://github.com/simonflueckiger/tesserocr-windows_build/releases/download/tesserocr-v2.9.1-tesseract-5.5.1/tesserocr-2.9.1-cp311-cp311-win_amd64.whl"
 
 # (Linux)
-apt-get update -qq
-apt-get install -y -qq tesseract-ocr tesseract-ocr-vie libtesseract-dev libleptonica-dev
+sudo apt-get update -qq
+sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-vie libtesseract-dev libleptonica-dev
 
 # Torch (depends on your CUDA support)
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
@@ -192,8 +192,9 @@ Benchmark v2 tách khỏi dataset HF cũ để hỗ trợ bộ dữ liệu tự 
 - Bắt buộc `dev + test`
 - Split theo **company-heldout** (không overlap công ty giữa dev/test)
 - Protocol **single annotator, two-pass QA**
+- Raw scoring policy: **table-only**
 - Đánh giá 2 tầng:
-  - Raw OCR markdown/table fidelity
+  - Raw OCR table-only fidelity
   - End-to-end structured output fidelity (đầu ra UI)
 
 Tài liệu protocol và schema:
@@ -205,6 +206,21 @@ Tài liệu protocol và schema:
 
 Ví dụ manifest:
 - `evaluation/benchmark_v2/examples/manifest.example.json`
+
+Render `images/<sample_id>.png` from `source_pdf_path` + `page_index`:
+
+```bash
+python -m evaluation.benchmark_v2.render_page_images \
+  --dataset-root data/benchmark_v2 \
+  --split all \
+  --dpi 200
+```
+
+Mở app gán nhãn CSV-first:
+
+```bash
+streamlit run evaluation/benchmark_v2/annotation_app.py
+```
 
 Chạy benchmark v2:
 
@@ -227,8 +243,15 @@ python -m evaluation.benchmark_v2.run \
   --predictions-root results/hybrid_predictions \
   --engine-name hybrid_docling \
   --split test \
+  --raw-scope table_only \
   --output results/benchmark_v2_hybrid_test.json
 ```
+
+Raw metrics trong benchmark v2:
+- `table_only_cer`
+- `table_only_wer`
+- `table_cell_f1`
+- `number_f1`
 
 Tune hybrid knobs on `dev`:
 ```bash

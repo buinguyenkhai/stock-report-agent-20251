@@ -18,25 +18,70 @@ Rules:
 
 ## 2. Required files per sample
 For each `sample_id`, store:
+- `gt_csv/<sample_id>/cells.csv`
+- `gt_csv/<sample_id>/spans.csv`
+- `gt_csv/<sample_id>/rows.csv`
+- optional: `gt_csv/<sample_id>/meta.json`
 - `images/<sample_id>.png` (or equivalent path in manifest)
 - `gt_markdown/<sample_id>.md`
 - `gt_structured/<sample_id>.json`
 - optional: `gt_cells/<sample_id>.json`
+
+CSV schema:
+- `cells.csv`: `row_idx,col_idx,text`
+- `spans.csv`: `row_idx,col_idx,row_span,col_span`
+- `rows.csv`: `statement,item_code,item_name,value,notes_ref,original_name`
+
+If your manifest includes `source_pdf_path`, generate images automatically:
+```bash
+python -m evaluation.benchmark_v2.render_page_images \
+  --dataset-root data/benchmark_v2 \
+  --split all \
+  --dpi 200
+```
+
+## 2.1 PDF Download Conventions (Important)
+- Put raw PDFs under `<dataset_root>/pdf/`.
+- File naming convention (recommended): `<COMPANY>_<REPORT_ID>.pdf`  
+  Example: `FPT_2024Q3.pdf`, `VCB_2024_annual.pdf`
+- `COMPANY` should be the ticker/code at the start of filename because auto-manifest infers company from prefix before first `_`.
+- Avoid spaces and special characters in filenames; prefer `[A-Z0-9_]`.
+- Keep one report per PDF file (do not concatenate unrelated reports).
+- Scanned PDFs are supported (auto-manifest reads page count only; OCR quality is handled later).
+- Suggested pilot size: start with 20 pages (mixed companies + statements), then scale.
+- No strict maximum file size/page count, but very large PDFs (>300 pages) should use `Max pages per PDF` in app to bootstrap gradually.
 
 Manifest fields to fill:
 - `annotator_id`: your ID
 - `annotation_passes`: set to `2`
 - `audited_by`: optional advisor/peer for audited subset
 
+Run annotation app (CSV-first):
+```bash
+streamlit run evaluation/benchmark_v2/annotation_app.py
+```
+If `manifest.json` is missing, the app now provides a setup wizard to create it
+(empty template or auto-generated from `pdf/*.pdf`).
+
+GUI-first workflow:
+1. Drop PDFs into `<dataset_root>/pdf`.
+2. Open app and click `Auto-Generate Manifest from pdf/*.pdf`.
+3. In `Dataset Ops`, click `Render Images from Manifest`.
+4. Review pages and click `Exclude Current Sample (Non-table)` for non-table pages.
+5. Annotate remaining pages in CSV editors and save canonical outputs.
+
 ## 3. Labeling order (important)
 Use this order for consistency:
 1. Read PDF page carefully (source of truth).
-2. Build canonical table markdown (`gt_markdown`).
-3. Build structured JSON (`gt_structured`) from that page:
-   - `balance_sheet.items[]`
-   - `income_statement.items[]`
-   - `cash_flow.items[]`
-4. Normalize numeric values to numeric type in JSON.
+2. Fill CSV pack in app:
+   - `cells.csv`
+   - `spans.csv`
+   - `rows.csv`
+3. Generate canonical outputs from CSV:
+   - `gt_markdown`
+   - `gt_structured`
+   - optional `gt_cells`
+4. Run pass-2 QA and update correction counters in `meta.json`.
 
 Do not copy from OCR output first. OCR output can be used only as a check after you finish manual labeling.
 
@@ -90,3 +135,7 @@ For 200 pages:
 
 This catches drift early and avoids costly relabeling near the end.
 
+Pilot gate for CSV-first:
+- `row_value_mismatch_rate = (row_key_corrections + value_corrections) / total_rows`
+- Pass threshold: `< 0.02`
+- Auto-fail if `unresolved_span_loss_blocker = true`

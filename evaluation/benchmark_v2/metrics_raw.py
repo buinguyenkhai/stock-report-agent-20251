@@ -1,7 +1,7 @@
 """
 Raw OCR metrics for benchmark v2.
 
-Focuses on table-markdown/text fidelity and numeric token correctness.
+Focuses on table-only markdown/text fidelity and numeric token correctness.
 """
 
 from __future__ import annotations
@@ -9,18 +9,20 @@ from __future__ import annotations
 import re
 from collections import Counter
 from dataclasses import asdict, dataclass
-from typing import Dict, Iterable, List, Tuple
+from typing import Dict, Iterable, List, Literal, Tuple
 
 from jiwer import cer as jiwer_cer
 from jiwer import wer as jiwer_wer
 
 from evaluation.ocr_benchmark.metrics import extract_numeric_tokens
 
+RawScope = Literal["table_only"]
+
 
 @dataclass
 class RawMetricResult:
-    format_agnostic_cer: float
-    format_agnostic_wer: float
+    table_only_cer: float
+    table_only_wer: float
     table_cell_f1: float
     number_f1: float
     number_precision: float
@@ -57,6 +59,25 @@ def _parse_markdown_pipe_cells(markdown_text: str) -> List[str]:
     return cells
 
 
+def _extract_table_only_text(markdown_text: str) -> str:
+    rows: List[str] = []
+    for line in (markdown_text or "").splitlines():
+        s = line.strip()
+        if s.count("|") < 2:
+            continue
+        parts = [p.strip() for p in s.split("|")]
+        if parts and parts[0] == "":
+            parts = parts[1:]
+        if parts and parts[-1] == "":
+            parts = parts[:-1]
+        if not parts:
+            continue
+        if all((set(p.replace(":", "").strip()) <= {"-"} and "-" in p) or p == "" for p in parts):
+            continue
+        rows.append(" | ".join(parts))
+    return "\n".join(rows)
+
+
 def _multiset_f1(hyp: Iterable[str], ref: Iterable[str]) -> Tuple[float, float, float, int, int, int]:
     hyp_c = Counter(hyp)
     ref_c = Counter(ref)
@@ -88,21 +109,32 @@ def _safe_wer(ref: str, hyp: str) -> float:
         return 1.0
 
 
-def calculate_raw_metrics(hypothesis_markdown: str, reference_markdown: str) -> RawMetricResult:
-    ref_clean = _normalize_text_for_edit_metrics(reference_markdown)
-    hyp_clean = _normalize_text_for_edit_metrics(hypothesis_markdown)
+def calculate_raw_metrics(
+    hypothesis_markdown: str,
+    reference_markdown: str,
+    *,
+    scope: RawScope = "table_only",
+) -> RawMetricResult:
+    if scope != "table_only":
+        raise ValueError(f"Unsupported raw scope: {scope}")
+
+    ref_table_text = _extract_table_only_text(reference_markdown)
+    hyp_table_text = _extract_table_only_text(hypothesis_markdown)
+
+    ref_clean = _normalize_text_for_edit_metrics(ref_table_text)
+    hyp_clean = _normalize_text_for_edit_metrics(hyp_table_text)
 
     ref_cells = [c.strip().lower() for c in _parse_markdown_pipe_cells(reference_markdown) if c.strip()]
     hyp_cells = [c.strip().lower() for c in _parse_markdown_pipe_cells(hypothesis_markdown) if c.strip()]
     table_f1, _, _, _, hyp_cell_count, ref_cell_count = _multiset_f1(hyp_cells, ref_cells)
 
-    ref_nums = extract_numeric_tokens(reference_markdown)
-    hyp_nums = extract_numeric_tokens(hypothesis_markdown)
+    ref_nums = extract_numeric_tokens(ref_table_text)
+    hyp_nums = extract_numeric_tokens(hyp_table_text)
     num_f1, num_p, num_r, _, _, _ = _multiset_f1(hyp_nums, ref_nums)
 
     return RawMetricResult(
-        format_agnostic_cer=_safe_cer(ref_clean, hyp_clean),
-        format_agnostic_wer=_safe_wer(ref_clean, hyp_clean),
+        table_only_cer=_safe_cer(ref_clean, hyp_clean),
+        table_only_wer=_safe_wer(ref_clean, hyp_clean),
         table_cell_f1=float(table_f1),
         number_f1=float(num_f1),
         number_precision=float(num_p),
@@ -110,4 +142,3 @@ def calculate_raw_metrics(hypothesis_markdown: str, reference_markdown: str) -> 
         reference_cell_count=int(ref_cell_count),
         hypothesis_cell_count=int(hyp_cell_count),
     )
-
