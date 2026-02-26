@@ -8,8 +8,10 @@ Run:
 from __future__ import annotations
 
 import json
+import csv
 from datetime import datetime, timezone
 import hashlib
+from io import StringIO
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 import sys
@@ -20,7 +22,9 @@ import streamlit as st
 
 try:
     from .csv_codec import (
+        CELLS_COLUMNS,
         ROWS_COLUMNS,
+        SPANS_COLUMNS,
         build_canonical_from_frames,
         canonical_to_csv,
         compute_pilot_metrics,
@@ -33,6 +37,7 @@ try:
         validate_csv_pack,
     )
     from .dataset import BenchmarkDatasetV2, TableSample
+    from .report_assembler import build_gt_structured_report_files
     from .render_page_images import render_page_images
 except ImportError:
     # Support "streamlit run evaluation/benchmark_v2/annotation_app.py"
@@ -41,7 +46,9 @@ except ImportError:
     if str(project_root) not in sys.path:
         sys.path.insert(0, str(project_root))
     from evaluation.benchmark_v2.csv_codec import (
+        CELLS_COLUMNS,
         ROWS_COLUMNS,
+        SPANS_COLUMNS,
         build_canonical_from_frames,
         canonical_to_csv,
         compute_pilot_metrics,
@@ -54,6 +61,7 @@ except ImportError:
         validate_csv_pack,
     )
     from evaluation.benchmark_v2.dataset import BenchmarkDatasetV2, TableSample
+    from evaluation.benchmark_v2.report_assembler import build_gt_structured_report_files
     from evaluation.benchmark_v2.render_page_images import render_page_images
 
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
@@ -354,6 +362,29 @@ def _render_dataset_ops(dataset_root: str) -> None:
             except Exception as e:
                 st.error(f"Render failed: {e}")
 
+        e1, e2 = st.columns(2)
+        assemble_split = e1.selectbox(
+            "Assemble GT structured split",
+            options=["all", "dev", "test"],
+            index=0,
+            key="ops_assemble_struct_split",
+        )
+        if e2.button("Build GT Report Structured Files", key="ops_assemble_structured"):
+            try:
+                counts = build_gt_structured_report_files(
+                    dataset_root=root,
+                    split=assemble_split,  # type: ignore[arg-type]
+                    output_dir="gt_structured_report",
+                    meta_dir="gt_structured_report_meta",
+                )
+                st.success(
+                    "Built report-level GT structured files: "
+                    f"total={counts['reports_total']} saved={counts['reports_saved']} "
+                    f"failed={counts['reports_failed']}"
+                )
+            except Exception as e:
+                st.error(f"Assemble failed: {e}")
+
 
 def get_sample_status(sample: TableSample, dataset_root: str | Path) -> str:
     meta = load_meta(sample.sample_id, dataset_root)
@@ -429,6 +460,125 @@ def _default_rows_df() -> pd.DataFrame:
     return pd.DataFrame(columns=list(ROWS_COLUMNS))
 
 
+def _normalize_csv_df(df: pd.DataFrame, required_columns: tuple[str, ...]) -> pd.DataFrame:
+    out = df.copy()
+    for c in required_columns:
+        if c not in out.columns:
+            out[c] = ""
+    return out[list(required_columns)].fillna("")
+
+
+def _read_csv_text_with_columns(
+    csv_text: str,
+    *,
+    required_columns: tuple[str, ...],
+    label: str,
+) -> pd.DataFrame:
+    text = (csv_text or "").strip()
+    if not text:
+        return pd.DataFrame(columns=list(required_columns))
+    if required_columns == CELLS_COLUMNS:
+        # cells.csv often contains pasted text with unquoted commas in `text`.
+        return _read_cells_csv_relaxed(text)
+    try:
+        df = pd.read_csv(StringIO(text), dtype=str)
+    except Exception as e:
+        raise ValueError(f"Invalid CSV for {label}: {e}") from e
+    return _normalize_csv_df(df, required_columns)
+
+
+def _read_csv_path_with_columns(
+    path: str | Path,
+    *,
+    required_columns: tuple[str, ...],
+    label: str,
+) -> pd.DataFrame:
+    p = Path(path)
+    if not p.exists():
+        raise FileNotFoundError(f"{label} not found: {p}")
+    return _read_csv_text_with_columns(
+        p.read_text(encoding="utf-8-sig"),
+        required_columns=required_columns,
+        label=label,
+    )
+
+
+def _empty_csv_df(required_columns: tuple[str, ...]) -> pd.DataFrame:
+    return pd.DataFrame(columns=list(required_columns))
+
+
+def _df_to_csv_text(df: pd.DataFrame, required_columns: tuple[str, ...]) -> str:
+    norm = _normalize_csv_df(df, required_columns)
+    return norm.to_csv(index=False)
+
+
+def _read_cells_csv_relaxed(csv_text: str) -> pd.DataFrame:
+    reader = csv.reader(StringIO(csv_text))
+    header = next(reader, None)
+    if header is None:
+        return _empty_csv_df(CELLS_COLUMNS)
+    header = [str(h).strip().lstrip("\ufeff") for h in header]
+    if len(header) < 2 or header[0] != "row_idx" or header[1] != "col_idx":
+        raise ValueError("cells.csv header must start with: row_idx,col_idx,text")
+
+    rows: list[dict[str, str]] = []
+    for i, rec in enumerate(reader, start=2):
+        if not rec or all(str(x).strip() == "" for x in rec):
+            continue
+        if len(rec) < 2:
+            raise ValueError(f"cells.csv line {i} must include row_idx,col_idx,text")
+        row_idx = str(rec[0]).strip()
+        col_idx = str(rec[1]).strip()
+        text = ",".join(str(x) for x in rec[2:]).strip() if len(rec) > 2 else ""
+        rows.append({"row_idx": row_idx, "col_idx": col_idx, "text": text})
+    return pd.DataFrame(rows, columns=list(CELLS_COLUMNS)).fillna("")
+
+
+def _model_prompt_for_image_to_csv(sample_id: str, image_hint: str) -> str:
+    return (
+        "You are a careful data annotator extracting a table from a single page image.\n\n"
+        "Task:\n"
+        "- Read ONLY the table on the image.\n"
+        "- Ignore all text outside the table.\n"
+        "- Return 3 CSV files: cells.csv, spans.csv, rows.csv.\n"
+        "- Keep Vietnamese text exactly as shown.\n\n"
+        "Sample context:\n"
+        f"- sample_id: {sample_id}\n"
+        f"- image_hint: {image_hint or '(not provided)'}\n\n"
+        "Schema requirements:\n"
+        "1) cells.csv columns (required): row_idx,col_idx,text\n"
+        "- row_idx and col_idx are 0-based integers.\n"
+        "- One record per visible table cell anchor.\n"
+        "- Keep reading order top-to-bottom, left-to-right.\n\n"
+        "2) spans.csv columns (required): row_idx,col_idx,row_span,col_span\n"
+        "- Add only merged cells (span > 1 in either dimension).\n"
+        "- row_idx,col_idx must point to an existing anchor in cells.csv.\n"
+        "- If there are no merged cells, return header only.\n\n"
+        "3) rows.csv columns (required): statement,item_code,item_name,value,notes_ref,original_name\n"
+        "- statement must be one of: balance_sheet, income_statement, cash_flow.\n"
+        "- Add one row per financial line item that has a numeric value.\n"
+        "- Keep item_name as printed.\n"
+        "- value is numeric text using dot decimal, no thousands separators.\n"
+        "- Parentheses negative numbers become negative (e.g., (123) -> -123).\n"
+        "- If item_code / notes_ref / original_name missing, keep empty.\n\n"
+        "Output format:\n"
+        "- Return exactly three fenced CSV blocks with these labels in this order:\n"
+        "```csv cells.csv\n"
+        "row_idx,col_idx,text\n"
+        "...\n"
+        "```\n"
+        "```csv spans.csv\n"
+        "row_idx,col_idx,row_span,col_span\n"
+        "...\n"
+        "```\n"
+        "```csv rows.csv\n"
+        "statement,item_code,item_name,value,notes_ref,original_name\n"
+        "...\n"
+        "```\n"
+        "- Do not output explanations."
+    )
+
+
 def _render_sample_header(sample: TableSample) -> None:
     st.markdown(
         f"**Sample** `{sample.sample_id}` | split: `{sample.split}` | company: `{sample.company}` | "
@@ -498,14 +648,46 @@ def main() -> None:
 
     _render_sample_header(sample)
 
-    toolbar = st.columns(2)
-    if toolbar[0].button("Import Canonical -> CSV"):
+    draft_cells_key = f"draft_cells_{sample.sample_id}"
+    draft_spans_key = f"draft_spans_{sample.sample_id}"
+    draft_rows_key = f"draft_rows_{sample.sample_id}"
+    editor_nonce_key = f"editor_nonce_{sample.sample_id}"
+    validation_state_key = f"validation_errors_{sample.sample_id}"
+
+    if draft_cells_key not in st.session_state:
+        initial_pack = load_csv_pack(sample.sample_id, dataset_root)
+        st.session_state[draft_cells_key] = initial_pack["cells"]
+        st.session_state[draft_spans_key] = initial_pack["spans"]
+        st.session_state[draft_rows_key] = initial_pack["rows"]
+        st.session_state[editor_nonce_key] = 0
+
+    def _set_drafts(*, cells: pd.DataFrame, spans: pd.DataFrame, rows: pd.DataFrame) -> None:
+        st.session_state[draft_cells_key] = _normalize_csv_df(cells, CELLS_COLUMNS)
+        st.session_state[draft_spans_key] = _normalize_csv_df(spans, SPANS_COLUMNS)
+        st.session_state[draft_rows_key] = _normalize_csv_df(rows, ROWS_COLUMNS)
+        st.session_state[editor_nonce_key] = int(st.session_state.get(editor_nonce_key, 0)) + 1
+        st.session_state[validation_state_key] = []
+
+    toolbar = st.columns(3)
+    if toolbar[0].button("Reload CSV from Disk"):
+        try:
+            pack = load_csv_pack(sample.sample_id, dataset_root)
+            _set_drafts(cells=pack["cells"], spans=pack["spans"], rows=pack["rows"])
+            st.success("Reloaded CSV pack from disk.")
+            st.rerun()
+        except Exception as e:
+            st.error(f"Reload failed: {e}")
+
+    if toolbar[1].button("Import Canonical -> CSV"):
         try:
             info = canonical_to_csv(sample.sample_id, dataset_root)
+            pack = load_csv_pack(sample.sample_id, dataset_root)
+            _set_drafts(cells=pack["cells"], spans=pack["spans"], rows=pack["rows"])
             st.success(f"Imported canonical files to CSV pack ({info['csv_root']}).")
+            st.rerun()
         except Exception as e:
             st.error(f"Import failed: {e}")
-    if toolbar[1].button("Exclude Current Sample (Non-table)"):
+    if toolbar[2].button("Exclude Current Sample (Non-table)"):
         try:
             before, after = _exclude_sample_from_manifest(
                 Path(dataset_root).resolve(), sample.sample_id, "non_table_page"
@@ -528,34 +710,206 @@ def main() -> None:
 
     with data_col:
         st.subheader("CSV Editors")
-        pack = load_csv_pack(sample.sample_id, dataset_root)
+        with st.expander("Direct CSV Import", expanded=False):
+            st.caption("Paste raw CSV text directly into editors (no canonical conversion).")
+            paste_cells_key = f"paste_cells_text_{sample.sample_id}"
+            paste_spans_key = f"paste_spans_text_{sample.sample_id}"
+            paste_rows_key = f"paste_rows_text_{sample.sample_id}"
+            if paste_cells_key not in st.session_state:
+                st.session_state[paste_cells_key] = _df_to_csv_text(
+                    st.session_state[draft_cells_key], CELLS_COLUMNS
+                )
+            if paste_spans_key not in st.session_state:
+                st.session_state[paste_spans_key] = _df_to_csv_text(
+                    st.session_state[draft_spans_key], SPANS_COLUMNS
+                )
+            if paste_rows_key not in st.session_state:
+                st.session_state[paste_rows_key] = _df_to_csv_text(
+                    st.session_state[draft_rows_key], ROWS_COLUMNS
+                )
+
+            p1, p2 = st.columns(2)
+            if p1.button("Load Current Editors into Paste Boxes", key=f"load_current_csv_{sample.sample_id}"):
+                st.session_state[paste_cells_key] = _df_to_csv_text(
+                    st.session_state[draft_cells_key], CELLS_COLUMNS
+                )
+                st.session_state[paste_spans_key] = _df_to_csv_text(
+                    st.session_state[draft_spans_key], SPANS_COLUMNS
+                )
+                st.session_state[paste_rows_key] = _df_to_csv_text(
+                    st.session_state[draft_rows_key], ROWS_COLUMNS
+                )
+                st.success("Loaded current editor data into paste boxes.")
+            if p2.button("Clear Paste Boxes", key=f"clear_paste_csv_{sample.sample_id}"):
+                st.session_state[paste_cells_key] = ""
+                st.session_state[paste_spans_key] = ""
+                st.session_state[paste_rows_key] = ""
+                st.success("Cleared paste boxes.")
+
+            paste_tabs = st.tabs(["cells.csv text", "spans.csv text", "rows.csv text"])
+            with paste_tabs[0]:
+                pasted_cells = st.text_area(
+                    "Paste cells.csv content",
+                    key=paste_cells_key,
+                    height=180,
+                )
+            with paste_tabs[1]:
+                pasted_spans = st.text_area(
+                    "Paste spans.csv content (optional)",
+                    key=paste_spans_key,
+                    height=180,
+                )
+            with paste_tabs[2]:
+                pasted_rows = st.text_area(
+                    "Paste rows.csv content",
+                    key=paste_rows_key,
+                    height=180,
+                )
+
+            if st.button("Apply Pasted CSV(s)", key=f"apply_paste_csv_{sample.sample_id}"):
+                try:
+                    base_cells = st.session_state[draft_cells_key]
+                    base_spans = st.session_state[draft_spans_key]
+                    base_rows = st.session_state[draft_rows_key]
+                    new_cells = base_cells
+                    new_spans = base_spans
+                    new_rows = base_rows
+                    imported = 0
+
+                    if pasted_cells.strip():
+                        new_cells = _read_csv_text_with_columns(
+                            pasted_cells,
+                            required_columns=CELLS_COLUMNS,
+                            label="cells.csv",
+                        )
+                        imported += 1
+                    if pasted_spans.strip():
+                        new_spans = _read_csv_text_with_columns(
+                            pasted_spans,
+                            required_columns=SPANS_COLUMNS,
+                            label="spans.csv",
+                        )
+                        imported += 1
+                    if pasted_rows.strip():
+                        new_rows = _read_csv_text_with_columns(
+                            pasted_rows,
+                            required_columns=ROWS_COLUMNS,
+                            label="rows.csv",
+                        )
+                        imported += 1
+
+                    if imported == 0:
+                        st.warning("Paste at least one CSV content block to import.")
+                    else:
+                        _set_drafts(cells=new_cells, spans=new_spans, rows=new_rows)
+                        st.success(f"Imported {imported} CSV block(s) into editor.")
+                        st.rerun()
+                except Exception as e:
+                    st.error(f"Pasted CSV import failed: {e}")
+
+            import_dir = st.text_input(
+                "Or import from folder path containing cells.csv/spans.csv/rows.csv",
+                value="",
+                key=f"csv_import_dir_{sample.sample_id}",
+            )
+            if st.button("Import from Folder", key=f"import_csv_dir_{sample.sample_id}"):
+                try:
+                    if not import_dir.strip():
+                        st.warning("Please enter a folder path.")
+                    else:
+                        p = Path(import_dir).expanduser().resolve()
+                        if not p.exists() or not p.is_dir():
+                            raise FileNotFoundError(f"Folder not found: {p}")
+                        cells_path = p / "cells.csv"
+                        spans_path = p / "spans.csv"
+                        rows_path = p / "rows.csv"
+
+                        current_cells = st.session_state[draft_cells_key]
+                        current_spans = st.session_state[draft_spans_key]
+                        current_rows = st.session_state[draft_rows_key]
+                        imported = 0
+
+                        if cells_path.exists():
+                            new_cells = _read_csv_path_with_columns(
+                                cells_path,
+                                required_columns=CELLS_COLUMNS,
+                                label="cells.csv",
+                            )
+                            imported += 1
+                        else:
+                            new_cells = current_cells
+
+                        if spans_path.exists():
+                            new_spans = _read_csv_path_with_columns(
+                                spans_path,
+                                required_columns=SPANS_COLUMNS,
+                                label="spans.csv",
+                            )
+                            imported += 1
+                        else:
+                            new_spans = _empty_csv_df(SPANS_COLUMNS)
+
+                        if rows_path.exists():
+                            new_rows = _read_csv_path_with_columns(
+                                rows_path,
+                                required_columns=ROWS_COLUMNS,
+                                label="rows.csv",
+                            )
+                            imported += 1
+                        else:
+                            new_rows = current_rows
+
+                        if imported == 0:
+                            st.warning(
+                                f"No CSV files found in `{p}`. Expected cells.csv/spans.csv/rows.csv."
+                            )
+                            return
+
+                        _set_drafts(cells=new_cells, spans=new_spans, rows=new_rows)
+                        st.success(f"Imported {imported} CSV file(s) from `{p}`.")
+                        st.rerun()
+                except Exception as e:
+                    st.error(f"Folder import failed: {e}")
+
+        editor_nonce = int(st.session_state.get(editor_nonce_key, 0))
         tabs = st.tabs(["cells.csv", "spans.csv", "rows.csv"])
         with tabs[0]:
             cells_df = st.data_editor(
-                pack["cells"],
+                st.session_state[draft_cells_key],
                 width='stretch',
                 num_rows="dynamic",
-                key=f"cells_editor_{sample.sample_id}",
+                key=f"cells_editor_{sample.sample_id}_{editor_nonce}",
             )
         with tabs[1]:
             spans_df = st.data_editor(
-                pack["spans"],
+                st.session_state[draft_spans_key],
                 width='stretch',
                 num_rows="dynamic",
-                key=f"spans_editor_{sample.sample_id}",
+                key=f"spans_editor_{sample.sample_id}_{editor_nonce}",
             )
         with tabs[2]:
             rows_df = st.data_editor(
-                pack["rows"] if not pack["rows"].empty else _default_rows_df(),
+                (
+                    st.session_state[draft_rows_key]
+                    if not st.session_state[draft_rows_key].empty
+                    else _default_rows_df()
+                ),
                 width='stretch',
                 num_rows="dynamic",
-                key=f"rows_editor_{sample.sample_id}",
+                key=f"rows_editor_{sample.sample_id}_{editor_nonce}",
             )
             st.caption(f"`statement` must be one of: {', '.join(STATEMENTS)}")
 
-        validation_state_key = f"validation_errors_{sample.sample_id}"
+        st.session_state[draft_cells_key] = _normalize_csv_df(cells_df, CELLS_COLUMNS)
+        st.session_state[draft_spans_key] = _normalize_csv_df(spans_df, SPANS_COLUMNS)
+        st.session_state[draft_rows_key] = _normalize_csv_df(rows_df, ROWS_COLUMNS)
+
         if auto_validate:
-            errors = validate_csv_frames(cells=cells_df, spans=spans_df, rows=rows_df)
+            errors = validate_csv_frames(
+                cells=st.session_state[draft_cells_key],
+                spans=st.session_state[draft_spans_key],
+                rows=st.session_state[draft_rows_key],
+            )
             st.session_state[validation_state_key] = errors
         else:
             errors = st.session_state.get(validation_state_key, [])
@@ -566,22 +920,30 @@ def main() -> None:
         do_save = actions[2].button("Save CSV + Canonical", type="primary")
 
         if do_validate:
-            errors = validate_csv_frames(cells=cells_df, spans=spans_df, rows=rows_df)
+            errors = validate_csv_frames(
+                cells=st.session_state[draft_cells_key],
+                spans=st.session_state[draft_spans_key],
+                rows=st.session_state[draft_rows_key],
+            )
             st.session_state[validation_state_key] = errors
 
         _render_validation(errors)
 
         if do_preview:
-            preview_errors = validate_csv_frames(cells=cells_df, spans=spans_df, rows=rows_df)
+            preview_errors = validate_csv_frames(
+                cells=st.session_state[draft_cells_key],
+                spans=st.session_state[draft_spans_key],
+                rows=st.session_state[draft_rows_key],
+            )
             st.session_state[validation_state_key] = preview_errors
             if preview_errors:
                 st.error("Please fix validation errors first.")
             else:
                 try:
                     preview = build_canonical_from_frames(
-                        cells=cells_df,
-                        spans=spans_df,
-                        rows=rows_df,
+                        cells=st.session_state[draft_cells_key],
+                        spans=st.session_state[draft_spans_key],
+                        rows=st.session_state[draft_rows_key],
                         validate=True,
                     )
                     p1, p2, p3 = st.columns(3)
@@ -600,7 +962,11 @@ def main() -> None:
                     st.error(f"Preview generation failed: {e}")
 
         if do_save:
-            save_errors = validate_csv_frames(cells=cells_df, spans=spans_df, rows=rows_df)
+            save_errors = validate_csv_frames(
+                cells=st.session_state[draft_cells_key],
+                spans=st.session_state[draft_spans_key],
+                rows=st.session_state[draft_rows_key],
+            )
             st.session_state[validation_state_key] = save_errors
             if save_errors:
                 st.error("Cannot save. Please fix validation errors first.")
@@ -609,9 +975,9 @@ def main() -> None:
                     save_csv_pack(
                         sample.sample_id,
                         dataset_root,
-                        cells=cells_df,
-                        spans=spans_df,
-                        rows=rows_df,
+                        cells=st.session_state[draft_cells_key],
+                        spans=st.session_state[draft_spans_key],
+                        rows=st.session_state[draft_rows_key],
                         meta_updates={"last_csv_save_at": _now_iso()},
                     )
                     out = csv_to_canonical(sample.sample_id, dataset_root, validate=True)

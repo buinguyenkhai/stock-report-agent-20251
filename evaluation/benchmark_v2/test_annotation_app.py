@@ -7,13 +7,16 @@ pytest.importorskip("streamlit")
 fitz = pytest.importorskip("fitz")
 
 from evaluation.benchmark_v2.annotation_app import (  # noqa: E402
+    _model_prompt_for_image_to_csv,
+    _normalize_csv_df,
+    _read_csv_text_with_columns,
     _build_manifest_from_pdfs,
     _exclude_sample_from_manifest,
     _render_page_image_if_missing,
     filter_samples,
     get_sample_status,
 )
-from evaluation.benchmark_v2.csv_codec import update_meta  # noqa: E402
+from evaluation.benchmark_v2.csv_codec import CELLS_COLUMNS, update_meta  # noqa: E402
 from evaluation.benchmark_v2.dataset import BenchmarkDatasetV2  # noqa: E402
 
 
@@ -147,3 +150,48 @@ def test_exclude_sample_from_manifest(tmp_path: Path) -> None:
     assert log_path.exists()
     log = json.loads(log_path.read_text(encoding="utf-8"))
     assert any(x.get("sample_id") == sample_id for x in log)
+
+
+def test_read_csv_text_and_normalize_columns() -> None:
+    csv_text = "row_idx,col_idx,text,extra\n0,1,Tiền,x\n1,1,100,y\n"
+    df = _read_csv_text_with_columns(
+        csv_text,
+        required_columns=CELLS_COLUMNS,
+        label="cells.csv",
+    )
+    assert list(df.columns) == list(CELLS_COLUMNS)
+    assert len(df) == 2
+    assert df.iloc[0]["text"] == "Tiền,x"
+
+    messy = df.rename(columns={"text": "txt"})
+    normalized = _normalize_csv_df(messy, CELLS_COLUMNS)
+    assert list(normalized.columns) == list(CELLS_COLUMNS)
+    assert normalized.iloc[0]["text"] == ""
+
+
+def test_read_cells_csv_relaxed_unquoted_comma_in_text() -> None:
+    csv_text = (
+        "row_idx,col_idx,text\n"
+        "19,0,1. Đầu tư vào công ty liên doanh, liên kết.\n"
+    )
+    df = _read_csv_text_with_columns(
+        csv_text,
+        required_columns=CELLS_COLUMNS,
+        label="cells.csv",
+    )
+    assert len(df) == 1
+    assert df.iloc[0]["row_idx"] == "19"
+    assert df.iloc[0]["col_idx"] == "0"
+    assert df.iloc[0]["text"] == "1. Đầu tư vào công ty liên doanh, liên kết."
+
+
+def test_model_prompt_contains_required_contract() -> None:
+    sample_id = "FPT_2025_p002"
+    image_path = "/tmp/images/FPT_2025_p002.png"
+    prompt = _model_prompt_for_image_to_csv(sample_id, image_path)
+    assert sample_id in prompt
+    assert image_path in prompt
+    assert "cells.csv" in prompt
+    assert "spans.csv" in prompt
+    assert "rows.csv" in prompt
+    assert "Do not output explanations." in prompt

@@ -5,6 +5,10 @@ This runner evaluates predictions against a manifest-defined dataset.
 Prediction file convention by default:
   <predictions_root>/<sample_id>.raw.md
   <predictions_root>/<sample_id>.structured.json
+
+Scoring policy:
+- raw metrics: per-page (sample-level), table-only
+- structured metrics: report-level (assembled from all pages sharing report_id)
 """
 
 from __future__ import annotations
@@ -14,17 +18,19 @@ import json
 import random
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Literal, Optional
+from typing import Any, Dict, Iterable, List, Literal, Optional, Tuple
 
 from logger import get_logger
 
 from .dataset import BenchmarkDatasetV2, TableSample
 from .metrics_raw import RawScope, calculate_raw_metrics
 from .metrics_structured import calculate_structured_metrics
+from .report_assembler import assemble_report_structured_from_pages
 
 logger = get_logger(__name__)
 
 SplitChoice = Literal["dev", "test", "all"]
+STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
 
 
 @dataclass
@@ -37,6 +43,20 @@ class SampleEvalResult:
     structured_available: bool
     raw_metrics: Optional[Dict[str, Any]]
     structured_metrics: Optional[Dict[str, Any]]
+    errors: List[str]
+
+
+@dataclass
+class ReportStructuredEvalResult:
+    report_id: str
+    split: str
+    company: str
+    page_count: int
+    sample_ids: List[str]
+    structured_available: bool
+    structured_metrics: Optional[Dict[str, Any]]
+    gt_merge_conflict_count: int
+    pred_merge_conflict_count: int
     errors: List[str]
 
 
@@ -88,7 +108,113 @@ def _bootstrap_ci(
     }
 
 
-def _aggregate_results(results: List[SampleEvalResult], bootstrap_iters: int, seed: int) -> Dict[str, Any]:
+def _normalize_text(s: str) -> str:
+    return " ".join((s or "").strip().lower().split())
+
+
+def _coerce_numeric(v: Any) -> float | None:
+    if v is None:
+        return None
+    if isinstance(v, (int, float)):
+        return float(v)
+    s = str(v).strip()
+    if not s:
+        return None
+    s = s.replace(",", "")
+    try:
+        return float(s)
+    except Exception:
+        return None
+
+
+def _row_key(statement: str, item: Dict[str, Any], *, fallback: str) -> str:
+    code = str(item.get("item_code") or "").strip()
+    if code:
+        return f"{statement}|code:{_normalize_text(code)}"
+    name = str(item.get("item_name") or "").strip()
+    if name:
+        return f"{statement}|name:{_normalize_text(name)}"
+    return f"{statement}|fallback:{fallback}"
+
+
+def _normalized_item(item: Dict[str, Any]) -> Dict[str, Any]:
+    return {
+        "item_code": item.get("item_code"),
+        "item_name": item.get("item_name"),
+        "value": item.get("value"),
+        "notes_ref": item.get("notes_ref"),
+        "original_name": item.get("original_name"),
+    }
+
+
+def _assemble_report_structured(
+    pages: List[Tuple[TableSample, Dict[str, Any]]],
+) -> Tuple[Dict[str, Any], List[Dict[str, Any]]]:
+    merged: Dict[str, Any] = {
+        "balance_sheet": {"items": []},
+        "income_statement": {"items": []},
+        "cash_flow": {"items": []},
+    }
+    key_index: Dict[str, Dict[str, int]] = {st: {} for st in STATEMENTS}
+    conflicts: List[Dict[str, Any]] = []
+
+    for sample, obj in sorted(pages, key=lambda x: (x[0].page_index, x[0].sample_id)):
+        for statement in STATEMENTS:
+            node = obj.get(statement, {})
+            items = node.get("items", []) if isinstance(node, dict) else []
+            if not isinstance(items, list):
+                continue
+            for i, raw_item in enumerate(items):
+                if not isinstance(raw_item, dict):
+                    continue
+                item = _normalized_item(raw_item)
+                key = _row_key(
+                    statement,
+                    item,
+                    fallback=f"{sample.sample_id}:{i}",
+                )
+                existing_idx = key_index[statement].get(key)
+                if existing_idx is None:
+                    key_index[statement][key] = len(merged[statement]["items"])
+                    merged[statement]["items"].append(item)
+                    continue
+
+                existing = merged[statement]["items"][existing_idx]
+                old_num = _coerce_numeric(existing.get("value"))
+                new_num = _coerce_numeric(item.get("value"))
+                if old_num != new_num:
+                    conflicts.append(
+                        {
+                            "sample_id": sample.sample_id,
+                            "statement": statement,
+                            "row_key": key,
+                            "kept_value": existing.get("value"),
+                            "dropped_value": item.get("value"),
+                        }
+                    )
+                # Fill missing metadata fields from later pages without replacing value.
+                for field in ("notes_ref", "original_name", "item_name", "item_code"):
+                    if (existing.get(field) is None or str(existing.get(field)).strip() == "") and (
+                        item.get(field) is not None and str(item.get(field)).strip() != ""
+                    ):
+                        existing[field] = item.get(field)
+
+    return merged, conflicts
+
+
+def _group_samples_by_report(samples: List[TableSample]) -> Dict[str, List[TableSample]]:
+    out: Dict[str, List[TableSample]] = {}
+    for s in samples:
+        out.setdefault(s.report_id, []).append(s)
+    return out
+
+
+def _aggregate_results(
+    sample_results: List[SampleEvalResult],
+    report_results: List[ReportStructuredEvalResult],
+    bootstrap_iters: int,
+    seed: int,
+) -> Dict[str, Any]:
     raw_fields = [
         "table_only_cer",
         "table_only_wer",
@@ -106,9 +232,16 @@ def _aggregate_results(results: List[SampleEvalResult], bootstrap_iters: int, se
 
     agg: Dict[str, Any] = {
         "counts": {
-            "samples_total": len(results),
-            "samples_raw_scored": sum(1 for r in results if r.raw_metrics is not None),
-            "samples_structured_scored": sum(1 for r in results if r.structured_metrics is not None),
+            "samples_total": len(sample_results),
+            "samples_raw_scored": sum(1 for r in sample_results if r.raw_metrics is not None),
+            "reports_total": len(report_results),
+            "reports_structured_scored": sum(
+                1 for r in report_results if r.structured_metrics is not None
+            ),
+            # Backward-compatible alias (structured scoring is now report-level only).
+            "samples_structured_scored": sum(
+                1 for r in report_results if r.structured_metrics is not None
+            ),
         },
         "raw": {},
         "structured": {},
@@ -116,28 +249,34 @@ def _aggregate_results(results: List[SampleEvalResult], bootstrap_iters: int, se
     }
 
     for field in raw_fields:
-        vals = [float(r.raw_metrics[field]) for r in results if r.raw_metrics is not None]
+        vals = [float(r.raw_metrics[field]) for r in sample_results if r.raw_metrics is not None]
         agg["raw"][field] = _bootstrap_ci(vals, iterations=bootstrap_iters, seed=seed)
 
     for field in struct_fields:
-        vals = [float(r.structured_metrics[field]) for r in results if r.structured_metrics is not None]
+        vals = [
+            float(r.structured_metrics[field])
+            for r in report_results
+            if r.structured_metrics is not None
+        ]
         agg["structured"][field] = _bootstrap_ci(vals, iterations=bootstrap_iters, seed=seed)
 
-    companies = sorted({r.company for r in results})
+    companies = sorted({r.company for r in sample_results} | {r.company for r in report_results})
     for c in companies:
-        subset = [r for r in results if r.company == c]
+        subset_samples = [r for r in sample_results if r.company == c]
+        subset_reports = [r for r in report_results if r.company == c]
         raw_num_f1 = [
             float(r.raw_metrics["number_f1"])
-            for r in subset
+            for r in subset_samples
             if r.raw_metrics is not None and "number_f1" in r.raw_metrics
         ]
         struct_row_f1 = [
             float(r.structured_metrics["row_f1"])
-            for r in subset
+            for r in subset_reports
             if r.structured_metrics is not None and "row_f1" in r.structured_metrics
         ]
         agg["per_company"][c] = {
-            "samples": len(subset),
+            "samples": len(subset_samples),
+            "reports": len(subset_reports),
             "raw_number_f1_mean": _mean(raw_num_f1),
             "structured_row_f1_mean": _mean(struct_row_f1),
         }
@@ -178,12 +317,9 @@ def run_benchmark(
     for s in split_samples:
         errors: List[str] = []
         gt_md_path = ds.dataset_root / s.gt_markdown_path
-        gt_struct_path = ds.dataset_root / s.gt_structured_path
         pred_md_path = pred_root / f"{s.sample_id}{raw_suffix}"
-        pred_struct_path = pred_root / f"{s.sample_id}{structured_suffix}"
 
         raw_metrics = None
-        struct_metrics = None
 
         if pred_md_path.exists():
             try:
@@ -198,19 +334,6 @@ def run_benchmark(
                 raise FileNotFoundError(msg)
             errors.append(msg)
 
-        if pred_struct_path.exists():
-            try:
-                gt_struct = _read_json(gt_struct_path)
-                pred_struct = _read_json(pred_struct_path)
-                struct_metrics = calculate_structured_metrics(pred_struct, gt_struct).to_dict()
-            except Exception as e:
-                errors.append(f"structured_metrics_error: {e}")
-        else:
-            msg = f"missing_structured_prediction: {pred_struct_path}"
-            if strict_missing:
-                raise FileNotFoundError(msg)
-            errors.append(msg)
-
         sample_results.append(
             SampleEvalResult(
                 sample_id=s.sample_id,
@@ -218,24 +341,90 @@ def run_benchmark(
                 company=s.company,
                 page_index=s.page_index,
                 raw_available=pred_md_path.exists(),
-                structured_available=pred_struct_path.exists(),
+                structured_available=False,
                 raw_metrics=raw_metrics,
-                structured_metrics=struct_metrics,
+                structured_metrics=None,
                 errors=errors,
             )
         )
 
-    summary = _aggregate_results(sample_results, bootstrap_iters=bootstrap_iters, seed=seed)
+    report_results: List[ReportStructuredEvalResult] = []
+    by_report = _group_samples_by_report(split_samples)
+    for report_id, report_samples in sorted(by_report.items()):
+        report_errors: List[str] = []
+        gt_pages: List[Tuple[TableSample, Dict[str, Any]]] = []
+        pred_pages: List[Tuple[TableSample, Dict[str, Any]]] = []
+
+        sorted_samples = sorted(report_samples, key=lambda x: (x.page_index, x.sample_id))
+        company = sorted_samples[0].company
+        split_name = sorted_samples[0].split
+
+        for s in sorted_samples:
+            gt_struct_path = ds.dataset_root / s.gt_structured_path
+            pred_struct_path = pred_root / f"{s.sample_id}{structured_suffix}"
+
+            try:
+                gt_obj = _read_json(gt_struct_path)
+                gt_pages.append((s, gt_obj))
+            except Exception as e:
+                report_errors.append(f"gt_structured_error {s.sample_id}: {e}")
+
+            if pred_struct_path.exists():
+                try:
+                    pred_obj = _read_json(pred_struct_path)
+                    pred_pages.append((s, pred_obj))
+                except Exception as e:
+                    report_errors.append(f"pred_structured_error {s.sample_id}: {e}")
+            else:
+                msg = f"missing_structured_prediction: {pred_struct_path}"
+                if strict_missing:
+                    raise FileNotFoundError(msg)
+                report_errors.append(msg)
+
+        struct_metrics = None
+        gt_conflicts: List[Dict[str, Any]] = []
+        pred_conflicts: List[Dict[str, Any]] = []
+        structured_available = len(pred_pages) == len(sorted_samples) and len(pred_pages) > 0
+        if not report_errors and structured_available:
+            gt_assembled, gt_meta = assemble_report_structured_from_pages(gt_pages)
+            pred_assembled, pred_meta = assemble_report_structured_from_pages(pred_pages)
+            gt_conflicts = list(gt_meta.get("conflicts", [])) if isinstance(gt_meta, dict) else []
+            pred_conflicts = list(pred_meta.get("conflicts", [])) if isinstance(pred_meta, dict) else []
+            struct_metrics = calculate_structured_metrics(pred_assembled, gt_assembled).to_dict()
+
+        report_results.append(
+            ReportStructuredEvalResult(
+                report_id=report_id,
+                split=split_name,
+                company=company,
+                page_count=len(sorted_samples),
+                sample_ids=[s.sample_id for s in sorted_samples],
+                structured_available=structured_available,
+                structured_metrics=struct_metrics,
+                gt_merge_conflict_count=len(gt_conflicts),
+                pred_merge_conflict_count=len(pred_conflicts),
+                errors=report_errors,
+            )
+        )
+
+    summary = _aggregate_results(
+        sample_results,
+        report_results,
+        bootstrap_iters=bootstrap_iters,
+        seed=seed,
+    )
     payload = {
         "benchmark_version": "v2",
         "engine_name": engine_name,
         "split": split,
         "raw_scope": raw_scope,
+        "structured_scope": "report_only",
         "dataset_root": str(Path(dataset_root).resolve()),
         "predictions_root": str(pred_root.resolve()),
         "dataset_stats": dataset_stats,
         "summary": summary,
         "sample_results": [asdict(r) for r in sample_results],
+        "report_structured_results": [asdict(r) for r in report_results],
     }
     return payload
 

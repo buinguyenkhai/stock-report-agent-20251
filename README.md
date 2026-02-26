@@ -195,7 +195,7 @@ Benchmark v2 tách khỏi dataset HF cũ để hỗ trợ bộ dữ liệu tự 
 - Raw scoring policy: **table-only**
 - Đánh giá 2 tầng:
   - Raw OCR table-only fidelity
-  - End-to-end structured output fidelity (đầu ra UI)
+  - End-to-end structured output fidelity (đầu ra UI, chấm ở mức report-level)
 
 Tài liệu protocol và schema:
 - `evaluation/benchmark_v2/PROTOCOL.md`
@@ -252,6 +252,10 @@ Raw metrics trong benchmark v2:
 - `table_only_wer`
 - `table_cell_f1`
 - `number_f1`
+
+Structured scoring trong benchmark v2:
+- chấm theo `report-level` (ghép từ nhiều page cùng `report_id`)
+- prediction step sẽ tạo thêm: `results/hybrid_predictions/report_structured/<report_id>.structured.json`
 
 Tune hybrid knobs on `dev`:
 ```bash

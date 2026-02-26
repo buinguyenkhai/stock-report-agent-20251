@@ -4,6 +4,9 @@ Prediction generator for benchmark v2.
 Generates per-sample files expected by evaluation.benchmark_v2.run:
   <output_root>/<sample_id>.raw.md
   <output_root>/<sample_id>.structured.json
+
+Also writes assembled report-level structured files when structured output is enabled:
+  <output_root>/report_structured/<report_id>.structured.json
 """
 
 from __future__ import annotations
@@ -25,6 +28,7 @@ from services.ocr.marker import MarkerOCRService
 from services.pipeline import create_pipeline
 
 from .dataset import BenchmarkDatasetV2
+from .report_assembler import build_prediction_structured_report_files
 
 logger = get_logger(__name__)
 
@@ -177,7 +181,14 @@ def generate_predictions(
         else None
     )
 
-    counts = {"total": 0, "success": 0, "failed": 0, "skipped": 0}
+    counts = {
+        "total": 0,
+        "success": 0,
+        "failed": 0,
+        "skipped": 0,
+        "reports_structured_saved": 0,
+        "reports_structured_failed": 0,
+    }
     errors: List[Dict[str, str]] = []
 
     run_config = {
@@ -241,6 +252,23 @@ def generate_predictions(
         err_path = out_root / "_prediction_errors.json"
         err_path.write_text(json.dumps(errors, ensure_ascii=False, indent=2), encoding="utf-8")
         logger.warning(f"Saved prediction errors to {err_path}")
+
+    if include_structured:
+        rep_counts = build_prediction_structured_report_files(
+            dataset_root=dataset_root,
+            predictions_root=out_root,
+            split=split,
+            structured_suffix=".structured.json",
+            output_dir="report_structured",
+            meta_dir="report_structured_meta",
+            strict_missing=False,
+        )
+        counts["reports_structured_saved"] = int(rep_counts.get("reports_saved", 0))
+        counts["reports_structured_failed"] = int(rep_counts.get("reports_failed", 0))
+        logger.info(
+            "Report-level structured files: "
+            f"saved={counts['reports_structured_saved']} failed={counts['reports_structured_failed']}"
+        )
 
     return counts
 

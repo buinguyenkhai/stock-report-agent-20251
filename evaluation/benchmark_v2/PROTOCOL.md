@@ -5,7 +5,7 @@
 - Exclude notes (`thuyet minh`) from core benchmark v1.
 - Report two layers:
   - Raw OCR table-only fidelity
-  - End-to-end structured output fidelity
+  - End-to-end structured output fidelity (report-level)
 
 ## Split Policy
 - Required splits: `dev` and `test`.
@@ -53,9 +53,14 @@ streamlit run evaluation/benchmark_v2/annotation_app.py
 ## Prediction File Convention
 - `<predictions_root>/<sample_id>.raw.md`
 - `<predictions_root>/<sample_id>.structured.json`
+- generated report-level structured:
+  - `<predictions_root>/report_structured/<report_id>.structured.json`
 
 ## Raw Scoring Policy
 - Default raw scope is `table_only`.
+- Structured scoring is always `report-level`:
+  - keep `gt_structured/<sample_id>.json` per page for annotation/debug
+  - benchmark assembles all pages in the same `report_id` (ordered by `page_index`) before scoring
 - CLI:
 ```bash
 python -m evaluation.benchmark_v2.run \

@@ -26,6 +26,7 @@ For each `sample_id`, store:
 - `gt_markdown/<sample_id>.md`
 - `gt_structured/<sample_id>.json`
 - optional: `gt_cells/<sample_id>.json`
+- optional (generated): `gt_structured_report/<report_id>.json`
 
 CSV schema:
 - `cells.csv`: `row_idx,col_idx,text`
@@ -69,6 +70,7 @@ GUI-first workflow:
 3. In `Dataset Ops`, click `Render Images from Manifest`.
 4. Review pages and click `Exclude Current Sample (Non-table)` for non-table pages.
 5. Annotate remaining pages in CSV editors and save canonical outputs.
+6. In `Dataset Ops`, click `Build GT Report Structured Files` to generate report-level structured JSON.
 
 ## 3. Labeling order (important)
 Use this order for consistency:
