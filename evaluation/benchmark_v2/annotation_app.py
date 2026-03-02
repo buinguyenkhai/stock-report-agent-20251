@@ -653,6 +653,7 @@ def main() -> None:
     draft_rows_key = f"draft_rows_{sample.sample_id}"
     editor_nonce_key = f"editor_nonce_{sample.sample_id}"
     validation_state_key = f"validation_errors_{sample.sample_id}"
+    eye_md_key = f"eye_markdown_{sample.sample_id}"
 
     if draft_cells_key not in st.session_state:
         initial_pack = load_csv_pack(sample.sample_id, dataset_root)
@@ -660,6 +661,15 @@ def main() -> None:
         st.session_state[draft_spans_key] = initial_pack["spans"]
         st.session_state[draft_rows_key] = initial_pack["rows"]
         st.session_state[editor_nonce_key] = 0
+    if eye_md_key not in st.session_state:
+        md_path = (Path(dataset_root).resolve() / sample.gt_markdown_path).resolve()
+        if md_path.exists():
+            try:
+                st.session_state[eye_md_key] = md_path.read_text(encoding="utf-8")
+            except Exception:
+                st.session_state[eye_md_key] = ""
+        else:
+            st.session_state[eye_md_key] = ""
 
     def _set_drafts(*, cells: pd.DataFrame, spans: pd.DataFrame, rows: pd.DataFrame) -> None:
         st.session_state[draft_cells_key] = _normalize_csv_df(cells, CELLS_COLUMNS)
@@ -699,7 +709,7 @@ def main() -> None:
         except Exception as e:
             st.error(f"Exclude failed: {e}")
 
-    image_col, data_col = st.columns([1, 2])
+    image_col, data_col = st.columns([1, 1])
     with image_col:
         st.subheader("Page Image")
         img_path = _render_page_image_if_missing(sample, dataset_root, dpi=200)
@@ -946,12 +956,11 @@ def main() -> None:
                         rows=st.session_state[draft_rows_key],
                         validate=True,
                     )
+                    st.session_state[eye_md_key] = preview["gt_markdown"]
                     p1, p2, p3 = st.columns(3)
                     with p1:
                         st.markdown("**gt_markdown preview (raw)**")
                         st.code(preview["gt_markdown"], language="markdown")
-                        st.markdown("**Rendered markdown (eye-test)**")
-                        st.markdown(preview["gt_markdown"])
                     with p2:
                         st.markdown("**gt_structured preview**")
                         st.json(preview["gt_structured"])
@@ -988,10 +997,52 @@ def main() -> None:
                         f"- {out['gt_table_cells_path']}"
                     )
                     md_text = Path(out["gt_markdown_path"]).read_text(encoding="utf-8")
+                    st.session_state[eye_md_key] = md_text
                     with st.expander("Rendered markdown (saved file eye-test)", expanded=False):
                         st.markdown(md_text)
                 except Exception as e:
                     st.error(f"Save failed: {e}")
+
+    with st.expander("Image vs Rendered Markdown (Eye-test)", expanded=False):
+        compare_l, compare_r = st.columns(2)
+        with compare_l:
+            st.markdown("**Page Image**")
+            if img_path and img_path.exists():
+                st.image(str(img_path), width='stretch')
+            else:
+                st.info("No page image available.")
+        with compare_r:
+            refresh_eye = st.button(
+                "Refresh From Current CSV",
+                key=f"refresh_eye_markdown_{sample.sample_id}",
+            )
+            if refresh_eye:
+                refresh_errors = validate_csv_frames(
+                    cells=st.session_state[draft_cells_key],
+                    spans=st.session_state[draft_spans_key],
+                    rows=st.session_state[draft_rows_key],
+                )
+                st.session_state[validation_state_key] = refresh_errors
+                if refresh_errors:
+                    st.error("Cannot refresh eye-test due to validation errors.")
+                else:
+                    try:
+                        refreshed = build_canonical_from_frames(
+                            cells=st.session_state[draft_cells_key],
+                            spans=st.session_state[draft_spans_key],
+                            rows=st.session_state[draft_rows_key],
+                            validate=True,
+                        )
+                        st.session_state[eye_md_key] = refreshed["gt_markdown"]
+                        st.success("Rendered markdown refreshed.")
+                    except Exception as e:
+                        st.error(f"Refresh failed: {e}")
+
+            eye_md = str(st.session_state.get(eye_md_key, "") or "")
+            if eye_md.strip():
+                st.markdown(eye_md)
+            else:
+                st.info("No rendered markdown yet. Use Preview/Save or refresh from current CSV.")
 
     with st.expander("Pilot Gate Metrics (20-page CSV-first acceptance)", expanded=False):
         selected_for_pilot = st.multiselect(

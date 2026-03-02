@@ -1,0 +1,127 @@
+[
+  {
+    "sample_id": "FPT_Q4_2025_p001",
+    "reason": "non_table_page",
+    "excluded_at": "2026-02-25T08:02:08.511100+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p002",
+    "reason": "non_table_page",
+    "excluded_at": "2026-02-25T08:02:10.581550+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p003",
+    "reason": "non_table_page",
+    "excluded_at": "2026-02-25T08:02:12.213021+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p009",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:37:36.297714+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p012",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:24.099328+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p013",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:28.995801+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p014",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:32.812910+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p015",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:37.562000+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p016",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:40.701142+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p017",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:44.478488+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p018",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:48.460296+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p019",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:52.526218+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p020",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:38:56.598933+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p021",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:39:42.529049+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p022",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:41:13.109366+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p023",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:41:17.506357+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p024",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:41:21.740517+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p025",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:52:12.623091+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p026",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:52:18.364255+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p027",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:52:21.854563+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p028",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:52:26.858960+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p029",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:52:31.961345+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p030",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:52:38.770967+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p031",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:52:42.913118+00:00"
+  },
+  {
+    "sample_id": "FPT_Q4_2025_p032",
+    "reason": "non_table_page",
+    "excluded_at": "2026-03-02T08:52:46.943960+00:00"
+  }
+]
