@@ -20,11 +20,8 @@
       "type": "object",
       "required": ["text"],
       "properties": {
-        "text": { "type": "string" },
-        "row_span": { "type": "integer", "minimum": 1 },
-        "col_span": { "type": "integer", "minimum": 1 }
+        "text": { "type": "string" }
       }
     }
   }
 }
-

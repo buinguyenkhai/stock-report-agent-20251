@@ -77,7 +77,7 @@ def _seed_canonical_files(root: Path, sample_id: str) -> None:
     )
     gt_cells = {
         "rows": [
-            [{"text": "Header", "col_span": 2}, {"text": "<MERGED>"}],
+            [{"text": "Name"}, {"text": "Value"}],
             [{"text": "Cash"}, {"text": "1,234"}],
         ]
     }
@@ -107,7 +107,7 @@ def test_csv_codec_round_trip_and_meta(tmp_path: Path) -> None:
     assert generated_struct["balance_sheet"]["items"][0]["value"] == pytest.approx(1234.0)
 
     generated_cells = json.loads(Path(out["gt_table_cells_path"]).read_text(encoding="utf-8"))
-    assert generated_cells["rows"][0][0]["col_span"] == 2
+    assert generated_cells["rows"][0][0]["text"] == "Name"
 
     update_meta(sample_id, dataset_root, {"pass1_done": True, "pass2_done": False})
     meta = load_meta(sample_id, dataset_root)
@@ -121,8 +121,6 @@ def test_csv_codec_round_trip_and_meta(tmp_path: Path) -> None:
             "total_rows": 100,
             "row_key_corrections": 1,
             "value_corrections": 0,
-            "span_corrections": 2,
-            "unresolved_span_loss_blocker": False,
         },
     )
     pilot = compute_pilot_metrics(dataset_root, sample_ids=[sample_id], threshold=0.02)
@@ -130,7 +128,7 @@ def test_csv_codec_round_trip_and_meta(tmp_path: Path) -> None:
     assert pilot["pass_gate"] is True
 
 
-def test_csv_codec_rejects_span_overlap(tmp_path: Path) -> None:
+def test_csv_codec_validates_without_spans(tmp_path: Path) -> None:
     dataset_root = tmp_path / "dataset"
     dataset_root.mkdir(parents=True, exist_ok=True)
     sample_id = "AAA_2024Q3_p001"
@@ -143,7 +141,6 @@ def test_csv_codec_rejects_span_overlap(tmp_path: Path) -> None:
             {"row_idx": 0, "col_idx": 1, "text": "B"},
         ]
     )
-    spans_df = pd.DataFrame([{"row_idx": 0, "col_idx": 0, "row_span": 1, "col_span": 2}])
     rows_df = pd.DataFrame(
         [
             {
@@ -161,11 +158,32 @@ def test_csv_codec_rejects_span_overlap(tmp_path: Path) -> None:
         sample_id,
         dataset_root,
         cells=cells_df,
-        spans=spans_df,
         rows=rows_df,
     )
     pack = load_csv_pack(sample_id, dataset_root)
     assert len(pack["cells"]) == 2
+    assert "spans" not in pack
 
-    with pytest.raises(ValueError, match="overlap"):
-        csv_to_canonical(sample_id, dataset_root, validate=True)
+    out = csv_to_canonical(sample_id, dataset_root, validate=True)
+    assert Path(out["gt_markdown_path"]).exists()
+
+
+def test_legacy_spans_csv_is_ignored(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_2024Q3_p001"
+    _write_manifest(dataset_root, sample_id)
+    _seed_canonical_files(dataset_root, sample_id)
+
+    csv_root = dataset_root / "gt_csv" / sample_id
+    csv_root.mkdir(parents=True, exist_ok=True)
+    (csv_root / "spans.csv").write_text(
+        "row_idx,col_idx,row_span,col_span\n0,0,1,2\n",
+        encoding="utf-8",
+    )
+
+    imported = canonical_to_csv(sample_id, dataset_root)
+    assert imported["cells_count"] > 0
+
+    pack = load_csv_pack(sample_id, dataset_root)
+    assert "spans" not in pack

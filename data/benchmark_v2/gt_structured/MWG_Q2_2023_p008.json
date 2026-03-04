@@ -1,0 +1,89 @@
+{
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": [
+      {
+        "item_code": "31",
+        "item_name": "11. Thu nhập khác",
+        "value": 22918085911.0,
+        "notes_ref": null,
+        "original_name": "11. Thu nhập khác"
+      },
+      {
+        "item_code": "32",
+        "item_name": "12. Chi phí khác",
+        "value": -91965669430.0,
+        "notes_ref": null,
+        "original_name": "12. Chi phí khác"
+      },
+      {
+        "item_code": "40",
+        "item_name": "13. Lỗ khác",
+        "value": -69047583519.0,
+        "notes_ref": null,
+        "original_name": "13. Lỗ khác"
+      },
+      {
+        "item_code": "50",
+        "item_name": "14. Tổng lợi nhuận kế toán trước thuế",
+        "value": 288751057463.0,
+        "notes_ref": null,
+        "original_name": "14. Tổng lợi nhuận kế toán trước thuế"
+      },
+      {
+        "item_code": "51",
+        "item_name": "15. Chi phí thuế TNDN hiện hành",
+        "value": -239958318356.0,
+        "notes_ref": "29.1",
+        "original_name": "15. Chi phí thuế TNDN hiện hành"
+      },
+      {
+        "item_code": "52",
+        "item_name": "16. Thu nhập thuế TNDN hoãn lại",
+        "value": -10097475282.0,
+        "notes_ref": "29.3",
+        "original_name": "16. Thu nhập thuế TNDN hoãn lại"
+      },
+      {
+        "item_code": "60",
+        "item_name": "17. Lợi nhuận sau thuế TNDN",
+        "value": 38695263825.0,
+        "notes_ref": null,
+        "original_name": "17. Lợi nhuận sau thuế TNDN"
+      },
+      {
+        "item_code": "61",
+        "item_name": "18. Lợi nhuận sau thuế của công ty mẹ",
+        "value": 38672609208.0,
+        "notes_ref": null,
+        "original_name": "18. Lợi nhuận sau thuế của công ty mẹ"
+      },
+      {
+        "item_code": "62",
+        "item_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
+        "value": 22654617.0,
+        "notes_ref": null,
+        "original_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát"
+      },
+      {
+        "item_code": "70",
+        "item_name": "20. Lãi cơ bản trên cổ phiếu",
+        "value": 26.0,
+        "notes_ref": "30",
+        "original_name": "20. Lãi cơ bản trên cổ phiếu"
+      },
+      {
+        "item_code": "71",
+        "item_name": "21. Lãi suy giảm trên cổ phiếu",
+        "value": 26.0,
+        "notes_ref": "30",
+        "original_name": "21. Lãi suy giảm trên cổ phiếu"
+      }
+    ]
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

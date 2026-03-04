@@ -1,0 +1,180 @@
+{
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": [
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "value": 45024501.0,
+        "notes_ref": "24",
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí lãi và các chi phí tương tự",
+        "value": -18118355.0,
+        "notes_ref": "25",
+        "original_name": "Chi phí lãi và các chi phí tương tự"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi thuần",
+        "value": 26906146.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi thuần"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động dịch vụ",
+        "value": 8699537.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động dịch vụ",
+        "value": -2120131.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động dịch vụ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ hoạt động dịch vụ",
+        "value": 6579406.0,
+        "notes_ref": "26",
+        "original_name": "Lãi thuần từ hoạt động dịch vụ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
+        "value": 1016826.0,
+        "notes_ref": "27",
+        "original_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
+        "value": 79300.0,
+        "notes_ref": "28",
+        "original_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
+        "value": 2109206.0,
+        "notes_ref": "29",
+        "original_name": "Lãi thuần từ mua bán chứng khoán đầu tư"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động khác",
+        "value": 5440789.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động khác",
+        "value": -4760369.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ hoạt động khác",
+        "value": 680420.0,
+        "notes_ref": "30",
+        "original_name": "Lãi thuần từ hoạt động khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "value": 64494.0,
+        "notes_ref": "31",
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng thu nhập hoạt động",
+        "value": 37435798.0,
+        "notes_ref": null,
+        "original_name": "Tổng thu nhập hoạt động"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động",
+        "value": -10629012.0,
+        "notes_ref": "32",
+        "original_name": "Chi phí hoạt động"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "value": 26806786.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí dự phòng rủi ro tín dụng",
+        "value": -3964450.0,
+        "notes_ref": "33",
+        "original_name": "Chi phí dự phòng rủi ro tín dụng"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng lợi nhuận trước thuế",
+        "value": 22842336.0,
+        "notes_ref": null,
+        "original_name": "Tổng lợi nhuận trước thuế"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+        "value": -4505335.0,
+        "notes_ref": "22.1",
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+        "value": 2992.0,
+        "notes_ref": "22.3",
+        "original_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí thuế thu nhập doanh nghiệp",
+        "value": -4502343.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 18339993.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi ích cổ đông không kiểm soát",
+        "value": -188130.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích cổ đông không kiểm soát"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "value": 18151863.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần của cổ đông của Ngân hàng"
+      }
+    ]
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

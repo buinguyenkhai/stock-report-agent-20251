@@ -198,8 +198,8 @@ def test_model_prompt_contains_required_contract() -> None:
     assert sample_id in prompt
     assert image_path in prompt
     assert "cells.csv" in prompt
-    assert "spans.csv" in prompt
     assert "rows.csv" in prompt
+    assert "Return 2 CSV files" in prompt
     assert "Do not output explanations." in prompt
 
 

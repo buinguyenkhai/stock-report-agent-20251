@@ -1,0 +1,173 @@
+{
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": [
+      {
+        "item_code": "01",
+        "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 70207689409.081,
+        "notes_ref": null,
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ"
+      },
+      {
+        "item_code": "02",
+        "item_name": "2 Các khoản giảm trừ",
+        "value": 94863843.843,
+        "notes_ref": null,
+        "original_name": "2 Các khoản giảm trừ"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 70112825565.238,
+        "notes_ref": "25",
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4 Giá vốn hàng bán",
+        "value": 44217420808.74,
+        "notes_ref": "26",
+        "original_name": "4 Giá vốn hàng bán"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 25895404756.498,
+        "notes_ref": null,
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6 Doanh thu hoạt động tài chính",
+        "value": 2977156211.981,
+        "notes_ref": "27",
+        "original_name": "6 Doanh thu hoạt động tài chính"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7 Chi phí tài chính",
+        "value": 1672045216.743,
+        "notes_ref": "28",
+        "original_name": "7 Chi phí tài chính"
+      },
+      {
+        "item_code": "23",
+        "item_name": "Trong đó: chi phí lãi vay",
+        "value": 809759601.156,
+        "notes_ref": null,
+        "original_name": "Trong đó: chi phí lãi vay"
+      },
+      {
+        "item_code": "24",
+        "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "value": 658024835.314,
+        "notes_ref": null,
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết"
+      },
+      {
+        "item_code": "25",
+        "item_name": "9 Chi phí bán hàng",
+        "value": 7580840383.875,
+        "notes_ref": null,
+        "original_name": "9 Chi phí bán hàng"
+      },
+      {
+        "item_code": "26",
+        "item_name": "10 Chi phí quản lý doanh nghiệp",
+        "value": 7330786998.828,
+        "notes_ref": null,
+        "original_name": "10 Chi phí quản lý doanh nghiệp"
+      },
+      {
+        "item_code": "30",
+        "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 12946913204.347,
+        "notes_ref": null,
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh"
+      },
+      {
+        "item_code": "31",
+        "item_name": "12 Thu nhập khác",
+        "value": 142891794.416,
+        "notes_ref": null,
+        "original_name": "12 Thu nhập khác"
+      },
+      {
+        "item_code": "32",
+        "item_name": "13 Chi phí khác",
+        "value": 50935701.459,
+        "notes_ref": null,
+        "original_name": "13 Chi phí khác"
+      },
+      {
+        "item_code": "40",
+        "item_name": "14 Lợi nhuận khác",
+        "value": 91956092.957,
+        "notes_ref": null,
+        "original_name": "14 Lợi nhuận khác"
+      },
+      {
+        "item_code": "50",
+        "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "value": 13038869297.304,
+        "notes_ref": null,
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế"
+      },
+      {
+        "item_code": "51",
+        "item_name": "16 Chi phí thuế TNDN hiện hành",
+        "value": 1918759235.4,
+        "notes_ref": null,
+        "original_name": "16 Chi phí thuế TNDN hiện hành"
+      },
+      {
+        "item_code": "52",
+        "item_name": "17 Chi phí thuế TNDN hoãn lại",
+        "value": -105413134.287,
+        "notes_ref": null,
+        "original_name": "17 Chi phí thuế TNDN hoãn lại"
+      },
+      {
+        "item_code": "60",
+        "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "value": 11225523196.191,
+        "notes_ref": null,
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp"
+      },
+      {
+        "item_code": "61",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "value": 9369309781.066,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ"
+      },
+      {
+        "item_code": "62",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "value": 1856213415.125,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát"
+      },
+      {
+        "item_code": "70",
+        "item_name": "19 Lãi cơ bản trên cổ phiếu",
+        "value": 5211.0,
+        "notes_ref": null,
+        "original_name": "19 Lãi cơ bản trên cổ phiếu"
+      },
+      {
+        "item_code": "71",
+        "item_name": "20 Lãi suy giảm trên cổ phiếu",
+        "value": 5211.0,
+        "notes_ref": null,
+        "original_name": "20 Lãi suy giảm trên cổ phiếu"
+      }
+    ]
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

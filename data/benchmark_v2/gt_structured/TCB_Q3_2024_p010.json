@@ -1,0 +1,208 @@
+{
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": [
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được",
+        "value": 40950948.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí lãi và các chi phí tương tự đã trả",
+        "value": -19607189.0,
+        "notes_ref": null,
+        "original_name": "Chi phí lãi và các chi phí tương tự đã trả"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động dịch vụ nhận được",
+        "value": 6167220.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ nhận được"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán)",
+        "value": 3170618.0,
+        "notes_ref": null,
+        "original_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán)"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập/(chi phí) khác",
+        "value": -1281019.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập/(chi phí) khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro",
+        "value": 829127.0,
+        "notes_ref": "30",
+        "original_name": "Tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền chi trả cho nhân viên và hoạt động quản lý, công vụ",
+        "value": -7438467.0,
+        "notes_ref": null,
+        "original_name": "Tiền chi trả cho nhân viên và hoạt động quản lý, công vụ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền thuế thu nhập thực nộp trong kỳ",
+        "value": -4031295.0,
+        "notes_ref": "22.1",
+        "original_name": "Tiền thuế thu nhập thực nộp trong kỳ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+        "value": 18759943.0,
+        "notes_ref": null,
+        "original_name": "Lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động"
+      },
+      {
+        "item_code": null,
+        "item_name": "Giảm các khoản tiền gửi và cấp tín dụng cho các TCTD khác",
+        "value": 13699517.0,
+        "notes_ref": null,
+        "original_name": "Giảm các khoản tiền gửi và cấp tín dụng cho các TCTD khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "(Tăng)/giảm các khoản về kinh doanh chứng khoán",
+        "value": 2228783.0,
+        "notes_ref": null,
+        "original_name": "(Tăng)/giảm các khoản về kinh doanh chứng khoán"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tăng các công cụ tài chính phái sinh và các tài sản tài chính khác",
+        "value": -125626.0,
+        "notes_ref": null,
+        "original_name": "Tăng các công cụ tài chính phái sinh và các tài sản tài chính khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tăng các khoản cho vay khách hàng",
+        "value": -107649209.0,
+        "notes_ref": null,
+        "original_name": "Tăng các khoản cho vay khách hàng"
+      },
+      {
+        "item_code": null,
+        "item_name": "Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản",
+        "value": -2182049.0,
+        "notes_ref": "10, 15",
+        "original_name": "Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản"
+      },
+      {
+        "item_code": null,
+        "item_name": "(Tăng)/giảm khác về tài sản hoạt động",
+        "value": 27306200.0,
+        "notes_ref": null,
+        "original_name": "(Tăng)/giảm khác về tài sản hoạt động"
+      },
+      {
+        "item_code": null,
+        "item_name": "Giảm các khoản tiền gửi, tiền vay các TCTD khác",
+        "value": -14710728.0,
+        "notes_ref": null,
+        "original_name": "Giảm các khoản tiền gửi, tiền vay các TCTD khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tăng tiền gửi của khách hàng",
+        "value": 40313649.0,
+        "notes_ref": null,
+        "original_name": "Tăng tiền gửi của khách hàng"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính)",
+        "value": 41358009.0,
+        "notes_ref": null,
+        "original_name": "Tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính)"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tăng/(giảm) khác về công nợ hoạt động",
+        "value": -1653243.0,
+        "notes_ref": null,
+        "original_name": "Tăng/(giảm) khác về công nợ hoạt động"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi từ các quỹ",
+        "value": -2358.0,
+        "notes_ref": "23.1",
+        "original_name": "Chi từ các quỹ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh",
+        "value": 17342888.0,
+        "notes_ref": null,
+        "original_name": "Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh"
+      },
+      {
+        "item_code": null,
+        "item_name": "Mua sắm tài sản cố định",
+        "value": -566668.0,
+        "notes_ref": null,
+        "original_name": "Mua sắm tài sản cố định"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền thu từ thanh lý tài sản cố định",
+        "value": 231484.0,
+        "notes_ref": null,
+        "original_name": "Tiền thu từ thanh lý tài sản cố định"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền chi từ thanh lý tài sản cố định",
+        "value": -40.0,
+        "notes_ref": null,
+        "original_name": "Tiền chi từ thanh lý tài sản cố định"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền thu từ bán bất động sản đầu tư",
+        "value": 736219.0,
+        "notes_ref": null,
+        "original_name": "Tiền thu từ bán bất động sản đầu tư"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền chi đầu tư, góp vốn vào các đơn vị khác",
+        "value": -1278.0,
+        "notes_ref": null,
+        "original_name": "Tiền chi đầu tư, góp vốn vào các đơn vị khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",
+        "value": 64494.0,
+        "notes_ref": "31",
+        "original_name": "Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư",
+        "value": 464211.0,
+        "notes_ref": null,
+        "original_name": "Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư"
+      }
+    ]
+  }
+}

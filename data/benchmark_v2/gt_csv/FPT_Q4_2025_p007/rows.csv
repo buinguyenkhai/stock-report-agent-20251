@@ -1,0 +1,17 @@
+statement,item_code,item_name,value,notes_ref,original_name
+balance_sheet,400,D. VỐN CHỦ SỞ HỮU,43751466292590,,D. VỐN CHỦ SỞ HỮU
+balance_sheet,410,I. Vốn chủ sở hữu,43748716292590,24,I. Vốn chủ sở hữu
+balance_sheet,411,1. Vốn góp của chủ sở hữu,17035071210000,,1. Vốn góp của chủ sở hữu
+balance_sheet,411a,- Cổ phiếu phổ thông có quyền biểu quyết,17035071210000,,- Cổ phiếu phổ thông có quyền biểu quyết
+balance_sheet,412,2. Thặng dư vốn cổ phần,49713213411,,2. Thặng dư vốn cổ phần
+balance_sheet,414,3. Vốn khác của chủ sở hữu,3499547369952,,3. Vốn khác của chủ sở hữu
+balance_sheet,417,4. Chênh lệch tỷ giá hối đoái,-70194908319,,4. Chênh lệch tỷ giá hối đoái
+balance_sheet,418,5. Quỹ đầu tư phát triển,1556932891952,,5. Quỹ đầu tư phát triển
+balance_sheet,420,6. Quỹ khác thuộc vốn chủ sở hữu,88263628887,,6. Quỹ khác thuộc vốn chủ sở hữu
+balance_sheet,421,7. Lợi nhuận sau thuế chưa phân phối,14324284500434,,7. Lợi nhuận sau thuế chưa phân phối
+balance_sheet,421a,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước,7399799985311,,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước
+balance_sheet,421b,- Lợi nhuận sau thuế chưa phân phối kỳ này,6924484515123,,- Lợi nhuận sau thuế chưa phân phối kỳ này
+balance_sheet,429,8. Lợi ích cổ đông không kiểm soát,7265098386273,,8. Lợi ích cổ đông không kiểm soát
+balance_sheet,430,II. Nguồn kinh phí và quỹ khác,275000000,,II. Nguồn kinh phí và quỹ khác
+balance_sheet,431,1. Nguồn kinh phí,275000000,,1. Nguồn kinh phí
+balance_sheet,440,TỔNG CỘNG NGUỒN VỐN (440=300+400),88089621779862,,TỔNG CỘNG NGUỒN VỐN (440=300+400)

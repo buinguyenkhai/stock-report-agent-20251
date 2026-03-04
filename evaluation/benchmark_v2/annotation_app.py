@@ -24,17 +24,13 @@ try:
     from .csv_codec import (
         CELLS_COLUMNS,
         ROWS_COLUMNS,
-        SPANS_COLUMNS,
         build_canonical_from_frames,
         canonical_to_csv,
-        compute_pilot_metrics,
         csv_to_canonical,
         load_csv_pack,
         load_meta,
         save_csv_pack,
-        update_meta,
         validate_csv_frames,
-        validate_csv_pack,
     )
     from .dataset import BenchmarkDatasetV2, TableSample
     from .report_assembler import build_gt_structured_report_files
@@ -48,17 +44,13 @@ except ImportError:
     from evaluation.benchmark_v2.csv_codec import (
         CELLS_COLUMNS,
         ROWS_COLUMNS,
-        SPANS_COLUMNS,
         build_canonical_from_frames,
         canonical_to_csv,
-        compute_pilot_metrics,
         csv_to_canonical,
         load_csv_pack,
         load_meta,
         save_csv_pack,
-        update_meta,
         validate_csv_frames,
-        validate_csv_pack,
     )
     from evaluation.benchmark_v2.dataset import BenchmarkDatasetV2, TableSample
     from evaluation.benchmark_v2.report_assembler import build_gt_structured_report_files
@@ -744,7 +736,7 @@ def _model_prompt_for_image_to_csv(sample_id: str, image_hint: str) -> str:
         "Task:\n"
         "- Read ONLY the table on the image.\n"
         "- Ignore all text outside the table.\n"
-        "- Return 3 CSV files: cells.csv, spans.csv, rows.csv.\n"
+        "- Return 2 CSV files: cells.csv, rows.csv.\n"
         "- Keep Vietnamese text exactly as shown.\n\n"
         "Sample context:\n"
         f"- sample_id: {sample_id}\n"
@@ -754,11 +746,7 @@ def _model_prompt_for_image_to_csv(sample_id: str, image_hint: str) -> str:
         "- row_idx and col_idx are 0-based integers.\n"
         "- One record per visible table cell anchor.\n"
         "- Keep reading order top-to-bottom, left-to-right.\n\n"
-        "2) spans.csv columns (required): row_idx,col_idx,row_span,col_span\n"
-        "- Add only merged cells (span > 1 in either dimension).\n"
-        "- row_idx,col_idx must point to an existing anchor in cells.csv.\n"
-        "- If there are no merged cells, return header only.\n\n"
-        "3) rows.csv columns (required): statement,item_code,item_name,value,notes_ref,original_name\n"
+        "2) rows.csv columns (required): statement,item_code,item_name,value,notes_ref,original_name\n"
         "- statement must be one of: balance_sheet, income_statement, cash_flow.\n"
         "- Add one row per financial line item that has a numeric value.\n"
         "- Keep item_name as printed.\n"
@@ -766,13 +754,9 @@ def _model_prompt_for_image_to_csv(sample_id: str, image_hint: str) -> str:
         "- Parentheses negative numbers become negative (e.g., (123) -> -123).\n"
         "- If item_code / notes_ref / original_name missing, keep empty.\n\n"
         "Output format:\n"
-        "- Return exactly three fenced CSV blocks with these labels in this order:\n"
+        "- Return exactly two fenced CSV blocks with these labels in this order:\n"
         "```csv cells.csv\n"
         "row_idx,col_idx,text\n"
-        "...\n"
-        "```\n"
-        "```csv spans.csv\n"
-        "row_idx,col_idx,row_span,col_span\n"
         "...\n"
         "```\n"
         "```csv rows.csv\n"
@@ -887,7 +871,6 @@ def main() -> None:
     _render_sample_header(sample, included=sample_included)
 
     draft_cells_key = f"draft_cells_{sample.sample_id}"
-    draft_spans_key = f"draft_spans_{sample.sample_id}"
     draft_rows_key = f"draft_rows_{sample.sample_id}"
     editor_nonce_key = f"editor_nonce_{sample.sample_id}"
     validation_state_key = f"validation_errors_{sample.sample_id}"
@@ -896,7 +879,6 @@ def main() -> None:
     if draft_cells_key not in st.session_state:
         initial_pack = load_csv_pack(sample.sample_id, dataset_root)
         st.session_state[draft_cells_key] = initial_pack["cells"]
-        st.session_state[draft_spans_key] = initial_pack["spans"]
         st.session_state[draft_rows_key] = initial_pack["rows"]
         st.session_state[editor_nonce_key] = 0
     if eye_md_key not in st.session_state:
@@ -909,9 +891,8 @@ def main() -> None:
         else:
             st.session_state[eye_md_key] = ""
 
-    def _set_drafts(*, cells: pd.DataFrame, spans: pd.DataFrame, rows: pd.DataFrame) -> None:
+    def _set_drafts(*, cells: pd.DataFrame, rows: pd.DataFrame) -> None:
         st.session_state[draft_cells_key] = _normalize_csv_df(cells, CELLS_COLUMNS)
-        st.session_state[draft_spans_key] = _normalize_csv_df(spans, SPANS_COLUMNS)
         st.session_state[draft_rows_key] = _normalize_csv_df(rows, ROWS_COLUMNS)
         st.session_state[editor_nonce_key] = int(st.session_state.get(editor_nonce_key, 0)) + 1
         st.session_state[validation_state_key] = []
@@ -920,7 +901,7 @@ def main() -> None:
     if toolbar[0].button("Reload CSV from Disk"):
         try:
             pack = load_csv_pack(sample.sample_id, dataset_root)
-            _set_drafts(cells=pack["cells"], spans=pack["spans"], rows=pack["rows"])
+            _set_drafts(cells=pack["cells"], rows=pack["rows"])
             st.success("Reloaded CSV pack from disk.")
             st.rerun()
         except Exception as e:
@@ -930,7 +911,7 @@ def main() -> None:
         try:
             info = canonical_to_csv(sample.sample_id, dataset_root)
             pack = load_csv_pack(sample.sample_id, dataset_root)
-            _set_drafts(cells=pack["cells"], spans=pack["spans"], rows=pack["rows"])
+            _set_drafts(cells=pack["cells"], rows=pack["rows"])
             st.success(f"Imported canonical files to CSV pack ({info['csv_root']}).")
             st.rerun()
         except Exception as e:
@@ -964,15 +945,10 @@ def main() -> None:
         with st.expander("Direct CSV Import", expanded=False):
             st.caption("Paste raw CSV text directly into editors (no canonical conversion).")
             paste_cells_key = f"paste_cells_text_{sample.sample_id}"
-            paste_spans_key = f"paste_spans_text_{sample.sample_id}"
             paste_rows_key = f"paste_rows_text_{sample.sample_id}"
             if paste_cells_key not in st.session_state:
                 st.session_state[paste_cells_key] = _df_to_csv_text(
                     st.session_state[draft_cells_key], CELLS_COLUMNS
-                )
-            if paste_spans_key not in st.session_state:
-                st.session_state[paste_spans_key] = _df_to_csv_text(
-                    st.session_state[draft_spans_key], SPANS_COLUMNS
                 )
             if paste_rows_key not in st.session_state:
                 st.session_state[paste_rows_key] = _df_to_csv_text(
@@ -984,20 +960,16 @@ def main() -> None:
                 st.session_state[paste_cells_key] = _df_to_csv_text(
                     st.session_state[draft_cells_key], CELLS_COLUMNS
                 )
-                st.session_state[paste_spans_key] = _df_to_csv_text(
-                    st.session_state[draft_spans_key], SPANS_COLUMNS
-                )
                 st.session_state[paste_rows_key] = _df_to_csv_text(
                     st.session_state[draft_rows_key], ROWS_COLUMNS
                 )
                 st.success("Loaded current editor data into paste boxes.")
             if p2.button("Clear Paste Boxes", key=f"clear_paste_csv_{sample.sample_id}"):
                 st.session_state[paste_cells_key] = ""
-                st.session_state[paste_spans_key] = ""
                 st.session_state[paste_rows_key] = ""
                 st.success("Cleared paste boxes.")
 
-            paste_tabs = st.tabs(["cells.csv text", "spans.csv text", "rows.csv text"])
+            paste_tabs = st.tabs(["cells.csv text", "rows.csv text"])
             with paste_tabs[0]:
                 pasted_cells = st.text_area(
                     "Paste cells.csv content",
@@ -1005,12 +977,6 @@ def main() -> None:
                     height=180,
                 )
             with paste_tabs[1]:
-                pasted_spans = st.text_area(
-                    "Paste spans.csv content (optional)",
-                    key=paste_spans_key,
-                    height=180,
-                )
-            with paste_tabs[2]:
                 pasted_rows = st.text_area(
                     "Paste rows.csv content",
                     key=paste_rows_key,
@@ -1020,10 +986,8 @@ def main() -> None:
             if st.button("Apply Pasted CSV(s)", key=f"apply_paste_csv_{sample.sample_id}"):
                 try:
                     base_cells = st.session_state[draft_cells_key]
-                    base_spans = st.session_state[draft_spans_key]
                     base_rows = st.session_state[draft_rows_key]
                     new_cells = base_cells
-                    new_spans = base_spans
                     new_rows = base_rows
                     imported = 0
 
@@ -1032,13 +996,6 @@ def main() -> None:
                             pasted_cells,
                             required_columns=CELLS_COLUMNS,
                             label="cells.csv",
-                        )
-                        imported += 1
-                    if pasted_spans.strip():
-                        new_spans = _read_csv_text_with_columns(
-                            pasted_spans,
-                            required_columns=SPANS_COLUMNS,
-                            label="spans.csv",
                         )
                         imported += 1
                     if pasted_rows.strip():
@@ -1052,14 +1009,14 @@ def main() -> None:
                     if imported == 0:
                         st.warning("Paste at least one CSV content block to import.")
                     else:
-                        _set_drafts(cells=new_cells, spans=new_spans, rows=new_rows)
+                        _set_drafts(cells=new_cells, rows=new_rows)
                         st.success(f"Imported {imported} CSV block(s) into editor.")
                         st.rerun()
                 except Exception as e:
                     st.error(f"Pasted CSV import failed: {e}")
 
             import_dir = st.text_input(
-                "Or import from folder path containing cells.csv/spans.csv/rows.csv",
+                "Or import from folder path containing cells.csv/rows.csv",
                 value="",
                 key=f"csv_import_dir_{sample.sample_id}",
             )
@@ -1072,11 +1029,9 @@ def main() -> None:
                         if not p.exists() or not p.is_dir():
                             raise FileNotFoundError(f"Folder not found: {p}")
                         cells_path = p / "cells.csv"
-                        spans_path = p / "spans.csv"
                         rows_path = p / "rows.csv"
 
                         current_cells = st.session_state[draft_cells_key]
-                        current_spans = st.session_state[draft_spans_key]
                         current_rows = st.session_state[draft_rows_key]
                         imported = 0
 
@@ -1090,16 +1045,6 @@ def main() -> None:
                         else:
                             new_cells = current_cells
 
-                        if spans_path.exists():
-                            new_spans = _read_csv_path_with_columns(
-                                spans_path,
-                                required_columns=SPANS_COLUMNS,
-                                label="spans.csv",
-                            )
-                            imported += 1
-                        else:
-                            new_spans = _empty_csv_df(SPANS_COLUMNS)
-
                         if rows_path.exists():
                             new_rows = _read_csv_path_with_columns(
                                 rows_path,
@@ -1112,18 +1057,18 @@ def main() -> None:
 
                         if imported == 0:
                             st.warning(
-                                f"No CSV files found in `{p}`. Expected cells.csv/spans.csv/rows.csv."
+                                f"No CSV files found in `{p}`. Expected cells.csv/rows.csv."
                             )
                             return
 
-                        _set_drafts(cells=new_cells, spans=new_spans, rows=new_rows)
+                        _set_drafts(cells=new_cells, rows=new_rows)
                         st.success(f"Imported {imported} CSV file(s) from `{p}`.")
                         st.rerun()
                 except Exception as e:
                     st.error(f"Folder import failed: {e}")
 
         editor_nonce = int(st.session_state.get(editor_nonce_key, 0))
-        tabs = st.tabs(["cells.csv", "spans.csv", "rows.csv"])
+        tabs = st.tabs(["cells.csv", "rows.csv"])
         with tabs[0]:
             cells_df = st.data_editor(
                 st.session_state[draft_cells_key],
@@ -1132,13 +1077,6 @@ def main() -> None:
                 key=f"cells_editor_{sample.sample_id}_{editor_nonce}",
             )
         with tabs[1]:
-            spans_df = st.data_editor(
-                st.session_state[draft_spans_key],
-                width='stretch',
-                num_rows="dynamic",
-                key=f"spans_editor_{sample.sample_id}_{editor_nonce}",
-            )
-        with tabs[2]:
             rows_df = st.data_editor(
                 (
                     st.session_state[draft_rows_key]
@@ -1152,13 +1090,11 @@ def main() -> None:
             st.caption(f"`statement` must be one of: {', '.join(STATEMENTS)}")
 
         st.session_state[draft_cells_key] = _normalize_csv_df(cells_df, CELLS_COLUMNS)
-        st.session_state[draft_spans_key] = _normalize_csv_df(spans_df, SPANS_COLUMNS)
         st.session_state[draft_rows_key] = _normalize_csv_df(rows_df, ROWS_COLUMNS)
 
         if auto_validate:
             errors = validate_csv_frames(
                 cells=st.session_state[draft_cells_key],
-                spans=st.session_state[draft_spans_key],
                 rows=st.session_state[draft_rows_key],
             )
             st.session_state[validation_state_key] = errors
@@ -1173,7 +1109,6 @@ def main() -> None:
         if do_validate:
             errors = validate_csv_frames(
                 cells=st.session_state[draft_cells_key],
-                spans=st.session_state[draft_spans_key],
                 rows=st.session_state[draft_rows_key],
             )
             st.session_state[validation_state_key] = errors
@@ -1183,7 +1118,6 @@ def main() -> None:
         if do_preview:
             preview_errors = validate_csv_frames(
                 cells=st.session_state[draft_cells_key],
-                spans=st.session_state[draft_spans_key],
                 rows=st.session_state[draft_rows_key],
             )
             st.session_state[validation_state_key] = preview_errors
@@ -1193,7 +1127,6 @@ def main() -> None:
                 try:
                     preview = build_canonical_from_frames(
                         cells=st.session_state[draft_cells_key],
-                        spans=st.session_state[draft_spans_key],
                         rows=st.session_state[draft_rows_key],
                         validate=True,
                     )
@@ -1214,7 +1147,6 @@ def main() -> None:
         if do_save:
             save_errors = validate_csv_frames(
                 cells=st.session_state[draft_cells_key],
-                spans=st.session_state[draft_spans_key],
                 rows=st.session_state[draft_rows_key],
             )
             st.session_state[validation_state_key] = save_errors
@@ -1226,7 +1158,6 @@ def main() -> None:
                         sample.sample_id,
                         dataset_root,
                         cells=st.session_state[draft_cells_key],
-                        spans=st.session_state[draft_spans_key],
                         rows=st.session_state[draft_rows_key],
                         meta_updates={"last_csv_save_at": _now_iso()},
                     )
@@ -1239,8 +1170,6 @@ def main() -> None:
                     )
                     md_text = Path(out["gt_markdown_path"]).read_text(encoding="utf-8")
                     st.session_state[eye_md_key] = md_text
-                    with st.expander("Rendered markdown (saved file eye-test)", expanded=False):
-                        st.markdown(md_text)
                 except Exception as e:
                     st.error(f"Save failed: {e}")
 
@@ -1260,7 +1189,6 @@ def main() -> None:
             if refresh_eye:
                 refresh_errors = validate_csv_frames(
                     cells=st.session_state[draft_cells_key],
-                    spans=st.session_state[draft_spans_key],
                     rows=st.session_state[draft_rows_key],
                 )
                 st.session_state[validation_state_key] = refresh_errors
@@ -1270,7 +1198,6 @@ def main() -> None:
                     try:
                         refreshed = build_canonical_from_frames(
                             cells=st.session_state[draft_cells_key],
-                            spans=st.session_state[draft_spans_key],
                             rows=st.session_state[draft_rows_key],
                             validate=True,
                         )
@@ -1284,22 +1211,6 @@ def main() -> None:
                 st.markdown(eye_md)
             else:
                 st.info("No rendered markdown yet. Use Preview/Save or refresh from current CSV.")
-
-    with st.expander("Pilot Gate Metrics (20-page CSV-first acceptance)", expanded=False):
-        selected_for_pilot = st.multiselect(
-            "Pilot sample IDs (leave empty = all filtered samples)",
-            options=sample_id_list,
-            default=[],
-        )
-        if st.button("Compute Pilot Metrics"):
-            use_ids = selected_for_pilot if selected_for_pilot else sample_id_list
-            metrics = compute_pilot_metrics(dataset_root, sample_ids=use_ids, threshold=0.02)
-            st.json(metrics)
-            if metrics.get("pass_gate", False):
-                st.success("Pilot gate PASSED.")
-            else:
-                st.warning("Pilot gate FAILED.")
-
 
 if __name__ == "__main__":
     main()

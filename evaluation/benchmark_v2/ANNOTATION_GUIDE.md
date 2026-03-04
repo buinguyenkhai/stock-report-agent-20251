@@ -19,7 +19,6 @@ Rules:
 ## 2. Required files per sample
 For each `sample_id`, store:
 - `gt_csv/<sample_id>/cells.csv`
-- `gt_csv/<sample_id>/spans.csv`
 - `gt_csv/<sample_id>/rows.csv`
 - optional: `gt_csv/<sample_id>/meta.json`
 - `images/<sample_id>.png` (or equivalent path in manifest)
@@ -30,7 +29,6 @@ For each `sample_id`, store:
 
 CSV schema:
 - `cells.csv`: `row_idx,col_idx,text`
-- `spans.csv`: `row_idx,col_idx,row_span,col_span`
 - `rows.csv`: `statement,item_code,item_name,value,notes_ref,original_name`
 
 If your manifest includes `source_pdf_path`, generate images automatically:
@@ -68,8 +66,8 @@ GUI-first workflow:
 1. Drop PDFs into `<dataset_root>/pdf`.
 2. Open app and click `Auto-Generate Manifest from pdf/*.pdf`.
 3. In `Dataset Ops`, click `Render Images from Manifest`.
-4. Review pages and click `Exclude Current Sample (Non-table)` for non-table pages.
-5. Annotate remaining pages in CSV editors and save canonical outputs.
+4. Keep `Include Scope = not_included`, then mark table pages via `Include Current Sample (Table)`.
+5. Annotate included pages in CSV editors and save canonical outputs.
 6. In `Dataset Ops`, click `Build GT Report Structured Files` to generate report-level structured JSON.
 
 ## 3. Labeling order (important)
@@ -77,7 +75,6 @@ Use this order for consistency:
 1. Read PDF page carefully (source of truth).
 2. Fill CSV pack in app:
    - `cells.csv`
-   - `spans.csv`
    - `rows.csv`
 3. Generate canonical outputs from CSV:
    - `gt_markdown`
@@ -136,8 +133,3 @@ For 200 pages:
 - run QA immediately after each batch
 
 This catches drift early and avoids costly relabeling near the end.
-
-Pilot gate for CSV-first:
-- `row_value_mismatch_rate = (row_key_corrections + value_corrections) / total_rows`
-- Pass threshold: `< 0.02`
-- Auto-fail if `unresolved_span_loss_blocker = true`

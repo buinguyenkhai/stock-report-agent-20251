@@ -1,0 +1,12 @@
+statement,item_code,item_name,value,notes_ref,original_name
+income_statement,31,11. Thu nhập khác,22918085911,,11. Thu nhập khác
+income_statement,32,12. Chi phí khác,-91965669430,,12. Chi phí khác
+income_statement,40,13. Lỗ khác,-69047583519,,13. Lỗ khác
+income_statement,50,14. Tổng lợi nhuận kế toán trước thuế,288751057463,,14. Tổng lợi nhuận kế toán trước thuế
+income_statement,51,15. Chi phí thuế TNDN hiện hành,-239958318356,29.1,15. Chi phí thuế TNDN hiện hành
+income_statement,52,16. Thu nhập thuế TNDN hoãn lại,-10097475282,29.3,16. Thu nhập thuế TNDN hoãn lại
+income_statement,60,17. Lợi nhuận sau thuế TNDN,38695263825,,17. Lợi nhuận sau thuế TNDN
+income_statement,61,18. Lợi nhuận sau thuế của công ty mẹ,38672609208,,18. Lợi nhuận sau thuế của công ty mẹ
+income_statement,62,19. Lợi nhuận sau thuế của cổ đông không kiểm soát,22654617,,19. Lợi nhuận sau thuế của cổ đông không kiểm soát
+income_statement,70,20. Lãi cơ bản trên cổ phiếu,26,30,20. Lãi cơ bản trên cổ phiếu
+income_statement,71,21. Lãi suy giảm trên cổ phiếu,26,30,21. Lãi suy giảm trên cổ phiếu

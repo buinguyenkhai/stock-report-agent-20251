@@ -1,0 +1,37 @@
+statement,item_code,item_name,value,notes_ref,original_name
+balance_sheet,,"Tiền mặt, vàng",3608503,5,"Tiền mặt, vàng"
+balance_sheet,,"Tiền gửi tại Ngân hàng Nhà nước Việt Nam (""NHNN"")",40614749,6,"Tiền gửi tại Ngân hàng Nhà nước Việt Nam (""NHNN"")"
+balance_sheet,,"Tiền gửi và cấp tín dụng cho các tổ chức tín dụng (""TCTD"") khác",90014293,7,"Tiền gửi và cấp tín dụng cho các tổ chức tín dụng (""TCTD"") khác"
+balance_sheet,,Tiền gửi tại các TCTD khác,80586687,7.1,Tiền gửi tại các TCTD khác
+balance_sheet,,Cấp tín dụng cho các TCTD khác,9607946,7.2,Cấp tín dụng cho các TCTD khác
+balance_sheet,,Dự phòng rủi ro cấp tín dụng cho các TCTD khác,-180340,7.3,Dự phòng rủi ro cấp tín dụng cho các TCTD khác
+balance_sheet,,Chứng khoán kinh doanh,4524314,8,Chứng khoán kinh doanh
+balance_sheet,,Chứng khoán kinh doanh,4524314,,Chứng khoán kinh doanh
+balance_sheet,,Các công cụ tài chính phái sinh và các tài sản tài chính khác,269237,19,Các công cụ tài chính phái sinh và các tài sản tài chính khác
+balance_sheet,,Cho vay khách hàng,617924570,,Cho vay khách hàng
+balance_sheet,,Cho vay khách hàng,626290777,9,Cho vay khách hàng
+balance_sheet,,Dự phòng rủi ro cho vay khách hàng,-8366207,10,Dự phòng rủi ro cho vay khách hàng
+balance_sheet,,Hoạt động mua nợ,314766,11,Hoạt động mua nợ
+balance_sheet,,Mua nợ,318827,,Mua nợ
+balance_sheet,,Dự phòng rủi ro hoạt động mua nợ,-4061,,Dự phòng rủi ro hoạt động mua nợ
+balance_sheet,,Chứng khoán đầu tư,102135236,12,Chứng khoán đầu tư
+balance_sheet,,Chứng khoán đầu tư sẵn sàng để bán,97062825,12.1,Chứng khoán đầu tư sẵn sàng để bán
+balance_sheet,,Chứng khoán đầu tư giữ đến ngày đáo hạn,5400000,12.2,Chứng khoán đầu tư giữ đến ngày đáo hạn
+balance_sheet,,Dự phòng rủi ro chứng khoán đầu tư,-327589,12.3,Dự phòng rủi ro chứng khoán đầu tư
+balance_sheet,,"Góp vốn, đầu tư dài hạn",3047523,13,"Góp vốn, đầu tư dài hạn"
+balance_sheet,,Đầu tư dài hạn khác,3048672,,Đầu tư dài hạn khác
+balance_sheet,,"Dự phòng giảm giá góp vốn, đầu tư dài hạn",-1149,,"Dự phòng giảm giá góp vốn, đầu tư dài hạn"
+balance_sheet,,Tài sản cố định,12752316,14,Tài sản cố định
+balance_sheet,,Tài sản cố định hữu hình,6974513,14.1,Tài sản cố định hữu hình
+balance_sheet,,Nguyên giá tài sản cố định,9348348,,Nguyên giá tài sản cố định
+balance_sheet,,Khấu hao tài sản cố định,-2373835,,Khấu hao tài sản cố định
+balance_sheet,,Tài sản cố định vô hình,5777803,14.2,Tài sản cố định vô hình
+balance_sheet,,Nguyên giá tài sản cố định,8160074,,Nguyên giá tài sản cố định
+balance_sheet,,Hao mòn tài sản cố định,-2382271,,Hao mòn tài sản cố định
+balance_sheet,,Tài sản Có khác,51847838,15,Tài sản Có khác
+balance_sheet,,Các khoản phải thu,36294684,,Các khoản phải thu
+balance_sheet,,"Các khoản lãi, phí phải thu",13921648,,"Các khoản lãi, phí phải thu"
+balance_sheet,,Tài sản thuế thu nhập doanh nghiệp hoãn lại,73401,,Tài sản thuế thu nhập doanh nghiệp hoãn lại
+balance_sheet,,Tài sản Có khác,1715829,,Tài sản Có khác
+balance_sheet,,Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác,-157724,,Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác
+balance_sheet,,TỔNG TÀI SẢN,927053345,,TỔNG TÀI SẢN

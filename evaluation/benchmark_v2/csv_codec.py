@@ -4,7 +4,6 @@ CSV codec utilities for benchmark v2 annotation workflow.
 CSV pack layout per sample:
   gt_csv/<sample_id>/
     cells.csv   : row_idx,col_idx,text
-    spans.csv   : row_idx,col_idx,row_span,col_span
     rows.csv    : statement,item_code,item_name,value,notes_ref,original_name
     meta.json   : optional QA metadata
 """
@@ -23,10 +22,8 @@ import pandas as pd
 from .dataset import BenchmarkDatasetV2, TableSample
 
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
-MERGED_MARKER = "<MERGED>"
 
 CELLS_COLUMNS = ("row_idx", "col_idx", "text")
-SPANS_COLUMNS = ("row_idx", "col_idx", "row_span", "col_span")
 ROWS_COLUMNS = ("statement", "item_code", "item_name", "value", "notes_ref", "original_name")
 
 
@@ -34,7 +31,6 @@ ROWS_COLUMNS = ("statement", "item_code", "item_name", "value", "notes_ref", "or
 class CsvPackPaths:
     root: Path
     cells_csv: Path
-    spans_csv: Path
     rows_csv: Path
     meta_json: Path
 
@@ -117,7 +113,6 @@ def _csv_paths(dataset_root: str | Path, sample_id: str) -> CsvPackPaths:
     return CsvPackPaths(
         root=root,
         cells_csv=root / "cells.csv",
-        spans_csv=root / "spans.csv",
         rows_csv=root / "rows.csv",
         meta_json=root / "meta.json",
     )
@@ -160,7 +155,6 @@ def load_csv_pack(sample_id: str, dataset_root: str | Path) -> Dict[str, pd.Data
     p = _csv_paths(dataset_root, sample_id)
     return {
         "cells": _read_csv_or_empty(p.cells_csv, CELLS_COLUMNS),
-        "spans": _read_csv_or_empty(p.spans_csv, SPANS_COLUMNS),
         "rows": _read_csv_or_empty(p.rows_csv, ROWS_COLUMNS),
     }
 
@@ -170,13 +164,11 @@ def save_csv_pack(
     dataset_root: str | Path,
     *,
     cells: pd.DataFrame,
-    spans: pd.DataFrame,
     rows: pd.DataFrame,
     meta_updates: Optional[Dict[str, Any]] = None,
 ) -> CsvPackPaths:
     p = _csv_paths(dataset_root, sample_id)
     _write_df_csv(p.cells_csv, cells, CELLS_COLUMNS)
-    _write_df_csv(p.spans_csv, spans, SPANS_COLUMNS)
     _write_df_csv(p.rows_csv, rows, ROWS_COLUMNS)
     if meta_updates is not None:
         meta = load_meta(sample_id, dataset_root)
@@ -233,20 +225,17 @@ def _iter_non_empty_records(df: pd.DataFrame, columns: Iterable[str]) -> Iterabl
 def _parse_csv_frames(
     *,
     cells: pd.DataFrame,
-    spans: pd.DataFrame,
     rows: pd.DataFrame,
 ) -> Tuple[
     Dict[Tuple[int, int], str],
-    Dict[Tuple[int, int], Tuple[int, int]],
     List[Dict[str, Any]],
     List[str],
 ]:
     errors: List[str] = []
     errors.extend(_check_required_columns(cells, CELLS_COLUMNS, "cells.csv"))
-    errors.extend(_check_required_columns(spans, SPANS_COLUMNS, "spans.csv"))
     errors.extend(_check_required_columns(rows, ROWS_COLUMNS, "rows.csv"))
     if errors:
-        return {}, {}, [], errors
+        return {}, [], errors
 
     cell_map: Dict[Tuple[int, int], str] = {}
     for i, rec in _iter_non_empty_records(cells, CELLS_COLUMNS):
@@ -261,39 +250,6 @@ def _parse_csv_frames(
             errors.append(f"cells.csv duplicate cell anchor at {key}")
             continue
         cell_map[key] = rec["text"]
-
-    span_map: Dict[Tuple[int, int], Tuple[int, int]] = {}
-    for i, rec in _iter_non_empty_records(spans, SPANS_COLUMNS):
-        try:
-            r = _parse_int(rec["row_idx"], field=f"spans.csv row {i} row_idx", minimum=0)
-            c = _parse_int(rec["col_idx"], field=f"spans.csv row {i} col_idx", minimum=0)
-            rs = _parse_int(rec["row_span"], field=f"spans.csv row {i} row_span", minimum=1)
-            cs = _parse_int(rec["col_span"], field=f"spans.csv row {i} col_span", minimum=1)
-        except ValueError as e:
-            errors.append(str(e))
-            continue
-        key = (r, c)
-        if key in span_map:
-            errors.append(f"spans.csv duplicate span anchor at {key}")
-            continue
-        span_map[key] = (rs, cs)
-
-    for anchor in span_map.keys():
-        if anchor not in cell_map:
-            errors.append(f"spans.csv anchor {anchor} does not exist in cells.csv")
-
-    occupied: Dict[Tuple[int, int], Tuple[int, int]] = {}
-    for anchor, _txt in cell_map.items():
-        rs, cs = span_map.get(anchor, (1, 1))
-        for dr in range(rs):
-            for dc in range(cs):
-                pos = (anchor[0] + dr, anchor[1] + dc)
-                prior = occupied.get(pos)
-                if prior is not None and prior != anchor:
-                    errors.append(
-                        f"Span overlap conflict at {pos}: anchors {prior} and {anchor}"
-                    )
-                occupied[pos] = anchor
 
     struct_rows: List[Dict[str, Any]] = []
     for i, rec in _iter_non_empty_records(rows, ROWS_COLUMNS):
@@ -321,47 +277,34 @@ def _parse_csv_frames(
             }
         )
 
-    return cell_map, span_map, struct_rows, errors
+    return cell_map, struct_rows, errors
 
 
 def validate_csv_frames(
     *,
     cells: pd.DataFrame,
-    spans: pd.DataFrame,
     rows: pd.DataFrame,
 ) -> List[str]:
-    _cells, _spans, _struct_rows, errors = _parse_csv_frames(cells=cells, spans=spans, rows=rows)
+    _cells, _struct_rows, errors = _parse_csv_frames(cells=cells, rows=rows)
     return errors
 
 
 def validate_csv_pack(sample_id: str, dataset_root: str | Path) -> List[str]:
     pack = load_csv_pack(sample_id, dataset_root)
-    return validate_csv_frames(cells=pack["cells"], spans=pack["spans"], rows=pack["rows"])
+    return validate_csv_frames(cells=pack["cells"], rows=pack["rows"])
 
 
 def _build_table_matrix(
     cell_map: Dict[Tuple[int, int], str],
-    span_map: Dict[Tuple[int, int], Tuple[int, int]],
 ) -> List[List[str]]:
     if not cell_map:
         return []
     max_row = max(r for r, _c in cell_map.keys())
     max_col = max(c for _r, c in cell_map.keys())
-    for (r, c), (rs, cs) in span_map.items():
-        max_row = max(max_row, r + rs - 1)
-        max_col = max(max_col, c + cs - 1)
 
     grid = [["" for _ in range(max_col + 1)] for _ in range(max_row + 1)]
     for (r, c), text in cell_map.items():
         grid[r][c] = str(text or "")
-    for (r, c), (rs, cs) in span_map.items():
-        for dr in range(rs):
-            for dc in range(cs):
-                if dr == 0 and dc == 0:
-                    continue
-                rr, cc = r + dr, c + dc
-                if grid[rr][cc] == "":
-                    grid[rr][cc] = MERGED_MARKER
     return grid
 
 
@@ -385,25 +328,14 @@ def _markdown_from_matrix(grid: List[List[str]]) -> str:
     return "\n".join(lines).strip()
 
 
-def _gt_cells_from_matrix(
-    grid: List[List[str]],
-    span_map: Dict[Tuple[int, int], Tuple[int, int]],
-) -> Dict[str, Any]:
+def _gt_cells_from_matrix(grid: List[List[str]]) -> Dict[str, Any]:
     rows: List[List[Dict[str, Any]]] = []
-    for r, row in enumerate(grid):
+    for row in grid:
         out_row: List[Dict[str, Any]] = []
-        for c, text in enumerate(row):
-            cell: Dict[str, Any] = {"text": str(text or "")}
-            span = span_map.get((r, c))
-            if span is not None:
-                rs, cs = span
-                if rs > 1:
-                    cell["row_span"] = int(rs)
-                if cs > 1:
-                    cell["col_span"] = int(cs)
-            out_row.append(cell)
+        for text in row:
+            out_row.append({"text": str(text or "")})
         rows.append(out_row)
-    return {"rows": rows, "meta": {"merged_marker": MERGED_MARKER}}
+    return {"rows": rows}
 
 
 def _structured_from_rows(parsed_rows: List[Dict[str, Any]]) -> Dict[str, Any]:
@@ -428,18 +360,17 @@ def _structured_from_rows(parsed_rows: List[Dict[str, Any]]) -> Dict[str, Any]:
 def build_canonical_from_frames(
     *,
     cells: pd.DataFrame,
-    spans: pd.DataFrame,
     rows: pd.DataFrame,
     validate: bool = True,
 ) -> Dict[str, Any]:
-    cell_map, span_map, parsed_rows, errors = _parse_csv_frames(cells=cells, spans=spans, rows=rows)
+    cell_map, parsed_rows, errors = _parse_csv_frames(cells=cells, rows=rows)
     if validate and errors:
         raise ValueError("CSV validation failed:\n" + "\n".join(f"- {e}" for e in errors))
-    grid = _build_table_matrix(cell_map, span_map)
+    grid = _build_table_matrix(cell_map)
     return {
         "gt_markdown": _markdown_from_matrix(grid),
         "gt_structured": _structured_from_rows(parsed_rows),
-        "gt_cells": _gt_cells_from_matrix(grid, span_map),
+        "gt_cells": _gt_cells_from_matrix(grid),
         "validation_errors": errors,
     }
 
@@ -450,7 +381,6 @@ def csv_to_canonical(sample_id: str, dataset_root: str | Path, validate: bool = 
     pack = load_csv_pack(sample_id, dataset_root)
     canonical = build_canonical_from_frames(
         cells=pack["cells"],
-        spans=pack["spans"],
         rows=pack["rows"],
         validate=validate,
     )
@@ -515,70 +445,24 @@ def _parse_markdown_pipe_rows(markdown_text: str) -> List[List[str]]:
     return rows
 
 
-def _rows_equal_width(rows: List[List[Any]]) -> bool:
-    if not rows:
-        return True
-    return len({len(r) for r in rows}) == 1
-
-
-def _load_cells_spans_from_gt_cells(path: Path) -> Tuple[pd.DataFrame, pd.DataFrame]:
+def _load_cells_from_gt_cells(path: Path) -> pd.DataFrame:
     obj = json.loads(path.read_text(encoding="utf-8"))
     rows = obj.get("rows", []) if isinstance(obj, dict) else []
     if not isinstance(rows, list):
-        return _empty_df(CELLS_COLUMNS), _empty_df(SPANS_COLUMNS)
-
-    expanded_mode = False
-    if _rows_equal_width([r for r in rows if isinstance(r, list)]):
-        expanded_mode = True
-    for row in rows:
-        if not isinstance(row, list):
-            continue
-        for cell in row:
-            if isinstance(cell, dict) and str(cell.get("text", "")) == MERGED_MARKER:
-                expanded_mode = True
-                break
-        if expanded_mode:
-            break
+        return _empty_df(CELLS_COLUMNS)
 
     cell_rows: List[Dict[str, Any]] = []
-    span_rows: List[Dict[str, Any]] = []
-
-    if expanded_mode:
-        for r, row in enumerate(rows):
-            if not isinstance(row, list):
-                continue
-            for c, cell in enumerate(row):
-                if not isinstance(cell, dict):
-                    continue
+    for r, row in enumerate(rows):
+        if not isinstance(row, list):
+            continue
+        for c, cell in enumerate(row):
+            if isinstance(cell, dict):
                 text = str(cell.get("text", ""))
-                rs = int(cell.get("row_span", 1) or 1)
-                cs = int(cell.get("col_span", 1) or 1)
-                if text == MERGED_MARKER and rs == 1 and cs == 1:
-                    continue
-                cell_rows.append({"row_idx": r, "col_idx": c, "text": text})
-                if rs > 1 or cs > 1:
-                    span_rows.append({"row_idx": r, "col_idx": c, "row_span": rs, "col_span": cs})
-    else:
-        for r, row in enumerate(rows):
-            if not isinstance(row, list):
-                continue
-            col_ptr = 0
-            for cell in row:
-                if not isinstance(cell, dict):
-                    continue
-                text = str(cell.get("text", ""))
-                rs = int(cell.get("row_span", 1) or 1)
-                cs = int(cell.get("col_span", 1) or 1)
-                cell_rows.append({"row_idx": r, "col_idx": col_ptr, "text": text})
-                if rs > 1 or cs > 1:
-                    span_rows.append(
-                        {"row_idx": r, "col_idx": col_ptr, "row_span": rs, "col_span": cs}
-                    )
-                col_ptr += max(1, cs)
+            else:
+                text = str(cell or "")
+            cell_rows.append({"row_idx": r, "col_idx": c, "text": text})
 
-    return pd.DataFrame(cell_rows, columns=list(CELLS_COLUMNS)).fillna(""), pd.DataFrame(
-        span_rows, columns=list(SPANS_COLUMNS)
-    ).fillna("")
+    return pd.DataFrame(cell_rows, columns=list(CELLS_COLUMNS)).fillna("")
 
 
 def _rows_from_structured(structured: Dict[str, Any]) -> pd.DataFrame:
@@ -627,7 +511,7 @@ def canonical_to_csv(sample_id: str, dataset_root: str | Path) -> Dict[str, Any]
     rows_df = _rows_from_structured(structured)
 
     if gt_cells_path.exists():
-        cells_df, spans_df = _load_cells_spans_from_gt_cells(gt_cells_path)
+        cells_df = _load_cells_from_gt_cells(gt_cells_path)
     else:
         md_text = gt_md_path.read_text(encoding="utf-8") if gt_md_path.exists() else ""
         md_rows = _parse_markdown_pipe_rows(md_text)
@@ -637,14 +521,12 @@ def canonical_to_csv(sample_id: str, dataset_root: str | Path) -> Dict[str, Any]
             for c, text in enumerate(row)
         ]
         cells_df = pd.DataFrame(cell_rows, columns=list(CELLS_COLUMNS)).fillna("")
-        spans_df = _empty_df(SPANS_COLUMNS)
 
     meta = load_meta(sample_id, dataset_root)
     save_csv_pack(
         sample_id,
         dataset_root,
         cells=cells_df,
-        spans=spans_df,
         rows=rows_df,
         meta_updates={**meta, "last_imported_from_canonical_at": _now_iso()},
     )
@@ -652,7 +534,6 @@ def canonical_to_csv(sample_id: str, dataset_root: str | Path) -> Dict[str, Any]
         "sample_id": sample_id,
         "csv_root": str(_csv_paths(dataset_root, sample_id).root),
         "cells_count": int(len(cells_df)),
-        "spans_count": int(len(spans_df)),
         "rows_count": int(len(rows_df)),
     }
 
@@ -670,8 +551,6 @@ def compute_pilot_metrics(
     total_rows = 0
     row_key_corr = 0
     value_corr = 0
-    span_corr = 0
-    unresolved_span_blocker = False
 
     for s in ds.samples:
         if selected is not None and s.sample_id not in selected:
@@ -681,15 +560,9 @@ def compute_pilot_metrics(
         total_rows += int(meta.get("total_rows", 0) or 0)
         row_key_corr += int(meta.get("row_key_corrections", 0) or 0)
         value_corr += int(meta.get("value_corrections", 0) or 0)
-        span_corr += int(meta.get("span_corrections", 0) or 0)
-        unresolved_span_blocker = unresolved_span_blocker or bool(
-            meta.get("unresolved_span_loss_blocker", False)
-        )
 
-    mismatch_rate = (
-        (row_key_corr + value_corr) / total_rows if total_rows > 0 else 0.0
-    )
-    pass_gate = (not unresolved_span_blocker) and (mismatch_rate < float(threshold))
+    mismatch_rate = ((row_key_corr + value_corr) / total_rows if total_rows > 0 else 0.0)
+    pass_gate = mismatch_rate < float(threshold)
 
     return {
         "sample_count": len(included),
@@ -697,9 +570,7 @@ def compute_pilot_metrics(
         "total_rows": int(total_rows),
         "row_key_corrections": int(row_key_corr),
         "value_corrections": int(value_corr),
-        "span_corrections": int(span_corr),
         "row_value_mismatch_rate": float(mismatch_rate),
         "threshold": float(threshold),
-        "unresolved_span_loss_blocker": bool(unresolved_span_blocker),
         "pass_gate": bool(pass_gate),
     }

@@ -28,7 +28,6 @@ Detailed annotation guide:
 
 ## Dataset Artifacts Per Sample
 - `gt_csv/<sample_id>/cells.csv`
-- `gt_csv/<sample_id>/spans.csv`
 - `gt_csv/<sample_id>/rows.csv`
 - optional: `gt_csv/<sample_id>/meta.json`
 - `page_image_path`

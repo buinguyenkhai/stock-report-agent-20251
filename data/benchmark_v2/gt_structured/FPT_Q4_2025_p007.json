@@ -1,0 +1,124 @@
+{
+  "balance_sheet": {
+    "items": [
+      {
+        "item_code": "400",
+        "item_name": "D. VỐN CHỦ SỞ HỮU",
+        "value": 43751466292590.0,
+        "notes_ref": null,
+        "original_name": "D. VỐN CHỦ SỞ HỮU"
+      },
+      {
+        "item_code": "410",
+        "item_name": "I. Vốn chủ sở hữu",
+        "value": 43748716292590.0,
+        "notes_ref": "24",
+        "original_name": "I. Vốn chủ sở hữu"
+      },
+      {
+        "item_code": "411",
+        "item_name": "1. Vốn góp của chủ sở hữu",
+        "value": 17035071210000.0,
+        "notes_ref": null,
+        "original_name": "1. Vốn góp của chủ sở hữu"
+      },
+      {
+        "item_code": "411a",
+        "item_name": "- Cổ phiếu phổ thông có quyền biểu quyết",
+        "value": 17035071210000.0,
+        "notes_ref": null,
+        "original_name": "- Cổ phiếu phổ thông có quyền biểu quyết"
+      },
+      {
+        "item_code": "412",
+        "item_name": "2. Thặng dư vốn cổ phần",
+        "value": 49713213411.0,
+        "notes_ref": null,
+        "original_name": "2. Thặng dư vốn cổ phần"
+      },
+      {
+        "item_code": "414",
+        "item_name": "3. Vốn khác của chủ sở hữu",
+        "value": 3499547369952.0,
+        "notes_ref": null,
+        "original_name": "3. Vốn khác của chủ sở hữu"
+      },
+      {
+        "item_code": "417",
+        "item_name": "4. Chênh lệch tỷ giá hối đoái",
+        "value": -70194908319.0,
+        "notes_ref": null,
+        "original_name": "4. Chênh lệch tỷ giá hối đoái"
+      },
+      {
+        "item_code": "418",
+        "item_name": "5. Quỹ đầu tư phát triển",
+        "value": 1556932891952.0,
+        "notes_ref": null,
+        "original_name": "5. Quỹ đầu tư phát triển"
+      },
+      {
+        "item_code": "420",
+        "item_name": "6. Quỹ khác thuộc vốn chủ sở hữu",
+        "value": 88263628887.0,
+        "notes_ref": null,
+        "original_name": "6. Quỹ khác thuộc vốn chủ sở hữu"
+      },
+      {
+        "item_code": "421",
+        "item_name": "7. Lợi nhuận sau thuế chưa phân phối",
+        "value": 14324284500434.0,
+        "notes_ref": null,
+        "original_name": "7. Lợi nhuận sau thuế chưa phân phối"
+      },
+      {
+        "item_code": "421a",
+        "item_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước",
+        "value": 7399799985311.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước"
+      },
+      {
+        "item_code": "421b",
+        "item_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này",
+        "value": 6924484515123.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này"
+      },
+      {
+        "item_code": "429",
+        "item_name": "8. Lợi ích cổ đông không kiểm soát",
+        "value": 7265098386273.0,
+        "notes_ref": null,
+        "original_name": "8. Lợi ích cổ đông không kiểm soát"
+      },
+      {
+        "item_code": "430",
+        "item_name": "II. Nguồn kinh phí và quỹ khác",
+        "value": 275000000.0,
+        "notes_ref": null,
+        "original_name": "II. Nguồn kinh phí và quỹ khác"
+      },
+      {
+        "item_code": "431",
+        "item_name": "1. Nguồn kinh phí",
+        "value": 275000000.0,
+        "notes_ref": null,
+        "original_name": "1. Nguồn kinh phí"
+      },
+      {
+        "item_code": "440",
+        "item_name": "TỔNG CỘNG NGUỒN VỐN (440=300+400)",
+        "value": 88089621779862.0,
+        "notes_ref": null,
+        "original_name": "TỔNG CỘNG NGUỒN VỐN (440=300+400)"
+      }
+    ]
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

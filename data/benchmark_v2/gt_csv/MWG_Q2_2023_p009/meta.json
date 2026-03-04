@@ -1,0 +1,10 @@
+{
+  "last_csv_save_at": "2026-03-04T04:35:48.000554+00:00",
+  "updated_at": "2026-03-04T04:35:48.010004+00:00",
+  "last_generated_at": "2026-03-04T04:35:48.009931+00:00",
+  "last_generated_paths": {
+    "gt_markdown_path": "data/benchmark_v2/gt_markdown/MWG_Q2_2023_p009.md",
+    "gt_structured_path": "data/benchmark_v2/gt_structured/MWG_Q2_2023_p009.json",
+    "gt_table_cells_path": "data/benchmark_v2/gt_cells/MWG_Q2_2023_p009.json"
+  }
+}

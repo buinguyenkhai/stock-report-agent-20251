@@ -1,0 +1,12 @@
+statement,item_code,item_name,value,notes_ref,original_name
+income_statement,1,1. Doanh thu bán hàng và cung cấp dịch vụ,57060133321700,24.1,1. Doanh thu bán hàng và cung cấp dịch vụ
+income_statement,2,2. Các khoản giảm trừ doanh thu,-489490855360,24.1,2. Các khoản giảm trừ doanh thu
+income_statement,10,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,56570642466340,24.1,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ
+income_statement,11,4. Giá vốn hàng bán và dịch vụ cung cấp,-45914974606904,28,4. Giá vốn hàng bán và dịch vụ cung cấp
+income_statement,20,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,10655667859436,,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ
+income_statement,21,6. Doanh thu hoạt động tài chính,944453612603,24.2,6. Doanh thu hoạt động tài chính
+income_statement,22,7. Chi phí tài chính,-692654322784,25,7. Chi phí tài chính
+income_statement,23,- Trong đó: Chi phí lãi vay,-680299703032,,- Trong đó: Chi phí lãi vay
+income_statement,25,8. Chi phí bán hàng,-9995819411746,"26, 28",8. Chi phí bán hàng
+income_statement,26,9. Chi phí quản lý doanh nghiệp,-553849096527,"26, 28",9. Chi phí quản lý doanh nghiệp
+income_statement,30,10. Lợi nhuận thuần từ hoạt động kinh doanh,357798640982,,10. Lợi nhuận thuần từ hoạt động kinh doanh
