@@ -7,12 +7,18 @@ pytest.importorskip("streamlit")
 fitz = pytest.importorskip("fitz")
 
 from evaluation.benchmark_v2.annotation_app import (  # noqa: E402
+    _build_included_manifest,
     _model_prompt_for_image_to_csv,
     _normalize_csv_df,
     _read_csv_text_with_columns,
     _build_manifest_from_pdfs,
     _exclude_sample_from_manifest,
+    _filter_by_include_scope,
+    _load_include_registry,
     _render_page_image_if_missing,
+    _resolve_selected_sample,
+    _set_included,
+    _shift_sample_index,
     filter_samples,
     get_sample_status,
 )
@@ -195,3 +201,78 @@ def test_model_prompt_contains_required_contract() -> None:
     assert "spans.csv" in prompt
     assert "rows.csv" in prompt
     assert "Do not output explanations." in prompt
+
+
+def test_include_registry_add_remove_and_dedupe(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_2024Q3_p001"
+    _write_manifest(dataset_root, sample_id)
+
+    reg0 = _load_include_registry(dataset_root)
+    assert reg0["included_sample_ids"] == []
+
+    _set_included("BBB_2024Q3_p001", dataset_root, True)
+    reg1 = _set_included(sample_id, dataset_root, True)
+    assert reg1["included_sample_ids"] == [sample_id, "BBB_2024Q3_p001"]
+
+    reg2 = _set_included(sample_id, dataset_root, True)
+    assert reg2["included_sample_ids"] == [sample_id, "BBB_2024Q3_p001"]
+
+    reg3 = _set_included(sample_id, dataset_root, False)
+    assert reg3["included_sample_ids"] == ["BBB_2024Q3_p001"]
+
+
+def test_filter_by_include_scope(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_2024Q3_p001"
+    _write_manifest(dataset_root, sample_id)
+    ds = BenchmarkDatasetV2(dataset_root)
+
+    _set_included(sample_id, dataset_root, True)
+    included = _filter_by_include_scope(ds.samples, dataset_root, "included")
+    not_included = _filter_by_include_scope(ds.samples, dataset_root, "not_included")
+    all_samples = _filter_by_include_scope(ds.samples, dataset_root, "all")
+
+    assert [s.sample_id for s in included] == [sample_id]
+    assert [s.sample_id for s in not_included] == ["BBB_2024Q3_p001"]
+    assert [s.sample_id for s in all_samples] == [sample_id, "BBB_2024Q3_p001"]
+
+
+def test_build_included_manifest_ignores_missing_ids(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_2024Q3_p001"
+    _write_manifest(dataset_root, sample_id)
+
+    _set_included(sample_id, dataset_root, True)
+    _set_included("MISSING_SAMPLE_ID", dataset_root, True)
+
+    manifest, counts, missing = _build_included_manifest(dataset_root)
+    sample_ids = [row["sample_id"] for row in manifest["samples"]]
+    assert sample_ids == [sample_id]
+    assert counts["original_count"] == 2
+    assert counts["included_requested"] == 2
+    assert counts["included_found"] == 1
+    assert missing == ["MISSING_SAMPLE_ID"]
+
+
+def test_sample_navigation_helpers() -> None:
+    ids = ["A", "B", "C"]
+    selected_id, selected_idx = _resolve_selected_sample(ids, None)
+    assert selected_id == "A"
+    assert selected_idx == 0
+
+    selected_id, selected_idx = _resolve_selected_sample(ids, "B")
+    assert selected_id == "B"
+    assert selected_idx == 1
+
+    selected_id, selected_idx = _resolve_selected_sample(ids, "Z")
+    assert selected_id == "A"
+    assert selected_idx == 0
+
+    assert _shift_sample_index(0, len(ids), -1) == 0
+    assert _shift_sample_index(2, len(ids), 1) == 2
+    assert _shift_sample_index(1, len(ids), 1) == 2
+    assert _shift_sample_index(1, len(ids), -1) == 0

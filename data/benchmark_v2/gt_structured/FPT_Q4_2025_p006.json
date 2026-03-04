@@ -1,0 +1,152 @@
+{
+  "balance_sheet": {
+    "items": [
+      {
+        "item_code": "300",
+        "item_name": "C. NỢ PHẢI TRẢ",
+        "value": 44338155487272.0,
+        "notes_ref": null,
+        "original_name": "C. NỢ PHẢI TRẢ"
+      },
+      {
+        "item_code": "310",
+        "item_name": "I. Nợ ngắn hạn",
+        "value": 41552785100161.0,
+        "notes_ref": null,
+        "original_name": "I. Nợ ngắn hạn"
+      },
+      {
+        "item_code": "311",
+        "item_name": "1. Phải trả người bán ngắn hạn",
+        "value": 3837081438126.0,
+        "notes_ref": "18",
+        "original_name": "1. Phải trả người bán ngắn hạn"
+      },
+      {
+        "item_code": "312",
+        "item_name": "2. Người mua trả tiền trước ngắn hạn",
+        "value": 761332738428.0,
+        "notes_ref": null,
+        "original_name": "2. Người mua trả tiền trước ngắn hạn"
+      },
+      {
+        "item_code": "313",
+        "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "value": 2192156678455.0,
+        "notes_ref": "19",
+        "original_name": "3. Thuế và các khoản phải nộp Nhà nước"
+      },
+      {
+        "item_code": "314",
+        "item_name": "4. Phải trả người lao động",
+        "value": 5678410841285.0,
+        "notes_ref": null,
+        "original_name": "4. Phải trả người lao động"
+      },
+      {
+        "item_code": "315",
+        "item_name": "5. Chi phí phải trả ngắn hạn",
+        "value": 1843426377372.0,
+        "notes_ref": "20",
+        "original_name": "5. Chi phí phải trả ngắn hạn"
+      },
+      {
+        "item_code": "317",
+        "item_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+        "value": 85650109236.0,
+        "notes_ref": null,
+        "original_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng"
+      },
+      {
+        "item_code": "318",
+        "item_name": "7. Doanh thu chưa thực hiện ngắn hạn",
+        "value": 4230708251601.0,
+        "notes_ref": "21",
+        "original_name": "7. Doanh thu chưa thực hiện ngắn hạn"
+      },
+      {
+        "item_code": "319",
+        "item_name": "8. Phải trả ngắn hạn khác",
+        "value": 1014673786632.0,
+        "notes_ref": "22",
+        "original_name": "8. Phải trả ngắn hạn khác"
+      },
+      {
+        "item_code": "320",
+        "item_name": "9. Vay và nợ thuê tài chính ngắn hạn",
+        "value": 19169697497955.0,
+        "notes_ref": "23",
+        "original_name": "9. Vay và nợ thuê tài chính ngắn hạn"
+      },
+      {
+        "item_code": "321",
+        "item_name": "10. Dự phòng phải trả ngắn hạn",
+        "value": 578298384069.0,
+        "notes_ref": null,
+        "original_name": "10. Dự phòng phải trả ngắn hạn"
+      },
+      {
+        "item_code": "322",
+        "item_name": "11. Quỹ khen thưởng, phúc lợi",
+        "value": 2161348997002.0,
+        "notes_ref": null,
+        "original_name": "11. Quỹ khen thưởng, phúc lợi"
+      },
+      {
+        "item_code": "330",
+        "item_name": "II. Nợ dài hạn",
+        "value": 2785370387111.0,
+        "notes_ref": null,
+        "original_name": "II. Nợ dài hạn"
+      },
+      {
+        "item_code": "336",
+        "item_name": "1. Doanh thu chưa thực hiện dài hạn",
+        "value": 127529003367.0,
+        "notes_ref": "21",
+        "original_name": "1. Doanh thu chưa thực hiện dài hạn"
+      },
+      {
+        "item_code": "337",
+        "item_name": "2. Phải trả dài hạn khác",
+        "value": 149213186822.0,
+        "notes_ref": "22",
+        "original_name": "2. Phải trả dài hạn khác"
+      },
+      {
+        "item_code": "338",
+        "item_name": "3. Vay và nợ thuê tài chính dài hạn",
+        "value": 1903789988184.0,
+        "notes_ref": "23",
+        "original_name": "3. Vay và nợ thuê tài chính dài hạn"
+      },
+      {
+        "item_code": "341",
+        "item_name": "4. Thuế thu nhập hoãn lại phải trả",
+        "value": 198787701984.0,
+        "notes_ref": null,
+        "original_name": "4. Thuế thu nhập hoãn lại phải trả"
+      },
+      {
+        "item_code": "342",
+        "item_name": "5. Dự phòng phải trả dài hạn",
+        "value": 405858410471.0,
+        "notes_ref": null,
+        "original_name": "5. Dự phòng phải trả dài hạn"
+      },
+      {
+        "item_code": "343",
+        "item_name": "6. Quỹ phát triển khoa học và công nghệ",
+        "value": 192096283.0,
+        "notes_ref": null,
+        "original_name": "6. Quỹ phát triển khoa học và công nghệ"
+      }
+    ]
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

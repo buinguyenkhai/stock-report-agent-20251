@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 import hashlib
 from io import StringIO
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 import sys
 
 import fitz  # PyMuPDF
@@ -65,6 +65,9 @@ except ImportError:
     from evaluation.benchmark_v2.render_page_images import render_page_images
 
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
+INCLUDE_SCOPE_OPTIONS = ("not_included", "included", "all")
+SESSION_SELECTED_SAMPLE_ID = "annotation_selected_sample_id"
+SESSION_SELECTED_SAMPLE_INDEX = "annotation_selected_sample_index"
 
 
 def _now_iso() -> str:
@@ -241,6 +244,157 @@ def _exclude_sample_from_manifest(dataset_root: Path, sample_id: str, reason: st
     return before, len(kept)
 
 
+def _include_registry_path(dataset_root: str | Path) -> Path:
+    return Path(dataset_root).resolve() / "included_samples.json"
+
+
+def _manifest_sample_id_order(dataset_root: str | Path) -> List[str]:
+    try:
+        manifest = _read_manifest(Path(dataset_root).resolve())
+    except Exception:
+        return []
+    sample_rows = manifest.get("samples", [])
+    if not isinstance(sample_rows, list):
+        return []
+    out: List[str] = []
+    for row in sample_rows:
+        if not isinstance(row, dict):
+            continue
+        sample_id = str(row.get("sample_id", "")).strip()
+        if sample_id:
+            out.append(sample_id)
+    return out
+
+
+def _load_include_registry(dataset_root: str | Path) -> Dict[str, Any]:
+    path = _include_registry_path(dataset_root)
+    default = {
+        "version": "1.0.0",
+        "mode": "include_table_pages",
+        "included_sample_ids": [],
+        "updated_at": "",
+    }
+    if not path.exists():
+        return default
+
+    try:
+        obj = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return default
+    if not isinstance(obj, dict):
+        return default
+
+    ids_raw = obj.get("included_sample_ids", [])
+    ids: List[str] = []
+    seen: set[str] = set()
+    if isinstance(ids_raw, list):
+        for x in ids_raw:
+            sid = str(x).strip()
+            if sid and sid not in seen:
+                seen.add(sid)
+                ids.append(sid)
+    return {
+        "version": str(obj.get("version", "1.0.0")),
+        "mode": str(obj.get("mode", "include_table_pages")),
+        "included_sample_ids": ids,
+        "updated_at": str(obj.get("updated_at", "")),
+    }
+
+
+def _save_include_registry(dataset_root: str | Path, registry: Dict[str, Any]) -> Path:
+    path = _include_registry_path(dataset_root)
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    raw_ids = registry.get("included_sample_ids", [])
+    deduped: List[str] = []
+    seen: set[str] = set()
+    if isinstance(raw_ids, list):
+        for x in raw_ids:
+            sid = str(x).strip()
+            if sid and sid not in seen:
+                seen.add(sid)
+                deduped.append(sid)
+
+    manifest_order = _manifest_sample_id_order(dataset_root)
+    if manifest_order:
+        include_set = set(deduped)
+        ordered_known = [sid for sid in manifest_order if sid in include_set]
+        ordered_unknown = sorted(sid for sid in include_set if sid not in set(manifest_order))
+        deduped = ordered_known + ordered_unknown
+    else:
+        deduped = sorted(deduped)
+
+    payload = {
+        "version": "1.0.0",
+        "mode": "include_table_pages",
+        "included_sample_ids": deduped,
+        "updated_at": _now_iso(),
+    }
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    return path
+
+
+def _is_included(sample_id: str, dataset_root: str | Path) -> bool:
+    reg = _load_include_registry(dataset_root)
+    return sample_id in set(reg.get("included_sample_ids", []))
+
+
+def _set_included(sample_id: str, dataset_root: str | Path, included: bool) -> Dict[str, Any]:
+    reg = _load_include_registry(dataset_root)
+    include_set = set(reg.get("included_sample_ids", []))
+    if included:
+        include_set.add(sample_id)
+    else:
+        include_set.discard(sample_id)
+    reg["included_sample_ids"] = sorted(include_set)
+    _save_include_registry(dataset_root, reg)
+    return _load_include_registry(dataset_root)
+
+
+def _filter_by_include_scope(
+    samples: List[TableSample], dataset_root: str | Path, include_scope: str
+) -> List[TableSample]:
+    if include_scope == "all":
+        return list(samples)
+    included_ids = set(_load_include_registry(dataset_root).get("included_sample_ids", []))
+    if include_scope == "included":
+        return [s for s in samples if s.sample_id in included_ids]
+    # default behavior for invalid values: not_included
+    return [s for s in samples if s.sample_id not in included_ids]
+
+
+def _build_included_manifest(dataset_root: str | Path) -> Tuple[Dict[str, Any], Dict[str, int], List[str]]:
+    manifest = _read_manifest(Path(dataset_root).resolve())
+    samples = manifest.get("samples", [])
+    if not isinstance(samples, list):
+        raise ValueError("Manifest 'samples' must be a list")
+
+    include_ids = list(_load_include_registry(dataset_root).get("included_sample_ids", []))
+    include_set = set(include_ids)
+    if not include_set:
+        raise ValueError("Include list is empty. Add at least one sample before finalizing.")
+
+    kept: List[Dict[str, Any]] = []
+    found_ids: set[str] = set()
+    for row in samples:
+        if not isinstance(row, dict):
+            continue
+        sid = str(row.get("sample_id", "")).strip()
+        if sid and sid in include_set:
+            kept.append(row)
+            found_ids.add(sid)
+
+    missing = sorted(sid for sid in include_set if sid not in found_ids)
+    included_manifest = dict(manifest)
+    included_manifest["samples"] = kept
+    counts = {
+        "original_count": len(samples),
+        "included_requested": len(include_set),
+        "included_found": len(kept),
+    }
+    return included_manifest, counts, missing
+
+
 def _render_manifest_setup(dataset_root: str) -> None:
     root = Path(dataset_root).resolve()
     st.warning(f"Manifest not found at `{root / 'manifest.json'}`")
@@ -385,6 +539,41 @@ def _render_dataset_ops(dataset_root: str) -> None:
             except Exception as e:
                 st.error(f"Assemble failed: {e}")
 
+        st.divider()
+        include_registry = _load_include_registry(root)
+        include_count = len(include_registry.get("included_sample_ids", []))
+        st.caption(f"Include registry: {include_count} sample(s) marked as table pages.")
+
+        replace_manifest = st.checkbox(
+            "Replace active manifest.json with included-only manifest (backup first)",
+            value=False,
+            key="ops_replace_manifest_with_included",
+        )
+        if st.button("Build manifest.included.json from included samples", key="ops_build_included"):
+            try:
+                included_manifest, counts, missing = _build_included_manifest(root)
+                included_path = root / "manifest.included.json"
+                included_path.write_text(
+                    json.dumps(included_manifest, ensure_ascii=False, indent=2),
+                    encoding="utf-8",
+                )
+                if missing:
+                    st.warning(
+                        "Some included sample IDs were not found in manifest and were ignored: "
+                        + ", ".join(missing[:20])
+                        + (" ..." if len(missing) > 20 else "")
+                    )
+                if replace_manifest:
+                    _write_manifest(root, included_manifest)
+                st.success(
+                    f"Included manifest built at `{included_path}`. "
+                    f"original={counts['original_count']} included_found={counts['included_found']} "
+                    f"included_requested={counts['included_requested']} "
+                    f"{'(manifest.json replaced)' if replace_manifest else ''}"
+                )
+            except Exception as e:
+                st.error(f"Build included manifest failed: {e}")
+
 
 def get_sample_status(sample: TableSample, dataset_root: str | Path) -> str:
     meta = load_meta(sample.sample_id, dataset_root)
@@ -418,6 +607,21 @@ def filter_samples(
             continue
         out.append(s)
     return out
+
+
+def _resolve_selected_sample(sample_id_list: List[str], selected_sample_id: Optional[str]) -> Tuple[str, int]:
+    if not sample_id_list:
+        raise ValueError("sample_id_list is empty")
+    if selected_sample_id and selected_sample_id in sample_id_list:
+        idx = sample_id_list.index(selected_sample_id)
+        return selected_sample_id, idx
+    return sample_id_list[0], 0
+
+
+def _shift_sample_index(current_index: int, total: int, delta: int) -> int:
+    if total <= 0:
+        return 0
+    return max(0, min(total - 1, int(current_index) + int(delta)))
 
 
 def _render_page_image_if_missing(sample: TableSample, dataset_root: str | Path, dpi: int = 200) -> Optional[Path]:
@@ -579,10 +783,11 @@ def _model_prompt_for_image_to_csv(sample_id: str, image_hint: str) -> str:
     )
 
 
-def _render_sample_header(sample: TableSample) -> None:
+def _render_sample_header(sample: TableSample, *, included: bool) -> None:
+    include_state = "included" if included else "not_included"
     st.markdown(
         f"**Sample** `{sample.sample_id}` | split: `{sample.split}` | company: `{sample.company}` | "
-        f"page: `{sample.page_index}`"
+        f"page: `{sample.page_index}` | include: `{include_state}`"
     )
 
 
@@ -627,9 +832,15 @@ def main() -> None:
     )
 
     companies = sorted({s.company for s in ds.samples})
-    c1, c2 = st.columns(2)
+    c1, c2, c3 = st.columns(3)
     split_filter = c1.selectbox("Split", options=["all", "dev", "test"], index=0)
     company_filter = c2.multiselect("Companies", options=companies, default=companies)
+    include_scope = c3.selectbox(
+        "Include Scope",
+        options=list(INCLUDE_SCOPE_OPTIONS),
+        index=0,
+        help="not_included shows remaining pages to triage (default).",
+    )
 
     filtered = filter_samples(
         samples=ds.samples,
@@ -638,15 +849,42 @@ def main() -> None:
         companies=company_filter,
         statuses=["not_started", "pass1_done", "pass2_done", "audited"],
     )
+    filtered = _filter_by_include_scope(filtered, dataset_root, include_scope)
     if not filtered:
         st.warning("No samples match current filters.")
         return
 
     sample_id_list = [s.sample_id for s in filtered]
-    selected_sample_id = st.selectbox("Sample", options=sample_id_list)
-    sample = next(s for s in filtered if s.sample_id == selected_sample_id)
+    previous_selected = st.session_state.get(SESSION_SELECTED_SAMPLE_ID)
+    resolved_id, resolved_idx = _resolve_selected_sample(sample_id_list, previous_selected)
+    st.session_state[SESSION_SELECTED_SAMPLE_ID] = resolved_id
+    st.session_state[SESSION_SELECTED_SAMPLE_INDEX] = resolved_idx
 
-    _render_sample_header(sample)
+    nav_prev, nav_select, nav_next = st.columns([1, 4, 1])
+    if nav_prev.button("Prev", disabled=resolved_idx == 0, key="sample_prev_btn"):
+        new_idx = _shift_sample_index(resolved_idx, len(sample_id_list), -1)
+        st.session_state[SESSION_SELECTED_SAMPLE_INDEX] = new_idx
+        st.session_state[SESSION_SELECTED_SAMPLE_ID] = sample_id_list[new_idx]
+        st.rerun()
+    if nav_next.button(
+        "Next",
+        disabled=resolved_idx >= (len(sample_id_list) - 1),
+        key="sample_next_btn",
+    ):
+        new_idx = _shift_sample_index(resolved_idx, len(sample_id_list), 1)
+        st.session_state[SESSION_SELECTED_SAMPLE_INDEX] = new_idx
+        st.session_state[SESSION_SELECTED_SAMPLE_ID] = sample_id_list[new_idx]
+        st.rerun()
+
+    selected_sample_id = nav_select.selectbox("Sample", options=sample_id_list, index=resolved_idx)
+    if selected_sample_id != st.session_state.get(SESSION_SELECTED_SAMPLE_ID):
+        st.session_state[SESSION_SELECTED_SAMPLE_ID] = selected_sample_id
+        st.session_state[SESSION_SELECTED_SAMPLE_INDEX] = sample_id_list.index(selected_sample_id)
+
+    sample = next(s for s in filtered if s.sample_id == selected_sample_id)
+    sample_included = _is_included(sample.sample_id, dataset_root)
+
+    _render_sample_header(sample, included=sample_included)
 
     draft_cells_key = f"draft_cells_{sample.sample_id}"
     draft_spans_key = f"draft_spans_{sample.sample_id}"
@@ -678,7 +916,7 @@ def main() -> None:
         st.session_state[editor_nonce_key] = int(st.session_state.get(editor_nonce_key, 0)) + 1
         st.session_state[validation_state_key] = []
 
-    toolbar = st.columns(3)
+    toolbar = st.columns(4)
     if toolbar[0].button("Reload CSV from Disk"):
         try:
             pack = load_csv_pack(sample.sample_id, dataset_root)
@@ -697,17 +935,20 @@ def main() -> None:
             st.rerun()
         except Exception as e:
             st.error(f"Import failed: {e}")
-    if toolbar[2].button("Exclude Current Sample (Non-table)"):
+    if toolbar[2].button("Include Current Sample (Table)", disabled=sample_included):
         try:
-            before, after = _exclude_sample_from_manifest(
-                Path(dataset_root).resolve(), sample.sample_id, "non_table_page"
-            )
-            st.success(
-                f"Excluded `{sample.sample_id}` from manifest ({before} -> {after} samples)."
-            )
+            _set_included(sample.sample_id, dataset_root, True)
+            st.success(f"Marked `{sample.sample_id}` as included.")
             st.rerun()
         except Exception as e:
-            st.error(f"Exclude failed: {e}")
+            st.error(f"Include failed: {e}")
+    if toolbar[3].button("Remove From Included", disabled=not sample_included):
+        try:
+            _set_included(sample.sample_id, dataset_root, False)
+            st.success(f"Removed `{sample.sample_id}` from included list.")
+            st.rerun()
+        except Exception as e:
+            st.error(f"Uninclude failed: {e}")
 
     image_col, data_col = st.columns([1, 1])
     with image_col:
