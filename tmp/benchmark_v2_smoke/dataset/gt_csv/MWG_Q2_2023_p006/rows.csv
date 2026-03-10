@@ -1,0 +1,26 @@
+statement,item_code,item_name,value,notes_ref,original_name
+balance_sheet,300,C. NỢ PHẢI TRẢ,35404828059722,,C. NỢ PHẢI TRẢ
+balance_sheet,310,I. Nợ ngắn hạn,29505453059722,,I. Nợ ngắn hạn
+balance_sheet,311,1. Phải trả người bán ngắn hạn,9334763086527,18,1. Phải trả người bán ngắn hạn
+balance_sheet,312,2. Người mua trả tiền trước ngắn hạn,70529398738,,2. Người mua trả tiền trước ngắn hạn
+balance_sheet,313,3. Thuế và các khoản phải nộp Nhà nước,302370241445,19,3. Thuế và các khoản phải nộp Nhà nước
+balance_sheet,314,4. Phải trả người lao động,313348062630,,4. Phải trả người lao động
+balance_sheet,315,5. Chi phí phải trả ngắn hạn,1325332796761,20,5. Chi phí phải trả ngắn hạn
+balance_sheet,318,6. Doanh thu chưa thực hiện ngắn hạn,24214399038,,6. Doanh thu chưa thực hiện ngắn hạn
+balance_sheet,319,7. Phải trả ngắn hạn khác,1731015049763,21,7. Phải trả ngắn hạn khác
+balance_sheet,320,8. Vay ngắn hạn,16337283059017,22,8. Vay ngắn hạn
+balance_sheet,321,9. Dự phòng phải trả ngắn hạn,66596965803,,9. Dự phòng phải trả ngắn hạn
+balance_sheet,330,II. Nợ dài hạn,5899375000000,,II. Nợ dài hạn
+balance_sheet,338,1. Vay dài hạn,5899375000000,22,1. Vay dài hạn
+balance_sheet,400,D. VỐN CHỦ SỞ HỮU,23963673974446,,D. VỐN CHỦ SỞ HỮU
+balance_sheet,410,I. Vốn chủ sở hữu,23963673974446,,I. Vốn chủ sở hữu
+balance_sheet,411,1. Vốn cổ phần,14633767160000,23.1,1. Vốn cổ phần
+balance_sheet,411a,- Cổ phiếu phổ thông có quyền biểu quyết,14633767160000,,- Cổ phiếu phổ thông có quyền biểu quyết
+balance_sheet,412,2. Thặng dư vốn cổ phần,558110430986,23.1,2. Thặng dư vốn cổ phần
+balance_sheet,415,3. Cổ phiếu quỹ,-7664060000,23.1,3. Cổ phiếu quỹ
+balance_sheet,417,4. Chênh lệch tỷ giá hối đoái,3478879135,23.1,4. Chênh lệch tỷ giá hối đoái
+balance_sheet,421,5. Lợi nhuận sau thuế chưa phân phối,8762606835578,23.1,5. Lợi nhuận sau thuế chưa phân phối
+balance_sheet,421a,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước,8723934226370,,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước
+balance_sheet,421b,- Lợi nhuận sau thuế chưa phân phối kỳ này,38672609208,,- Lợi nhuận sau thuế chưa phân phối kỳ này
+balance_sheet,429,6. Lợi ích cổ đông không kiểm soát,13374728747,23.1,6. Lợi ích cổ đông không kiểm soát
+balance_sheet,440,TỔNG CỘNG NGUỒN VỐN,59368502034168,,TỔNG CỘNG NGUỒN VỐN

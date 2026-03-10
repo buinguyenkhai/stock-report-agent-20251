@@ -1,0 +1,446 @@
+{
+  "rows": [
+    [
+      {
+        "text": "Mã số"
+      },
+      {
+        "text": "CHỈ TIÊU"
+      },
+      {
+        "text": "Thuyết minh"
+      },
+      {
+        "text": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023"
+      },
+      {
+        "text": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022"
+      }
+    ],
+    [
+      {
+        "text": ""
+      },
+      {
+        "text": "I. LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG KINH DOANH"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": ""
+      }
+    ],
+    [
+      {
+        "text": "01"
+      },
+      {
+        "text": "Lợi nhuận kế toán trước thuế"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "288.751.057.463"
+      },
+      {
+        "text": "3.705.136.953.628"
+      }
+    ],
+    [
+      {
+        "text": ""
+      },
+      {
+        "text": "Điều chỉnh cho các khoản:"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": ""
+      }
+    ],
+    [
+      {
+        "text": "02"
+      },
+      {
+        "text": "Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại)"
+      },
+      {
+        "text": "13, 14, 16"
+      },
+      {
+        "text": "1.717.488.679.748"
+      },
+      {
+        "text": "1.719.685.698.133"
+      }
+    ],
+    [
+      {
+        "text": "03"
+      },
+      {
+        "text": "Hoàn nhập dự phòng"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(89.740.226.100)"
+      },
+      {
+        "text": "(179.333.334.461)"
+      }
+    ],
+    [
+      {
+        "text": "04"
+      },
+      {
+        "text": "Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(1.895.045.928)"
+      },
+      {
+        "text": "(143.043.760)"
+      }
+    ],
+    [
+      {
+        "text": "05"
+      },
+      {
+        "text": "Lãi từ hoạt động đầu tư"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(798.719.809.176)"
+      },
+      {
+        "text": "(196.193.443.545)"
+      }
+    ],
+    [
+      {
+        "text": "06"
+      },
+      {
+        "text": "Chi phí lãi vay"
+      },
+      {
+        "text": "25"
+      },
+      {
+        "text": "680.299.703.032"
+      },
+      {
+        "text": "566.436.474.665"
+      }
+    ],
+    [
+      {
+        "text": "08"
+      },
+      {
+        "text": "Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "1.796.184.359.039"
+      },
+      {
+        "text": "5.615.589.304.660"
+      }
+    ],
+    [
+      {
+        "text": "09"
+      },
+      {
+        "text": "Giảm (tăng) các khoản phải thu"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "538.772.598.103"
+      },
+      {
+        "text": "(546.904.170.830)"
+      }
+    ],
+    [
+      {
+        "text": "10"
+      },
+      {
+        "text": "Giảm hàng tồn kho"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "3.901.771.795.305"
+      },
+      {
+        "text": "1.098.012.699.975"
+      }
+    ],
+    [
+      {
+        "text": "11"
+      },
+      {
+        "text": "Giảm các khoản phải trả"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(1.624.630.886.898)"
+      },
+      {
+        "text": "(3.597.224.727.134)"
+      }
+    ],
+    [
+      {
+        "text": "12"
+      },
+      {
+        "text": "Giảm (tăng) chi phí trả trước"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "111.442.960.639"
+      },
+      {
+        "text": "(72.102.319.597)"
+      }
+    ],
+    [
+      {
+        "text": "14"
+      },
+      {
+        "text": "Tiền lãi vay đã trả"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(610.178.274.620)"
+      },
+      {
+        "text": "(551.787.941.092)"
+      }
+    ],
+    [
+      {
+        "text": "15"
+      },
+      {
+        "text": "Thuế thu nhập doanh nghiệp đã nộp"
+      },
+      {
+        "text": "19"
+      },
+      {
+        "text": "(655.061.300.416)"
+      },
+      {
+        "text": "(980.769.046.726)"
+      }
+    ],
+    [
+      {
+        "text": "20"
+      },
+      {
+        "text": "Lưu chuyển tiền thuần từ hoạt động kinh doanh"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "3.458.301.251.152"
+      },
+      {
+        "text": "964.813.799.256"
+      }
+    ],
+    [
+      {
+        "text": ""
+      },
+      {
+        "text": "II. LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG ĐẦU TƯ"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": ""
+      }
+    ],
+    [
+      {
+        "text": "21"
+      },
+      {
+        "text": "Tiền chi để mua sắm, xây dựng tài sản cố định (\"TSCĐ\") và các tài sản dài hạn khác"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(438.088.628.475)"
+      },
+      {
+        "text": "(1.906.747.318.543)"
+      }
+    ],
+    [
+      {
+        "text": "22"
+      },
+      {
+        "text": "Tiền thu do thanh lý, nhượng bán TSCĐ"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "1.920.402.750"
+      },
+      {
+        "text": "2.113.121.288"
+      }
+    ],
+    [
+      {
+        "text": "23"
+      },
+      {
+        "text": "Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(18.130.489.000.000)"
+      },
+      {
+        "text": "(12.162.557.973.355)"
+      }
+    ],
+    [
+      {
+        "text": "24"
+      },
+      {
+        "text": "Thu hồi tiền gửi ngân hàng có kỳ hạn"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "7.220.800.327.572"
+      },
+      {
+        "text": "14.150.036.502.907"
+      }
+    ],
+    [
+      {
+        "text": "25"
+      },
+      {
+        "text": "Tiền chi đầu tư góp vốn vào đơn vị khác"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "-"
+      },
+      {
+        "text": "(181.034.840.000)"
+      }
+    ],
+    [
+      {
+        "text": "27"
+      },
+      {
+        "text": "Tiền thu lãi từ tiền gửi, cho vay"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "627.730.073.106"
+      },
+      {
+        "text": "735.228.993.203"
+      }
+    ],
+    [
+      {
+        "text": "28"
+      },
+      {
+        "text": "Tiền thu lợi ích cổ đông không kiểm soát"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(1.156.023.000)"
+      },
+      {
+        "text": "-"
+      }
+    ],
+    [
+      {
+        "text": "30"
+      },
+      {
+        "text": "Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(10.719.282.848.047)"
+      },
+      {
+        "text": "637.038.485.500"
+      }
+    ]
+  ]
+}

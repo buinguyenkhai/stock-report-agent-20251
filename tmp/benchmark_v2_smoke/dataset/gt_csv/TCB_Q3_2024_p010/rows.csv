@@ -1,0 +1,29 @@
+statement,item_code,item_name,value,notes_ref,original_name
+cash_flow,,Thu nhập lãi và các khoản thu nhập tương tự nhận được,40950948,,Thu nhập lãi và các khoản thu nhập tương tự nhận được
+cash_flow,,Chi phí lãi và các chi phí tương tự đã trả,-19607189,,Chi phí lãi và các chi phí tương tự đã trả
+cash_flow,,Thu nhập từ hoạt động dịch vụ nhận được,6167220,,Thu nhập từ hoạt động dịch vụ nhận được
+cash_flow,,Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán),3170618,,Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán)
+cash_flow,,Thu nhập/(chi phí) khác,-1281019,,Thu nhập/(chi phí) khác
+cash_flow,,Tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro,829127,30,Tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro
+cash_flow,,"Tiền chi trả cho nhân viên và hoạt động quản lý, công vụ",-7438467,,"Tiền chi trả cho nhân viên và hoạt động quản lý, công vụ"
+cash_flow,,Tiền thuế thu nhập thực nộp trong kỳ,-4031295,22.1,Tiền thuế thu nhập thực nộp trong kỳ
+cash_flow,,Lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động,18759943,,Lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động
+cash_flow,,Giảm các khoản tiền gửi và cấp tín dụng cho các TCTD khác,13699517,,Giảm các khoản tiền gửi và cấp tín dụng cho các TCTD khác
+cash_flow,,(Tăng)/giảm các khoản về kinh doanh chứng khoán,2228783,,(Tăng)/giảm các khoản về kinh doanh chứng khoán
+cash_flow,,Tăng các công cụ tài chính phái sinh và các tài sản tài chính khác,-125626,,Tăng các công cụ tài chính phái sinh và các tài sản tài chính khác
+cash_flow,,Tăng các khoản cho vay khách hàng,-107649209,,Tăng các khoản cho vay khách hàng
+cash_flow,,"Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản",-2182049,"10, 15","Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản"
+cash_flow,,(Tăng)/giảm khác về tài sản hoạt động,27306200,,(Tăng)/giảm khác về tài sản hoạt động
+cash_flow,,"Giảm các khoản tiền gửi, tiền vay các TCTD khác",-14710728,,"Giảm các khoản tiền gửi, tiền vay các TCTD khác"
+cash_flow,,Tăng tiền gửi của khách hàng,40313649,,Tăng tiền gửi của khách hàng
+cash_flow,,Tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính),41358009,,Tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính)
+cash_flow,,Tăng/(giảm) khác về công nợ hoạt động,-1653243,,Tăng/(giảm) khác về công nợ hoạt động
+cash_flow,,Chi từ các quỹ,-2358,23.1,Chi từ các quỹ
+cash_flow,,Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh,17342888,,Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh
+cash_flow,,Mua sắm tài sản cố định,-566668,,Mua sắm tài sản cố định
+cash_flow,,Tiền thu từ thanh lý tài sản cố định,231484,,Tiền thu từ thanh lý tài sản cố định
+cash_flow,,Tiền chi từ thanh lý tài sản cố định,-40,,Tiền chi từ thanh lý tài sản cố định
+cash_flow,,Tiền thu từ bán bất động sản đầu tư,736219,,Tiền thu từ bán bất động sản đầu tư
+cash_flow,,"Tiền chi đầu tư, góp vốn vào các đơn vị khác",-1278,,"Tiền chi đầu tư, góp vốn vào các đơn vị khác"
+cash_flow,,"Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",64494,31,"Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn"
+cash_flow,,Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư,464211,,Lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư

@@ -1,0 +1,89 @@
+{
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": [
+      {
+        "item_code": "1",
+        "item_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 57060133321700.0,
+        "notes_ref": "24.1",
+        "original_name": "1. Doanh thu bán hàng và cung cấp dịch vụ"
+      },
+      {
+        "item_code": "2",
+        "item_name": "2. Các khoản giảm trừ doanh thu",
+        "value": -489490855360.0,
+        "notes_ref": "24.1",
+        "original_name": "2. Các khoản giảm trừ doanh thu"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 56570642466340.0,
+        "notes_ref": "24.1",
+        "original_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
+        "value": -45914974606904.0,
+        "notes_ref": "28",
+        "original_name": "4. Giá vốn hàng bán và dịch vụ cung cấp"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 10655667859436.0,
+        "notes_ref": null,
+        "original_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6. Doanh thu hoạt động tài chính",
+        "value": 944453612603.0,
+        "notes_ref": "24.2",
+        "original_name": "6. Doanh thu hoạt động tài chính"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7. Chi phí tài chính",
+        "value": -692654322784.0,
+        "notes_ref": "25",
+        "original_name": "7. Chi phí tài chính"
+      },
+      {
+        "item_code": "23",
+        "item_name": "- Trong đó: Chi phí lãi vay",
+        "value": -680299703032.0,
+        "notes_ref": null,
+        "original_name": "- Trong đó: Chi phí lãi vay"
+      },
+      {
+        "item_code": "25",
+        "item_name": "8. Chi phí bán hàng",
+        "value": -9995819411746.0,
+        "notes_ref": "26, 28",
+        "original_name": "8. Chi phí bán hàng"
+      },
+      {
+        "item_code": "26",
+        "item_name": "9. Chi phí quản lý doanh nghiệp",
+        "value": -553849096527.0,
+        "notes_ref": "26, 28",
+        "original_name": "9. Chi phí quản lý doanh nghiệp"
+      },
+      {
+        "item_code": "30",
+        "item_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 357798640982.0,
+        "notes_ref": null,
+        "original_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh"
+      }
+    ]
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

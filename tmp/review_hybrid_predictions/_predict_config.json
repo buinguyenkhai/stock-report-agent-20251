@@ -1,0 +1,15 @@
+{
+  "engine": "hybrid",
+  "split": "dev",
+  "include_scope": "included",
+  "device": "cuda",
+  "include_structured": false,
+  "skip_existing": true,
+  "hybrid_threshold": 0.9,
+  "hybrid_number_threshold": 0.95,
+  "hybrid_overrides": {},
+  "marker_use_llm": false,
+  "marker_llm_model": "mistralai/mistral-small-3.1-24b-instruct",
+  "marker_force_ocr": true,
+  "marker_extract_images": false
+}

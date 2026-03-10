@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "mode": "include_table_pages",
+  "included_sample_ids": [
+    "FPT_Q4_2025_p004",
+    "FPT_Q4_2025_p005",
+    "FPT_Q4_2025_p006",
+    "FPT_Q4_2025_p007",
+    "FPT_Q4_2025_p008",
+    "FPT_Q4_2025_p010",
+    "FPT_Q4_2025_p011",
+    "MWG_Q2_2023_p005",
+    "MWG_Q2_2023_p006",
+    "MWG_Q2_2023_p007",
+    "MWG_Q2_2023_p008",
+    "MWG_Q2_2023_p009",
+    "MWG_Q2_2023_p010",
+    "TCB_Q3_2024_p006",
+    "TCB_Q3_2024_p007",
+    "TCB_Q3_2024_p008",
+    "TCB_Q3_2024_p009",
+    "TCB_Q3_2024_p010"
+  ],
+  "updated_at": ""
+}

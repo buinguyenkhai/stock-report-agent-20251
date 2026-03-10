@@ -13,6 +13,9 @@
   - A company must appear in exactly one split.
   - `dev` is used for threshold/hyperparameter selection.
   - `test` is used once for final reporting.
+- Pilot-only exception:
+  - For early local/Kaggle smoke tests on partially annotated data, you may run a single split such as `dev`.
+  - Do not present single-split results as final benchmark numbers.
 
 ## Single-Annotator Policy
 - Minimum QA process for each sample:
@@ -49,6 +52,11 @@ CSV-first annotation app:
 streamlit run evaluation/benchmark_v2/annotation_app.py
 ```
 
+Include registry:
+- `included_samples.json` defines the small curated subset of fully annotated pages.
+- Benchmark CLIs support `--include-scope included` to evaluate only that subset.
+- Any sample listed in `included_samples.json` should have complete `gt_csv`, `gt_markdown`, and `gt_structured` artifacts.
+
 ## Prediction File Convention
 - `<predictions_root>/<sample_id>.raw.md`
 - `<predictions_root>/<sample_id>.structured.json`
@@ -78,6 +86,7 @@ python -m evaluation.benchmark_v2.predict \
   --output-root results/hybrid_predictions \
   --engine hybrid \
   --split test \
+  --include-scope included \
   --device cuda \
   --hybrid-threshold 0.90 \
   --hybrid-number-threshold 0.95
@@ -90,6 +99,7 @@ python -m evaluation.benchmark_v2.run \
   --predictions-root results/hybrid_predictions \
   --engine-name hybrid_docling \
   --split test \
+  --include-scope included \
   --output results/benchmark_v2_hybrid_test.json
 ```
 

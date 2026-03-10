@@ -5,15 +5,13 @@ from typing import List, Dict, Optional, Any
 from dataclasses import dataclass, field
 from pydantic import BaseModel, Field, field_validator
 import re
+import traceback
 
+from config import settings
 from logger import get_logger
 from services.llm_factory import create_llm_for_task, create_structured_llm_for_task
 
 logger = get_logger(__name__)
-
-# Default model for parsing
-DEFAULT_PARSER_MODEL = "google/gemini-2.5-flash-lite-preview-09-2025"
-
 
 # Pydantic Models for Structured Output
 class FinancialItem(BaseModel):
@@ -109,7 +107,7 @@ class AggregatedParser:
     
     def __init__(self, model: Optional[str] = None):
         """Initialize parser with LLM model."""
-        self.model = model or DEFAULT_PARSER_MODEL
+        self.model = model or settings.llm_model
         self._llm = None
     
     @property
@@ -181,7 +179,9 @@ class AggregatedParser:
             return result
 
         except Exception as e:
-            logger.error(f"Parsing failed: {e}")
+            err_type = type(e).__name__
+            err_msg = str(e) or repr(e)
+            logger.exception(f"Parsing failed ({err_type}): {err_msg}")
 
             # Fallback: ask the model for raw JSON and parse manually.
             try:
@@ -212,10 +212,20 @@ class AggregatedParser:
                         json_text = content
 
                 data = ParsedReport.model_validate_json(json_text)
-                data.warnings.append(f"Parser fallback used due to structured parse error: {str(e)}")
+                data.warnings.append(
+                    f"Parser fallback used due to structured parse error ({err_type}): {err_msg}"
+                )
                 return data
             except Exception as e2:
-                return ParsedReport(warnings=[f"Parsing error: {str(e)}", f"Fallback parsing error: {str(e2)}"])
+                err2_type = type(e2).__name__
+                err2_msg = str(e2) or repr(e2)
+                return ParsedReport(
+                    warnings=[
+                        f"Parsing error ({err_type}): {err_msg}",
+                        f"Fallback parsing error ({err2_type}): {err2_msg}",
+                        f"Parsing traceback: {traceback.format_exc()}",
+                    ]
+                )
     
     def _get_system_prompt(self) -> str:
         """Generate system prompt for financial report parsing."""

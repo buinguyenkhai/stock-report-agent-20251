@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Optional
 from .base import OCRStrategy
 from dotenv import load_dotenv
+from llm_settings import DEFAULT_MARKER_LLM_MODEL
 
 load_dotenv()
 
@@ -30,7 +31,7 @@ class MarkerOCRService(OCRStrategy):
     def __init__(
         self,
         use_llm: bool = True,
-        llm_model: str = "mistralai/mistral-small-3.1-24b-instruct",  # OpenRouter vision model
+        llm_model: str = DEFAULT_MARKER_LLM_MODEL,
         force_ocr: bool = True,
         extract_images: bool = False,
         device: str = "cuda",

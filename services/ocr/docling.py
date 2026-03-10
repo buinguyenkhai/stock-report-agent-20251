@@ -76,6 +76,7 @@ class DoclingOCRService(OCRStrategy):
         
         # Image converter (lazy-loaded)
         self._image_converter = None
+        self._last_debug_artifacts: Optional[Dict[str, Any]] = None
 
 
     @property
@@ -91,6 +92,49 @@ class DoclingOCRService(OCRStrategy):
                 }
             )
         return self._image_converter
+
+    def _capture_hybrid_debug_artifacts(self, *, input_format: InputFormat) -> None:
+        self._last_debug_artifacts = None
+        try:
+            pipeline_get = getattr(self.converter, "_get_pipeline", None)
+            if not callable(pipeline_get):
+                pipeline_get = getattr(self.image_converter, "_get_pipeline", None)
+            if not callable(pipeline_get):
+                return
+
+            pipeline = pipeline_get(input_format)
+            model = getattr(pipeline, "_hybrid_ocr_model", None) if pipeline is not None else None
+            if model is None:
+                return
+
+            payload: Dict[str, Any] = {}
+
+            stats_get = getattr(model, "get_stats", None)
+            if callable(stats_get):
+                stats = stats_get()
+                if isinstance(stats, dict):
+                    payload["hybrid_ocr_stats"] = stats
+
+            small_snap_get = getattr(model, "get_debug_snapshot", None)
+            if callable(small_snap_get):
+                snap = small_snap_get()
+                if isinstance(snap, dict):
+                    payload["ocr_cells_debug"] = snap
+
+            diffs_get = getattr(model, "get_update_diffs", None)
+            if callable(diffs_get):
+                diffs = diffs_get()
+                if isinstance(diffs, list):
+                    payload["update_diffs"] = diffs
+
+            if payload:
+                self._last_debug_artifacts = payload
+        except Exception:
+            self._last_debug_artifacts = None
+
+    def get_debug_artifacts(self) -> Optional[Dict[str, Any]]:
+        payload = self._last_debug_artifacts
+        return dict(payload) if isinstance(payload, dict) else None
 
     def process_pdf(self, pdf_url: str) -> str:
         """
@@ -122,6 +166,7 @@ class DoclingOCRService(OCRStrategy):
                 input_path = tmp_path
 
             doc = self.converter.convert(input_path).document
+            self._capture_hybrid_debug_artifacts(input_format=InputFormat.PDF)
             return doc.export_to_markdown()
         finally:
             if tmp_path and os.path.exists(tmp_path):
@@ -141,6 +186,7 @@ class DoclingOCRService(OCRStrategy):
         
         try:
             result = self.image_converter.convert(tmp_path)
+            self._capture_hybrid_debug_artifacts(input_format=InputFormat.IMAGE)
             return result.document.export_to_markdown()
         finally:
             if os.path.exists(tmp_path):

@@ -1,0 +1,152 @@
+{
+  "balance_sheet": {
+    "items": [
+      {
+        "item_code": "100",
+        "item_name": "A. TÀI SẢN NGẮN HẠN",
+        "value": 58102970741619.0,
+        "notes_ref": null,
+        "original_name": "A. TÀI SẢN NGẮN HẠN"
+      },
+      {
+        "item_code": "110",
+        "item_name": "I. Tiền và các khoản tương đương tiền",
+        "value": 10540181640920.0,
+        "notes_ref": "5",
+        "original_name": "I. Tiền và các khoản tương đương tiền"
+      },
+      {
+        "item_code": "111",
+        "item_name": "1. Tiền",
+        "value": 8084826991114.0,
+        "notes_ref": null,
+        "original_name": "1. Tiền"
+      },
+      {
+        "item_code": "112",
+        "item_name": "2. Các khoản tương đương tiền",
+        "value": 2455354649806.0,
+        "notes_ref": null,
+        "original_name": "2. Các khoản tương đương tiền"
+      },
+      {
+        "item_code": "120",
+        "item_name": "II. Các khoản đầu tư tài chính ngắn hạn",
+        "value": 29612986737440.0,
+        "notes_ref": "6",
+        "original_name": "II. Các khoản đầu tư tài chính ngắn hạn"
+      },
+      {
+        "item_code": "123",
+        "item_name": "1. Đầu tư nắm giữ đến ngày đáo hạn",
+        "value": 29612986737440.0,
+        "notes_ref": null,
+        "original_name": "1. Đầu tư nắm giữ đến ngày đáo hạn"
+      },
+      {
+        "item_code": "130",
+        "item_name": "III. Các khoản phải thu ngắn hạn",
+        "value": 14400800569076.0,
+        "notes_ref": null,
+        "original_name": "III. Các khoản phải thu ngắn hạn"
+      },
+      {
+        "item_code": "131",
+        "item_name": "1. Phải thu ngắn hạn của khách hàng",
+        "value": 12733504688522.0,
+        "notes_ref": "7",
+        "original_name": "1. Phải thu ngắn hạn của khách hàng"
+      },
+      {
+        "item_code": "132",
+        "item_name": "2. Trả trước cho người bán ngắn hạn",
+        "value": 915176652285.0,
+        "notes_ref": null,
+        "original_name": "2. Trả trước cho người bán ngắn hạn"
+      },
+      {
+        "item_code": "134",
+        "item_name": "3. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng",
+        "value": 200405269967.0,
+        "notes_ref": null,
+        "original_name": "3. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng"
+      },
+      {
+        "item_code": "135",
+        "item_name": "4. Phải thu về cho vay ngắn hạn",
+        "value": 9195910819.0,
+        "notes_ref": null,
+        "original_name": "4. Phải thu về cho vay ngắn hạn"
+      },
+      {
+        "item_code": "136",
+        "item_name": "5. Phải thu ngắn hạn khác",
+        "value": 1128684791757.0,
+        "notes_ref": "8",
+        "original_name": "5. Phải thu ngắn hạn khác"
+      },
+      {
+        "item_code": "137",
+        "item_name": "6. Dự phòng phải thu ngắn hạn khó đòi",
+        "value": -586166744274.0,
+        "notes_ref": "9",
+        "original_name": "6. Dự phòng phải thu ngắn hạn khó đòi"
+      },
+      {
+        "item_code": "140",
+        "item_name": "IV. Hàng tồn kho",
+        "value": 2167188682919.0,
+        "notes_ref": "10",
+        "original_name": "IV. Hàng tồn kho"
+      },
+      {
+        "item_code": "141",
+        "item_name": "1. Hàng tồn kho",
+        "value": 2250812490757.0,
+        "notes_ref": null,
+        "original_name": "1. Hàng tồn kho"
+      },
+      {
+        "item_code": "149",
+        "item_name": "2. Dự phòng giảm giá hàng tồn kho",
+        "value": -83623807838.0,
+        "notes_ref": null,
+        "original_name": "2. Dự phòng giảm giá hàng tồn kho"
+      },
+      {
+        "item_code": "150",
+        "item_name": "V. Tài sản ngắn hạn khác",
+        "value": 1381813111264.0,
+        "notes_ref": null,
+        "original_name": "V. Tài sản ngắn hạn khác"
+      },
+      {
+        "item_code": "151",
+        "item_name": "1. Chi phí trả trước ngắn hạn",
+        "value": 641070240596.0,
+        "notes_ref": "14",
+        "original_name": "1. Chi phí trả trước ngắn hạn"
+      },
+      {
+        "item_code": "152",
+        "item_name": "2. Thuế giá trị gia tăng được khấu trừ",
+        "value": 609517465104.0,
+        "notes_ref": null,
+        "original_name": "2. Thuế giá trị gia tăng được khấu trừ"
+      },
+      {
+        "item_code": "153",
+        "item_name": "3. Thuế và các khoản khác phải thu Nhà nước",
+        "value": 131225405564.0,
+        "notes_ref": "19",
+        "original_name": "3. Thuế và các khoản khác phải thu Nhà nước"
+      }
+    ]
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

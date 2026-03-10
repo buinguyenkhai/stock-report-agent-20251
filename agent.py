@@ -1,5 +1,6 @@
 import json
 from dotenv import load_dotenv
+import runtime_env  # noqa: F401
 from langgraph.graph import StateGraph, START, END
 
 from state import StockReportState

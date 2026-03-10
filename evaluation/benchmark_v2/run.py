@@ -22,7 +22,7 @@ from typing import Any, Dict, Iterable, List, Literal, Optional, Tuple
 
 from logger import get_logger
 
-from .dataset import BenchmarkDatasetV2, TableSample
+from .dataset import BenchmarkDatasetV2, IncludeScope, TableSample
 from .metrics_raw import RawScope, calculate_raw_metrics
 from .metrics_structured import calculate_structured_metrics
 from .report_assembler import assemble_report_structured_from_pages
@@ -296,6 +296,7 @@ def run_benchmark(
     dataset_root: str | Path,
     predictions_root: str | Path,
     split: SplitChoice = "test",
+    include_scope: IncludeScope = "all",
     engine_name: str = "unknown",
     raw_suffix: str = ".raw.md",
     structured_suffix: str = ".structured.json",
@@ -304,8 +305,13 @@ def run_benchmark(
     seed: int = 42,
     raw_scope: RawScope = "table_only",
 ) -> Dict[str, Any]:
-    ds = BenchmarkDatasetV2(dataset_root)
-    ds.validate(check_files=False)
+    ds = BenchmarkDatasetV2(dataset_root, include_scope=include_scope)
+    required_splits = ("dev",) if split == "dev" else ("test",) if split == "test" else None
+    ds.validate(
+        check_files=False,
+        required_splits=required_splits,
+        require_company_disjoint=True,
+    )
     dataset_stats = ds.get_stats()
 
     pred_root = Path(predictions_root)
@@ -417,6 +423,7 @@ def run_benchmark(
         "benchmark_version": "v2",
         "engine_name": engine_name,
         "split": split,
+        "include_scope": include_scope,
         "raw_scope": raw_scope,
         "structured_scope": "report_only",
         "dataset_root": str(Path(dataset_root).resolve()),
@@ -435,6 +442,13 @@ def main() -> None:
     parser.add_argument("--predictions-root", type=str, required=True, help="Path to model prediction files")
     parser.add_argument("--engine-name", type=str, default="unknown", help="Name of evaluated OCR/Extraction system")
     parser.add_argument("--split", type=str, default="test", choices=["dev", "test", "all"], help="Split to evaluate")
+    parser.add_argument(
+        "--include-scope",
+        type=str,
+        default="all",
+        choices=["all", "included", "not_included"],
+        help="Filter samples using included_samples.json before split selection",
+    )
     parser.add_argument("--raw-suffix", type=str, default=".raw.md", help="Per-sample raw markdown prediction suffix")
     parser.add_argument("--structured-suffix", type=str, default=".structured.json", help="Per-sample structured prediction suffix")
     parser.add_argument("--strict-missing", action="store_true", help="Fail if any prediction file is missing")
@@ -454,6 +468,7 @@ def main() -> None:
         dataset_root=args.dataset_root,
         predictions_root=args.predictions_root,
         split=args.split,
+        include_scope=args.include_scope,  # type: ignore[arg-type]
         engine_name=args.engine_name,
         raw_suffix=args.raw_suffix,
         structured_suffix=args.structured_suffix,

@@ -1,0 +1,536 @@
+{
+  "benchmark_version": "v2",
+  "engine_name": "hybrid_docling_local_smoke",
+  "split": "dev",
+  "include_scope": "included",
+  "raw_scope": "table_only",
+  "structured_scope": "report_only",
+  "dataset_root": "D:\\Study\\Code\\Projects\\Stock Report Agent\\stock-report-agent-20251\\data\\benchmark_v2",
+  "predictions_root": "D:\\Study\\Code\\Projects\\Stock Report Agent\\stock-report-agent-20251\\tmp\\review_hybrid_predictions",
+  "dataset_stats": {
+    "total_samples": 19,
+    "available_splits": [
+      "dev"
+    ],
+    "dev_samples": 19,
+    "test_samples": 0,
+    "dev_companies": [
+      "FPT",
+      "MWG",
+      "TCB"
+    ],
+    "test_companies": [],
+    "single_annotator_fraction": 0.0,
+    "avg_annotation_passes": 2.0
+  },
+  "summary": {
+    "counts": {
+      "samples_total": 19,
+      "samples_raw_scored": 13,
+      "reports_total": 3,
+      "reports_structured_scored": 2,
+      "samples_structured_scored": 2
+    },
+    "raw": {
+      "table_only_cer": {
+        "mean": 0.2540411345604084,
+        "ci_low": 0.11303792102810326,
+        "ci_high": 0.42397088908756897
+      },
+      "table_only_wer": {
+        "mean": 0.3279761540002374,
+        "ci_low": 0.14817593430846324,
+        "ci_high": 0.5500942415034333
+      },
+      "table_cell_f1": {
+        "mean": 0.6316115498640298,
+        "ci_low": 0.4497956460512406,
+        "ci_high": 0.7766864754395507
+      },
+      "number_f1": {
+        "mean": 0.8699909917052692,
+        "ci_low": 0.7823050891926481,
+        "ci_high": 0.9322560235600187
+      }
+    },
+    "structured": {
+      "schema_valid": {
+        "mean": 1.0,
+        "ci_low": 1.0,
+        "ci_high": 1.0
+      },
+      "row_precision": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "row_recall": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "row_f1": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "value_exact_accuracy": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      },
+      "value_tolerant_accuracy": {
+        "mean": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      }
+    },
+    "per_company": {
+      "FPT": {
+        "samples": 7,
+        "reports": 1,
+        "raw_number_f1_mean": 0.9535667005045647,
+        "structured_row_f1_mean": 0.0
+      },
+      "MWG": {
+        "samples": 6,
+        "reports": 1,
+        "raw_number_f1_mean": 0.7724859981060909,
+        "structured_row_f1_mean": 0.0
+      },
+      "TCB": {
+        "samples": 6,
+        "reports": 1,
+        "raw_number_f1_mean": 0.0,
+        "structured_row_f1_mean": 0.0
+      }
+    }
+  },
+  "sample_results": [
+    {
+      "sample_id": "FPT_Q4_2025_p004",
+      "split": "dev",
+      "company": "FPT",
+      "page_index": 4,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.025587828492392807,
+        "table_only_wer": 0.043478260869565216,
+        "table_cell_f1": 0.8681318681318682,
+        "number_f1": 0.9714285714285714,
+        "number_precision": 1.0,
+        "number_recall": 0.9444444444444444,
+        "reference_cell_count": 93,
+        "hypothesis_cell_count": 89
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "FPT_Q4_2025_p005",
+      "split": "dev",
+      "company": "FPT",
+      "page_index": 5,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.057458563535911604,
+        "table_only_wer": 0.07789473684210527,
+        "table_cell_f1": 0.7715355805243447,
+        "number_f1": 0.956140350877193,
+        "number_precision": 0.9478260869565217,
+        "number_recall": 0.9646017699115044,
+        "reference_cell_count": 121,
+        "hypothesis_cell_count": 146
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "FPT_Q4_2025_p006",
+      "split": "dev",
+      "company": "FPT",
+      "page_index": 6,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.011830201809324982,
+        "table_only_wer": 0.0136986301369863,
+        "table_cell_f1": 0.9417989417989417,
+        "number_f1": 1.0,
+        "number_precision": 1.0,
+        "number_recall": 1.0,
+        "reference_cell_count": 94,
+        "hypothesis_cell_count": 95
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "FPT_Q4_2025_p007",
+      "split": "dev",
+      "company": "FPT",
+      "page_index": 7,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.07773851590106007,
+        "table_only_wer": 0.08680555555555555,
+        "table_cell_f1": 0.8391608391608392,
+        "number_f1": 0.9565217391304348,
+        "number_precision": 0.9428571428571428,
+        "number_recall": 0.9705882352941176,
+        "reference_cell_count": 69,
+        "hypothesis_cell_count": 74
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "FPT_Q4_2025_p008",
+      "split": "dev",
+      "company": "FPT",
+      "page_index": 8,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.06810766721044045,
+        "table_only_wer": 0.0949367088607595,
+        "table_cell_f1": 0.7758007117437722,
+        "number_f1": 0.8962962962962963,
+        "number_precision": 0.9918032786885246,
+        "number_recall": 0.8175675675675675,
+        "reference_cell_count": 150,
+        "hypothesis_cell_count": 131
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "FPT_Q4_2025_p010",
+      "split": "dev",
+      "company": "FPT",
+      "page_index": 10,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.04902427415516421,
+        "table_only_wer": 0.07061068702290077,
+        "table_cell_f1": 0.7821782178217821,
+        "number_f1": 0.9390243902439024,
+        "number_precision": 0.9506172839506173,
+        "number_recall": 0.927710843373494,
+        "reference_cell_count": 99,
+        "hypothesis_cell_count": 103
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "FPT_Q4_2025_p011",
+      "split": "dev",
+      "company": "FPT",
+      "page_index": 11,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.0718954248366013,
+        "table_only_wer": 0.08974358974358974,
+        "table_cell_f1": 0.7954545454545455,
+        "number_f1": 0.9555555555555557,
+        "number_precision": 0.9772727272727273,
+        "number_recall": 0.9347826086956522,
+        "reference_cell_count": 45,
+        "hypothesis_cell_count": 43
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "MWG_Q2_2023_p005",
+      "split": "dev",
+      "company": "MWG",
+      "page_index": 5,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.6571758368603309,
+        "table_only_wer": 0.8787425149700598,
+        "table_cell_f1": 0.1984732824427481,
+        "number_f1": 0.5271966527196653,
+        "number_precision": 0.5675675675675675,
+        "number_recall": 0.4921875,
+        "reference_cell_count": 178,
+        "hypothesis_cell_count": 84
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "MWG_Q2_2023_p006",
+      "split": "dev",
+      "company": "MWG",
+      "page_index": 6,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.09294320137693632,
+        "table_only_wer": 0.11383928571428571,
+        "table_cell_f1": 0.7887323943661971,
+        "number_f1": 0.825,
+        "number_precision": 0.9041095890410958,
+        "number_recall": 0.7586206896551724,
+        "reference_cell_count": 117,
+        "hypothesis_cell_count": 96
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "MWG_Q2_2023_p007",
+      "split": "dev",
+      "company": "MWG",
+      "page_index": 7,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.7137404580152672,
+        "table_only_wer": 0.935,
+        "table_cell_f1": 0.6459627329192547,
+        "number_f1": 0.8875739644970415,
+        "number_precision": 0.9615384615384616,
+        "number_recall": 0.8241758241758241,
+        "reference_cell_count": 81,
+        "hypothesis_cell_count": 80
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "MWG_Q2_2023_p008",
+      "split": "dev",
+      "company": "MWG",
+      "page_index": 8,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.7749766573295985,
+        "table_only_wer": 1.0,
+        "table_cell_f1": 0.020833333333333332,
+        "number_f1": 0.7647058823529412,
+        "number_precision": 0.7878787878787878,
+        "number_recall": 0.7428571428571429,
+        "reference_cell_count": 81,
+        "hypothesis_cell_count": 15
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "MWG_Q2_2023_p009",
+      "split": "dev",
+      "company": "MWG",
+      "page_index": 9,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.16377040547656663,
+        "table_only_wer": 0.2167381974248927,
+        "table_cell_f1": 0.6737967914438503,
+        "number_f1": 0.953020134228188,
+        "number_precision": 0.9861111111111112,
+        "number_recall": 0.922077922077922,
+        "reference_cell_count": 99,
+        "hypothesis_cell_count": 88
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "MWG_Q2_2023_p010",
+      "split": "dev",
+      "company": "MWG",
+      "page_index": 10,
+      "raw_available": true,
+      "structured_available": false,
+      "raw_metrics": {
+        "table_only_cer": 0.5382857142857143,
+        "table_only_wer": 0.6422018348623854,
+        "table_cell_f1": 0.1090909090909091,
+        "number_f1": 0.6774193548387099,
+        "number_precision": 0.9545454545454546,
+        "number_recall": 0.525,
+        "reference_cell_count": 49,
+        "hypothesis_cell_count": 6
+      },
+      "structured_metrics": null,
+      "errors": []
+    },
+    {
+      "sample_id": "TCB_Q3_2024_p006",
+      "split": "dev",
+      "company": "TCB",
+      "page_index": 6,
+      "raw_available": false,
+      "structured_available": false,
+      "raw_metrics": null,
+      "structured_metrics": null,
+      "errors": [
+        "missing_raw_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p006.raw.md"
+      ]
+    },
+    {
+      "sample_id": "TCB_Q3_2024_p007",
+      "split": "dev",
+      "company": "TCB",
+      "page_index": 7,
+      "raw_available": false,
+      "structured_available": false,
+      "raw_metrics": null,
+      "structured_metrics": null,
+      "errors": [
+        "missing_raw_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p007.raw.md"
+      ]
+    },
+    {
+      "sample_id": "TCB_Q3_2024_p008",
+      "split": "dev",
+      "company": "TCB",
+      "page_index": 8,
+      "raw_available": false,
+      "structured_available": false,
+      "raw_metrics": null,
+      "structured_metrics": null,
+      "errors": [
+        "missing_raw_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p008.raw.md"
+      ]
+    },
+    {
+      "sample_id": "TCB_Q3_2024_p009",
+      "split": "dev",
+      "company": "TCB",
+      "page_index": 9,
+      "raw_available": false,
+      "structured_available": false,
+      "raw_metrics": null,
+      "structured_metrics": null,
+      "errors": [
+        "missing_raw_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p009.raw.md"
+      ]
+    },
+    {
+      "sample_id": "TCB_Q3_2024_p010",
+      "split": "dev",
+      "company": "TCB",
+      "page_index": 10,
+      "raw_available": false,
+      "structured_available": false,
+      "raw_metrics": null,
+      "structured_metrics": null,
+      "errors": [
+        "missing_raw_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p010.raw.md"
+      ]
+    },
+    {
+      "sample_id": "TCB_Q3_2024_p011",
+      "split": "dev",
+      "company": "TCB",
+      "page_index": 11,
+      "raw_available": false,
+      "structured_available": false,
+      "raw_metrics": null,
+      "structured_metrics": null,
+      "errors": [
+        "missing_raw_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p011.raw.md"
+      ]
+    }
+  ],
+  "report_structured_results": [
+    {
+      "report_id": "FPT_Q4_2025",
+      "split": "dev",
+      "company": "FPT",
+      "page_count": 7,
+      "sample_ids": [
+        "FPT_Q4_2025_p004",
+        "FPT_Q4_2025_p005",
+        "FPT_Q4_2025_p006",
+        "FPT_Q4_2025_p007",
+        "FPT_Q4_2025_p008",
+        "FPT_Q4_2025_p010",
+        "FPT_Q4_2025_p011"
+      ],
+      "structured_available": true,
+      "structured_metrics": {
+        "schema_valid": 1.0,
+        "row_precision": 0.0,
+        "row_recall": 0.0,
+        "row_f1": 0.0,
+        "value_exact_accuracy": 0.0,
+        "value_tolerant_accuracy": 0.0,
+        "gt_row_count": 139,
+        "pred_row_count": 0,
+        "matched_row_count": 0
+      },
+      "gt_merge_conflict_count": 0,
+      "pred_merge_conflict_count": 0,
+      "errors": []
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "split": "dev",
+      "company": "MWG",
+      "page_count": 6,
+      "sample_ids": [
+        "MWG_Q2_2023_p005",
+        "MWG_Q2_2023_p006",
+        "MWG_Q2_2023_p007",
+        "MWG_Q2_2023_p008",
+        "MWG_Q2_2023_p009",
+        "MWG_Q2_2023_p010"
+      ],
+      "structured_available": true,
+      "structured_metrics": {
+        "schema_valid": 1.0,
+        "row_precision": 0.0,
+        "row_recall": 0.0,
+        "row_f1": 0.0,
+        "value_exact_accuracy": 0.0,
+        "value_tolerant_accuracy": 0.0,
+        "gt_row_count": 122,
+        "pred_row_count": 0,
+        "matched_row_count": 0
+      },
+      "gt_merge_conflict_count": 5,
+      "pred_merge_conflict_count": 0,
+      "errors": []
+    },
+    {
+      "report_id": "TCB_Q3_2024",
+      "split": "dev",
+      "company": "TCB",
+      "page_count": 6,
+      "sample_ids": [
+        "TCB_Q3_2024_p006",
+        "TCB_Q3_2024_p007",
+        "TCB_Q3_2024_p008",
+        "TCB_Q3_2024_p009",
+        "TCB_Q3_2024_p010",
+        "TCB_Q3_2024_p011"
+      ],
+      "structured_available": false,
+      "structured_metrics": null,
+      "gt_merge_conflict_count": 0,
+      "pred_merge_conflict_count": 0,
+      "errors": [
+        "missing_structured_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p006.structured.json",
+        "missing_structured_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p007.structured.json",
+        "missing_structured_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p008.structured.json",
+        "missing_structured_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p009.structured.json",
+        "missing_structured_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p010.structured.json",
+        "missing_structured_prediction: tmp\\review_hybrid_predictions\\TCB_Q3_2024_p011.structured.json"
+      ]
+    }
+  ]
+}

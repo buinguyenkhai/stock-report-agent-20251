@@ -7,7 +7,8 @@ import streamlit as st
 from typing import Dict, Any, List, Optional, Callable, Tuple
 import pandas as pd
 
-from config import OCR_ENGINE_OPTIONS, LLM_MODEL_OPTIONS, DEFAULT_LLM_MODEL
+from config import OCR_ENGINE_OPTIONS
+from llm_settings import LLM_MODEL_OPTIONS, DEFAULT_LLM_MODEL
 from logger import get_logger
 
 logger = get_logger(__name__)

@@ -1,0 +1,16 @@
+statement,item_code,item_name,value,notes_ref,original_name
+cash_flow,31,Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát,191909700000,23.1,Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát
+cash_flow,32,Mua lại cổ phiếu của doanh nghiệp đã phát hành,-7664060000,,Mua lại cổ phiếu của doanh nghiệp đã phát hành
+cash_flow,33,Tiền thu từ đi vay,27856434463587,,Tiền thu từ đi vay
+cash_flow,34,Tiền chi trả nợ gốc vay,-22207499036026,22,Tiền chi trả nợ gốc vay
+cash_flow,36,Cổ tức đã trả,-731854815000,23.1,Cổ tức đã trả
+cash_flow,40,Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính,5641480367561,,Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính
+cash_flow,40,Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính,-2846181738034,,Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính
+cash_flow,50,Lưu chuyển tiền thuần trong kỳ,-1619501229334,,Lưu chuyển tiền thuần trong kỳ
+cash_flow,50,Lưu chuyển tiền thuần trong kỳ,-1244329453278,,Lưu chuyển tiền thuần trong kỳ
+cash_flow,60,Tiền và tương đương tiền đầu kỳ,5061020547422,,Tiền và tương đương tiền đầu kỳ
+cash_flow,60,Tiền và tương đương tiền đầu kỳ,4142015762555,,Tiền và tương đương tiền đầu kỳ
+cash_flow,61,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,20045929,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
+cash_flow,61,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,143043760,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
+cash_flow,70,Tiền và tương đương tiền cuối kỳ,3441539364017,4,Tiền và tương đương tiền cuối kỳ
+cash_flow,70,Tiền và tương đương tiền cuối kỳ,2897829353037,4,Tiền và tương đương tiền cuối kỳ

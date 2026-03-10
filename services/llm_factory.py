@@ -1,6 +1,7 @@
 """
 LLM Factory for creating model instances via OpenRouter.
 """
+import runtime_env  # noqa: F401
 from dataclasses import dataclass
 from typing import Optional, Type
 from pydantic import BaseModel
@@ -8,6 +9,7 @@ from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_openai import ChatOpenAI
 
 from config import settings
+from llm_settings import get_task_llm_settings
 from logger import get_logger
 
 logger = get_logger(__name__)
@@ -30,55 +32,7 @@ class LLMConfig:
     @classmethod
     def for_task(cls, task: str) -> "LLMConfig":
         """Get task-specific LLM configuration."""
-        task_configs = {
-            "item_matching": cls(
-                temperature=0.0,
-                max_tokens=500,
-                timeout=60,
-                top_p=0.9,
-                frequency_penalty=0.1,  # Reduce repetition in reasoning
-                presence_penalty=0.0,
-                max_retries=3,
-            ),
-            "unit_detection": cls(
-                temperature=0.0,
-                max_tokens=200,
-                timeout=60,
-                top_p=0.9,
-                frequency_penalty=0.0,
-                presence_penalty=0.0,
-                max_retries=3,
-            ),
-            "parsing": cls(
-                temperature=0.0,
-                max_tokens=64000,     # Full financial report parsing needs more tokens
-                timeout=600,          # Longer timeout for complex documents
-                top_p=0.95,
-                frequency_penalty=0.1,
-                presence_penalty=0.1,  # Encourage diverse item extraction
-                max_retries=3,
-            ),
-            "query_processing": cls(
-                temperature=0.0,
-                max_tokens=500,
-                timeout=60,
-                top_p=0.9,
-                frequency_penalty=0.0,
-                presence_penalty=0.0,
-                max_retries=3,
-            ),
-            # Single-call extraction of TM tables grouped by referenced notes_ref.
-            "notes_tables_by_ref": cls(
-                temperature=0.0,
-                max_tokens=64000,
-                timeout=300,
-                top_p=0.9,
-                frequency_penalty=0.0,
-                presence_penalty=0.0,
-                max_retries=3,
-            ),
-        }
-        return task_configs.get(task, cls())
+        return cls(**get_task_llm_settings(task))
 
 
 def create_llm(

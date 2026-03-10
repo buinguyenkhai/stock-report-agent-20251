@@ -207,3 +207,85 @@ def test_run_benchmark_structured_is_report_level(tmp_path: Path) -> None:
     assert counts["samples_total"] == 2
     assert counts["reports_total"] == 1
     assert counts["reports_structured_scored"] == 1
+
+
+def test_run_benchmark_allows_single_split_with_include_scope(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    pred_root = tmp_path / "predictions"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    pred_root.mkdir(parents=True, exist_ok=True)
+    (dataset_root / "gt_markdown").mkdir(parents=True, exist_ok=True)
+    (dataset_root / "gt_structured").mkdir(parents=True, exist_ok=True)
+
+    sample_id = "AAA_2024Q3_p001"
+    manifest = {
+        "version": "1.0.0",
+        "split_policy": "company_heldout_dev_test",
+        "annotation_protocol": "single_annotator_two_pass",
+        "samples": [
+            {
+                "sample_id": sample_id,
+                "split": "dev",
+                "company": "AAA",
+                "report_id": "AAA_2024Q3",
+                "page_index": 1,
+                "page_image_path": f"images/{sample_id}.png",
+                "gt_markdown_path": f"gt_markdown/{sample_id}.md",
+                "gt_structured_path": f"gt_structured/{sample_id}.json",
+            },
+            {
+                "sample_id": "AAA_2024Q3_p002",
+                "split": "dev",
+                "company": "AAA",
+                "report_id": "AAA_2024Q3",
+                "page_index": 2,
+                "page_image_path": "images/AAA_2024Q3_p002.png",
+                "gt_markdown_path": "gt_markdown/AAA_2024Q3_p002.md",
+                "gt_structured_path": "gt_structured/AAA_2024Q3_p002.json",
+            },
+        ],
+    }
+    (dataset_root / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    (dataset_root / "included_samples.json").write_text(
+        json.dumps(
+            {
+                "version": "1.0.0",
+                "mode": "include_table_pages",
+                "included_sample_ids": [sample_id],
+                "updated_at": "",
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+    gt_md = "| Item | Value |\n| --- | --- |\n| A | 100 |\n"
+    gt_struct = {
+        "balance_sheet": {"items": [{"item_code": "110", "item_name": "A", "value": 100.0}]},
+        "income_statement": {"items": []},
+        "cash_flow": {"items": []},
+    }
+    (dataset_root / f"gt_markdown/{sample_id}.md").write_text(gt_md, encoding="utf-8")
+    (dataset_root / f"gt_structured/{sample_id}.json").write_text(
+        json.dumps(gt_struct, indent=2), encoding="utf-8"
+    )
+    (pred_root / f"{sample_id}.raw.md").write_text(gt_md, encoding="utf-8")
+    (pred_root / f"{sample_id}.structured.json").write_text(
+        json.dumps(gt_struct, indent=2), encoding="utf-8"
+    )
+
+    result = run_benchmark(
+        dataset_root=dataset_root,
+        predictions_root=pred_root,
+        split="dev",
+        include_scope="included",
+        engine_name="test_engine",
+        raw_scope="table_only",
+        bootstrap_iters=10,
+        seed=1,
+    )
+
+    assert result["include_scope"] == "included"
+    assert result["dataset_stats"]["available_splits"] == ["dev"]
+    assert len(result["sample_results"]) == 1
+    assert result["summary"]["counts"]["reports_total"] == 1

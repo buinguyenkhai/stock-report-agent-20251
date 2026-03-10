@@ -1,0 +1,264 @@
+{
+  "balance_sheet": {
+    "items": [
+      {
+        "item_code": null,
+        "item_name": "Tiền mặt, vàng",
+        "value": 3608503.0,
+        "notes_ref": "5",
+        "original_name": "Tiền mặt, vàng"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền gửi tại Ngân hàng Nhà nước Việt Nam (\"NHNN\")",
+        "value": 40614749.0,
+        "notes_ref": "6",
+        "original_name": "Tiền gửi tại Ngân hàng Nhà nước Việt Nam (\"NHNN\")"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền gửi và cấp tín dụng cho các tổ chức tín dụng (\"TCTD\") khác",
+        "value": 90014293.0,
+        "notes_ref": "7",
+        "original_name": "Tiền gửi và cấp tín dụng cho các tổ chức tín dụng (\"TCTD\") khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền gửi tại các TCTD khác",
+        "value": 80586687.0,
+        "notes_ref": "7.1",
+        "original_name": "Tiền gửi tại các TCTD khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Cấp tín dụng cho các TCTD khác",
+        "value": 9607946.0,
+        "notes_ref": "7.2",
+        "original_name": "Cấp tín dụng cho các TCTD khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Dự phòng rủi ro cấp tín dụng cho các TCTD khác",
+        "value": -180340.0,
+        "notes_ref": "7.3",
+        "original_name": "Dự phòng rủi ro cấp tín dụng cho các TCTD khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chứng khoán kinh doanh",
+        "value": 4524314.0,
+        "notes_ref": "8",
+        "original_name": "Chứng khoán kinh doanh"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chứng khoán kinh doanh",
+        "value": 4524314.0,
+        "notes_ref": null,
+        "original_name": "Chứng khoán kinh doanh"
+      },
+      {
+        "item_code": null,
+        "item_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác",
+        "value": 269237.0,
+        "notes_ref": "19",
+        "original_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Cho vay khách hàng",
+        "value": 617924570.0,
+        "notes_ref": null,
+        "original_name": "Cho vay khách hàng"
+      },
+      {
+        "item_code": null,
+        "item_name": "Cho vay khách hàng",
+        "value": 626290777.0,
+        "notes_ref": "9",
+        "original_name": "Cho vay khách hàng"
+      },
+      {
+        "item_code": null,
+        "item_name": "Dự phòng rủi ro cho vay khách hàng",
+        "value": -8366207.0,
+        "notes_ref": "10",
+        "original_name": "Dự phòng rủi ro cho vay khách hàng"
+      },
+      {
+        "item_code": null,
+        "item_name": "Hoạt động mua nợ",
+        "value": 314766.0,
+        "notes_ref": "11",
+        "original_name": "Hoạt động mua nợ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Mua nợ",
+        "value": 318827.0,
+        "notes_ref": null,
+        "original_name": "Mua nợ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Dự phòng rủi ro hoạt động mua nợ",
+        "value": -4061.0,
+        "notes_ref": null,
+        "original_name": "Dự phòng rủi ro hoạt động mua nợ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chứng khoán đầu tư",
+        "value": 102135236.0,
+        "notes_ref": "12",
+        "original_name": "Chứng khoán đầu tư"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chứng khoán đầu tư sẵn sàng để bán",
+        "value": 97062825.0,
+        "notes_ref": "12.1",
+        "original_name": "Chứng khoán đầu tư sẵn sàng để bán"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chứng khoán đầu tư giữ đến ngày đáo hạn",
+        "value": 5400000.0,
+        "notes_ref": "12.2",
+        "original_name": "Chứng khoán đầu tư giữ đến ngày đáo hạn"
+      },
+      {
+        "item_code": null,
+        "item_name": "Dự phòng rủi ro chứng khoán đầu tư",
+        "value": -327589.0,
+        "notes_ref": "12.3",
+        "original_name": "Dự phòng rủi ro chứng khoán đầu tư"
+      },
+      {
+        "item_code": null,
+        "item_name": "Góp vốn, đầu tư dài hạn",
+        "value": 3047523.0,
+        "notes_ref": "13",
+        "original_name": "Góp vốn, đầu tư dài hạn"
+      },
+      {
+        "item_code": null,
+        "item_name": "Đầu tư dài hạn khác",
+        "value": 3048672.0,
+        "notes_ref": null,
+        "original_name": "Đầu tư dài hạn khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Dự phòng giảm giá góp vốn, đầu tư dài hạn",
+        "value": -1149.0,
+        "notes_ref": null,
+        "original_name": "Dự phòng giảm giá góp vốn, đầu tư dài hạn"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tài sản cố định",
+        "value": 12752316.0,
+        "notes_ref": "14",
+        "original_name": "Tài sản cố định"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tài sản cố định hữu hình",
+        "value": 6974513.0,
+        "notes_ref": "14.1",
+        "original_name": "Tài sản cố định hữu hình"
+      },
+      {
+        "item_code": null,
+        "item_name": "Nguyên giá tài sản cố định",
+        "value": 9348348.0,
+        "notes_ref": null,
+        "original_name": "Nguyên giá tài sản cố định"
+      },
+      {
+        "item_code": null,
+        "item_name": "Khấu hao tài sản cố định",
+        "value": -2373835.0,
+        "notes_ref": null,
+        "original_name": "Khấu hao tài sản cố định"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tài sản cố định vô hình",
+        "value": 5777803.0,
+        "notes_ref": "14.2",
+        "original_name": "Tài sản cố định vô hình"
+      },
+      {
+        "item_code": null,
+        "item_name": "Nguyên giá tài sản cố định",
+        "value": 8160074.0,
+        "notes_ref": null,
+        "original_name": "Nguyên giá tài sản cố định"
+      },
+      {
+        "item_code": null,
+        "item_name": "Hao mòn tài sản cố định",
+        "value": -2382271.0,
+        "notes_ref": null,
+        "original_name": "Hao mòn tài sản cố định"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tài sản Có khác",
+        "value": 51847838.0,
+        "notes_ref": "15",
+        "original_name": "Tài sản Có khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Các khoản phải thu",
+        "value": 36294684.0,
+        "notes_ref": null,
+        "original_name": "Các khoản phải thu"
+      },
+      {
+        "item_code": null,
+        "item_name": "Các khoản lãi, phí phải thu",
+        "value": 13921648.0,
+        "notes_ref": null,
+        "original_name": "Các khoản lãi, phí phải thu"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tài sản thuế thu nhập doanh nghiệp hoãn lại",
+        "value": 73401.0,
+        "notes_ref": null,
+        "original_name": "Tài sản thuế thu nhập doanh nghiệp hoãn lại"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tài sản Có khác",
+        "value": 1715829.0,
+        "notes_ref": null,
+        "original_name": "Tài sản Có khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác",
+        "value": -157724.0,
+        "notes_ref": null,
+        "original_name": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác"
+      },
+      {
+        "item_code": null,
+        "item_name": "TỔNG TÀI SẢN",
+        "value": 927053345.0,
+        "notes_ref": null,
+        "original_name": "TỔNG TÀI SẢN"
+      }
+    ]
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

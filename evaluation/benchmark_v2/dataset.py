@@ -12,9 +12,10 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Literal, Optional
+from typing import Any, Dict, Iterable, List, Literal, Optional, Sequence
 
 SplitName = Literal["dev", "test"]
+IncludeScope = Literal["all", "included", "not_included"]
 
 
 @dataclass(frozen=True)
@@ -43,9 +44,18 @@ class TableSample:
 class BenchmarkDatasetV2:
     """Schema-light, strict-enough loader for benchmark v2 manifests."""
 
-    def __init__(self, dataset_root: str | Path, manifest_path: str = "manifest.json"):
+    def __init__(
+        self,
+        dataset_root: str | Path,
+        manifest_path: str = "manifest.json",
+        *,
+        include_scope: IncludeScope = "all",
+        include_registry_path: str = "included_samples.json",
+    ):
         self.dataset_root = Path(dataset_root)
         self.manifest_path = self.dataset_root / manifest_path
+        self.include_scope: IncludeScope = include_scope
+        self.include_registry_path = self.dataset_root / include_registry_path
         self._manifest: Optional[Dict[str, Any]] = None
         self._samples: Optional[List[TableSample]] = None
 
@@ -58,8 +68,52 @@ class BenchmarkDatasetV2:
     @property
     def samples(self) -> List[TableSample]:
         if self._samples is None:
-            self._samples = self._parse_samples(self.manifest)
+            parsed = self._parse_samples(self.manifest)
+            self._samples = self._apply_include_scope(parsed)
         return self._samples
+
+    def _load_include_registry(self) -> Dict[str, Any]:
+        default = {
+            "version": "1.0.0",
+            "mode": "include_table_pages",
+            "included_sample_ids": [],
+            "updated_at": "",
+        }
+        if not self.include_registry_path.exists():
+            return default
+
+        try:
+            obj = json.loads(self.include_registry_path.read_text(encoding="utf-8"))
+        except Exception:
+            return default
+        if not isinstance(obj, dict):
+            return default
+
+        raw_ids = obj.get("included_sample_ids", [])
+        included_ids: List[str] = []
+        seen: set[str] = set()
+        if isinstance(raw_ids, list):
+            for value in raw_ids:
+                sample_id = str(value).strip()
+                if sample_id and sample_id not in seen:
+                    seen.add(sample_id)
+                    included_ids.append(sample_id)
+
+        return {
+            "version": str(obj.get("version", "1.0.0")),
+            "mode": str(obj.get("mode", "include_table_pages")),
+            "included_sample_ids": included_ids,
+            "updated_at": str(obj.get("updated_at", "")),
+        }
+
+    def _apply_include_scope(self, samples: List[TableSample]) -> List[TableSample]:
+        if self.include_scope == "all":
+            return list(samples)
+
+        included_ids = set(self._load_include_registry().get("included_sample_ids", []))
+        if self.include_scope == "included":
+            return [s for s in samples if s.sample_id in included_ids]
+        return [s for s in samples if s.sample_id not in included_ids]
 
     def _load_manifest(self) -> Dict[str, Any]:
         if not self.manifest_path.exists():
@@ -138,13 +192,20 @@ class BenchmarkDatasetV2:
     def get_split_samples(self, split: SplitName) -> List[TableSample]:
         return list(self.iter_split(split))
 
-    def validate_split_presence(self) -> None:
-        dev_count = len(self.get_split_samples("dev"))
-        test_count = len(self.get_split_samples("test"))
-        if dev_count == 0 or test_count == 0:
-            raise ValueError(
-                f"Both dev and test must be present. Found dev={dev_count}, test={test_count}"
-            )
+    def available_splits(self) -> List[SplitName]:
+        out: List[SplitName] = []
+        for split in ("dev", "test"):
+            if self.get_split_samples(split):  # type: ignore[arg-type]
+                out.append(split)  # type: ignore[arg-type]
+        return out
+
+    def validate_split_presence(self, required_splits: Optional[Sequence[SplitName]] = None) -> None:
+        required = tuple(required_splits) if required_splits is not None else ("dev", "test")
+        counts = {split: len(self.get_split_samples(split)) for split in ("dev", "test")}
+        missing = [split for split in required if counts.get(split, 0) == 0]
+        if missing:
+            found = ", ".join(f"{split}={counts[split]}" for split in ("dev", "test"))
+            raise ValueError(f"Required splits missing: {', '.join(missing)}. Found {found}")
 
     def validate_company_disjoint(self) -> None:
         dev_companies = {s.company for s in self.get_split_samples("dev")}
@@ -172,18 +233,28 @@ class BenchmarkDatasetV2:
                 if not p.exists():
                     raise FileNotFoundError(f"Missing referenced file for {s.sample_id}: {p}")
 
-    def validate(self, *, check_files: bool = False) -> None:
-        self.validate_split_presence()
-        self.validate_company_disjoint()
+    def validate(
+        self,
+        *,
+        check_files: bool = False,
+        required_splits: Optional[Sequence[SplitName]] = None,
+        require_company_disjoint: bool = True,
+    ) -> None:
+        self.validate_split_presence(required_splits=required_splits)
+        if require_company_disjoint:
+            dev_count = len(self.get_split_samples("dev"))
+            test_count = len(self.get_split_samples("test"))
+            if dev_count > 0 and test_count > 0:
+                self.validate_company_disjoint()
         if check_files:
             self.validate_referenced_files()
 
     def get_stats(self) -> Dict[str, Any]:
-        self.validate_split_presence()
         dev = self.get_split_samples("dev")
         test = self.get_split_samples("test")
         return {
             "total_samples": len(self.samples),
+            "available_splits": self.available_splits(),
             "dev_samples": len(dev),
             "test_samples": len(test),
             "dev_companies": sorted({s.company for s in dev}),
@@ -199,4 +270,3 @@ class BenchmarkDatasetV2:
                 else 0.0
             ),
         }
-

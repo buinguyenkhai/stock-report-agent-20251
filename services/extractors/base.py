@@ -1,15 +1,13 @@
 import asyncio
+import traceback
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Optional, Any, Dict
+from config import settings
 from logger import get_logger
 from services.llm_factory import create_llm
 
 logger = get_logger(__name__)
-
-# Default model for extraction
-DEFAULT_EXTRACTION_MODEL = "google/gemini-2.5-flash-lite-preview-09-2025"
-
 
 @dataclass
 class ExtractionResult:
@@ -39,7 +37,7 @@ class BaseExtractor(ABC):
         """
         Initialize extractor with LLM model.
         """
-        self.model = model or DEFAULT_EXTRACTION_MODEL
+        self.model = model or settings.llm_model
         self._llm = None
     
     @property
@@ -125,12 +123,22 @@ class BaseExtractor(ABC):
             )
             
         except Exception as e:
-            logger.error(f"{self.EXTRACTOR_NAME}: Extraction failed - {e}")
+            err_type = type(e).__name__
+            err_msg = str(e) or repr(e)
+            tb = traceback.format_exc()
+            logger.exception(f"{self.EXTRACTOR_NAME}: Extraction failed ({err_type}) - {err_msg}")
             return ExtractionResult(
                 extractor_name=self.EXTRACTOR_NAME,
                 content="",
                 success=False,
-                error=str(e)
+                error=err_msg,
+                metadata={
+                    "error_type": err_type,
+                    "error_repr": repr(e),
+                    "traceback": tb,
+                    "model": self.model,
+                    "markdown_chars": int(len(markdown or "")),
+                },
             )
     
     def _clean_markdown(self, markdown: str) -> str:

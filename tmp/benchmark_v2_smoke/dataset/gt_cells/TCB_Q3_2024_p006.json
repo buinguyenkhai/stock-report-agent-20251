@@ -1,0 +1,522 @@
+{
+  "rows": [
+    [
+      {
+        "text": "TÀI SẢN"
+      },
+      {
+        "text": "Thuyết minh"
+      },
+      {
+        "text": "30/09/2024 triệu đồng"
+      },
+      {
+        "text": "31/12/2023 triệu đồng"
+      }
+    ],
+    [
+      {
+        "text": "Tiền mặt, vàng"
+      },
+      {
+        "text": "5"
+      },
+      {
+        "text": "3.608.503"
+      },
+      {
+        "text": "3.620.695"
+      }
+    ],
+    [
+      {
+        "text": "Tiền gửi tại Ngân hàng Nhà nước Việt Nam (\"NHNN\")"
+      },
+      {
+        "text": "6"
+      },
+      {
+        "text": "40.614.749"
+      },
+      {
+        "text": "27.140.592"
+      }
+    ],
+    [
+      {
+        "text": "Tiền gửi và cấp tín dụng cho các tổ chức tín dụng (\"TCTD\") khác"
+      },
+      {
+        "text": "7"
+      },
+      {
+        "text": "90.014.293"
+      },
+      {
+        "text": "104.072.320"
+      }
+    ],
+    [
+      {
+        "text": "Tiền gửi tại các TCTD khác"
+      },
+      {
+        "text": "7.1"
+      },
+      {
+        "text": "80.586.687"
+      },
+      {
+        "text": "80.126.897"
+      }
+    ],
+    [
+      {
+        "text": "Cấp tín dụng cho các TCTD khác"
+      },
+      {
+        "text": "7.2"
+      },
+      {
+        "text": "9.607.946"
+      },
+      {
+        "text": "24.046.523"
+      }
+    ],
+    [
+      {
+        "text": "Dự phòng rủi ro cấp tín dụng cho các TCTD khác"
+      },
+      {
+        "text": "7.3"
+      },
+      {
+        "text": "(180.340)"
+      },
+      {
+        "text": "(101.100)"
+      }
+    ],
+    [
+      {
+        "text": "Chứng khoán kinh doanh"
+      },
+      {
+        "text": "8"
+      },
+      {
+        "text": "4.524.314"
+      },
+      {
+        "text": "4.432.778"
+      }
+    ],
+    [
+      {
+        "text": "Chứng khoán kinh doanh"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "4.524.314"
+      },
+      {
+        "text": "4.432.778"
+      }
+    ],
+    [
+      {
+        "text": "Các công cụ tài chính phái sinh và các tài sản tài chính khác"
+      },
+      {
+        "text": "19"
+      },
+      {
+        "text": "269.237"
+      },
+      {
+        "text": "143.611"
+      }
+    ],
+    [
+      {
+        "text": "Cho vay khách hàng"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "617.924.570"
+      },
+      {
+        "text": "512.513.672"
+      }
+    ],
+    [
+      {
+        "text": "Cho vay khách hàng"
+      },
+      {
+        "text": "9"
+      },
+      {
+        "text": "626.290.777"
+      },
+      {
+        "text": "518.641.568"
+      }
+    ],
+    [
+      {
+        "text": "Dự phòng rủi ro cho vay khách hàng"
+      },
+      {
+        "text": "10"
+      },
+      {
+        "text": "(8.366.207)"
+      },
+      {
+        "text": "(6.127.896)"
+      }
+    ],
+    [
+      {
+        "text": "Hoạt động mua nợ"
+      },
+      {
+        "text": "11"
+      },
+      {
+        "text": "314.766"
+      },
+      {
+        "text": "82.033"
+      }
+    ],
+    [
+      {
+        "text": "Mua nợ"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "318.827"
+      },
+      {
+        "text": "84.335"
+      }
+    ],
+    [
+      {
+        "text": "Dự phòng rủi ro hoạt động mua nợ"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(4.061)"
+      },
+      {
+        "text": "(2.302)"
+      }
+    ],
+    [
+      {
+        "text": "Chứng khoán đầu tư"
+      },
+      {
+        "text": "12"
+      },
+      {
+        "text": "102.135.236"
+      },
+      {
+        "text": "104.993.945"
+      }
+    ],
+    [
+      {
+        "text": "Chứng khoán đầu tư sẵn sàng để bán"
+      },
+      {
+        "text": "12.1"
+      },
+      {
+        "text": "97.062.825"
+      },
+      {
+        "text": "105.356.248"
+      }
+    ],
+    [
+      {
+        "text": "Chứng khoán đầu tư giữ đến ngày đáo hạn"
+      },
+      {
+        "text": "12.2"
+      },
+      {
+        "text": "5.400.000"
+      },
+      {
+        "text": "-"
+      }
+    ],
+    [
+      {
+        "text": "Dự phòng rủi ro chứng khoán đầu tư"
+      },
+      {
+        "text": "12.3"
+      },
+      {
+        "text": "(327.589)"
+      },
+      {
+        "text": "(362.303)"
+      }
+    ],
+    [
+      {
+        "text": "Góp vốn, đầu tư dài hạn"
+      },
+      {
+        "text": "13"
+      },
+      {
+        "text": "3.047.523"
+      },
+      {
+        "text": "3.046.245"
+      }
+    ],
+    [
+      {
+        "text": "Đầu tư dài hạn khác"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "3.048.672"
+      },
+      {
+        "text": "3.047.394"
+      }
+    ],
+    [
+      {
+        "text": "Dự phòng giảm giá góp vốn, đầu tư dài hạn"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(1.149)"
+      },
+      {
+        "text": "(1.149)"
+      }
+    ],
+    [
+      {
+        "text": "Tài sản cố định"
+      },
+      {
+        "text": "14"
+      },
+      {
+        "text": "12.752.316"
+      },
+      {
+        "text": "8.892.697"
+      }
+    ],
+    [
+      {
+        "text": "Tài sản cố định hữu hình"
+      },
+      {
+        "text": "14.1"
+      },
+      {
+        "text": "6.974.513"
+      },
+      {
+        "text": "3.527.586"
+      }
+    ],
+    [
+      {
+        "text": "Nguyên giá tài sản cố định"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "9.348.348"
+      },
+      {
+        "text": "5.492.566"
+      }
+    ],
+    [
+      {
+        "text": "Khấu hao tài sản cố định"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(2.373.835)"
+      },
+      {
+        "text": "(1.964.980)"
+      }
+    ],
+    [
+      {
+        "text": "Tài sản cố định vô hình"
+      },
+      {
+        "text": "14.2"
+      },
+      {
+        "text": "5.777.803"
+      },
+      {
+        "text": "5.365.111"
+      }
+    ],
+    [
+      {
+        "text": "Nguyên giá tài sản cố định"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "8.160.074"
+      },
+      {
+        "text": "7.198.784"
+      }
+    ],
+    [
+      {
+        "text": "Hao mòn tài sản cố định"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(2.382.271)"
+      },
+      {
+        "text": "(1.833.673)"
+      }
+    ],
+    [
+      {
+        "text": "Tài sản Có khác"
+      },
+      {
+        "text": "15"
+      },
+      {
+        "text": "51.847.838"
+      },
+      {
+        "text": "80.543.424"
+      }
+    ],
+    [
+      {
+        "text": "Các khoản phải thu"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "36.294.684"
+      },
+      {
+        "text": "69.834.157"
+      }
+    ],
+    [
+      {
+        "text": "Các khoản lãi, phí phải thu"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "13.921.648"
+      },
+      {
+        "text": "9.681.140"
+      }
+    ],
+    [
+      {
+        "text": "Tài sản thuế thu nhập doanh nghiệp hoãn lại"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "73.401"
+      },
+      {
+        "text": "70.409"
+      }
+    ],
+    [
+      {
+        "text": "Tài sản Có khác"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "1.715.829"
+      },
+      {
+        "text": "1.650.584"
+      }
+    ],
+    [
+      {
+        "text": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "(157.724)"
+      },
+      {
+        "text": "(692.866)"
+      }
+    ],
+    [
+      {
+        "text": "TỔNG TÀI SẢN"
+      },
+      {
+        "text": ""
+      },
+      {
+        "text": "927.053.345"
+      },
+      {
+        "text": "849.482.012"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,24 @@
+statement,item_code,item_name,value,notes_ref,original_name
+income_statement,01,1 Doanh thu bán hàng và cung cấp dịch vụ,70207689409.081,,1 Doanh thu bán hàng và cung cấp dịch vụ
+income_statement,02,2 Các khoản giảm trừ,94863843.843,,2 Các khoản giảm trừ
+income_statement,10,3 Doanh thu thuần về bán hàng và cung cấp dịch vụ,70112825565.238,25,3 Doanh thu thuần về bán hàng và cung cấp dịch vụ
+income_statement,11,4 Giá vốn hàng bán,44217420808.740,26,4 Giá vốn hàng bán
+income_statement,20,5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,25895404756.498,,5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ
+income_statement,21,6 Doanh thu hoạt động tài chính,2977156211.981,27,6 Doanh thu hoạt động tài chính
+income_statement,22,7 Chi phí tài chính,1672045216.743,28,7 Chi phí tài chính
+income_statement,23,Trong đó: chi phí lãi vay,809759601.156,,Trong đó: chi phí lãi vay
+income_statement,24,8 Lợi nhuận từ công ty liên doanh liên kết,658024835.314,,8 Lợi nhuận từ công ty liên doanh liên kết
+income_statement,25,9 Chi phí bán hàng,7580840383.875,,9 Chi phí bán hàng
+income_statement,26,10 Chi phí quản lý doanh nghiệp,7330786998.828,,10 Chi phí quản lý doanh nghiệp
+income_statement,30,11 Lợi nhuận thuần từ hoạt động kinh doanh,12946913204.347,,11 Lợi nhuận thuần từ hoạt động kinh doanh
+income_statement,31,12 Thu nhập khác,142891794.416,,12 Thu nhập khác
+income_statement,32,13 Chi phí khác,50935701.459,,13 Chi phí khác
+income_statement,40,14 Lợi nhuận khác,91956092.957,,14 Lợi nhuận khác
+income_statement,50,15 Tổng lợi nhuận kế toán trước thuế,13038869297.304,,15 Tổng lợi nhuận kế toán trước thuế
+income_statement,51,16 Chi phí thuế TNDN hiện hành,1918759235.400,,16 Chi phí thuế TNDN hiện hành
+income_statement,52,17 Chi phí thuế TNDN hoãn lại,-105413134.287,,17 Chi phí thuế TNDN hoãn lại
+income_statement,60,18 Lợi nhuận sau thuế thu nhập doanh nghiệp,11225523196.191,,18 Lợi nhuận sau thuế thu nhập doanh nghiệp
+income_statement,61,- Lợi nhuận sau thuế của Cổ đông Công ty mẹ,9369309781.066,,- Lợi nhuận sau thuế của Cổ đông Công ty mẹ
+income_statement,62,- Lợi nhuận sau thuế của Cổ đông không kiểm soát,1856213415.125,,- Lợi nhuận sau thuế của Cổ đông không kiểm soát
+income_statement,70,19 Lãi cơ bản trên cổ phiếu,5211,,19 Lãi cơ bản trên cổ phiếu
+income_statement,71,20 Lãi suy giảm trên cổ phiếu,5211,,20 Lãi suy giảm trên cổ phiếu

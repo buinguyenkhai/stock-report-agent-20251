@@ -1,0 +1,22 @@
+statement,item_code,item_name,value,notes_ref,original_name
+cash_flow,01,Lợi nhuận kế toán trước thuế,288751057463,,Lợi nhuận kế toán trước thuế
+cash_flow,02,Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại),1717488679748,"13, 14, 16",Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại)
+cash_flow,03,Hoàn nhập dự phòng,-89740226100,,Hoàn nhập dự phòng
+cash_flow,04,Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ,-1895045928,,Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ
+cash_flow,05,Lãi từ hoạt động đầu tư,-798719809176,,Lãi từ hoạt động đầu tư
+cash_flow,06,Chi phí lãi vay,680299703032,25,Chi phí lãi vay
+cash_flow,08,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động,1796184359039,,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động
+cash_flow,09,Giảm (tăng) các khoản phải thu,538772598103,,Giảm (tăng) các khoản phải thu
+cash_flow,10,Giảm hàng tồn kho,3901771795305,,Giảm hàng tồn kho
+cash_flow,11,Giảm các khoản phải trả,-1624630886898,,Giảm các khoản phải trả
+cash_flow,12,Giảm (tăng) chi phí trả trước,111442960639,,Giảm (tăng) chi phí trả trước
+cash_flow,14,Tiền lãi vay đã trả,-610178274620,,Tiền lãi vay đã trả
+cash_flow,15,Thuế thu nhập doanh nghiệp đã nộp,-655061300416,19,Thuế thu nhập doanh nghiệp đã nộp
+cash_flow,20,Lưu chuyển tiền thuần từ hoạt động kinh doanh,3458301251152,,Lưu chuyển tiền thuần từ hoạt động kinh doanh
+cash_flow,21,"Tiền chi để mua sắm, xây dựng tài sản cố định (""TSCĐ"") và các tài sản dài hạn khác",-438088628475,,"Tiền chi để mua sắm, xây dựng tài sản cố định (""TSCĐ"") và các tài sản dài hạn khác"
+cash_flow,22,"Tiền thu do thanh lý, nhượng bán TSCĐ",1920402750,,"Tiền thu do thanh lý, nhượng bán TSCĐ"
+cash_flow,23,Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn,-18130489000000,,Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn
+cash_flow,24,Thu hồi tiền gửi ngân hàng có kỳ hạn,7220800327572,,Thu hồi tiền gửi ngân hàng có kỳ hạn
+cash_flow,27,"Tiền thu lãi từ tiền gửi, cho vay",627730073106,,"Tiền thu lãi từ tiền gửi, cho vay"
+cash_flow,28,Tiền thu lợi ích cổ đông không kiểm soát,-1156023000,,Tiền thu lợi ích cổ đông không kiểm soát
+cash_flow,30,Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư,-10719282848047,,Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư

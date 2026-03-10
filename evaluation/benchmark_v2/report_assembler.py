@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Literal, Tuple
 
-from .dataset import BenchmarkDatasetV2, TableSample
+from .dataset import BenchmarkDatasetV2, IncludeScope, TableSample
 
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
 
@@ -40,7 +40,10 @@ def _row_key(statement: str, item: Dict[str, Any], *, fallback: str) -> str:
     if code:
         return f"{statement}|code:{_normalize_text(code)}"
     name = str(item.get("item_name") or "").strip()
+    notes_ref = str(item.get("notes_ref") or "").strip()
     if name:
+        if notes_ref:
+            return f"{statement}|name:{_normalize_text(name)}|note:{_normalize_text(notes_ref)}"
         return f"{statement}|name:{_normalize_text(name)}"
     return f"{statement}|fallback:{fallback}"
 
@@ -62,19 +65,18 @@ def assemble_report_structured_from_pages(
     Merge page-level structured objects into one report-level object.
 
     Guardrails:
-    - row key: statement + item_code (fallback statement + normalized item_name)
-    - duplicate same key + same value: keep one
-    - duplicate same key + conflicting value: keep first, log conflict
-    - preserve source trace for each merged row
+    - preserve all rows across pages; do not deduplicate repeated labels
+    - log repeated row keys with differing values as review warnings
+    - preserve source trace for each repeated base row key
     """
     merged: Dict[str, Any] = {
         "balance_sheet": {"items": []},
         "income_statement": {"items": []},
         "cash_flow": {"items": []},
     }
-    key_index: Dict[str, Dict[str, int]] = {st: {} for st in STATEMENTS}
     row_sources: Dict[str, Dict[str, List[Dict[str, Any]]]] = {st: {} for st in STATEMENTS}
     conflicts: List[Dict[str, Any]] = []
+    seen_values: Dict[str, Dict[str, List[Any]]] = {st: {} for st in STATEMENTS}
 
     for sample, obj in sorted(pages, key=lambda x: (x[0].page_index, x[0].sample_id)):
         for statement in STATEMENTS:
@@ -93,36 +95,23 @@ def assemble_report_structured_from_pages(
                     "page_index": sample.page_index,
                     "item_index": item_idx,
                 }
-                existing_idx = key_index[statement].get(key)
-                if existing_idx is None:
-                    key_index[statement][key] = len(merged[statement]["items"])
-                    merged[statement]["items"].append(item)
-                    row_sources[statement][key] = [source]
-                    continue
+                merged[statement]["items"].append(item)
+                row_sources[statement].setdefault(key, []).append(source)
 
-                existing = merged[statement]["items"][existing_idx]
-                row_sources[statement][key].append(source)
-
-                old_num = _coerce_numeric(existing.get("value"))
+                value_history = seen_values[statement].setdefault(key, [])
                 new_num = _coerce_numeric(item.get("value"))
-                if old_num != new_num:
+                if value_history and any(old_num != new_num for old_num in value_history):
                     conflicts.append(
                         {
                             "report_id": sample.report_id,
                             "sample_id": sample.sample_id,
                             "statement": statement,
                             "row_key": key,
-                            "kept_value": existing.get("value"),
-                            "dropped_value": item.get("value"),
+                            "prior_values": value_history.copy(),
+                            "new_value": item.get("value"),
                         }
                     )
-
-                # Keep first value, but enrich missing metadata fields.
-                for field in ("notes_ref", "original_name", "item_name", "item_code"):
-                    if (existing.get(field) is None or str(existing.get(field)).strip() == "") and (
-                        item.get(field) is not None and str(item.get(field)).strip() != ""
-                    ):
-                        existing[field] = item.get(field)
+                value_history.append(new_num)
 
     meta = {
         "row_sources": row_sources,
@@ -151,10 +140,11 @@ def build_gt_structured_report_files(
     dataset_root: str | Path,
     *,
     split: Literal["dev", "test", "all"] = "all",
+    include_scope: IncludeScope = "all",
     output_dir: str = "gt_structured_report",
     meta_dir: str = "gt_structured_report_meta",
 ) -> Dict[str, int]:
-    ds = BenchmarkDatasetV2(dataset_root)
+    ds = BenchmarkDatasetV2(dataset_root, include_scope=include_scope)
     samples = _collect_split_samples(ds, split)
     by_report = _group_by_report(samples)
 
@@ -194,12 +184,13 @@ def build_prediction_structured_report_files(
     predictions_root: str | Path,
     *,
     split: Literal["dev", "test", "all"] = "all",
+    include_scope: IncludeScope = "all",
     structured_suffix: str = ".structured.json",
     output_dir: str = "report_structured",
     meta_dir: str = "report_structured_meta",
     strict_missing: bool = False,
 ) -> Dict[str, int]:
-    ds = BenchmarkDatasetV2(dataset_root)
+    ds = BenchmarkDatasetV2(dataset_root, include_scope=include_scope)
     samples = _collect_split_samples(ds, split)
     by_report = _group_by_report(samples)
     pred_root = Path(predictions_root)

@@ -1,3 +1,4 @@
+import runtime_env  # noqa: F401
 from pydantic_models import AnalysisIntent, ReportRequest
 from state import StockReportState
 from tools import get_current_time

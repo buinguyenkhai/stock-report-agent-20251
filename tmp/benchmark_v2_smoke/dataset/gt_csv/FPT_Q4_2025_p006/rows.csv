@@ -1,0 +1,21 @@
+statement,item_code,item_name,value,notes_ref,original_name
+balance_sheet,300,C. NỢ PHẢI TRẢ,44338155487272,,C. NỢ PHẢI TRẢ
+balance_sheet,310,I. Nợ ngắn hạn,41552785100161,,I. Nợ ngắn hạn
+balance_sheet,311,1. Phải trả người bán ngắn hạn,3837081438126,18,1. Phải trả người bán ngắn hạn
+balance_sheet,312,2. Người mua trả tiền trước ngắn hạn,761332738428,,2. Người mua trả tiền trước ngắn hạn
+balance_sheet,313,3. Thuế và các khoản phải nộp Nhà nước,2192156678455,19,3. Thuế và các khoản phải nộp Nhà nước
+balance_sheet,314,4. Phải trả người lao động,5678410841285,,4. Phải trả người lao động
+balance_sheet,315,5. Chi phí phải trả ngắn hạn,1843426377372,20,5. Chi phí phải trả ngắn hạn
+balance_sheet,317,6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng,85650109236,,6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng
+balance_sheet,318,7. Doanh thu chưa thực hiện ngắn hạn,4230708251601,21,7. Doanh thu chưa thực hiện ngắn hạn
+balance_sheet,319,8. Phải trả ngắn hạn khác,1014673786632,22,8. Phải trả ngắn hạn khác
+balance_sheet,320,9. Vay và nợ thuê tài chính ngắn hạn,19169697497955,23,9. Vay và nợ thuê tài chính ngắn hạn
+balance_sheet,321,10. Dự phòng phải trả ngắn hạn,578298384069,,10. Dự phòng phải trả ngắn hạn
+balance_sheet,322,"11. Quỹ khen thưởng, phúc lợi",2161348997002,,"11. Quỹ khen thưởng, phúc lợi"
+balance_sheet,330,II. Nợ dài hạn,2785370387111,,II. Nợ dài hạn
+balance_sheet,336,1. Doanh thu chưa thực hiện dài hạn,127529003367,21,1. Doanh thu chưa thực hiện dài hạn
+balance_sheet,337,2. Phải trả dài hạn khác,149213186822,22,2. Phải trả dài hạn khác
+balance_sheet,338,3. Vay và nợ thuê tài chính dài hạn,1903789988184,23,3. Vay và nợ thuê tài chính dài hạn
+balance_sheet,341,4. Thuế thu nhập hoãn lại phải trả,198787701984,,4. Thuế thu nhập hoãn lại phải trả
+balance_sheet,342,5. Dự phòng phải trả dài hạn,405858410471,,5. Dự phòng phải trả dài hạn
+balance_sheet,343,6. Quỹ phát triển khoa học và công nghệ,192096283,,6. Quỹ phát triển khoa học và công nghệ

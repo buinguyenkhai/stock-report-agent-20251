@@ -22,12 +22,13 @@ import fitz  # PyMuPDF
 from PIL import Image
 
 from logger import get_logger
+from llm_settings import DEFAULT_MARKER_LLM_MODEL
 from services.ocr.base import OCRStrategy
 from services.ocr.docling import DoclingOCRService
 from services.ocr.marker import MarkerOCRService
 from services.pipeline import create_pipeline
 
-from .dataset import BenchmarkDatasetV2
+from .dataset import BenchmarkDatasetV2, IncludeScope
 from .report_assembler import build_prediction_structured_report_files
 
 logger = get_logger(__name__)
@@ -133,12 +134,21 @@ def _run_ocr_for_sample(
     raise ValueError("No valid OCR input for sample (need source_pdf_path or page_image_path)")
 
 
+def _get_ocr_debug_payload(ocr_service: OCRStrategy) -> Optional[Dict[str, Any]]:
+    getter = getattr(ocr_service, "get_debug_artifacts", None)
+    if not callable(getter):
+        return None
+    payload = getter()
+    return payload if isinstance(payload, dict) else None
+
+
 def generate_predictions(
     *,
     dataset_root: str | Path,
     output_root: str | Path,
     engine: EngineName,
     split: Literal["dev", "test", "all"],
+    include_scope: IncludeScope = "all",
     include_structured: bool = True,
     skip_existing: bool = True,
     device: str = "cuda",
@@ -146,12 +156,17 @@ def generate_predictions(
     hybrid_number_threshold: float = 0.95,
     hybrid_options_json: Optional[str] = None,
     marker_use_llm: bool = False,
-    marker_llm_model: str = "mistralai/mistral-small-3.1-24b-instruct",
+    marker_llm_model: str = DEFAULT_MARKER_LLM_MODEL,
     marker_force_ocr: bool = True,
     marker_extract_images: bool = False,
 ) -> Dict[str, int]:
-    ds = BenchmarkDatasetV2(dataset_root)
-    ds.validate(check_files=False)
+    ds = BenchmarkDatasetV2(dataset_root, include_scope=include_scope)
+    required_splits = ("dev",) if split == "dev" else ("test",) if split == "test" else None
+    ds.validate(
+        check_files=False,
+        required_splits=required_splits,
+        require_company_disjoint=True,
+    )
 
     if split == "dev":
         samples = ds.get_split_samples("dev")
@@ -194,6 +209,7 @@ def generate_predictions(
     run_config = {
         "engine": engine,
         "split": split,
+        "include_scope": include_scope,
         "device": device,
         "include_structured": bool(include_structured),
         "skip_existing": bool(skip_existing),
@@ -214,6 +230,7 @@ def generate_predictions(
         counts["total"] += 1
         raw_out = out_root / f"{s.sample_id}.raw.md"
         struct_out = out_root / f"{s.sample_id}.structured.json"
+        ocr_debug_out = out_root / f"{s.sample_id}.ocr_debug.json"
 
         if skip_existing and raw_out.exists() and (not include_structured or struct_out.exists()):
             counts["skipped"] += 1
@@ -232,6 +249,21 @@ def generate_predictions(
             )
 
             raw_out.write_text(md, encoding="utf-8")
+            ocr_debug = _get_ocr_debug_payload(ocr_service)
+            if ocr_debug:
+                ocr_debug_out.write_text(
+                    json.dumps(
+                        {
+                            "sample_id": s.sample_id,
+                            "engine": engine,
+                            "page_index": s.page_index,
+                            **ocr_debug,
+                        },
+                        ensure_ascii=False,
+                        indent=2,
+                    ),
+                    encoding="utf-8",
+                )
 
             if include_structured and pipeline is not None:
                 parsed = pipeline.process(md)
@@ -258,6 +290,7 @@ def generate_predictions(
             dataset_root=dataset_root,
             predictions_root=out_root,
             split=split,
+            include_scope=include_scope,
             structured_suffix=".structured.json",
             output_dir="report_structured",
             meta_dir="report_structured_meta",
@@ -285,6 +318,13 @@ def main() -> None:
         help="OCR engine",
     )
     parser.add_argument("--split", type=str, default="test", choices=["dev", "test", "all"])
+    parser.add_argument(
+        "--include-scope",
+        type=str,
+        default="all",
+        choices=["all", "included", "not_included"],
+        help="Filter samples using included_samples.json before split selection",
+    )
     parser.add_argument("--raw-only", action="store_true", help="Generate only raw markdown predictions")
     parser.add_argument("--no-skip", action="store_true", help="Do not skip existing prediction files")
     parser.add_argument("--device", type=str, default="cuda", choices=["cuda", "cpu"])
@@ -305,7 +345,7 @@ def main() -> None:
     parser.add_argument(
         "--marker-llm-model",
         type=str,
-        default="mistralai/mistral-small-3.1-24b-instruct",
+        default=DEFAULT_MARKER_LLM_MODEL,
         help="Marker LLM model name",
     )
     parser.add_argument("--marker-no-force-ocr", action="store_true", help="Disable Marker force_ocr")
@@ -317,6 +357,7 @@ def main() -> None:
         output_root=args.output_root,
         engine=args.engine,  # type: ignore[arg-type]
         split=args.split,  # type: ignore[arg-type]
+        include_scope=args.include_scope,  # type: ignore[arg-type]
         include_structured=not bool(args.raw_only),
         skip_existing=not bool(args.no_skip),
         device=args.device,

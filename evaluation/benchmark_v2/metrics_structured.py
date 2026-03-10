@@ -8,8 +8,9 @@ from __future__ import annotations
 
 import math
 import re
+from collections import Counter
 from dataclasses import asdict, dataclass
-from typing import Any, Dict, Iterable, List, Tuple
+from typing import Any, Dict, List, Tuple
 
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
 
@@ -69,11 +70,14 @@ def _make_row_key(statement: str, item: Dict[str, Any]) -> str:
     if code:
         return f"{statement}|code:{_normalize_text(code)}"
     name = str(item.get("item_name") or "").strip()
+    notes_ref = str(item.get("notes_ref") or "").strip()
+    if notes_ref:
+        return f"{statement}|name:{_normalize_text(name)}|note:{_normalize_text(notes_ref)}"
     return f"{statement}|name:{_normalize_text(name)}"
 
 
-def _flatten_rows(obj: Dict[str, Any]) -> Dict[str, float | None]:
-    out: Dict[str, float | None] = {}
+def _extract_rows(obj: Dict[str, Any]) -> Dict[str, List[float | None]]:
+    out: Dict[str, List[float | None]] = {}
     for st in STATEMENTS:
         st_obj = obj.get(st) or {}
         items = st_obj.get("items") or []
@@ -83,7 +87,7 @@ def _flatten_rows(obj: Dict[str, Any]) -> Dict[str, float | None]:
             if not isinstance(item, dict):
                 continue
             key = _make_row_key(st, item)
-            out[key] = _coerce_value(item.get("value"))
+            out.setdefault(key, []).append(_coerce_value(item.get("value")))
     return out
 
 
@@ -102,6 +106,39 @@ def _values_close(a: float | None, b: float | None, abs_tol: float, rel_tol: flo
     return math.isclose(a, b, rel_tol=rel_tol, abs_tol=abs_tol)
 
 
+def _match_count(
+    pred_values: List[float | None],
+    gt_values: List[float | None],
+    *,
+    predicate,
+) -> int:
+    used_gt: set[int] = set()
+    matched = 0
+    for pred in pred_values:
+        best_idx = None
+        best_distance = float("inf")
+        for idx, gt in enumerate(gt_values):
+            if idx in used_gt or not predicate(pred, gt):
+                continue
+            if pred is None or gt is None:
+                distance = 0.0
+            else:
+                distance = abs(pred - gt)
+            if distance < best_distance:
+                best_distance = distance
+                best_idx = idx
+        if best_idx is not None:
+            used_gt.add(best_idx)
+            matched += 1
+    return matched
+
+
+def _matched_row_count(pred_rows: Dict[str, List[float | None]], gt_rows: Dict[str, List[float | None]]) -> int:
+    pred_counts = Counter({k: len(v) for k, v in pred_rows.items()})
+    gt_counts = Counter({k: len(v) for k, v in gt_rows.items()})
+    return sum(min(pred_counts[k], gt_counts[k]) for k in pred_counts.keys() & gt_counts.keys())
+
+
 def calculate_structured_metrics(
     prediction: Dict[str, Any],
     reference: Dict[str, Any],
@@ -111,29 +148,40 @@ def calculate_structured_metrics(
 ) -> StructuredMetricResult:
     schema_valid = 1.0 if _is_schema_valid(prediction) else 0.0
 
-    pred_rows = _flatten_rows(prediction)
-    gt_rows = _flatten_rows(reference)
+    pred_rows = _extract_rows(prediction)
+    gt_rows = _extract_rows(reference)
 
     pred_keys = set(pred_rows.keys())
     gt_keys = set(gt_rows.keys())
-    matched_keys = pred_keys & gt_keys
+    matched_row_count = _matched_row_count(pred_rows, gt_rows)
 
-    row_p, row_r, row_f1 = _prf(len(matched_keys), len(pred_keys), len(gt_keys))
+    row_p, row_r, row_f1 = _prf(
+        matched_row_count,
+        sum(len(v) for v in pred_rows.values()),
+        sum(len(v) for v in gt_rows.values()),
+    )
 
-    if not matched_keys:
+    if matched_row_count == 0:
         exact_acc = 0.0 if gt_keys else 1.0
         tolerant_acc = exact_acc
     else:
         exact_ok = 0
         tolerant_ok = 0
-        for k in matched_keys:
-            pv = pred_rows.get(k)
-            gv = gt_rows.get(k)
-            if pv == gv:
-                exact_ok += 1
-            if _values_close(pv, gv, abs_tol=abs_tolerance, rel_tol=rel_tolerance):
-                tolerant_ok += 1
-        denom = len(matched_keys)
+        for k in pred_keys & gt_keys:
+            pred_values = pred_rows.get(k, [])
+            gt_values = gt_rows.get(k, [])
+            exact_ok += _match_count(pred_values, gt_values, predicate=lambda a, b: a == b)
+            tolerant_ok += _match_count(
+                pred_values,
+                gt_values,
+                predicate=lambda a, b: _values_close(
+                    a,
+                    b,
+                    abs_tol=abs_tolerance,
+                    rel_tol=rel_tolerance,
+                ),
+            )
+        denom = matched_row_count
         exact_acc = exact_ok / denom if denom else 1.0
         tolerant_acc = tolerant_ok / denom if denom else 1.0
 
@@ -144,8 +192,7 @@ def calculate_structured_metrics(
         row_f1=float(row_f1),
         value_exact_accuracy=float(exact_acc),
         value_tolerant_accuracy=float(tolerant_acc),
-        gt_row_count=int(len(gt_keys)),
-        pred_row_count=int(len(pred_keys)),
-        matched_row_count=int(len(matched_keys)),
+        gt_row_count=int(sum(len(v) for v in gt_rows.values())),
+        pred_row_count=int(sum(len(v) for v in pred_rows.values())),
+        matched_row_count=int(matched_row_count),
     )
-

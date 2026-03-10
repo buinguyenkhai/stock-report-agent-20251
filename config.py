@@ -3,6 +3,8 @@ from pydantic import Field
 from pydantic_settings import BaseSettings
 from functools import lru_cache
 
+from llm_settings import DEFAULT_LLM_MODEL
+
 class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
     
@@ -11,11 +13,12 @@ class Settings(BaseSettings):
     openrouter_api_key: str = Field(default="", description="OpenRouter API key for LLMs")
     
     # LLM Settings
-    llm_model: str = Field(default="google/gemini-2.5-flash-lite-preview-09-2025", description="LLM model for main parsing")
+    llm_model: str = Field(default=DEFAULT_LLM_MODEL, description="LLM model for all OpenRouter-backed tasks")
     llm_temperature: float = Field(default=0.0, description="LLM temperature setting")
     
-    # LLM Utility Settings (for matching, unit detection)
-    llm_utils_model: str = Field(default="google/gemini-2.5-flash-lite-preview-09-2025", description="Fast model for utilities")
+    # Deprecated compatibility field: the codebase now uses llm_model for all tasks.
+    # Keep the setting so older env files do not break.
+    llm_utils_model: str = Field(default=DEFAULT_LLM_MODEL, description="Deprecated: use llm_model instead")
     llm_use_for_matching: bool = Field(default=True, description="Use LLM for item matching")
     
     # OCR Settings
@@ -74,14 +77,6 @@ OCR_ENGINE_OPTIONS = [
     ("Docling", "docling"),
     ("Marker", "marker"),
 ]
-
-# LLM Model Options for UI (demo feature)
-LLM_MODEL_OPTIONS = [
-    ("Qwen3 235B A22B", "qwen/qwen3-235b-a22b-2507"),
-    ("Gemini 2.5 Flash Lite", "google/gemini-2.5-flash-lite-preview-09-2025"),
-]
-
-DEFAULT_LLM_MODEL = "google/gemini-2.5-flash-lite-preview-09-2025"
 
 # Financial Report Constants
 class ReportConstants:

@@ -64,6 +64,7 @@ class ExtractionPipeline:
         self._last_bundle: Optional[ExtractionBundle] = None
         self._last_markdown: str = ""
         self._last_notes_cache: Optional[Tuple[Tuple[str, ...], Dict[str, Dict[str, str]], str]] = None
+        self._last_extraction_results: Dict[str, ExtractionResult] = {}
         
         self._init_extractors()
     
@@ -111,6 +112,7 @@ class ExtractionPipeline:
         
         # Step 1: Run all extractors in parallel
         extraction_results = await self._run_extractors(markdown)
+        self._last_extraction_results = dict(extraction_results)
 
         
         # Step 2: Build extraction bundle
@@ -171,7 +173,19 @@ class ExtractionPipeline:
                     logger.warning(f"Extractor {name}: failed ({err})")
         
         return results
-    
+
+    def _extractor_debug_summary(self) -> Dict[str, Dict[str, Any]]:
+        out: Dict[str, Dict[str, Any]] = {}
+        for name, res in self._last_extraction_results.items():
+            meta = dict(getattr(res, "metadata", {}) or {})
+            out[name] = {
+                "success": bool(getattr(res, "success", False)),
+                "content_chars": int(len(getattr(res, "content", "") or "")),
+                "error": getattr(res, "error", None),
+                "metadata": meta,
+            }
+        return out
+
     def _build_bundle(self, results: Dict[str, ExtractionResult]) -> ExtractionBundle:
         """Build extraction bundle from results."""
         bundle = ExtractionBundle()
@@ -229,6 +243,9 @@ class ExtractionPipeline:
     def to_dict(self, report: ParsedReport) -> Dict[str, Any]:
         """Convert ParsedReport to dictionary including notes."""
         base_dict = self.parser.to_dict(report)
+        status = base_dict.get("status")
+        if isinstance(status, dict):
+            status["extractor_debug"] = self._extractor_debug_summary()
 
         # Notes/TM (tables-only), extracted after parsing and guided by notes_ref.
         note_refs_needed: List[str] = []

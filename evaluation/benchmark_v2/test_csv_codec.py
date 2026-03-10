@@ -12,6 +12,7 @@ from evaluation.benchmark_v2.csv_codec import (
     load_meta,
     save_csv_pack,
     update_meta,
+    validate_csv_pack,
 )
 
 
@@ -187,3 +188,14 @@ def test_legacy_spans_csv_is_ignored(tmp_path: Path) -> None:
 
     pack = load_csv_pack(sample_id, dataset_root)
     assert "spans" not in pack
+
+
+def test_validate_csv_pack_flags_missing_csv_directory(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_2024Q3_p001"
+    _write_manifest(dataset_root, sample_id)
+
+    errors = validate_csv_pack(sample_id, dataset_root)
+    assert len(errors) == 1
+    assert "gt_csv pack not found" in errors[0]

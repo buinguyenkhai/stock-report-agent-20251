@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "company_name": null,
+    "stock_ticker": null,
+    "year": null,
+    "quarter": null,
+    "unit": "VND",
+    "is_ytd": false
+  },
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": []
+  },
+  "status": {
+    "bs_found": false,
+    "pl_found": false,
+    "cf_found": false,
+    "warnings": [
+      "Extractor balance_sheet failed: Connection error.",
+      "Extractor income_statement failed: Connection error.",
+      "Extractor cash_flow failed: Connection error.",
+      "Extractor metadata failed: Connection error."
+    ]
+  },
+  "notes_content": "",
+  "notes_by_ref": {}
+}

@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field
 
 from .base import BaseExtractor, ExtractionResult
 from services.llm_factory import create_structured_llm
+from config import settings
 from logger import get_logger
 
 logger = get_logger(__name__)
@@ -56,9 +57,8 @@ class MetadataExtractor(BaseExtractor):
     def structured_llm(self):
         """Lazy-load structured LLM."""
         if self._structured_llm is None:
-            from .base import DEFAULT_EXTRACTION_MODEL
             self._structured_llm = create_structured_llm(
-                model=self.model or DEFAULT_EXTRACTION_MODEL,
+                model=self.model or settings.llm_model,
                 schema=ReportMetadata,
                 temperature=0.0,
             )

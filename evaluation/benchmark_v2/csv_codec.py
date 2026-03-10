@@ -290,8 +290,18 @@ def validate_csv_frames(
 
 
 def validate_csv_pack(sample_id: str, dataset_root: str | Path) -> List[str]:
+    p = _csv_paths(dataset_root, sample_id)
+    errors: List[str] = []
+    if not p.root.exists():
+        errors.append(f"gt_csv pack not found: {p.root}")
+        return errors
+
+    for required_path in (p.cells_csv, p.rows_csv):
+        if not required_path.exists():
+            errors.append(f"missing required file: {required_path}")
+
     pack = load_csv_pack(sample_id, dataset_root)
-    return validate_csv_frames(cells=pack["cells"], rows=pack["rows"])
+    return errors + validate_csv_frames(cells=pack["cells"], rows=pack["rows"])
 
 
 def _build_table_matrix(

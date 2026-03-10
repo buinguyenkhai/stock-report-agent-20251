@@ -1,0 +1,187 @@
+{
+  "balance_sheet": {
+    "items": [
+      {
+        "item_code": "300",
+        "item_name": "C. NỢ PHẢI TRẢ",
+        "value": 35404828059722.0,
+        "notes_ref": null,
+        "original_name": "C. NỢ PHẢI TRẢ"
+      },
+      {
+        "item_code": "310",
+        "item_name": "I. Nợ ngắn hạn",
+        "value": 29505453059722.0,
+        "notes_ref": null,
+        "original_name": "I. Nợ ngắn hạn"
+      },
+      {
+        "item_code": "311",
+        "item_name": "1. Phải trả người bán ngắn hạn",
+        "value": 9334763086527.0,
+        "notes_ref": "18",
+        "original_name": "1. Phải trả người bán ngắn hạn"
+      },
+      {
+        "item_code": "312",
+        "item_name": "2. Người mua trả tiền trước ngắn hạn",
+        "value": 70529398738.0,
+        "notes_ref": null,
+        "original_name": "2. Người mua trả tiền trước ngắn hạn"
+      },
+      {
+        "item_code": "313",
+        "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "value": 302370241445.0,
+        "notes_ref": "19",
+        "original_name": "3. Thuế và các khoản phải nộp Nhà nước"
+      },
+      {
+        "item_code": "314",
+        "item_name": "4. Phải trả người lao động",
+        "value": 313348062630.0,
+        "notes_ref": null,
+        "original_name": "4. Phải trả người lao động"
+      },
+      {
+        "item_code": "315",
+        "item_name": "5. Chi phí phải trả ngắn hạn",
+        "value": 1325332796761.0,
+        "notes_ref": "20",
+        "original_name": "5. Chi phí phải trả ngắn hạn"
+      },
+      {
+        "item_code": "318",
+        "item_name": "6. Doanh thu chưa thực hiện ngắn hạn",
+        "value": 24214399038.0,
+        "notes_ref": null,
+        "original_name": "6. Doanh thu chưa thực hiện ngắn hạn"
+      },
+      {
+        "item_code": "319",
+        "item_name": "7. Phải trả ngắn hạn khác",
+        "value": 1731015049763.0,
+        "notes_ref": "21",
+        "original_name": "7. Phải trả ngắn hạn khác"
+      },
+      {
+        "item_code": "320",
+        "item_name": "8. Vay ngắn hạn",
+        "value": 16337283059017.0,
+        "notes_ref": "22",
+        "original_name": "8. Vay ngắn hạn"
+      },
+      {
+        "item_code": "321",
+        "item_name": "9. Dự phòng phải trả ngắn hạn",
+        "value": 66596965803.0,
+        "notes_ref": null,
+        "original_name": "9. Dự phòng phải trả ngắn hạn"
+      },
+      {
+        "item_code": "330",
+        "item_name": "II. Nợ dài hạn",
+        "value": 5899375000000.0,
+        "notes_ref": null,
+        "original_name": "II. Nợ dài hạn"
+      },
+      {
+        "item_code": "338",
+        "item_name": "1. Vay dài hạn",
+        "value": 5899375000000.0,
+        "notes_ref": "22",
+        "original_name": "1. Vay dài hạn"
+      },
+      {
+        "item_code": "400",
+        "item_name": "D. VỐN CHỦ SỞ HỮU",
+        "value": 23963673974446.0,
+        "notes_ref": null,
+        "original_name": "D. VỐN CHỦ SỞ HỮU"
+      },
+      {
+        "item_code": "410",
+        "item_name": "I. Vốn chủ sở hữu",
+        "value": 23963673974446.0,
+        "notes_ref": null,
+        "original_name": "I. Vốn chủ sở hữu"
+      },
+      {
+        "item_code": "411",
+        "item_name": "1. Vốn cổ phần",
+        "value": 14633767160000.0,
+        "notes_ref": "23.1",
+        "original_name": "1. Vốn cổ phần"
+      },
+      {
+        "item_code": "411a",
+        "item_name": "- Cổ phiếu phổ thông có quyền biểu quyết",
+        "value": 14633767160000.0,
+        "notes_ref": null,
+        "original_name": "- Cổ phiếu phổ thông có quyền biểu quyết"
+      },
+      {
+        "item_code": "412",
+        "item_name": "2. Thặng dư vốn cổ phần",
+        "value": 558110430986.0,
+        "notes_ref": "23.1",
+        "original_name": "2. Thặng dư vốn cổ phần"
+      },
+      {
+        "item_code": "415",
+        "item_name": "3. Cổ phiếu quỹ",
+        "value": -7664060000.0,
+        "notes_ref": "23.1",
+        "original_name": "3. Cổ phiếu quỹ"
+      },
+      {
+        "item_code": "417",
+        "item_name": "4. Chênh lệch tỷ giá hối đoái",
+        "value": 3478879135.0,
+        "notes_ref": "23.1",
+        "original_name": "4. Chênh lệch tỷ giá hối đoái"
+      },
+      {
+        "item_code": "421",
+        "item_name": "5. Lợi nhuận sau thuế chưa phân phối",
+        "value": 8762606835578.0,
+        "notes_ref": "23.1",
+        "original_name": "5. Lợi nhuận sau thuế chưa phân phối"
+      },
+      {
+        "item_code": "421a",
+        "item_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước",
+        "value": 8723934226370.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước"
+      },
+      {
+        "item_code": "421b",
+        "item_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này",
+        "value": 38672609208.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này"
+      },
+      {
+        "item_code": "429",
+        "item_name": "6. Lợi ích cổ đông không kiểm soát",
+        "value": 13374728747.0,
+        "notes_ref": "23.1",
+        "original_name": "6. Lợi ích cổ đông không kiểm soát"
+      },
+      {
+        "item_code": "440",
+        "item_name": "TỔNG CỘNG NGUỒN VỐN",
+        "value": 59368502034168.0,
+        "notes_ref": null,
+        "original_name": "TỔNG CỘNG NGUỒN VỐN"
+      }
+    ]
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

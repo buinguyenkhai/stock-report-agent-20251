@@ -31,7 +31,7 @@ def test_assemble_report_structured_guardrails() -> None:
         "income_statement": {"items": []},
         "cash_flow": {"items": []},
     }
-    # Same key + same value => dedupe, enrich notes_ref.
+    # Same key + same value => keep both rows.
     page2 = {
         "balance_sheet": {
             "items": [{"item_code": "110", "item_name": "Tiền", "value": 100.0, "notes_ref": "5"}]
@@ -39,7 +39,7 @@ def test_assemble_report_structured_guardrails() -> None:
         "income_statement": {"items": []},
         "cash_flow": {"items": []},
     }
-    # Same key + conflicting value => keep first, log conflict.
+    # Same key + conflicting value => keep both rows and log a warning.
     page3 = {
         "balance_sheet": {"items": [{"item_code": "110", "item_name": "Tiền", "value": 120.0}]},
         "income_statement": {"items": []},
@@ -48,9 +48,8 @@ def test_assemble_report_structured_guardrails() -> None:
 
     merged, meta = assemble_report_structured_from_pages([(s1, page1), (s2, page2), (s3, page3)])
     items = merged["balance_sheet"]["items"]
-    assert len(items) == 1
-    assert items[0]["value"] == 100.0
-    assert items[0]["notes_ref"] == "5"
+    assert len(items) == 3
+    assert [item["value"] for item in items] == [100.0, 100.0, 120.0]
     assert meta["conflict_count"] == 1
     row_key = "balance_sheet|code:110"
     assert len(meta["row_sources"]["balance_sheet"][row_key]) == 3
