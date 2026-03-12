@@ -1,0 +1,113 @@
+row_idx,col_idx,text
+0,0,
+0,1,Thuyết minh
+0,2,Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND
+0,3,Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND
+1,0,LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG KINH DOANH
+1,1,
+1,2,
+1,3,
+2,0,1 Thu nhập lãi và các khoản thu nhập tương tự nhận được
+2,1,
+2,2,18.270.754
+2,3,15.985.319
+3,0,2 Chi phí lãi và các chi phí tương tự đã trả
+3,1,
+3,2,(6.591.715)
+3,3,(7.496.977)
+4,0,3 Thu nhập từ hoạt động dịch vụ nhận được
+4,1,
+4,2,1.031.728
+4,3,1.758.681
+5,0,"4 Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)"
+5,1,
+5,2,1.637.580
+5,3,1.026.971
+6,0,5 Chi phí khác
+6,1,
+6,2,(62.483)
+6,3,(100.199)
+7,0,"6 Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro"
+7,1,
+7,2,545.538
+7,3,1.111.427
+8,0,7 Tiền chi trả cho nhân viên và hoạt động quản lý công vụ
+8,1,
+8,2,(4.490.878)
+8,3,(4.403.617)
+9,0,8 Tiền thuế thu nhập thực nộp trong kỳ
+9,1,
+9,2,(642.532)
+9,3,(1.912.328)
+10,0,Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động
+10,1,
+10,2,9.697.992
+10,3,5.969.277
+11,0,(Tăng)/Giảm về tài sản hoạt động
+11,1,
+11,2,
+11,3,
+12,0,"9 Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác"
+12,1,
+12,2,(200.908)
+12,3,18.663.092
+13,0,10 Các khoản về kinh doanh chứng khoán
+13,1,
+13,2,(1.896.895)
+13,3,5.089.660
+14,0,11 Các công cụ tài chính phái sinh và các tài sản tài chính khác
+14,1,
+14,2,303.202
+14,3,_
+15,0,12 Các khoản cho vay khách hàng
+15,1,
+15,2,(68.149.789)
+15,3,(32.149.681)
+16,0,"13 Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản"
+16,1,
+16,2,(59.677)
+16,3,_
+17,0,14 Tài sản hoạt động khác
+17,1,
+17,2,(277.225)
+17,3,(3.260.830)
+18,0,Tăng/(Giảm) về công nợ hoạt động
+18,1,
+18,2,
+18,3,
+19,0,15 Các khoản nợ Chính phủ và NHNN
+19,1,
+19,2,26.842.324
+19,3,(22.638.627)
+20,0,"16 Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác"
+20,1,
+20,2,(28.480.082)
+20,3,(22.825.236)
+21,0,17 Các khoản tiền gửi của khách hàng
+21,1,
+21,2,44.344.968
+21,3,(6.565.960)
+22,0,18 Các khoản phát hành giấy tờ có giá
+22,1,
+22,2,(7.204)
+22,3,168.110
+23,0,"19 Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro"
+23,1,
+23,2,(1.122)
+23,3,(3.695)
+24,0,20 Các công cụ tài chính phái sinh và các khoản nợ tài chính khác
+24,1,
+24,2,5.215
+24,3,11.951
+25,0,21 Công nợ hoạt động khác
+25,1,
+25,2,1.567.100
+25,3,1.701.732
+26,0,22 Chi từ các quỹ của tổ chức tín dụng
+26,1,
+26,2,(1.069.379)
+26,3,(1.009.299)
+27,0,I Tiền thuần (sử dụng cho) hoạt động kinh doanh
+27,1,
+27,2,(17.381.480)
+27,3,(56.849.506)

@@ -1,0 +1,12 @@
+statement,item_code,item_name,value,notes_ref,original_name
+balance_sheet,1,Bảo lãnh vay vốn,1840731,,Bảo lãnh vay vốn
+balance_sheet,2,Cam kết giao dịch hối đoái,69702746,,Cam kết giao dịch hối đoái
+balance_sheet,,Cam kết mua ngoại tệ,6415326,,Cam kết mua ngoại tệ
+balance_sheet,,Cam kết bán ngoại tệ,6466478,,Cam kết bán ngoại tệ
+balance_sheet,,Cam kết giao dịch hoán đổi,56820942,,Cam kết giao dịch hoán đổi
+balance_sheet,3,Cam kết trong nghiệp vụ thư tín dụng,93900882,,Cam kết trong nghiệp vụ thư tín dụng
+balance_sheet,4,Bảo lãnh khác,57162498,,Bảo lãnh khác
+balance_sheet,5,Cam kết khác,207744,,Cam kết khác
+balance_sheet,6,Lãi cho vay và phí phải thu chưa thu được,872504,26,Lãi cho vay và phí phải thu chưa thu được
+balance_sheet,7,Nợ khó đòi đã xử lý,55445134,26,Nợ khó đòi đã xử lý
+balance_sheet,8,Tài sản và chứng từ khác,367927233,26,Tài sản và chứng từ khác

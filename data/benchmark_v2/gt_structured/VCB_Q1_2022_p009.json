@@ -1,0 +1,180 @@
+{
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": [
+      {
+        "item_code": "1",
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được",
+        "value": 18270754.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Chi phí lãi và các chi phí tương tự đã trả",
+        "value": -6591715.0,
+        "notes_ref": null,
+        "original_name": "Chi phí lãi và các chi phí tương tự đã trả"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Thu nhập từ hoạt động dịch vụ nhận được",
+        "value": 1031728.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ nhận được"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",
+        "value": 1637580.0,
+        "notes_ref": null,
+        "original_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Chi phí khác",
+        "value": -62483.0,
+        "notes_ref": null,
+        "original_name": "Chi phí khác"
+      },
+      {
+        "item_code": "6",
+        "item_name": "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro",
+        "value": 545538.0,
+        "notes_ref": null,
+        "original_name": "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Tiền chi trả cho nhân viên và hoạt động quản lý công vụ",
+        "value": -4490878.0,
+        "notes_ref": null,
+        "original_name": "Tiền chi trả cho nhân viên và hoạt động quản lý công vụ"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Tiền thuế thu nhập thực nộp trong kỳ",
+        "value": -642532.0,
+        "notes_ref": null,
+        "original_name": "Tiền thuế thu nhập thực nộp trong kỳ"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+        "value": 9697992.0,
+        "notes_ref": null,
+        "original_name": "Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động"
+      },
+      {
+        "item_code": "9",
+        "item_name": "Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác",
+        "value": -200908.0,
+        "notes_ref": null,
+        "original_name": "Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác"
+      },
+      {
+        "item_code": "10",
+        "item_name": "Các khoản về kinh doanh chứng khoán",
+        "value": -1896895.0,
+        "notes_ref": null,
+        "original_name": "Các khoản về kinh doanh chứng khoán"
+      },
+      {
+        "item_code": "11",
+        "item_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác",
+        "value": 303202.0,
+        "notes_ref": null,
+        "original_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác"
+      },
+      {
+        "item_code": "12",
+        "item_name": "Các khoản cho vay khách hàng",
+        "value": -68149789.0,
+        "notes_ref": null,
+        "original_name": "Các khoản cho vay khách hàng"
+      },
+      {
+        "item_code": "13",
+        "item_name": "Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản",
+        "value": -59677.0,
+        "notes_ref": null,
+        "original_name": "Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản"
+      },
+      {
+        "item_code": "14",
+        "item_name": "Tài sản hoạt động khác",
+        "value": -277225.0,
+        "notes_ref": null,
+        "original_name": "Tài sản hoạt động khác"
+      },
+      {
+        "item_code": "15",
+        "item_name": "Các khoản nợ Chính phủ và NHNN",
+        "value": 26842324.0,
+        "notes_ref": null,
+        "original_name": "Các khoản nợ Chính phủ và NHNN"
+      },
+      {
+        "item_code": "16",
+        "item_name": "Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác",
+        "value": -28480082.0,
+        "notes_ref": null,
+        "original_name": "Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác"
+      },
+      {
+        "item_code": "17",
+        "item_name": "Các khoản tiền gửi của khách hàng",
+        "value": 44344968.0,
+        "notes_ref": null,
+        "original_name": "Các khoản tiền gửi của khách hàng"
+      },
+      {
+        "item_code": "18",
+        "item_name": "Các khoản phát hành giấy tờ có giá",
+        "value": -7204.0,
+        "notes_ref": null,
+        "original_name": "Các khoản phát hành giấy tờ có giá"
+      },
+      {
+        "item_code": "19",
+        "item_name": "Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro",
+        "value": -1122.0,
+        "notes_ref": null,
+        "original_name": "Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro"
+      },
+      {
+        "item_code": "20",
+        "item_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
+        "value": 5215.0,
+        "notes_ref": null,
+        "original_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác"
+      },
+      {
+        "item_code": "21",
+        "item_name": "Công nợ hoạt động khác",
+        "value": 1567100.0,
+        "notes_ref": null,
+        "original_name": "Công nợ hoạt động khác"
+      },
+      {
+        "item_code": "22",
+        "item_name": "Chi từ các quỹ của tổ chức tín dụng",
+        "value": -1069379.0,
+        "notes_ref": null,
+        "original_name": "Chi từ các quỹ của tổ chức tín dụng"
+      },
+      {
+        "item_code": "I",
+        "item_name": "Tiền thuần (sử dụng cho) hoạt động kinh doanh",
+        "value": -17381480.0,
+        "notes_ref": null,
+        "original_name": "Tiền thuần (sử dụng cho) hoạt động kinh doanh"
+      }
+    ]
+  }
+}
