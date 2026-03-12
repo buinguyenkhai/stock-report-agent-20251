@@ -10,6 +10,13 @@
       {
         "item_code": "31",
         "item_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát",
+        "value": 0.0,
+        "notes_ref": "23.1",
+        "original_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát"
+      },
+      {
+        "item_code": "31",
+        "item_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát",
         "value": 191909700000.0,
         "notes_ref": "23.1",
         "original_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát"
@@ -22,9 +29,23 @@
         "original_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành"
       },
       {
+        "item_code": "32",
+        "item_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành",
+        "value": -1696500000.0,
+        "notes_ref": null,
+        "original_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành"
+      },
+      {
         "item_code": "33",
         "item_name": "Tiền thu từ đi vay",
-        "value": 27856434463587.0,
+        "value": 27856643463587.0,
+        "notes_ref": null,
+        "original_name": "Tiền thu từ đi vay"
+      },
+      {
+        "item_code": "33",
+        "item_name": "Tiền thu từ đi vay",
+        "value": 34307540225500.0,
         "notes_ref": null,
         "original_name": "Tiền thu từ đi vay"
       },
@@ -34,6 +55,20 @@
         "value": -22207499036026.0,
         "notes_ref": "22",
         "original_name": "Tiền chi trả nợ gốc vay"
+      },
+      {
+        "item_code": "34",
+        "item_name": "Tiền chi trả nợ gốc vay",
+        "value": -36612080348534.0,
+        "notes_ref": "22",
+        "original_name": "Tiền chi trả nợ gốc vay"
+      },
+      {
+        "item_code": "36",
+        "item_name": "Cổ tức đã trả",
+        "value": 0.0,
+        "notes_ref": "23.1",
+        "original_name": "Cổ tức đã trả"
       },
       {
         "item_code": "36",

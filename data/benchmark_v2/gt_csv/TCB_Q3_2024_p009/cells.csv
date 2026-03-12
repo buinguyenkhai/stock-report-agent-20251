@@ -1,10 +1,10 @@
 row_idx,col_idx,text
 0,0,
 0,1,Thuyết minh
-0,2,Quý III 2024 (triệu đồng)
-0,3,Quý III 2023 (triệu đồng)
-0,4,Lũy kế từ đầu năm đến 30/9/2024 (triệu đồng)
-0,5,Lũy kế từ đầu năm đến 30/9/2023 (triệu đồng)
+0,2,Quý III 2024 triệu đồng
+0,3,Quý III 2023 triệu đồng
+0,4,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng
+0,5,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng
 1,0,Thu nhập lãi và các khoản thu nhập tương tự
 1,1,24
 1,2,15.168.282

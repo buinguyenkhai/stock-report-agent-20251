@@ -1,10 +1,10 @@
 {
-  "last_csv_save_at": "2026-03-04T04:52:19.995910+00:00",
-  "updated_at": "2026-03-04T04:52:20.006273+00:00",
-  "last_generated_at": "2026-03-04T04:52:20.006200+00:00",
+  "last_csv_save_at": "2026-03-11T01:07:55.019879+00:00",
+  "updated_at": "2026-03-11T01:07:55.110650+00:00",
+  "last_generated_at": "2026-03-11T01:07:55.085911+00:00",
   "last_generated_paths": {
-    "gt_markdown_path": "data/benchmark_v2/gt_markdown/TCB_Q3_2024_p006.md",
-    "gt_structured_path": "data/benchmark_v2/gt_structured/TCB_Q3_2024_p006.json",
-    "gt_table_cells_path": "data/benchmark_v2/gt_cells/TCB_Q3_2024_p006.json"
+    "gt_markdown_path": "data\\benchmark_v2\\gt_markdown\\TCB_Q3_2024_p006.md",
+    "gt_structured_path": "data\\benchmark_v2\\gt_structured\\TCB_Q3_2024_p006.json",
+    "gt_table_cells_path": "data\\benchmark_v2\\gt_cells\\TCB_Q3_2024_p006.json"
   }
 }

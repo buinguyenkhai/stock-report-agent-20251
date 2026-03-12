@@ -2,10 +2,10 @@ row_idx,col_idx,text
 0,0,CHỈ TIÊU
 0,1,Mã số
 0,2,Thuyết minh
-0,3,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 - Số quý này năm nay - VNĐ
-0,4,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 - Số lũy kế năm nay - VNĐ
-0,5,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 - Số quý này năm trước - VNĐ
-0,6,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 - Số lũy kế năm trước - VNĐ
+0,3,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ
+0,4,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ
+0,5,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ
+0,6,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ
 1,0,1. Doanh thu bán hàng và cung cấp dịch vụ
 1,1,1
 1,2,24.1
