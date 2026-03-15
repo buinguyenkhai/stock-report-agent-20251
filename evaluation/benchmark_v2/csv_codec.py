@@ -5,6 +5,7 @@ CSV pack layout per sample:
   gt_csv/<sample_id>/
     cells.csv   : row_idx,col_idx,text
     rows.csv    : statement,item_code,item_name,value,notes_ref,original_name
+                  where value is canonical VND
     meta.json   : optional QA metadata
 """
 

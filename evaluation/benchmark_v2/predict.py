@@ -15,11 +15,12 @@ import argparse
 import json
 import os
 import tempfile
+import re
 from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional
+from typing import Any, Dict, List, Literal, Optional, Tuple
 
 import fitz  # PyMuPDF
-from PIL import Image
+from PIL import Image, ImageOps
 
 from logger import get_logger
 from llm_settings import DEFAULT_MARKER_LLM_MODEL
@@ -102,6 +103,86 @@ def _extract_single_page_pdf(source_pdf: Path, page_index_1based: int) -> Path:
         src.close()
 
 
+def _content_crop_image(page_image: Path, *, threshold: int = 245, margin_px: int = 18) -> Tuple[Path, Dict[str, Any]]:
+    with Image.open(page_image) as img:
+        rgb = ImageOps.exif_transpose(img).convert("RGB")
+        gray = ImageOps.grayscale(rgb)
+        mask = gray.point(lambda p: 255 if p < threshold else 0)
+        bbox = mask.getbbox()
+        debug: Dict[str, Any] = {
+            "page_image_path": str(page_image),
+            "crop_applied": False,
+            "original_size": [rgb.width, rgb.height],
+        }
+        cropped = rgb
+        if bbox is not None:
+            left, top, right, bottom = bbox
+            left = max(0, left - margin_px)
+            top = max(0, top - margin_px)
+            right = min(rgb.width, right + margin_px)
+            bottom = min(rgb.height, bottom + margin_px)
+            if (left, top, right, bottom) != (0, 0, rgb.width, rgb.height):
+                cropped = rgb.crop((left, top, right, bottom))
+                debug["crop_applied"] = True
+                debug["crop_box"] = [left, top, right, bottom]
+        debug["final_size"] = [cropped.width, cropped.height]
+        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
+            tmp_path = Path(tmp.name)
+        cropped.save(tmp_path, "PDF", resolution=200.0)
+    return tmp_path, debug
+
+
+def _extract_markdown_table_stats(markdown: str) -> Dict[str, Any]:
+    pipe_rows: List[List[str]] = []
+    giant_cells = 0
+    max_cell_chars = 0
+    max_numeric_tokens = 0
+
+    for raw_line in (markdown or "").splitlines():
+        line = raw_line.strip()
+        if line.count("|") < 2:
+            continue
+        parts = [part.strip() for part in line.split("|")]
+        if parts and parts[0] == "":
+            parts = parts[1:]
+        if parts and parts[-1] == "":
+            parts = parts[:-1]
+        if not parts:
+            continue
+        if all((set(part.replace(":", "").strip()) <= {"-"} and "-" in part) or part == "" for part in parts):
+            continue
+        pipe_rows.append(parts)
+        for cell in parts:
+            cell_chars = len(cell)
+            max_cell_chars = max(max_cell_chars, cell_chars)
+            numeric_tokens = len(re.findall(r"(?<![A-Za-z])[-(]?\d[\d.,]*\)?", cell))
+            max_numeric_tokens = max(max_numeric_tokens, numeric_tokens)
+            if cell_chars >= 90 and numeric_tokens >= 4:
+                giant_cells += 1
+
+    stats = {
+        "pipe_row_count": len(pipe_rows),
+        "max_cell_chars": max_cell_chars,
+        "max_numeric_tokens_in_cell": max_numeric_tokens,
+        "giant_cell_count": giant_cells,
+    }
+    stats["structure_health_score"] = (
+        stats["pipe_row_count"] * 5
+        - stats["giant_cell_count"] * 18
+        - max(0, stats["max_numeric_tokens_in_cell"] - 4) * 2
+        - max(0, stats["max_cell_chars"] - 80) / 10.0
+    )
+    return stats
+
+
+def _looks_structurally_collapsed(stats: Dict[str, Any]) -> bool:
+    return bool(
+        stats.get("pipe_row_count", 0) <= 3
+        or stats.get("giant_cell_count", 0) >= 1
+        or stats.get("max_numeric_tokens_in_cell", 0) >= 10
+    )
+
+
 def _run_ocr_for_sample(
     *,
     engine: EngineName,
@@ -109,16 +190,46 @@ def _run_ocr_for_sample(
     source_pdf: Optional[Path],
     page_image: Optional[Path],
     page_index: int,
-) -> str:
+) -> Tuple[str, Dict[str, Any]]:
     if source_pdf is not None:
         one_page_pdf = _extract_single_page_pdf(source_pdf, page_index)
         try:
-            return ocr_service.process_pdf(str(one_page_pdf))
+            markdown = ocr_service.process_pdf(str(one_page_pdf))
         finally:
             try:
                 os.unlink(one_page_pdf)
             except Exception:
                 pass
+        debug: Dict[str, Any] = {
+            "ocr_input_strategy": "single_page_pdf",
+            "base_markdown_stats": _extract_markdown_table_stats(markdown),
+        }
+        if engine in {"docling", "hybrid"} and page_image is not None:
+            base_stats = debug["base_markdown_stats"]
+            if _looks_structurally_collapsed(base_stats):
+                cropped_pdf = None
+                try:
+                    cropped_pdf, crop_debug = _content_crop_image(page_image)
+                    alt_markdown = ocr_service.process_pdf(str(cropped_pdf))
+                    alt_stats = _extract_markdown_table_stats(alt_markdown)
+                    debug["layout_retry"] = {
+                        "triggered": True,
+                        "base_stats": base_stats,
+                        "cropped_stats": alt_stats,
+                        "crop_debug": crop_debug,
+                        "selected_strategy": "single_page_pdf",
+                    }
+                    if alt_stats["structure_health_score"] > base_stats["structure_health_score"] + 2.0:
+                        debug["ocr_input_strategy"] = "cropped_page_image_pdf"
+                        debug["layout_retry"]["selected_strategy"] = "cropped_page_image_pdf"
+                        return alt_markdown, debug
+                finally:
+                    if cropped_pdf is not None:
+                        try:
+                            os.unlink(cropped_pdf)
+                        except Exception:
+                            pass
+        return markdown, debug
 
     if page_image is not None:
         if engine == "marker":
@@ -127,9 +238,13 @@ def _run_ocr_for_sample(
             raise ValueError(f"Engine does not support image OCR fallback: {engine}")
         img = Image.open(page_image)
         try:
-            return ocr_service.process_image(img)  # type: ignore[misc]
+            markdown = ocr_service.process_image(img)  # type: ignore[misc]
         finally:
             img.close()
+        return markdown, {
+            "ocr_input_strategy": "page_image",
+            "base_markdown_stats": _extract_markdown_table_stats(markdown),
+        }
 
     raise ValueError("No valid OCR input for sample (need source_pdf_path or page_image_path)")
 
@@ -240,7 +355,7 @@ def generate_predictions(
             source_pdf = s.resolve_path(ds.dataset_root, s.source_pdf_path)
             page_image = s.resolve_path(ds.dataset_root, s.page_image_path)
 
-            md = _run_ocr_for_sample(
+            md, run_debug = _run_ocr_for_sample(
                 engine=engine,
                 ocr_service=ocr_service,
                 source_pdf=source_pdf,
@@ -250,14 +365,16 @@ def generate_predictions(
 
             raw_out.write_text(md, encoding="utf-8")
             ocr_debug = _get_ocr_debug_payload(ocr_service)
-            if ocr_debug:
+            ocr_debug_payload = dict(ocr_debug or {})
+            ocr_debug_payload.update(run_debug)
+            if ocr_debug_payload:
                 ocr_debug_out.write_text(
                     json.dumps(
                         {
                             "sample_id": s.sample_id,
                             "engine": engine,
                             "page_index": s.page_index,
-                            **ocr_debug,
+                            **ocr_debug_payload,
                         },
                         ensure_ascii=False,
                         indent=2,
@@ -279,6 +396,11 @@ def generate_predictions(
             counts["failed"] += 1
             errors.append({"sample_id": s.sample_id, "error": str(e)})
             logger.error(f"Failed {s.sample_id}: {e}")
+        finally:
+            try:
+                ocr_service.cleanup_after_page()
+            except Exception:
+                pass
 
     if errors:
         err_path = out_root / "_prediction_errors.json"

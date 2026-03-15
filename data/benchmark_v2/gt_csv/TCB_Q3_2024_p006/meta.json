@@ -1,10 +1,13 @@
 {
   "last_csv_save_at": "2026-03-11T01:07:55.019879+00:00",
-  "updated_at": "2026-03-11T01:07:55.110650+00:00",
-  "last_generated_at": "2026-03-11T01:07:55.085911+00:00",
+  "updated_at": "2026-03-15T08:04:37.357600+00:00",
+  "last_generated_at": "2026-03-15T08:04:37.352407+00:00",
   "last_generated_paths": {
     "gt_markdown_path": "data\\benchmark_v2\\gt_markdown\\TCB_Q3_2024_p006.md",
     "gt_structured_path": "data\\benchmark_v2\\gt_structured\\TCB_Q3_2024_p006.json",
     "gt_table_cells_path": "data\\benchmark_v2\\gt_cells\\TCB_Q3_2024_p006.json"
-  }
+  },
+  "report_unit_detected": "trieu dong",
+  "report_unit_multiplier": 1000000.0,
+  "value_unit_normalized_to": "VND"
 }

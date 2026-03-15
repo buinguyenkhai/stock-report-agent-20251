@@ -4,77 +4,77 @@
       {
         "item_code": "1",
         "item_name": "Bảo lãnh vay vốn",
-        "value": 1840731.0,
+        "value": 1840731000000.0,
         "notes_ref": null,
         "original_name": "Bảo lãnh vay vốn"
       },
       {
         "item_code": "2",
         "item_name": "Cam kết giao dịch hối đoái",
-        "value": 69702746.0,
+        "value": 69702746000000.0,
         "notes_ref": null,
         "original_name": "Cam kết giao dịch hối đoái"
       },
       {
         "item_code": null,
         "item_name": "Cam kết mua ngoại tệ",
-        "value": 6415326.0,
+        "value": 6415326000000.0,
         "notes_ref": null,
         "original_name": "Cam kết mua ngoại tệ"
       },
       {
         "item_code": null,
         "item_name": "Cam kết bán ngoại tệ",
-        "value": 6466478.0,
+        "value": 6466478000000.0,
         "notes_ref": null,
         "original_name": "Cam kết bán ngoại tệ"
       },
       {
         "item_code": null,
         "item_name": "Cam kết giao dịch hoán đổi",
-        "value": 56820942.0,
+        "value": 56820942000000.0,
         "notes_ref": null,
         "original_name": "Cam kết giao dịch hoán đổi"
       },
       {
         "item_code": "3",
         "item_name": "Cam kết trong nghiệp vụ thư tín dụng",
-        "value": 93900882.0,
+        "value": 93900882000000.0,
         "notes_ref": null,
         "original_name": "Cam kết trong nghiệp vụ thư tín dụng"
       },
       {
         "item_code": "4",
         "item_name": "Bảo lãnh khác",
-        "value": 57162498.0,
+        "value": 57162498000000.0,
         "notes_ref": null,
         "original_name": "Bảo lãnh khác"
       },
       {
         "item_code": "5",
         "item_name": "Cam kết khác",
-        "value": 207744.0,
+        "value": 207744000000.0,
         "notes_ref": null,
         "original_name": "Cam kết khác"
       },
       {
         "item_code": "6",
         "item_name": "Lãi cho vay và phí phải thu chưa thu được",
-        "value": 872504.0,
+        "value": 872504000000.0,
         "notes_ref": "26",
         "original_name": "Lãi cho vay và phí phải thu chưa thu được"
       },
       {
         "item_code": "7",
         "item_name": "Nợ khó đòi đã xử lý",
-        "value": 55445134.0,
+        "value": 55445134000000.0,
         "notes_ref": "26",
         "original_name": "Nợ khó đòi đã xử lý"
       },
       {
         "item_code": "8",
         "item_name": "Tài sản và chứng từ khác",
-        "value": 367927233.0,
+        "value": 367927233000000.0,
         "notes_ref": "26",
         "original_name": "Tài sản và chứng từ khác"
       }

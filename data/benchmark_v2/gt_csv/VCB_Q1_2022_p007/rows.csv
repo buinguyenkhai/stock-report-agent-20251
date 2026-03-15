@@ -1,18 +1,18 @@
 statement,item_code,item_name,value,notes_ref,original_name
-income_statement,1,Thu nhập lãi và các khoản thu nhập tương tự,19338145,16,Thu nhập lãi và các khoản thu nhập tương tự
-income_statement,2,Chi phí lãi và các chi phí tương tự,-7362293,17,Chi phí lãi và các chi phí tương tự
-income_statement,I,Thu nhập lãi thuần,11975852,,Thu nhập lãi thuần
-income_statement,3,Thu nhập từ hoạt động dịch vụ,3713402,,Thu nhập từ hoạt động dịch vụ
-income_statement,4,Chi phí hoạt động dịch vụ,-1002574,,Chi phí hoạt động dịch vụ
-income_statement,II,Lãi thuần từ hoạt động dịch vụ,2710828,,Lãi thuần từ hoạt động dịch vụ
-income_statement,III,Lãi thuần từ hoạt động kinh doanh ngoại hối,1521867,,Lãi thuần từ hoạt động kinh doanh ngoại hối
-income_statement,IV,Lãi thuần từ mua bán chứng khoán kinh doanh,16525,18,Lãi thuần từ mua bán chứng khoán kinh doanh
-income_statement,V,(Lỗ) thuần từ mua bán chứng khoán đầu tư,-164,,(Lỗ) thuần từ mua bán chứng khoán đầu tư
-income_statement,5,Thu nhập từ hoạt động khác,576253,,Thu nhập từ hoạt động khác
-income_statement,6,Chi phí hoạt động khác,-92295,,Chi phí hoạt động khác
-income_statement,VI,Lãi thuần từ hoạt động khác,483958,,Lãi thuần từ hoạt động khác
-income_statement,VII,"Thu nhập từ góp vốn, mua cổ phần",24495,19,"Thu nhập từ góp vốn, mua cổ phần"
-income_statement,VIII,Chi phí hoạt động,-4509166,20,Chi phí hoạt động
-income_statement,IX,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,12224195,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng
-income_statement,X,Chi phí dự phòng rủi ro tín dụng,-2273939,,Chi phí dự phòng rủi ro tín dụng
-income_statement,XI,Tổng lợi nhuận trước thuế,9950256,,Tổng lợi nhuận trước thuế
+income_statement,1,Thu nhập lãi và các khoản thu nhập tương tự,19338145000000,16,Thu nhập lãi và các khoản thu nhập tương tự
+income_statement,2,Chi phí lãi và các chi phí tương tự,-7362293000000,17,Chi phí lãi và các chi phí tương tự
+income_statement,I,Thu nhập lãi thuần,11975852000000,,Thu nhập lãi thuần
+income_statement,3,Thu nhập từ hoạt động dịch vụ,3713402000000,,Thu nhập từ hoạt động dịch vụ
+income_statement,4,Chi phí hoạt động dịch vụ,-1002574000000,,Chi phí hoạt động dịch vụ
+income_statement,II,Lãi thuần từ hoạt động dịch vụ,2710828000000,,Lãi thuần từ hoạt động dịch vụ
+income_statement,III,Lãi thuần từ hoạt động kinh doanh ngoại hối,1521867000000,,Lãi thuần từ hoạt động kinh doanh ngoại hối
+income_statement,IV,Lãi thuần từ mua bán chứng khoán kinh doanh,16525000000,18,Lãi thuần từ mua bán chứng khoán kinh doanh
+income_statement,V,(Lỗ) thuần từ mua bán chứng khoán đầu tư,-164000000,,(Lỗ) thuần từ mua bán chứng khoán đầu tư
+income_statement,5,Thu nhập từ hoạt động khác,576253000000,,Thu nhập từ hoạt động khác
+income_statement,6,Chi phí hoạt động khác,-92295000000,,Chi phí hoạt động khác
+income_statement,VI,Lãi thuần từ hoạt động khác,483958000000,,Lãi thuần từ hoạt động khác
+income_statement,VII,"Thu nhập từ góp vốn, mua cổ phần",24495000000,19,"Thu nhập từ góp vốn, mua cổ phần"
+income_statement,VIII,Chi phí hoạt động,-4509166000000,20,Chi phí hoạt động
+income_statement,IX,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,12224195000000,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng
+income_statement,X,Chi phí dự phòng rủi ro tín dụng,-2273939000000,,Chi phí dự phòng rủi ro tín dụng
+income_statement,XI,Tổng lợi nhuận trước thuế,9950256000000,,Tổng lợi nhuận trước thuế

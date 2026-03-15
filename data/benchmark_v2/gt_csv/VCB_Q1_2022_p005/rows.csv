@@ -1,25 +1,25 @@
 statement,item_code,item_name,value,notes_ref,original_name
-balance_sheet,I,Các khoản nợ Chính phủ và NHNN,36310440,9,Các khoản nợ Chính phủ và NHNN
-balance_sheet,II,Tiền gửi và vay các tổ chức tín dụng khác,81277695,10,Tiền gửi và vay các tổ chức tín dụng khác
-balance_sheet,1,Tiền gửi của các tổ chức tín dụng khác,75589555,,Tiền gửi của các tổ chức tín dụng khác
-balance_sheet,2,Vay các tổ chức tín dụng khác,5688140,,Vay các tổ chức tín dụng khác
-balance_sheet,III,Tiền gửi của khách hàng,1179668881,11,Tiền gửi của khách hàng
-balance_sheet,IV,Các công cụ tài chính phái sinh và các khoản nợ tài chính khác,5215,,Các công cụ tài chính phái sinh và các khoản nợ tài chính khác
-balance_sheet,V,"Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro",6585,,"Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro"
-balance_sheet,VI,Phát hành giấy tờ có giá,17380178,12,Phát hành giấy tờ có giá
-balance_sheet,VII,Các khoản nợ khác,31021476,,Các khoản nợ khác
-balance_sheet,1,"Các khoản lãi, phí phải trả",10137639,,"Các khoản lãi, phí phải trả"
-balance_sheet,2,Các khoản phải trả và công nợ khác,20883837,13,Các khoản phải trả và công nợ khác
-balance_sheet,,TỔNG NỢ PHẢI TRẢ,1345670470,,TỔNG NỢ PHẢI TRẢ
-balance_sheet,1,Vốn của tổ chức tín dụng,52665213,,Vốn của tổ chức tín dụng
-balance_sheet,a,Vốn điều lệ,47325166,,Vốn điều lệ
-balance_sheet,b,Thặng dư vốn cổ phần,4995389,,Thặng dư vốn cổ phần
-balance_sheet,c,Vốn khác,344658,,Vốn khác
-balance_sheet,2,Quỹ của tổ chức tín dụng,18173014,,Quỹ của tổ chức tín dụng
-balance_sheet,3,Chênh lệch tỷ giá hối đoái,-9856,,Chênh lệch tỷ giá hối đoái
-balance_sheet,4,Lợi nhuận chưa phân phối,46156897,,Lợi nhuận chưa phân phối
-balance_sheet,a,Lợi nhuận để lại năm trước,38194713,,Lợi nhuận để lại năm trước
-balance_sheet,b,Lợi nhuận năm nay,7962184,,Lợi nhuận năm nay
-balance_sheet,5,Lợi ích cổ đông không kiểm soát,92420,,Lợi ích cổ đông không kiểm soát
-balance_sheet,,TỔNG VỐN CHỦ SỞ HỮU,117077688,14,TỔNG VỐN CHỦ SỞ HỮU
-balance_sheet,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU,1462748158,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU
+balance_sheet,I,Các khoản nợ Chính phủ và NHNN,36310440000000,9,Các khoản nợ Chính phủ và NHNN
+balance_sheet,II,Tiền gửi và vay các tổ chức tín dụng khác,81277695000000,10,Tiền gửi và vay các tổ chức tín dụng khác
+balance_sheet,1,Tiền gửi của các tổ chức tín dụng khác,75589555000000,,Tiền gửi của các tổ chức tín dụng khác
+balance_sheet,2,Vay các tổ chức tín dụng khác,5688140000000,,Vay các tổ chức tín dụng khác
+balance_sheet,III,Tiền gửi của khách hàng,1179668881000000,11,Tiền gửi của khách hàng
+balance_sheet,IV,Các công cụ tài chính phái sinh và các khoản nợ tài chính khác,5215000000,,Các công cụ tài chính phái sinh và các khoản nợ tài chính khác
+balance_sheet,V,"Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro",6585000000,,"Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro"
+balance_sheet,VI,Phát hành giấy tờ có giá,17380178000000,12,Phát hành giấy tờ có giá
+balance_sheet,VII,Các khoản nợ khác,31021476000000,,Các khoản nợ khác
+balance_sheet,1,"Các khoản lãi, phí phải trả",10137639000000,,"Các khoản lãi, phí phải trả"
+balance_sheet,2,Các khoản phải trả và công nợ khác,20883837000000,13,Các khoản phải trả và công nợ khác
+balance_sheet,,TỔNG NỢ PHẢI TRẢ,1345670470000000,,TỔNG NỢ PHẢI TRẢ
+balance_sheet,1,Vốn của tổ chức tín dụng,52665213000000,,Vốn của tổ chức tín dụng
+balance_sheet,a,Vốn điều lệ,47325166000000,,Vốn điều lệ
+balance_sheet,b,Thặng dư vốn cổ phần,4995389000000,,Thặng dư vốn cổ phần
+balance_sheet,c,Vốn khác,344658000000,,Vốn khác
+balance_sheet,2,Quỹ của tổ chức tín dụng,18173014000000,,Quỹ của tổ chức tín dụng
+balance_sheet,3,Chênh lệch tỷ giá hối đoái,-9856000000,,Chênh lệch tỷ giá hối đoái
+balance_sheet,4,Lợi nhuận chưa phân phối,46156897000000,,Lợi nhuận chưa phân phối
+balance_sheet,a,Lợi nhuận để lại năm trước,38194713000000,,Lợi nhuận để lại năm trước
+balance_sheet,b,Lợi nhuận năm nay,7962184000000,,Lợi nhuận năm nay
+balance_sheet,5,Lợi ích cổ đông không kiểm soát,92420000000,,Lợi ích cổ đông không kiểm soát
+balance_sheet,,TỔNG VỐN CHỦ SỞ HỮU,117077688000000,14,TỔNG VỐN CHỦ SỞ HỮU
+balance_sheet,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU,1462748158000000,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU

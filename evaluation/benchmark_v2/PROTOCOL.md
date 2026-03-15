@@ -39,6 +39,10 @@ Detailed annotation guide:
 - Optional: `gt_table_cells_path`
 - Optional: `source_pdf_path`
 
+Canonical numeric contract:
+- `gt_csv/<sample_id>/rows.csv:value` and `gt_structured/<sample_id>.json` values must be stored in `VND`.
+- Raw OCR references (`gt_markdown`, `gt_cells`) should still preserve the page text exactly as printed, including original page units.
+
 If `source_pdf_path` is present, you can auto-render `page_image_path` for all samples:
 ```bash
 python -m evaluation.benchmark_v2.render_page_images \

@@ -30,6 +30,7 @@ For each `sample_id`, store:
 CSV schema:
 - `cells.csv`: `row_idx,col_idx,text`
 - `rows.csv`: `statement,item_code,item_name,value,notes_ref,original_name`
+- `rows.csv.value` must be canonical `VND`, not the printed page unit.
 
 If your manifest includes `source_pdf_path`, generate images automatically:
 ```bash
@@ -89,6 +90,7 @@ Apply these consistently:
 - Keep statement assignment correct (`BS/IS/CF`).
 - Prefer `item_code` when present; fallback to `item_name`.
 - `value` should be numeric (`number`), `null` if absent.
+- `value` must be normalized to `VND` even if the page header says `triệu`, `tỷ`, or `nghìn`.
 - Keep `item_name` faithful to report wording.
 - Keep `notes_ref` if visible in the statement row.
 
@@ -96,6 +98,9 @@ Numeric normalization:
 - `(1.234)` => negative numeric value
 - keep decimals when present
 - do not silently round unless source itself is rounded
+- if page unit is `triệu đồng`/`triệu VND`: multiply by `1,000,000`
+- if page unit is `tỷ đồng`/`tỷ VND`: multiply by `1,000,000,000`
+- if page unit is `nghìn đồng`/`nghìn VND`: multiply by `1,000`
 
 ## 5. Two-pass QA for single annotator
 Pass 1:

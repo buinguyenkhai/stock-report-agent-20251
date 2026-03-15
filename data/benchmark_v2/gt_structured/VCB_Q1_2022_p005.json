@@ -4,168 +4,168 @@
       {
         "item_code": "I",
         "item_name": "Các khoản nợ Chính phủ và NHNN",
-        "value": 36310440.0,
+        "value": 36310440000000.0,
         "notes_ref": "9",
         "original_name": "Các khoản nợ Chính phủ và NHNN"
       },
       {
         "item_code": "II",
         "item_name": "Tiền gửi và vay các tổ chức tín dụng khác",
-        "value": 81277695.0,
+        "value": 81277695000000.0,
         "notes_ref": "10",
         "original_name": "Tiền gửi và vay các tổ chức tín dụng khác"
       },
       {
         "item_code": "1",
         "item_name": "Tiền gửi của các tổ chức tín dụng khác",
-        "value": 75589555.0,
+        "value": 75589555000000.0,
         "notes_ref": null,
         "original_name": "Tiền gửi của các tổ chức tín dụng khác"
       },
       {
         "item_code": "2",
         "item_name": "Vay các tổ chức tín dụng khác",
-        "value": 5688140.0,
+        "value": 5688140000000.0,
         "notes_ref": null,
         "original_name": "Vay các tổ chức tín dụng khác"
       },
       {
         "item_code": "III",
         "item_name": "Tiền gửi của khách hàng",
-        "value": 1179668881.0,
+        "value": 1179668881000000.0,
         "notes_ref": "11",
         "original_name": "Tiền gửi của khách hàng"
       },
       {
         "item_code": "IV",
         "item_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
-        "value": 5215.0,
+        "value": 5215000000.0,
         "notes_ref": null,
         "original_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác"
       },
       {
         "item_code": "V",
         "item_name": "Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro",
-        "value": 6585.0,
+        "value": 6585000000.0,
         "notes_ref": null,
         "original_name": "Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro"
       },
       {
         "item_code": "VI",
         "item_name": "Phát hành giấy tờ có giá",
-        "value": 17380178.0,
+        "value": 17380178000000.0,
         "notes_ref": "12",
         "original_name": "Phát hành giấy tờ có giá"
       },
       {
         "item_code": "VII",
         "item_name": "Các khoản nợ khác",
-        "value": 31021476.0,
+        "value": 31021476000000.0,
         "notes_ref": null,
         "original_name": "Các khoản nợ khác"
       },
       {
         "item_code": "1",
         "item_name": "Các khoản lãi, phí phải trả",
-        "value": 10137639.0,
+        "value": 10137639000000.0,
         "notes_ref": null,
         "original_name": "Các khoản lãi, phí phải trả"
       },
       {
         "item_code": "2",
         "item_name": "Các khoản phải trả và công nợ khác",
-        "value": 20883837.0,
+        "value": 20883837000000.0,
         "notes_ref": "13",
         "original_name": "Các khoản phải trả và công nợ khác"
       },
       {
         "item_code": null,
         "item_name": "TỔNG NỢ PHẢI TRẢ",
-        "value": 1345670470.0,
+        "value": 1345670470000000.0,
         "notes_ref": null,
         "original_name": "TỔNG NỢ PHẢI TRẢ"
       },
       {
         "item_code": "1",
         "item_name": "Vốn của tổ chức tín dụng",
-        "value": 52665213.0,
+        "value": 52665213000000.0,
         "notes_ref": null,
         "original_name": "Vốn của tổ chức tín dụng"
       },
       {
         "item_code": "a",
         "item_name": "Vốn điều lệ",
-        "value": 47325166.0,
+        "value": 47325166000000.0,
         "notes_ref": null,
         "original_name": "Vốn điều lệ"
       },
       {
         "item_code": "b",
         "item_name": "Thặng dư vốn cổ phần",
-        "value": 4995389.0,
+        "value": 4995389000000.0,
         "notes_ref": null,
         "original_name": "Thặng dư vốn cổ phần"
       },
       {
         "item_code": "c",
         "item_name": "Vốn khác",
-        "value": 344658.0,
+        "value": 344658000000.0,
         "notes_ref": null,
         "original_name": "Vốn khác"
       },
       {
         "item_code": "2",
         "item_name": "Quỹ của tổ chức tín dụng",
-        "value": 18173014.0,
+        "value": 18173014000000.0,
         "notes_ref": null,
         "original_name": "Quỹ của tổ chức tín dụng"
       },
       {
         "item_code": "3",
         "item_name": "Chênh lệch tỷ giá hối đoái",
-        "value": -9856.0,
+        "value": -9856000000.0,
         "notes_ref": null,
         "original_name": "Chênh lệch tỷ giá hối đoái"
       },
       {
         "item_code": "4",
         "item_name": "Lợi nhuận chưa phân phối",
-        "value": 46156897.0,
+        "value": 46156897000000.0,
         "notes_ref": null,
         "original_name": "Lợi nhuận chưa phân phối"
       },
       {
         "item_code": "a",
         "item_name": "Lợi nhuận để lại năm trước",
-        "value": 38194713.0,
+        "value": 38194713000000.0,
         "notes_ref": null,
         "original_name": "Lợi nhuận để lại năm trước"
       },
       {
         "item_code": "b",
         "item_name": "Lợi nhuận năm nay",
-        "value": 7962184.0,
+        "value": 7962184000000.0,
         "notes_ref": null,
         "original_name": "Lợi nhuận năm nay"
       },
       {
         "item_code": "5",
         "item_name": "Lợi ích cổ đông không kiểm soát",
-        "value": 92420.0,
+        "value": 92420000000.0,
         "notes_ref": null,
         "original_name": "Lợi ích cổ đông không kiểm soát"
       },
       {
         "item_code": null,
         "item_name": "TỔNG VỐN CHỦ SỞ HỮU",
-        "value": 117077688.0,
+        "value": 117077688000000.0,
         "notes_ref": "14",
         "original_name": "TỔNG VỐN CHỦ SỞ HỮU"
       },
       {
         "item_code": null,
         "item_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
-        "value": 1462748158.0,
+        "value": 1462748158000000.0,
         "notes_ref": null,
         "original_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
       }

@@ -1,25 +1,25 @@
 statement,item_code,item_name,value,notes_ref,original_name
-cash_flow,1,Thu nhập lãi và các khoản thu nhập tương tự nhận được,18270754,,Thu nhập lãi và các khoản thu nhập tương tự nhận được
-cash_flow,2,Chi phí lãi và các chi phí tương tự đã trả,-6591715,,Chi phí lãi và các chi phí tương tự đã trả
-cash_flow,3,Thu nhập từ hoạt động dịch vụ nhận được,1031728,,Thu nhập từ hoạt động dịch vụ nhận được
-cash_flow,4,"Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",1637580,,"Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)"
-cash_flow,5,Chi phí khác,-62483,,Chi phí khác
-cash_flow,6,"Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro",545538,,"Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro"
-cash_flow,7,Tiền chi trả cho nhân viên và hoạt động quản lý công vụ,-4490878,,Tiền chi trả cho nhân viên và hoạt động quản lý công vụ
-cash_flow,8,Tiền thuế thu nhập thực nộp trong kỳ,-642532,,Tiền thuế thu nhập thực nộp trong kỳ
-cash_flow,,Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động,9697992,,Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động
-cash_flow,9,"Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác",-200908,,"Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác"
-cash_flow,10,Các khoản về kinh doanh chứng khoán,-1896895,,Các khoản về kinh doanh chứng khoán
-cash_flow,11,Các công cụ tài chính phái sinh và các tài sản tài chính khác,303202,,Các công cụ tài chính phái sinh và các tài sản tài chính khác
-cash_flow,12,Các khoản cho vay khách hàng,-68149789,,Các khoản cho vay khách hàng
-cash_flow,13,"Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản",-59677,,"Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản"
-cash_flow,14,Tài sản hoạt động khác,-277225,,Tài sản hoạt động khác
-cash_flow,15,Các khoản nợ Chính phủ và NHNN,26842324,,Các khoản nợ Chính phủ và NHNN
-cash_flow,16,"Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác",-28480082,,"Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác"
-cash_flow,17,Các khoản tiền gửi của khách hàng,44344968,,Các khoản tiền gửi của khách hàng
-cash_flow,18,Các khoản phát hành giấy tờ có giá,-7204,,Các khoản phát hành giấy tờ có giá
-cash_flow,19,"Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro",-1122,,"Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro"
-cash_flow,20,Các công cụ tài chính phái sinh và các khoản nợ tài chính khác,5215,,Các công cụ tài chính phái sinh và các khoản nợ tài chính khác
-cash_flow,21,Công nợ hoạt động khác,1567100,,Công nợ hoạt động khác
-cash_flow,22,Chi từ các quỹ của tổ chức tín dụng,-1069379,,Chi từ các quỹ của tổ chức tín dụng
-cash_flow,I,Tiền thuần (sử dụng cho) hoạt động kinh doanh,-17381480,,Tiền thuần (sử dụng cho) hoạt động kinh doanh
+cash_flow,1,Thu nhập lãi và các khoản thu nhập tương tự nhận được,18270754000000,,Thu nhập lãi và các khoản thu nhập tương tự nhận được
+cash_flow,2,Chi phí lãi và các chi phí tương tự đã trả,-6591715000000,,Chi phí lãi và các chi phí tương tự đã trả
+cash_flow,3,Thu nhập từ hoạt động dịch vụ nhận được,1031728000000,,Thu nhập từ hoạt động dịch vụ nhận được
+cash_flow,4,"Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",1637580000000,,"Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)"
+cash_flow,5,Chi phí khác,-62483000000,,Chi phí khác
+cash_flow,6,"Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro",545538000000,,"Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro"
+cash_flow,7,Tiền chi trả cho nhân viên và hoạt động quản lý công vụ,-4490878000000,,Tiền chi trả cho nhân viên và hoạt động quản lý công vụ
+cash_flow,8,Tiền thuế thu nhập thực nộp trong kỳ,-642532000000,,Tiền thuế thu nhập thực nộp trong kỳ
+cash_flow,,Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động,9697992000000,,Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động
+cash_flow,9,"Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác",-200908000000,,"Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác"
+cash_flow,10,Các khoản về kinh doanh chứng khoán,-1896895000000,,Các khoản về kinh doanh chứng khoán
+cash_flow,11,Các công cụ tài chính phái sinh và các tài sản tài chính khác,303202000000,,Các công cụ tài chính phái sinh và các tài sản tài chính khác
+cash_flow,12,Các khoản cho vay khách hàng,-68149789000000,,Các khoản cho vay khách hàng
+cash_flow,13,"Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản",-59677000000,,"Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản"
+cash_flow,14,Tài sản hoạt động khác,-277225000000,,Tài sản hoạt động khác
+cash_flow,15,Các khoản nợ Chính phủ và NHNN,26842324000000,,Các khoản nợ Chính phủ và NHNN
+cash_flow,16,"Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác",-28480082000000,,"Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác"
+cash_flow,17,Các khoản tiền gửi của khách hàng,44344968000000,,Các khoản tiền gửi của khách hàng
+cash_flow,18,Các khoản phát hành giấy tờ có giá,-7204000000,,Các khoản phát hành giấy tờ có giá
+cash_flow,19,"Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro",-1122000000,,"Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro"
+cash_flow,20,Các công cụ tài chính phái sinh và các khoản nợ tài chính khác,5215000000,,Các công cụ tài chính phái sinh và các khoản nợ tài chính khác
+cash_flow,21,Công nợ hoạt động khác,1567100000000,,Công nợ hoạt động khác
+cash_flow,22,Chi từ các quỹ của tổ chức tín dụng,-1069379000000,,Chi từ các quỹ của tổ chức tín dụng
+cash_flow,I,Tiền thuần (sử dụng cho) hoạt động kinh doanh,-17381480000000,,Tiền thuần (sử dụng cho) hoạt động kinh doanh

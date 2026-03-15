@@ -1,0 +1,982 @@
+{
+  "row_sources": {
+    "balance_sheet": {
+      "balance_sheet|code:100": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 0
+        }
+      ],
+      "balance_sheet|code:110": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 1
+        }
+      ],
+      "balance_sheet|code:111": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 2
+        }
+      ],
+      "balance_sheet|code:112": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 3
+        }
+      ],
+      "balance_sheet|code:120": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 4
+        }
+      ],
+      "balance_sheet|code:123": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 5
+        }
+      ],
+      "balance_sheet|code:130": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 6
+        }
+      ],
+      "balance_sheet|code:131": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 7
+        }
+      ],
+      "balance_sheet|code:132": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 8
+        }
+      ],
+      "balance_sheet|code:135": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 9
+        }
+      ],
+      "balance_sheet|code:136": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 10
+        }
+      ],
+      "balance_sheet|code:140": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 11
+        }
+      ],
+      "balance_sheet|code:141": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 12
+        }
+      ],
+      "balance_sheet|code:149": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 13
+        }
+      ],
+      "balance_sheet|code:150": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 14
+        }
+      ],
+      "balance_sheet|code:151": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 15
+        }
+      ],
+      "balance_sheet|code:152": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 16
+        }
+      ],
+      "balance_sheet|code:153": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 17
+        }
+      ],
+      "balance_sheet|code:200": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 18
+        }
+      ],
+      "balance_sheet|code:210": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 19
+        }
+      ],
+      "balance_sheet|code:215": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 20
+        }
+      ],
+      "balance_sheet|code:216": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 21
+        }
+      ],
+      "balance_sheet|code:220": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 22
+        }
+      ],
+      "balance_sheet|code:221": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 23
+        }
+      ],
+      "balance_sheet|code:222": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 24
+        }
+      ],
+      "balance_sheet|code:223": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 25
+        }
+      ],
+      "balance_sheet|code:227": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 26
+        }
+      ],
+      "balance_sheet|code:228": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 27
+        }
+      ],
+      "balance_sheet|code:229": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 28
+        }
+      ],
+      "balance_sheet|code:240": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 29
+        }
+      ],
+      "balance_sheet|code:242": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 30
+        }
+      ],
+      "balance_sheet|code:250": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 31
+        }
+      ],
+      "balance_sheet|code:252": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 32
+        }
+      ],
+      "balance_sheet|code:255": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 33
+        }
+      ],
+      "balance_sheet|code:260": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 34
+        }
+      ],
+      "balance_sheet|code:261": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 35
+        }
+      ],
+      "balance_sheet|code:262": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 36
+        }
+      ],
+      "balance_sheet|code:269": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 37
+        }
+      ],
+      "balance_sheet|code:270": [
+        {
+          "sample_id": "MWG_Q2_2023_p005",
+          "page_index": 5,
+          "item_index": 38
+        }
+      ],
+      "balance_sheet|code:300": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 0
+        }
+      ],
+      "balance_sheet|code:310": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 1
+        }
+      ],
+      "balance_sheet|code:311": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 2
+        }
+      ],
+      "balance_sheet|code:312": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 3
+        }
+      ],
+      "balance_sheet|code:313": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 4
+        }
+      ],
+      "balance_sheet|code:314": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 5
+        }
+      ],
+      "balance_sheet|code:315": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 6
+        }
+      ],
+      "balance_sheet|code:318": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 7
+        }
+      ],
+      "balance_sheet|code:319": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 8
+        }
+      ],
+      "balance_sheet|code:320": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 9
+        }
+      ],
+      "balance_sheet|code:321": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 10
+        }
+      ],
+      "balance_sheet|code:330": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 11
+        }
+      ],
+      "balance_sheet|code:338": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 12
+        }
+      ],
+      "balance_sheet|code:400": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 13
+        }
+      ],
+      "balance_sheet|code:410": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 14
+        }
+      ],
+      "balance_sheet|code:411": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 15
+        }
+      ],
+      "balance_sheet|code:411a": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 16
+        }
+      ],
+      "balance_sheet|code:412": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 17
+        }
+      ],
+      "balance_sheet|code:415": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 18
+        }
+      ],
+      "balance_sheet|code:417": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 19
+        }
+      ],
+      "balance_sheet|code:421": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 20
+        }
+      ],
+      "balance_sheet|code:421a": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 21
+        }
+      ],
+      "balance_sheet|code:421b": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 22
+        }
+      ],
+      "balance_sheet|code:429": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 23
+        }
+      ],
+      "balance_sheet|code:440": [
+        {
+          "sample_id": "MWG_Q2_2023_p006",
+          "page_index": 6,
+          "item_index": 24
+        }
+      ]
+    },
+    "income_statement": {
+      "income_statement|code:1": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 0
+        }
+      ],
+      "income_statement|code:2": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 1
+        }
+      ],
+      "income_statement|code:10": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 2
+        }
+      ],
+      "income_statement|code:11": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 3
+        }
+      ],
+      "income_statement|code:20": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 4
+        }
+      ],
+      "income_statement|code:21": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 5
+        }
+      ],
+      "income_statement|code:22": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 6
+        }
+      ],
+      "income_statement|code:23": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 7
+        }
+      ],
+      "income_statement|code:25": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 8
+        }
+      ],
+      "income_statement|code:26": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 9
+        }
+      ],
+      "income_statement|code:30": [
+        {
+          "sample_id": "MWG_Q2_2023_p007",
+          "page_index": 7,
+          "item_index": 10
+        }
+      ],
+      "income_statement|code:31": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 0
+        }
+      ],
+      "income_statement|code:32": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 1
+        }
+      ],
+      "income_statement|code:40": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 2
+        }
+      ],
+      "income_statement|code:50": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 3
+        }
+      ],
+      "income_statement|code:51": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 4
+        }
+      ],
+      "income_statement|code:52": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 5
+        }
+      ],
+      "income_statement|code:60": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 6
+        }
+      ],
+      "income_statement|code:61": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 7
+        }
+      ],
+      "income_statement|code:62": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 8
+        }
+      ],
+      "income_statement|code:70": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 9
+        }
+      ],
+      "income_statement|code:71": [
+        {
+          "sample_id": "MWG_Q2_2023_p008",
+          "page_index": 8,
+          "item_index": 10
+        }
+      ]
+    },
+    "cash_flow": {
+      "cash_flow|code:01": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 0
+        }
+      ],
+      "cash_flow|code:02": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 1
+        }
+      ],
+      "cash_flow|code:03": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 2
+        }
+      ],
+      "cash_flow|code:04": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 3
+        }
+      ],
+      "cash_flow|code:05": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 4
+        }
+      ],
+      "cash_flow|code:06": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 5
+        }
+      ],
+      "cash_flow|code:08": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 6
+        }
+      ],
+      "cash_flow|code:09": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 7
+        }
+      ],
+      "cash_flow|code:10": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 8
+        }
+      ],
+      "cash_flow|code:11": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 9
+        }
+      ],
+      "cash_flow|code:12": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 10
+        }
+      ],
+      "cash_flow|code:14": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 11
+        }
+      ],
+      "cash_flow|code:15": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 12
+        }
+      ],
+      "cash_flow|code:20": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 13
+        }
+      ],
+      "cash_flow|code:21": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 14
+        }
+      ],
+      "cash_flow|code:22": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 15
+        }
+      ],
+      "cash_flow|code:23": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 16
+        }
+      ],
+      "cash_flow|code:24": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 17
+        }
+      ],
+      "cash_flow|code:27": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 18
+        }
+      ],
+      "cash_flow|code:28": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 19
+        }
+      ],
+      "cash_flow|code:30": [
+        {
+          "sample_id": "MWG_Q2_2023_p009",
+          "page_index": 9,
+          "item_index": 20
+        }
+      ],
+      "cash_flow|code:31": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 0
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 1
+        }
+      ],
+      "cash_flow|code:32": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 2
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 3
+        }
+      ],
+      "cash_flow|code:33": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 4
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 5
+        }
+      ],
+      "cash_flow|code:34": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 6
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 7
+        }
+      ],
+      "cash_flow|code:36": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 8
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 9
+        }
+      ],
+      "cash_flow|code:40": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 10
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 11
+        }
+      ],
+      "cash_flow|code:50": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 12
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 13
+        }
+      ],
+      "cash_flow|code:60": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 14
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 15
+        }
+      ],
+      "cash_flow|code:61": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 16
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 17
+        }
+      ],
+      "cash_flow|code:70": [
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 18
+        },
+        {
+          "sample_id": "MWG_Q2_2023_p010",
+          "page_index": 10,
+          "item_index": 19
+        }
+      ]
+    }
+  },
+  "conflicts": [
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:31",
+      "prior_values": [
+        0.0
+      ],
+      "new_value": 191909700000.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:32",
+      "prior_values": [
+        -7664060000.0
+      ],
+      "new_value": -1696500000.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:33",
+      "prior_values": [
+        27856643463587.0
+      ],
+      "new_value": 34307540225500.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:34",
+      "prior_values": [
+        -22207499036026.0
+      ],
+      "new_value": -36612080348534.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:36",
+      "prior_values": [
+        0.0
+      ],
+      "new_value": -731854815000.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:40",
+      "prior_values": [
+        5641480367561.0
+      ],
+      "new_value": -2846181738034.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:50",
+      "prior_values": [
+        -1619501229334.0
+      ],
+      "new_value": -1244329453278.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:60",
+      "prior_values": [
+        5061020547422.0
+      ],
+      "new_value": 4142015762555.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:61",
+      "prior_values": [
+        20045929.0
+      ],
+      "new_value": 143043760.0
+    },
+    {
+      "report_id": "MWG_Q2_2023",
+      "sample_id": "MWG_Q2_2023_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:70",
+      "prior_values": [
+        3441539364017.0
+      ],
+      "new_value": 2897829353037.0
+    }
+  ],
+  "conflict_count": 10
+}

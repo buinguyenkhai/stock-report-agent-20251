@@ -1,41 +1,41 @@
 statement,item_code,item_name,value,notes_ref,original_name
-balance_sheet,,Các khoản nợ Chính phủ và NHNN,20542,16,Các khoản nợ Chính phủ và NHNN
-balance_sheet,,Các khoản nợ Chính phủ và NHNN,131,16,Các khoản nợ Chính phủ và NHNN
-balance_sheet,,"Tiền gửi và vay Chính phủ, NHNN",20542,,"Tiền gửi và vay Chính phủ, NHNN"
-balance_sheet,,"Tiền gửi và vay Chính phủ, NHNN",131,,"Tiền gửi và vay Chính phủ, NHNN"
-balance_sheet,,"Tiền gửi và vay các tổ chức tài chính, các TCTD khác",138462274,17,"Tiền gửi và vay các tổ chức tài chính, các TCTD khác"
-balance_sheet,,"Tiền gửi và vay các tổ chức tài chính, các TCTD khác",153173002,17,"Tiền gửi và vay các tổ chức tài chính, các TCTD khác"
-balance_sheet,,"Tiền gửi các tổ chức tài chính, các TCTD khác",70584329,17.1,"Tiền gửi các tổ chức tài chính, các TCTD khác"
-balance_sheet,,"Tiền gửi các tổ chức tài chính, các TCTD khác",50619678,17.1,"Tiền gửi các tổ chức tài chính, các TCTD khác"
-balance_sheet,,"Vay các tổ chức tài chính, các TCTD khác",67877945,17.2,"Vay các tổ chức tài chính, các TCTD khác"
-balance_sheet,,"Vay các tổ chức tài chính, các TCTD khác",102553324,17.2,"Vay các tổ chức tài chính, các TCTD khác"
-balance_sheet,,Tiền gửi của khách hàng,494954017,18,Tiền gửi của khách hàng
-balance_sheet,,Tiền gửi của khách hàng,454660779,18,Tiền gửi của khách hàng
-balance_sheet,,Phát hành giấy tờ có giá,126061309,20,Phát hành giấy tờ có giá
-balance_sheet,,Phát hành giấy tờ có giá,84703300,20,Phát hành giấy tờ có giá
-balance_sheet,,Các khoản nợ khác,23187221,21,Các khoản nợ khác
-balance_sheet,,Các khoản nợ khác,25328735,21,Các khoản nợ khác
-balance_sheet,,"Các khoản lãi, phí phải trả",7309545,,"Các khoản lãi, phí phải trả"
-balance_sheet,,"Các khoản lãi, phí phải trả",9418750,,"Các khoản lãi, phí phải trả"
-balance_sheet,,Các khoản phải trả và công nợ khác,15877676,,Các khoản phải trả và công nợ khác
-balance_sheet,,Các khoản phải trả và công nợ khác,15909985,,Các khoản phải trả và công nợ khác
-balance_sheet,,TỔNG NỢ PHẢI TRẢ,782685363,,TỔNG NỢ PHẢI TRẢ
-balance_sheet,,TỔNG NỢ PHẢI TRẢ,717865947,,TỔNG NỢ PHẢI TRẢ
-balance_sheet,,Vốn,71006213,,Vốn
-balance_sheet,,Vốn,36257461,,Vốn
-balance_sheet,,Vốn điều lệ,70450216,,Vốn điều lệ
-balance_sheet,,Vốn điều lệ,35225108,,Vốn điều lệ
-balance_sheet,,Thặng dư vốn cổ phần,476356,,Thặng dư vốn cổ phần
-balance_sheet,,Vốn khác,555997,,Vốn khác
-balance_sheet,,Vốn khác,555997,,Vốn khác
-balance_sheet,,Các quỹ,20845050,,Các quỹ
-balance_sheet,,Các quỹ,45028627,,Các quỹ
-balance_sheet,,Chênh lệch tỷ giá hối đoái,10494,,Chênh lệch tỷ giá hối đoái
-balance_sheet,,Lợi nhuận chưa phân phối,51068780,,Lợi nhuận chưa phân phối
-balance_sheet,,Lợi nhuận chưa phân phối,49013144,,Lợi nhuận chưa phân phối
-balance_sheet,,Lợi ích cổ đông không kiểm soát,1437445,,Lợi ích cổ đông không kiểm soát
-balance_sheet,,Lợi ích cổ đông không kiểm soát,1316833,,Lợi ích cổ đông không kiểm soát
-balance_sheet,,TỔNG VỐN CHỦ SỞ HỮU,144367982,23,TỔNG VỐN CHỦ SỞ HỮU
-balance_sheet,,TỔNG VỐN CHỦ SỞ HỮU,131616065,23,TỔNG VỐN CHỦ SỞ HỮU
-balance_sheet,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU,927053345,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU
-balance_sheet,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU,849482012,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU
+balance_sheet,,Các khoản nợ Chính phủ và NHNN,20542000000,16,Các khoản nợ Chính phủ và NHNN
+balance_sheet,,Các khoản nợ Chính phủ và NHNN,131000000,16,Các khoản nợ Chính phủ và NHNN
+balance_sheet,,"Tiền gửi và vay Chính phủ, NHNN",20542000000,,"Tiền gửi và vay Chính phủ, NHNN"
+balance_sheet,,"Tiền gửi và vay Chính phủ, NHNN",131000000,,"Tiền gửi và vay Chính phủ, NHNN"
+balance_sheet,,"Tiền gửi và vay các tổ chức tài chính, các TCTD khác",138462274000000,17,"Tiền gửi và vay các tổ chức tài chính, các TCTD khác"
+balance_sheet,,"Tiền gửi và vay các tổ chức tài chính, các TCTD khác",153173002000000,17,"Tiền gửi và vay các tổ chức tài chính, các TCTD khác"
+balance_sheet,,"Tiền gửi các tổ chức tài chính, các TCTD khác",70584329000000,17.1,"Tiền gửi các tổ chức tài chính, các TCTD khác"
+balance_sheet,,"Tiền gửi các tổ chức tài chính, các TCTD khác",50619678000000,17.1,"Tiền gửi các tổ chức tài chính, các TCTD khác"
+balance_sheet,,"Vay các tổ chức tài chính, các TCTD khác",67877945000000,17.2,"Vay các tổ chức tài chính, các TCTD khác"
+balance_sheet,,"Vay các tổ chức tài chính, các TCTD khác",102553324000000,17.2,"Vay các tổ chức tài chính, các TCTD khác"
+balance_sheet,,Tiền gửi của khách hàng,494954017000000,18,Tiền gửi của khách hàng
+balance_sheet,,Tiền gửi của khách hàng,454660779000000,18,Tiền gửi của khách hàng
+balance_sheet,,Phát hành giấy tờ có giá,126061309000000,20,Phát hành giấy tờ có giá
+balance_sheet,,Phát hành giấy tờ có giá,84703300000000,20,Phát hành giấy tờ có giá
+balance_sheet,,Các khoản nợ khác,23187221000000,21,Các khoản nợ khác
+balance_sheet,,Các khoản nợ khác,25328735000000,21,Các khoản nợ khác
+balance_sheet,,"Các khoản lãi, phí phải trả",7309545000000,,"Các khoản lãi, phí phải trả"
+balance_sheet,,"Các khoản lãi, phí phải trả",9418750000000,,"Các khoản lãi, phí phải trả"
+balance_sheet,,Các khoản phải trả và công nợ khác,15877676000000,,Các khoản phải trả và công nợ khác
+balance_sheet,,Các khoản phải trả và công nợ khác,15909985000000,,Các khoản phải trả và công nợ khác
+balance_sheet,,TỔNG NỢ PHẢI TRẢ,782685363000000,,TỔNG NỢ PHẢI TRẢ
+balance_sheet,,TỔNG NỢ PHẢI TRẢ,717865947000000,,TỔNG NỢ PHẢI TRẢ
+balance_sheet,,Vốn,71006213000000,,Vốn
+balance_sheet,,Vốn,36257461000000,,Vốn
+balance_sheet,,Vốn điều lệ,70450216000000,,Vốn điều lệ
+balance_sheet,,Vốn điều lệ,35225108000000,,Vốn điều lệ
+balance_sheet,,Thặng dư vốn cổ phần,476356000000,,Thặng dư vốn cổ phần
+balance_sheet,,Vốn khác,555997000000,,Vốn khác
+balance_sheet,,Vốn khác,555997000000,,Vốn khác
+balance_sheet,,Các quỹ,20845050000000,,Các quỹ
+balance_sheet,,Các quỹ,45028627000000,,Các quỹ
+balance_sheet,,Chênh lệch tỷ giá hối đoái,10494000000,,Chênh lệch tỷ giá hối đoái
+balance_sheet,,Lợi nhuận chưa phân phối,51068780000000,,Lợi nhuận chưa phân phối
+balance_sheet,,Lợi nhuận chưa phân phối,49013144000000,,Lợi nhuận chưa phân phối
+balance_sheet,,Lợi ích cổ đông không kiểm soát,1437445000000,,Lợi ích cổ đông không kiểm soát
+balance_sheet,,Lợi ích cổ đông không kiểm soát,1316833000000,,Lợi ích cổ đông không kiểm soát
+balance_sheet,,TỔNG VỐN CHỦ SỞ HỮU,144367982000000,23,TỔNG VỐN CHỦ SỞ HỮU
+balance_sheet,,TỔNG VỐN CHỦ SỞ HỮU,131616065000000,23,TỔNG VỐN CHỦ SỞ HỮU
+balance_sheet,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU,927053345000000,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU
+balance_sheet,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU,849482012000000,,TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU

@@ -1,11 +1,11 @@
 statement,item_code,item_name,value,notes_ref,original_name
-cash_flow,31,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",13893343,,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
-cash_flow,32,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",-4250,,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành"
-cash_flow,33,Tiền thu từ đi vay,75447041,,Tiền thu từ đi vay
-cash_flow,34,Tiền chi trả nợ gốc vay,-68070233,,Tiền chi trả nợ gốc vay
-cash_flow,36,"Cổ tức, lợi nhuận đã trả",-1718207,,"Cổ tức, lợi nhuận đã trả"
-cash_flow,40,Lưu chuyển tiền thuần từ hoạt động tài chính,19547694,,Lưu chuyển tiền thuần từ hoạt động tài chính
-cash_flow,50,Lưu chuyển tiền thuần trong kỳ,-9750418,,Lưu chuyển tiền thuần trong kỳ
-cash_flow,60,Tiền và tương đương tiền đầu kỳ,29403688,,Tiền và tương đương tiền đầu kỳ
+cash_flow,31,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",13893343000000,,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
+cash_flow,32,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",-4250000000,,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành"
+cash_flow,33,Tiền thu từ đi vay,75447041000000,,Tiền thu từ đi vay
+cash_flow,34,Tiền chi trả nợ gốc vay,-68070233000000,,Tiền chi trả nợ gốc vay
+cash_flow,36,"Cổ tức, lợi nhuận đã trả",-1718207000000,,"Cổ tức, lợi nhuận đã trả"
+cash_flow,40,Lưu chuyển tiền thuần từ hoạt động tài chính,19547694000000,,Lưu chuyển tiền thuần từ hoạt động tài chính
+cash_flow,50,Lưu chuyển tiền thuần trong kỳ,-9750418000000,,Lưu chuyển tiền thuần trong kỳ
+cash_flow,60,Tiền và tương đương tiền đầu kỳ,29403688000000,,Tiền và tương đương tiền đầu kỳ
 cash_flow,61,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,0,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
-cash_flow,70,Tiền và tương đương tiền cuối kỳ,19653270,4,Tiền và tương đương tiền cuối kỳ
+cash_flow,70,Tiền và tương đương tiền cuối kỳ,19653270000000,4,Tiền và tương đương tiền cuối kỳ

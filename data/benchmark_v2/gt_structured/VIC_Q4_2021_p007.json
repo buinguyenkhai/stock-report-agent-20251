@@ -4,168 +4,168 @@
       {
         "item_code": "200",
         "item_name": "B. TÀI SẢN DÀI HẠN",
-        "value": 263973098.0,
+        "value": 263973098000000.0,
         "notes_ref": null,
         "original_name": "B. TÀI SẢN DÀI HẠN"
       },
       {
         "item_code": "210",
         "item_name": "I. Các khoản phải thu dài hạn",
-        "value": 598956.0,
+        "value": 598956000000.0,
         "notes_ref": null,
         "original_name": "I. Các khoản phải thu dài hạn"
       },
       {
         "item_code": "215",
         "item_name": "1. Phải thu về cho vay dài hạn",
-        "value": 455249.0,
+        "value": 455249000000.0,
         "notes_ref": "7",
         "original_name": "1. Phải thu về cho vay dài hạn"
       },
       {
         "item_code": "216",
         "item_name": "2. Phải thu dài hạn khác",
-        "value": 143707.0,
+        "value": 143707000000.0,
         "notes_ref": "8",
         "original_name": "2. Phải thu dài hạn khác"
       },
       {
         "item_code": "220",
         "item_name": "II. Tài sản cố định",
-        "value": 130455105.0,
+        "value": 130455105000000.0,
         "notes_ref": null,
         "original_name": "II. Tài sản cố định"
       },
       {
         "item_code": "221",
         "item_name": "1. Tài sản cố định hữu hình",
-        "value": 106782309.0,
+        "value": 106782309000000.0,
         "notes_ref": "12",
         "original_name": "1. Tài sản cố định hữu hình"
       },
       {
         "item_code": "222",
         "item_name": "Nguyên giá",
-        "value": 134050869.0,
+        "value": 134050869000000.0,
         "notes_ref": null,
         "original_name": "Nguyên giá"
       },
       {
         "item_code": "223",
         "item_name": "Giá trị hao mòn luỹ kế",
-        "value": -27268560.0,
+        "value": -27268560000000.0,
         "notes_ref": null,
         "original_name": "Giá trị hao mòn luỹ kế"
       },
       {
         "item_code": "227",
         "item_name": "2. Tài sản cố định vô hình",
-        "value": 23672796.0,
+        "value": 23672796000000.0,
         "notes_ref": "13",
         "original_name": "2. Tài sản cố định vô hình"
       },
       {
         "item_code": "228",
         "item_name": "Nguyên giá",
-        "value": 30283727.0,
+        "value": 30283727000000.0,
         "notes_ref": null,
         "original_name": "Nguyên giá"
       },
       {
         "item_code": "229",
         "item_name": "Giá trị hao mòn luỹ kế",
-        "value": -6610931.0,
+        "value": -6610931000000.0,
         "notes_ref": null,
         "original_name": "Giá trị hao mòn luỹ kế"
       },
       {
         "item_code": "230",
         "item_name": "III. Bất động sản đầu tư",
-        "value": 35128444.0,
+        "value": 35128444000000.0,
         "notes_ref": "14",
         "original_name": "III. Bất động sản đầu tư"
       },
       {
         "item_code": "231",
         "item_name": "1. Nguyên giá",
-        "value": 43419869.0,
+        "value": 43419869000000.0,
         "notes_ref": null,
         "original_name": "1. Nguyên giá"
       },
       {
         "item_code": "232",
         "item_name": "2. Giá trị hao mòn luỹ kế",
-        "value": -8291425.0,
+        "value": -8291425000000.0,
         "notes_ref": null,
         "original_name": "2. Giá trị hao mòn luỹ kế"
       },
       {
         "item_code": "240",
         "item_name": "IV. Tài sản dở dang dài hạn",
-        "value": 80303903.0,
+        "value": 80303903000000.0,
         "notes_ref": null,
         "original_name": "IV. Tài sản dở dang dài hạn"
       },
       {
         "item_code": "242",
         "item_name": "1. Chi phí xây dựng cơ bản dở dang",
-        "value": 80303903.0,
+        "value": 80303903000000.0,
         "notes_ref": "15",
         "original_name": "1. Chi phí xây dựng cơ bản dở dang"
       },
       {
         "item_code": "250",
         "item_name": "V. Đầu tư tài chính dài hạn",
-        "value": 9151771.0,
+        "value": 9151771000000.0,
         "notes_ref": null,
         "original_name": "V. Đầu tư tài chính dài hạn"
       },
       {
         "item_code": "252",
         "item_name": "1. Đầu tư vào công ty liên doanh, liên kết",
-        "value": 215561.0,
+        "value": 215561000000.0,
         "notes_ref": "16.1",
         "original_name": "1. Đầu tư vào công ty liên doanh, liên kết"
       },
       {
         "item_code": "253",
         "item_name": "2. Đầu tư góp vốn vào đơn vị khác",
-        "value": 8831485.0,
+        "value": 8831485000000.0,
         "notes_ref": "16.2",
         "original_name": "2. Đầu tư góp vốn vào đơn vị khác"
       },
       {
         "item_code": "254",
         "item_name": "3. Dự phòng đầu tư tài chính dài hạn",
-        "value": -45470.0,
+        "value": -45470000000.0,
         "notes_ref": null,
         "original_name": "3. Dự phòng đầu tư tài chính dài hạn"
       },
       {
         "item_code": "255",
         "item_name": "4. Đầu tư nắm giữ đến ngày đáo hạn",
-        "value": 150195.0,
+        "value": 150195000000.0,
         "notes_ref": "16.3",
         "original_name": "4. Đầu tư nắm giữ đến ngày đáo hạn"
       },
       {
         "item_code": "260",
         "item_name": "VI. Tài sản dài hạn khác",
-        "value": 8334919.0,
+        "value": 8334919000000.0,
         "notes_ref": null,
         "original_name": "VI. Tài sản dài hạn khác"
       },
       {
         "item_code": "261",
         "item_name": "1. Chi phí trả trước dài hạn",
-        "value": 5806361.0,
+        "value": 5806361000000.0,
         "notes_ref": "10",
         "original_name": "1. Chi phí trả trước dài hạn"
       },
       {
         "item_code": "262",
         "item_name": "2. Tài sản thuế thu nhập hoãn lại",
-        "value": 669094.0,
+        "value": 669094000000.0,
         "notes_ref": null,
         "original_name": "2. Tài sản thuế thu nhập hoãn lại"
       },
@@ -179,14 +179,14 @@
       {
         "item_code": "269",
         "item_name": "4. Lợi thế thương mại",
-        "value": 1859464.0,
+        "value": 1859464000000.0,
         "notes_ref": "17",
         "original_name": "4. Lợi thế thương mại"
       },
       {
         "item_code": "270",
         "item_name": "TỔNG CỘNG TÀI SẢN",
-        "value": 427323934.0,
+        "value": 427323934000000.0,
         "notes_ref": null,
         "original_name": "TỔNG CỘNG TÀI SẢN"
       }

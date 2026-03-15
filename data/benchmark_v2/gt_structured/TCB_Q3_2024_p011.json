@@ -10,49 +10,49 @@
       {
         "item_code": null,
         "item_name": "Tiền thu được từ góp vốn của cổ đông không kiểm soát",
-        "value": 2253.0,
+        "value": 2253000000.0,
         "notes_ref": null,
         "original_name": "Tiền thu được từ góp vốn của cổ đông không kiểm soát"
       },
       {
         "item_code": null,
         "item_name": "Cổ tức trả cho cổ đông",
-        "value": -5210255.0,
+        "value": -5210255000000.0,
         "notes_ref": null,
         "original_name": "Cổ tức trả cho cổ đông"
       },
       {
         "item_code": null,
         "item_name": "Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính",
-        "value": -5208002.0,
+        "value": -5208002000000.0,
         "notes_ref": null,
         "original_name": "Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính"
       },
       {
         "item_code": null,
         "item_name": "Lưu chuyển tiền thuần trong kỳ",
-        "value": 12599097.0,
+        "value": 12599097000000.0,
         "notes_ref": null,
         "original_name": "Lưu chuyển tiền thuần trong kỳ"
       },
       {
         "item_code": null,
         "item_name": "Tiền và các khoản tương đương tiền đầu kỳ",
-        "value": 110500219.0,
+        "value": 110500219000000.0,
         "notes_ref": "34",
         "original_name": "Tiền và các khoản tương đương tiền đầu kỳ"
       },
       {
         "item_code": null,
         "item_name": "Chênh lệch tỷ giá hối đoái",
-        "value": 10494.0,
+        "value": 10494000000.0,
         "notes_ref": "23.1",
         "original_name": "Chênh lệch tỷ giá hối đoái"
       },
       {
         "item_code": null,
         "item_name": "Tiền và các khoản tương đương tiền cuối kỳ",
-        "value": 123109810.0,
+        "value": 123109810000000.0,
         "notes_ref": "34",
         "original_name": "Tiền và các khoản tương đương tiền cuối kỳ"
       }

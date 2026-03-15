@@ -4,133 +4,133 @@
       {
         "item_code": "300",
         "item_name": "C. NỢ PHẢI TRẢ",
-        "value": 268177346.0,
+        "value": 268177346000000.0,
         "notes_ref": null,
         "original_name": "C. NỢ PHẢI TRẢ"
       },
       {
         "item_code": "310",
         "item_name": "I. Nợ ngắn hạn",
-        "value": 144444929.0,
+        "value": 144444929000000.0,
         "notes_ref": null,
         "original_name": "I. Nợ ngắn hạn"
       },
       {
         "item_code": "311",
         "item_name": "1. Phải trả người bán ngắn hạn",
-        "value": 18889980.0,
+        "value": 18889980000000.0,
         "notes_ref": null,
         "original_name": "1. Phải trả người bán ngắn hạn"
       },
       {
         "item_code": "312",
         "item_name": "2. Người mua trả tiền trước ngắn hạn",
-        "value": 22352075.0,
+        "value": 22352075000000.0,
         "notes_ref": "18",
         "original_name": "2. Người mua trả tiền trước ngắn hạn"
       },
       {
         "item_code": "313",
         "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
-        "value": 5614128.0,
+        "value": 5614128000000.0,
         "notes_ref": "19",
         "original_name": "3. Thuế và các khoản phải nộp Nhà nước"
       },
       {
         "item_code": "314",
         "item_name": "4. Phải trả người lao động",
-        "value": 489754.0,
+        "value": 489754000000.0,
         "notes_ref": null,
         "original_name": "4. Phải trả người lao động"
       },
       {
         "item_code": "315",
         "item_name": "5. Chi phí phải trả ngắn hạn",
-        "value": 27744066.0,
+        "value": 27744066000000.0,
         "notes_ref": "20",
         "original_name": "5. Chi phí phải trả ngắn hạn"
       },
       {
         "item_code": "318",
         "item_name": "6. Doanh thu chưa thực hiện ngắn hạn",
-        "value": 3283080.0,
+        "value": 3283080000000.0,
         "notes_ref": "21",
         "original_name": "6. Doanh thu chưa thực hiện ngắn hạn"
       },
       {
         "item_code": "319",
         "item_name": "7. Phải trả ngắn hạn khác",
-        "value": 39343650.0,
+        "value": 39343650000000.0,
         "notes_ref": "22",
         "original_name": "7. Phải trả ngắn hạn khác"
       },
       {
         "item_code": "320",
         "item_name": "8. Vay và nợ thuê tài chính ngắn hạn",
-        "value": 20035038.0,
+        "value": 20035038000000.0,
         "notes_ref": "23.1",
         "original_name": "8. Vay và nợ thuê tài chính ngắn hạn"
       },
       {
         "item_code": "321",
         "item_name": "9. Dự phòng phải trả ngắn hạn",
-        "value": 6693158.0,
+        "value": 6693158000000.0,
         "notes_ref": null,
         "original_name": "9. Dự phòng phải trả ngắn hạn"
       },
       {
         "item_code": "330",
         "item_name": "II. Nợ dài hạn",
-        "value": 123732417.0,
+        "value": 123732417000000.0,
         "notes_ref": null,
         "original_name": "II. Nợ dài hạn"
       },
       {
         "item_code": "333",
         "item_name": "1. Chi phí phải trả dài hạn",
-        "value": 1594331.0,
+        "value": 1594331000000.0,
         "notes_ref": null,
         "original_name": "1. Chi phí phải trả dài hạn"
       },
       {
         "item_code": "336",
         "item_name": "2. Doanh thu chưa thực hiện dài hạn",
-        "value": 4293682.0,
+        "value": 4293682000000.0,
         "notes_ref": "21",
         "original_name": "2. Doanh thu chưa thực hiện dài hạn"
       },
       {
         "item_code": "337",
         "item_name": "3. Phải trả dài hạn khác",
-        "value": 2578894.0,
+        "value": 2578894000000.0,
         "notes_ref": "22",
         "original_name": "3. Phải trả dài hạn khác"
       },
       {
         "item_code": "338",
         "item_name": "4. Vay và nợ thuê tài chính dài hạn",
-        "value": 102180175.0,
+        "value": 102180175000000.0,
         "notes_ref": "23.2",
         "original_name": "4. Vay và nợ thuê tài chính dài hạn"
       },
       {
         "item_code": "339",
         "item_name": "5. Trái phiếu hoán đổi",
-        "value": 9550120.0,
+        "value": 9550120000000.0,
         "notes_ref": "24",
         "original_name": "5. Trái phiếu hoán đổi"
       },
       {
         "item_code": "341",
         "item_name": "6. Thuế thu nhập hoãn lại phải trả",
-        "value": 675057.0,
+        "value": 675057000000.0,
         "notes_ref": null,
         "original_name": "6. Thuế thu nhập hoãn lại phải trả"
       },
       {
         "item_code": "342",
         "item_name": "7. Dự phòng phải trả dài hạn",
-        "value": 2860158.0,
+        "value": 2860158000000.0,
         "notes_ref": null,
         "original_name": "7. Dự phòng phải trả dài hạn"
       }

@@ -14,6 +14,7 @@ from evaluation.benchmark_v2.csv_codec import (
     update_meta,
     validate_csv_pack,
 )
+from evaluation.benchmark_v2.normalize_gt_units import normalize_gt_units
 
 
 def _write_manifest(root: Path, sample_id: str) -> None:
@@ -199,3 +200,50 @@ def test_validate_csv_pack_flags_missing_csv_directory(tmp_path: Path) -> None:
     errors = validate_csv_pack(sample_id, dataset_root)
     assert len(errors) == 1
     assert "gt_csv pack not found" in errors[0]
+
+
+def test_normalize_gt_units_updates_rows_csv_and_canonical(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_2024Q3_p001"
+    _write_manifest(dataset_root, sample_id)
+    _seed_canonical_files(dataset_root, sample_id)
+
+    cells_df = pd.DataFrame(
+        [
+            {"row_idx": 0, "col_idx": 0, "text": "Chỉ tiêu"},
+            {"row_idx": 0, "col_idx": 1, "text": "Giá trị"},
+            {"row_idx": 1, "col_idx": 0, "text": "Tiền mặt"},
+            {"row_idx": 1, "col_idx": 1, "text": "12"},
+        ]
+    )
+    rows_df = pd.DataFrame(
+        [
+            {
+                "statement": "balance_sheet",
+                "item_code": "",
+                "item_name": "Tiền mặt",
+                "value": "12",
+                "notes_ref": "",
+                "original_name": "Tiền mặt",
+            }
+        ]
+    )
+    save_csv_pack(sample_id, dataset_root, cells=cells_df, rows=rows_df)
+    (dataset_root / f"gt_markdown/{sample_id}.md").write_text(
+        "BẢNG CÂN ĐỐI KẾ TOÁN\n\nĐơn vị tính: Triệu VND\n\n| Chỉ tiêu | Giá trị |\n| --- | --- |\n| Tiền mặt | 12 |\n",
+        encoding="utf-8",
+    )
+
+    summary = normalize_gt_units(dataset_root=dataset_root, include_scope="all", split="dev")
+    assert summary["changed_count"] == 1
+
+    pack = load_csv_pack(sample_id, dataset_root)
+    assert pack["rows"].iloc[0]["value"] == "12000000"
+
+    regenerated = json.loads((dataset_root / f"gt_structured/{sample_id}.json").read_text(encoding="utf-8"))
+    assert regenerated["balance_sheet"]["items"][0]["value"] == 12000000.0
+
+    meta = load_meta(sample_id, dataset_root)
+    assert meta["value_unit_normalized_to"] == "VND"
+    assert meta["report_unit_multiplier"] == 1_000_000.0

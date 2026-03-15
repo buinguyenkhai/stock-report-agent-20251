@@ -4,147 +4,147 @@
       {
         "item_code": "100",
         "item_name": "A. TÀI SẢN NGẮN HẠN",
-        "value": 163350836.0,
+        "value": 163350836000000.0,
         "notes_ref": null,
         "original_name": "A. TÀI SẢN NGẮN HẠN"
       },
       {
         "item_code": "110",
         "item_name": "I. Tiền và các khoản tương đương tiền",
-        "value": 19653270.0,
+        "value": 19653270000000.0,
         "notes_ref": "4",
         "original_name": "I. Tiền và các khoản tương đương tiền"
       },
       {
         "item_code": "111",
         "item_name": "1. Tiền",
-        "value": 10308050.0,
+        "value": 10308050000000.0,
         "notes_ref": null,
         "original_name": "1. Tiền"
       },
       {
         "item_code": "112",
         "item_name": "2. Các khoản tương đương tiền",
-        "value": 9345220.0,
+        "value": 9345220000000.0,
         "notes_ref": null,
         "original_name": "2. Các khoản tương đương tiền"
       },
       {
         "item_code": "120",
         "item_name": "II. Đầu tư tài chính ngắn hạn",
-        "value": 6758243.0,
+        "value": 6758243000000.0,
         "notes_ref": "5",
         "original_name": "II. Đầu tư tài chính ngắn hạn"
       },
       {
         "item_code": "121",
         "item_name": "1. Chứng khoán kinh doanh",
-        "value": 3605159.0,
+        "value": 3605159000000.0,
         "notes_ref": null,
         "original_name": "1. Chứng khoán kinh doanh"
       },
       {
         "item_code": "123",
         "item_name": "2. Đầu tư nắm giữ đến ngày đáo hạn",
-        "value": 3153084.0,
+        "value": 3153084000000.0,
         "notes_ref": null,
         "original_name": "2. Đầu tư nắm giữ đến ngày đáo hạn"
       },
       {
         "item_code": "130",
         "item_name": "III. Các khoản phải thu ngắn hạn",
-        "value": 74342928.0,
+        "value": 74342928000000.0,
         "notes_ref": null,
         "original_name": "III. Các khoản phải thu ngắn hạn"
       },
       {
         "item_code": "131",
         "item_name": "1. Phải thu ngắn hạn của khách hàng",
-        "value": 20112289.0,
+        "value": 20112289000000.0,
         "notes_ref": "6",
         "original_name": "1. Phải thu ngắn hạn của khách hàng"
       },
       {
         "item_code": "132",
         "item_name": "2. Trả trước cho người bán ngắn hạn",
-        "value": 21767291.0,
+        "value": 21767291000000.0,
         "notes_ref": null,
         "original_name": "2. Trả trước cho người bán ngắn hạn"
       },
       {
         "item_code": "135",
         "item_name": "3. Phải thu về cho vay ngắn hạn",
-        "value": 14824123.0,
+        "value": 14824123000000.0,
         "notes_ref": "7",
         "original_name": "3. Phải thu về cho vay ngắn hạn"
       },
       {
         "item_code": "136",
         "item_name": "4. Phải thu ngắn hạn khác",
-        "value": 18180233.0,
+        "value": 18180233000000.0,
         "notes_ref": "8",
         "original_name": "4. Phải thu ngắn hạn khác"
       },
       {
         "item_code": "137",
         "item_name": "5. Dự phòng phải thu ngắn hạn khó đòi",
-        "value": -541008.0,
+        "value": -541008000000.0,
         "notes_ref": null,
         "original_name": "5. Dự phòng phải thu ngắn hạn khó đòi"
       },
       {
         "item_code": "140",
         "item_name": "IV. Hàng tồn kho",
-        "value": 50910386.0,
+        "value": 50910386000000.0,
         "notes_ref": "9",
         "original_name": "IV. Hàng tồn kho"
       },
       {
         "item_code": "141",
         "item_name": "1. Hàng tồn kho",
-        "value": 53074286.0,
+        "value": 53074286000000.0,
         "notes_ref": null,
         "original_name": "1. Hàng tồn kho"
       },
       {
         "item_code": "149",
         "item_name": "2. Dự phòng giảm giá hàng tồn kho",
-        "value": -2163900.0,
+        "value": -2163900000000.0,
         "notes_ref": null,
         "original_name": "2. Dự phòng giảm giá hàng tồn kho"
       },
       {
         "item_code": "150",
         "item_name": "V. Tài sản ngắn hạn khác",
-        "value": 11686009.0,
+        "value": 11686009000000.0,
         "notes_ref": null,
         "original_name": "V. Tài sản ngắn hạn khác"
       },
       {
         "item_code": "151",
         "item_name": "1. Chi phí trả trước ngắn hạn",
-        "value": 1455458.0,
+        "value": 1455458000000.0,
         "notes_ref": "10",
         "original_name": "1. Chi phí trả trước ngắn hạn"
       },
       {
         "item_code": "152",
         "item_name": "2. Thuế GTGT được khấu trừ",
-        "value": 6773819.0,
+        "value": 6773819000000.0,
         "notes_ref": null,
         "original_name": "2. Thuế GTGT được khấu trừ"
       },
       {
         "item_code": "153",
         "item_name": "3. Thuế và các khoản khác phải thu Nhà nước",
-        "value": 561133.0,
+        "value": 561133000000.0,
         "notes_ref": null,
         "original_name": "3. Thuế và các khoản khác phải thu Nhà nước"
       },
       {
         "item_code": "155",
         "item_name": "4. Tài sản ngắn hạn khác",
-        "value": 2895599.0,
+        "value": 2895599000000.0,
         "notes_ref": "11",
         "original_name": "4. Tài sản ngắn hạn khác"
       }

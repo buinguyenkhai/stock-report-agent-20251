@@ -6,6 +6,7 @@ Marker provides high-quality OCR with table structure recognition.
 """
 
 import os
+import gc
 from pathlib import Path
 from typing import Optional
 from .base import OCRStrategy
@@ -51,6 +52,9 @@ class MarkerOCRService(OCRStrategy):
         self.force_ocr = force_ocr
         self.extract_images = extract_images
         self.device = device
+
+        if str(device).lower() == "cuda" and not os.getenv("PYTORCH_CUDA_ALLOC_CONF"):
+            os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
         
         # OpenRouter API config
         self.openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
@@ -173,6 +177,17 @@ class MarkerOCRService(OCRStrategy):
         raise NotImplementedError(
             "Marker is optimized for PDFs. For single images, use DoclingOCRService."
         )
+
+    def cleanup_after_page(self) -> None:
+        try:
+            import torch
+
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
+                torch.cuda.ipc_collect()
+        except Exception:
+            pass
+        gc.collect()
 
 
 # Convenience function for quick usage

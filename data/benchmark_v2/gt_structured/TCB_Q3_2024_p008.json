@@ -4,140 +4,140 @@
       {
         "item_code": null,
         "item_name": "Bảo lãnh vay vốn",
-        "value": 19595850.0,
+        "value": 19595850000000.0,
         "notes_ref": null,
         "original_name": "Bảo lãnh vay vốn"
       },
       {
         "item_code": null,
         "item_name": "Cam kết giao dịch hối đoái",
-        "value": 320312174.0,
+        "value": 320312174000000.0,
         "notes_ref": null,
         "original_name": "Cam kết giao dịch hối đoái"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết mua ngoại tệ giao ngay",
-        "value": 7196188.0,
+        "value": 7196188000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết mua ngoại tệ giao ngay"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết bán ngoại tệ giao ngay",
-        "value": 4177029.0,
+        "value": 4177029000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết bán ngoại tệ giao ngay"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết mua - giao dịch hoán đổi tiền tệ",
-        "value": 154508347.0,
+        "value": 154508347000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết mua - giao dịch hoán đổi tiền tệ"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết bán - giao dịch hoán đổi tiền tệ",
-        "value": 154430610.0,
+        "value": 154430610000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết bán - giao dịch hoán đổi tiền tệ"
       },
       {
         "item_code": null,
         "item_name": "Cam kết trong nghiệp vụ thư tín dụng (L/C)",
-        "value": 44981487.0,
+        "value": 44981487000000.0,
         "notes_ref": null,
         "original_name": "Cam kết trong nghiệp vụ thư tín dụng (L/C)"
       },
       {
         "item_code": null,
         "item_name": "Bảo lãnh khác",
-        "value": 50917866.0,
+        "value": 50917866000000.0,
         "notes_ref": null,
         "original_name": "Bảo lãnh khác"
       },
       {
         "item_code": null,
         "item_name": "Các cam kết khác",
-        "value": 207005596.0,
+        "value": 207005596000000.0,
         "notes_ref": null,
         "original_name": "Các cam kết khác"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
-        "value": 89705403.0,
+        "value": 89705403000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết hoán đổi tiền tệ chéo bằng VND",
-        "value": 87983369.0,
+        "value": 87983369000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết hoán đổi tiền tệ chéo bằng VND"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết hoán đổi lãi suất bằng ngoại tệ",
-        "value": 18995746.0,
+        "value": 18995746000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết hoán đổi lãi suất bằng ngoại tệ"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết hoán đổi lãi suất bằng VND",
-        "value": 6279946.0,
+        "value": 6279946000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết hoán đổi lãi suất bằng VND"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết kỳ hạn giấy tờ có giá",
-        "value": 2614663.0,
+        "value": 2614663000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết kỳ hạn giấy tờ có giá"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết khác",
-        "value": 1426469.0,
+        "value": 1426469000000.0,
         "notes_ref": null,
         "original_name": "- Cam kết khác"
       },
       {
         "item_code": null,
         "item_name": "Hạn mức tín dụng chưa sử dụng",
-        "value": 286932074.0,
+        "value": 286932074000000.0,
         "notes_ref": null,
         "original_name": "Hạn mức tín dụng chưa sử dụng"
       },
       {
         "item_code": null,
         "item_name": "Lãi cho vay và phí phải thu chưa thu được",
-        "value": 2757388.0,
+        "value": 2757388000000.0,
         "notes_ref": "36",
         "original_name": "Lãi cho vay và phí phải thu chưa thu được"
       },
       {
         "item_code": null,
         "item_name": "Nợ khó đòi đã xử lý",
-        "value": 56711812.0,
+        "value": 56711812000000.0,
         "notes_ref": "37",
         "original_name": "Nợ khó đòi đã xử lý"
       },
       {
         "item_code": null,
         "item_name": "Tài sản và chứng từ khác",
-        "value": 155042764.0,
+        "value": 155042764000000.0,
         "notes_ref": "38",
         "original_name": "Tài sản và chứng từ khác"
       },
       {
         "item_code": null,
         "item_name": "Tổng cộng",
-        "value": 1144257011.0,
+        "value": 1144257011000000.0,
         "notes_ref": null,
         "original_name": null
       }

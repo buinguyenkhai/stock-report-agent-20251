@@ -7,119 +7,119 @@
       {
         "item_code": "1",
         "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
-        "value": 19338145.0,
+        "value": 19338145000000.0,
         "notes_ref": "16",
         "original_name": "Thu nhập lãi và các khoản thu nhập tương tự"
       },
       {
         "item_code": "2",
         "item_name": "Chi phí lãi và các chi phí tương tự",
-        "value": -7362293.0,
+        "value": -7362293000000.0,
         "notes_ref": "17",
         "original_name": "Chi phí lãi và các chi phí tương tự"
       },
       {
         "item_code": "I",
         "item_name": "Thu nhập lãi thuần",
-        "value": 11975852.0,
+        "value": 11975852000000.0,
         "notes_ref": null,
         "original_name": "Thu nhập lãi thuần"
       },
       {
         "item_code": "3",
         "item_name": "Thu nhập từ hoạt động dịch vụ",
-        "value": 3713402.0,
+        "value": 3713402000000.0,
         "notes_ref": null,
         "original_name": "Thu nhập từ hoạt động dịch vụ"
       },
       {
         "item_code": "4",
         "item_name": "Chi phí hoạt động dịch vụ",
-        "value": -1002574.0,
+        "value": -1002574000000.0,
         "notes_ref": null,
         "original_name": "Chi phí hoạt động dịch vụ"
       },
       {
         "item_code": "II",
         "item_name": "Lãi thuần từ hoạt động dịch vụ",
-        "value": 2710828.0,
+        "value": 2710828000000.0,
         "notes_ref": null,
         "original_name": "Lãi thuần từ hoạt động dịch vụ"
       },
       {
         "item_code": "III",
         "item_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
-        "value": 1521867.0,
+        "value": 1521867000000.0,
         "notes_ref": null,
         "original_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối"
       },
       {
         "item_code": "IV",
         "item_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
-        "value": 16525.0,
+        "value": 16525000000.0,
         "notes_ref": "18",
         "original_name": "Lãi thuần từ mua bán chứng khoán kinh doanh"
       },
       {
         "item_code": "V",
         "item_name": "(Lỗ) thuần từ mua bán chứng khoán đầu tư",
-        "value": -164.0,
+        "value": -164000000.0,
         "notes_ref": null,
         "original_name": "(Lỗ) thuần từ mua bán chứng khoán đầu tư"
       },
       {
         "item_code": "5",
         "item_name": "Thu nhập từ hoạt động khác",
-        "value": 576253.0,
+        "value": 576253000000.0,
         "notes_ref": null,
         "original_name": "Thu nhập từ hoạt động khác"
       },
       {
         "item_code": "6",
         "item_name": "Chi phí hoạt động khác",
-        "value": -92295.0,
+        "value": -92295000000.0,
         "notes_ref": null,
         "original_name": "Chi phí hoạt động khác"
       },
       {
         "item_code": "VI",
         "item_name": "Lãi thuần từ hoạt động khác",
-        "value": 483958.0,
+        "value": 483958000000.0,
         "notes_ref": null,
         "original_name": "Lãi thuần từ hoạt động khác"
       },
       {
         "item_code": "VII",
         "item_name": "Thu nhập từ góp vốn, mua cổ phần",
-        "value": 24495.0,
+        "value": 24495000000.0,
         "notes_ref": "19",
         "original_name": "Thu nhập từ góp vốn, mua cổ phần"
       },
       {
         "item_code": "VIII",
         "item_name": "Chi phí hoạt động",
-        "value": -4509166.0,
+        "value": -4509166000000.0,
         "notes_ref": "20",
         "original_name": "Chi phí hoạt động"
       },
       {
         "item_code": "IX",
         "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
-        "value": 12224195.0,
+        "value": 12224195000000.0,
         "notes_ref": null,
         "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng"
       },
       {
         "item_code": "X",
         "item_name": "Chi phí dự phòng rủi ro tín dụng",
-        "value": -2273939.0,
+        "value": -2273939000000.0,
         "notes_ref": null,
         "original_name": "Chi phí dự phòng rủi ro tín dụng"
       },
       {
         "item_code": "XI",
         "item_name": "Tổng lợi nhuận trước thuế",
-        "value": 9950256.0,
+        "value": 9950256000000.0,
         "notes_ref": null,
         "original_name": "Tổng lợi nhuận trước thuế"
       }

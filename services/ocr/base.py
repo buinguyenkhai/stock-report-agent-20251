@@ -13,3 +13,7 @@ class OCRStrategy(ABC):
             str: The extracted Markdown content.
         """
         pass
+
+    def cleanup_after_page(self) -> None:
+        """Release transient state between page-level OCR calls."""
+        return None

@@ -1,8 +1,8 @@
 statement,item_code,item_name,value,notes_ref,original_name
-cash_flow,,Tiền thu được từ góp vốn của cổ đông không kiểm soát,2253,,Tiền thu được từ góp vốn của cổ đông không kiểm soát
-cash_flow,,Cổ tức trả cho cổ đông,-5210255,,Cổ tức trả cho cổ đông
-cash_flow,,Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính,-5208002,,Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính
-cash_flow,,Lưu chuyển tiền thuần trong kỳ,12599097,,Lưu chuyển tiền thuần trong kỳ
-cash_flow,,Tiền và các khoản tương đương tiền đầu kỳ,110500219,34,Tiền và các khoản tương đương tiền đầu kỳ
-cash_flow,,Chênh lệch tỷ giá hối đoái,10494,23.1,Chênh lệch tỷ giá hối đoái
-cash_flow,,Tiền và các khoản tương đương tiền cuối kỳ,123109810,34,Tiền và các khoản tương đương tiền cuối kỳ
+cash_flow,,Tiền thu được từ góp vốn của cổ đông không kiểm soát,2253000000,,Tiền thu được từ góp vốn của cổ đông không kiểm soát
+cash_flow,,Cổ tức trả cho cổ đông,-5210255000000,,Cổ tức trả cho cổ đông
+cash_flow,,Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính,-5208002000000,,Lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính
+cash_flow,,Lưu chuyển tiền thuần trong kỳ,12599097000000,,Lưu chuyển tiền thuần trong kỳ
+cash_flow,,Tiền và các khoản tương đương tiền đầu kỳ,110500219000000,34,Tiền và các khoản tương đương tiền đầu kỳ
+cash_flow,,Chênh lệch tỷ giá hối đoái,10494000000,23.1,Chênh lệch tỷ giá hối đoái
+cash_flow,,Tiền và các khoản tương đương tiền cuối kỳ,123109810000000,34,Tiền và các khoản tương đương tiền cuối kỳ

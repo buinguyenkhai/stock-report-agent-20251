@@ -16,7 +16,8 @@ from __future__ import annotations
 import argparse
 import json
 import random
-from dataclasses import asdict, dataclass
+import unicodedata
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Literal, Optional, Tuple
 
@@ -58,6 +59,7 @@ class ReportStructuredEvalResult:
     gt_merge_conflict_count: int
     pred_merge_conflict_count: int
     errors: List[str]
+    gt_unit_audit: Dict[str, Any] = field(default_factory=dict)
 
 
 def _read_text(path: Path) -> str:
@@ -112,6 +114,13 @@ def _normalize_text(s: str) -> str:
     return " ".join((s or "").strip().lower().split())
 
 
+def _normalize_text_ascii(s: str) -> str:
+    text = unicodedata.normalize("NFKD", s or "")
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = text.replace("đ", "d").replace("Đ", "D")
+    return _normalize_text(text)
+
+
 def _coerce_numeric(v: Any) -> float | None:
     if v is None:
         return None
@@ -125,6 +134,81 @@ def _coerce_numeric(v: Any) -> float | None:
         return float(s)
     except Exception:
         return None
+
+
+def _detect_unit_scale_from_markdown(markdown: str) -> Tuple[str | None, float]:
+    norm = _normalize_text_ascii(markdown)
+    if not norm:
+        return None, 1.0
+
+    patterns = [
+        (("ty vnd", "ty dong", "ty vietnam dong", "ty d"), 1_000_000_000.0),
+        (("trieu vnd", "trieu dong", "trieu vietnam dong", "trieu d"), 1_000_000.0),
+        (("nghin vnd", "nghin dong", "nghin vietnam dong", "nghin d"), 1_000.0),
+        (("ngan vnd", "ngan dong", "ngan vietnam dong", "ngan d"), 1_000.0),
+        (("vnd", "dong", "viet nam dong", "vietnam dong"), 1.0),
+    ]
+    for aliases, scale in patterns:
+        for alias in aliases:
+            if alias in norm:
+                return alias, scale
+    return None, 1.0
+
+
+def _build_gt_unit_audit(
+    dataset_root: Path,
+    samples: List[TableSample],
+) -> Dict[str, Any]:
+    page_detections: List[Dict[str, Any]] = []
+    seen_scales: Dict[float, int] = {}
+    seen_labels: Dict[str, int] = {}
+    normalized_count = 0
+
+    for sample in samples:
+        gt_md_path = dataset_root / sample.gt_markdown_path
+        meta_path = dataset_root / "gt_csv" / sample.sample_id / "meta.json"
+        try:
+            gt_md = _read_text(gt_md_path)
+        except Exception:
+            continue
+        label, scale = _detect_unit_scale_from_markdown(gt_md)
+        normalized_to_vnd = False
+        if meta_path.exists():
+            try:
+                meta = _read_json(meta_path)
+                normalized_to_vnd = str(meta.get("value_unit_normalized_to") or "").strip().upper() == "VND"
+            except Exception:
+                normalized_to_vnd = False
+        if normalized_to_vnd:
+            normalized_count += 1
+            scale = 1.0
+        page_detections.append(
+            {
+                "sample_id": sample.sample_id,
+                "page_index": sample.page_index,
+                "label": label,
+                "multiplier": scale,
+                "normalized_to_vnd": normalized_to_vnd,
+            }
+        )
+        seen_scales[scale] = seen_scales.get(scale, 0) + 1
+        if label:
+            seen_labels[label] = seen_labels.get(label, 0) + 1
+
+    multiplier = 1.0
+    label = None
+    if seen_scales:
+        multiplier = max(seen_scales.items(), key=lambda item: (item[1], item[0]))[0]
+    if seen_labels:
+        label = max(seen_labels.items(), key=lambda item: (item[1], item[0]))[0]
+
+    return {
+        "detected_multiplier": float(multiplier),
+        "detected_label": label,
+        "normalized_gt_to_vnd": normalized_count > 0,
+        "mixed_page_units": len(seen_scales) > 1,
+        "page_detections": sorted(page_detections, key=lambda row: (row["page_index"], row["sample_id"])),
+    }
 
 
 def _row_key(statement: str, item: Dict[str, Any], *, fallback: str) -> str:
@@ -390,13 +474,17 @@ def run_benchmark(
         struct_metrics = None
         gt_conflicts: List[Dict[str, Any]] = []
         pred_conflicts: List[Dict[str, Any]] = []
+        gt_unit_audit = _build_gt_unit_audit(ds.dataset_root, sorted_samples)
         structured_available = len(pred_pages) == len(sorted_samples) and len(pred_pages) > 0
         if not report_errors and structured_available:
             gt_assembled, gt_meta = assemble_report_structured_from_pages(gt_pages)
             pred_assembled, pred_meta = assemble_report_structured_from_pages(pred_pages)
             gt_conflicts = list(gt_meta.get("conflicts", [])) if isinstance(gt_meta, dict) else []
             pred_conflicts = list(pred_meta.get("conflicts", [])) if isinstance(pred_meta, dict) else []
-            struct_metrics = calculate_structured_metrics(pred_assembled, gt_assembled).to_dict()
+            struct_metrics = calculate_structured_metrics(
+                pred_assembled,
+                gt_assembled,
+            ).to_dict()
 
         report_results.append(
             ReportStructuredEvalResult(
@@ -409,6 +497,7 @@ def run_benchmark(
                 structured_metrics=struct_metrics,
                 gt_merge_conflict_count=len(gt_conflicts),
                 pred_merge_conflict_count=len(pred_conflicts),
+                gt_unit_audit=gt_unit_audit,
                 errors=report_errors,
             )
         )
