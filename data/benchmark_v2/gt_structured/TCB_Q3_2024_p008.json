@@ -6,140 +6,400 @@
         "item_name": "Bảo lãnh vay vốn",
         "value": 19595850000000.0,
         "notes_ref": null,
-        "original_name": "Bảo lãnh vay vốn"
+        "original_name": "Bảo lãnh vay vốn",
+        "row_identity": "balance_sheet|name:Bảo lãnh vay vốn",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Bảo lãnh vay vốn",
+        "value": 14935065000000.0,
+        "notes_ref": null,
+        "original_name": "Bảo lãnh vay vốn",
+        "row_identity": "balance_sheet|name:Bảo lãnh vay vốn",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Cam kết giao dịch hối đoái",
         "value": 320312174000000.0,
         "notes_ref": null,
-        "original_name": "Cam kết giao dịch hối đoái"
+        "original_name": "Cam kết giao dịch hối đoái",
+        "row_identity": "balance_sheet|name:Cam kết giao dịch hối đoái",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Cam kết giao dịch hối đoái",
+        "value": 350601542000000.0,
+        "notes_ref": null,
+        "original_name": "Cam kết giao dịch hối đoái",
+        "row_identity": "balance_sheet|name:Cam kết giao dịch hối đoái",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết mua ngoại tệ giao ngay",
         "value": 7196188000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết mua ngoại tệ giao ngay"
+        "original_name": "- Cam kết mua ngoại tệ giao ngay",
+        "row_identity": "balance_sheet|name:- Cam kết mua ngoại tệ giao ngay",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết mua ngoại tệ giao ngay",
+        "value": 4593012000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết mua ngoại tệ giao ngay",
+        "row_identity": "balance_sheet|name:- Cam kết mua ngoại tệ giao ngay",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết bán ngoại tệ giao ngay",
         "value": 4177029000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết bán ngoại tệ giao ngay"
+        "original_name": "- Cam kết bán ngoại tệ giao ngay",
+        "row_identity": "balance_sheet|name:- Cam kết bán ngoại tệ giao ngay",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết bán ngoại tệ giao ngay",
+        "value": 4415918000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết bán ngoại tệ giao ngay",
+        "row_identity": "balance_sheet|name:- Cam kết bán ngoại tệ giao ngay",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết mua - giao dịch hoán đổi tiền tệ",
         "value": 154508347000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết mua - giao dịch hoán đổi tiền tệ"
+        "original_name": "- Cam kết mua - giao dịch hoán đổi tiền tệ",
+        "row_identity": "balance_sheet|name:- Cam kết mua - giao dịch hoán đổi tiền tệ",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết mua - giao dịch hoán đổi tiền tệ",
+        "value": 171163643000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết mua - giao dịch hoán đổi tiền tệ",
+        "row_identity": "balance_sheet|name:- Cam kết mua - giao dịch hoán đổi tiền tệ",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết bán - giao dịch hoán đổi tiền tệ",
         "value": 154430610000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết bán - giao dịch hoán đổi tiền tệ"
+        "original_name": "- Cam kết bán - giao dịch hoán đổi tiền tệ",
+        "row_identity": "balance_sheet|name:- Cam kết bán - giao dịch hoán đổi tiền tệ",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết bán - giao dịch hoán đổi tiền tệ",
+        "value": 170428969000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết bán - giao dịch hoán đổi tiền tệ",
+        "row_identity": "balance_sheet|name:- Cam kết bán - giao dịch hoán đổi tiền tệ",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Cam kết trong nghiệp vụ thư tín dụng (L/C)",
         "value": 44981487000000.0,
         "notes_ref": null,
-        "original_name": "Cam kết trong nghiệp vụ thư tín dụng (L/C)"
+        "original_name": "Cam kết trong nghiệp vụ thư tín dụng (L/C)",
+        "row_identity": "balance_sheet|name:Cam kết trong nghiệp vụ thư tín dụng (L/C)",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Cam kết trong nghiệp vụ thư tín dụng (L/C)",
+        "value": 67845653000000.0,
+        "notes_ref": null,
+        "original_name": "Cam kết trong nghiệp vụ thư tín dụng (L/C)",
+        "row_identity": "balance_sheet|name:Cam kết trong nghiệp vụ thư tín dụng (L/C)",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Bảo lãnh khác",
         "value": 50917866000000.0,
         "notes_ref": null,
-        "original_name": "Bảo lãnh khác"
+        "original_name": "Bảo lãnh khác",
+        "row_identity": "balance_sheet|name:Bảo lãnh khác",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Bảo lãnh khác",
+        "value": 57648065000000.0,
+        "notes_ref": null,
+        "original_name": "Bảo lãnh khác",
+        "row_identity": "balance_sheet|name:Bảo lãnh khác",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Các cam kết khác",
         "value": 207005596000000.0,
         "notes_ref": null,
-        "original_name": "Các cam kết khác"
+        "original_name": "Các cam kết khác",
+        "row_identity": "balance_sheet|name:Các cam kết khác",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Các cam kết khác",
+        "value": 176065387000000.0,
+        "notes_ref": null,
+        "original_name": "Các cam kết khác",
+        "row_identity": "balance_sheet|name:Các cam kết khác",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
         "value": 89705403000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ"
+        "original_name": "- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
+        "row_identity": "balance_sheet|name:- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
+        "value": 68061694000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
+        "row_identity": "balance_sheet|name:- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết hoán đổi tiền tệ chéo bằng VND",
         "value": 87983369000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết hoán đổi tiền tệ chéo bằng VND"
+        "original_name": "- Cam kết hoán đổi tiền tệ chéo bằng VND",
+        "row_identity": "balance_sheet|name:- Cam kết hoán đổi tiền tệ chéo bằng VND",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết hoán đổi tiền tệ chéo bằng VND",
+        "value": 67392288000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết hoán đổi tiền tệ chéo bằng VND",
+        "row_identity": "balance_sheet|name:- Cam kết hoán đổi tiền tệ chéo bằng VND",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết hoán đổi lãi suất bằng ngoại tệ",
         "value": 18995746000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết hoán đổi lãi suất bằng ngoại tệ"
+        "original_name": "- Cam kết hoán đổi lãi suất bằng ngoại tệ",
+        "row_identity": "balance_sheet|name:- Cam kết hoán đổi lãi suất bằng ngoại tệ",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết hoán đổi lãi suất bằng ngoại tệ",
+        "value": 10734257000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết hoán đổi lãi suất bằng ngoại tệ",
+        "row_identity": "balance_sheet|name:- Cam kết hoán đổi lãi suất bằng ngoại tệ",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết hoán đổi lãi suất bằng VND",
         "value": 6279946000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết hoán đổi lãi suất bằng VND"
+        "original_name": "- Cam kết hoán đổi lãi suất bằng VND",
+        "row_identity": "balance_sheet|name:- Cam kết hoán đổi lãi suất bằng VND",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết hoán đổi lãi suất bằng VND",
+        "value": 13541644000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết hoán đổi lãi suất bằng VND",
+        "row_identity": "balance_sheet|name:- Cam kết hoán đổi lãi suất bằng VND",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết kỳ hạn giấy tờ có giá",
         "value": 2614663000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết kỳ hạn giấy tờ có giá"
+        "original_name": "- Cam kết kỳ hạn giấy tờ có giá",
+        "row_identity": "balance_sheet|name:- Cam kết kỳ hạn giấy tờ có giá",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết kỳ hạn giấy tờ có giá",
+        "value": 12985841000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết kỳ hạn giấy tờ có giá",
+        "row_identity": "balance_sheet|name:- Cam kết kỳ hạn giấy tờ có giá",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "- Cam kết khác",
         "value": 1426469000000.0,
         "notes_ref": null,
-        "original_name": "- Cam kết khác"
+        "original_name": "- Cam kết khác",
+        "row_identity": "balance_sheet|name:- Cam kết khác",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "- Cam kết khác",
+        "value": 3349663000000.0,
+        "notes_ref": null,
+        "original_name": "- Cam kết khác",
+        "row_identity": "balance_sheet|name:- Cam kết khác",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Hạn mức tín dụng chưa sử dụng",
         "value": 286932074000000.0,
         "notes_ref": null,
-        "original_name": "Hạn mức tín dụng chưa sử dụng"
+        "original_name": "Hạn mức tín dụng chưa sử dụng",
+        "row_identity": "balance_sheet|name:Hạn mức tín dụng chưa sử dụng",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Hạn mức tín dụng chưa sử dụng",
+        "value": 305332136000000.0,
+        "notes_ref": null,
+        "original_name": "Hạn mức tín dụng chưa sử dụng",
+        "row_identity": "balance_sheet|name:Hạn mức tín dụng chưa sử dụng",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Lãi cho vay và phí phải thu chưa thu được",
         "value": 2757388000000.0,
         "notes_ref": "36",
-        "original_name": "Lãi cho vay và phí phải thu chưa thu được"
+        "original_name": "Lãi cho vay và phí phải thu chưa thu được",
+        "row_identity": "balance_sheet|name:Lãi cho vay và phí phải thu chưa thu được|note:36",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi cho vay và phí phải thu chưa thu được",
+        "value": 2287980000000.0,
+        "notes_ref": "36",
+        "original_name": "Lãi cho vay và phí phải thu chưa thu được",
+        "row_identity": "balance_sheet|name:Lãi cho vay và phí phải thu chưa thu được|note:36",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Nợ khó đòi đã xử lý",
         "value": 56711812000000.0,
         "notes_ref": "37",
-        "original_name": "Nợ khó đòi đã xử lý"
+        "original_name": "Nợ khó đòi đã xử lý",
+        "row_identity": "balance_sheet|name:Nợ khó đòi đã xử lý|note:37",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Nợ khó đòi đã xử lý",
+        "value": 52224706000000.0,
+        "notes_ref": "37",
+        "original_name": "Nợ khó đòi đã xử lý",
+        "row_identity": "balance_sheet|name:Nợ khó đòi đã xử lý|note:37",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Tài sản và chứng từ khác",
         "value": 155042764000000.0,
         "notes_ref": "38",
-        "original_name": "Tài sản và chứng từ khác"
+        "original_name": "Tài sản và chứng từ khác",
+        "row_identity": "balance_sheet|name:Tài sản và chứng từ khác|note:38",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tài sản và chứng từ khác",
+        "value": 198926346000000.0,
+        "notes_ref": "38",
+        "original_name": "Tài sản và chứng từ khác",
+        "row_identity": "balance_sheet|name:Tài sản và chứng từ khác|note:38",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Tổng cộng",
         "value": 1144257011000000.0,
         "notes_ref": null,
-        "original_name": null
+        "original_name": null,
+        "row_identity": "balance_sheet|name:Tổng cộng",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng cộng",
+        "value": 1225866880000000.0,
+        "notes_ref": null,
+        "original_name": null,
+        "row_identity": "balance_sheet|name:Tổng cộng",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       }
     ]
   },

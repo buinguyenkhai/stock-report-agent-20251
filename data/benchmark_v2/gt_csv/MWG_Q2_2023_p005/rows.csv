@@ -1,40 +1,79 @@
-statement,item_code,item_name,value,notes_ref,original_name
-balance_sheet,100,A. TÀI SẢN NGẮN HẠN,49611451060648,,A. TÀI SẢN NGẮN HẠN
-balance_sheet,110,I. Tiền và các khoản tương đương tiền,3441539364017,4,I. Tiền và các khoản tương đương tiền
-balance_sheet,111,1. Tiền,3091539364017,,1. Tiền
-balance_sheet,112,2. Các khoản tương đương tiền,350000000000,,2. Các khoản tương đương tiền
-balance_sheet,120,II. Đầu tư tài chính ngắn hạn,20978938278068,,II. Đầu tư tài chính ngắn hạn
-balance_sheet,123,1. Đầu tư nắm giữ đến ngày đáo hạn,20978938278068,5.1,1. Đầu tư nắm giữ đến ngày đáo hạn
-balance_sheet,130,III. Các khoản phải thu ngắn hạn,2616211969186,,III. Các khoản phải thu ngắn hạn
-balance_sheet,131,1. Phải thu ngắn hạn của khách hàng,218495722481,6,1. Phải thu ngắn hạn của khách hàng
-balance_sheet,132,2. Trả trước cho người bán ngắn hạn,157337870026,7,2. Trả trước cho người bán ngắn hạn
-balance_sheet,135,3. Phải thu về cho vay ngắn hạn,16917697638,8,3. Phải thu về cho vay ngắn hạn
-balance_sheet,136,4. Phải thu ngắn hạn khác,2223460679041,9,4. Phải thu ngắn hạn khác
-balance_sheet,140,IV. Hàng tồn kho,21874382023894,10,IV. Hàng tồn kho
-balance_sheet,141,1. Hàng tồn kho,22156359601381,,1. Hàng tồn kho
-balance_sheet,149,2. Dự phòng giảm giá hàng tồn kho,-281977577487,,2. Dự phòng giảm giá hàng tồn kho
-balance_sheet,150,V. Tài sản ngắn hạn khác,700379425483,,V. Tài sản ngắn hạn khác
-balance_sheet,151,1. Chi phí trả trước ngắn hạn,467748037091,11,1. Chi phí trả trước ngắn hạn
-balance_sheet,152,2. Thuế GTGT được khấu trừ,189580737986,,2. Thuế GTGT được khấu trừ
-balance_sheet,153,3. Thuế và các khoản khác phải thu Nhà nước,43050650406,,3. Thuế và các khoản khác phải thu Nhà nước
-balance_sheet,200,B. TÀI SẢN DÀI HẠN,9757050973520,,B. TÀI SẢN DÀI HẠN
-balance_sheet,210,I. Phải thu dài hạn,486825335461,,I. Phải thu dài hạn
-balance_sheet,215,1. Phải thu về cho vay dài hạn,9744723329,,1. Phải thu về cho vay dài hạn
-balance_sheet,216,2. Phải thu dài hạn khác,477080612132,12,2. Phải thu dài hạn khác
-balance_sheet,220,II. Tài sản cố định,8443389058910,,II. Tài sản cố định
-balance_sheet,221,1. Tài sản cố định hữu hình,8371892488277,13,1. Tài sản cố định hữu hình
-balance_sheet,222,Nguyên giá,21049279236280,,Nguyên giá
-balance_sheet,223,Giá trị khấu hao lũy kế,-12677386748003,,Giá trị khấu hao lũy kế
-balance_sheet,227,2. Tài sản cố định vô hình,71496570633,14,2. Tài sản cố định vô hình
-balance_sheet,228,Nguyên giá,90297772827,,Nguyên giá
-balance_sheet,229,Giá trị hao mòn lũy kế,-18801202194,,Giá trị hao mòn lũy kế
-balance_sheet,240,III. Tài sản dở dang dài hạn,3616051312,,III. Tài sản dở dang dài hạn
-balance_sheet,242,1. Chi phí xây dựng cơ bản dở dang,3616051312,15,1. Chi phí xây dựng cơ bản dở dang
-balance_sheet,250,IV. Đầu tư tài chính dài hạn,231034840000,,IV. Đầu tư tài chính dài hạn
-balance_sheet,252,1. Đầu tư vào công ty liên doanh,181034840000,17,1. Đầu tư vào công ty liên doanh
-balance_sheet,255,2. Đầu tư nắm giữ đến ngày đáo hạn,50000000000,5.2,2. Đầu tư nắm giữ đến ngày đáo hạn
-balance_sheet,260,V. Tài sản dài hạn khác,592185687837,,V. Tài sản dài hạn khác
-balance_sheet,261,1. Chi phí trả trước dài hạn,137493454361,11,1. Chi phí trả trước dài hạn
-balance_sheet,262,2. Tài sản thuế thu nhập hoãn lại,178428808945,29.3,2. Tài sản thuế thu nhập hoãn lại
-balance_sheet,269,3. Lợi thế thương mại,276263424531,16,3. Lợi thế thương mại
-balance_sheet,270,TỔNG CỘNG TÀI SẢN,59368502034168,,TỔNG CỘNG TÀI SẢN
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+balance_sheet,100,A. TÀI SẢN NGẮN HẠN,49611451060648.0,,A. TÀI SẢN NGẮN HẠN,balance_sheet|code:100,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,100,A. TÀI SẢN NGẮN HẠN,44577607228189.0,,A. TÀI SẢN NGẮN HẠN,balance_sheet|code:100,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,110,I. Tiền và các khoản tương đương tiền,3441539364017.0,4,I. Tiền và các khoản tương đương tiền,balance_sheet|code:110,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,110,I. Tiền và các khoản tương đương tiền,5061020547422.0,4,I. Tiền và các khoản tương đương tiền,balance_sheet|code:110,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,111,1. Tiền,3091539364017.0,,1. Tiền,balance_sheet|code:111,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,111,1. Tiền,3846020547422.0,,1. Tiền,balance_sheet|code:111,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,112,2. Các khoản tương đương tiền,350000000000.0,,2. Các khoản tương đương tiền,balance_sheet|code:112,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,112,2. Các khoản tương đương tiền,1215000000000.0,,2. Các khoản tương đương tiền,balance_sheet|code:112,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,120,II. Đầu tư tài chính ngắn hạn,20978938278068.0,,II. Đầu tư tài chính ngắn hạn,balance_sheet|code:120,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,120,II. Đầu tư tài chính ngắn hạn,10069249605640.0,,II. Đầu tư tài chính ngắn hạn,balance_sheet|code:120,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,123,1. Đầu tư nắm giữ đến ngày đáo hạn,20978938278068.0,5.1,1. Đầu tư nắm giữ đến ngày đáo hạn,balance_sheet|code:123,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,123,1. Đầu tư nắm giữ đến ngày đáo hạn,10069249605640.0,5.1,1. Đầu tư nắm giữ đến ngày đáo hạn,balance_sheet|code:123,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,130,III. Các khoản phải thu ngắn hạn,2616211969186.0,,III. Các khoản phải thu ngắn hạn,balance_sheet|code:130,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,130,III. Các khoản phải thu ngắn hạn,3000817466182.0,,III. Các khoản phải thu ngắn hạn,balance_sheet|code:130,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,131,1. Phải thu ngắn hạn của khách hàng,218495722481.0,6,1. Phải thu ngắn hạn của khách hàng,balance_sheet|code:131,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,131,1. Phải thu ngắn hạn của khách hàng,178061365251.0,6,1. Phải thu ngắn hạn của khách hàng,balance_sheet|code:131,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,132,2. Trả trước cho người bán ngắn hạn,157337870026.0,7,2. Trả trước cho người bán ngắn hạn,balance_sheet|code:132,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,132,2. Trả trước cho người bán ngắn hạn,403669438496.0,7,2. Trả trước cho người bán ngắn hạn,balance_sheet|code:132,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,135,3. Phải thu về cho vay ngắn hạn,16917697638.0,8,3. Phải thu về cho vay ngắn hạn,balance_sheet|code:135,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,135,3. Phải thu về cho vay ngắn hạn,16917697638.0,8,3. Phải thu về cho vay ngắn hạn,balance_sheet|code:135,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,136,4. Phải thu ngắn hạn khác,2223460679041.0,9,4. Phải thu ngắn hạn khác,balance_sheet|code:136,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,136,4. Phải thu ngắn hạn khác,2402168964797.0,9,4. Phải thu ngắn hạn khác,balance_sheet|code:136,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,140,IV. Hàng tồn kho,21874382023894.0,10,IV. Hàng tồn kho,balance_sheet|code:140,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,140,IV. Hàng tồn kho,25696077735282.0,10,IV. Hàng tồn kho,balance_sheet|code:140,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,141,1. Hàng tồn kho,22156359601381.0,,1. Hàng tồn kho,balance_sheet|code:141,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,141,1. Hàng tồn kho,26058131396686.0,,1. Hàng tồn kho,balance_sheet|code:141,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,149,2. Dự phòng giảm giá hàng tồn kho,-281977577487.0,,2. Dự phòng giảm giá hàng tồn kho,balance_sheet|code:149,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,149,2. Dự phòng giảm giá hàng tồn kho,-362053661404.0,,2. Dự phòng giảm giá hàng tồn kho,balance_sheet|code:149,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,150,V. Tài sản ngắn hạn khác,700379425483.0,,V. Tài sản ngắn hạn khác,balance_sheet|code:150,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,150,V. Tài sản ngắn hạn khác,750441873663.0,,V. Tài sản ngắn hạn khác,balance_sheet|code:150,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,151,1. Chi phí trả trước ngắn hạn,467748037091.0,11,1. Chi phí trả trước ngắn hạn,balance_sheet|code:151,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,151,1. Chi phí trả trước ngắn hạn,565060213333.0,11,1. Chi phí trả trước ngắn hạn,balance_sheet|code:151,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,152,2. Thuế GTGT được khấu trừ,189580737986.0,,2. Thuế GTGT được khấu trừ,balance_sheet|code:152,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,152,2. Thuế GTGT được khấu trừ,156743753740.0,,2. Thuế GTGT được khấu trừ,balance_sheet|code:152,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,153,3. Thuế và các khoản khác phải thu Nhà nước,43050650406.0,,3. Thuế và các khoản khác phải thu Nhà nước,balance_sheet|code:153,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,153,3. Thuế và các khoản khác phải thu Nhà nước,28637906590.0,,3. Thuế và các khoản khác phải thu Nhà nước,balance_sheet|code:153,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,200,B. TÀI SẢN DÀI HẠN,9757050973520.0,,B. TÀI SẢN DÀI HẠN,balance_sheet|code:200,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,200,B. TÀI SẢN DÀI HẠN,11256488385860.0,,B. TÀI SẢN DÀI HẠN,balance_sheet|code:200,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,210,I. Phải thu dài hạn,486825335461.0,,I. Phải thu dài hạn,balance_sheet|code:210,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,210,I. Phải thu dài hạn,503486573563.0,,I. Phải thu dài hạn,balance_sheet|code:210,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,215,1. Phải thu về cho vay dài hạn,9744723329.0,,1. Phải thu về cho vay dài hạn,balance_sheet|code:215,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,215,1. Phải thu về cho vay dài hạn,9744723329.0,,1. Phải thu về cho vay dài hạn,balance_sheet|code:215,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,216,2. Phải thu dài hạn khác,477080612132.0,12,2. Phải thu dài hạn khác,balance_sheet|code:216,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,216,2. Phải thu dài hạn khác,493741850234.0,12,2. Phải thu dài hạn khác,balance_sheet|code:216,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,220,II. Tài sản cố định,8443389058910.0,,II. Tài sản cố định,balance_sheet|code:220,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,220,II. Tài sản cố định,9727502911440.0,,II. Tài sản cố định,balance_sheet|code:220,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,221,1. Tài sản cố định hữu hình,8371892488277.0,13,1. Tài sản cố định hữu hình,balance_sheet|code:221,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,221,1. Tài sản cố định hữu hình,9653330005976.0,13,1. Tài sản cố định hữu hình,balance_sheet|code:221,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,222,Nguyên giá,21049279236280.0,,Nguyên giá,balance_sheet|code:222,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,222,Nguyên giá,20841513609195.0,,Nguyên giá,balance_sheet|code:222,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,223,Giá trị khấu hao lũy kế,-12677386748003.0,,Giá trị khấu hao lũy kế,balance_sheet|code:223,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,223,Giá trị khấu hao lũy kế,-11188183603219.0,,Giá trị khấu hao lũy kế,balance_sheet|code:223,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,227,2. Tài sản cố định vô hình,71496570633.0,14,2. Tài sản cố định vô hình,balance_sheet|code:227,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,227,2. Tài sản cố định vô hình,74172905464.0,14,2. Tài sản cố định vô hình,balance_sheet|code:227,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,228,Nguyên giá,90297772827.0,,Nguyên giá,balance_sheet|code:228,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,228,Nguyên giá,90297772827.0,,Nguyên giá,balance_sheet|code:228,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,229,Giá trị hao mòn lũy kế,-18801202194.0,,Giá trị hao mòn lũy kế,balance_sheet|code:229,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,229,Giá trị hao mòn lũy kế,-16124867363.0,,Giá trị hao mòn lũy kế,balance_sheet|code:229,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,240,III. Tài sản dở dang dài hạn,3616051312.0,,III. Tài sản dở dang dài hạn,balance_sheet|code:240,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,240,III. Tài sản dở dang dài hạn,123873978878.0,,III. Tài sản dở dang dài hạn,balance_sheet|code:240,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,242,1. Chi phí xây dựng cơ bản dở dang,3616051312.0,15,1. Chi phí xây dựng cơ bản dở dang,balance_sheet|code:242,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,242,1. Chi phí xây dựng cơ bản dở dang,123873978878.0,15,1. Chi phí xây dựng cơ bản dở dang,balance_sheet|code:242,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,250,IV. Đầu tư tài chính dài hạn,231034840000.0,,IV. Đầu tư tài chính dài hạn,balance_sheet|code:250,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,250,IV. Đầu tư tài chính dài hạn,231034840000.0,,IV. Đầu tư tài chính dài hạn,balance_sheet|code:250,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,252,1. Đầu tư vào công ty liên doanh,181034840000.0,17,1. Đầu tư vào công ty liên doanh,balance_sheet|code:252,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,252,1. Đầu tư vào công ty liên doanh,181034840000.0,17,1. Đầu tư vào công ty liên doanh,balance_sheet|code:252,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,255,2. Đầu tư nắm giữ đến ngày đáo hạn,50000000000.0,5.2,2. Đầu tư nắm giữ đến ngày đáo hạn,balance_sheet|code:255,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,255,2. Đầu tư nắm giữ đến ngày đáo hạn,50000000000.0,5.2,2. Đầu tư nắm giữ đến ngày đáo hạn,balance_sheet|code:255,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,260,V. Tài sản dài hạn khác,592185687837.0,,V. Tài sản dài hạn khác,balance_sheet|code:260,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,260,V. Tài sản dài hạn khác,670590081979.0,,V. Tài sản dài hạn khác,balance_sheet|code:260,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,261,1. Chi phí trả trước dài hạn,137493454361.0,11,1. Chi phí trả trước dài hạn,balance_sheet|code:261,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,261,1. Chi phí trả trước dài hạn,175104437161.0,11,1. Chi phí trả trước dài hạn,balance_sheet|code:261,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,262,2. Tài sản thuế thu nhập hoãn lại,178428808945.0,29.3,2. Tài sản thuế thu nhập hoãn lại,balance_sheet|code:262,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,262,2. Tài sản thuế thu nhập hoãn lại,188526284228.0,29.3,2. Tài sản thuế thu nhập hoãn lại,balance_sheet|code:262,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,269,3. Lợi thế thương mại,276263424531.0,16,3. Lợi thế thương mại,balance_sheet|code:269,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,269,3. Lợi thế thương mại,306959360590.0,16,3. Lợi thế thương mại,balance_sheet|code:269,Ngày 31 tháng 12 năm 2022,2022FY
+balance_sheet,270,TỔNG CỘNG TÀI SẢN,59368502034168.0,,TỔNG CỘNG TÀI SẢN,balance_sheet|code:270,Ngày 30 tháng 6 năm 2023,2023FY
+balance_sheet,270,TỔNG CỘNG TÀI SẢN,55834095614049.0,,TỔNG CỘNG TÀI SẢN,balance_sheet|code:270,Ngày 31 tháng 12 năm 2022,2022FY

@@ -6,581 +6,1640 @@
         "item_name": "A. TÀI SẢN NGẮN HẠN",
         "value": 58102970741619.0,
         "notes_ref": null,
-        "original_name": "A. TÀI SẢN NGẮN HẠN"
+        "original_name": "A. TÀI SẢN NGẮN HẠN",
+        "row_identity": "balance_sheet|code:100",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "100",
+        "item_name": "A. TÀI SẢN NGẮN HẠN",
+        "value": 45535942846453.0,
+        "notes_ref": null,
+        "original_name": "A. TÀI SẢN NGẮN HẠN",
+        "row_identity": "balance_sheet|code:100",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "110",
         "item_name": "I. Tiền và các khoản tương đương tiền",
         "value": 10540181640920.0,
         "notes_ref": "5",
-        "original_name": "I. Tiền và các khoản tương đương tiền"
+        "original_name": "I. Tiền và các khoản tương đương tiền",
+        "row_identity": "balance_sheet|code:110",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "110",
+        "item_name": "I. Tiền và các khoản tương đương tiền",
+        "value": 9315440438884.0,
+        "notes_ref": "5",
+        "original_name": "I. Tiền và các khoản tương đương tiền",
+        "row_identity": "balance_sheet|code:110",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "111",
         "item_name": "1. Tiền",
         "value": 8084826991114.0,
         "notes_ref": null,
-        "original_name": "1. Tiền"
+        "original_name": "1. Tiền",
+        "row_identity": "balance_sheet|code:111",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "111",
+        "item_name": "1. Tiền",
+        "value": 6725619929289.0,
+        "notes_ref": null,
+        "original_name": "1. Tiền",
+        "row_identity": "balance_sheet|code:111",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "112",
         "item_name": "2. Các khoản tương đương tiền",
         "value": 2455354649806.0,
         "notes_ref": null,
-        "original_name": "2. Các khoản tương đương tiền"
+        "original_name": "2. Các khoản tương đương tiền",
+        "row_identity": "balance_sheet|code:112",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "112",
+        "item_name": "2. Các khoản tương đương tiền",
+        "value": 2589820509595.0,
+        "notes_ref": null,
+        "original_name": "2. Các khoản tương đương tiền",
+        "row_identity": "balance_sheet|code:112",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "120",
         "item_name": "II. Các khoản đầu tư tài chính ngắn hạn",
         "value": 29612986737440.0,
         "notes_ref": "6",
-        "original_name": "II. Các khoản đầu tư tài chính ngắn hạn"
+        "original_name": "II. Các khoản đầu tư tài chính ngắn hạn",
+        "row_identity": "balance_sheet|code:120",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "120",
+        "item_name": "II. Các khoản đầu tư tài chính ngắn hạn",
+        "value": 21785213686808.0,
+        "notes_ref": "6",
+        "original_name": "II. Các khoản đầu tư tài chính ngắn hạn",
+        "row_identity": "balance_sheet|code:120",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "123",
         "item_name": "1. Đầu tư nắm giữ đến ngày đáo hạn",
         "value": 29612986737440.0,
         "notes_ref": null,
-        "original_name": "1. Đầu tư nắm giữ đến ngày đáo hạn"
+        "original_name": "1. Đầu tư nắm giữ đến ngày đáo hạn",
+        "row_identity": "balance_sheet|code:123",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "123",
+        "item_name": "1. Đầu tư nắm giữ đến ngày đáo hạn",
+        "value": 21785213686808.0,
+        "notes_ref": null,
+        "original_name": "1. Đầu tư nắm giữ đến ngày đáo hạn",
+        "row_identity": "balance_sheet|code:123",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "130",
         "item_name": "III. Các khoản phải thu ngắn hạn",
         "value": 14400800569076.0,
         "notes_ref": null,
-        "original_name": "III. Các khoản phải thu ngắn hạn"
+        "original_name": "III. Các khoản phải thu ngắn hạn",
+        "row_identity": "balance_sheet|code:130",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "130",
+        "item_name": "III. Các khoản phải thu ngắn hạn",
+        "value": 11381523992803.0,
+        "notes_ref": null,
+        "original_name": "III. Các khoản phải thu ngắn hạn",
+        "row_identity": "balance_sheet|code:130",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "131",
         "item_name": "1. Phải thu ngắn hạn của khách hàng",
         "value": 12733504688522.0,
         "notes_ref": "7",
-        "original_name": "1. Phải thu ngắn hạn của khách hàng"
+        "original_name": "1. Phải thu ngắn hạn của khách hàng",
+        "row_identity": "balance_sheet|code:131",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "131",
+        "item_name": "1. Phải thu ngắn hạn của khách hàng",
+        "value": 10537019113380.0,
+        "notes_ref": "7",
+        "original_name": "1. Phải thu ngắn hạn của khách hàng",
+        "row_identity": "balance_sheet|code:131",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "132",
         "item_name": "2. Trả trước cho người bán ngắn hạn",
         "value": 915176652285.0,
         "notes_ref": null,
-        "original_name": "2. Trả trước cho người bán ngắn hạn"
+        "original_name": "2. Trả trước cho người bán ngắn hạn",
+        "row_identity": "balance_sheet|code:132",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "132",
+        "item_name": "2. Trả trước cho người bán ngắn hạn",
+        "value": 610379845664.0,
+        "notes_ref": null,
+        "original_name": "2. Trả trước cho người bán ngắn hạn",
+        "row_identity": "balance_sheet|code:132",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "134",
         "item_name": "3. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng",
         "value": 200405269967.0,
         "notes_ref": null,
-        "original_name": "3. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng"
+        "original_name": "3. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng",
+        "row_identity": "balance_sheet|code:134",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "134",
+        "item_name": "3. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng",
+        "value": 136097256629.0,
+        "notes_ref": null,
+        "original_name": "3. Phải thu theo tiến độ kế hoạch hợp đồng xây dựng",
+        "row_identity": "balance_sheet|code:134",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "135",
         "item_name": "4. Phải thu về cho vay ngắn hạn",
         "value": 9195910819.0,
         "notes_ref": null,
-        "original_name": "4. Phải thu về cho vay ngắn hạn"
+        "original_name": "4. Phải thu về cho vay ngắn hạn",
+        "row_identity": "balance_sheet|code:135",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "135",
+        "item_name": "4. Phải thu về cho vay ngắn hạn",
+        "value": 9808117590.0,
+        "notes_ref": null,
+        "original_name": "4. Phải thu về cho vay ngắn hạn",
+        "row_identity": "balance_sheet|code:135",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "136",
         "item_name": "5. Phải thu ngắn hạn khác",
         "value": 1128684791757.0,
         "notes_ref": "8",
-        "original_name": "5. Phải thu ngắn hạn khác"
+        "original_name": "5. Phải thu ngắn hạn khác",
+        "row_identity": "balance_sheet|code:136",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "136",
+        "item_name": "5. Phải thu ngắn hạn khác",
+        "value": 707751585399.0,
+        "notes_ref": "8",
+        "original_name": "5. Phải thu ngắn hạn khác",
+        "row_identity": "balance_sheet|code:136",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "137",
         "item_name": "6. Dự phòng phải thu ngắn hạn khó đòi",
         "value": -586166744274.0,
         "notes_ref": "9",
-        "original_name": "6. Dự phòng phải thu ngắn hạn khó đòi"
+        "original_name": "6. Dự phòng phải thu ngắn hạn khó đòi",
+        "row_identity": "balance_sheet|code:137",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "137",
+        "item_name": "6. Dự phòng phải thu ngắn hạn khó đòi",
+        "value": -619531925859.0,
+        "notes_ref": "9",
+        "original_name": "6. Dự phòng phải thu ngắn hạn khó đòi",
+        "row_identity": "balance_sheet|code:137",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "140",
         "item_name": "IV. Hàng tồn kho",
         "value": 2167188682919.0,
         "notes_ref": "10",
-        "original_name": "IV. Hàng tồn kho"
+        "original_name": "IV. Hàng tồn kho",
+        "row_identity": "balance_sheet|code:140",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "140",
+        "item_name": "IV. Hàng tồn kho",
+        "value": 1856756949030.0,
+        "notes_ref": "10",
+        "original_name": "IV. Hàng tồn kho",
+        "row_identity": "balance_sheet|code:140",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "141",
         "item_name": "1. Hàng tồn kho",
         "value": 2250812490757.0,
         "notes_ref": null,
-        "original_name": "1. Hàng tồn kho"
+        "original_name": "1. Hàng tồn kho",
+        "row_identity": "balance_sheet|code:141",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "141",
+        "item_name": "1. Hàng tồn kho",
+        "value": 1990224486513.0,
+        "notes_ref": null,
+        "original_name": "1. Hàng tồn kho",
+        "row_identity": "balance_sheet|code:141",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "149",
         "item_name": "2. Dự phòng giảm giá hàng tồn kho",
         "value": -83623807838.0,
         "notes_ref": null,
-        "original_name": "2. Dự phòng giảm giá hàng tồn kho"
+        "original_name": "2. Dự phòng giảm giá hàng tồn kho",
+        "row_identity": "balance_sheet|code:149",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "149",
+        "item_name": "2. Dự phòng giảm giá hàng tồn kho",
+        "value": -133467537483.0,
+        "notes_ref": null,
+        "original_name": "2. Dự phòng giảm giá hàng tồn kho",
+        "row_identity": "balance_sheet|code:149",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "150",
         "item_name": "V. Tài sản ngắn hạn khác",
         "value": 1381813111264.0,
         "notes_ref": null,
-        "original_name": "V. Tài sản ngắn hạn khác"
+        "original_name": "V. Tài sản ngắn hạn khác",
+        "row_identity": "balance_sheet|code:150",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "150",
+        "item_name": "V. Tài sản ngắn hạn khác",
+        "value": 1197007778928.0,
+        "notes_ref": null,
+        "original_name": "V. Tài sản ngắn hạn khác",
+        "row_identity": "balance_sheet|code:150",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "151",
         "item_name": "1. Chi phí trả trước ngắn hạn",
         "value": 641070240596.0,
         "notes_ref": "14",
-        "original_name": "1. Chi phí trả trước ngắn hạn"
+        "original_name": "1. Chi phí trả trước ngắn hạn",
+        "row_identity": "balance_sheet|code:151",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "151",
+        "item_name": "1. Chi phí trả trước ngắn hạn",
+        "value": 479707218558.0,
+        "notes_ref": "14",
+        "original_name": "1. Chi phí trả trước ngắn hạn",
+        "row_identity": "balance_sheet|code:151",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "152",
         "item_name": "2. Thuế giá trị gia tăng được khấu trừ",
         "value": 609517465104.0,
         "notes_ref": null,
-        "original_name": "2. Thuế giá trị gia tăng được khấu trừ"
+        "original_name": "2. Thuế giá trị gia tăng được khấu trừ",
+        "row_identity": "balance_sheet|code:152",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "152",
+        "item_name": "2. Thuế giá trị gia tăng được khấu trừ",
+        "value": 648697117785.0,
+        "notes_ref": null,
+        "original_name": "2. Thuế giá trị gia tăng được khấu trừ",
+        "row_identity": "balance_sheet|code:152",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "153",
         "item_name": "3. Thuế và các khoản khác phải thu Nhà nước",
         "value": 131225405564.0,
         "notes_ref": "19",
-        "original_name": "3. Thuế và các khoản khác phải thu Nhà nước"
+        "original_name": "3. Thuế và các khoản khác phải thu Nhà nước",
+        "row_identity": "balance_sheet|code:153",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "153",
+        "item_name": "3. Thuế và các khoản khác phải thu Nhà nước",
+        "value": 68603442585.0,
+        "notes_ref": "19",
+        "original_name": "3. Thuế và các khoản khác phải thu Nhà nước",
+        "row_identity": "balance_sheet|code:153",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "200",
         "item_name": "B. TÀI SẢN DÀI HẠN",
         "value": 29986651038243.0,
         "notes_ref": null,
-        "original_name": "B. TÀI SẢN DÀI HẠN"
+        "original_name": "B. TÀI SẢN DÀI HẠN",
+        "row_identity": "balance_sheet|code:200",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "200",
+        "item_name": "B. TÀI SẢN DÀI HẠN",
+        "value": 26464052832167.0,
+        "notes_ref": null,
+        "original_name": "B. TÀI SẢN DÀI HẠN",
+        "row_identity": "balance_sheet|code:200",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "210",
         "item_name": "I. Các khoản phải thu dài hạn",
         "value": 564342065270.0,
         "notes_ref": null,
-        "original_name": "I. Các khoản phải thu dài hạn"
+        "original_name": "I. Các khoản phải thu dài hạn",
+        "row_identity": "balance_sheet|code:210",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "210",
+        "item_name": "I. Các khoản phải thu dài hạn",
+        "value": 331646166008.0,
+        "notes_ref": null,
+        "original_name": "I. Các khoản phải thu dài hạn",
+        "row_identity": "balance_sheet|code:210",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "215",
         "item_name": "1. Phải thu về cho vay dài hạn",
         "value": 5278733014.0,
         "notes_ref": null,
-        "original_name": "1. Phải thu về cho vay dài hạn"
+        "original_name": "1. Phải thu về cho vay dài hạn",
+        "row_identity": "balance_sheet|code:215",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "215",
+        "item_name": "1. Phải thu về cho vay dài hạn",
+        "value": 2509722351.0,
+        "notes_ref": null,
+        "original_name": "1. Phải thu về cho vay dài hạn",
+        "row_identity": "balance_sheet|code:215",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "216",
         "item_name": "2. Phải thu dài hạn khác",
         "value": 611435814893.0,
         "notes_ref": "8",
-        "original_name": "2. Phải thu dài hạn khác"
+        "original_name": "2. Phải thu dài hạn khác",
+        "row_identity": "balance_sheet|code:216",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "216",
+        "item_name": "2. Phải thu dài hạn khác",
+        "value": 381508926294.0,
+        "notes_ref": "8",
+        "original_name": "2. Phải thu dài hạn khác",
+        "row_identity": "balance_sheet|code:216",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "219",
         "item_name": "3. Dự phòng phải thu dài hạn khó đòi",
         "value": -52372482637.0,
         "notes_ref": null,
-        "original_name": "3. Dự phòng phải thu dài hạn khó đòi"
+        "original_name": "3. Dự phòng phải thu dài hạn khó đòi",
+        "row_identity": "balance_sheet|code:219",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "219",
+        "item_name": "3. Dự phòng phải thu dài hạn khó đòi",
+        "value": -52372482637.0,
+        "notes_ref": null,
+        "original_name": "3. Dự phòng phải thu dài hạn khó đòi",
+        "row_identity": "balance_sheet|code:219",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "220",
         "item_name": "II. Tài sản cố định",
         "value": 17330033606586.0,
         "notes_ref": null,
-        "original_name": "II. Tài sản cố định"
+        "original_name": "II. Tài sản cố định",
+        "row_identity": "balance_sheet|code:220",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "220",
+        "item_name": "II. Tài sản cố định",
+        "value": 14816131186204.0,
+        "notes_ref": null,
+        "original_name": "II. Tài sản cố định",
+        "row_identity": "balance_sheet|code:220",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "221",
         "item_name": "1. Tài sản cố định hữu hình",
         "value": 15385816846287.0,
         "notes_ref": "11",
-        "original_name": "1. Tài sản cố định hữu hình"
+        "original_name": "1. Tài sản cố định hữu hình",
+        "row_identity": "balance_sheet|code:221",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "221",
+        "item_name": "1. Tài sản cố định hữu hình",
+        "value": 12774567961718.0,
+        "notes_ref": "11",
+        "original_name": "1. Tài sản cố định hữu hình",
+        "row_identity": "balance_sheet|code:221",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "222",
         "item_name": "- Nguyên giá",
         "value": 29148692599137.0,
         "notes_ref": null,
-        "original_name": "- Nguyên giá"
+        "original_name": "- Nguyên giá",
+        "row_identity": "balance_sheet|code:222",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "222",
+        "item_name": "- Nguyên giá",
+        "value": 24457733666511.0,
+        "notes_ref": null,
+        "original_name": "- Nguyên giá",
+        "row_identity": "balance_sheet|code:222",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "223",
         "item_name": "- Giá trị hao mòn lũy kế",
         "value": -13762875752850.0,
         "notes_ref": null,
-        "original_name": "- Giá trị hao mòn lũy kế"
+        "original_name": "- Giá trị hao mòn lũy kế",
+        "row_identity": "balance_sheet|code:223",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "223",
+        "item_name": "- Giá trị hao mòn lũy kế",
+        "value": -11683165704793.0,
+        "notes_ref": null,
+        "original_name": "- Giá trị hao mòn lũy kế",
+        "row_identity": "balance_sheet|code:223",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "224",
         "item_name": "2. Tài sản cố định thuê tài chính",
         "value": 1277212606.0,
         "notes_ref": null,
-        "original_name": "2. Tài sản cố định thuê tài chính"
+        "original_name": "2. Tài sản cố định thuê tài chính",
+        "row_identity": "balance_sheet|code:224",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "224",
+        "item_name": "2. Tài sản cố định thuê tài chính",
+        "value": 2042708364.0,
+        "notes_ref": null,
+        "original_name": "2. Tài sản cố định thuê tài chính",
+        "row_identity": "balance_sheet|code:224",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "225",
         "item_name": "- Nguyên giá",
         "value": 5871006196.0,
         "notes_ref": null,
-        "original_name": "- Nguyên giá"
+        "original_name": "- Nguyên giá",
+        "row_identity": "balance_sheet|code:225",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "225",
+        "item_name": "- Nguyên giá",
+        "value": 5716034788.0,
+        "notes_ref": null,
+        "original_name": "- Nguyên giá",
+        "row_identity": "balance_sheet|code:225",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "226",
         "item_name": "- Giá trị hao mòn lũy kế",
         "value": -4593793590.0,
         "notes_ref": null,
-        "original_name": "- Giá trị hao mòn lũy kế"
+        "original_name": "- Giá trị hao mòn lũy kế",
+        "row_identity": "balance_sheet|code:226",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "226",
+        "item_name": "- Giá trị hao mòn lũy kế",
+        "value": -3673326424.0,
+        "notes_ref": null,
+        "original_name": "- Giá trị hao mòn lũy kế",
+        "row_identity": "balance_sheet|code:226",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "227",
         "item_name": "3. Tài sản cố định vô hình",
         "value": 1942939547693.0,
         "notes_ref": "12",
-        "original_name": "3. Tài sản cố định vô hình"
+        "original_name": "3. Tài sản cố định vô hình",
+        "row_identity": "balance_sheet|code:227",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "227",
+        "item_name": "3. Tài sản cố định vô hình",
+        "value": 2039520516122.0,
+        "notes_ref": "12",
+        "original_name": "3. Tài sản cố định vô hình",
+        "row_identity": "balance_sheet|code:227",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "228",
         "item_name": "- Nguyên giá",
         "value": 3868884070908.0,
         "notes_ref": null,
-        "original_name": "- Nguyên giá"
+        "original_name": "- Nguyên giá",
+        "row_identity": "balance_sheet|code:228",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "228",
+        "item_name": "- Nguyên giá",
+        "value": 3656302027788.0,
+        "notes_ref": null,
+        "original_name": "- Nguyên giá",
+        "row_identity": "balance_sheet|code:228",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "229",
         "item_name": "- Giá trị hao mòn lũy kế",
         "value": -1925944523215.0,
         "notes_ref": null,
-        "original_name": "- Giá trị hao mòn lũy kế"
+        "original_name": "- Giá trị hao mòn lũy kế",
+        "row_identity": "balance_sheet|code:229",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "229",
+        "item_name": "- Giá trị hao mòn lũy kế",
+        "value": -1616781511666.0,
+        "notes_ref": null,
+        "original_name": "- Giá trị hao mòn lũy kế",
+        "row_identity": "balance_sheet|code:229",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "240",
         "item_name": "III. Tài sản dở dang dài hạn",
         "value": 1604915957419.0,
         "notes_ref": null,
-        "original_name": "III. Tài sản dở dang dài hạn"
+        "original_name": "III. Tài sản dở dang dài hạn",
+        "row_identity": "balance_sheet|code:240",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "240",
+        "item_name": "III. Tài sản dở dang dài hạn",
+        "value": 2559766724411.0,
+        "notes_ref": null,
+        "original_name": "III. Tài sản dở dang dài hạn",
+        "row_identity": "balance_sheet|code:240",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "242",
         "item_name": "1. Chi phí xây dựng cơ bản dở dang",
         "value": 1604915957419.0,
         "notes_ref": "13",
-        "original_name": "1. Chi phí xây dựng cơ bản dở dang"
+        "original_name": "1. Chi phí xây dựng cơ bản dở dang",
+        "row_identity": "balance_sheet|code:242",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "242",
+        "item_name": "1. Chi phí xây dựng cơ bản dở dang",
+        "value": 2559766724411.0,
+        "notes_ref": "13",
+        "original_name": "1. Chi phí xây dựng cơ bản dở dang",
+        "row_identity": "balance_sheet|code:242",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "250",
         "item_name": "IV. Các khoản đầu tư tài chính dài hạn",
         "value": 4737863994182.0,
         "notes_ref": null,
-        "original_name": "IV. Các khoản đầu tư tài chính dài hạn"
+        "original_name": "IV. Các khoản đầu tư tài chính dài hạn",
+        "row_identity": "balance_sheet|code:250",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "250",
+        "item_name": "IV. Các khoản đầu tư tài chính dài hạn",
+        "value": 3318095237260.0,
+        "notes_ref": null,
+        "original_name": "IV. Các khoản đầu tư tài chính dài hạn",
+        "row_identity": "balance_sheet|code:250",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "252",
         "item_name": "1. Đầu tư vào công ty liên doanh, liên kết",
         "value": 3581128517425.0,
         "notes_ref": "17",
-        "original_name": "1. Đầu tư vào công ty liên doanh, liên kết"
+        "original_name": "1. Đầu tư vào công ty liên doanh, liên kết",
+        "row_identity": "balance_sheet|code:252",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "252",
+        "item_name": "1. Đầu tư vào công ty liên doanh, liên kết",
+        "value": 2281222436752.0,
+        "notes_ref": "17",
+        "original_name": "1. Đầu tư vào công ty liên doanh, liên kết",
+        "row_identity": "balance_sheet|code:252",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "253",
         "item_name": "2. Đầu tư góp vốn vào đơn vị khác",
         "value": 3823762975906.0,
         "notes_ref": "6",
-        "original_name": "2. Đầu tư góp vốn vào đơn vị khác"
+        "original_name": "2. Đầu tư góp vốn vào đơn vị khác",
+        "row_identity": "balance_sheet|code:253",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "253",
+        "item_name": "2. Đầu tư góp vốn vào đơn vị khác",
+        "value": 3393737969842.0,
+        "notes_ref": "6",
+        "original_name": "2. Đầu tư góp vốn vào đơn vị khác",
+        "row_identity": "balance_sheet|code:253",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "254",
         "item_name": "3. Dự phòng đầu tư tài chính dài hạn",
         "value": -2667027499149.0,
         "notes_ref": null,
-        "original_name": "3. Dự phòng đầu tư tài chính dài hạn"
+        "original_name": "3. Dự phòng đầu tư tài chính dài hạn",
+        "row_identity": "balance_sheet|code:254",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "254",
+        "item_name": "3. Dự phòng đầu tư tài chính dài hạn",
+        "value": -2357065169334.0,
+        "notes_ref": null,
+        "original_name": "3. Dự phòng đầu tư tài chính dài hạn",
+        "row_identity": "balance_sheet|code:254",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "255",
         "item_name": "4. Đầu tư nắm giữ đến ngày đáo hạn",
-        "value": 0.0,
+        "value": 200000000.0,
         "notes_ref": null,
-        "original_name": "4. Đầu tư nắm giữ đến ngày đáo hạn"
+        "original_name": "4. Đầu tư nắm giữ đến ngày đáo hạn",
+        "row_identity": "balance_sheet|code:255",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "260",
         "item_name": "V. Tài sản dài hạn khác",
         "value": 5749495414786.0,
         "notes_ref": null,
-        "original_name": "V. Tài sản dài hạn khác"
+        "original_name": "V. Tài sản dài hạn khác",
+        "row_identity": "balance_sheet|code:260",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "260",
+        "item_name": "V. Tài sản dài hạn khác",
+        "value": 5438413518284.0,
+        "notes_ref": null,
+        "original_name": "V. Tài sản dài hạn khác",
+        "row_identity": "balance_sheet|code:260",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "261",
         "item_name": "1. Chi phí trả trước dài hạn",
         "value": 4200230383066.0,
         "notes_ref": "14",
-        "original_name": "1. Chi phí trả trước dài hạn"
+        "original_name": "1. Chi phí trả trước dài hạn",
+        "row_identity": "balance_sheet|code:261",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "261",
+        "item_name": "1. Chi phí trả trước dài hạn",
+        "value": 3765187625417.0,
+        "notes_ref": "14",
+        "original_name": "1. Chi phí trả trước dài hạn",
+        "row_identity": "balance_sheet|code:261",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "262",
         "item_name": "2. Tài sản thuế thu nhập hoãn lại",
         "value": 533534765559.0,
         "notes_ref": null,
-        "original_name": "2. Tài sản thuế thu nhập hoãn lại"
+        "original_name": "2. Tài sản thuế thu nhập hoãn lại",
+        "row_identity": "balance_sheet|code:262",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "262",
+        "item_name": "2. Tài sản thuế thu nhập hoãn lại",
+        "value": 575767686189.0,
+        "notes_ref": null,
+        "original_name": "2. Tài sản thuế thu nhập hoãn lại",
+        "row_identity": "balance_sheet|code:262",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "269",
         "item_name": "3. Lợi thế thương mại",
         "value": 1015730266161.0,
         "notes_ref": "15",
-        "original_name": "3. Lợi thế thương mại"
+        "original_name": "3. Lợi thế thương mại",
+        "row_identity": "balance_sheet|code:269",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "269",
+        "item_name": "3. Lợi thế thương mại",
+        "value": 1097458206678.0,
+        "notes_ref": "15",
+        "original_name": "3. Lợi thế thương mại",
+        "row_identity": "balance_sheet|code:269",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "270",
         "item_name": "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)",
         "value": 88089621779862.0,
         "notes_ref": null,
-        "original_name": "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)"
+        "original_name": "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)",
+        "row_identity": "balance_sheet|code:270",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "270",
+        "item_name": "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)",
+        "value": 71999995678620.0,
+        "notes_ref": null,
+        "original_name": "TỔNG CỘNG TÀI SẢN (270 = 100 + 200)",
+        "row_identity": "balance_sheet|code:270",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "300",
         "item_name": "C. NỢ PHẢI TRẢ",
         "value": 44338155487272.0,
         "notes_ref": null,
-        "original_name": "C. NỢ PHẢI TRẢ"
+        "original_name": "C. NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|code:300",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "300",
+        "item_name": "C. NỢ PHẢI TRẢ",
+        "value": 36272455573820.0,
+        "notes_ref": null,
+        "original_name": "C. NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|code:300",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "310",
         "item_name": "I. Nợ ngắn hạn",
         "value": 41552785100161.0,
         "notes_ref": null,
-        "original_name": "I. Nợ ngắn hạn"
+        "original_name": "I. Nợ ngắn hạn",
+        "row_identity": "balance_sheet|code:310",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "310",
+        "item_name": "I. Nợ ngắn hạn",
+        "value": 34836184067740.0,
+        "notes_ref": null,
+        "original_name": "I. Nợ ngắn hạn",
+        "row_identity": "balance_sheet|code:310",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "311",
         "item_name": "1. Phải trả người bán ngắn hạn",
         "value": 3837081438126.0,
         "notes_ref": "18",
-        "original_name": "1. Phải trả người bán ngắn hạn"
+        "original_name": "1. Phải trả người bán ngắn hạn",
+        "row_identity": "balance_sheet|code:311",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "311",
+        "item_name": "1. Phải trả người bán ngắn hạn",
+        "value": 4423912840298.0,
+        "notes_ref": "18",
+        "original_name": "1. Phải trả người bán ngắn hạn",
+        "row_identity": "balance_sheet|code:311",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "312",
         "item_name": "2. Người mua trả tiền trước ngắn hạn",
         "value": 761332738428.0,
         "notes_ref": null,
-        "original_name": "2. Người mua trả tiền trước ngắn hạn"
+        "original_name": "2. Người mua trả tiền trước ngắn hạn",
+        "row_identity": "balance_sheet|code:312",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "312",
+        "item_name": "2. Người mua trả tiền trước ngắn hạn",
+        "value": 562066755666.0,
+        "notes_ref": null,
+        "original_name": "2. Người mua trả tiền trước ngắn hạn",
+        "row_identity": "balance_sheet|code:312",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "313",
         "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
         "value": 2192156678455.0,
         "notes_ref": "19",
-        "original_name": "3. Thuế và các khoản phải nộp Nhà nước"
+        "original_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "row_identity": "balance_sheet|code:313",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "313",
+        "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "value": 2298821801748.0,
+        "notes_ref": "19",
+        "original_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "row_identity": "balance_sheet|code:313",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "314",
         "item_name": "4. Phải trả người lao động",
         "value": 5678410841285.0,
         "notes_ref": null,
-        "original_name": "4. Phải trả người lao động"
+        "original_name": "4. Phải trả người lao động",
+        "row_identity": "balance_sheet|code:314",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "314",
+        "item_name": "4. Phải trả người lao động",
+        "value": 4341013546853.0,
+        "notes_ref": null,
+        "original_name": "4. Phải trả người lao động",
+        "row_identity": "balance_sheet|code:314",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "315",
         "item_name": "5. Chi phí phải trả ngắn hạn",
         "value": 1843426377372.0,
         "notes_ref": "20",
-        "original_name": "5. Chi phí phải trả ngắn hạn"
+        "original_name": "5. Chi phí phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:315",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "315",
+        "item_name": "5. Chi phí phải trả ngắn hạn",
+        "value": 1241089122260.0,
+        "notes_ref": "20",
+        "original_name": "5. Chi phí phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:315",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "317",
         "item_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
         "value": 85650109236.0,
         "notes_ref": null,
-        "original_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng"
+        "original_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+        "row_identity": "balance_sheet|code:317",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "317",
+        "item_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+        "value": 92738882375.0,
+        "notes_ref": null,
+        "original_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+        "row_identity": "balance_sheet|code:317",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "318",
         "item_name": "7. Doanh thu chưa thực hiện ngắn hạn",
         "value": 4230708251601.0,
         "notes_ref": "21",
-        "original_name": "7. Doanh thu chưa thực hiện ngắn hạn"
+        "original_name": "7. Doanh thu chưa thực hiện ngắn hạn",
+        "row_identity": "balance_sheet|code:318",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "318",
+        "item_name": "7. Doanh thu chưa thực hiện ngắn hạn",
+        "value": 4224649366399.0,
+        "notes_ref": "21",
+        "original_name": "7. Doanh thu chưa thực hiện ngắn hạn",
+        "row_identity": "balance_sheet|code:318",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "319",
         "item_name": "8. Phải trả ngắn hạn khác",
         "value": 1014673786632.0,
         "notes_ref": "22",
-        "original_name": "8. Phải trả ngắn hạn khác"
+        "original_name": "8. Phải trả ngắn hạn khác",
+        "row_identity": "balance_sheet|code:319",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "319",
+        "item_name": "8. Phải trả ngắn hạn khác",
+        "value": 874015837328.0,
+        "notes_ref": "22",
+        "original_name": "8. Phải trả ngắn hạn khác",
+        "row_identity": "balance_sheet|code:319",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "320",
         "item_name": "9. Vay và nợ thuê tài chính ngắn hạn",
         "value": 19169697497955.0,
         "notes_ref": "23",
-        "original_name": "9. Vay và nợ thuê tài chính ngắn hạn"
+        "original_name": "9. Vay và nợ thuê tài chính ngắn hạn",
+        "row_identity": "balance_sheet|code:320",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "320",
+        "item_name": "9. Vay và nợ thuê tài chính ngắn hạn",
+        "value": 14446238451323.0,
+        "notes_ref": "23",
+        "original_name": "9. Vay và nợ thuê tài chính ngắn hạn",
+        "row_identity": "balance_sheet|code:320",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "321",
         "item_name": "10. Dự phòng phải trả ngắn hạn",
         "value": 578298384069.0,
         "notes_ref": null,
-        "original_name": "10. Dự phòng phải trả ngắn hạn"
+        "original_name": "10. Dự phòng phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:321",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "321",
+        "item_name": "10. Dự phòng phải trả ngắn hạn",
+        "value": 496600145127.0,
+        "notes_ref": null,
+        "original_name": "10. Dự phòng phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:321",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "322",
         "item_name": "11. Quỹ khen thưởng, phúc lợi",
         "value": 2161348997002.0,
         "notes_ref": null,
-        "original_name": "11. Quỹ khen thưởng, phúc lợi"
+        "original_name": "11. Quỹ khen thưởng, phúc lợi",
+        "row_identity": "balance_sheet|code:322",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "322",
+        "item_name": "11. Quỹ khen thưởng, phúc lợi",
+        "value": 1835037318363.0,
+        "notes_ref": null,
+        "original_name": "11. Quỹ khen thưởng, phúc lợi",
+        "row_identity": "balance_sheet|code:322",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "330",
         "item_name": "II. Nợ dài hạn",
         "value": 2785370387111.0,
         "notes_ref": null,
-        "original_name": "II. Nợ dài hạn"
+        "original_name": "II. Nợ dài hạn",
+        "row_identity": "balance_sheet|code:330",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "330",
+        "item_name": "II. Nợ dài hạn",
+        "value": 1436271506080.0,
+        "notes_ref": null,
+        "original_name": "II. Nợ dài hạn",
+        "row_identity": "balance_sheet|code:330",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "336",
         "item_name": "1. Doanh thu chưa thực hiện dài hạn",
         "value": 127529003367.0,
         "notes_ref": "21",
-        "original_name": "1. Doanh thu chưa thực hiện dài hạn"
+        "original_name": "1. Doanh thu chưa thực hiện dài hạn",
+        "row_identity": "balance_sheet|code:336",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "336",
+        "item_name": "1. Doanh thu chưa thực hiện dài hạn",
+        "value": 131344534204.0,
+        "notes_ref": "21",
+        "original_name": "1. Doanh thu chưa thực hiện dài hạn",
+        "row_identity": "balance_sheet|code:336",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "337",
         "item_name": "2. Phải trả dài hạn khác",
         "value": 149213186822.0,
         "notes_ref": "22",
-        "original_name": "2. Phải trả dài hạn khác"
+        "original_name": "2. Phải trả dài hạn khác",
+        "row_identity": "balance_sheet|code:337",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "337",
+        "item_name": "2. Phải trả dài hạn khác",
+        "value": 183788442785.0,
+        "notes_ref": "22",
+        "original_name": "2. Phải trả dài hạn khác",
+        "row_identity": "balance_sheet|code:337",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "338",
         "item_name": "3. Vay và nợ thuê tài chính dài hạn",
         "value": 1903789988184.0,
         "notes_ref": "23",
-        "original_name": "3. Vay và nợ thuê tài chính dài hạn"
+        "original_name": "3. Vay và nợ thuê tài chính dài hạn",
+        "row_identity": "balance_sheet|code:338",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "338",
+        "item_name": "3. Vay và nợ thuê tài chính dài hạn",
+        "value": 501115537075.0,
+        "notes_ref": "23",
+        "original_name": "3. Vay và nợ thuê tài chính dài hạn",
+        "row_identity": "balance_sheet|code:338",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "341",
         "item_name": "4. Thuế thu nhập hoãn lại phải trả",
         "value": 198787701984.0,
         "notes_ref": null,
-        "original_name": "4. Thuế thu nhập hoãn lại phải trả"
+        "original_name": "4. Thuế thu nhập hoãn lại phải trả",
+        "row_identity": "balance_sheet|code:341",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "341",
+        "item_name": "4. Thuế thu nhập hoãn lại phải trả",
+        "value": 356966680614.0,
+        "notes_ref": null,
+        "original_name": "4. Thuế thu nhập hoãn lại phải trả",
+        "row_identity": "balance_sheet|code:341",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "342",
         "item_name": "5. Dự phòng phải trả dài hạn",
         "value": 405858410471.0,
         "notes_ref": null,
-        "original_name": "5. Dự phòng phải trả dài hạn"
+        "original_name": "5. Dự phòng phải trả dài hạn",
+        "row_identity": "balance_sheet|code:342",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "342",
+        "item_name": "5. Dự phòng phải trả dài hạn",
+        "value": 262864215119.0,
+        "notes_ref": null,
+        "original_name": "5. Dự phòng phải trả dài hạn",
+        "row_identity": "balance_sheet|code:342",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "343",
         "item_name": "6. Quỹ phát triển khoa học và công nghệ",
         "value": 192096283.0,
         "notes_ref": null,
-        "original_name": "6. Quỹ phát triển khoa học và công nghệ"
+        "original_name": "6. Quỹ phát triển khoa học và công nghệ",
+        "row_identity": "balance_sheet|code:343",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "343",
+        "item_name": "6. Quỹ phát triển khoa học và công nghệ",
+        "value": 192096283.0,
+        "notes_ref": null,
+        "original_name": "6. Quỹ phát triển khoa học và công nghệ",
+        "row_identity": "balance_sheet|code:343",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "400",
         "item_name": "D. VỐN CHỦ SỞ HỮU",
         "value": 43751466292590.0,
         "notes_ref": null,
-        "original_name": "D. VỐN CHỦ SỞ HỮU"
+        "original_name": "D. VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|code:400",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "400",
+        "item_name": "D. VỐN CHỦ SỞ HỮU",
+        "value": 35727540104800.0,
+        "notes_ref": null,
+        "original_name": "D. VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|code:400",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "410",
         "item_name": "I. Vốn chủ sở hữu",
         "value": 43748716292590.0,
         "notes_ref": "24",
-        "original_name": "I. Vốn chủ sở hữu"
+        "original_name": "I. Vốn chủ sở hữu",
+        "row_identity": "balance_sheet|code:410",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "410",
+        "item_name": "I. Vốn chủ sở hữu",
+        "value": 35724790104800.0,
+        "notes_ref": "24",
+        "original_name": "I. Vốn chủ sở hữu",
+        "row_identity": "balance_sheet|code:410",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "411",
         "item_name": "1. Vốn góp của chủ sở hữu",
         "value": 17035071210000.0,
         "notes_ref": null,
-        "original_name": "1. Vốn góp của chủ sở hữu"
+        "original_name": "1. Vốn góp của chủ sở hữu",
+        "row_identity": "balance_sheet|code:411",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "411",
+        "item_name": "1. Vốn góp của chủ sở hữu",
+        "value": 14710691830000.0,
+        "notes_ref": null,
+        "original_name": "1. Vốn góp của chủ sở hữu",
+        "row_identity": "balance_sheet|code:411",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "411a",
         "item_name": "- Cổ phiếu phổ thông có quyền biểu quyết",
         "value": 17035071210000.0,
         "notes_ref": null,
-        "original_name": "- Cổ phiếu phổ thông có quyền biểu quyết"
+        "original_name": "- Cổ phiếu phổ thông có quyền biểu quyết",
+        "row_identity": "balance_sheet|code:411a",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "411a",
+        "item_name": "- Cổ phiếu phổ thông có quyền biểu quyết",
+        "value": 14710691830000.0,
+        "notes_ref": null,
+        "original_name": "- Cổ phiếu phổ thông có quyền biểu quyết",
+        "row_identity": "balance_sheet|code:411a",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "412",
         "item_name": "2. Thặng dư vốn cổ phần",
         "value": 49713213411.0,
         "notes_ref": null,
-        "original_name": "2. Thặng dư vốn cổ phần"
+        "original_name": "2. Thặng dư vốn cổ phần",
+        "row_identity": "balance_sheet|code:412",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "412",
+        "item_name": "2. Thặng dư vốn cổ phần",
+        "value": 49713213411.0,
+        "notes_ref": null,
+        "original_name": "2. Thặng dư vốn cổ phần",
+        "row_identity": "balance_sheet|code:412",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "414",
         "item_name": "3. Vốn khác của chủ sở hữu",
         "value": 3499547369952.0,
         "notes_ref": null,
-        "original_name": "3. Vốn khác của chủ sở hữu"
+        "original_name": "3. Vốn khác của chủ sở hữu",
+        "row_identity": "balance_sheet|code:414",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "414",
+        "item_name": "3. Vốn khác của chủ sở hữu",
+        "value": 1929012703454.0,
+        "notes_ref": null,
+        "original_name": "3. Vốn khác của chủ sở hữu",
+        "row_identity": "balance_sheet|code:414",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "417",
         "item_name": "4. Chênh lệch tỷ giá hối đoái",
         "value": -70194908319.0,
         "notes_ref": null,
-        "original_name": "4. Chênh lệch tỷ giá hối đoái"
+        "original_name": "4. Chênh lệch tỷ giá hối đoái",
+        "row_identity": "balance_sheet|code:417",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "417",
+        "item_name": "4. Chênh lệch tỷ giá hối đoái",
+        "value": -49485560860.0,
+        "notes_ref": null,
+        "original_name": "4. Chênh lệch tỷ giá hối đoái",
+        "row_identity": "balance_sheet|code:417",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "418",
         "item_name": "5. Quỹ đầu tư phát triển",
         "value": 1556932891952.0,
         "notes_ref": null,
-        "original_name": "5. Quỹ đầu tư phát triển"
+        "original_name": "5. Quỹ đầu tư phát triển",
+        "row_identity": "balance_sheet|code:418",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "418",
+        "item_name": "5. Quỹ đầu tư phát triển",
+        "value": 2033289141535.0,
+        "notes_ref": null,
+        "original_name": "5. Quỹ đầu tư phát triển",
+        "row_identity": "balance_sheet|code:418",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "420",
         "item_name": "6. Quỹ khác thuộc vốn chủ sở hữu",
         "value": 88263628887.0,
         "notes_ref": null,
-        "original_name": "6. Quỹ khác thuộc vốn chủ sở hữu"
+        "original_name": "6. Quỹ khác thuộc vốn chủ sở hữu",
+        "row_identity": "balance_sheet|code:420",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
       },
       {
         "item_code": "421",
         "item_name": "7. Lợi nhuận sau thuế chưa phân phối",
         "value": 14324284500434.0,
         "notes_ref": null,
-        "original_name": "7. Lợi nhuận sau thuế chưa phân phối"
+        "original_name": "7. Lợi nhuận sau thuế chưa phân phối",
+        "row_identity": "balance_sheet|code:421",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "421",
+        "item_name": "7. Lợi nhuận sau thuế chưa phân phối",
+        "value": 11030528671431.0,
+        "notes_ref": null,
+        "original_name": "7. Lợi nhuận sau thuế chưa phân phối",
+        "row_identity": "balance_sheet|code:421",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "421a",
         "item_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước",
         "value": 7399799985311.0,
         "notes_ref": null,
-        "original_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước"
+        "original_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước",
+        "row_identity": "balance_sheet|code:421a",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "421a",
+        "item_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước",
+        "value": 5458228109134.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước",
+        "row_identity": "balance_sheet|code:421a",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "421b",
         "item_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này",
         "value": 6924484515123.0,
         "notes_ref": null,
-        "original_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này"
+        "original_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này",
+        "row_identity": "balance_sheet|code:421b",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "421b",
+        "item_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này",
+        "value": 5572300562297.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế chưa phân phối kỳ này",
+        "row_identity": "balance_sheet|code:421b",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "429",
         "item_name": "8. Lợi ích cổ đông không kiểm soát",
         "value": 7265098386273.0,
         "notes_ref": null,
-        "original_name": "8. Lợi ích cổ đông không kiểm soát"
+        "original_name": "8. Lợi ích cổ đông không kiểm soát",
+        "row_identity": "balance_sheet|code:429",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "429",
+        "item_name": "8. Lợi ích cổ đông không kiểm soát",
+        "value": 5933309621004.0,
+        "notes_ref": null,
+        "original_name": "8. Lợi ích cổ đông không kiểm soát",
+        "row_identity": "balance_sheet|code:429",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "430",
         "item_name": "II. Nguồn kinh phí và quỹ khác",
-        "value": 275000000.0,
+        "value": 2750000000.0,
         "notes_ref": null,
-        "original_name": "II. Nguồn kinh phí và quỹ khác"
+        "original_name": "II. Nguồn kinh phí và quỹ khác",
+        "row_identity": "balance_sheet|code:430",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "430",
+        "item_name": "II. Nguồn kinh phí và quỹ khác",
+        "value": 2750000000.0,
+        "notes_ref": null,
+        "original_name": "II. Nguồn kinh phí và quỹ khác",
+        "row_identity": "balance_sheet|code:430",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "431",
         "item_name": "1. Nguồn kinh phí",
-        "value": 275000000.0,
+        "value": 2750000000.0,
         "notes_ref": null,
-        "original_name": "1. Nguồn kinh phí"
+        "original_name": "1. Nguồn kinh phí",
+        "row_identity": "balance_sheet|code:431",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "431",
+        "item_name": "1. Nguồn kinh phí",
+        "value": 2750000000.0,
+        "notes_ref": null,
+        "original_name": "1. Nguồn kinh phí",
+        "row_identity": "balance_sheet|code:431",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "440",
         "item_name": "TỔNG CỘNG NGUỒN VỐN (440=300+400)",
         "value": 88089621779862.0,
         "notes_ref": null,
-        "original_name": "TỔNG CỘNG NGUỒN VỐN (440=300+400)"
+        "original_name": "TỔNG CỘNG NGUỒN VỐN (440=300+400)",
+        "row_identity": "balance_sheet|code:440",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "440",
+        "item_name": "TỔNG CỘNG NGUỒN VỐN (440=300+400)",
+        "value": 71999995678620.0,
+        "notes_ref": null,
+        "original_name": "TỔNG CỘNG NGUỒN VỐN (440=300+400)",
+        "row_identity": "balance_sheet|code:440",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       }
     ]
   },
@@ -589,163 +1648,922 @@
       {
         "item_code": "01",
         "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
-        "value": 70207689409.081,
+        "value": 20258866135395.0,
         "notes_ref": null,
-        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ"
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:01",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "01",
+        "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 17651065378939.0,
+        "notes_ref": null,
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:01",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "01",
+        "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 70207689409081.0,
+        "notes_ref": null,
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:01",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "01",
+        "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 62962652134635.0,
+        "notes_ref": null,
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:01",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "02",
         "item_name": "2 Các khoản giảm trừ",
-        "value": 94863843.843,
+        "value": 33415777986.0,
         "notes_ref": null,
-        "original_name": "2 Các khoản giảm trừ"
+        "original_name": "2 Các khoản giảm trừ",
+        "row_identity": "income_statement|code:02",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "02",
+        "item_name": "2 Các khoản giảm trừ",
+        "value": 43247573048.0,
+        "notes_ref": null,
+        "original_name": "2 Các khoản giảm trừ",
+        "row_identity": "income_statement|code:02",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "02",
+        "item_name": "2 Các khoản giảm trừ",
+        "value": 94863843843.0,
+        "notes_ref": null,
+        "original_name": "2 Các khoản giảm trừ",
+        "row_identity": "income_statement|code:02",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "02",
+        "item_name": "2 Các khoản giảm trừ",
+        "value": 113857783268.0,
+        "notes_ref": null,
+        "original_name": "2 Các khoản giảm trừ",
+        "row_identity": "income_statement|code:02",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "10",
         "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
-        "value": 70112825565.238,
+        "value": 20225450357409.0,
         "notes_ref": "25",
-        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ"
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 17607817805891.0,
+        "notes_ref": "25",
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 70112825565238.0,
+        "notes_ref": "25",
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 62848794351367.0,
+        "notes_ref": "25",
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "11",
         "item_name": "4 Giá vốn hàng bán",
-        "value": 44217420808.74,
+        "value": 13171300027162.0,
         "notes_ref": "26",
-        "original_name": "4 Giá vốn hàng bán"
+        "original_name": "4 Giá vốn hàng bán",
+        "row_identity": "income_statement|code:11",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4 Giá vốn hàng bán",
+        "value": 11230248103366.0,
+        "notes_ref": "26",
+        "original_name": "4 Giá vốn hàng bán",
+        "row_identity": "income_statement|code:11",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4 Giá vốn hàng bán",
+        "value": 44217420808740.0,
+        "notes_ref": "26",
+        "original_name": "4 Giá vốn hàng bán",
+        "row_identity": "income_statement|code:11",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4 Giá vốn hàng bán",
+        "value": 39150445981451.0,
+        "notes_ref": "26",
+        "original_name": "4 Giá vốn hàng bán",
+        "row_identity": "income_statement|code:11",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "20",
         "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
-        "value": 25895404756.498,
+        "value": 7054150330247.0,
         "notes_ref": null,
-        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 6377569702525.0,
+        "notes_ref": null,
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 25895404756498.0,
+        "notes_ref": null,
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 23698348369916.0,
+        "notes_ref": null,
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "21",
         "item_name": "6 Doanh thu hoạt động tài chính",
-        "value": 2977156211.981,
+        "value": 553701777401.0,
         "notes_ref": "27",
-        "original_name": "6 Doanh thu hoạt động tài chính"
+        "original_name": "6 Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6 Doanh thu hoạt động tài chính",
+        "value": 582674583940.0,
+        "notes_ref": "27",
+        "original_name": "6 Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6 Doanh thu hoạt động tài chính",
+        "value": 2977156211981.0,
+        "notes_ref": "27",
+        "original_name": "6 Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6 Doanh thu hoạt động tài chính",
+        "value": 1935749115305.0,
+        "notes_ref": "27",
+        "original_name": "6 Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "22",
         "item_name": "7 Chi phí tài chính",
-        "value": 1672045216.743,
+        "value": 476741111428.0,
         "notes_ref": "28",
-        "original_name": "7 Chi phí tài chính"
+        "original_name": "7 Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7 Chi phí tài chính",
+        "value": 831375395433.0,
+        "notes_ref": "28",
+        "original_name": "7 Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7 Chi phí tài chính",
+        "value": 1672045216743.0,
+        "notes_ref": "28",
+        "original_name": "7 Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7 Chi phí tài chính",
+        "value": 1811547381981.0,
+        "notes_ref": "28",
+        "original_name": "7 Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "23",
         "item_name": "Trong đó: chi phí lãi vay",
-        "value": 809759601.156,
+        "value": 207025852637.0,
         "notes_ref": null,
-        "original_name": "Trong đó: chi phí lãi vay"
+        "original_name": "Trong đó: chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "23",
+        "item_name": "Trong đó: chi phí lãi vay",
+        "value": 134854268998.0,
+        "notes_ref": null,
+        "original_name": "Trong đó: chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "23",
+        "item_name": "Trong đó: chi phí lãi vay",
+        "value": 809759601156.0,
+        "notes_ref": null,
+        "original_name": "Trong đó: chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "23",
+        "item_name": "Trong đó: chi phí lãi vay",
+        "value": 551639361786.0,
+        "notes_ref": null,
+        "original_name": "Trong đó: chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "24",
         "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
-        "value": 658024835.314,
+        "value": 283746137174.0,
         "notes_ref": null,
-        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết"
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "row_identity": "income_statement|code:24",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "24",
+        "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "value": 116894742188.0,
+        "notes_ref": null,
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "row_identity": "income_statement|code:24",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "24",
+        "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "value": 658024835314.0,
+        "notes_ref": null,
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "row_identity": "income_statement|code:24",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "24",
+        "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "value": 392531256272.0,
+        "notes_ref": null,
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "row_identity": "income_statement|code:24",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "25",
         "item_name": "9 Chi phí bán hàng",
-        "value": 7580840383.875,
+        "value": 2045175725062.0,
         "notes_ref": null,
-        "original_name": "9 Chi phí bán hàng"
+        "original_name": "9 Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "25",
+        "item_name": "9 Chi phí bán hàng",
+        "value": 1594938073232.0,
+        "notes_ref": null,
+        "original_name": "9 Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "25",
+        "item_name": "9 Chi phí bán hàng",
+        "value": 7580840383875.0,
+        "notes_ref": null,
+        "original_name": "9 Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "25",
+        "item_name": "9 Chi phí bán hàng",
+        "value": 6115961971783.0,
+        "notes_ref": null,
+        "original_name": "9 Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "26",
         "item_name": "10 Chi phí quản lý doanh nghiệp",
-        "value": 7330786998.828,
+        "value": 1892395897574.0,
         "notes_ref": null,
-        "original_name": "10 Chi phí quản lý doanh nghiệp"
+        "original_name": "10 Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "26",
+        "item_name": "10 Chi phí quản lý doanh nghiệp",
+        "value": 1729950878232.0,
+        "notes_ref": null,
+        "original_name": "10 Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "26",
+        "item_name": "10 Chi phí quản lý doanh nghiệp",
+        "value": 7330786998828.0,
+        "notes_ref": null,
+        "original_name": "10 Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "26",
+        "item_name": "10 Chi phí quản lý doanh nghiệp",
+        "value": 7074038614774.0,
+        "notes_ref": null,
+        "original_name": "10 Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "30",
         "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
-        "value": 12946913204.347,
+        "value": 3477285510758.0,
         "notes_ref": null,
-        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh"
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "30",
+        "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 2920874681756.0,
+        "notes_ref": null,
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "30",
+        "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 12946913204347.0,
+        "notes_ref": null,
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "30",
+        "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 11025080772955.0,
+        "notes_ref": null,
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "31",
         "item_name": "12 Thu nhập khác",
-        "value": 142891794.416,
+        "value": 40088826860.0,
         "notes_ref": null,
-        "original_name": "12 Thu nhập khác"
+        "original_name": "12 Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "31",
+        "item_name": "12 Thu nhập khác",
+        "value": 68481380356.0,
+        "notes_ref": null,
+        "original_name": "12 Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "31",
+        "item_name": "12 Thu nhập khác",
+        "value": 142891794416.0,
+        "notes_ref": null,
+        "original_name": "12 Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "31",
+        "item_name": "12 Thu nhập khác",
+        "value": 175450599740.0,
+        "notes_ref": null,
+        "original_name": "12 Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "32",
         "item_name": "13 Chi phí khác",
-        "value": 50935701.459,
+        "value": 18969733713.0,
         "notes_ref": null,
-        "original_name": "13 Chi phí khác"
+        "original_name": "13 Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "32",
+        "item_name": "13 Chi phí khác",
+        "value": 30860884043.0,
+        "notes_ref": null,
+        "original_name": "13 Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "32",
+        "item_name": "13 Chi phí khác",
+        "value": 50935701459.0,
+        "notes_ref": null,
+        "original_name": "13 Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "32",
+        "item_name": "13 Chi phí khác",
+        "value": 130864954876.0,
+        "notes_ref": null,
+        "original_name": "13 Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "40",
         "item_name": "14 Lợi nhuận khác",
-        "value": 91956092.957,
+        "value": 21119093147.0,
         "notes_ref": null,
-        "original_name": "14 Lợi nhuận khác"
+        "original_name": "14 Lợi nhuận khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "40",
+        "item_name": "14 Lợi nhuận khác",
+        "value": 37620496313.0,
+        "notes_ref": null,
+        "original_name": "14 Lợi nhuận khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "40",
+        "item_name": "14 Lợi nhuận khác",
+        "value": 91956092957.0,
+        "notes_ref": null,
+        "original_name": "14 Lợi nhuận khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "40",
+        "item_name": "14 Lợi nhuận khác",
+        "value": 44585644864.0,
+        "notes_ref": null,
+        "original_name": "14 Lợi nhuận khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "50",
         "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
-        "value": 13038869297.304,
+        "value": 3498404603905.0,
         "notes_ref": null,
-        "original_name": "15 Tổng lợi nhuận kế toán trước thuế"
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "50",
+        "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "value": 2958495178069.0,
+        "notes_ref": null,
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "50",
+        "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "value": 13038869297304.0,
+        "notes_ref": null,
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "50",
+        "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "value": 11069666417819.0,
+        "notes_ref": null,
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "51",
         "item_name": "16 Chi phí thuế TNDN hiện hành",
-        "value": 1918759235.4,
+        "value": 487956258402.0,
         "notes_ref": null,
-        "original_name": "16 Chi phí thuế TNDN hiện hành"
+        "original_name": "16 Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "51",
+        "item_name": "16 Chi phí thuế TNDN hiện hành",
+        "value": 530698618727.0,
+        "notes_ref": null,
+        "original_name": "16 Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "51",
+        "item_name": "16 Chi phí thuế TNDN hiện hành",
+        "value": 1918759235400.0,
+        "notes_ref": null,
+        "original_name": "16 Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "51",
+        "item_name": "16 Chi phí thuế TNDN hiện hành",
+        "value": 1922927614658.0,
+        "notes_ref": null,
+        "original_name": "16 Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "52",
         "item_name": "17 Chi phí thuế TNDN hoãn lại",
-        "value": -105413134.287,
+        "value": 22299782949.0,
         "notes_ref": null,
-        "original_name": "17 Chi phí thuế TNDN hoãn lại"
+        "original_name": "17 Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "52",
+        "item_name": "17 Chi phí thuế TNDN hoãn lại",
+        "value": -73049924176.0,
+        "notes_ref": null,
+        "original_name": "17 Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "52",
+        "item_name": "17 Chi phí thuế TNDN hoãn lại",
+        "value": -105413134287.0,
+        "notes_ref": null,
+        "original_name": "17 Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "52",
+        "item_name": "17 Chi phí thuế TNDN hoãn lại",
+        "value": -280683727283.0,
+        "notes_ref": null,
+        "original_name": "17 Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "60",
         "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
-        "value": 11225523196.191,
+        "value": 2988148562554.0,
         "notes_ref": null,
-        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp"
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|code:60",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "60",
+        "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "value": 2500846483518.0,
+        "notes_ref": null,
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|code:60",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "60",
+        "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "value": 11225523196191.0,
+        "notes_ref": null,
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|code:60",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "60",
+        "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "value": 9427422530444.0,
+        "notes_ref": null,
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|code:60",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "61",
         "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
-        "value": 9369309781.066,
+        "value": 2502704371686.0,
         "notes_ref": null,
-        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ"
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "61",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "value": 2094725967705.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "61",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "value": 9369309781066.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "61",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "value": 7856767812178.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "62",
         "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
-        "value": 1856213415.125,
+        "value": 485444190868.0,
         "notes_ref": null,
-        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát"
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "62",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "value": 406120515813.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "62",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "value": 1856213415125.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "62",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "value": 1570654718266.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "70",
         "item_name": "19 Lãi cơ bản trên cổ phiếu",
-        "value": 5211.0,
+        "value": 1.168,
         "notes_ref": null,
-        "original_name": "19 Lãi cơ bản trên cổ phiếu"
+        "original_name": "19 Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "70",
+        "item_name": "19 Lãi cơ bản trên cổ phiếu",
+        "value": 868.0,
+        "notes_ref": null,
+        "original_name": "19 Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "70",
+        "item_name": "19 Lãi cơ bản trên cổ phiếu",
+        "value": 5.211,
+        "notes_ref": null,
+        "original_name": "19 Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "70",
+        "item_name": "19 Lãi cơ bản trên cổ phiếu",
+        "value": 4.292,
+        "notes_ref": null,
+        "original_name": "19 Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "71",
         "item_name": "20 Lãi suy giảm trên cổ phiếu",
-        "value": 5211.0,
+        "value": 1.168,
         "notes_ref": null,
-        "original_name": "20 Lãi suy giảm trên cổ phiếu"
+        "original_name": "20 Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "71",
+        "item_name": "20 Lãi suy giảm trên cổ phiếu",
+        "value": 868.0,
+        "notes_ref": null,
+        "original_name": "20 Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "71",
+        "item_name": "20 Lãi suy giảm trên cổ phiếu",
+        "value": 5.211,
+        "notes_ref": null,
+        "original_name": "20 Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "71",
+        "item_name": "20 Lãi suy giảm trên cổ phiếu",
+        "value": 4.292,
+        "notes_ref": null,
+        "original_name": "20 Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       }
     ]
   },
@@ -756,231 +2574,660 @@
         "item_name": "1. Lợi nhuận trước thuế",
         "value": 13038869297304.0,
         "notes_ref": null,
-        "original_name": "1. Lợi nhuận trước thuế"
+        "original_name": "1. Lợi nhuận trước thuế",
+        "row_identity": "cash_flow|code:01",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "01",
+        "item_name": "1. Lợi nhuận trước thuế",
+        "value": 11069666417819.0,
+        "notes_ref": null,
+        "original_name": "1. Lợi nhuận trước thuế",
+        "row_identity": "cash_flow|code:01",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "02",
         "item_name": "Khấu hao tài sản cố định và bất động sản đầu tư",
         "value": 2899524576284.0,
         "notes_ref": null,
-        "original_name": "Khấu hao tài sản cố định và bất động sản đầu tư"
+        "original_name": "Khấu hao tài sản cố định và bất động sản đầu tư",
+        "row_identity": "cash_flow|code:02",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "02",
+        "item_name": "Khấu hao tài sản cố định và bất động sản đầu tư",
+        "value": 2535298475665.0,
+        "notes_ref": null,
+        "original_name": "Khấu hao tài sản cố định và bất động sản đầu tư",
+        "row_identity": "cash_flow|code:02",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "03",
         "item_name": "Các khoản dự phòng",
         "value": 630206282654.0,
         "notes_ref": null,
-        "original_name": "Các khoản dự phòng"
+        "original_name": "Các khoản dự phòng",
+        "row_identity": "cash_flow|code:03",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "03",
+        "item_name": "Các khoản dự phòng",
+        "value": 1148951390915.0,
+        "notes_ref": null,
+        "original_name": "Các khoản dự phòng",
+        "row_identity": "cash_flow|code:03",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "04",
         "item_name": "(Lãi)/lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ",
         "value": -27609502100.0,
         "notes_ref": null,
-        "original_name": "(Lãi)/lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ"
+        "original_name": "(Lãi)/lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ",
+        "row_identity": "cash_flow|code:04",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "04",
+        "item_name": "(Lãi)/lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ",
+        "value": 46311803197.0,
+        "notes_ref": null,
+        "original_name": "(Lãi)/lỗ chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ",
+        "row_identity": "cash_flow|code:04",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "05",
         "item_name": "(Lãi)/lỗ từ hoạt động đầu tư",
         "value": -2575851739008.0,
         "notes_ref": null,
-        "original_name": "(Lãi)/lỗ từ hoạt động đầu tư"
+        "original_name": "(Lãi)/lỗ từ hoạt động đầu tư",
+        "row_identity": "cash_flow|code:05",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "05",
+        "item_name": "(Lãi)/lỗ từ hoạt động đầu tư",
+        "value": -1725022480893.0,
+        "notes_ref": null,
+        "original_name": "(Lãi)/lỗ từ hoạt động đầu tư",
+        "row_identity": "cash_flow|code:05",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "06",
         "item_name": "Chi phí lãi vay",
         "value": 809759601156.0,
         "notes_ref": null,
-        "original_name": "Chi phí lãi vay"
+        "original_name": "Chi phí lãi vay",
+        "row_identity": "cash_flow|code:06",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "06",
+        "item_name": "Chi phí lãi vay",
+        "value": 551639361786.0,
+        "notes_ref": null,
+        "original_name": "Chi phí lãi vay",
+        "row_identity": "cash_flow|code:06",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "08",
         "item_name": "3. Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
         "value": 14774898516290.0,
         "notes_ref": null,
-        "original_name": "3. Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động"
+        "original_name": "3. Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+        "row_identity": "cash_flow|code:08",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "08",
+        "item_name": "3. Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+        "value": 13626844968489.0,
+        "notes_ref": null,
+        "original_name": "3. Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động",
+        "row_identity": "cash_flow|code:08",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "09",
         "item_name": "(Tăng)/giảm các khoản phải thu",
         "value": -2814386533122.0,
         "notes_ref": null,
-        "original_name": "(Tăng)/giảm các khoản phải thu"
+        "original_name": "(Tăng)/giảm các khoản phải thu",
+        "row_identity": "cash_flow|code:09",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "09",
+        "item_name": "(Tăng)/giảm các khoản phải thu",
+        "value": -1913663012505.0,
+        "notes_ref": null,
+        "original_name": "(Tăng)/giảm các khoản phải thu",
+        "row_identity": "cash_flow|code:09",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "10",
         "item_name": "(Tăng)/giảm hàng tồn kho",
         "value": -308490497072.0,
         "notes_ref": null,
-        "original_name": "(Tăng)/giảm hàng tồn kho"
+        "original_name": "(Tăng)/giảm hàng tồn kho",
+        "row_identity": "cash_flow|code:10",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "10",
+        "item_name": "(Tăng)/giảm hàng tồn kho",
+        "value": -265267561842.0,
+        "notes_ref": null,
+        "original_name": "(Tăng)/giảm hàng tồn kho",
+        "row_identity": "cash_flow|code:10",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "11",
         "item_name": "Tăng/(giảm) các khoản phải trả (Không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)",
         "value": 2571038998247.0,
         "notes_ref": null,
-        "original_name": "Tăng/(giảm) các khoản phải trả (Không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)"
+        "original_name": "Tăng/(giảm) các khoản phải trả (Không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)",
+        "row_identity": "cash_flow|code:11",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "11",
+        "item_name": "Tăng/(giảm) các khoản phải trả (Không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)",
+        "value": 2875571263689.0,
+        "notes_ref": null,
+        "original_name": "Tăng/(giảm) các khoản phải trả (Không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)",
+        "row_identity": "cash_flow|code:11",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "12",
         "item_name": "(Tăng)/giảm chi phí trả trước",
         "value": -594700689216.0,
         "notes_ref": null,
-        "original_name": "(Tăng)/giảm chi phí trả trước"
+        "original_name": "(Tăng)/giảm chi phí trả trước",
+        "row_identity": "cash_flow|code:12",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "12",
+        "item_name": "(Tăng)/giảm chi phí trả trước",
+        "value": -393964502357.0,
+        "notes_ref": null,
+        "original_name": "(Tăng)/giảm chi phí trả trước",
+        "row_identity": "cash_flow|code:12",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "14",
         "item_name": "Tiền lãi vay đã trả",
         "value": -812474254533.0,
         "notes_ref": null,
-        "original_name": "Tiền lãi vay đã trả"
+        "original_name": "Tiền lãi vay đã trả",
+        "row_identity": "cash_flow|code:14",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "14",
+        "item_name": "Tiền lãi vay đã trả",
+        "value": -607154747076.0,
+        "notes_ref": null,
+        "original_name": "Tiền lãi vay đã trả",
+        "row_identity": "cash_flow|code:14",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "15",
         "item_name": "Thuế thu nhập doanh nghiệp đã nộp",
         "value": -2247181121435.0,
         "notes_ref": null,
-        "original_name": "Thuế thu nhập doanh nghiệp đã nộp"
+        "original_name": "Thuế thu nhập doanh nghiệp đã nộp",
+        "row_identity": "cash_flow|code:15",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "15",
+        "item_name": "Thuế thu nhập doanh nghiệp đã nộp",
+        "value": -1209921507569.0,
+        "notes_ref": null,
+        "original_name": "Thuế thu nhập doanh nghiệp đã nộp",
+        "row_identity": "cash_flow|code:15",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "17",
         "item_name": "Tiền chi khác cho hoạt động kinh doanh",
         "value": -379701452613.0,
         "notes_ref": null,
-        "original_name": "Tiền chi khác cho hoạt động kinh doanh"
+        "original_name": "Tiền chi khác cho hoạt động kinh doanh",
+        "row_identity": "cash_flow|code:17",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "17",
+        "item_name": "Tiền chi khác cho hoạt động kinh doanh",
+        "value": -408667711961.0,
+        "notes_ref": null,
+        "original_name": "Tiền chi khác cho hoạt động kinh doanh",
+        "row_identity": "cash_flow|code:17",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "20",
         "item_name": "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
         "value": 10189002966546.0,
         "notes_ref": null,
-        "original_name": "Lưu chuyển tiền thuần từ hoạt động kinh doanh"
+        "original_name": "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
+        "row_identity": "cash_flow|code:20",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "20",
+        "item_name": "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
+        "value": 11703777188868.0,
+        "notes_ref": null,
+        "original_name": "Lưu chuyển tiền thuần từ hoạt động kinh doanh",
+        "row_identity": "cash_flow|code:20",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "21",
         "item_name": "1. Tiền chi mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác",
         "value": -5150805120441.0,
         "notes_ref": null,
-        "original_name": "1. Tiền chi mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác"
+        "original_name": "1. Tiền chi mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác",
+        "row_identity": "cash_flow|code:21",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "21",
+        "item_name": "1. Tiền chi mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác",
+        "value": -3275312325702.0,
+        "notes_ref": null,
+        "original_name": "1. Tiền chi mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác",
+        "row_identity": "cash_flow|code:21",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "22",
         "item_name": "2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác",
         "value": 7326054509.0,
         "notes_ref": null,
-        "original_name": "2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác"
+        "original_name": "2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác",
+        "row_identity": "cash_flow|code:22",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "22",
+        "item_name": "2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác",
+        "value": 14227383215.0,
+        "notes_ref": null,
+        "original_name": "2. Tiền thu thanh lý, nhượng bán TSCĐ và các tài sản dài hạn khác",
+        "row_identity": "cash_flow|code:22",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "23",
         "item_name": "3. Tiền chi cho vay, mua công cụ nợ của đơn vị khác",
         "value": -56994522823806.0,
         "notes_ref": null,
-        "original_name": "3. Tiền chi cho vay, mua công cụ nợ của đơn vị khác"
+        "original_name": "3. Tiền chi cho vay, mua công cụ nợ của đơn vị khác",
+        "row_identity": "cash_flow|code:23",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "23",
+        "item_name": "3. Tiền chi cho vay, mua công cụ nợ của đơn vị khác",
+        "value": -41956569113369.0,
+        "notes_ref": null,
+        "original_name": "3. Tiền chi cho vay, mua công cụ nợ của đơn vị khác",
+        "row_identity": "cash_flow|code:23",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "24",
         "item_name": "4. Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác",
         "value": 49164792969282.0,
         "notes_ref": null,
-        "original_name": "4. Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác"
+        "original_name": "4. Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác",
+        "row_identity": "cash_flow|code:24",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "24",
+        "item_name": "4. Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác",
+        "value": 36283758374630.0,
+        "notes_ref": null,
+        "original_name": "4. Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác",
+        "row_identity": "cash_flow|code:24",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "25",
         "item_name": "5. Tiền chi đầu tư góp vốn vào các đơn vị khác",
         "value": -710700052777.0,
         "notes_ref": null,
-        "original_name": "5. Tiền chi đầu tư góp vốn vào các đơn vị khác"
+        "original_name": "5. Tiền chi đầu tư góp vốn vào các đơn vị khác",
+        "row_identity": "cash_flow|code:25",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "25",
+        "item_name": "5. Tiền chi đầu tư góp vốn vào các đơn vị khác",
+        "value": -1106193484800.0,
+        "notes_ref": null,
+        "original_name": "5. Tiền chi đầu tư góp vốn vào các đơn vị khác",
+        "row_identity": "cash_flow|code:25",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "26",
         "item_name": "6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác",
         "value": 23532256656.0,
         "notes_ref": null,
-        "original_name": "6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác"
+        "original_name": "6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác",
+        "row_identity": "cash_flow|code:26",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "26",
+        "item_name": "6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác",
+        "value": 48102486048.0,
+        "notes_ref": null,
+        "original_name": "6. Tiền thu hồi đầu tư góp vốn vào đơn vị khác",
+        "row_identity": "cash_flow|code:26",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "27",
         "item_name": "7. Thu lãi tiền cho vay, cổ tức và lợi nhuận được chia",
         "value": 2000759047362.0,
         "notes_ref": null,
-        "original_name": "7. Thu lãi tiền cho vay, cổ tức và lợi nhuận được chia"
+        "original_name": "7. Thu lãi tiền cho vay, cổ tức và lợi nhuận được chia",
+        "row_identity": "cash_flow|code:27",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "27",
+        "item_name": "7. Thu lãi tiền cho vay, cổ tức và lợi nhuận được chia",
+        "value": 1530174506877.0,
+        "notes_ref": null,
+        "original_name": "7. Thu lãi tiền cho vay, cổ tức và lợi nhuận được chia",
+        "row_identity": "cash_flow|code:27",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "30",
         "item_name": "Lưu chuyển tiền thuần từ hoạt động đầu tư",
         "value": -11659617669215.0,
         "notes_ref": null,
-        "original_name": "Lưu chuyển tiền thuần từ hoạt động đầu tư"
+        "original_name": "Lưu chuyển tiền thuần từ hoạt động đầu tư",
+        "row_identity": "cash_flow|code:30",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "30",
+        "item_name": "Lưu chuyển tiền thuần từ hoạt động đầu tư",
+        "value": -8461812173101.0,
+        "notes_ref": null,
+        "original_name": "Lưu chuyển tiền thuần từ hoạt động đầu tư",
+        "row_identity": "cash_flow|code:30",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "31",
         "item_name": "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
         "value": 1196235184778.0,
         "notes_ref": null,
-        "original_name": "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
+        "original_name": "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
+        "row_identity": "cash_flow|code:31",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "31",
+        "item_name": "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
+        "value": 163342989874.0,
+        "notes_ref": null,
+        "original_name": "1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",
+        "row_identity": "cash_flow|code:31",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "33",
         "item_name": "2. Tiền thu từ đi vay",
         "value": 43070812885074.0,
         "notes_ref": null,
-        "original_name": "2. Tiền thu từ đi vay"
+        "original_name": "2. Tiền thu từ đi vay",
+        "row_identity": "cash_flow|code:33",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "33",
+        "item_name": "2. Tiền thu từ đi vay",
+        "value": 30946282706201.0,
+        "notes_ref": null,
+        "original_name": "2. Tiền thu từ đi vay",
+        "row_identity": "cash_flow|code:33",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "34",
         "item_name": "3. Tiền trả nợ gốc vay",
         "value": -36890984827601.0,
         "notes_ref": null,
-        "original_name": "3. Tiền trả nợ gốc vay"
+        "original_name": "3. Tiền trả nợ gốc vay",
+        "row_identity": "cash_flow|code:34",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "34",
+        "item_name": "3. Tiền trả nợ gốc vay",
+        "value": -30013226682923.0,
+        "notes_ref": null,
+        "original_name": "3. Tiền trả nợ gốc vay",
+        "row_identity": "cash_flow|code:34",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "35",
         "item_name": "4. Tiền trả nợ gốc thuê tài chính",
         "value": -986795056.0,
         "notes_ref": null,
-        "original_name": "4. Tiền trả nợ gốc thuê tài chính"
+        "original_name": "4. Tiền trả nợ gốc thuê tài chính",
+        "row_identity": "cash_flow|code:35",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "35",
+        "item_name": "4. Tiền trả nợ gốc thuê tài chính",
+        "value": -2305346865.0,
+        "notes_ref": null,
+        "original_name": "4. Tiền trả nợ gốc thuê tài chính",
+        "row_identity": "cash_flow|code:35",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "36",
         "item_name": "5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",
         "value": -4573753577663.0,
         "notes_ref": null,
-        "original_name": "5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu"
+        "original_name": "5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",
+        "row_identity": "cash_flow|code:36",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "36",
+        "item_name": "5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",
+        "value": -3291859792121.0,
+        "notes_ref": null,
+        "original_name": "5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",
+        "row_identity": "cash_flow|code:36",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "40",
         "item_name": "Lưu chuyển tiền thuần từ hoạt động tài chính",
         "value": 2801322869532.0,
         "notes_ref": null,
-        "original_name": "Lưu chuyển tiền thuần từ hoạt động tài chính"
+        "original_name": "Lưu chuyển tiền thuần từ hoạt động tài chính",
+        "row_identity": "cash_flow|code:40",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "40",
+        "item_name": "Lưu chuyển tiền thuần từ hoạt động tài chính",
+        "value": -2197766125834.0,
+        "notes_ref": null,
+        "original_name": "Lưu chuyển tiền thuần từ hoạt động tài chính",
+        "row_identity": "cash_flow|code:40",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "50",
         "item_name": "Lưu chuyển tiền thuần trong kỳ (50=20+30+40)",
         "value": 1330708166863.0,
         "notes_ref": null,
-        "original_name": "Lưu chuyển tiền thuần trong kỳ (50=20+30+40)"
+        "original_name": "Lưu chuyển tiền thuần trong kỳ (50=20+30+40)",
+        "row_identity": "cash_flow|code:50",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "50",
+        "item_name": "Lưu chuyển tiền thuần trong kỳ (50=20+30+40)",
+        "value": 1044198889933.0,
+        "notes_ref": null,
+        "original_name": "Lưu chuyển tiền thuần trong kỳ (50=20+30+40)",
+        "row_identity": "cash_flow|code:50",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "60",
         "item_name": "Tiền và tương đương tiền đầu kỳ",
         "value": 9315440438884.0,
         "notes_ref": null,
-        "original_name": "Tiền và tương đương tiền đầu kỳ"
+        "original_name": "Tiền và tương đương tiền đầu kỳ",
+        "row_identity": "cash_flow|code:60",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "60",
+        "item_name": "Tiền và tương đương tiền đầu kỳ",
+        "value": 8279156683221.0,
+        "notes_ref": null,
+        "original_name": "Tiền và tương đương tiền đầu kỳ",
+        "row_identity": "cash_flow|code:60",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "61",
         "item_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
         "value": -105966964827.0,
         "notes_ref": null,
-        "original_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ"
+        "original_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+        "row_identity": "cash_flow|code:61",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "61",
+        "item_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+        "value": -7915134270.0,
+        "notes_ref": null,
+        "original_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+        "row_identity": "cash_flow|code:61",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "70",
         "item_name": "Tiền và tương đương tiền cuối kỳ (70=50+60)",
         "value": 10540181640920.0,
         "notes_ref": null,
-        "original_name": "Tiền và tương đương tiền cuối kỳ (70=50+60)"
+        "original_name": "Tiền và tương đương tiền cuối kỳ (70=50+60)",
+        "row_identity": "cash_flow|code:70",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "70",
+        "item_name": "Tiền và tương đương tiền cuối kỳ (70=50+60)",
+        "value": 9315440438884.0,
+        "notes_ref": null,
+        "original_name": "Tiền và tương đương tiền cuối kỳ (70=50+60)",
+        "row_identity": "cash_flow|code:70",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       }
     ]
   }

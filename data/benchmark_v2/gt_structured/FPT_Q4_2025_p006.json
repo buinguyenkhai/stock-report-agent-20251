@@ -6,140 +6,400 @@
         "item_name": "C. NỢ PHẢI TRẢ",
         "value": 44338155487272.0,
         "notes_ref": null,
-        "original_name": "C. NỢ PHẢI TRẢ"
+        "original_name": "C. NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|code:300",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "300",
+        "item_name": "C. NỢ PHẢI TRẢ",
+        "value": 36272455573820.0,
+        "notes_ref": null,
+        "original_name": "C. NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|code:300",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "310",
         "item_name": "I. Nợ ngắn hạn",
         "value": 41552785100161.0,
         "notes_ref": null,
-        "original_name": "I. Nợ ngắn hạn"
+        "original_name": "I. Nợ ngắn hạn",
+        "row_identity": "balance_sheet|code:310",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "310",
+        "item_name": "I. Nợ ngắn hạn",
+        "value": 34836184067740.0,
+        "notes_ref": null,
+        "original_name": "I. Nợ ngắn hạn",
+        "row_identity": "balance_sheet|code:310",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "311",
         "item_name": "1. Phải trả người bán ngắn hạn",
         "value": 3837081438126.0,
         "notes_ref": "18",
-        "original_name": "1. Phải trả người bán ngắn hạn"
+        "original_name": "1. Phải trả người bán ngắn hạn",
+        "row_identity": "balance_sheet|code:311",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "311",
+        "item_name": "1. Phải trả người bán ngắn hạn",
+        "value": 4423912840298.0,
+        "notes_ref": "18",
+        "original_name": "1. Phải trả người bán ngắn hạn",
+        "row_identity": "balance_sheet|code:311",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "312",
         "item_name": "2. Người mua trả tiền trước ngắn hạn",
         "value": 761332738428.0,
         "notes_ref": null,
-        "original_name": "2. Người mua trả tiền trước ngắn hạn"
+        "original_name": "2. Người mua trả tiền trước ngắn hạn",
+        "row_identity": "balance_sheet|code:312",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "312",
+        "item_name": "2. Người mua trả tiền trước ngắn hạn",
+        "value": 562066755666.0,
+        "notes_ref": null,
+        "original_name": "2. Người mua trả tiền trước ngắn hạn",
+        "row_identity": "balance_sheet|code:312",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "313",
         "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
         "value": 2192156678455.0,
         "notes_ref": "19",
-        "original_name": "3. Thuế và các khoản phải nộp Nhà nước"
+        "original_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "row_identity": "balance_sheet|code:313",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "313",
+        "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "value": 2298821801748.0,
+        "notes_ref": "19",
+        "original_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "row_identity": "balance_sheet|code:313",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "314",
         "item_name": "4. Phải trả người lao động",
         "value": 5678410841285.0,
         "notes_ref": null,
-        "original_name": "4. Phải trả người lao động"
+        "original_name": "4. Phải trả người lao động",
+        "row_identity": "balance_sheet|code:314",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "314",
+        "item_name": "4. Phải trả người lao động",
+        "value": 4341013546853.0,
+        "notes_ref": null,
+        "original_name": "4. Phải trả người lao động",
+        "row_identity": "balance_sheet|code:314",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "315",
         "item_name": "5. Chi phí phải trả ngắn hạn",
         "value": 1843426377372.0,
         "notes_ref": "20",
-        "original_name": "5. Chi phí phải trả ngắn hạn"
+        "original_name": "5. Chi phí phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:315",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "315",
+        "item_name": "5. Chi phí phải trả ngắn hạn",
+        "value": 1241089122260.0,
+        "notes_ref": "20",
+        "original_name": "5. Chi phí phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:315",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "317",
         "item_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
         "value": 85650109236.0,
         "notes_ref": null,
-        "original_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng"
+        "original_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+        "row_identity": "balance_sheet|code:317",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "317",
+        "item_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+        "value": 92738882375.0,
+        "notes_ref": null,
+        "original_name": "6. Phải trả theo tiến độ kế hoạch hợp đồng xây dựng",
+        "row_identity": "balance_sheet|code:317",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "318",
         "item_name": "7. Doanh thu chưa thực hiện ngắn hạn",
         "value": 4230708251601.0,
         "notes_ref": "21",
-        "original_name": "7. Doanh thu chưa thực hiện ngắn hạn"
+        "original_name": "7. Doanh thu chưa thực hiện ngắn hạn",
+        "row_identity": "balance_sheet|code:318",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "318",
+        "item_name": "7. Doanh thu chưa thực hiện ngắn hạn",
+        "value": 4224649366399.0,
+        "notes_ref": "21",
+        "original_name": "7. Doanh thu chưa thực hiện ngắn hạn",
+        "row_identity": "balance_sheet|code:318",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "319",
         "item_name": "8. Phải trả ngắn hạn khác",
         "value": 1014673786632.0,
         "notes_ref": "22",
-        "original_name": "8. Phải trả ngắn hạn khác"
+        "original_name": "8. Phải trả ngắn hạn khác",
+        "row_identity": "balance_sheet|code:319",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "319",
+        "item_name": "8. Phải trả ngắn hạn khác",
+        "value": 874015837328.0,
+        "notes_ref": "22",
+        "original_name": "8. Phải trả ngắn hạn khác",
+        "row_identity": "balance_sheet|code:319",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "320",
         "item_name": "9. Vay và nợ thuê tài chính ngắn hạn",
         "value": 19169697497955.0,
         "notes_ref": "23",
-        "original_name": "9. Vay và nợ thuê tài chính ngắn hạn"
+        "original_name": "9. Vay và nợ thuê tài chính ngắn hạn",
+        "row_identity": "balance_sheet|code:320",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "320",
+        "item_name": "9. Vay và nợ thuê tài chính ngắn hạn",
+        "value": 14446238451323.0,
+        "notes_ref": "23",
+        "original_name": "9. Vay và nợ thuê tài chính ngắn hạn",
+        "row_identity": "balance_sheet|code:320",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "321",
         "item_name": "10. Dự phòng phải trả ngắn hạn",
         "value": 578298384069.0,
         "notes_ref": null,
-        "original_name": "10. Dự phòng phải trả ngắn hạn"
+        "original_name": "10. Dự phòng phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:321",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "321",
+        "item_name": "10. Dự phòng phải trả ngắn hạn",
+        "value": 496600145127.0,
+        "notes_ref": null,
+        "original_name": "10. Dự phòng phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:321",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "322",
         "item_name": "11. Quỹ khen thưởng, phúc lợi",
         "value": 2161348997002.0,
         "notes_ref": null,
-        "original_name": "11. Quỹ khen thưởng, phúc lợi"
+        "original_name": "11. Quỹ khen thưởng, phúc lợi",
+        "row_identity": "balance_sheet|code:322",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "322",
+        "item_name": "11. Quỹ khen thưởng, phúc lợi",
+        "value": 1835037318363.0,
+        "notes_ref": null,
+        "original_name": "11. Quỹ khen thưởng, phúc lợi",
+        "row_identity": "balance_sheet|code:322",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "330",
         "item_name": "II. Nợ dài hạn",
         "value": 2785370387111.0,
         "notes_ref": null,
-        "original_name": "II. Nợ dài hạn"
+        "original_name": "II. Nợ dài hạn",
+        "row_identity": "balance_sheet|code:330",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "330",
+        "item_name": "II. Nợ dài hạn",
+        "value": 1436271506080.0,
+        "notes_ref": null,
+        "original_name": "II. Nợ dài hạn",
+        "row_identity": "balance_sheet|code:330",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "336",
         "item_name": "1. Doanh thu chưa thực hiện dài hạn",
         "value": 127529003367.0,
         "notes_ref": "21",
-        "original_name": "1. Doanh thu chưa thực hiện dài hạn"
+        "original_name": "1. Doanh thu chưa thực hiện dài hạn",
+        "row_identity": "balance_sheet|code:336",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "336",
+        "item_name": "1. Doanh thu chưa thực hiện dài hạn",
+        "value": 131344534204.0,
+        "notes_ref": "21",
+        "original_name": "1. Doanh thu chưa thực hiện dài hạn",
+        "row_identity": "balance_sheet|code:336",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "337",
         "item_name": "2. Phải trả dài hạn khác",
         "value": 149213186822.0,
         "notes_ref": "22",
-        "original_name": "2. Phải trả dài hạn khác"
+        "original_name": "2. Phải trả dài hạn khác",
+        "row_identity": "balance_sheet|code:337",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "337",
+        "item_name": "2. Phải trả dài hạn khác",
+        "value": 183788442785.0,
+        "notes_ref": "22",
+        "original_name": "2. Phải trả dài hạn khác",
+        "row_identity": "balance_sheet|code:337",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "338",
         "item_name": "3. Vay và nợ thuê tài chính dài hạn",
         "value": 1903789988184.0,
         "notes_ref": "23",
-        "original_name": "3. Vay và nợ thuê tài chính dài hạn"
+        "original_name": "3. Vay và nợ thuê tài chính dài hạn",
+        "row_identity": "balance_sheet|code:338",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "338",
+        "item_name": "3. Vay và nợ thuê tài chính dài hạn",
+        "value": 501115537075.0,
+        "notes_ref": "23",
+        "original_name": "3. Vay và nợ thuê tài chính dài hạn",
+        "row_identity": "balance_sheet|code:338",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "341",
         "item_name": "4. Thuế thu nhập hoãn lại phải trả",
         "value": 198787701984.0,
         "notes_ref": null,
-        "original_name": "4. Thuế thu nhập hoãn lại phải trả"
+        "original_name": "4. Thuế thu nhập hoãn lại phải trả",
+        "row_identity": "balance_sheet|code:341",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "341",
+        "item_name": "4. Thuế thu nhập hoãn lại phải trả",
+        "value": 356966680614.0,
+        "notes_ref": null,
+        "original_name": "4. Thuế thu nhập hoãn lại phải trả",
+        "row_identity": "balance_sheet|code:341",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "342",
         "item_name": "5. Dự phòng phải trả dài hạn",
         "value": 405858410471.0,
         "notes_ref": null,
-        "original_name": "5. Dự phòng phải trả dài hạn"
+        "original_name": "5. Dự phòng phải trả dài hạn",
+        "row_identity": "balance_sheet|code:342",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "342",
+        "item_name": "5. Dự phòng phải trả dài hạn",
+        "value": 262864215119.0,
+        "notes_ref": null,
+        "original_name": "5. Dự phòng phải trả dài hạn",
+        "row_identity": "balance_sheet|code:342",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       },
       {
         "item_code": "343",
         "item_name": "6. Quỹ phát triển khoa học và công nghệ",
         "value": 192096283.0,
         "notes_ref": null,
-        "original_name": "6. Quỹ phát triển khoa học và công nghệ"
+        "original_name": "6. Quỹ phát triển khoa học và công nghệ",
+        "row_identity": "balance_sheet|code:343",
+        "column_label": "31/12/2025",
+        "period_key": "2025FY"
+      },
+      {
+        "item_code": "343",
+        "item_name": "6. Quỹ phát triển khoa học và công nghệ",
+        "value": 192096283.0,
+        "notes_ref": null,
+        "original_name": "6. Quỹ phát triển khoa học và công nghệ",
+        "row_identity": "balance_sheet|code:343",
+        "column_label": "31/12/2024",
+        "period_key": "2024FY"
       }
     ]
   },

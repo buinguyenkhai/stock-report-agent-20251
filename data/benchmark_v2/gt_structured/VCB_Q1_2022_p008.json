@@ -3,7 +3,288 @@
     "items": []
   },
   "income_statement": {
-    "items": []
+    "items": [
+      {
+        "item_code": "7",
+        "item_name": "Chi phí thuế TNDN hiện hành",
+        "value": -1986469000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:7",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Chi phí thuế TNDN hiện hành",
+        "value": -1724252000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:7",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Chi phí thuế TNDN hiện hành",
+        "value": -1986469000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:7",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Chi phí thuế TNDN hiện hành",
+        "value": -1724252000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:7",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Chi phí thuế TNDN hoãn lại",
+        "value": 3639000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:8",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Chi phí thuế TNDN hoãn lại",
+        "value": 308000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:8",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Chi phí thuế TNDN hoãn lại",
+        "value": 3639000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:8",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Chi phí thuế TNDN hoãn lại",
+        "value": 308000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:8",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Chi phí thuế TNDN",
+        "value": -1982830000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Chi phí thuế TNDN",
+        "value": -1723944000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Chi phí thuế TNDN",
+        "value": -1982830000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Chi phí thuế TNDN",
+        "value": -1723944000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XII",
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 7967426000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|code:XII",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XII",
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 6907522000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|code:XII",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XII",
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 7967426000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|code:XII",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XII",
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 6907522000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|code:XII",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XIII",
+        "item_name": "Lợi ích của cổ đông không kiểm soát",
+        "value": -5242000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:XIII",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XIII",
+        "item_name": "Lợi ích của cổ đông không kiểm soát",
+        "value": -4944000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:XIII",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XIII",
+        "item_name": "Lợi ích của cổ đông không kiểm soát",
+        "value": -5242000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:XIII",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XIII",
+        "item_name": "Lợi ích của cổ đông không kiểm soát",
+        "value": -4944000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:XIII",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XIV",
+        "item_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "value": 7962184000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "row_identity": "income_statement|code:XIV",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XIV",
+        "item_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "value": 6902578000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "row_identity": "income_statement|code:XIV",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XIV",
+        "item_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "value": 7962184000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "row_identity": "income_statement|code:XIV",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XIV",
+        "item_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "value": 6902578000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "row_identity": "income_statement|code:XIV",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XV",
+        "item_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "value": 1682.0,
+        "notes_ref": "15",
+        "original_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "row_identity": "income_statement|code:XV",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XV",
+        "item_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "value": 1459.0,
+        "notes_ref": "15",
+        "original_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "row_identity": "income_statement|code:XV",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XV",
+        "item_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "value": 1682.0,
+        "notes_ref": "15",
+        "original_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "row_identity": "income_statement|code:XV",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XV",
+        "item_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "value": 1459.0,
+        "notes_ref": "15",
+        "original_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "row_identity": "income_statement|code:XV",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      }
+    ]
   },
   "cash_flow": {
     "items": []

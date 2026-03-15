@@ -9,14 +9,20 @@
         "item_name": "19. Lãi cơ bản trên cổ phiếu",
         "value": -815000000.0,
         "notes_ref": null,
-        "original_name": "19. Lãi cơ bản trên cổ phiếu"
+        "original_name": "19. Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Năm nay",
+        "period_key": "2021FY"
       },
       {
         "item_code": "70",
         "item_name": "19. Lãi cơ bản trên cổ phiếu",
-        "value": 1691000000.0,
+        "value": 1691000.0,
         "notes_ref": null,
-        "original_name": "19. Lãi cơ bản trên cổ phiếu"
+        "original_name": "19. Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Năm trước",
+        "period_key": "2020FY"
       }
     ]
   },

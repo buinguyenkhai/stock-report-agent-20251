@@ -1,7 +1,7 @@
 {
   "last_csv_save_at": "2026-03-15T04:01:22.128798+00:00",
-  "updated_at": "2026-03-15T08:04:37.650880+00:00",
-  "last_generated_at": "2026-03-15T08:04:37.645370+00:00",
+  "updated_at": "2026-03-15T15:57:33.602439+00:00",
+  "last_generated_at": "2026-03-15T15:57:33.596932+00:00",
   "last_generated_paths": {
     "gt_markdown_path": "data\\benchmark_v2\\gt_markdown\\VIC_Q4_2021_p010.md",
     "gt_structured_path": "data\\benchmark_v2\\gt_structured\\VIC_Q4_2021_p010.json",
@@ -9,5 +9,16 @@
   },
   "report_unit_detected": "override:VIC_Q4_2021",
   "report_unit_multiplier": 1000000.0,
-  "value_unit_normalized_to": "VND"
+  "value_unit_normalized_to": "VND",
+  "structured_contract_version": "row_identity_column_period_v1",
+  "rows_migrated_from_cells": true,
+  "rows_migrated_at": "2026-03-15T15:57:33.597932+00:00",
+  "legacy_row_count": 84,
+  "migrated_row_count": 84,
+  "value_column_labels": [
+    "Quý IV năm 2021",
+    "Quý IV năm 2020",
+    "Năm nay",
+    "Năm trước"
+  ]
 }

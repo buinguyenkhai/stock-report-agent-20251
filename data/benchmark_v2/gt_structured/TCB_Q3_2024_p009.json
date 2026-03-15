@@ -7,170 +7,962 @@
       {
         "item_code": null,
         "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "value": 15168282000000.0,
+        "notes_ref": "24",
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "row_identity": "income_statement|name:Thu nhập lãi và các khoản thu nhập tương tự|note:24",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "value": 14532716000000.0,
+        "notes_ref": "24",
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "row_identity": "income_statement|name:Thu nhập lãi và các khoản thu nhập tương tự|note:24",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
         "value": 45024501000000.0,
         "notes_ref": "24",
-        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự"
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "row_identity": "income_statement|name:Thu nhập lãi và các khoản thu nhập tương tự|note:24",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "value": 42262779000000.0,
+        "notes_ref": "24",
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "row_identity": "income_statement|name:Thu nhập lãi và các khoản thu nhập tương tự|note:24",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí lãi và các chi phí tương tự",
+        "value": -6239606000000.0,
+        "notes_ref": "25",
+        "original_name": "Chi phí lãi và các chi phí tương tự",
+        "row_identity": "income_statement|name:Chi phí lãi và các chi phí tương tự|note:25",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí lãi và các chi phí tương tự",
+        "value": -7260556000000.0,
+        "notes_ref": "25",
+        "original_name": "Chi phí lãi và các chi phí tương tự",
+        "row_identity": "income_statement|name:Chi phí lãi và các chi phí tương tự|note:25",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Chi phí lãi và các chi phí tương tự",
         "value": -18118355000000.0,
         "notes_ref": "25",
-        "original_name": "Chi phí lãi và các chi phí tương tự"
+        "original_name": "Chi phí lãi và các chi phí tương tự",
+        "row_identity": "income_statement|name:Chi phí lãi và các chi phí tương tự|note:25",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí lãi và các chi phí tương tự",
+        "value": -22168862000000.0,
+        "notes_ref": "25",
+        "original_name": "Chi phí lãi và các chi phí tương tự",
+        "row_identity": "income_statement|name:Chi phí lãi và các chi phí tương tự|note:25",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi thuần",
+        "value": 8928676000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi thuần",
+        "row_identity": "income_statement|name:Thu nhập lãi thuần",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi thuần",
+        "value": 7272160000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi thuần",
+        "row_identity": "income_statement|name:Thu nhập lãi thuần",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Thu nhập lãi thuần",
         "value": 26906146000000.0,
         "notes_ref": null,
-        "original_name": "Thu nhập lãi thuần"
+        "original_name": "Thu nhập lãi thuần",
+        "row_identity": "income_statement|name:Thu nhập lãi thuần",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập lãi thuần",
+        "value": 20093917000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi thuần",
+        "row_identity": "income_statement|name:Thu nhập lãi thuần",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động dịch vụ",
+        "value": 2675088000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Thu nhập từ hoạt động dịch vụ",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động dịch vụ",
+        "value": 3008697000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Thu nhập từ hoạt động dịch vụ",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Thu nhập từ hoạt động dịch vụ",
         "value": 8699537000000.0,
         "notes_ref": null,
-        "original_name": "Thu nhập từ hoạt động dịch vụ"
+        "original_name": "Thu nhập từ hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Thu nhập từ hoạt động dịch vụ",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động dịch vụ",
+        "value": 8174585000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Thu nhập từ hoạt động dịch vụ",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động dịch vụ",
+        "value": -728305000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Chi phí hoạt động dịch vụ",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động dịch vụ",
+        "value": -753037000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Chi phí hoạt động dịch vụ",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Chi phí hoạt động dịch vụ",
         "value": -2120131000000.0,
         "notes_ref": null,
-        "original_name": "Chi phí hoạt động dịch vụ"
+        "original_name": "Chi phí hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Chi phí hoạt động dịch vụ",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động dịch vụ",
+        "value": -1955439000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Chi phí hoạt động dịch vụ",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ hoạt động dịch vụ",
+        "value": 1946783000000.0,
+        "notes_ref": "26",
+        "original_name": "Lãi thuần từ hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Lãi thuần từ hoạt động dịch vụ|note:26",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ hoạt động dịch vụ",
+        "value": 2255660000000.0,
+        "notes_ref": "26",
+        "original_name": "Lãi thuần từ hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Lãi thuần từ hoạt động dịch vụ|note:26",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Lãi thuần từ hoạt động dịch vụ",
         "value": 6579406000000.0,
         "notes_ref": "26",
-        "original_name": "Lãi thuần từ hoạt động dịch vụ"
+        "original_name": "Lãi thuần từ hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Lãi thuần từ hoạt động dịch vụ|note:26",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ hoạt động dịch vụ",
+        "value": 6219146000000.0,
+        "notes_ref": "26",
+        "original_name": "Lãi thuần từ hoạt động dịch vụ",
+        "row_identity": "income_statement|name:Lãi thuần từ hoạt động dịch vụ|note:26",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
+        "value": 61041000.0,
+        "notes_ref": "27",
+        "original_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
+        "row_identity": "income_statement|name:Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
+        "value": 123789000.0,
+        "notes_ref": "27",
+        "original_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
+        "row_identity": "income_statement|name:Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
         "value": 1016826000000.0,
         "notes_ref": "27",
-        "original_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối"
+        "original_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
+        "row_identity": "income_statement|name:Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
+        "value": -116784000.0,
+        "notes_ref": "27",
+        "original_name": "Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối",
+        "row_identity": "income_statement|name:Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
       },
       {
         "item_code": null,
         "item_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
-        "value": 79300000000.0,
+        "value": -527000000.0,
         "notes_ref": "28",
-        "original_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh"
+        "original_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
+        "row_identity": "income_statement|name:Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
+        "value": -5587000.0,
+        "notes_ref": "28",
+        "original_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
+        "row_identity": "income_statement|name:Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
+        "value": 79300000.0,
+        "notes_ref": "28",
+        "original_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
+        "row_identity": "income_statement|name:Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
+        "value": 32387000.0,
+        "notes_ref": "28",
+        "original_name": "Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh",
+        "row_identity": "income_statement|name:Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
+        "value": 389242000.0,
+        "notes_ref": "29",
+        "original_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
+        "row_identity": "income_statement|name:Lãi thuần từ mua bán chứng khoán đầu tư|note:29",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
+        "value": 634737000.0,
+        "notes_ref": "29",
+        "original_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
+        "row_identity": "income_statement|name:Lãi thuần từ mua bán chứng khoán đầu tư|note:29",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
         "value": 2109206000000.0,
         "notes_ref": "29",
-        "original_name": "Lãi thuần từ mua bán chứng khoán đầu tư"
+        "original_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
+        "row_identity": "income_statement|name:Lãi thuần từ mua bán chứng khoán đầu tư|note:29",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
+        "value": 678305000.0,
+        "notes_ref": "29",
+        "original_name": "Lãi thuần từ mua bán chứng khoán đầu tư",
+        "row_identity": "income_statement|name:Lãi thuần từ mua bán chứng khoán đầu tư|note:29",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động khác",
+        "value": 1986320000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động khác",
+        "row_identity": "income_statement|name:Thu nhập từ hoạt động khác",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động khác",
+        "value": 719642000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động khác",
+        "row_identity": "income_statement|name:Thu nhập từ hoạt động khác",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Thu nhập từ hoạt động khác",
         "value": 5440789000000.0,
         "notes_ref": null,
-        "original_name": "Thu nhập từ hoạt động khác"
+        "original_name": "Thu nhập từ hoạt động khác",
+        "row_identity": "income_statement|name:Thu nhập từ hoạt động khác",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ hoạt động khác",
+        "value": 5235650000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động khác",
+        "row_identity": "income_statement|name:Thu nhập từ hoạt động khác",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động khác",
+        "value": -1563606000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động khác",
+        "row_identity": "income_statement|name:Chi phí hoạt động khác",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động khác",
+        "value": -590358000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động khác",
+        "row_identity": "income_statement|name:Chi phí hoạt động khác",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Chi phí hoạt động khác",
         "value": -4760369000000.0,
         "notes_ref": null,
-        "original_name": "Chi phí hoạt động khác"
+        "original_name": "Chi phí hoạt động khác",
+        "row_identity": "income_statement|name:Chi phí hoạt động khác",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động khác",
+        "value": -3110106000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động khác",
+        "row_identity": "income_statement|name:Chi phí hoạt động khác",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
       },
       {
         "item_code": null,
         "item_name": "Lãi thuần từ hoạt động khác",
-        "value": 680420000000.0,
+        "value": 422714000.0,
         "notes_ref": "30",
-        "original_name": "Lãi thuần từ hoạt động khác"
+        "original_name": "Lãi thuần từ hoạt động khác",
+        "row_identity": "income_statement|name:Lãi thuần từ hoạt động khác|note:30",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ hoạt động khác",
+        "value": 129283999.99999999,
+        "notes_ref": "30",
+        "original_name": "Lãi thuần từ hoạt động khác",
+        "row_identity": "income_statement|name:Lãi thuần từ hoạt động khác|note:30",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ hoạt động khác",
+        "value": 680420000.0,
+        "notes_ref": "30",
+        "original_name": "Lãi thuần từ hoạt động khác",
+        "row_identity": "income_statement|name:Lãi thuần từ hoạt động khác|note:30",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lãi thuần từ hoạt động khác",
+        "value": 2125544000000.0,
+        "notes_ref": "30",
+        "original_name": "Lãi thuần từ hoạt động khác",
+        "row_identity": "income_statement|name:Lãi thuần từ hoạt động khác|note:30",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
       },
       {
         "item_code": null,
         "item_name": "Thu nhập từ góp vốn, mua cổ phần",
-        "value": 64494000000.0,
+        "value": 6406000.0,
         "notes_ref": "31",
-        "original_name": "Thu nhập từ góp vốn, mua cổ phần"
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "row_identity": "income_statement|name:Thu nhập từ góp vốn, mua cổ phần|note:31",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "value": 8450000.0,
+        "notes_ref": "31",
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "row_identity": "income_statement|name:Thu nhập từ góp vốn, mua cổ phần|note:31",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "value": 64494000.0,
+        "notes_ref": "31",
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "row_identity": "income_statement|name:Thu nhập từ góp vốn, mua cổ phần|note:31",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "value": 11123000.0,
+        "notes_ref": "31",
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "row_identity": "income_statement|name:Thu nhập từ góp vốn, mua cổ phần|note:31",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng thu nhập hoạt động",
+        "value": 11754335000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng thu nhập hoạt động",
+        "row_identity": "income_statement|name:Tổng thu nhập hoạt động",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng thu nhập hoạt động",
+        "value": 10418493000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng thu nhập hoạt động",
+        "row_identity": "income_statement|name:Tổng thu nhập hoạt động",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Tổng thu nhập hoạt động",
         "value": 37435798000000.0,
         "notes_ref": null,
-        "original_name": "Tổng thu nhập hoạt động"
+        "original_name": "Tổng thu nhập hoạt động",
+        "row_identity": "income_statement|name:Tổng thu nhập hoạt động",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng thu nhập hoạt động",
+        "value": 29043638000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng thu nhập hoạt động",
+        "row_identity": "income_statement|name:Tổng thu nhập hoạt động",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động",
+        "value": -3430902000000.0,
+        "notes_ref": "32",
+        "original_name": "Chi phí hoạt động",
+        "row_identity": "income_statement|name:Chi phí hoạt động|note:32",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động",
+        "value": -3630731000000.0,
+        "notes_ref": "32",
+        "original_name": "Chi phí hoạt động",
+        "row_identity": "income_statement|name:Chi phí hoạt động|note:32",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Chi phí hoạt động",
         "value": -10629012000000.0,
         "notes_ref": "32",
-        "original_name": "Chi phí hoạt động"
+        "original_name": "Chi phí hoạt động",
+        "row_identity": "income_statement|name:Chi phí hoạt động|note:32",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí hoạt động",
+        "value": -9641707000000.0,
+        "notes_ref": "32",
+        "original_name": "Chi phí hoạt động",
+        "row_identity": "income_statement|name:Chi phí hoạt động|note:32",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "value": 8323433000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|name:Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "value": 6787762000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|name:Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
         "value": 26806786000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng"
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|name:Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "value": 19401931000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|name:Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí dự phòng rủi ro tín dụng",
+        "value": -1109265000000.0,
+        "notes_ref": "33",
+        "original_name": "Chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|name:Chi phí dự phòng rủi ro tín dụng|note:33",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí dự phòng rủi ro tín dụng",
+        "value": -944972000.0,
+        "notes_ref": "33",
+        "original_name": "Chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|name:Chi phí dự phòng rủi ro tín dụng|note:33",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Chi phí dự phòng rủi ro tín dụng",
         "value": -3964450000000.0,
         "notes_ref": "33",
-        "original_name": "Chi phí dự phòng rủi ro tín dụng"
+        "original_name": "Chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|name:Chi phí dự phòng rủi ro tín dụng|note:33",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí dự phòng rủi ro tín dụng",
+        "value": -2286773000000.0,
+        "notes_ref": "33",
+        "original_name": "Chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|name:Chi phí dự phòng rủi ro tín dụng|note:33",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng lợi nhuận trước thuế",
+        "value": 7214168000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng lợi nhuận trước thuế",
+        "row_identity": "income_statement|name:Tổng lợi nhuận trước thuế",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng lợi nhuận trước thuế",
+        "value": 5842790000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng lợi nhuận trước thuế",
+        "row_identity": "income_statement|name:Tổng lợi nhuận trước thuế",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Tổng lợi nhuận trước thuế",
         "value": 22842336000000.0,
         "notes_ref": null,
-        "original_name": "Tổng lợi nhuận trước thuế"
+        "original_name": "Tổng lợi nhuận trước thuế",
+        "row_identity": "income_statement|name:Tổng lợi nhuận trước thuế",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tổng lợi nhuận trước thuế",
+        "value": 17115158000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng lợi nhuận trước thuế",
+        "row_identity": "income_statement|name:Tổng lợi nhuận trước thuế",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+        "value": -1422429000000.0,
+        "notes_ref": "22.1",
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+        "row_identity": "income_statement|name:Chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+        "value": -1177199000000.0,
+        "notes_ref": "22.1",
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+        "row_identity": "income_statement|name:Chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
         "value": -4505335000000.0,
         "notes_ref": "22.1",
-        "original_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành"
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+        "row_identity": "income_statement|name:Chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+        "value": -3411338000000.0,
+        "notes_ref": "22.1",
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp hiện hành",
+        "row_identity": "income_statement|name:Chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
       },
       {
         "item_code": null,
         "item_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
-        "value": 2992000000.0,
+        "value": 1283000.0,
         "notes_ref": "22.3",
-        "original_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại"
+        "original_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+        "row_identity": "income_statement|name:Thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+        "value": 3114000.0,
+        "notes_ref": "22.3",
+        "original_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+        "row_identity": "income_statement|name:Thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+        "value": 2992000.0,
+        "notes_ref": "22.3",
+        "original_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+        "row_identity": "income_statement|name:Thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+        "value": 5431000.0,
+        "notes_ref": "22.3",
+        "original_name": "Thu nhập thuế thu nhập doanh nghiệp hoãn lại",
+        "row_identity": "income_statement|name:Thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí thuế thu nhập doanh nghiệp",
+        "value": -1421146000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|name:Chi phí thuế thu nhập doanh nghiệp",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí thuế thu nhập doanh nghiệp",
+        "value": -1174085000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|name:Chi phí thuế thu nhập doanh nghiệp",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Chi phí thuế thu nhập doanh nghiệp",
         "value": -4502343000000.0,
         "notes_ref": null,
-        "original_name": "Chi phí thuế thu nhập doanh nghiệp"
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|name:Chi phí thuế thu nhập doanh nghiệp",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Chi phí thuế thu nhập doanh nghiệp",
+        "value": -3405907000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|name:Chi phí thuế thu nhập doanh nghiệp",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 5793022000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|name:Lợi nhuận sau thuế",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 4668705000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|name:Lợi nhuận sau thuế",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Lợi nhuận sau thuế",
         "value": 18339993000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận sau thuế"
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|name:Lợi nhuận sau thuế",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 13709251000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|name:Lợi nhuận sau thuế",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
       },
       {
         "item_code": null,
         "item_name": "Lợi ích cổ đông không kiểm soát",
-        "value": -188130000000.0,
+        "value": -55517000.0,
         "notes_ref": null,
-        "original_name": "Lợi ích cổ đông không kiểm soát"
+        "original_name": "Lợi ích cổ đông không kiểm soát",
+        "row_identity": "income_statement|name:Lợi ích cổ đông không kiểm soát",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi ích cổ đông không kiểm soát",
+        "value": -55762000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích cổ đông không kiểm soát",
+        "row_identity": "income_statement|name:Lợi ích cổ đông không kiểm soát",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi ích cổ đông không kiểm soát",
+        "value": -188130000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích cổ đông không kiểm soát",
+        "row_identity": "income_statement|name:Lợi ích cổ đông không kiểm soát",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi ích cổ đông không kiểm soát",
+        "value": -144358000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích cổ đông không kiểm soát",
+        "row_identity": "income_statement|name:Lợi ích cổ đông không kiểm soát",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "value": 5737505000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "row_identity": "income_statement|name:Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "column_label": "Quý III 2024 triệu đồng",
+        "period_key": "2024Q3"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "value": 4612943000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "row_identity": "income_statement|name:Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "column_label": "Quý III 2023 triệu đồng",
+        "period_key": "2023Q3"
       },
       {
         "item_code": null,
         "item_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
         "value": 18151863000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận thuần của cổ đông của Ngân hàng"
+        "original_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "row_identity": "income_statement|name:Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+        "period_key": "2024-09-30"
+      },
+      {
+        "item_code": null,
+        "item_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "value": 13564893000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "row_identity": "income_statement|name:Lợi nhuận thuần của cổ đông của Ngân hàng",
+        "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+        "period_key": "2023-09-30"
       }
     ]
   },

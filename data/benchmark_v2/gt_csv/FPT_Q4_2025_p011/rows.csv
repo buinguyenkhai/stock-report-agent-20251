@@ -1,11 +1,21 @@
-statement,item_code,item_name,value,notes_ref,original_name
-cash_flow,31,"1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",1196235184778,,"1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
-cash_flow,33,2. Tiền thu từ đi vay,43070812885074,,2. Tiền thu từ đi vay
-cash_flow,34,3. Tiền trả nợ gốc vay,-36890984827601,,3. Tiền trả nợ gốc vay
-cash_flow,35,4. Tiền trả nợ gốc thuê tài chính,-986795056,,4. Tiền trả nợ gốc thuê tài chính
-cash_flow,36,"5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",-4573753577663,,"5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu"
-cash_flow,40,Lưu chuyển tiền thuần từ hoạt động tài chính,2801322869532,,Lưu chuyển tiền thuần từ hoạt động tài chính
-cash_flow,50,Lưu chuyển tiền thuần trong kỳ (50=20+30+40),1330708166863,,Lưu chuyển tiền thuần trong kỳ (50=20+30+40)
-cash_flow,60,Tiền và tương đương tiền đầu kỳ,9315440438884,,Tiền và tương đương tiền đầu kỳ
-cash_flow,61,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,-105966964827,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
-cash_flow,70,Tiền và tương đương tiền cuối kỳ (70=50+60),10540181640920,,Tiền và tương đương tiền cuối kỳ (70=50+60)
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+cash_flow,31,"1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",1196235184778.0,,"1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",cash_flow|code:31,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,31,"1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",163342989874.0,,"1. Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",cash_flow|code:31,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,33,2. Tiền thu từ đi vay,43070812885074.0,,2. Tiền thu từ đi vay,cash_flow|code:33,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,33,2. Tiền thu từ đi vay,30946282706201.0,,2. Tiền thu từ đi vay,cash_flow|code:33,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,34,3. Tiền trả nợ gốc vay,-36890984827601.0,,3. Tiền trả nợ gốc vay,cash_flow|code:34,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,34,3. Tiền trả nợ gốc vay,-30013226682923.0,,3. Tiền trả nợ gốc vay,cash_flow|code:34,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,35,4. Tiền trả nợ gốc thuê tài chính,-986795056.0,,4. Tiền trả nợ gốc thuê tài chính,cash_flow|code:35,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,35,4. Tiền trả nợ gốc thuê tài chính,-2305346865.0,,4. Tiền trả nợ gốc thuê tài chính,cash_flow|code:35,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,36,"5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",-4573753577663.0,,"5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",cash_flow|code:36,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,36,"5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",-3291859792121.0,,"5. Cổ tức, lợi nhuận đã trả cho chủ sở hữu",cash_flow|code:36,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,40,Lưu chuyển tiền thuần từ hoạt động tài chính,2801322869532.0,,Lưu chuyển tiền thuần từ hoạt động tài chính,cash_flow|code:40,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,40,Lưu chuyển tiền thuần từ hoạt động tài chính,-2197766125834.0,,Lưu chuyển tiền thuần từ hoạt động tài chính,cash_flow|code:40,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,50,Lưu chuyển tiền thuần trong kỳ (50=20+30+40),1330708166863.0,,Lưu chuyển tiền thuần trong kỳ (50=20+30+40),cash_flow|code:50,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,50,Lưu chuyển tiền thuần trong kỳ (50=20+30+40),1044198889933.0,,Lưu chuyển tiền thuần trong kỳ (50=20+30+40),cash_flow|code:50,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,60,Tiền và tương đương tiền đầu kỳ,9315440438884.0,,Tiền và tương đương tiền đầu kỳ,cash_flow|code:60,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,60,Tiền và tương đương tiền đầu kỳ,8279156683221.0,,Tiền và tương đương tiền đầu kỳ,cash_flow|code:60,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,61,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,-105966964827.0,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,cash_flow|code:61,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,61,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,-7915134270.0,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,cash_flow|code:61,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024
+cash_flow,70,Tiền và tương đương tiền cuối kỳ (70=50+60),10540181640920.0,,Tiền và tương đương tiền cuối kỳ (70=50+60),cash_flow|code:70,Lũy kế từ đầu năm đến cuối quý này Năm 2025,2025
+cash_flow,70,Tiền và tương đương tiền cuối kỳ (70=50+60),9315440438884.0,,Tiền và tương đương tiền cuối kỳ (70=50+60),cash_flow|code:70,Lũy kế từ đầu năm đến cuối quý này Năm 2024,2024

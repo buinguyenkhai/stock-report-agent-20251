@@ -7,79 +7,442 @@
       {
         "item_code": "31",
         "item_name": "11. Thu nhập khác",
+        "value": 9445876713.0,
+        "notes_ref": null,
+        "original_name": "11. Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "31",
+        "item_name": "11. Thu nhập khác",
         "value": 22918085911.0,
         "notes_ref": null,
-        "original_name": "11. Thu nhập khác"
+        "original_name": "11. Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "31",
+        "item_name": "11. Thu nhập khác",
+        "value": 19248084910.0,
+        "notes_ref": null,
+        "original_name": "11. Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "31",
+        "item_name": "11. Thu nhập khác",
+        "value": 35653841667.0,
+        "notes_ref": null,
+        "original_name": "11. Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "32",
+        "item_name": "12. Chi phí khác",
+        "value": -69032726733.0,
+        "notes_ref": null,
+        "original_name": "12. Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "32",
         "item_name": "12. Chi phí khác",
         "value": -91965669430.0,
         "notes_ref": null,
-        "original_name": "12. Chi phí khác"
+        "original_name": "12. Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "32",
+        "item_name": "12. Chi phí khác",
+        "value": -282916209640.0,
+        "notes_ref": null,
+        "original_name": "12. Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "32",
+        "item_name": "12. Chi phí khác",
+        "value": -293699554945.0,
+        "notes_ref": null,
+        "original_name": "12. Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "40",
+        "item_name": "13. Lỗ khác",
+        "value": -59586850020.0,
+        "notes_ref": null,
+        "original_name": "13. Lỗ khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "40",
         "item_name": "13. Lỗ khác",
         "value": -69047583519.0,
         "notes_ref": null,
-        "original_name": "13. Lỗ khác"
+        "original_name": "13. Lỗ khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "40",
+        "item_name": "13. Lỗ khác",
+        "value": -263668124730.0,
+        "notes_ref": null,
+        "original_name": "13. Lỗ khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "40",
+        "item_name": "13. Lỗ khác",
+        "value": -258045713278.0,
+        "notes_ref": null,
+        "original_name": "13. Lỗ khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "50",
+        "item_name": "14. Tổng lợi nhuận kế toán trước thuế",
+        "value": 129784475802.0,
+        "notes_ref": null,
+        "original_name": "14. Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "50",
         "item_name": "14. Tổng lợi nhuận kế toán trước thuế",
         "value": 288751057463.0,
         "notes_ref": null,
-        "original_name": "14. Tổng lợi nhuận kế toán trước thuế"
+        "original_name": "14. Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "50",
+        "item_name": "14. Tổng lợi nhuận kế toán trước thuế",
+        "value": 1702143324153.0,
+        "notes_ref": null,
+        "original_name": "14. Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "50",
+        "item_name": "14. Tổng lợi nhuận kế toán trước thuế",
+        "value": 3705136953628.0,
+        "notes_ref": null,
+        "original_name": "14. Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "51",
+        "item_name": "15. Chi phí thuế TNDN hiện hành",
+        "value": -99502489884.0,
+        "notes_ref": "29.1",
+        "original_name": "15. Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "51",
         "item_name": "15. Chi phí thuế TNDN hiện hành",
         "value": -239958318356.0,
         "notes_ref": "29.1",
-        "original_name": "15. Chi phí thuế TNDN hiện hành"
+        "original_name": "15. Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "51",
+        "item_name": "15. Chi phí thuế TNDN hiện hành",
+        "value": -546716320960.0,
+        "notes_ref": "29.1",
+        "original_name": "15. Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "51",
+        "item_name": "15. Chi phí thuế TNDN hiện hành",
+        "value": -1100320804774.0,
+        "notes_ref": "29.1",
+        "original_name": "15. Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "52",
+        "item_name": "16. Thu nhập thuế TNDN hoãn lại",
+        "value": -12868036535.0,
+        "notes_ref": "29.3",
+        "original_name": "16. Thu nhập thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "52",
         "item_name": "16. Thu nhập thuế TNDN hoãn lại",
         "value": -10097475282.0,
         "notes_ref": "29.3",
-        "original_name": "16. Thu nhập thuế TNDN hoãn lại"
+        "original_name": "16. Thu nhập thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "52",
+        "item_name": "16. Thu nhập thuế TNDN hoãn lại",
+        "value": -24758223926.0,
+        "notes_ref": "29.3",
+        "original_name": "16. Thu nhập thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "52",
+        "item_name": "16. Thu nhập thuế TNDN hoãn lại",
+        "value": -28902996421.0,
+        "notes_ref": "29.3",
+        "original_name": "16. Thu nhập thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "60",
+        "item_name": "17. Lợi nhuận sau thuế TNDN",
+        "value": 17413949383.0,
+        "notes_ref": null,
+        "original_name": "17. Lợi nhuận sau thuế TNDN",
+        "row_identity": "income_statement|code:60",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "60",
         "item_name": "17. Lợi nhuận sau thuế TNDN",
         "value": 38695263825.0,
         "notes_ref": null,
-        "original_name": "17. Lợi nhuận sau thuế TNDN"
+        "original_name": "17. Lợi nhuận sau thuế TNDN",
+        "row_identity": "income_statement|code:60",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "60",
+        "item_name": "17. Lợi nhuận sau thuế TNDN",
+        "value": 1130668779267.0,
+        "notes_ref": null,
+        "original_name": "17. Lợi nhuận sau thuế TNDN",
+        "row_identity": "income_statement|code:60",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "60",
+        "item_name": "17. Lợi nhuận sau thuế TNDN",
+        "value": 2575913152433.0,
+        "notes_ref": null,
+        "original_name": "17. Lợi nhuận sau thuế TNDN",
+        "row_identity": "income_statement|code:60",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "61",
+        "item_name": "18. Lợi nhuận sau thuế của công ty mẹ",
+        "value": 17405665662.0,
+        "notes_ref": null,
+        "original_name": "18. Lợi nhuận sau thuế của công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "61",
         "item_name": "18. Lợi nhuận sau thuế của công ty mẹ",
         "value": 38672609208.0,
         "notes_ref": null,
-        "original_name": "18. Lợi nhuận sau thuế của công ty mẹ"
+        "original_name": "18. Lợi nhuận sau thuế của công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "61",
+        "item_name": "18. Lợi nhuận sau thuế của công ty mẹ",
+        "value": 1130010994744.0,
+        "notes_ref": null,
+        "original_name": "18. Lợi nhuận sau thuế của công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "61",
+        "item_name": "18. Lợi nhuận sau thuế của công ty mẹ",
+        "value": 2574476278145.0,
+        "notes_ref": null,
+        "original_name": "18. Lợi nhuận sau thuế của công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "62",
+        "item_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
+        "value": 8283721.0,
+        "notes_ref": null,
+        "original_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "62",
         "item_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
         "value": 22654617.0,
         "notes_ref": null,
-        "original_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát"
+        "original_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "62",
+        "item_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
+        "value": 657784523.0,
+        "notes_ref": null,
+        "original_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "62",
+        "item_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
+        "value": 1436874288.0,
+        "notes_ref": null,
+        "original_name": "19. Lợi nhuận sau thuế của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "70",
+        "item_name": "20. Lãi cơ bản trên cổ phiếu",
+        "value": 11.0,
+        "notes_ref": "30",
+        "original_name": "20. Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "70",
         "item_name": "20. Lãi cơ bản trên cổ phiếu",
         "value": 26.0,
         "notes_ref": "30",
-        "original_name": "20. Lãi cơ bản trên cổ phiếu"
+        "original_name": "20. Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "70",
+        "item_name": "20. Lãi cơ bản trên cổ phiếu",
+        "value": 771.0,
+        "notes_ref": "30",
+        "original_name": "20. Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "70",
+        "item_name": "20. Lãi cơ bản trên cổ phiếu",
+        "value": 1.77,
+        "notes_ref": "30",
+        "original_name": "20. Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "71",
+        "item_name": "21. Lãi suy giảm trên cổ phiếu",
+        "value": 11.0,
+        "notes_ref": "30",
+        "original_name": "21. Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "71",
         "item_name": "21. Lãi suy giảm trên cổ phiếu",
         "value": 26.0,
         "notes_ref": "30",
-        "original_name": "21. Lãi suy giảm trên cổ phiếu"
+        "original_name": "21. Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "71",
+        "item_name": "21. Lãi suy giảm trên cổ phiếu",
+        "value": 771.0,
+        "notes_ref": "30",
+        "original_name": "21. Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "71",
+        "item_name": "21. Lãi suy giảm trên cổ phiếu",
+        "value": 1.77,
+        "notes_ref": "30",
+        "original_name": "21. Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
       }
     ]
   },

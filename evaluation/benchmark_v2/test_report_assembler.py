@@ -91,8 +91,8 @@ def test_assemble_report_structured_preserves_period_identity() -> None:
     items = merged["cash_flow"]["items"]
     assert len(items) == 2
     keys = set(meta["row_sources"]["cash_flow"].keys())
-    assert "cash_flow|name:lưu chuyển tiền thuần trong kỳ|period:2024q3_ytd" in keys
-    assert "cash_flow|name:lưu chuyển tiền thuần trong kỳ|period:2023q3_ytd" in keys
+    assert "cash_flow|name:lưu chuyển tiền thuần trong kỳ|column:từ 1/1/2024 đến 30/9/2024" in keys
+    assert "cash_flow|name:lưu chuyển tiền thuần trong kỳ|column:từ 1/1/2023 đến 30/9/2023" in keys
 
 
 def test_build_gt_and_prediction_report_structured_files(tmp_path: Path) -> None:

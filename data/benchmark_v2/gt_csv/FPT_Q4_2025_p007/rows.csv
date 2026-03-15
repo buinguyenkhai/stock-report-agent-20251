@@ -1,17 +1,32 @@
-statement,item_code,item_name,value,notes_ref,original_name
-balance_sheet,400,D. VỐN CHỦ SỞ HỮU,43751466292590,,D. VỐN CHỦ SỞ HỮU
-balance_sheet,410,I. Vốn chủ sở hữu,43748716292590,24,I. Vốn chủ sở hữu
-balance_sheet,411,1. Vốn góp của chủ sở hữu,17035071210000,,1. Vốn góp của chủ sở hữu
-balance_sheet,411a,- Cổ phiếu phổ thông có quyền biểu quyết,17035071210000,,- Cổ phiếu phổ thông có quyền biểu quyết
-balance_sheet,412,2. Thặng dư vốn cổ phần,49713213411,,2. Thặng dư vốn cổ phần
-balance_sheet,414,3. Vốn khác của chủ sở hữu,3499547369952,,3. Vốn khác của chủ sở hữu
-balance_sheet,417,4. Chênh lệch tỷ giá hối đoái,-70194908319,,4. Chênh lệch tỷ giá hối đoái
-balance_sheet,418,5. Quỹ đầu tư phát triển,1556932891952,,5. Quỹ đầu tư phát triển
-balance_sheet,420,6. Quỹ khác thuộc vốn chủ sở hữu,88263628887,,6. Quỹ khác thuộc vốn chủ sở hữu
-balance_sheet,421,7. Lợi nhuận sau thuế chưa phân phối,14324284500434,,7. Lợi nhuận sau thuế chưa phân phối
-balance_sheet,421a,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước,7399799985311,,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước
-balance_sheet,421b,- Lợi nhuận sau thuế chưa phân phối kỳ này,6924484515123,,- Lợi nhuận sau thuế chưa phân phối kỳ này
-balance_sheet,429,8. Lợi ích cổ đông không kiểm soát,7265098386273,,8. Lợi ích cổ đông không kiểm soát
-balance_sheet,430,II. Nguồn kinh phí và quỹ khác,275000000,,II. Nguồn kinh phí và quỹ khác
-balance_sheet,431,1. Nguồn kinh phí,275000000,,1. Nguồn kinh phí
-balance_sheet,440,TỔNG CỘNG NGUỒN VỐN (440=300+400),88089621779862,,TỔNG CỘNG NGUỒN VỐN (440=300+400)
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+balance_sheet,400,D. VỐN CHỦ SỞ HỮU,43751466292590.0,,D. VỐN CHỦ SỞ HỮU,balance_sheet|code:400,31/12/2025,2025FY
+balance_sheet,400,D. VỐN CHỦ SỞ HỮU,35727540104800.0,,D. VỐN CHỦ SỞ HỮU,balance_sheet|code:400,31/12/2024,2024FY
+balance_sheet,410,I. Vốn chủ sở hữu,43748716292590.0,24,I. Vốn chủ sở hữu,balance_sheet|code:410,31/12/2025,2025FY
+balance_sheet,410,I. Vốn chủ sở hữu,35724790104800.0,24,I. Vốn chủ sở hữu,balance_sheet|code:410,31/12/2024,2024FY
+balance_sheet,411,1. Vốn góp của chủ sở hữu,17035071210000.0,,1. Vốn góp của chủ sở hữu,balance_sheet|code:411,31/12/2025,2025FY
+balance_sheet,411,1. Vốn góp của chủ sở hữu,14710691830000.0,,1. Vốn góp của chủ sở hữu,balance_sheet|code:411,31/12/2024,2024FY
+balance_sheet,411a,- Cổ phiếu phổ thông có quyền biểu quyết,17035071210000.0,,- Cổ phiếu phổ thông có quyền biểu quyết,balance_sheet|code:411a,31/12/2025,2025FY
+balance_sheet,411a,- Cổ phiếu phổ thông có quyền biểu quyết,14710691830000.0,,- Cổ phiếu phổ thông có quyền biểu quyết,balance_sheet|code:411a,31/12/2024,2024FY
+balance_sheet,412,2. Thặng dư vốn cổ phần,49713213411.0,,2. Thặng dư vốn cổ phần,balance_sheet|code:412,31/12/2025,2025FY
+balance_sheet,412,2. Thặng dư vốn cổ phần,49713213411.0,,2. Thặng dư vốn cổ phần,balance_sheet|code:412,31/12/2024,2024FY
+balance_sheet,414,3. Vốn khác của chủ sở hữu,3499547369952.0,,3. Vốn khác của chủ sở hữu,balance_sheet|code:414,31/12/2025,2025FY
+balance_sheet,414,3. Vốn khác của chủ sở hữu,1929012703454.0,,3. Vốn khác của chủ sở hữu,balance_sheet|code:414,31/12/2024,2024FY
+balance_sheet,417,4. Chênh lệch tỷ giá hối đoái,-70194908319.0,,4. Chênh lệch tỷ giá hối đoái,balance_sheet|code:417,31/12/2025,2025FY
+balance_sheet,417,4. Chênh lệch tỷ giá hối đoái,-49485560860.0,,4. Chênh lệch tỷ giá hối đoái,balance_sheet|code:417,31/12/2024,2024FY
+balance_sheet,418,5. Quỹ đầu tư phát triển,1556932891952.0,,5. Quỹ đầu tư phát triển,balance_sheet|code:418,31/12/2025,2025FY
+balance_sheet,418,5. Quỹ đầu tư phát triển,2033289141535.0,,5. Quỹ đầu tư phát triển,balance_sheet|code:418,31/12/2024,2024FY
+balance_sheet,420,6. Quỹ khác thuộc vốn chủ sở hữu,88263628887.0,,6. Quỹ khác thuộc vốn chủ sở hữu,balance_sheet|code:420,31/12/2025,2025FY
+balance_sheet,421,7. Lợi nhuận sau thuế chưa phân phối,14324284500434.0,,7. Lợi nhuận sau thuế chưa phân phối,balance_sheet|code:421,31/12/2025,2025FY
+balance_sheet,421,7. Lợi nhuận sau thuế chưa phân phối,11030528671431.0,,7. Lợi nhuận sau thuế chưa phân phối,balance_sheet|code:421,31/12/2024,2024FY
+balance_sheet,421a,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước,7399799985311.0,,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước,balance_sheet|code:421a,31/12/2025,2025FY
+balance_sheet,421a,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước,5458228109134.0,,- Lợi nhuận sau thuế chưa phân phối đến cuối kỳ trước,balance_sheet|code:421a,31/12/2024,2024FY
+balance_sheet,421b,- Lợi nhuận sau thuế chưa phân phối kỳ này,6924484515123.0,,- Lợi nhuận sau thuế chưa phân phối kỳ này,balance_sheet|code:421b,31/12/2025,2025FY
+balance_sheet,421b,- Lợi nhuận sau thuế chưa phân phối kỳ này,5572300562297.0,,- Lợi nhuận sau thuế chưa phân phối kỳ này,balance_sheet|code:421b,31/12/2024,2024FY
+balance_sheet,429,8. Lợi ích cổ đông không kiểm soát,7265098386273.0,,8. Lợi ích cổ đông không kiểm soát,balance_sheet|code:429,31/12/2025,2025FY
+balance_sheet,429,8. Lợi ích cổ đông không kiểm soát,5933309621004.0,,8. Lợi ích cổ đông không kiểm soát,balance_sheet|code:429,31/12/2024,2024FY
+balance_sheet,430,II. Nguồn kinh phí và quỹ khác,2750000000.0,,II. Nguồn kinh phí và quỹ khác,balance_sheet|code:430,31/12/2025,2025FY
+balance_sheet,430,II. Nguồn kinh phí và quỹ khác,2750000000.0,,II. Nguồn kinh phí và quỹ khác,balance_sheet|code:430,31/12/2024,2024FY
+balance_sheet,431,1. Nguồn kinh phí,2750000000.0,,1. Nguồn kinh phí,balance_sheet|code:431,31/12/2025,2025FY
+balance_sheet,431,1. Nguồn kinh phí,2750000000.0,,1. Nguồn kinh phí,balance_sheet|code:431,31/12/2024,2024FY
+balance_sheet,440,TỔNG CỘNG NGUỒN VỐN (440=300+400),88089621779862.0,,TỔNG CỘNG NGUỒN VỐN (440=300+400),balance_sheet|code:440,31/12/2025,2025FY
+balance_sheet,440,TỔNG CỘNG NGUỒN VỐN (440=300+400),71999995678620.0,,TỔNG CỘNG NGUỒN VỐN (440=300+400),balance_sheet|code:440,31/12/2024,2024FY

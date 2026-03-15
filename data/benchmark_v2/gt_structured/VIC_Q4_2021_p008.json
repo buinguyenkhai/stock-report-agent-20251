@@ -6,133 +6,380 @@
         "item_name": "C. NỢ PHẢI TRẢ",
         "value": 268177346000000.0,
         "notes_ref": null,
-        "original_name": "C. NỢ PHẢI TRẢ"
+        "original_name": "C. NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|code:300",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "300",
+        "item_name": "C. NỢ PHẢI TRẢ",
+        "value": 286651052000000.0,
+        "notes_ref": null,
+        "original_name": "C. NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|code:300",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "310",
         "item_name": "I. Nợ ngắn hạn",
         "value": 144444929000000.0,
         "notes_ref": null,
-        "original_name": "I. Nợ ngắn hạn"
+        "original_name": "I. Nợ ngắn hạn",
+        "row_identity": "balance_sheet|code:310",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "310",
+        "item_name": "I. Nợ ngắn hạn",
+        "value": 169222607000000.0,
+        "notes_ref": null,
+        "original_name": "I. Nợ ngắn hạn",
+        "row_identity": "balance_sheet|code:310",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "311",
         "item_name": "1. Phải trả người bán ngắn hạn",
         "value": 18889980000000.0,
         "notes_ref": null,
-        "original_name": "1. Phải trả người bán ngắn hạn"
+        "original_name": "1. Phải trả người bán ngắn hạn",
+        "row_identity": "balance_sheet|code:311",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "311",
+        "item_name": "1. Phải trả người bán ngắn hạn",
+        "value": 18511262000000.0,
+        "notes_ref": null,
+        "original_name": "1. Phải trả người bán ngắn hạn",
+        "row_identity": "balance_sheet|code:311",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "312",
         "item_name": "2. Người mua trả tiền trước ngắn hạn",
         "value": 22352075000000.0,
         "notes_ref": "18",
-        "original_name": "2. Người mua trả tiền trước ngắn hạn"
+        "original_name": "2. Người mua trả tiền trước ngắn hạn",
+        "row_identity": "balance_sheet|code:312",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "312",
+        "item_name": "2. Người mua trả tiền trước ngắn hạn",
+        "value": 37277334000000.0,
+        "notes_ref": "18",
+        "original_name": "2. Người mua trả tiền trước ngắn hạn",
+        "row_identity": "balance_sheet|code:312",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "313",
         "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
         "value": 5614128000000.0,
         "notes_ref": "19",
-        "original_name": "3. Thuế và các khoản phải nộp Nhà nước"
+        "original_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "row_identity": "balance_sheet|code:313",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "313",
+        "item_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "value": 7805236000000.0,
+        "notes_ref": "19",
+        "original_name": "3. Thuế và các khoản phải nộp Nhà nước",
+        "row_identity": "balance_sheet|code:313",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "314",
         "item_name": "4. Phải trả người lao động",
-        "value": 489754000000.0,
+        "value": 489754000.0,
         "notes_ref": null,
-        "original_name": "4. Phải trả người lao động"
+        "original_name": "4. Phải trả người lao động",
+        "row_identity": "balance_sheet|code:314",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "314",
+        "item_name": "4. Phải trả người lao động",
+        "value": 938186000.0,
+        "notes_ref": null,
+        "original_name": "4. Phải trả người lao động",
+        "row_identity": "balance_sheet|code:314",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "315",
         "item_name": "5. Chi phí phải trả ngắn hạn",
         "value": 27744066000000.0,
         "notes_ref": "20",
-        "original_name": "5. Chi phí phải trả ngắn hạn"
+        "original_name": "5. Chi phí phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:315",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "315",
+        "item_name": "5. Chi phí phải trả ngắn hạn",
+        "value": 24674957000000.0,
+        "notes_ref": "20",
+        "original_name": "5. Chi phí phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:315",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "318",
         "item_name": "6. Doanh thu chưa thực hiện ngắn hạn",
         "value": 3283080000000.0,
         "notes_ref": "21",
-        "original_name": "6. Doanh thu chưa thực hiện ngắn hạn"
+        "original_name": "6. Doanh thu chưa thực hiện ngắn hạn",
+        "row_identity": "balance_sheet|code:318",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "318",
+        "item_name": "6. Doanh thu chưa thực hiện ngắn hạn",
+        "value": 4950452000000.0,
+        "notes_ref": "21",
+        "original_name": "6. Doanh thu chưa thực hiện ngắn hạn",
+        "row_identity": "balance_sheet|code:318",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "319",
         "item_name": "7. Phải trả ngắn hạn khác",
         "value": 39343650000000.0,
         "notes_ref": "22",
-        "original_name": "7. Phải trả ngắn hạn khác"
+        "original_name": "7. Phải trả ngắn hạn khác",
+        "row_identity": "balance_sheet|code:319",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "319",
+        "item_name": "7. Phải trả ngắn hạn khác",
+        "value": 43450189000000.0,
+        "notes_ref": "22",
+        "original_name": "7. Phải trả ngắn hạn khác",
+        "row_identity": "balance_sheet|code:319",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "320",
         "item_name": "8. Vay và nợ thuê tài chính ngắn hạn",
         "value": 20035038000000.0,
         "notes_ref": "23.1",
-        "original_name": "8. Vay và nợ thuê tài chính ngắn hạn"
+        "original_name": "8. Vay và nợ thuê tài chính ngắn hạn",
+        "row_identity": "balance_sheet|code:320",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "320",
+        "item_name": "8. Vay và nợ thuê tài chính ngắn hạn",
+        "value": 25971982000000.0,
+        "notes_ref": "23.1",
+        "original_name": "8. Vay và nợ thuê tài chính ngắn hạn",
+        "row_identity": "balance_sheet|code:320",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "321",
         "item_name": "9. Dự phòng phải trả ngắn hạn",
         "value": 6693158000000.0,
         "notes_ref": null,
-        "original_name": "9. Dự phòng phải trả ngắn hạn"
+        "original_name": "9. Dự phòng phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:321",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "321",
+        "item_name": "9. Dự phòng phải trả ngắn hạn",
+        "value": 5643009000000.0,
+        "notes_ref": null,
+        "original_name": "9. Dự phòng phải trả ngắn hạn",
+        "row_identity": "balance_sheet|code:321",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "330",
         "item_name": "II. Nợ dài hạn",
         "value": 123732417000000.0,
         "notes_ref": null,
-        "original_name": "II. Nợ dài hạn"
+        "original_name": "II. Nợ dài hạn",
+        "row_identity": "balance_sheet|code:330",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "330",
+        "item_name": "II. Nợ dài hạn",
+        "value": 117428445000000.0,
+        "notes_ref": null,
+        "original_name": "II. Nợ dài hạn",
+        "row_identity": "balance_sheet|code:330",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "333",
         "item_name": "1. Chi phí phải trả dài hạn",
         "value": 1594331000000.0,
         "notes_ref": null,
-        "original_name": "1. Chi phí phải trả dài hạn"
+        "original_name": "1. Chi phí phải trả dài hạn",
+        "row_identity": "balance_sheet|code:333",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "333",
+        "item_name": "1. Chi phí phải trả dài hạn",
+        "value": 1107530000000.0,
+        "notes_ref": null,
+        "original_name": "1. Chi phí phải trả dài hạn",
+        "row_identity": "balance_sheet|code:333",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "336",
         "item_name": "2. Doanh thu chưa thực hiện dài hạn",
         "value": 4293682000000.0,
         "notes_ref": "21",
-        "original_name": "2. Doanh thu chưa thực hiện dài hạn"
+        "original_name": "2. Doanh thu chưa thực hiện dài hạn",
+        "row_identity": "balance_sheet|code:336",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "336",
+        "item_name": "2. Doanh thu chưa thực hiện dài hạn",
+        "value": 5320738000000.0,
+        "notes_ref": "21",
+        "original_name": "2. Doanh thu chưa thực hiện dài hạn",
+        "row_identity": "balance_sheet|code:336",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "337",
         "item_name": "3. Phải trả dài hạn khác",
         "value": 2578894000000.0,
         "notes_ref": "22",
-        "original_name": "3. Phải trả dài hạn khác"
+        "original_name": "3. Phải trả dài hạn khác",
+        "row_identity": "balance_sheet|code:337",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "337",
+        "item_name": "3. Phải trả dài hạn khác",
+        "value": 6257218000000.0,
+        "notes_ref": "22",
+        "original_name": "3. Phải trả dài hạn khác",
+        "row_identity": "balance_sheet|code:337",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "338",
         "item_name": "4. Vay và nợ thuê tài chính dài hạn",
         "value": 102180175000000.0,
         "notes_ref": "23.2",
-        "original_name": "4. Vay và nợ thuê tài chính dài hạn"
+        "original_name": "4. Vay và nợ thuê tài chính dài hạn",
+        "row_identity": "balance_sheet|code:338",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "338",
+        "item_name": "4. Vay và nợ thuê tài chính dài hạn",
+        "value": 98309224000000.0,
+        "notes_ref": "23.2",
+        "original_name": "4. Vay và nợ thuê tài chính dài hạn",
+        "row_identity": "balance_sheet|code:338",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "339",
         "item_name": "5. Trái phiếu hoán đổi",
         "value": 9550120000000.0,
         "notes_ref": "24",
-        "original_name": "5. Trái phiếu hoán đổi"
+        "original_name": "5. Trái phiếu hoán đổi",
+        "row_identity": "balance_sheet|code:339",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "339",
+        "item_name": "5. Trái phiếu hoán đổi",
+        "value": 5505646000000.0,
+        "notes_ref": "24",
+        "original_name": "5. Trái phiếu hoán đổi",
+        "row_identity": "balance_sheet|code:339",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "341",
         "item_name": "6. Thuế thu nhập hoãn lại phải trả",
-        "value": 675057000000.0,
+        "value": 675057000.0,
         "notes_ref": null,
-        "original_name": "6. Thuế thu nhập hoãn lại phải trả"
+        "original_name": "6. Thuế thu nhập hoãn lại phải trả",
+        "row_identity": "balance_sheet|code:341",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "341",
+        "item_name": "6. Thuế thu nhập hoãn lại phải trả",
+        "value": 551776000.0,
+        "notes_ref": null,
+        "original_name": "6. Thuế thu nhập hoãn lại phải trả",
+        "row_identity": "balance_sheet|code:341",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       },
       {
         "item_code": "342",
         "item_name": "7. Dự phòng phải trả dài hạn",
         "value": 2860158000000.0,
         "notes_ref": null,
-        "original_name": "7. Dự phòng phải trả dài hạn"
+        "original_name": "7. Dự phòng phải trả dài hạn",
+        "row_identity": "balance_sheet|code:342",
+        "column_label": "Số cuối kỳ",
+        "period_key": null
+      },
+      {
+        "item_code": "342",
+        "item_name": "7. Dự phòng phải trả dài hạn",
+        "value": 376313000.0,
+        "notes_ref": null,
+        "original_name": "7. Dự phòng phải trả dài hạn",
+        "row_identity": "balance_sheet|code:342",
+        "column_label": "Số đầu kỳ",
+        "period_key": null
       }
     ]
   },

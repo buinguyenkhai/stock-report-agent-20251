@@ -1,22 +1,85 @@
-statement,item_code,item_name,value,notes_ref,original_name
-income_statement,1,1. Doanh thu bán hàng và cung cấp dịch vụ,34478172000000,26.1,1. Doanh thu bán hàng và cung cấp dịch vụ
-income_statement,2,2. Các khoản giảm trừ doanh thu,20346000000,26.1,2. Các khoản giảm trừ doanh thu
-income_statement,10,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,34457826000000,26.1,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ
-income_statement,11,4. Giá vốn hàng bán,26217840000000,27,4. Giá vốn hàng bán
-income_statement,20,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,8239986000000,,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ
-income_statement,21,6. Doanh thu hoạt động tài chính,3212402000000,26.2,6. Doanh thu hoạt động tài chính
-income_statement,22,7. Chi phí tài chính,2788287000000,28,7. Chi phí tài chính
-income_statement,23,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,2560860000000,,- Trong đó: Chi phí lãi vay và phát hành trái phiếu
-income_statement,24,"8. Phần lỗ trong công ty liên doanh, liên kết",-5759000000,16.1,"8. Phần lỗ trong công ty liên doanh, liên kết"
-income_statement,25,9. Chi phí bán hàng,2019498000000,,9. Chi phí bán hàng
-income_statement,26,10. Chi phí quản lý doanh nghiệp,9515758000000,,10. Chi phí quản lý doanh nghiệp
-income_statement,30,11. Lợi nhuận thuần từ hoạt động kinh doanh,-2876914000000,,11. Lợi nhuận thuần từ hoạt động kinh doanh
-income_statement,31,12. Thu nhập khác,485013000000,29,12. Thu nhập khác
-income_statement,32,13. Chi phí khác,3977010000000,29,13. Chi phí khác
-income_statement,40,14. Lãi/(lỗ) khác,-3491997000000,29,14. Lãi/(lỗ) khác
-income_statement,50,15. Tổng lợi nhuận kế toán trước thuế,-6368911000000,,15. Tổng lợi nhuận kế toán trước thuế
-income_statement,51,16. Chi phí thuế TNDN hiện hành,2277454000000,30,16. Chi phí thuế TNDN hiện hành
-income_statement,52,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,602505000000,30,17. Chi phí (Thu nhập) thuế TNDN hoãn lại
-income_statement,60,18. Lợi nhuận sau thuế TNDN,-9248870000000,,18. Lợi nhuận sau thuế TNDN
-income_statement,61,Lợi nhuận sau thuế của công ty mẹ,-5964033000000,25,Lợi nhuận sau thuế của công ty mẹ
-income_statement,62,Lợi nhuận sau thuế của cổ đông không kiểm soát,-3284837000000,25,Lợi nhuận sau thuế của cổ đông không kiểm soát
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+income_statement,1,1. Doanh thu bán hàng và cung cấp dịch vụ,34478172000000.0,26.1,1. Doanh thu bán hàng và cung cấp dịch vụ,income_statement|code:1,Quý IV năm 2021,2021Q4
+income_statement,1,1. Doanh thu bán hàng và cung cấp dịch vụ,35942695000000.0,26.1,1. Doanh thu bán hàng và cung cấp dịch vụ,income_statement|code:1,Quý IV năm 2020,2020Q4
+income_statement,1,1. Doanh thu bán hàng và cung cấp dịch vụ,125380686000000.0,26.1,1. Doanh thu bán hàng và cung cấp dịch vụ,income_statement|code:1,Năm nay,2021FY
+income_statement,1,1. Doanh thu bán hàng và cung cấp dịch vụ,110755497000000.0,26.1,1. Doanh thu bán hàng và cung cấp dịch vụ,income_statement|code:1,Năm trước,2020FY
+income_statement,2,2. Các khoản giảm trừ doanh thu,20346000.0,26.1,2. Các khoản giảm trừ doanh thu,income_statement|code:2,Quý IV năm 2021,2021Q4
+income_statement,2,2. Các khoản giảm trừ doanh thu,93639000.0,26.1,2. Các khoản giảm trừ doanh thu,income_statement|code:2,Quý IV năm 2020,2020Q4
+income_statement,2,2. Các khoản giảm trừ doanh thu,74422000.0,26.1,2. Các khoản giảm trừ doanh thu,income_statement|code:2,Năm nay,2021FY
+income_statement,2,2. Các khoản giảm trừ doanh thu,265464000.0,26.1,2. Các khoản giảm trừ doanh thu,income_statement|code:2,Năm trước,2020FY
+income_statement,10,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,34457826000000.0,26.1,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,income_statement|code:10,Quý IV năm 2021,2021Q4
+income_statement,10,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,35849056000000.0,26.1,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,income_statement|code:10,Quý IV năm 2020,2020Q4
+income_statement,10,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,125306264000000.0,26.1,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,income_statement|code:10,Năm nay,2021FY
+income_statement,10,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,110490033000000.0,26.1,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,income_statement|code:10,Năm trước,2020FY
+income_statement,11,4. Giá vốn hàng bán,26217840000000.0,27,4. Giá vốn hàng bán,income_statement|code:11,Quý IV năm 2021,2021Q4
+income_statement,11,4. Giá vốn hàng bán,30237442000000.0,27,4. Giá vốn hàng bán,income_statement|code:11,Quý IV năm 2020,2020Q4
+income_statement,11,4. Giá vốn hàng bán,91626520000000.0,27,4. Giá vốn hàng bán,income_statement|code:11,Năm nay,2021FY
+income_statement,11,4. Giá vốn hàng bán,93177227000000.0,27,4. Giá vốn hàng bán,income_statement|code:11,Năm trước,2020FY
+income_statement,20,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,8239986000000.0,,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,income_statement|code:20,Quý IV năm 2021,2021Q4
+income_statement,20,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,5611614000000.0,,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,income_statement|code:20,Quý IV năm 2020,2020Q4
+income_statement,20,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,33679744000000.0,,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,income_statement|code:20,Năm nay,2021FY
+income_statement,20,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,17312806000000.0,,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,income_statement|code:20,Năm trước,2020FY
+income_statement,21,6. Doanh thu hoạt động tài chính,3212402000000.0,26.2,6. Doanh thu hoạt động tài chính,income_statement|code:21,Quý IV năm 2021,2021Q4
+income_statement,21,6. Doanh thu hoạt động tài chính,10697185000000.0,26.2,6. Doanh thu hoạt động tài chính,income_statement|code:21,Quý IV năm 2020,2020Q4
+income_statement,21,6. Doanh thu hoạt động tài chính,15794329000000.0,26.2,6. Doanh thu hoạt động tài chính,income_statement|code:21,Năm nay,2021FY
+income_statement,21,6. Doanh thu hoạt động tài chính,31068411000000.0,26.2,6. Doanh thu hoạt động tài chính,income_statement|code:21,Năm trước,2020FY
+income_statement,22,7. Chi phí tài chính,2788287000000.0,28,7. Chi phí tài chính,income_statement|code:22,Quý IV năm 2021,2021Q4
+income_statement,22,7. Chi phí tài chính,3501701000000.0,28,7. Chi phí tài chính,income_statement|code:22,Quý IV năm 2020,2020Q4
+income_statement,22,7. Chi phí tài chính,11298209000000.0,28,7. Chi phí tài chính,income_statement|code:22,Năm nay,2021FY
+income_statement,22,7. Chi phí tài chính,12804561000000.0,28,7. Chi phí tài chính,income_statement|code:22,Năm trước,2020FY
+income_statement,23,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,2560860000000.0,,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,income_statement|code:23,Quý IV năm 2021,2021Q4
+income_statement,23,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,2707341000000.0,,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,income_statement|code:23,Quý IV năm 2020,2020Q4
+income_statement,23,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,10577230000000.0,,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,income_statement|code:23,Năm nay,2021FY
+income_statement,23,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,11402385000000.0,,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,income_statement|code:23,Năm trước,2020FY
+income_statement,24,"8. Phần lỗ trong công ty liên doanh, liên kết",-5759000.0,16.1,"8. Phần lỗ trong công ty liên doanh, liên kết",income_statement|code:24,Quý IV năm 2021,2021Q4
+income_statement,24,"8. Phần lỗ trong công ty liên doanh, liên kết",-13185000.0,16.1,"8. Phần lỗ trong công ty liên doanh, liên kết",income_statement|code:24,Quý IV năm 2020,2020Q4
+income_statement,24,"8. Phần lỗ trong công ty liên doanh, liên kết",-41669000.0,16.1,"8. Phần lỗ trong công ty liên doanh, liên kết",income_statement|code:24,Năm nay,2021FY
+income_statement,24,"8. Phần lỗ trong công ty liên doanh, liên kết",-265278000.00000003,16.1,"8. Phần lỗ trong công ty liên doanh, liên kết",income_statement|code:24,Năm trước,2020FY
+income_statement,25,9. Chi phí bán hàng,2019498000000.0,,9. Chi phí bán hàng,income_statement|code:25,Quý IV năm 2021,2021Q4
+income_statement,25,9. Chi phí bán hàng,2421097000000.0,,9. Chi phí bán hàng,income_statement|code:25,Quý IV năm 2020,2020Q4
+income_statement,25,9. Chi phí bán hàng,7051567000000.0,,9. Chi phí bán hàng,income_statement|code:25,Năm nay,2021FY
+income_statement,25,9. Chi phí bán hàng,7253585000000.0,,9. Chi phí bán hàng,income_statement|code:25,Năm trước,2020FY
+income_statement,26,10. Chi phí quản lý doanh nghiệp,9515758000000.0,,10. Chi phí quản lý doanh nghiệp,income_statement|code:26,Quý IV năm 2021,2021Q4
+income_statement,26,10. Chi phí quản lý doanh nghiệp,6261707000000.0,,10. Chi phí quản lý doanh nghiệp,income_statement|code:26,Quý IV năm 2020,2020Q4
+income_statement,26,10. Chi phí quản lý doanh nghiệp,24177160000000.0,,10. Chi phí quản lý doanh nghiệp,income_statement|code:26,Năm nay,2021FY
+income_statement,26,10. Chi phí quản lý doanh nghiệp,13403089000000.0,,10. Chi phí quản lý doanh nghiệp,income_statement|code:26,Năm trước,2020FY
+income_statement,30,11. Lợi nhuận thuần từ hoạt động kinh doanh,-2876914000000.0,,11. Lợi nhuận thuần từ hoạt động kinh doanh,income_statement|code:30,Quý IV năm 2021,2021Q4
+income_statement,30,11. Lợi nhuận thuần từ hoạt động kinh doanh,4111109000000.0,,11. Lợi nhuận thuần từ hoạt động kinh doanh,income_statement|code:30,Quý IV năm 2020,2020Q4
+income_statement,30,11. Lợi nhuận thuần từ hoạt động kinh doanh,6905468000000.0,,11. Lợi nhuận thuần từ hoạt động kinh doanh,income_statement|code:30,Năm nay,2021FY
+income_statement,30,11. Lợi nhuận thuần từ hoạt động kinh doanh,14654704000000.0,,11. Lợi nhuận thuần từ hoạt động kinh doanh,income_statement|code:30,Năm trước,2020FY
+income_statement,31,12. Thu nhập khác,485013000.0,29,12. Thu nhập khác,income_statement|code:31,Quý IV năm 2021,2021Q4
+income_statement,31,12. Thu nhập khác,213307000.0,29,12. Thu nhập khác,income_statement|code:31,Quý IV năm 2020,2020Q4
+income_statement,31,12. Thu nhập khác,980621000.0,29,12. Thu nhập khác,income_statement|code:31,Năm nay,2021FY
+income_statement,31,12. Thu nhập khác,982699000.0,29,12. Thu nhập khác,income_statement|code:31,Năm trước,2020FY
+income_statement,32,13. Chi phí khác,3977010000000.0,29,13. Chi phí khác,income_statement|code:32,Quý IV năm 2021,2021Q4
+income_statement,32,13. Chi phí khác,112383000.0,29,13. Chi phí khác,income_statement|code:32,Quý IV năm 2020,2020Q4
+income_statement,32,13. Chi phí khác,4540353000000.0,29,13. Chi phí khác,income_statement|code:32,Năm nay,2021FY
+income_statement,32,13. Chi phí khác,1694848000000.0,29,13. Chi phí khác,income_statement|code:32,Năm trước,2020FY
+income_statement,40,14. Lãi/(lỗ) khác,-3491997000000.0,29,14. Lãi/(lỗ) khác,income_statement|code:40,Quý IV năm 2021,2021Q4
+income_statement,40,14. Lãi/(lỗ) khác,100924000.0,29,14. Lãi/(lỗ) khác,income_statement|code:40,Quý IV năm 2020,2020Q4
+income_statement,40,14. Lãi/(lỗ) khác,-3559732000000.0,29,14. Lãi/(lỗ) khác,income_statement|code:40,Năm nay,2021FY
+income_statement,40,14. Lãi/(lỗ) khác,-712149000.0,29,14. Lãi/(lỗ) khác,income_statement|code:40,Năm trước,2020FY
+income_statement,50,15. Tổng lợi nhuận kế toán trước thuế,-6368911000000.0,,15. Tổng lợi nhuận kế toán trước thuế,income_statement|code:50,Quý IV năm 2021,2021Q4
+income_statement,50,15. Tổng lợi nhuận kế toán trước thuế,4212033000000.0,,15. Tổng lợi nhuận kế toán trước thuế,income_statement|code:50,Quý IV năm 2020,2020Q4
+income_statement,50,15. Tổng lợi nhuận kế toán trước thuế,3345736000000.0,,15. Tổng lợi nhuận kế toán trước thuế,income_statement|code:50,Năm nay,2021FY
+income_statement,50,15. Tổng lợi nhuận kế toán trước thuế,13942555000000.0,,15. Tổng lợi nhuận kế toán trước thuế,income_statement|code:50,Năm trước,2020FY
+income_statement,51,16. Chi phí thuế TNDN hiện hành,2277454000000.0,30,16. Chi phí thuế TNDN hiện hành,income_statement|code:51,Quý IV năm 2021,2021Q4
+income_statement,51,16. Chi phí thuế TNDN hiện hành,3069174000000.0,30,16. Chi phí thuế TNDN hiện hành,income_statement|code:51,Quý IV năm 2020,2020Q4
+income_statement,51,16. Chi phí thuế TNDN hiện hành,9899139000000.0,30,16. Chi phí thuế TNDN hiện hành,income_statement|code:51,Năm nay,2021FY
+income_statement,51,16. Chi phí thuế TNDN hiện hành,10282745000000.0,30,16. Chi phí thuế TNDN hiện hành,income_statement|code:51,Năm trước,2020FY
+income_statement,52,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,602505000.0,30,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,income_statement|code:52,Quý IV năm 2021,2021Q4
+income_statement,52,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,-565635000.0,30,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,income_statement|code:52,Quý IV năm 2020,2020Q4
+income_statement,52,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,969138000.0,30,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,income_statement|code:52,Năm nay,2021FY
+income_statement,52,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,-885763000.0,30,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,income_statement|code:52,Năm trước,2020FY
+income_statement,60,18. Lợi nhuận sau thuế TNDN,-9248870000000.0,,18. Lợi nhuận sau thuế TNDN,income_statement|code:60,Quý IV năm 2021,2021Q4
+income_statement,60,18. Lợi nhuận sau thuế TNDN,1708494000000.0,,18. Lợi nhuận sau thuế TNDN,income_statement|code:60,Quý IV năm 2020,2020Q4
+income_statement,60,18. Lợi nhuận sau thuế TNDN,-7522541000000.0,,18. Lợi nhuận sau thuế TNDN,income_statement|code:60,Năm nay,2021FY
+income_statement,60,18. Lợi nhuận sau thuế TNDN,4545573000000.0,,18. Lợi nhuận sau thuế TNDN,income_statement|code:60,Năm trước,2020FY
+income_statement,61,Lợi nhuận sau thuế của công ty mẹ,-5964033000000.0,25,Lợi nhuận sau thuế của công ty mẹ,income_statement|code:61,Quý IV năm 2021,2021Q4
+income_statement,61,Lợi nhuận sau thuế của công ty mẹ,1440387000000.0,25,Lợi nhuận sau thuế của công ty mẹ,income_statement|code:61,Quý IV năm 2020,2020Q4
+income_statement,61,Lợi nhuận sau thuế của công ty mẹ,-2771444000000.0,25,Lợi nhuận sau thuế của công ty mẹ,income_statement|code:61,Năm nay,2021FY
+income_statement,61,Lợi nhuận sau thuế của công ty mẹ,5464627000000.0,25,Lợi nhuận sau thuế của công ty mẹ,income_statement|code:61,Năm trước,2020FY
+income_statement,62,Lợi nhuận sau thuế của cổ đông không kiểm soát,-3284837000000.0,25,Lợi nhuận sau thuế của cổ đông không kiểm soát,income_statement|code:62,Quý IV năm 2021,2021Q4
+income_statement,62,Lợi nhuận sau thuế của cổ đông không kiểm soát,268107000.00000003,25,Lợi nhuận sau thuế của cổ đông không kiểm soát,income_statement|code:62,Quý IV năm 2020,2020Q4
+income_statement,62,Lợi nhuận sau thuế của cổ đông không kiểm soát,-4751097000000.0,25,Lợi nhuận sau thuế của cổ đông không kiểm soát,income_statement|code:62,Năm nay,2021FY
+income_statement,62,Lợi nhuận sau thuế của cổ đông không kiểm soát,-919054000.0,25,Lợi nhuận sau thuế của cổ đông không kiểm soát,income_statement|code:62,Năm trước,2020FY

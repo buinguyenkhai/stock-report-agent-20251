@@ -1,987 +1,3152 @@
 {
   "row_sources": {
     "balance_sheet": {
-      "balance_sheet|code:100": [
+      "balance_sheet|code:100|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|code:100",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:110": [
+      "balance_sheet|code:100|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "balance_sheet|code:100",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:111": [
+      "balance_sheet|code:110|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "balance_sheet|code:110",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:112": [
+      "balance_sheet|code:110|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "balance_sheet|code:110",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:120": [
+      "balance_sheet|code:111|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "balance_sheet|code:111",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:121": [
+      "balance_sheet|code:111|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "balance_sheet|code:111",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:123": [
+      "balance_sheet|code:112|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "balance_sheet|code:112",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:130": [
+      "balance_sheet|code:112|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "balance_sheet|code:112",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:131": [
+      "balance_sheet|code:120|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "balance_sheet|code:120",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:132": [
+      "balance_sheet|code:120|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "balance_sheet|code:120",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:135": [
+      "balance_sheet|code:121|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "balance_sheet|code:121",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:136": [
+      "balance_sheet|code:121|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "balance_sheet|code:121",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:137": [
+      "balance_sheet|code:123|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "balance_sheet|code:123",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:140": [
+      "balance_sheet|code:123|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "balance_sheet|code:123",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:141": [
+      "balance_sheet|code:130|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "balance_sheet|code:130",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:149": [
+      "balance_sheet|code:130|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "balance_sheet|code:130",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:150": [
+      "balance_sheet|code:131|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "balance_sheet|code:131",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:151": [
+      "balance_sheet|code:131|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "balance_sheet|code:131",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:152": [
+      "balance_sheet|code:132|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "balance_sheet|code:132",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:153": [
+      "balance_sheet|code:132|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 19
+          "item_index": 19,
+          "row_identity": "balance_sheet|code:132",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:155": [
+      "balance_sheet|code:135|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p006",
           "page_index": 6,
-          "item_index": 20
+          "item_index": 20,
+          "row_identity": "balance_sheet|code:135",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:200": [
+      "balance_sheet|code:135|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 21,
+          "row_identity": "balance_sheet|code:135",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:136|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 22,
+          "row_identity": "balance_sheet|code:136",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:136|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 23,
+          "row_identity": "balance_sheet|code:136",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:137|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 24,
+          "row_identity": "balance_sheet|code:137",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:137|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 25,
+          "row_identity": "balance_sheet|code:137",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:140|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 26,
+          "row_identity": "balance_sheet|code:140",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:140|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 27,
+          "row_identity": "balance_sheet|code:140",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:141|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 28,
+          "row_identity": "balance_sheet|code:141",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:141|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 29,
+          "row_identity": "balance_sheet|code:141",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:149|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 30,
+          "row_identity": "balance_sheet|code:149",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:149|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 31,
+          "row_identity": "balance_sheet|code:149",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:150|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 32,
+          "row_identity": "balance_sheet|code:150",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:150|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 33,
+          "row_identity": "balance_sheet|code:150",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:151|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 34,
+          "row_identity": "balance_sheet|code:151",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:151|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 35,
+          "row_identity": "balance_sheet|code:151",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:152|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 36,
+          "row_identity": "balance_sheet|code:152",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:152|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 37,
+          "row_identity": "balance_sheet|code:152",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:153|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 38,
+          "row_identity": "balance_sheet|code:153",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:153|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 39,
+          "row_identity": "balance_sheet|code:153",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:155|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 40,
+          "row_identity": "balance_sheet|code:155",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:155|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p006",
+          "page_index": 6,
+          "item_index": 41,
+          "row_identity": "balance_sheet|code:155",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:200|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|code:200",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:210": [
+      "balance_sheet|code:200|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "balance_sheet|code:200",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:215": [
+      "balance_sheet|code:210|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "balance_sheet|code:210",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:216": [
+      "balance_sheet|code:210|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "balance_sheet|code:210",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:220": [
+      "balance_sheet|code:215|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "balance_sheet|code:215",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:221": [
+      "balance_sheet|code:215|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "balance_sheet|code:215",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:222": [
+      "balance_sheet|code:216|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "balance_sheet|code:216",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:223": [
+      "balance_sheet|code:216|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "balance_sheet|code:216",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:227": [
+      "balance_sheet|code:220|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "balance_sheet|code:220",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:228": [
+      "balance_sheet|code:220|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "balance_sheet|code:220",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:229": [
+      "balance_sheet|code:221|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "balance_sheet|code:221",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:230": [
+      "balance_sheet|code:221|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "balance_sheet|code:221",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:231": [
+      "balance_sheet|code:222|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "balance_sheet|code:222",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:232": [
+      "balance_sheet|code:222|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "balance_sheet|code:222",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:240": [
+      "balance_sheet|code:223|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "balance_sheet|code:223",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:242": [
+      "balance_sheet|code:223|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "balance_sheet|code:223",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:250": [
+      "balance_sheet|code:227|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "balance_sheet|code:227",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:252": [
+      "balance_sheet|code:227|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "balance_sheet|code:227",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:253": [
+      "balance_sheet|code:228|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "balance_sheet|code:228",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:254": [
+      "balance_sheet|code:228|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 19
+          "item_index": 19,
+          "row_identity": "balance_sheet|code:228",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:255": [
+      "balance_sheet|code:229|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 20
+          "item_index": 20,
+          "row_identity": "balance_sheet|code:229",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:260": [
+      "balance_sheet|code:229|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 21
+          "item_index": 21,
+          "row_identity": "balance_sheet|code:229",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:261": [
+      "balance_sheet|code:230|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 22
+          "item_index": 22,
+          "row_identity": "balance_sheet|code:230",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:262": [
+      "balance_sheet|code:230|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 23
+          "item_index": 23,
+          "row_identity": "balance_sheet|code:230",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:268": [
+      "balance_sheet|code:231|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 24
+          "item_index": 24,
+          "row_identity": "balance_sheet|code:231",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:269": [
+      "balance_sheet|code:231|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 25
+          "item_index": 25,
+          "row_identity": "balance_sheet|code:231",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:270": [
+      "balance_sheet|code:232|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p007",
           "page_index": 7,
-          "item_index": 26
+          "item_index": 26,
+          "row_identity": "balance_sheet|code:232",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:300": [
+      "balance_sheet|code:232|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 27,
+          "row_identity": "balance_sheet|code:232",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:240|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 28,
+          "row_identity": "balance_sheet|code:240",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:240|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 29,
+          "row_identity": "balance_sheet|code:240",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:242|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 30,
+          "row_identity": "balance_sheet|code:242",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:242|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 31,
+          "row_identity": "balance_sheet|code:242",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:250|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 32,
+          "row_identity": "balance_sheet|code:250",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:250|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 33,
+          "row_identity": "balance_sheet|code:250",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:252|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 34,
+          "row_identity": "balance_sheet|code:252",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:252|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 35,
+          "row_identity": "balance_sheet|code:252",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:253|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 36,
+          "row_identity": "balance_sheet|code:253",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:253|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 37,
+          "row_identity": "balance_sheet|code:253",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:254|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 38,
+          "row_identity": "balance_sheet|code:254",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:254|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 39,
+          "row_identity": "balance_sheet|code:254",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:255|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 40,
+          "row_identity": "balance_sheet|code:255",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:255|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 41,
+          "row_identity": "balance_sheet|code:255",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:260|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 42,
+          "row_identity": "balance_sheet|code:260",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:260|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 43,
+          "row_identity": "balance_sheet|code:260",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:261|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 44,
+          "row_identity": "balance_sheet|code:261",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:261|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 45,
+          "row_identity": "balance_sheet|code:261",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:262|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 46,
+          "row_identity": "balance_sheet|code:262",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:262|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 47,
+          "row_identity": "balance_sheet|code:262",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:268|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 48,
+          "row_identity": "balance_sheet|code:268",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:269|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 49,
+          "row_identity": "balance_sheet|code:269",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:269|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 50,
+          "row_identity": "balance_sheet|code:269",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:270|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 51,
+          "row_identity": "balance_sheet|code:270",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:270|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p007",
+          "page_index": 7,
+          "item_index": 52,
+          "row_identity": "balance_sheet|code:270",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:300|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|code:300",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:310": [
+      "balance_sheet|code:300|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "balance_sheet|code:300",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:311": [
+      "balance_sheet|code:310|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "balance_sheet|code:310",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:312": [
+      "balance_sheet|code:310|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "balance_sheet|code:310",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:313": [
+      "balance_sheet|code:311|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "balance_sheet|code:311",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:314": [
+      "balance_sheet|code:311|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "balance_sheet|code:311",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:315": [
+      "balance_sheet|code:312|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "balance_sheet|code:312",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:318": [
+      "balance_sheet|code:312|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "balance_sheet|code:312",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:319": [
+      "balance_sheet|code:313|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "balance_sheet|code:313",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:320": [
+      "balance_sheet|code:313|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "balance_sheet|code:313",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:321": [
+      "balance_sheet|code:314|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "balance_sheet|code:314",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:330": [
+      "balance_sheet|code:314|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "balance_sheet|code:314",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:333": [
+      "balance_sheet|code:315|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "balance_sheet|code:315",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:336": [
+      "balance_sheet|code:315|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "balance_sheet|code:315",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:337": [
+      "balance_sheet|code:318|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "balance_sheet|code:318",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:338": [
+      "balance_sheet|code:318|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "balance_sheet|code:318",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:339": [
+      "balance_sheet|code:319|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "balance_sheet|code:319",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:341": [
+      "balance_sheet|code:319|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "balance_sheet|code:319",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:342": [
+      "balance_sheet|code:320|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p008",
           "page_index": 8,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "balance_sheet|code:320",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:400": [
+      "balance_sheet|code:320|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 19,
+          "row_identity": "balance_sheet|code:320",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:321|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 20,
+          "row_identity": "balance_sheet|code:321",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:321|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 21,
+          "row_identity": "balance_sheet|code:321",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:330|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 22,
+          "row_identity": "balance_sheet|code:330",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:330|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 23,
+          "row_identity": "balance_sheet|code:330",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:333|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 24,
+          "row_identity": "balance_sheet|code:333",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:333|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 25,
+          "row_identity": "balance_sheet|code:333",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:336|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 26,
+          "row_identity": "balance_sheet|code:336",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:336|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 27,
+          "row_identity": "balance_sheet|code:336",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:337|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 28,
+          "row_identity": "balance_sheet|code:337",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:337|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 29,
+          "row_identity": "balance_sheet|code:337",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:338|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 30,
+          "row_identity": "balance_sheet|code:338",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:338|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 31,
+          "row_identity": "balance_sheet|code:338",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:339|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 32,
+          "row_identity": "balance_sheet|code:339",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:339|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 33,
+          "row_identity": "balance_sheet|code:339",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:341|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 34,
+          "row_identity": "balance_sheet|code:341",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:341|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 35,
+          "row_identity": "balance_sheet|code:341",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:342|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 36,
+          "row_identity": "balance_sheet|code:342",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:342|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p008",
+          "page_index": 8,
+          "item_index": 37,
+          "row_identity": "balance_sheet|code:342",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:400|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|code:400",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:410": [
+      "balance_sheet|code:400|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "balance_sheet|code:400",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:411": [
+      "balance_sheet|code:410|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "balance_sheet|code:410",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:411a": [
+      "balance_sheet|code:410|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "balance_sheet|code:410",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:411b": [
+      "balance_sheet|code:411|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "balance_sheet|code:411",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:412": [
+      "balance_sheet|code:411|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "balance_sheet|code:411",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:414": [
+      "balance_sheet|code:411a|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "balance_sheet|code:411a",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:415": [
+      "balance_sheet|code:411a|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "balance_sheet|code:411a",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:417": [
+      "balance_sheet|code:411b|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "balance_sheet|code:411b",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:420": [
+      "balance_sheet|code:411b|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "balance_sheet|code:411b",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:421": [
+      "balance_sheet|code:412|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "balance_sheet|code:412",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:421a": [
+      "balance_sheet|code:412|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "balance_sheet|code:412",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:421b": [
+      "balance_sheet|code:414|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "balance_sheet|code:414",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:429": [
+      "balance_sheet|code:414|column:số đầu kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "balance_sheet|code:414",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ],
-      "balance_sheet|code:440": [
+      "balance_sheet|code:415|column:số cuối kỳ": [
         {
           "sample_id": "VIC_Q4_2021_p009",
           "page_index": 9,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "balance_sheet|code:415",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:415|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 15,
+          "row_identity": "balance_sheet|code:415",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:417|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 16,
+          "row_identity": "balance_sheet|code:417",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:417|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 17,
+          "row_identity": "balance_sheet|code:417",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:420|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 18,
+          "row_identity": "balance_sheet|code:420",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:420|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 19,
+          "row_identity": "balance_sheet|code:420",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:421|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 20,
+          "row_identity": "balance_sheet|code:421",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:421|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 21,
+          "row_identity": "balance_sheet|code:421",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:421a|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 22,
+          "row_identity": "balance_sheet|code:421a",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:421a|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 23,
+          "row_identity": "balance_sheet|code:421a",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:421b|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 24,
+          "row_identity": "balance_sheet|code:421b",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:421b|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 25,
+          "row_identity": "balance_sheet|code:421b",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:429|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 26,
+          "row_identity": "balance_sheet|code:429",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:429|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 27,
+          "row_identity": "balance_sheet|code:429",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:440|column:số cuối kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 28,
+          "row_identity": "balance_sheet|code:440",
+          "column_label": "Số cuối kỳ",
+          "period_key": null
+        }
+      ],
+      "balance_sheet|code:440|column:số đầu kỳ": [
+        {
+          "sample_id": "VIC_Q4_2021_p009",
+          "page_index": 9,
+          "item_index": 29,
+          "row_identity": "balance_sheet|code:440",
+          "column_label": "Số đầu kỳ",
+          "period_key": null
         }
       ]
     },
     "income_statement": {
-      "income_statement|code:1": [
+      "income_statement|code:1|column:quý iv năm 2021": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "income_statement|code:1",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
         }
       ],
-      "income_statement|code:2": [
+      "income_statement|code:1|column:quý iv năm 2020": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "income_statement|code:1",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
         }
       ],
-      "income_statement|code:10": [
+      "income_statement|code:1|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "income_statement|code:1",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "income_statement|code:11": [
+      "income_statement|code:1|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "income_statement|code:1",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "income_statement|code:20": [
+      "income_statement|code:2|column:quý iv năm 2021": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "income_statement|code:2",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
         }
       ],
-      "income_statement|code:21": [
+      "income_statement|code:2|column:quý iv năm 2020": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "income_statement|code:2",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
         }
       ],
-      "income_statement|code:22": [
+      "income_statement|code:2|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "income_statement|code:2",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "income_statement|code:23": [
+      "income_statement|code:2|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "income_statement|code:2",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "income_statement|code:24": [
+      "income_statement|code:10|column:quý iv năm 2021": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "income_statement|code:10",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
         }
       ],
-      "income_statement|code:25": [
+      "income_statement|code:10|column:quý iv năm 2020": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "income_statement|code:10",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
         }
       ],
-      "income_statement|code:26": [
+      "income_statement|code:10|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "income_statement|code:10",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "income_statement|code:30": [
+      "income_statement|code:10|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "income_statement|code:10",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "income_statement|code:31": [
+      "income_statement|code:11|column:quý iv năm 2021": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "income_statement|code:11",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
         }
       ],
-      "income_statement|code:32": [
+      "income_statement|code:11|column:quý iv năm 2020": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "income_statement|code:11",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
         }
       ],
-      "income_statement|code:40": [
+      "income_statement|code:11|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "income_statement|code:11",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "income_statement|code:50": [
+      "income_statement|code:11|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "income_statement|code:11",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "income_statement|code:51": [
+      "income_statement|code:20|column:quý iv năm 2021": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "income_statement|code:20",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
         }
       ],
-      "income_statement|code:52": [
+      "income_statement|code:20|column:quý iv năm 2020": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "income_statement|code:20",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
         }
       ],
-      "income_statement|code:60": [
+      "income_statement|code:20|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "income_statement|code:20",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "income_statement|code:61": [
+      "income_statement|code:20|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 19
+          "item_index": 19,
+          "row_identity": "income_statement|code:20",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "income_statement|code:62": [
+      "income_statement|code:21|column:quý iv năm 2021": [
         {
           "sample_id": "VIC_Q4_2021_p010",
           "page_index": 10,
-          "item_index": 20
+          "item_index": 20,
+          "row_identity": "income_statement|code:21",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
         }
       ],
-      "income_statement|code:70": [
+      "income_statement|code:21|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 21,
+          "row_identity": "income_statement|code:21",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:21|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 22,
+          "row_identity": "income_statement|code:21",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:21|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 23,
+          "row_identity": "income_statement|code:21",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:22|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 24,
+          "row_identity": "income_statement|code:22",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:22|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 25,
+          "row_identity": "income_statement|code:22",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:22|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 26,
+          "row_identity": "income_statement|code:22",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:22|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 27,
+          "row_identity": "income_statement|code:22",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:23|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 28,
+          "row_identity": "income_statement|code:23",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:23|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 29,
+          "row_identity": "income_statement|code:23",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:23|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 30,
+          "row_identity": "income_statement|code:23",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:23|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 31,
+          "row_identity": "income_statement|code:23",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:24|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 32,
+          "row_identity": "income_statement|code:24",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:24|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 33,
+          "row_identity": "income_statement|code:24",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:24|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 34,
+          "row_identity": "income_statement|code:24",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:24|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 35,
+          "row_identity": "income_statement|code:24",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:25|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 36,
+          "row_identity": "income_statement|code:25",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:25|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 37,
+          "row_identity": "income_statement|code:25",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:25|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 38,
+          "row_identity": "income_statement|code:25",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:25|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 39,
+          "row_identity": "income_statement|code:25",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:26|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 40,
+          "row_identity": "income_statement|code:26",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:26|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 41,
+          "row_identity": "income_statement|code:26",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:26|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 42,
+          "row_identity": "income_statement|code:26",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:26|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 43,
+          "row_identity": "income_statement|code:26",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:30|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 44,
+          "row_identity": "income_statement|code:30",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:30|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 45,
+          "row_identity": "income_statement|code:30",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:30|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 46,
+          "row_identity": "income_statement|code:30",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:30|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 47,
+          "row_identity": "income_statement|code:30",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:31|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 48,
+          "row_identity": "income_statement|code:31",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:31|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 49,
+          "row_identity": "income_statement|code:31",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:31|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 50,
+          "row_identity": "income_statement|code:31",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:31|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 51,
+          "row_identity": "income_statement|code:31",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:32|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 52,
+          "row_identity": "income_statement|code:32",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:32|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 53,
+          "row_identity": "income_statement|code:32",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:32|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 54,
+          "row_identity": "income_statement|code:32",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:32|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 55,
+          "row_identity": "income_statement|code:32",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:40|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 56,
+          "row_identity": "income_statement|code:40",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:40|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 57,
+          "row_identity": "income_statement|code:40",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:40|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 58,
+          "row_identity": "income_statement|code:40",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:40|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 59,
+          "row_identity": "income_statement|code:40",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:50|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 60,
+          "row_identity": "income_statement|code:50",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:50|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 61,
+          "row_identity": "income_statement|code:50",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:50|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 62,
+          "row_identity": "income_statement|code:50",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:50|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 63,
+          "row_identity": "income_statement|code:50",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:51|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 64,
+          "row_identity": "income_statement|code:51",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:51|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 65,
+          "row_identity": "income_statement|code:51",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:51|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 66,
+          "row_identity": "income_statement|code:51",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:51|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 67,
+          "row_identity": "income_statement|code:51",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:52|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 68,
+          "row_identity": "income_statement|code:52",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:52|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 69,
+          "row_identity": "income_statement|code:52",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:52|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 70,
+          "row_identity": "income_statement|code:52",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:52|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 71,
+          "row_identity": "income_statement|code:52",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:60|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 72,
+          "row_identity": "income_statement|code:60",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:60|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 73,
+          "row_identity": "income_statement|code:60",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:60|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 74,
+          "row_identity": "income_statement|code:60",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:60|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 75,
+          "row_identity": "income_statement|code:60",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:61|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 76,
+          "row_identity": "income_statement|code:61",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:61|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 77,
+          "row_identity": "income_statement|code:61",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:61|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 78,
+          "row_identity": "income_statement|code:61",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:61|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 79,
+          "row_identity": "income_statement|code:61",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:62|column:quý iv năm 2021": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 80,
+          "row_identity": "income_statement|code:62",
+          "column_label": "Quý IV năm 2021",
+          "period_key": "2021Q4"
+        }
+      ],
+      "income_statement|code:62|column:quý iv năm 2020": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 81,
+          "row_identity": "income_statement|code:62",
+          "column_label": "Quý IV năm 2020",
+          "period_key": "2020Q4"
+        }
+      ],
+      "income_statement|code:62|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 82,
+          "row_identity": "income_statement|code:62",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:62|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p010",
+          "page_index": 10,
+          "item_index": 83,
+          "row_identity": "income_statement|code:62",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "income_statement|code:70|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p011",
           "page_index": 11,
-          "item_index": 0
-        },
+          "item_index": 0,
+          "row_identity": "income_statement|code:70",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "income_statement|code:70|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p011",
           "page_index": 11,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "income_statement|code:70",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ]
     },
     "cash_flow": {
-      "cash_flow|code:1": [
+      "cash_flow|code:1|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "cash_flow|code:1",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:2": [
+      "cash_flow|code:1|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "cash_flow|code:1",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:3": [
+      "cash_flow|code:2|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "cash_flow|code:2",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:4": [
+      "cash_flow|code:2|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "cash_flow|code:2",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:5": [
+      "cash_flow|code:3|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "cash_flow|code:3",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:6": [
+      "cash_flow|code:3|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "cash_flow|code:3",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:8": [
+      "cash_flow|code:4|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "cash_flow|code:4",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:9": [
+      "cash_flow|code:4|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "cash_flow|code:4",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:10": [
+      "cash_flow|code:5|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "cash_flow|code:5",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:11": [
+      "cash_flow|code:5|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "cash_flow|code:5",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:12": [
+      "cash_flow|code:6|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "cash_flow|code:6",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:13": [
+      "cash_flow|code:6|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "cash_flow|code:6",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:14": [
+      "cash_flow|code:8|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "cash_flow|code:8",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:15": [
+      "cash_flow|code:8|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "cash_flow|code:8",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:20": [
+      "cash_flow|code:9|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "cash_flow|code:9",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:21": [
+      "cash_flow|code:9|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "cash_flow|code:9",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:22": [
+      "cash_flow|code:10|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "cash_flow|code:10",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:23": [
+      "cash_flow|code:10|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "cash_flow|code:10",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:24": [
+      "cash_flow|code:11|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "cash_flow|code:11",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:25": [
+      "cash_flow|code:11|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 19
+          "item_index": 19,
+          "row_identity": "cash_flow|code:11",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:26": [
+      "cash_flow|code:12|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 20
+          "item_index": 20,
+          "row_identity": "cash_flow|code:12",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:27": [
+      "cash_flow|code:12|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 21
+          "item_index": 21,
+          "row_identity": "cash_flow|code:12",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:30": [
+      "cash_flow|code:13|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p012",
           "page_index": 12,
-          "item_index": 22
+          "item_index": 22,
+          "row_identity": "cash_flow|code:13",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:31": [
+      "cash_flow|code:13|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 23,
+          "row_identity": "cash_flow|code:13",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:14|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 24,
+          "row_identity": "cash_flow|code:14",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:14|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 25,
+          "row_identity": "cash_flow|code:14",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:15|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 26,
+          "row_identity": "cash_flow|code:15",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:15|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 27,
+          "row_identity": "cash_flow|code:15",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:20|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 28,
+          "row_identity": "cash_flow|code:20",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:20|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 29,
+          "row_identity": "cash_flow|code:20",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:21|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 30,
+          "row_identity": "cash_flow|code:21",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:21|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 31,
+          "row_identity": "cash_flow|code:21",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:22|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 32,
+          "row_identity": "cash_flow|code:22",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:22|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 33,
+          "row_identity": "cash_flow|code:22",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:23|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 34,
+          "row_identity": "cash_flow|code:23",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:23|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 35,
+          "row_identity": "cash_flow|code:23",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:24|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 36,
+          "row_identity": "cash_flow|code:24",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:24|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 37,
+          "row_identity": "cash_flow|code:24",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:25|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 38,
+          "row_identity": "cash_flow|code:25",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:25|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 39,
+          "row_identity": "cash_flow|code:25",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:26|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 40,
+          "row_identity": "cash_flow|code:26",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:26|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 41,
+          "row_identity": "cash_flow|code:26",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:27|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 42,
+          "row_identity": "cash_flow|code:27",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:27|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 43,
+          "row_identity": "cash_flow|code:27",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:30|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 44,
+          "row_identity": "cash_flow|code:30",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:30|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p012",
+          "page_index": 12,
+          "item_index": 45,
+          "row_identity": "cash_flow|code:30",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:31|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "cash_flow|code:31",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:32": [
+      "cash_flow|code:31|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "cash_flow|code:31",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:33": [
+      "cash_flow|code:32|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "cash_flow|code:32",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:34": [
+      "cash_flow|code:32|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "cash_flow|code:32",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:36": [
+      "cash_flow|code:33|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "cash_flow|code:33",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:40": [
+      "cash_flow|code:33|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "cash_flow|code:33",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:50": [
+      "cash_flow|code:34|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "cash_flow|code:34",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:60": [
+      "cash_flow|code:34|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "cash_flow|code:34",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ],
-      "cash_flow|code:61": [
+      "cash_flow|code:36|column:năm nay": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "cash_flow|code:36",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
         }
       ],
-      "cash_flow|code:70": [
+      "cash_flow|code:36|column:năm trước": [
         {
           "sample_id": "VIC_Q4_2021_p013",
           "page_index": 13,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "cash_flow|code:36",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:40|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 10,
+          "row_identity": "cash_flow|code:40",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:40|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 11,
+          "row_identity": "cash_flow|code:40",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:50|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 12,
+          "row_identity": "cash_flow|code:50",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:50|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 13,
+          "row_identity": "cash_flow|code:50",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:60|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 14,
+          "row_identity": "cash_flow|code:60",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:60|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 15,
+          "row_identity": "cash_flow|code:60",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:61|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 16,
+          "row_identity": "cash_flow|code:61",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
+        }
+      ],
+      "cash_flow|code:70|column:năm nay": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 17,
+          "row_identity": "cash_flow|code:70",
+          "column_label": "Năm nay",
+          "period_key": "2021FY"
+        }
+      ],
+      "cash_flow|code:70|column:năm trước": [
+        {
+          "sample_id": "VIC_Q4_2021_p013",
+          "page_index": 13,
+          "item_index": 18,
+          "row_identity": "cash_flow|code:70",
+          "column_label": "Năm trước",
+          "period_key": "2020FY"
         }
       ]
     }
   },
-  "conflicts": [
-    {
-      "report_id": "VIC_Q4_2021",
-      "sample_id": "VIC_Q4_2021_p011",
-      "statement": "income_statement",
-      "row_key": "income_statement|code:70",
-      "prior_values": [
-        -815000000.0
-      ],
-      "new_value": 1691000000.0
-    }
-  ],
-  "conflict_count": 1
+  "conflicts": [],
+  "conflict_count": 0
 }

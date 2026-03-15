@@ -4,282 +4,402 @@
       {
         "item_code": null,
         "item_name": "Các khoản nợ Chính phủ và NHNN",
-        "value": 20542000000.0,
+        "value": 20542000.0,
         "notes_ref": "16",
-        "original_name": "Các khoản nợ Chính phủ và NHNN"
+        "original_name": "Các khoản nợ Chính phủ và NHNN",
+        "row_identity": "balance_sheet|name:Các khoản nợ Chính phủ và NHNN|note:16",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Các khoản nợ Chính phủ và NHNN",
         "value": 131000000.0,
         "notes_ref": "16",
-        "original_name": "Các khoản nợ Chính phủ và NHNN"
+        "original_name": "Các khoản nợ Chính phủ và NHNN",
+        "row_identity": "balance_sheet|name:Các khoản nợ Chính phủ và NHNN|note:16",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Tiền gửi và vay Chính phủ, NHNN",
-        "value": 20542000000.0,
+        "value": 20542000.0,
         "notes_ref": null,
-        "original_name": "Tiền gửi và vay Chính phủ, NHNN"
+        "original_name": "Tiền gửi và vay Chính phủ, NHNN",
+        "row_identity": "balance_sheet|name:Tiền gửi và vay Chính phủ, NHNN",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Tiền gửi và vay Chính phủ, NHNN",
         "value": 131000000.0,
         "notes_ref": null,
-        "original_name": "Tiền gửi và vay Chính phủ, NHNN"
+        "original_name": "Tiền gửi và vay Chính phủ, NHNN",
+        "row_identity": "balance_sheet|name:Tiền gửi và vay Chính phủ, NHNN",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Tiền gửi và vay các tổ chức tài chính, các TCTD khác",
         "value": 138462274000000.0,
         "notes_ref": "17",
-        "original_name": "Tiền gửi và vay các tổ chức tài chính, các TCTD khác"
+        "original_name": "Tiền gửi và vay các tổ chức tài chính, các TCTD khác",
+        "row_identity": "balance_sheet|name:Tiền gửi và vay các tổ chức tài chính, các TCTD khác|note:17",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Tiền gửi và vay các tổ chức tài chính, các TCTD khác",
         "value": 153173002000000.0,
         "notes_ref": "17",
-        "original_name": "Tiền gửi và vay các tổ chức tài chính, các TCTD khác"
+        "original_name": "Tiền gửi và vay các tổ chức tài chính, các TCTD khác",
+        "row_identity": "balance_sheet|name:Tiền gửi và vay các tổ chức tài chính, các TCTD khác|note:17",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Tiền gửi các tổ chức tài chính, các TCTD khác",
         "value": 70584329000000.0,
         "notes_ref": "17.1",
-        "original_name": "Tiền gửi các tổ chức tài chính, các TCTD khác"
+        "original_name": "Tiền gửi các tổ chức tài chính, các TCTD khác",
+        "row_identity": "balance_sheet|name:Tiền gửi các tổ chức tài chính, các TCTD khác|note:17.1",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Tiền gửi các tổ chức tài chính, các TCTD khác",
         "value": 50619678000000.0,
         "notes_ref": "17.1",
-        "original_name": "Tiền gửi các tổ chức tài chính, các TCTD khác"
+        "original_name": "Tiền gửi các tổ chức tài chính, các TCTD khác",
+        "row_identity": "balance_sheet|name:Tiền gửi các tổ chức tài chính, các TCTD khác|note:17.1",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Vay các tổ chức tài chính, các TCTD khác",
         "value": 67877945000000.0,
         "notes_ref": "17.2",
-        "original_name": "Vay các tổ chức tài chính, các TCTD khác"
+        "original_name": "Vay các tổ chức tài chính, các TCTD khác",
+        "row_identity": "balance_sheet|name:Vay các tổ chức tài chính, các TCTD khác|note:17.2",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Vay các tổ chức tài chính, các TCTD khác",
         "value": 102553324000000.0,
         "notes_ref": "17.2",
-        "original_name": "Vay các tổ chức tài chính, các TCTD khác"
+        "original_name": "Vay các tổ chức tài chính, các TCTD khác",
+        "row_identity": "balance_sheet|name:Vay các tổ chức tài chính, các TCTD khác|note:17.2",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Tiền gửi của khách hàng",
         "value": 494954017000000.0,
         "notes_ref": "18",
-        "original_name": "Tiền gửi của khách hàng"
+        "original_name": "Tiền gửi của khách hàng",
+        "row_identity": "balance_sheet|name:Tiền gửi của khách hàng|note:18",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Tiền gửi của khách hàng",
         "value": 454660779000000.0,
         "notes_ref": "18",
-        "original_name": "Tiền gửi của khách hàng"
+        "original_name": "Tiền gửi của khách hàng",
+        "row_identity": "balance_sheet|name:Tiền gửi của khách hàng|note:18",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Phát hành giấy tờ có giá",
         "value": 126061309000000.0,
         "notes_ref": "20",
-        "original_name": "Phát hành giấy tờ có giá"
+        "original_name": "Phát hành giấy tờ có giá",
+        "row_identity": "balance_sheet|name:Phát hành giấy tờ có giá|note:20",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Phát hành giấy tờ có giá",
         "value": 84703300000000.0,
         "notes_ref": "20",
-        "original_name": "Phát hành giấy tờ có giá"
+        "original_name": "Phát hành giấy tờ có giá",
+        "row_identity": "balance_sheet|name:Phát hành giấy tờ có giá|note:20",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Các khoản nợ khác",
         "value": 23187221000000.0,
         "notes_ref": "21",
-        "original_name": "Các khoản nợ khác"
+        "original_name": "Các khoản nợ khác",
+        "row_identity": "balance_sheet|name:Các khoản nợ khác|note:21",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Các khoản nợ khác",
         "value": 25328735000000.0,
         "notes_ref": "21",
-        "original_name": "Các khoản nợ khác"
+        "original_name": "Các khoản nợ khác",
+        "row_identity": "balance_sheet|name:Các khoản nợ khác|note:21",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Các khoản lãi, phí phải trả",
         "value": 7309545000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản lãi, phí phải trả"
+        "original_name": "Các khoản lãi, phí phải trả",
+        "row_identity": "balance_sheet|name:Các khoản lãi, phí phải trả",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Các khoản lãi, phí phải trả",
         "value": 9418750000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản lãi, phí phải trả"
+        "original_name": "Các khoản lãi, phí phải trả",
+        "row_identity": "balance_sheet|name:Các khoản lãi, phí phải trả",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Các khoản phải trả và công nợ khác",
         "value": 15877676000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản phải trả và công nợ khác"
+        "original_name": "Các khoản phải trả và công nợ khác",
+        "row_identity": "balance_sheet|name:Các khoản phải trả và công nợ khác",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Các khoản phải trả và công nợ khác",
         "value": 15909985000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản phải trả và công nợ khác"
+        "original_name": "Các khoản phải trả và công nợ khác",
+        "row_identity": "balance_sheet|name:Các khoản phải trả và công nợ khác",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "TỔNG NỢ PHẢI TRẢ",
         "value": 782685363000000.0,
         "notes_ref": null,
-        "original_name": "TỔNG NỢ PHẢI TRẢ"
+        "original_name": "TỔNG NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|name:TỔNG NỢ PHẢI TRẢ",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "TỔNG NỢ PHẢI TRẢ",
         "value": 717865947000000.0,
         "notes_ref": null,
-        "original_name": "TỔNG NỢ PHẢI TRẢ"
+        "original_name": "TỔNG NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|name:TỔNG NỢ PHẢI TRẢ",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Vốn",
         "value": 71006213000000.0,
         "notes_ref": null,
-        "original_name": "Vốn"
+        "original_name": "Vốn",
+        "row_identity": "balance_sheet|name:Vốn",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Vốn",
         "value": 36257461000000.0,
         "notes_ref": null,
-        "original_name": "Vốn"
+        "original_name": "Vốn",
+        "row_identity": "balance_sheet|name:Vốn",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Vốn điều lệ",
         "value": 70450216000000.0,
         "notes_ref": null,
-        "original_name": "Vốn điều lệ"
+        "original_name": "Vốn điều lệ",
+        "row_identity": "balance_sheet|name:Vốn điều lệ",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Vốn điều lệ",
         "value": 35225108000000.0,
         "notes_ref": null,
-        "original_name": "Vốn điều lệ"
+        "original_name": "Vốn điều lệ",
+        "row_identity": "balance_sheet|name:Vốn điều lệ",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Thặng dư vốn cổ phần",
-        "value": 476356000000.0,
+        "value": 476356000.0,
         "notes_ref": null,
-        "original_name": "Thặng dư vốn cổ phần"
+        "original_name": "Thặng dư vốn cổ phần",
+        "row_identity": "balance_sheet|name:Thặng dư vốn cổ phần",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Vốn khác",
-        "value": 555997000000.0,
+        "value": 555997000.0,
         "notes_ref": null,
-        "original_name": "Vốn khác"
+        "original_name": "Vốn khác",
+        "row_identity": "balance_sheet|name:Vốn khác",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Vốn khác",
-        "value": 555997000000.0,
+        "value": 555997000.0,
         "notes_ref": null,
-        "original_name": "Vốn khác"
+        "original_name": "Vốn khác",
+        "row_identity": "balance_sheet|name:Vốn khác",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Các quỹ",
         "value": 20845050000000.0,
         "notes_ref": null,
-        "original_name": "Các quỹ"
+        "original_name": "Các quỹ",
+        "row_identity": "balance_sheet|name:Các quỹ",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Các quỹ",
         "value": 45028627000000.0,
         "notes_ref": null,
-        "original_name": "Các quỹ"
+        "original_name": "Các quỹ",
+        "row_identity": "balance_sheet|name:Các quỹ",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Chênh lệch tỷ giá hối đoái",
-        "value": 10494000000.0,
+        "value": 10494000.0,
         "notes_ref": null,
-        "original_name": "Chênh lệch tỷ giá hối đoái"
+        "original_name": "Chênh lệch tỷ giá hối đoái",
+        "row_identity": "balance_sheet|name:Chênh lệch tỷ giá hối đoái",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Lợi nhuận chưa phân phối",
         "value": 51068780000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận chưa phân phối"
+        "original_name": "Lợi nhuận chưa phân phối",
+        "row_identity": "balance_sheet|name:Lợi nhuận chưa phân phối",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Lợi nhuận chưa phân phối",
         "value": 49013144000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận chưa phân phối"
+        "original_name": "Lợi nhuận chưa phân phối",
+        "row_identity": "balance_sheet|name:Lợi nhuận chưa phân phối",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "Lợi ích cổ đông không kiểm soát",
         "value": 1437445000000.0,
         "notes_ref": null,
-        "original_name": "Lợi ích cổ đông không kiểm soát"
+        "original_name": "Lợi ích cổ đông không kiểm soát",
+        "row_identity": "balance_sheet|name:Lợi ích cổ đông không kiểm soát",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "Lợi ích cổ đông không kiểm soát",
         "value": 1316833000000.0,
         "notes_ref": null,
-        "original_name": "Lợi ích cổ đông không kiểm soát"
+        "original_name": "Lợi ích cổ đông không kiểm soát",
+        "row_identity": "balance_sheet|name:Lợi ích cổ đông không kiểm soát",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "TỔNG VỐN CHỦ SỞ HỮU",
         "value": 144367982000000.0,
         "notes_ref": "23",
-        "original_name": "TỔNG VỐN CHỦ SỞ HỮU"
+        "original_name": "TỔNG VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|name:TỔNG VỐN CHỦ SỞ HỮU|note:23",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "TỔNG VỐN CHỦ SỞ HỮU",
         "value": 131616065000000.0,
         "notes_ref": "23",
-        "original_name": "TỔNG VỐN CHỦ SỞ HỮU"
+        "original_name": "TỔNG VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|name:TỔNG VỐN CHỦ SỞ HỮU|note:23",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       },
       {
         "item_code": null,
         "item_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
         "value": 927053345000000.0,
         "notes_ref": null,
-        "original_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
+        "original_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|name:TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "column_label": "30/09/2024 triệu đồng",
+        "period_key": "2024-09-30"
       },
       {
         "item_code": null,
         "item_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
         "value": 849482012000000.0,
         "notes_ref": null,
-        "original_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
+        "original_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|name:TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "column_label": "31/12/2023 triệu đồng",
+        "period_key": "2023FY"
       }
     ]
   },

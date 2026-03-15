@@ -86,3 +86,31 @@ def test_structured_metrics_use_row_identity_when_names_repeat() -> None:
     metrics = calculate_structured_metrics(prediction, reference)
     assert metrics.row_f1 == pytest.approx(1.0)
     assert metrics.value_exact_accuracy == pytest.approx(1.0)
+
+
+def test_structured_metrics_prefer_column_label_over_period_key() -> None:
+    reference = _empty_structured()
+    prediction = _empty_structured()
+
+    reference["balance_sheet"]["items"] = [
+        {
+            "item_code": "110",
+            "item_name": "Tiền và tương đương tiền",
+            "column_label": "31/12/2024",
+            "period_key": "2024FY",
+            "value": 1200.0,
+        }
+    ]
+    prediction["balance_sheet"]["items"] = [
+        {
+            "item_code": "110",
+            "item_name": "Tiền và tương đương tiền",
+            "column_label": "31/12/2024",
+            "period_key": "2024-12-31",
+            "value": 1200.0,
+        }
+    ]
+
+    metrics = calculate_structured_metrics(prediction, reference)
+    assert metrics.row_f1 == pytest.approx(1.0)
+    assert metrics.value_exact_accuracy == pytest.approx(1.0)

@@ -1,7 +1,7 @@
 {
   "last_csv_save_at": "2026-03-11T01:09:32.959389+00:00",
-  "updated_at": "2026-03-15T08:04:37.431745+00:00",
-  "last_generated_at": "2026-03-15T08:04:37.426745+00:00",
+  "updated_at": "2026-03-15T15:57:33.083413+00:00",
+  "last_generated_at": "2026-03-15T15:57:33.076906+00:00",
   "last_generated_paths": {
     "gt_markdown_path": "data\\benchmark_v2\\gt_markdown\\TCB_Q3_2024_p009.md",
     "gt_structured_path": "data\\benchmark_v2\\gt_structured\\TCB_Q3_2024_p009.json",
@@ -9,5 +9,16 @@
   },
   "report_unit_detected": "trieu dong",
   "report_unit_multiplier": 1000000.0,
-  "value_unit_normalized_to": "VND"
+  "value_unit_normalized_to": "VND",
+  "structured_contract_version": "row_identity_column_period_v1",
+  "rows_migrated_from_cells": true,
+  "rows_migrated_at": "2026-03-15T15:57:33.077905+00:00",
+  "legacy_row_count": 96,
+  "migrated_row_count": 96,
+  "value_column_labels": [
+    "Quý III 2024 triệu đồng",
+    "Quý III 2023 triệu đồng",
+    "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+    "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng"
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "last_csv_save_at": "2026-03-12T05:14:29.410766+00:00",
-  "updated_at": "2026-03-15T08:02:04.371847+00:00",
-  "last_generated_at": "2026-03-15T08:02:04.366832+00:00",
+  "updated_at": "2026-03-15T15:57:33.217806+00:00",
+  "last_generated_at": "2026-03-15T15:57:33.211781+00:00",
   "last_generated_paths": {
     "gt_markdown_path": "data\\benchmark_v2\\gt_markdown\\VCB_Q1_2022_p004.md",
     "gt_structured_path": "data\\benchmark_v2\\gt_structured\\VCB_Q1_2022_p004.json",
@@ -9,5 +9,14 @@
   },
   "report_unit_detected": "trieu vnd",
   "report_unit_multiplier": 1000000.0,
-  "value_unit_normalized_to": "VND"
+  "value_unit_normalized_to": "VND",
+  "structured_contract_version": "row_identity_column_period_v1",
+  "rows_migrated_from_cells": true,
+  "rows_migrated_at": "2026-03-15T15:57:33.212780+00:00",
+  "legacy_row_count": 71,
+  "migrated_row_count": 67,
+  "value_column_labels": [
+    "31/3/2022 Triệu VND",
+    "31/12/2021 Triệu VND (đã kiểm toán)"
+  ]
 }

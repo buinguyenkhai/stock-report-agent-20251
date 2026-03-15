@@ -73,19 +73,18 @@ def normalize_item(item: Dict[str, Any]) -> Dict[str, Any]:
 
 
 def build_row_identity(statement: str, item: Dict[str, Any], *, fallback: str) -> str:
-    explicit = normalize_optional_text(item.get("row_identity"))
-    if explicit:
-        return f"{statement}|id:{normalize_text(explicit)}"
-
     code = normalize_optional_text(item.get("item_code"))
     note = normalize_optional_text(item.get("notes_ref"))
     name = normalize_optional_text(item.get("item_name"))
+    explicit = normalize_optional_text(item.get("row_identity"))
     original_name = normalize_optional_text(item.get("original_name"))
 
     if code:
         return f"{statement}|code:{normalize_text(code)}"
     if name and note:
         return f"{statement}|name:{normalize_text(name)}|note:{normalize_text(note)}"
+    if explicit:
+        return f"{statement}|id:{normalize_text(explicit)}"
     if name:
         return f"{statement}|name:{normalize_text(name)}"
     if original_name:
@@ -94,12 +93,12 @@ def build_row_identity(statement: str, item: Dict[str, Any], *, fallback: str) -
 
 
 def build_column_identity(item: Dict[str, Any]) -> str | None:
-    period_key = normalize_optional_text(item.get("period_key"))
     column_label = normalize_optional_text(item.get("column_label"))
-    if period_key:
-        return f"period:{normalize_text(period_key)}"
     if column_label:
         return f"column:{normalize_text(column_label)}"
+    period_key = normalize_optional_text(item.get("period_key"))
+    if period_key:
+        return f"period:{normalize_text(period_key)}"
     return None
 
 

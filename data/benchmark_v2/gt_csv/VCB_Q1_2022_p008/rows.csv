@@ -1,7 +1,29 @@
-statement,item_code,item_name,value,notes_ref,original_name
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+income_statement,7,Chi phí thuế TNDN hiện hành,-1986469000000.0,,Chi phí thuế TNDN hiện hành,income_statement|code:7,Quý I Năm nay Triệu VND,2022Q1_YTD
+income_statement,7,Chi phí thuế TNDN hiện hành,-1724252000000.0,,Chi phí thuế TNDN hiện hành,income_statement|code:7,Quý I Năm trước Triệu VND,2021Q1_YTD
+income_statement,7,Chi phí thuế TNDN hiện hành,-1986469000000.0,,Chi phí thuế TNDN hiện hành,income_statement|code:7,Lũy kế từ đầu năm Năm nay Triệu VND,2022Q1_YTD
+income_statement,7,Chi phí thuế TNDN hiện hành,-1724252000000.0,,Chi phí thuế TNDN hiện hành,income_statement|code:7,Lũy kế từ đầu năm Năm trước Triệu VND,2021Q1_YTD
+income_statement,8,Chi phí thuế TNDN hoãn lại,3639000000.0,,Chi phí thuế TNDN hoãn lại,income_statement|code:8,Quý I Năm nay Triệu VND,2022Q1_YTD
+income_statement,8,Chi phí thuế TNDN hoãn lại,308000000.0,,Chi phí thuế TNDN hoãn lại,income_statement|code:8,Quý I Năm trước Triệu VND,2021Q1_YTD
+income_statement,8,Chi phí thuế TNDN hoãn lại,3639000000.0,,Chi phí thuế TNDN hoãn lại,income_statement|code:8,Lũy kế từ đầu năm Năm nay Triệu VND,2022Q1_YTD
+income_statement,8,Chi phí thuế TNDN hoãn lại,308000000.0,,Chi phí thuế TNDN hoãn lại,income_statement|code:8,Lũy kế từ đầu năm Năm trước Triệu VND,2021Q1_YTD
+income_statement,XI,Chi phí thuế TNDN,-1982830000000.0,,Chi phí thuế TNDN,income_statement|code:XI,Quý I Năm nay Triệu VND,2022Q1_YTD
+income_statement,XI,Chi phí thuế TNDN,-1723944000000.0,,Chi phí thuế TNDN,income_statement|code:XI,Quý I Năm trước Triệu VND,2021Q1_YTD
+income_statement,XI,Chi phí thuế TNDN,-1982830000000.0,,Chi phí thuế TNDN,income_statement|code:XI,Lũy kế từ đầu năm Năm nay Triệu VND,2022Q1_YTD
+income_statement,XI,Chi phí thuế TNDN,-1723944000000.0,,Chi phí thuế TNDN,income_statement|code:XI,Lũy kế từ đầu năm Năm trước Triệu VND,2021Q1_YTD
+income_statement,XII,Lợi nhuận sau thuế,7967426000000.0,,Lợi nhuận sau thuế,income_statement|code:XII,Quý I Năm nay Triệu VND,2022Q1_YTD
+income_statement,XII,Lợi nhuận sau thuế,6907522000000.0,,Lợi nhuận sau thuế,income_statement|code:XII,Quý I Năm trước Triệu VND,2021Q1_YTD
+income_statement,XII,Lợi nhuận sau thuế,7967426000000.0,,Lợi nhuận sau thuế,income_statement|code:XII,Lũy kế từ đầu năm Năm nay Triệu VND,2022Q1_YTD
+income_statement,XII,Lợi nhuận sau thuế,6907522000000.0,,Lợi nhuận sau thuế,income_statement|code:XII,Lũy kế từ đầu năm Năm trước Triệu VND,2021Q1_YTD
+income_statement,XIII,Lợi ích của cổ đông không kiểm soát,-5242000000.0,,Lợi ích của cổ đông không kiểm soát,income_statement|code:XIII,Quý I Năm nay Triệu VND,2022Q1_YTD
+income_statement,XIII,Lợi ích của cổ đông không kiểm soát,-4944000000.0,,Lợi ích của cổ đông không kiểm soát,income_statement|code:XIII,Quý I Năm trước Triệu VND,2021Q1_YTD
+income_statement,XIII,Lợi ích của cổ đông không kiểm soát,-5242000000.0,,Lợi ích của cổ đông không kiểm soát,income_statement|code:XIII,Lũy kế từ đầu năm Năm nay Triệu VND,2022Q1_YTD
+income_statement,XIII,Lợi ích của cổ đông không kiểm soát,-4944000000.0,,Lợi ích của cổ đông không kiểm soát,income_statement|code:XIII,Lũy kế từ đầu năm Năm trước Triệu VND,2021Q1_YTD
+income_statement,XIV,Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng,7962184000000.0,,Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng,income_statement|code:XIV,Quý I Năm nay Triệu VND,2022Q1_YTD
+income_statement,XIV,Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng,6902578000000.0,,Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng,income_statement|code:XIV,Quý I Năm trước Triệu VND,2021Q1_YTD
+income_statement,XIV,Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng,7962184000000.0,,Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng,income_statement|code:XIV,Lũy kế từ đầu năm Năm nay Triệu VND,2022Q1_YTD
+income_statement,XIV,Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng,6902578000000.0,,Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng,income_statement|code:XIV,Lũy kế từ đầu năm Năm trước Triệu VND,2021Q1_YTD
+income_statement,XV,Lãi cơ bản trên cổ phiếu (VND) (*),1682.0,15,Lãi cơ bản trên cổ phiếu (VND) (*),income_statement|code:XV,Quý I Năm nay Triệu VND,2022Q1_YTD
+income_statement,XV,Lãi cơ bản trên cổ phiếu (VND) (*),1459.0,15,Lãi cơ bản trên cổ phiếu (VND) (*),income_statement|code:XV,Quý I Năm trước Triệu VND,2021Q1_YTD
+income_statement,XV,Lãi cơ bản trên cổ phiếu (VND) (*),1682.0,15,Lãi cơ bản trên cổ phiếu (VND) (*),income_statement|code:XV,Lũy kế từ đầu năm Năm nay Triệu VND,2022Q1_YTD
+income_statement,XV,Lãi cơ bản trên cổ phiếu (VND) (*),1459.0,15,Lãi cơ bản trên cổ phiếu (VND) (*),income_statement|code:XV,Lũy kế từ đầu năm Năm trước Triệu VND,2021Q1_YTD

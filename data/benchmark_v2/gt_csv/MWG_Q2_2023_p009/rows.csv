@@ -1,22 +1,42 @@
-statement,item_code,item_name,value,notes_ref,original_name
-cash_flow,01,Lợi nhuận kế toán trước thuế,288751057463,,Lợi nhuận kế toán trước thuế
-cash_flow,02,Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại),1717488679748,"13, 14, 16",Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại)
-cash_flow,03,Hoàn nhập dự phòng,-89740226100,,Hoàn nhập dự phòng
-cash_flow,04,Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ,-1895045928,,Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ
-cash_flow,05,Lãi từ hoạt động đầu tư,-798719809176,,Lãi từ hoạt động đầu tư
-cash_flow,06,Chi phí lãi vay,680299703032,25,Chi phí lãi vay
-cash_flow,08,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động,1796184359039,,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động
-cash_flow,09,Giảm (tăng) các khoản phải thu,538772598103,,Giảm (tăng) các khoản phải thu
-cash_flow,10,Giảm hàng tồn kho,3901771795305,,Giảm hàng tồn kho
-cash_flow,11,Giảm các khoản phải trả,-1624630886898,,Giảm các khoản phải trả
-cash_flow,12,Giảm (tăng) chi phí trả trước,111442960639,,Giảm (tăng) chi phí trả trước
-cash_flow,14,Tiền lãi vay đã trả,-610178274620,,Tiền lãi vay đã trả
-cash_flow,15,Thuế thu nhập doanh nghiệp đã nộp,-655061300416,19,Thuế thu nhập doanh nghiệp đã nộp
-cash_flow,20,Lưu chuyển tiền thuần từ hoạt động kinh doanh,3458301251152,,Lưu chuyển tiền thuần từ hoạt động kinh doanh
-cash_flow,21,"Tiền chi để mua sắm, xây dựng tài sản cố định (""TSCĐ"") và các tài sản dài hạn khác",-438088628475,,"Tiền chi để mua sắm, xây dựng tài sản cố định (""TSCĐ"") và các tài sản dài hạn khác"
-cash_flow,22,"Tiền thu do thanh lý, nhượng bán TSCĐ",1920402750,,"Tiền thu do thanh lý, nhượng bán TSCĐ"
-cash_flow,23,Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn,-18130489000000,,Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn
-cash_flow,24,Thu hồi tiền gửi ngân hàng có kỳ hạn,7220800327572,,Thu hồi tiền gửi ngân hàng có kỳ hạn
-cash_flow,27,"Tiền thu lãi từ tiền gửi, cho vay",627730073106,,"Tiền thu lãi từ tiền gửi, cho vay"
-cash_flow,28,Tiền thu lợi ích cổ đông không kiểm soát,-1156023000,,Tiền thu lợi ích cổ đông không kiểm soát
-cash_flow,30,Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư,-10719282848047,,Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+cash_flow,01,Lợi nhuận kế toán trước thuế,288751057463.0,,Lợi nhuận kế toán trước thuế,cash_flow|code:01,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,01,Lợi nhuận kế toán trước thuế,3705136953628.0,,Lợi nhuận kế toán trước thuế,cash_flow|code:01,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,02,Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại),1717488679748.0,"13, 14, 16",Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại),cash_flow|code:02,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,02,Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại),1719685698133.0,"13, 14, 16",Khấu hao và hao mòn tài sản cố định (bao gồm phân bổ lợi thế thương mại),cash_flow|code:02,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,03,Hoàn nhập dự phòng,-89740226100.0,,Hoàn nhập dự phòng,cash_flow|code:03,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,03,Hoàn nhập dự phòng,-179333334461.0,,Hoàn nhập dự phòng,cash_flow|code:03,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,04,Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ,-1895045928.0,,Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ,cash_flow|code:04,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,04,Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ,-143043760.0,,Lãi chênh lệch tỷ giá hối đoái do đánh giá lại các khoản mục tiền tệ có gốc ngoại tệ,cash_flow|code:04,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,05,Lãi từ hoạt động đầu tư,-798719809176.0,,Lãi từ hoạt động đầu tư,cash_flow|code:05,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,05,Lãi từ hoạt động đầu tư,-196193443545.0,,Lãi từ hoạt động đầu tư,cash_flow|code:05,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,06,Chi phí lãi vay,680299703032.0,25,Chi phí lãi vay,cash_flow|code:06,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,06,Chi phí lãi vay,566436474665.0,25,Chi phí lãi vay,cash_flow|code:06,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,08,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động,1796184359039.0,,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động,cash_flow|code:08,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,08,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động,5615589304660.0,,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động,cash_flow|code:08,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,09,Giảm (tăng) các khoản phải thu,538772598103.0,,Giảm (tăng) các khoản phải thu,cash_flow|code:09,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,09,Giảm (tăng) các khoản phải thu,-546904170830.0,,Giảm (tăng) các khoản phải thu,cash_flow|code:09,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,10,Giảm hàng tồn kho,3901771795305.0,,Giảm hàng tồn kho,cash_flow|code:10,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,10,Giảm hàng tồn kho,1098012699975.0,,Giảm hàng tồn kho,cash_flow|code:10,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,11,Giảm các khoản phải trả,-1624630886898.0,,Giảm các khoản phải trả,cash_flow|code:11,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,11,Giảm các khoản phải trả,-3597224727134.0,,Giảm các khoản phải trả,cash_flow|code:11,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,12,Giảm (tăng) chi phí trả trước,111442960639.0,,Giảm (tăng) chi phí trả trước,cash_flow|code:12,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,12,Giảm (tăng) chi phí trả trước,-72102319597.0,,Giảm (tăng) chi phí trả trước,cash_flow|code:12,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,14,Tiền lãi vay đã trả,-610178274620.0,,Tiền lãi vay đã trả,cash_flow|code:14,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,14,Tiền lãi vay đã trả,-551787941092.0,,Tiền lãi vay đã trả,cash_flow|code:14,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,15,Thuế thu nhập doanh nghiệp đã nộp,-655061300416.0,19,Thuế thu nhập doanh nghiệp đã nộp,cash_flow|code:15,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,15,Thuế thu nhập doanh nghiệp đã nộp,-980769046726.0,19,Thuế thu nhập doanh nghiệp đã nộp,cash_flow|code:15,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,20,Lưu chuyển tiền thuần từ hoạt động kinh doanh,3458301251152.0,,Lưu chuyển tiền thuần từ hoạt động kinh doanh,cash_flow|code:20,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,20,Lưu chuyển tiền thuần từ hoạt động kinh doanh,964813799256.0,,Lưu chuyển tiền thuần từ hoạt động kinh doanh,cash_flow|code:20,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,21,"Tiền chi để mua sắm, xây dựng tài sản cố định (""TSCĐ"") và các tài sản dài hạn khác",-438088628475.0,,"Tiền chi để mua sắm, xây dựng tài sản cố định (""TSCĐ"") và các tài sản dài hạn khác",cash_flow|code:21,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,21,"Tiền chi để mua sắm, xây dựng tài sản cố định (""TSCĐ"") và các tài sản dài hạn khác",-1906747318543.0,,"Tiền chi để mua sắm, xây dựng tài sản cố định (""TSCĐ"") và các tài sản dài hạn khác",cash_flow|code:21,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,22,"Tiền thu do thanh lý, nhượng bán TSCĐ",1920402750.0,,"Tiền thu do thanh lý, nhượng bán TSCĐ",cash_flow|code:22,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,22,"Tiền thu do thanh lý, nhượng bán TSCĐ",2113121288.0,,"Tiền thu do thanh lý, nhượng bán TSCĐ",cash_flow|code:22,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,23,Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn,-18130489000000.0,,Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn,cash_flow|code:23,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,23,Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn,-12162557973355.0,,Tiền chi cho vay và tiền gửi ngân hàng có kỳ hạn,cash_flow|code:23,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,24,Thu hồi tiền gửi ngân hàng có kỳ hạn,7220800327572.0,,Thu hồi tiền gửi ngân hàng có kỳ hạn,cash_flow|code:24,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,24,Thu hồi tiền gửi ngân hàng có kỳ hạn,14150036502907.0,,Thu hồi tiền gửi ngân hàng có kỳ hạn,cash_flow|code:24,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,27,"Tiền thu lãi từ tiền gửi, cho vay",627730073106.0,,"Tiền thu lãi từ tiền gửi, cho vay",cash_flow|code:27,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,27,"Tiền thu lãi từ tiền gửi, cho vay",735228993203.0,,"Tiền thu lãi từ tiền gửi, cho vay",cash_flow|code:27,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY
+cash_flow,28,Tiền thu lợi ích cổ đông không kiểm soát,-1156023000.0,,Tiền thu lợi ích cổ đông không kiểm soát,cash_flow|code:28,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,30,Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư,-10719282848047.0,,Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư,cash_flow|code:30,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023,2023FY
+cash_flow,30,Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư,637038485500.0,,Lưu chuyển tiền thuần (sử dụng vào) từ hoạt động đầu tư,cash_flow|code:30,Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022,2022FY

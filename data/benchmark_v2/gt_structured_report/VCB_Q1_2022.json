@@ -6,497 +6,1360 @@
         "item_name": "Tiền mặt, vàng bạc, đá quý",
         "value": 14868054000000.0,
         "notes_ref": null,
-        "original_name": "Tiền mặt, vàng bạc, đá quý"
+        "original_name": "Tiền mặt, vàng bạc, đá quý",
+        "row_identity": "balance_sheet|code:I",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "I",
+        "item_name": "Tiền mặt, vàng bạc, đá quý",
+        "value": 18011766000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền mặt, vàng bạc, đá quý",
+        "row_identity": "balance_sheet|code:I",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "II",
         "item_name": "Tiền gửi tại Ngân hàng Nhà nước",
         "value": 38888399000000.0,
         "notes_ref": null,
-        "original_name": "Tiền gửi tại Ngân hàng Nhà nước"
+        "original_name": "Tiền gửi tại Ngân hàng Nhà nước",
+        "row_identity": "balance_sheet|code:II",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "II",
+        "item_name": "Tiền gửi tại Ngân hàng Nhà nước",
+        "value": 22506711000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền gửi tại Ngân hàng Nhà nước",
+        "row_identity": "balance_sheet|code:II",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "III",
         "item_name": "Tiền gửi tại và cho vay các tổ chức tín dụng khác",
         "value": 194999348000000.0,
         "notes_ref": null,
-        "original_name": "Tiền gửi tại và cho vay các tổ chức tín dụng khác"
+        "original_name": "Tiền gửi tại và cho vay các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:III",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "III",
+        "item_name": "Tiền gửi tại và cho vay các tổ chức tín dụng khác",
+        "value": 225764546000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền gửi tại và cho vay các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:III",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Tiền gửi tại các tổ chức tín dụng khác",
         "value": 156548126000000.0,
         "notes_ref": null,
-        "original_name": "Tiền gửi tại các tổ chức tín dụng khác"
+        "original_name": "Tiền gửi tại các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Tiền gửi tại các tổ chức tín dụng khác",
+        "value": 181036981000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền gửi tại các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Cho vay các tổ chức tín dụng khác",
         "value": 39451222000000.0,
         "notes_ref": null,
-        "original_name": "Cho vay các tổ chức tín dụng khác"
+        "original_name": "Cho vay các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Cho vay các tổ chức tín dụng khác",
+        "value": 48727565000000.0,
+        "notes_ref": null,
+        "original_name": "Cho vay các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "3",
         "item_name": "Dự phòng rủi ro",
         "value": -1000000000000.0,
         "notes_ref": null,
-        "original_name": "Dự phòng rủi ro"
+        "original_name": "Dự phòng rủi ro",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Dự phòng rủi ro",
+        "value": -4000000000000.0,
+        "notes_ref": null,
+        "original_name": "Dự phòng rủi ro",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "IV",
         "item_name": "Chứng khoán kinh doanh",
         "value": 3297566000000.0,
         "notes_ref": "4",
-        "original_name": "Chứng khoán kinh doanh"
+        "original_name": "Chứng khoán kinh doanh",
+        "row_identity": "balance_sheet|code:IV",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "IV",
+        "item_name": "Chứng khoán kinh doanh",
+        "value": 2766098000000.0,
+        "notes_ref": "4",
+        "original_name": "Chứng khoán kinh doanh",
+        "row_identity": "balance_sheet|code:IV",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Chứng khoán kinh doanh",
         "value": 3372631000000.0,
         "notes_ref": null,
-        "original_name": "Chứng khoán kinh doanh"
+        "original_name": "Chứng khoán kinh doanh",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Chứng khoán kinh doanh",
+        "value": 2822531000000.0,
+        "notes_ref": null,
+        "original_name": "Chứng khoán kinh doanh",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Dự phòng rủi ro chứng khoán kinh doanh",
-        "value": -75065000000.0,
+        "value": -75065000.0,
         "notes_ref": null,
-        "original_name": "Dự phòng rủi ro chứng khoán kinh doanh"
+        "original_name": "Dự phòng rủi ro chứng khoán kinh doanh",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Dự phòng rủi ro chứng khoán kinh doanh",
+        "value": -56433000.0,
+        "notes_ref": null,
+        "original_name": "Dự phòng rủi ro chứng khoán kinh doanh",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "V",
         "item_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác",
-        "value": 0.0,
+        "value": 303202000.0,
         "notes_ref": null,
-        "original_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác"
+        "original_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác",
+        "row_identity": "balance_sheet|code:V",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "VI",
         "item_name": "Cho vay khách hàng",
         "value": 997707933000000.0,
         "notes_ref": null,
-        "original_name": "Cho vay khách hàng"
+        "original_name": "Cho vay khách hàng",
+        "row_identity": "balance_sheet|code:VI",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "VI",
+        "item_name": "Cho vay khách hàng",
+        "value": 934774287000000.0,
+        "notes_ref": null,
+        "original_name": "Cho vay khách hàng",
+        "row_identity": "balance_sheet|code:VI",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Cho vay khách hàng",
         "value": 1028899744000000.0,
         "notes_ref": "5",
-        "original_name": "Cho vay khách hàng"
+        "original_name": "Cho vay khách hàng",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Cho vay khách hàng",
+        "value": 960749955000000.0,
+        "notes_ref": "5",
+        "original_name": "Cho vay khách hàng",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Dự phòng rủi ro cho vay khách hàng",
         "value": -31191811000000.0,
         "notes_ref": "6",
-        "original_name": "Dự phòng rủi ro cho vay khách hàng"
+        "original_name": "Dự phòng rủi ro cho vay khách hàng",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Dự phòng rủi ro cho vay khách hàng",
+        "value": -25975668000000.0,
+        "notes_ref": "6",
+        "original_name": "Dự phòng rủi ro cho vay khách hàng",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "VII",
         "item_name": "Chứng khoán đầu tư",
         "value": 171953037000000.0,
         "notes_ref": "7",
-        "original_name": "Chứng khoán đầu tư"
+        "original_name": "Chứng khoán đầu tư",
+        "row_identity": "balance_sheet|code:VII",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "VII",
+        "item_name": "Chứng khoán đầu tư",
+        "value": 170604700000000.0,
+        "notes_ref": "7",
+        "original_name": "Chứng khoán đầu tư",
+        "row_identity": "balance_sheet|code:VII",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Chứng khoán đầu tư sẵn sàng để bán",
         "value": 75001289000000.0,
         "notes_ref": null,
-        "original_name": "Chứng khoán đầu tư sẵn sàng để bán"
+        "original_name": "Chứng khoán đầu tư sẵn sàng để bán",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Chứng khoán đầu tư sẵn sàng để bán",
+        "value": 71122502000000.0,
+        "notes_ref": null,
+        "original_name": "Chứng khoán đầu tư sẵn sàng để bán",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Chứng khoán đầu tư giữ đến ngày đáo hạn",
         "value": 97125603000000.0,
         "notes_ref": null,
-        "original_name": "Chứng khoán đầu tư giữ đến ngày đáo hạn"
+        "original_name": "Chứng khoán đầu tư giữ đến ngày đáo hạn",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Chứng khoán đầu tư giữ đến ngày đáo hạn",
+        "value": 99657595000000.0,
+        "notes_ref": null,
+        "original_name": "Chứng khoán đầu tư giữ đến ngày đáo hạn",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "3",
         "item_name": "Dự phòng rủi ro chứng khoán đầu tư",
-        "value": -173855000000.0,
+        "value": -173855000.0,
         "notes_ref": null,
-        "original_name": "Dự phòng rủi ro chứng khoán đầu tư"
+        "original_name": "Dự phòng rủi ro chứng khoán đầu tư",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Dự phòng rủi ro chứng khoán đầu tư",
+        "value": -175397000.0,
+        "notes_ref": null,
+        "original_name": "Dự phòng rủi ro chứng khoán đầu tư",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "VIII",
         "item_name": "Góp vốn, đầu tư dài hạn",
         "value": 2366013000000.0,
         "notes_ref": null,
-        "original_name": "Góp vốn, đầu tư dài hạn"
+        "original_name": "Góp vốn, đầu tư dài hạn",
+        "row_identity": "balance_sheet|code:VIII",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "VIII",
+        "item_name": "Góp vốn, đầu tư dài hạn",
+        "value": 2346176000000.0,
+        "notes_ref": null,
+        "original_name": "Góp vốn, đầu tư dài hạn",
+        "row_identity": "balance_sheet|code:VIII",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Vốn góp liên doanh",
-        "value": 769437000000.0,
+        "value": 769437000.0,
         "notes_ref": "8(a)",
-        "original_name": "Vốn góp liên doanh"
+        "original_name": "Vốn góp liên doanh",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Vốn góp liên doanh",
+        "value": 748895000.0,
+        "notes_ref": "8(a)",
+        "original_name": "Vốn góp liên doanh",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Đầu tư vào công ty liên kết",
-        "value": 11979000000.0,
+        "value": 11979000.0,
         "notes_ref": "8(b)",
-        "original_name": "Đầu tư vào công ty liên kết"
+        "original_name": "Đầu tư vào công ty liên kết",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Đầu tư vào công ty liên kết",
+        "value": 10820000.0,
+        "notes_ref": "8(b)",
+        "original_name": "Đầu tư vào công ty liên kết",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "3",
         "item_name": "Đầu tư dài hạn khác",
         "value": 1659597000000.0,
         "notes_ref": null,
-        "original_name": "Đầu tư dài hạn khác"
+        "original_name": "Đầu tư dài hạn khác",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Đầu tư dài hạn khác",
+        "value": 1661461000000.0,
+        "notes_ref": null,
+        "original_name": "Đầu tư dài hạn khác",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "4",
         "item_name": "Dự phòng giảm giá đầu tư dài hạn",
-        "value": -75000000000.0,
+        "value": -75000000.0,
         "notes_ref": null,
-        "original_name": "Dự phòng giảm giá đầu tư dài hạn"
+        "original_name": "Dự phòng giảm giá đầu tư dài hạn",
+        "row_identity": "balance_sheet|code:4",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Dự phòng giảm giá đầu tư dài hạn",
+        "value": -75000000.0,
+        "notes_ref": null,
+        "original_name": "Dự phòng giảm giá đầu tư dài hạn",
+        "row_identity": "balance_sheet|code:4",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "IX",
         "item_name": "Tài sản cố định",
         "value": 8344847000000.0,
         "notes_ref": null,
-        "original_name": "Tài sản cố định"
+        "original_name": "Tài sản cố định",
+        "row_identity": "balance_sheet|code:IX",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "IX",
+        "item_name": "Tài sản cố định",
+        "value": 8626043000000.0,
+        "notes_ref": null,
+        "original_name": "Tài sản cố định",
+        "row_identity": "balance_sheet|code:IX",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Tài sản cố định hữu hình",
         "value": 5386077000000.0,
         "notes_ref": null,
-        "original_name": "Tài sản cố định hữu hình"
+        "original_name": "Tài sản cố định hữu hình",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Tài sản cố định hữu hình",
+        "value": 5552624000000.0,
+        "notes_ref": null,
+        "original_name": "Tài sản cố định hữu hình",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "a",
         "item_name": "Nguyên giá",
         "value": 13748800000000.0,
         "notes_ref": null,
-        "original_name": "Nguyên giá"
+        "original_name": "Nguyên giá",
+        "row_identity": "balance_sheet|code:a",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "a",
+        "item_name": "Nguyên giá",
+        "value": 13725160000000.0,
+        "notes_ref": null,
+        "original_name": "Nguyên giá",
+        "row_identity": "balance_sheet|code:a",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "b",
         "item_name": "Hao mòn tài sản cố định",
         "value": -8362723000000.0,
         "notes_ref": null,
-        "original_name": "Hao mòn tài sản cố định"
+        "original_name": "Hao mòn tài sản cố định",
+        "row_identity": "balance_sheet|code:b",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "b",
+        "item_name": "Hao mòn tài sản cố định",
+        "value": -8172536000000.0,
+        "notes_ref": null,
+        "original_name": "Hao mòn tài sản cố định",
+        "row_identity": "balance_sheet|code:b",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Tài sản cố định vô hình",
         "value": 2958770000000.0,
         "notes_ref": null,
-        "original_name": "Tài sản cố định vô hình"
+        "original_name": "Tài sản cố định vô hình",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
       },
       {
-        "item_code": "a",
-        "item_name": "Nguyên giá",
-        "value": 4620978000000.0,
+        "item_code": "2",
+        "item_name": "Tài sản cố định vô hình",
+        "value": 3073419000000.0,
         "notes_ref": null,
-        "original_name": "Nguyên giá"
-      },
-      {
-        "item_code": "b",
-        "item_name": "Hao mòn tài sản cố định",
-        "value": -1662208000000.0,
-        "notes_ref": null,
-        "original_name": "Hao mòn tài sản cố định"
+        "original_name": "Tài sản cố định vô hình",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "X",
         "item_name": "Tài sản Có khác",
         "value": 30322961000000.0,
         "notes_ref": null,
-        "original_name": "Tài sản Có khác"
+        "original_name": "Tài sản Có khác",
+        "row_identity": "balance_sheet|code:X",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "X",
+        "item_name": "Tài sản Có khác",
+        "value": 28969058000000.0,
+        "notes_ref": null,
+        "original_name": "Tài sản Có khác",
+        "row_identity": "balance_sheet|code:X",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Các khoản phải thu",
         "value": 18941095000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản phải thu"
+        "original_name": "Các khoản phải thu",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Các khoản phải thu",
+        "value": 15796141000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản phải thu",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Các khoản lãi, phí phải thu",
         "value": 8216704000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản lãi, phí phải thu"
+        "original_name": "Các khoản lãi, phí phải thu",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Các khoản lãi, phí phải thu",
+        "value": 7149313000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản lãi, phí phải thu",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "3",
         "item_name": "Tài sản thuế thu nhập doanh nghiệp hoãn lại",
-        "value": 10798000000.0,
+        "value": 10798000.0,
         "notes_ref": null,
-        "original_name": "Tài sản thuế thu nhập doanh nghiệp hoãn lại"
+        "original_name": "Tài sản thuế thu nhập doanh nghiệp hoãn lại",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Tài sản thuế thu nhập doanh nghiệp hoãn lại",
+        "value": 7137000.0,
+        "notes_ref": null,
+        "original_name": "Tài sản thuế thu nhập doanh nghiệp hoãn lại",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "4",
         "item_name": "Tài sản Có khác",
         "value": 3158305000000.0,
         "notes_ref": null,
-        "original_name": "Tài sản Có khác"
+        "original_name": "Tài sản Có khác",
+        "row_identity": "balance_sheet|code:4",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Tài sản Có khác",
+        "value": 6020487000000.0,
+        "notes_ref": null,
+        "original_name": "Tài sản Có khác",
+        "row_identity": "balance_sheet|code:4",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "5",
         "item_name": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác",
-        "value": -3941000000.0,
+        "value": -3941000.0,
         "notes_ref": null,
-        "original_name": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác"
+        "original_name": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác",
+        "row_identity": "balance_sheet|code:5",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác",
+        "value": -4019999.9999999995,
+        "notes_ref": null,
+        "original_name": "Các khoản dự phòng rủi ro cho các tài sản Có nội bảng khác",
+        "row_identity": "balance_sheet|code:5",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": null,
         "item_name": "TỔNG TÀI SẢN CÓ",
         "value": 1462748158000000.0,
         "notes_ref": null,
-        "original_name": "TỔNG TÀI SẢN CÓ"
+        "original_name": "TỔNG TÀI SẢN CÓ",
+        "row_identity": "balance_sheet|name:TỔNG TÀI SẢN CÓ",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": null,
+        "item_name": "TỔNG TÀI SẢN CÓ",
+        "value": 1414672587000000.0,
+        "notes_ref": null,
+        "original_name": "TỔNG TÀI SẢN CÓ",
+        "row_identity": "balance_sheet|name:TỔNG TÀI SẢN CÓ",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "I",
         "item_name": "Các khoản nợ Chính phủ và NHNN",
         "value": 36310440000000.0,
         "notes_ref": "9",
-        "original_name": "Các khoản nợ Chính phủ và NHNN"
+        "original_name": "Các khoản nợ Chính phủ và NHNN",
+        "row_identity": "balance_sheet|code:I",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "I",
+        "item_name": "Các khoản nợ Chính phủ và NHNN",
+        "value": 9468116000000.0,
+        "notes_ref": "9",
+        "original_name": "Các khoản nợ Chính phủ và NHNN",
+        "row_identity": "balance_sheet|code:I",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "II",
         "item_name": "Tiền gửi và vay các tổ chức tín dụng khác",
         "value": 81277695000000.0,
         "notes_ref": "10",
-        "original_name": "Tiền gửi và vay các tổ chức tín dụng khác"
+        "original_name": "Tiền gửi và vay các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:II",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "II",
+        "item_name": "Tiền gửi và vay các tổ chức tín dụng khác",
+        "value": 109757777000000.0,
+        "notes_ref": "10",
+        "original_name": "Tiền gửi và vay các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:II",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Tiền gửi của các tổ chức tín dụng khác",
         "value": 75589555000000.0,
         "notes_ref": null,
-        "original_name": "Tiền gửi của các tổ chức tín dụng khác"
+        "original_name": "Tiền gửi của các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Tiền gửi của các tổ chức tín dụng khác",
+        "value": 104043817000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền gửi của các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Vay các tổ chức tín dụng khác",
         "value": 5688140000000.0,
         "notes_ref": null,
-        "original_name": "Vay các tổ chức tín dụng khác"
+        "original_name": "Vay các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Vay các tổ chức tín dụng khác",
+        "value": 5713960000000.0,
+        "notes_ref": null,
+        "original_name": "Vay các tổ chức tín dụng khác",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "III",
         "item_name": "Tiền gửi của khách hàng",
         "value": 1179668881000000.0,
         "notes_ref": "11",
-        "original_name": "Tiền gửi của khách hàng"
+        "original_name": "Tiền gửi của khách hàng",
+        "row_identity": "balance_sheet|code:III",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "III",
+        "item_name": "Tiền gửi của khách hàng",
+        "value": 1135323913000000.0,
+        "notes_ref": "11",
+        "original_name": "Tiền gửi của khách hàng",
+        "row_identity": "balance_sheet|code:III",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "IV",
         "item_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
-        "value": 5215000000.0,
+        "value": 5215000.0,
         "notes_ref": null,
-        "original_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác"
+        "original_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
+        "row_identity": "balance_sheet|code:IV",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
       },
       {
         "item_code": "V",
         "item_name": "Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro",
-        "value": 6585000000.0,
+        "value": 6585000.0,
         "notes_ref": null,
-        "original_name": "Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro"
+        "original_name": "Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro",
+        "row_identity": "balance_sheet|code:V",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "V",
+        "item_name": "Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro",
+        "value": 7707000.0,
+        "notes_ref": null,
+        "original_name": "Vốn tài trợ, uỷ thác đầu tư, cho vay TCTD chịu rủi ro",
+        "row_identity": "balance_sheet|code:V",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "VI",
         "item_name": "Phát hành giấy tờ có giá",
         "value": 17380178000000.0,
         "notes_ref": "12",
-        "original_name": "Phát hành giấy tờ có giá"
+        "original_name": "Phát hành giấy tờ có giá",
+        "row_identity": "balance_sheet|code:VI",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "VI",
+        "item_name": "Phát hành giấy tờ có giá",
+        "value": 17387747000000.0,
+        "notes_ref": "12",
+        "original_name": "Phát hành giấy tờ có giá",
+        "row_identity": "balance_sheet|code:VI",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "VII",
         "item_name": "Các khoản nợ khác",
         "value": 31021476000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản nợ khác"
+        "original_name": "Các khoản nợ khác",
+        "row_identity": "balance_sheet|code:VII",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "VII",
+        "item_name": "Các khoản nợ khác",
+        "value": 33609934000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản nợ khác",
+        "row_identity": "balance_sheet|code:VII",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Các khoản lãi, phí phải trả",
         "value": 10137639000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản lãi, phí phải trả"
+        "original_name": "Các khoản lãi, phí phải trả",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Các khoản lãi, phí phải trả",
+        "value": 9326334000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản lãi, phí phải trả",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Các khoản phải trả và công nợ khác",
         "value": 20883837000000.0,
         "notes_ref": "13",
-        "original_name": "Các khoản phải trả và công nợ khác"
+        "original_name": "Các khoản phải trả và công nợ khác",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Các khoản phải trả và công nợ khác",
+        "value": 24283600000000.0,
+        "notes_ref": "13",
+        "original_name": "Các khoản phải trả và công nợ khác",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": null,
         "item_name": "TỔNG NỢ PHẢI TRẢ",
         "value": 1345670470000000.0,
         "notes_ref": null,
-        "original_name": "TỔNG NỢ PHẢI TRẢ"
+        "original_name": "TỔNG NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|name:TỔNG NỢ PHẢI TRẢ",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": null,
+        "item_name": "TỔNG NỢ PHẢI TRẢ",
+        "value": 1305555194000000.0,
+        "notes_ref": null,
+        "original_name": "TỔNG NỢ PHẢI TRẢ",
+        "row_identity": "balance_sheet|name:TỔNG NỢ PHẢI TRẢ",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Vốn của tổ chức tín dụng",
         "value": 52665213000000.0,
         "notes_ref": null,
-        "original_name": "Vốn của tổ chức tín dụng"
+        "original_name": "Vốn của tổ chức tín dụng",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Vốn của tổ chức tín dụng",
+        "value": 42428821000000.0,
+        "notes_ref": null,
+        "original_name": "Vốn của tổ chức tín dụng",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "a",
         "item_name": "Vốn điều lệ",
         "value": 47325166000000.0,
         "notes_ref": null,
-        "original_name": "Vốn điều lệ"
+        "original_name": "Vốn điều lệ",
+        "row_identity": "balance_sheet|code:a",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "a",
+        "item_name": "Vốn điều lệ",
+        "value": 37088774000000.0,
+        "notes_ref": null,
+        "original_name": "Vốn điều lệ",
+        "row_identity": "balance_sheet|code:a",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "b",
         "item_name": "Thặng dư vốn cổ phần",
         "value": 4995389000000.0,
         "notes_ref": null,
-        "original_name": "Thặng dư vốn cổ phần"
+        "original_name": "Thặng dư vốn cổ phần",
+        "row_identity": "balance_sheet|code:b",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "b",
+        "item_name": "Thặng dư vốn cổ phần",
+        "value": 4995389000000.0,
+        "notes_ref": null,
+        "original_name": "Thặng dư vốn cổ phần",
+        "row_identity": "balance_sheet|code:b",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "c",
         "item_name": "Vốn khác",
-        "value": 344658000000.0,
+        "value": 344658000.0,
         "notes_ref": null,
-        "original_name": "Vốn khác"
+        "original_name": "Vốn khác",
+        "row_identity": "balance_sheet|code:c",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "c",
+        "item_name": "Vốn khác",
+        "value": 344658000.0,
+        "notes_ref": null,
+        "original_name": "Vốn khác",
+        "row_identity": "balance_sheet|code:c",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Quỹ của tổ chức tín dụng",
         "value": 18173014000000.0,
         "notes_ref": null,
-        "original_name": "Quỹ của tổ chức tín dụng"
+        "original_name": "Quỹ của tổ chức tín dụng",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Quỹ của tổ chức tín dụng",
+        "value": 18173068000000.0,
+        "notes_ref": null,
+        "original_name": "Quỹ của tổ chức tín dụng",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "3",
         "item_name": "Chênh lệch tỷ giá hối đoái",
-        "value": -9856000000.0,
+        "value": -9856000.0,
         "notes_ref": null,
-        "original_name": "Chênh lệch tỷ giá hối đoái"
+        "original_name": "Chênh lệch tỷ giá hối đoái",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Chênh lệch tỷ giá hối đoái",
+        "value": -5109000.0,
+        "notes_ref": null,
+        "original_name": "Chênh lệch tỷ giá hối đoái",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "4",
         "item_name": "Lợi nhuận chưa phân phối",
         "value": 46156897000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận chưa phân phối"
+        "original_name": "Lợi nhuận chưa phân phối",
+        "row_identity": "balance_sheet|code:4",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Lợi nhuận chưa phân phối",
+        "value": 48433500000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận chưa phân phối",
+        "row_identity": "balance_sheet|code:4",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "a",
         "item_name": "Lợi nhuận để lại năm trước",
         "value": 38194713000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận để lại năm trước"
+        "original_name": "Lợi nhuận để lại năm trước",
+        "row_identity": "balance_sheet|code:a",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "a",
+        "item_name": "Lợi nhuận để lại năm trước",
+        "value": 31826728000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận để lại năm trước",
+        "row_identity": "balance_sheet|code:a",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "b",
         "item_name": "Lợi nhuận năm nay",
         "value": 7962184000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận năm nay"
+        "original_name": "Lợi nhuận năm nay",
+        "row_identity": "balance_sheet|code:b",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "b",
+        "item_name": "Lợi nhuận năm nay",
+        "value": 16606772000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận năm nay",
+        "row_identity": "balance_sheet|code:b",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "5",
         "item_name": "Lợi ích cổ đông không kiểm soát",
-        "value": 92420000000.0,
+        "value": 92420000.0,
         "notes_ref": null,
-        "original_name": "Lợi ích cổ đông không kiểm soát"
+        "original_name": "Lợi ích cổ đông không kiểm soát",
+        "row_identity": "balance_sheet|code:5",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Lợi ích cổ đông không kiểm soát",
+        "value": 87113000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích cổ đông không kiểm soát",
+        "row_identity": "balance_sheet|code:5",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": null,
         "item_name": "TỔNG VỐN CHỦ SỞ HỮU",
         "value": 117077688000000.0,
         "notes_ref": "14",
-        "original_name": "TỔNG VỐN CHỦ SỞ HỮU"
+        "original_name": "TỔNG VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|name:TỔNG VỐN CHỦ SỞ HỮU|note:14",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": null,
+        "item_name": "TỔNG VỐN CHỦ SỞ HỮU",
+        "value": 109117393000000.0,
+        "notes_ref": "14",
+        "original_name": "TỔNG VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|name:TỔNG VỐN CHỦ SỞ HỮU|note:14",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": null,
         "item_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
         "value": 1462748158000000.0,
         "notes_ref": null,
-        "original_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU"
+        "original_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|name:TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": null,
+        "item_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "value": 1414672587000000.0,
+        "notes_ref": null,
+        "original_name": "TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "row_identity": "balance_sheet|name:TỔNG NỢ PHẢI TRẢ VÀ VỐN CHỦ SỞ HỮU",
+        "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "1",
         "item_name": "Bảo lãnh vay vốn",
         "value": 1840731000000.0,
         "notes_ref": null,
-        "original_name": "Bảo lãnh vay vốn"
+        "original_name": "Bảo lãnh vay vốn",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Bảo lãnh vay vốn",
+        "value": 2447477000000.0,
+        "notes_ref": null,
+        "original_name": "Bảo lãnh vay vốn",
+        "row_identity": "balance_sheet|code:1",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "2",
         "item_name": "Cam kết giao dịch hối đoái",
         "value": 69702746000000.0,
         "notes_ref": null,
-        "original_name": "Cam kết giao dịch hối đoái"
+        "original_name": "Cam kết giao dịch hối đoái",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Cam kết giao dịch hối đoái",
+        "value": 81044022000000.0,
+        "notes_ref": null,
+        "original_name": "Cam kết giao dịch hối đoái",
+        "row_identity": "balance_sheet|code:2",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": null,
         "item_name": "Cam kết mua ngoại tệ",
         "value": 6415326000000.0,
         "notes_ref": null,
-        "original_name": "Cam kết mua ngoại tệ"
+        "original_name": "Cam kết mua ngoại tệ",
+        "row_identity": "balance_sheet|name:Cam kết mua ngoại tệ",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": null,
+        "item_name": "Cam kết mua ngoại tệ",
+        "value": 3470214000000.0,
+        "notes_ref": null,
+        "original_name": "Cam kết mua ngoại tệ",
+        "row_identity": "balance_sheet|name:Cam kết mua ngoại tệ",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": null,
         "item_name": "Cam kết bán ngoại tệ",
         "value": 6466478000000.0,
         "notes_ref": null,
-        "original_name": "Cam kết bán ngoại tệ"
+        "original_name": "Cam kết bán ngoại tệ",
+        "row_identity": "balance_sheet|name:Cam kết bán ngoại tệ",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": null,
+        "item_name": "Cam kết bán ngoại tệ",
+        "value": 3466305000000.0,
+        "notes_ref": null,
+        "original_name": "Cam kết bán ngoại tệ",
+        "row_identity": "balance_sheet|name:Cam kết bán ngoại tệ",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": null,
         "item_name": "Cam kết giao dịch hoán đổi",
         "value": 56820942000000.0,
         "notes_ref": null,
-        "original_name": "Cam kết giao dịch hoán đổi"
+        "original_name": "Cam kết giao dịch hoán đổi",
+        "row_identity": "balance_sheet|name:Cam kết giao dịch hoán đổi",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": null,
+        "item_name": "Cam kết giao dịch hoán đổi",
+        "value": 74107503000000.0,
+        "notes_ref": null,
+        "original_name": "Cam kết giao dịch hoán đổi",
+        "row_identity": "balance_sheet|name:Cam kết giao dịch hoán đổi",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "3",
         "item_name": "Cam kết trong nghiệp vụ thư tín dụng",
         "value": 93900882000000.0,
         "notes_ref": null,
-        "original_name": "Cam kết trong nghiệp vụ thư tín dụng"
+        "original_name": "Cam kết trong nghiệp vụ thư tín dụng",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Cam kết trong nghiệp vụ thư tín dụng",
+        "value": 65378199000000.0,
+        "notes_ref": null,
+        "original_name": "Cam kết trong nghiệp vụ thư tín dụng",
+        "row_identity": "balance_sheet|code:3",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "4",
         "item_name": "Bảo lãnh khác",
         "value": 57162498000000.0,
         "notes_ref": null,
-        "original_name": "Bảo lãnh khác"
+        "original_name": "Bảo lãnh khác",
+        "row_identity": "balance_sheet|code:4",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Bảo lãnh khác",
+        "value": 51576893000000.0,
+        "notes_ref": null,
+        "original_name": "Bảo lãnh khác",
+        "row_identity": "balance_sheet|code:4",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "5",
         "item_name": "Cam kết khác",
-        "value": 207744000000.0,
+        "value": 207744000.0,
         "notes_ref": null,
-        "original_name": "Cam kết khác"
+        "original_name": "Cam kết khác",
+        "row_identity": "balance_sheet|code:5",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Cam kết khác",
+        "value": 196990000.0,
+        "notes_ref": null,
+        "original_name": "Cam kết khác",
+        "row_identity": "balance_sheet|code:5",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "6",
         "item_name": "Lãi cho vay và phí phải thu chưa thu được",
-        "value": 872504000000.0,
+        "value": 872504000.0,
         "notes_ref": "26",
-        "original_name": "Lãi cho vay và phí phải thu chưa thu được"
+        "original_name": "Lãi cho vay và phí phải thu chưa thu được",
+        "row_identity": "balance_sheet|code:6",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "6",
+        "item_name": "Lãi cho vay và phí phải thu chưa thu được",
+        "value": 911618000.0,
+        "notes_ref": "26",
+        "original_name": "Lãi cho vay và phí phải thu chưa thu được",
+        "row_identity": "balance_sheet|code:6",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "7",
         "item_name": "Nợ khó đòi đã xử lý",
         "value": 55445134000000.0,
         "notes_ref": "26",
-        "original_name": "Nợ khó đòi đã xử lý"
+        "original_name": "Nợ khó đòi đã xử lý",
+        "row_identity": "balance_sheet|code:7",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Nợ khó đòi đã xử lý",
+        "value": 55195565000000.0,
+        "notes_ref": "26",
+        "original_name": "Nợ khó đòi đã xử lý",
+        "row_identity": "balance_sheet|code:7",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       },
       {
         "item_code": "8",
         "item_name": "Tài sản và chứng từ khác",
         "value": 367927233000000.0,
         "notes_ref": "26",
-        "original_name": "Tài sản và chứng từ khác"
+        "original_name": "Tài sản và chứng từ khác",
+        "row_identity": "balance_sheet|code:8",
+        "column_label": "31/3/2022 Triệu VND",
+        "period_key": "2022-03-31"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Tài sản và chứng từ khác",
+        "value": 351544901000000.0,
+        "notes_ref": "26",
+        "original_name": "Tài sản và chứng từ khác",
+        "row_identity": "balance_sheet|code:8",
+        "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+        "period_key": "2021FY"
       }
     ]
   },
@@ -507,119 +1370,940 @@
         "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
         "value": 19338145000000.0,
         "notes_ref": "16",
-        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự"
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "row_identity": "income_statement|code:1",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "value": 17201110000000.0,
+        "notes_ref": "16",
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "row_identity": "income_statement|code:1",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "value": 19338145000000.0,
+        "notes_ref": "16",
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "row_identity": "income_statement|code:1",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "value": 17201110000000.0,
+        "notes_ref": "16",
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự",
+        "row_identity": "income_statement|code:1",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "2",
         "item_name": "Chi phí lãi và các chi phí tương tự",
         "value": -7362293000000.0,
         "notes_ref": "17",
-        "original_name": "Chi phí lãi và các chi phí tương tự"
+        "original_name": "Chi phí lãi và các chi phí tương tự",
+        "row_identity": "income_statement|code:2",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Chi phí lãi và các chi phí tương tự",
+        "value": -7119377000000.0,
+        "notes_ref": "17",
+        "original_name": "Chi phí lãi và các chi phí tương tự",
+        "row_identity": "income_statement|code:2",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Chi phí lãi và các chi phí tương tự",
+        "value": -7362293000000.0,
+        "notes_ref": "17",
+        "original_name": "Chi phí lãi và các chi phí tương tự",
+        "row_identity": "income_statement|code:2",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Chi phí lãi và các chi phí tương tự",
+        "value": -7119377000000.0,
+        "notes_ref": "17",
+        "original_name": "Chi phí lãi và các chi phí tương tự",
+        "row_identity": "income_statement|code:2",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "I",
         "item_name": "Thu nhập lãi thuần",
         "value": 11975852000000.0,
         "notes_ref": null,
-        "original_name": "Thu nhập lãi thuần"
+        "original_name": "Thu nhập lãi thuần",
+        "row_identity": "income_statement|code:I",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "I",
+        "item_name": "Thu nhập lãi thuần",
+        "value": 10081733000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi thuần",
+        "row_identity": "income_statement|code:I",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "I",
+        "item_name": "Thu nhập lãi thuần",
+        "value": 11975852000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi thuần",
+        "row_identity": "income_statement|code:I",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "I",
+        "item_name": "Thu nhập lãi thuần",
+        "value": 10081733000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi thuần",
+        "row_identity": "income_statement|code:I",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "3",
         "item_name": "Thu nhập từ hoạt động dịch vụ",
         "value": 3713402000000.0,
         "notes_ref": null,
-        "original_name": "Thu nhập từ hoạt động dịch vụ"
+        "original_name": "Thu nhập từ hoạt động dịch vụ",
+        "row_identity": "income_statement|code:3",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Thu nhập từ hoạt động dịch vụ",
+        "value": 4317820000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ",
+        "row_identity": "income_statement|code:3",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Thu nhập từ hoạt động dịch vụ",
+        "value": 3713402000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ",
+        "row_identity": "income_statement|code:3",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Thu nhập từ hoạt động dịch vụ",
+        "value": 4317820000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ",
+        "row_identity": "income_statement|code:3",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "4",
         "item_name": "Chi phí hoạt động dịch vụ",
         "value": -1002574000000.0,
         "notes_ref": null,
-        "original_name": "Chi phí hoạt động dịch vụ"
+        "original_name": "Chi phí hoạt động dịch vụ",
+        "row_identity": "income_statement|code:4",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Chi phí hoạt động dịch vụ",
+        "value": -880039000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động dịch vụ",
+        "row_identity": "income_statement|code:4",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Chi phí hoạt động dịch vụ",
+        "value": -1002574000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động dịch vụ",
+        "row_identity": "income_statement|code:4",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Chi phí hoạt động dịch vụ",
+        "value": -880039000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động dịch vụ",
+        "row_identity": "income_statement|code:4",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "II",
         "item_name": "Lãi thuần từ hoạt động dịch vụ",
         "value": 2710828000000.0,
         "notes_ref": null,
-        "original_name": "Lãi thuần từ hoạt động dịch vụ"
+        "original_name": "Lãi thuần từ hoạt động dịch vụ",
+        "row_identity": "income_statement|code:II",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "II",
+        "item_name": "Lãi thuần từ hoạt động dịch vụ",
+        "value": 3437781000000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động dịch vụ",
+        "row_identity": "income_statement|code:II",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "II",
+        "item_name": "Lãi thuần từ hoạt động dịch vụ",
+        "value": 2710828000000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động dịch vụ",
+        "row_identity": "income_statement|code:II",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "II",
+        "item_name": "Lãi thuần từ hoạt động dịch vụ",
+        "value": 3437781000000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động dịch vụ",
+        "row_identity": "income_statement|code:II",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "III",
         "item_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
         "value": 1521867000000.0,
         "notes_ref": null,
-        "original_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối"
+        "original_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
+        "row_identity": "income_statement|code:III",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "III",
+        "item_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
+        "value": 1042270000000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
+        "row_identity": "income_statement|code:III",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "III",
+        "item_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
+        "value": 1521867000000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
+        "row_identity": "income_statement|code:III",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "III",
+        "item_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
+        "value": 1042270000000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động kinh doanh ngoại hối",
+        "row_identity": "income_statement|code:III",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "IV",
         "item_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
-        "value": 16525000000.0,
+        "value": 16524999.999999998,
         "notes_ref": "18",
-        "original_name": "Lãi thuần từ mua bán chứng khoán kinh doanh"
+        "original_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+        "row_identity": "income_statement|code:IV",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "IV",
+        "item_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+        "value": 80773000.0,
+        "notes_ref": "18",
+        "original_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+        "row_identity": "income_statement|code:IV",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "IV",
+        "item_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+        "value": 16524999.999999998,
+        "notes_ref": "18",
+        "original_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+        "row_identity": "income_statement|code:IV",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "IV",
+        "item_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+        "value": 80773000.0,
+        "notes_ref": "18",
+        "original_name": "Lãi thuần từ mua bán chứng khoán kinh doanh",
+        "row_identity": "income_statement|code:IV",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "V",
         "item_name": "(Lỗ) thuần từ mua bán chứng khoán đầu tư",
         "value": -164000000.0,
         "notes_ref": null,
-        "original_name": "(Lỗ) thuần từ mua bán chứng khoán đầu tư"
+        "original_name": "(Lỗ) thuần từ mua bán chứng khoán đầu tư",
+        "row_identity": "income_statement|code:V",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "V",
+        "item_name": "(Lỗ) thuần từ mua bán chứng khoán đầu tư",
+        "value": -164000000.0,
+        "notes_ref": null,
+        "original_name": "(Lỗ) thuần từ mua bán chứng khoán đầu tư",
+        "row_identity": "income_statement|code:V",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
       },
       {
         "item_code": "5",
         "item_name": "Thu nhập từ hoạt động khác",
-        "value": 576253000000.0,
+        "value": 576253000.0,
         "notes_ref": null,
-        "original_name": "Thu nhập từ hoạt động khác"
+        "original_name": "Thu nhập từ hoạt động khác",
+        "row_identity": "income_statement|code:5",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Thu nhập từ hoạt động khác",
+        "value": 1136573000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động khác",
+        "row_identity": "income_statement|code:5",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Thu nhập từ hoạt động khác",
+        "value": 576253000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động khác",
+        "row_identity": "income_statement|code:5",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Thu nhập từ hoạt động khác",
+        "value": 1136573000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động khác",
+        "row_identity": "income_statement|code:5",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "6",
         "item_name": "Chi phí hoạt động khác",
-        "value": -92295000000.0,
+        "value": -92295000.0,
         "notes_ref": null,
-        "original_name": "Chi phí hoạt động khác"
+        "original_name": "Chi phí hoạt động khác",
+        "row_identity": "income_statement|code:6",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "6",
+        "item_name": "Chi phí hoạt động khác",
+        "value": -124204000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động khác",
+        "row_identity": "income_statement|code:6",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "6",
+        "item_name": "Chi phí hoạt động khác",
+        "value": -92295000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động khác",
+        "row_identity": "income_statement|code:6",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "6",
+        "item_name": "Chi phí hoạt động khác",
+        "value": -124204000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí hoạt động khác",
+        "row_identity": "income_statement|code:6",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "VI",
         "item_name": "Lãi thuần từ hoạt động khác",
-        "value": 483958000000.0,
+        "value": 483958000.0,
         "notes_ref": null,
-        "original_name": "Lãi thuần từ hoạt động khác"
+        "original_name": "Lãi thuần từ hoạt động khác",
+        "row_identity": "income_statement|code:VI",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "VI",
+        "item_name": "Lãi thuần từ hoạt động khác",
+        "value": 1012369000000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động khác",
+        "row_identity": "income_statement|code:VI",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "VI",
+        "item_name": "Lãi thuần từ hoạt động khác",
+        "value": 483958000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động khác",
+        "row_identity": "income_statement|code:VI",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "VI",
+        "item_name": "Lãi thuần từ hoạt động khác",
+        "value": 1012369000000.0,
+        "notes_ref": null,
+        "original_name": "Lãi thuần từ hoạt động khác",
+        "row_identity": "income_statement|code:VI",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "VII",
         "item_name": "Thu nhập từ góp vốn, mua cổ phần",
-        "value": 24495000000.0,
+        "value": 24495000.0,
         "notes_ref": "19",
-        "original_name": "Thu nhập từ góp vốn, mua cổ phần"
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "row_identity": "income_statement|code:VII",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "VII",
+        "item_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "value": 30670000.0,
+        "notes_ref": "19",
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "row_identity": "income_statement|code:VII",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "VII",
+        "item_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "value": 24495000.0,
+        "notes_ref": "19",
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "row_identity": "income_statement|code:VII",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "VII",
+        "item_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "value": 30670000.0,
+        "notes_ref": "19",
+        "original_name": "Thu nhập từ góp vốn, mua cổ phần",
+        "row_identity": "income_statement|code:VII",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "VIII",
         "item_name": "Chi phí hoạt động",
         "value": -4509166000000.0,
         "notes_ref": "20",
-        "original_name": "Chi phí hoạt động"
+        "original_name": "Chi phí hoạt động",
+        "row_identity": "income_statement|code:VIII",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "VIII",
+        "item_name": "Chi phí hoạt động",
+        "value": -4779221000000.0,
+        "notes_ref": "20",
+        "original_name": "Chi phí hoạt động",
+        "row_identity": "income_statement|code:VIII",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "VIII",
+        "item_name": "Chi phí hoạt động",
+        "value": -4509166000000.0,
+        "notes_ref": "20",
+        "original_name": "Chi phí hoạt động",
+        "row_identity": "income_statement|code:VIII",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "VIII",
+        "item_name": "Chi phí hoạt động",
+        "value": -4779221000000.0,
+        "notes_ref": "20",
+        "original_name": "Chi phí hoạt động",
+        "row_identity": "income_statement|code:VIII",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "IX",
         "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
         "value": 12224195000000.0,
         "notes_ref": null,
-        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng"
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|code:IX",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "IX",
+        "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "value": 10906375000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|code:IX",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "IX",
+        "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "value": 12224195000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|code:IX",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "IX",
+        "item_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "value": 10906375000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|code:IX",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "X",
         "item_name": "Chi phí dự phòng rủi ro tín dụng",
         "value": -2273939000000.0,
         "notes_ref": null,
-        "original_name": "Chi phí dự phòng rủi ro tín dụng"
+        "original_name": "Chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|code:X",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "X",
+        "item_name": "Chi phí dự phòng rủi ro tín dụng",
+        "value": -2274909000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|code:X",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "X",
+        "item_name": "Chi phí dự phòng rủi ro tín dụng",
+        "value": -2273939000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|code:X",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "X",
+        "item_name": "Chi phí dự phòng rủi ro tín dụng",
+        "value": -2274909000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí dự phòng rủi ro tín dụng",
+        "row_identity": "income_statement|code:X",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "XI",
         "item_name": "Tổng lợi nhuận trước thuế",
         "value": 9950256000000.0,
         "notes_ref": null,
-        "original_name": "Tổng lợi nhuận trước thuế"
+        "original_name": "Tổng lợi nhuận trước thuế",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Tổng lợi nhuận trước thuế",
+        "value": 8631466000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng lợi nhuận trước thuế",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Tổng lợi nhuận trước thuế",
+        "value": 9950256000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng lợi nhuận trước thuế",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Tổng lợi nhuận trước thuế",
+        "value": 8631466000000.0,
+        "notes_ref": null,
+        "original_name": "Tổng lợi nhuận trước thuế",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Chi phí thuế TNDN hiện hành",
+        "value": -1986469000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:7",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Chi phí thuế TNDN hiện hành",
+        "value": -1724252000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:7",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Chi phí thuế TNDN hiện hành",
+        "value": -1986469000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:7",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Chi phí thuế TNDN hiện hành",
+        "value": -1724252000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:7",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Chi phí thuế TNDN hoãn lại",
+        "value": 3639000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:8",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Chi phí thuế TNDN hoãn lại",
+        "value": 308000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:8",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Chi phí thuế TNDN hoãn lại",
+        "value": 3639000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:8",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Chi phí thuế TNDN hoãn lại",
+        "value": 308000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:8",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Chi phí thuế TNDN",
+        "value": -1982830000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Chi phí thuế TNDN",
+        "value": -1723944000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Chi phí thuế TNDN",
+        "value": -1982830000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XI",
+        "item_name": "Chi phí thuế TNDN",
+        "value": -1723944000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí thuế TNDN",
+        "row_identity": "income_statement|code:XI",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XII",
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 7967426000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|code:XII",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XII",
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 6907522000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|code:XII",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XII",
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 7967426000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|code:XII",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XII",
+        "item_name": "Lợi nhuận sau thuế",
+        "value": 6907522000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận sau thuế",
+        "row_identity": "income_statement|code:XII",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XIII",
+        "item_name": "Lợi ích của cổ đông không kiểm soát",
+        "value": -5242000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:XIII",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XIII",
+        "item_name": "Lợi ích của cổ đông không kiểm soát",
+        "value": -4944000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:XIII",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XIII",
+        "item_name": "Lợi ích của cổ đông không kiểm soát",
+        "value": -5242000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:XIII",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XIII",
+        "item_name": "Lợi ích của cổ đông không kiểm soát",
+        "value": -4944000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi ích của cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:XIII",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XIV",
+        "item_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "value": 7962184000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "row_identity": "income_statement|code:XIV",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XIV",
+        "item_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "value": 6902578000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "row_identity": "income_statement|code:XIV",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XIV",
+        "item_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "value": 7962184000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "row_identity": "income_statement|code:XIV",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XIV",
+        "item_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "value": 6902578000000.0,
+        "notes_ref": null,
+        "original_name": "Lợi nhuận thuần trong kỳ phân bổ cho cổ đông của Ngân hàng",
+        "row_identity": "income_statement|code:XIV",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XV",
+        "item_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "value": 1682.0,
+        "notes_ref": "15",
+        "original_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "row_identity": "income_statement|code:XV",
+        "column_label": "Quý I Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XV",
+        "item_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "value": 1459.0,
+        "notes_ref": "15",
+        "original_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "row_identity": "income_statement|code:XV",
+        "column_label": "Quý I Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
+      },
+      {
+        "item_code": "XV",
+        "item_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "value": 1682.0,
+        "notes_ref": "15",
+        "original_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "row_identity": "income_statement|code:XV",
+        "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "XV",
+        "item_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "value": 1459.0,
+        "notes_ref": "15",
+        "original_name": "Lãi cơ bản trên cổ phiếu (VND) (*)",
+        "row_identity": "income_statement|code:XV",
+        "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+        "period_key": "2021Q1_YTD"
       }
     ]
   },
@@ -630,245 +2314,670 @@
         "item_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được",
         "value": 18270754000000.0,
         "notes_ref": null,
-        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được"
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được",
+        "row_identity": "cash_flow|code:1",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được",
+        "value": 15985319000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập lãi và các khoản thu nhập tương tự nhận được",
+        "row_identity": "cash_flow|code:1",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "2",
         "item_name": "Chi phí lãi và các chi phí tương tự đã trả",
         "value": -6591715000000.0,
         "notes_ref": null,
-        "original_name": "Chi phí lãi và các chi phí tương tự đã trả"
+        "original_name": "Chi phí lãi và các chi phí tương tự đã trả",
+        "row_identity": "cash_flow|code:2",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Chi phí lãi và các chi phí tương tự đã trả",
+        "value": -7496977000000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí lãi và các chi phí tương tự đã trả",
+        "row_identity": "cash_flow|code:2",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "3",
         "item_name": "Thu nhập từ hoạt động dịch vụ nhận được",
         "value": 1031728000000.0,
         "notes_ref": null,
-        "original_name": "Thu nhập từ hoạt động dịch vụ nhận được"
+        "original_name": "Thu nhập từ hoạt động dịch vụ nhận được",
+        "row_identity": "cash_flow|code:3",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Thu nhập từ hoạt động dịch vụ nhận được",
+        "value": 1758681000000.0,
+        "notes_ref": null,
+        "original_name": "Thu nhập từ hoạt động dịch vụ nhận được",
+        "row_identity": "cash_flow|code:3",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "4",
         "item_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",
         "value": 1637580000000.0,
         "notes_ref": null,
-        "original_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)"
+        "original_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",
+        "row_identity": "cash_flow|code:4",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",
+        "value": 1026971000000.0,
+        "notes_ref": null,
+        "original_name": "Chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ, vàng bạc, chứng khoán)",
+        "row_identity": "cash_flow|code:4",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "5",
         "item_name": "Chi phí khác",
-        "value": -62483000000.0,
+        "value": -62483000.0,
         "notes_ref": null,
-        "original_name": "Chi phí khác"
+        "original_name": "Chi phí khác",
+        "row_identity": "cash_flow|code:5",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Chi phí khác",
+        "value": -100199000.0,
+        "notes_ref": null,
+        "original_name": "Chi phí khác",
+        "row_identity": "cash_flow|code:5",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "6",
         "item_name": "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro",
-        "value": 545538000000.0,
+        "value": 545538000.0,
         "notes_ref": null,
-        "original_name": "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro"
+        "original_name": "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro",
+        "row_identity": "cash_flow|code:6",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "6",
+        "item_name": "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro",
+        "value": 1111427000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền thu các khoản nợ đã được xử lý xóa, bù đắp bằng nguồn rủi ro",
+        "row_identity": "cash_flow|code:6",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "7",
         "item_name": "Tiền chi trả cho nhân viên và hoạt động quản lý công vụ",
         "value": -4490878000000.0,
         "notes_ref": null,
-        "original_name": "Tiền chi trả cho nhân viên và hoạt động quản lý công vụ"
+        "original_name": "Tiền chi trả cho nhân viên và hoạt động quản lý công vụ",
+        "row_identity": "cash_flow|code:7",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "7",
+        "item_name": "Tiền chi trả cho nhân viên và hoạt động quản lý công vụ",
+        "value": -4403617000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền chi trả cho nhân viên và hoạt động quản lý công vụ",
+        "row_identity": "cash_flow|code:7",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "8",
         "item_name": "Tiền thuế thu nhập thực nộp trong kỳ",
-        "value": -642532000000.0,
+        "value": -642532000.0,
         "notes_ref": null,
-        "original_name": "Tiền thuế thu nhập thực nộp trong kỳ"
+        "original_name": "Tiền thuế thu nhập thực nộp trong kỳ",
+        "row_identity": "cash_flow|code:8",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "8",
+        "item_name": "Tiền thuế thu nhập thực nộp trong kỳ",
+        "value": -1912328000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền thuế thu nhập thực nộp trong kỳ",
+        "row_identity": "cash_flow|code:8",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": null,
         "item_name": "Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
         "value": 9697992000000.0,
         "notes_ref": null,
-        "original_name": "Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động"
+        "original_name": "Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+        "row_identity": "cash_flow|name:Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": null,
+        "item_name": "Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+        "value": 5969277000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+        "row_identity": "cash_flow|name:Tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "9",
         "item_name": "Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác",
-        "value": -200908000000.0,
+        "value": -200908000.0,
         "notes_ref": null,
-        "original_name": "Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác"
+        "original_name": "Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác",
+        "row_identity": "cash_flow|code:9",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "9",
+        "item_name": "Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác",
+        "value": 18663092000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản tiền, vàng gửi và cho vay các tổ chức tín dụng khác",
+        "row_identity": "cash_flow|code:9",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "10",
         "item_name": "Các khoản về kinh doanh chứng khoán",
         "value": -1896895000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản về kinh doanh chứng khoán"
+        "original_name": "Các khoản về kinh doanh chứng khoán",
+        "row_identity": "cash_flow|code:10",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "10",
+        "item_name": "Các khoản về kinh doanh chứng khoán",
+        "value": 5089660000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản về kinh doanh chứng khoán",
+        "row_identity": "cash_flow|code:10",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "11",
         "item_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác",
-        "value": 303202000000.0,
+        "value": 303202000.0,
         "notes_ref": null,
-        "original_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác"
+        "original_name": "Các công cụ tài chính phái sinh và các tài sản tài chính khác",
+        "row_identity": "cash_flow|code:11",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
       },
       {
         "item_code": "12",
         "item_name": "Các khoản cho vay khách hàng",
         "value": -68149789000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản cho vay khách hàng"
+        "original_name": "Các khoản cho vay khách hàng",
+        "row_identity": "cash_flow|code:12",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "12",
+        "item_name": "Các khoản cho vay khách hàng",
+        "value": -32149681000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản cho vay khách hàng",
+        "row_identity": "cash_flow|code:12",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "13",
         "item_name": "Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản",
-        "value": -59677000000.0,
+        "value": -59677000.0,
         "notes_ref": null,
-        "original_name": "Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản"
+        "original_name": "Giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản",
+        "row_identity": "cash_flow|code:13",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
       },
       {
         "item_code": "14",
         "item_name": "Tài sản hoạt động khác",
-        "value": -277225000000.0,
+        "value": -277225000.0,
         "notes_ref": null,
-        "original_name": "Tài sản hoạt động khác"
+        "original_name": "Tài sản hoạt động khác",
+        "row_identity": "cash_flow|code:14",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "14",
+        "item_name": "Tài sản hoạt động khác",
+        "value": -3260830000000.0,
+        "notes_ref": null,
+        "original_name": "Tài sản hoạt động khác",
+        "row_identity": "cash_flow|code:14",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "15",
         "item_name": "Các khoản nợ Chính phủ và NHNN",
         "value": 26842324000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản nợ Chính phủ và NHNN"
+        "original_name": "Các khoản nợ Chính phủ và NHNN",
+        "row_identity": "cash_flow|code:15",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "15",
+        "item_name": "Các khoản nợ Chính phủ và NHNN",
+        "value": -22638627000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản nợ Chính phủ và NHNN",
+        "row_identity": "cash_flow|code:15",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "16",
         "item_name": "Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác",
         "value": -28480082000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác"
+        "original_name": "Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác",
+        "row_identity": "cash_flow|code:16",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "16",
+        "item_name": "Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác",
+        "value": -22825236000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản tiền gửi, tiền vay các tổ chức tín dụng khác",
+        "row_identity": "cash_flow|code:16",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "17",
         "item_name": "Các khoản tiền gửi của khách hàng",
         "value": 44344968000000.0,
         "notes_ref": null,
-        "original_name": "Các khoản tiền gửi của khách hàng"
+        "original_name": "Các khoản tiền gửi của khách hàng",
+        "row_identity": "cash_flow|code:17",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "17",
+        "item_name": "Các khoản tiền gửi của khách hàng",
+        "value": -6565960000000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản tiền gửi của khách hàng",
+        "row_identity": "cash_flow|code:17",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "18",
         "item_name": "Các khoản phát hành giấy tờ có giá",
-        "value": -7204000000.0,
+        "value": -7204000.0,
         "notes_ref": null,
-        "original_name": "Các khoản phát hành giấy tờ có giá"
+        "original_name": "Các khoản phát hành giấy tờ có giá",
+        "row_identity": "cash_flow|code:18",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "18",
+        "item_name": "Các khoản phát hành giấy tờ có giá",
+        "value": 168110000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản phát hành giấy tờ có giá",
+        "row_identity": "cash_flow|code:18",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "19",
         "item_name": "Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro",
-        "value": -1122000000.0,
+        "value": -1122000.0,
         "notes_ref": null,
-        "original_name": "Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro"
+        "original_name": "Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro",
+        "row_identity": "cash_flow|code:19",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "19",
+        "item_name": "Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro",
+        "value": -3695000.0,
+        "notes_ref": null,
+        "original_name": "Các khoản vốn tài trợ, ủy thác, đầu tư cho vay tổ chức tín dụng chịu rủi ro",
+        "row_identity": "cash_flow|code:19",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "20",
         "item_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
-        "value": 5215000000.0,
+        "value": 5215000.0,
         "notes_ref": null,
-        "original_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác"
+        "original_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
+        "row_identity": "cash_flow|code:20",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "20",
+        "item_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
+        "value": 11951000.0,
+        "notes_ref": null,
+        "original_name": "Các công cụ tài chính phái sinh và các khoản nợ tài chính khác",
+        "row_identity": "cash_flow|code:20",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "21",
         "item_name": "Công nợ hoạt động khác",
         "value": 1567100000000.0,
         "notes_ref": null,
-        "original_name": "Công nợ hoạt động khác"
+        "original_name": "Công nợ hoạt động khác",
+        "row_identity": "cash_flow|code:21",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "21",
+        "item_name": "Công nợ hoạt động khác",
+        "value": 1701732000000.0,
+        "notes_ref": null,
+        "original_name": "Công nợ hoạt động khác",
+        "row_identity": "cash_flow|code:21",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "22",
         "item_name": "Chi từ các quỹ của tổ chức tín dụng",
         "value": -1069379000000.0,
         "notes_ref": null,
-        "original_name": "Chi từ các quỹ của tổ chức tín dụng"
+        "original_name": "Chi từ các quỹ của tổ chức tín dụng",
+        "row_identity": "cash_flow|code:22",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "22",
+        "item_name": "Chi từ các quỹ của tổ chức tín dụng",
+        "value": -1009299000000.0,
+        "notes_ref": null,
+        "original_name": "Chi từ các quỹ của tổ chức tín dụng",
+        "row_identity": "cash_flow|code:22",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "I",
         "item_name": "Tiền thuần (sử dụng cho) hoạt động kinh doanh",
         "value": -17381480000000.0,
         "notes_ref": null,
-        "original_name": "Tiền thuần (sử dụng cho) hoạt động kinh doanh"
+        "original_name": "Tiền thuần (sử dụng cho) hoạt động kinh doanh",
+        "row_identity": "cash_flow|code:I",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "I",
+        "item_name": "Tiền thuần (sử dụng cho) hoạt động kinh doanh",
+        "value": -56849506000000.0,
+        "notes_ref": null,
+        "original_name": "Tiền thuần (sử dụng cho) hoạt động kinh doanh",
+        "row_identity": "cash_flow|code:I",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "1",
         "item_name": "Mua sắm tài sản cố định",
-        "value": -22389000000.0,
+        "value": -22389000.0,
         "notes_ref": null,
-        "original_name": "1 Mua sắm tài sản cố định"
+        "original_name": "1 Mua sắm tài sản cố định",
+        "row_identity": "cash_flow|code:1",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Mua sắm tài sản cố định",
+        "value": -63503000.0,
+        "notes_ref": null,
+        "original_name": "1 Mua sắm tài sản cố định",
+        "row_identity": "cash_flow|code:1",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "2",
         "item_name": "Tiền thu từ thanh lý, nhượng bán tài sản cố định",
-        "value": 2948000000.0,
+        "value": 2948000.0,
         "notes_ref": null,
-        "original_name": "2 Tiền thu từ thanh lý, nhượng bán tài sản cố định"
+        "original_name": "2 Tiền thu từ thanh lý, nhượng bán tài sản cố định",
+        "row_identity": "cash_flow|code:2",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Tiền thu từ thanh lý, nhượng bán tài sản cố định",
+        "value": 1356000.0,
+        "notes_ref": null,
+        "original_name": "2 Tiền thu từ thanh lý, nhượng bán tài sản cố định",
+        "row_identity": "cash_flow|code:2",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "3",
         "item_name": "Tiền chi từ thanh lý, nhượng bán tài sản cố định",
-        "value": -2045000000.0,
+        "value": -2045000.0,
         "notes_ref": null,
-        "original_name": "3 Tiền chi từ thanh lý, nhượng bán tài sản cố định"
+        "original_name": "3 Tiền chi từ thanh lý, nhượng bán tài sản cố định",
+        "row_identity": "cash_flow|code:3",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Tiền chi từ thanh lý, nhượng bán tài sản cố định",
+        "value": -215000000.0,
+        "notes_ref": null,
+        "original_name": "3 Tiền chi từ thanh lý, nhượng bán tài sản cố định",
+        "row_identity": "cash_flow|code:3",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "4",
         "item_name": "Tiền thu đầu tư, góp vốn vào các đơn vị khác",
-        "value": 1864000000.0,
+        "value": 1864000.0,
         "notes_ref": null,
-        "original_name": "4 Tiền thu đầu tư, góp vốn vào các đơn vị khác"
+        "original_name": "4 Tiền thu đầu tư, góp vốn vào các đơn vị khác",
+        "row_identity": "cash_flow|code:4",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
       },
       {
         "item_code": "5",
         "item_name": "Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",
-        "value": 2196000000.0,
+        "value": 2196000.0,
         "notes_ref": null,
-        "original_name": "5 Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn"
+        "original_name": "5 Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",
+        "row_identity": "cash_flow|code:5",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",
+        "value": 8278000.000000001,
+        "notes_ref": null,
+        "original_name": "5 Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",
+        "row_identity": "cash_flow|code:5",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "II",
         "item_name": "Tiền thuần (sử dụng cho) hoạt động đầu tư",
-        "value": -17426000000.0,
+        "value": -17426000.0,
         "notes_ref": null,
-        "original_name": "II Tiền thuần (sử dụng cho) hoạt động đầu tư"
+        "original_name": "II Tiền thuần (sử dụng cho) hoạt động đầu tư",
+        "row_identity": "cash_flow|code:II",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "II",
+        "item_name": "Tiền thuần (sử dụng cho) hoạt động đầu tư",
+        "value": -54084000.0,
+        "notes_ref": null,
+        "original_name": "II Tiền thuần (sử dụng cho) hoạt động đầu tư",
+        "row_identity": "cash_flow|code:II",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "1",
         "item_name": "Cổ tức đã trả",
         "value": -3329224000000.0,
         "notes_ref": null,
-        "original_name": "1 Cổ tức đã trả"
+        "original_name": "1 Cổ tức đã trả",
+        "row_identity": "cash_flow|code:1",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Cổ tức đã trả",
+        "value": -747619000.0,
+        "notes_ref": null,
+        "original_name": "1 Cổ tức đã trả",
+        "row_identity": "cash_flow|code:1",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "III",
         "item_name": "Tiền thuần (sử dụng cho) hoạt động tài chính",
         "value": -3329224000000.0,
         "notes_ref": null,
-        "original_name": "III Tiền thuần (sử dụng cho) hoạt động tài chính"
+        "original_name": "III Tiền thuần (sử dụng cho) hoạt động tài chính",
+        "row_identity": "cash_flow|code:III",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "III",
+        "item_name": "Tiền thuần (sử dụng cho) hoạt động tài chính",
+        "value": -747619000.0,
+        "notes_ref": null,
+        "original_name": "III Tiền thuần (sử dụng cho) hoạt động tài chính",
+        "row_identity": "cash_flow|code:III",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "IV",
         "item_name": "Lưu chuyển tiền thuần trong kỳ",
         "value": -20728130000000.0,
         "notes_ref": null,
-        "original_name": "IV Lưu chuyển tiền thuần trong kỳ"
+        "original_name": "IV Lưu chuyển tiền thuần trong kỳ",
+        "row_identity": "cash_flow|code:IV",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "IV",
+        "item_name": "Lưu chuyển tiền thuần trong kỳ",
+        "value": -57651209000000.0,
+        "notes_ref": null,
+        "original_name": "IV Lưu chuyển tiền thuần trong kỳ",
+        "row_identity": "cash_flow|code:IV",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "V",
         "item_name": "Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ",
         "value": 232553995000000.0,
         "notes_ref": "21",
-        "original_name": "V Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ"
+        "original_name": "V Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ",
+        "row_identity": "cash_flow|code:V",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "V",
+        "item_name": "Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ",
+        "value": 292582702000000.0,
+        "notes_ref": "21",
+        "original_name": "V Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ",
+        "row_identity": "cash_flow|code:V",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       },
       {
         "item_code": "VI",
         "item_name": "Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ",
         "value": 211825865000000.0,
         "notes_ref": "21",
-        "original_name": "VI Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ"
+        "original_name": "VI Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ",
+        "row_identity": "cash_flow|code:VI",
+        "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+        "period_key": "2022Q1_YTD"
+      },
+      {
+        "item_code": "VI",
+        "item_name": "Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ",
+        "value": 234931493000000.0,
+        "notes_ref": "21",
+        "original_name": "VI Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ",
+        "row_identity": "cash_flow|code:VI",
+        "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+        "period_key": "2021Q1_YTD"
       }
     ]
   }

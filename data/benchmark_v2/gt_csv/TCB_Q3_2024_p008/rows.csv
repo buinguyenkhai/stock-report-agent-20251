@@ -1,21 +1,41 @@
-statement,item_code,item_name,value,notes_ref,original_name
-balance_sheet,,Bảo lãnh vay vốn,19595850000000,,Bảo lãnh vay vốn
-balance_sheet,,Cam kết giao dịch hối đoái,320312174000000,,Cam kết giao dịch hối đoái
-balance_sheet,,- Cam kết mua ngoại tệ giao ngay,7196188000000,,- Cam kết mua ngoại tệ giao ngay
-balance_sheet,,- Cam kết bán ngoại tệ giao ngay,4177029000000,,- Cam kết bán ngoại tệ giao ngay
-balance_sheet,,- Cam kết mua - giao dịch hoán đổi tiền tệ,154508347000000,,- Cam kết mua - giao dịch hoán đổi tiền tệ
-balance_sheet,,- Cam kết bán - giao dịch hoán đổi tiền tệ,154430610000000,,- Cam kết bán - giao dịch hoán đổi tiền tệ
-balance_sheet,,Cam kết trong nghiệp vụ thư tín dụng (L/C),44981487000000,,Cam kết trong nghiệp vụ thư tín dụng (L/C)
-balance_sheet,,Bảo lãnh khác,50917866000000,,Bảo lãnh khác
-balance_sheet,,Các cam kết khác,207005596000000,,Các cam kết khác
-balance_sheet,,- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ,89705403000000,,- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ
-balance_sheet,,- Cam kết hoán đổi tiền tệ chéo bằng VND,87983369000000,,- Cam kết hoán đổi tiền tệ chéo bằng VND
-balance_sheet,,- Cam kết hoán đổi lãi suất bằng ngoại tệ,18995746000000,,- Cam kết hoán đổi lãi suất bằng ngoại tệ
-balance_sheet,,- Cam kết hoán đổi lãi suất bằng VND,6279946000000,,- Cam kết hoán đổi lãi suất bằng VND
-balance_sheet,,- Cam kết kỳ hạn giấy tờ có giá,2614663000000,,- Cam kết kỳ hạn giấy tờ có giá
-balance_sheet,,- Cam kết khác,1426469000000,,- Cam kết khác
-balance_sheet,,Hạn mức tín dụng chưa sử dụng,286932074000000,,Hạn mức tín dụng chưa sử dụng
-balance_sheet,,Lãi cho vay và phí phải thu chưa thu được,2757388000000,36,Lãi cho vay và phí phải thu chưa thu được
-balance_sheet,,Nợ khó đòi đã xử lý,56711812000000,37,Nợ khó đòi đã xử lý
-balance_sheet,,Tài sản và chứng từ khác,155042764000000,38,Tài sản và chứng từ khác
-balance_sheet,,Tổng cộng,1144257011000000,,
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+balance_sheet,,Bảo lãnh vay vốn,19595850000000.0,,Bảo lãnh vay vốn,balance_sheet|name:Bảo lãnh vay vốn,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Bảo lãnh vay vốn,14935065000000.0,,Bảo lãnh vay vốn,balance_sheet|name:Bảo lãnh vay vốn,31/12/2023 triệu đồng,2023FY
+balance_sheet,,Cam kết giao dịch hối đoái,320312174000000.0,,Cam kết giao dịch hối đoái,balance_sheet|name:Cam kết giao dịch hối đoái,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Cam kết giao dịch hối đoái,350601542000000.0,,Cam kết giao dịch hối đoái,balance_sheet|name:Cam kết giao dịch hối đoái,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết mua ngoại tệ giao ngay,7196188000000.0,,- Cam kết mua ngoại tệ giao ngay,balance_sheet|name:- Cam kết mua ngoại tệ giao ngay,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết mua ngoại tệ giao ngay,4593012000000.0,,- Cam kết mua ngoại tệ giao ngay,balance_sheet|name:- Cam kết mua ngoại tệ giao ngay,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết bán ngoại tệ giao ngay,4177029000000.0,,- Cam kết bán ngoại tệ giao ngay,balance_sheet|name:- Cam kết bán ngoại tệ giao ngay,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết bán ngoại tệ giao ngay,4415918000000.0,,- Cam kết bán ngoại tệ giao ngay,balance_sheet|name:- Cam kết bán ngoại tệ giao ngay,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết mua - giao dịch hoán đổi tiền tệ,154508347000000.0,,- Cam kết mua - giao dịch hoán đổi tiền tệ,balance_sheet|name:- Cam kết mua - giao dịch hoán đổi tiền tệ,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết mua - giao dịch hoán đổi tiền tệ,171163643000000.0,,- Cam kết mua - giao dịch hoán đổi tiền tệ,balance_sheet|name:- Cam kết mua - giao dịch hoán đổi tiền tệ,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết bán - giao dịch hoán đổi tiền tệ,154430610000000.0,,- Cam kết bán - giao dịch hoán đổi tiền tệ,balance_sheet|name:- Cam kết bán - giao dịch hoán đổi tiền tệ,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết bán - giao dịch hoán đổi tiền tệ,170428969000000.0,,- Cam kết bán - giao dịch hoán đổi tiền tệ,balance_sheet|name:- Cam kết bán - giao dịch hoán đổi tiền tệ,31/12/2023 triệu đồng,2023FY
+balance_sheet,,Cam kết trong nghiệp vụ thư tín dụng (L/C),44981487000000.0,,Cam kết trong nghiệp vụ thư tín dụng (L/C),balance_sheet|name:Cam kết trong nghiệp vụ thư tín dụng (L/C),30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Cam kết trong nghiệp vụ thư tín dụng (L/C),67845653000000.0,,Cam kết trong nghiệp vụ thư tín dụng (L/C),balance_sheet|name:Cam kết trong nghiệp vụ thư tín dụng (L/C),31/12/2023 triệu đồng,2023FY
+balance_sheet,,Bảo lãnh khác,50917866000000.0,,Bảo lãnh khác,balance_sheet|name:Bảo lãnh khác,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Bảo lãnh khác,57648065000000.0,,Bảo lãnh khác,balance_sheet|name:Bảo lãnh khác,31/12/2023 triệu đồng,2023FY
+balance_sheet,,Các cam kết khác,207005596000000.0,,Các cam kết khác,balance_sheet|name:Các cam kết khác,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Các cam kết khác,176065387000000.0,,Các cam kết khác,balance_sheet|name:Các cam kết khác,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ,89705403000000.0,,- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ,balance_sheet|name:- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ,68061694000000.0,,- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ,balance_sheet|name:- Cam kết hoán đổi tiền tệ chéo bằng ngoại tệ,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết hoán đổi tiền tệ chéo bằng VND,87983369000000.0,,- Cam kết hoán đổi tiền tệ chéo bằng VND,balance_sheet|name:- Cam kết hoán đổi tiền tệ chéo bằng VND,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết hoán đổi tiền tệ chéo bằng VND,67392288000000.0,,- Cam kết hoán đổi tiền tệ chéo bằng VND,balance_sheet|name:- Cam kết hoán đổi tiền tệ chéo bằng VND,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết hoán đổi lãi suất bằng ngoại tệ,18995746000000.0,,- Cam kết hoán đổi lãi suất bằng ngoại tệ,balance_sheet|name:- Cam kết hoán đổi lãi suất bằng ngoại tệ,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết hoán đổi lãi suất bằng ngoại tệ,10734257000000.0,,- Cam kết hoán đổi lãi suất bằng ngoại tệ,balance_sheet|name:- Cam kết hoán đổi lãi suất bằng ngoại tệ,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết hoán đổi lãi suất bằng VND,6279946000000.0,,- Cam kết hoán đổi lãi suất bằng VND,balance_sheet|name:- Cam kết hoán đổi lãi suất bằng VND,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết hoán đổi lãi suất bằng VND,13541644000000.0,,- Cam kết hoán đổi lãi suất bằng VND,balance_sheet|name:- Cam kết hoán đổi lãi suất bằng VND,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết kỳ hạn giấy tờ có giá,2614663000000.0,,- Cam kết kỳ hạn giấy tờ có giá,balance_sheet|name:- Cam kết kỳ hạn giấy tờ có giá,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết kỳ hạn giấy tờ có giá,12985841000000.0,,- Cam kết kỳ hạn giấy tờ có giá,balance_sheet|name:- Cam kết kỳ hạn giấy tờ có giá,31/12/2023 triệu đồng,2023FY
+balance_sheet,,- Cam kết khác,1426469000000.0,,- Cam kết khác,balance_sheet|name:- Cam kết khác,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,- Cam kết khác,3349663000000.0,,- Cam kết khác,balance_sheet|name:- Cam kết khác,31/12/2023 triệu đồng,2023FY
+balance_sheet,,Hạn mức tín dụng chưa sử dụng,286932074000000.0,,Hạn mức tín dụng chưa sử dụng,balance_sheet|name:Hạn mức tín dụng chưa sử dụng,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Hạn mức tín dụng chưa sử dụng,305332136000000.0,,Hạn mức tín dụng chưa sử dụng,balance_sheet|name:Hạn mức tín dụng chưa sử dụng,31/12/2023 triệu đồng,2023FY
+balance_sheet,,Lãi cho vay và phí phải thu chưa thu được,2757388000000.0,36,Lãi cho vay và phí phải thu chưa thu được,balance_sheet|name:Lãi cho vay và phí phải thu chưa thu được|note:36,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Lãi cho vay và phí phải thu chưa thu được,2287980000000.0,36,Lãi cho vay và phí phải thu chưa thu được,balance_sheet|name:Lãi cho vay và phí phải thu chưa thu được|note:36,31/12/2023 triệu đồng,2023FY
+balance_sheet,,Nợ khó đòi đã xử lý,56711812000000.0,37,Nợ khó đòi đã xử lý,balance_sheet|name:Nợ khó đòi đã xử lý|note:37,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Nợ khó đòi đã xử lý,52224706000000.0,37,Nợ khó đòi đã xử lý,balance_sheet|name:Nợ khó đòi đã xử lý|note:37,31/12/2023 triệu đồng,2023FY
+balance_sheet,,Tài sản và chứng từ khác,155042764000000.0,38,Tài sản và chứng từ khác,balance_sheet|name:Tài sản và chứng từ khác|note:38,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Tài sản và chứng từ khác,198926346000000.0,38,Tài sản và chứng từ khác,balance_sheet|name:Tài sản và chứng từ khác|note:38,31/12/2023 triệu đồng,2023FY
+balance_sheet,,Tổng cộng,1144257011000000.0,,,balance_sheet|name:Tổng cộng,30/09/2024 triệu đồng,2024-09-30
+balance_sheet,,Tổng cộng,1225866880000000.0,,,balance_sheet|name:Tổng cộng,31/12/2023 triệu đồng,2023FY

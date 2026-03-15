@@ -1,1248 +1,3152 @@
 {
   "row_sources": {
     "balance_sheet": {
-      "balance_sheet|name:tiền mặt, vàng|note:5": [
+      "balance_sheet|name:tiền mặt, vàng|note:5|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|name:tiền mặt, vàng|note:5",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tiền gửi tại ngân hàng nhà nước việt nam (\"nhnn\")|note:6": [
+      "balance_sheet|name:tiền mặt, vàng|note:5|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "balance_sheet|name:tiền mặt, vàng|note:5",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:tiền gửi và cấp tín dụng cho các tổ chức tín dụng (\"tctd\") khác|note:7": [
+      "balance_sheet|name:tiền gửi tại ngân hàng nhà nước việt nam (\"nhnn\")|note:6|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "balance_sheet|name:tiền gửi tại ngân hàng nhà nước việt nam (\"nhnn\")|note:6",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tiền gửi tại các tctd khác|note:7.1": [
+      "balance_sheet|name:tiền gửi tại ngân hàng nhà nước việt nam (\"nhnn\")|note:6|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "balance_sheet|name:tiền gửi tại ngân hàng nhà nước việt nam (\"nhnn\")|note:6",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:cấp tín dụng cho các tctd khác|note:7.2": [
+      "balance_sheet|name:tiền gửi và cấp tín dụng cho các tổ chức tín dụng (\"tctd\") khác|note:7|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "balance_sheet|name:tiền gửi và cấp tín dụng cho các tổ chức tín dụng (\"tctd\") khác|note:7",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:dự phòng rủi ro cấp tín dụng cho các tctd khác|note:7.3": [
+      "balance_sheet|name:tiền gửi và cấp tín dụng cho các tổ chức tín dụng (\"tctd\") khác|note:7|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "balance_sheet|name:tiền gửi và cấp tín dụng cho các tổ chức tín dụng (\"tctd\") khác|note:7",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:chứng khoán kinh doanh|note:8": [
+      "balance_sheet|name:tiền gửi tại các tctd khác|note:7.1|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "balance_sheet|name:tiền gửi tại các tctd khác|note:7.1",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:chứng khoán kinh doanh": [
+      "balance_sheet|name:tiền gửi tại các tctd khác|note:7.1|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "balance_sheet|name:tiền gửi tại các tctd khác|note:7.1",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:các công cụ tài chính phái sinh và các tài sản tài chính khác|note:19": [
+      "balance_sheet|name:cấp tín dụng cho các tctd khác|note:7.2|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "balance_sheet|name:cấp tín dụng cho các tctd khác|note:7.2",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:cho vay khách hàng": [
+      "balance_sheet|name:cấp tín dụng cho các tctd khác|note:7.2|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "balance_sheet|name:cấp tín dụng cho các tctd khác|note:7.2",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:cho vay khách hàng|note:9": [
+      "balance_sheet|name:dự phòng rủi ro cấp tín dụng cho các tctd khác|note:7.3|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "balance_sheet|name:dự phòng rủi ro cấp tín dụng cho các tctd khác|note:7.3",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:dự phòng rủi ro cho vay khách hàng|note:10": [
+      "balance_sheet|name:dự phòng rủi ro cấp tín dụng cho các tctd khác|note:7.3|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "balance_sheet|name:dự phòng rủi ro cấp tín dụng cho các tctd khác|note:7.3",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:hoạt động mua nợ|note:11": [
+      "balance_sheet|name:chứng khoán kinh doanh|note:8|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "balance_sheet|name:chứng khoán kinh doanh|note:8",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:mua nợ": [
+      "balance_sheet|name:chứng khoán kinh doanh|note:8|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "balance_sheet|name:chứng khoán kinh doanh|note:8",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:dự phòng rủi ro hoạt động mua nợ": [
+      "balance_sheet|id:balance_sheet|name:chứng khoán kinh doanh|occ:2|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "balance_sheet|id:balance_sheet|name:chứng khoán kinh doanh|occ:2",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:chứng khoán đầu tư|note:12": [
+      "balance_sheet|id:balance_sheet|name:chứng khoán kinh doanh|occ:2|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "balance_sheet|id:balance_sheet|name:chứng khoán kinh doanh|occ:2",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:chứng khoán đầu tư sẵn sàng để bán|note:12.1": [
+      "balance_sheet|name:các công cụ tài chính phái sinh và các tài sản tài chính khác|note:19|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "balance_sheet|name:các công cụ tài chính phái sinh và các tài sản tài chính khác|note:19",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:chứng khoán đầu tư giữ đến ngày đáo hạn|note:12.2": [
+      "balance_sheet|name:các công cụ tài chính phái sinh và các tài sản tài chính khác|note:19|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "balance_sheet|name:các công cụ tài chính phái sinh và các tài sản tài chính khác|note:19",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:dự phòng rủi ro chứng khoán đầu tư|note:12.3": [
+      "balance_sheet|id:balance_sheet|name:cho vay khách hàng|occ:1|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cho vay khách hàng|occ:1",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:góp vốn, đầu tư dài hạn|note:13": [
+      "balance_sheet|id:balance_sheet|name:cho vay khách hàng|occ:1|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 19
+          "item_index": 19,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cho vay khách hàng|occ:1",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:đầu tư dài hạn khác": [
+      "balance_sheet|name:cho vay khách hàng|note:9|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 20
+          "item_index": 20,
+          "row_identity": "balance_sheet|name:cho vay khách hàng|note:9",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:dự phòng giảm giá góp vốn, đầu tư dài hạn": [
+      "balance_sheet|name:cho vay khách hàng|note:9|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 21
+          "item_index": 21,
+          "row_identity": "balance_sheet|name:cho vay khách hàng|note:9",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:tài sản cố định|note:14": [
+      "balance_sheet|name:dự phòng rủi ro cho vay khách hàng|note:10|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 22
+          "item_index": 22,
+          "row_identity": "balance_sheet|name:dự phòng rủi ro cho vay khách hàng|note:10",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tài sản cố định hữu hình|note:14.1": [
+      "balance_sheet|name:dự phòng rủi ro cho vay khách hàng|note:10|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 23
+          "item_index": 23,
+          "row_identity": "balance_sheet|name:dự phòng rủi ro cho vay khách hàng|note:10",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:nguyên giá tài sản cố định": [
+      "balance_sheet|name:hoạt động mua nợ|note:11|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 24
-        },
+          "item_index": 24,
+          "row_identity": "balance_sheet|name:hoạt động mua nợ|note:11",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:hoạt động mua nợ|note:11|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 27
+          "item_index": 25,
+          "row_identity": "balance_sheet|name:hoạt động mua nợ|note:11",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:khấu hao tài sản cố định": [
+      "balance_sheet|id:balance_sheet|name:mua nợ|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 25
+          "item_index": 26,
+          "row_identity": "balance_sheet|id:balance_sheet|name:mua nợ",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tài sản cố định vô hình|note:14.2": [
+      "balance_sheet|id:balance_sheet|name:mua nợ|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 26
+          "item_index": 27,
+          "row_identity": "balance_sheet|id:balance_sheet|name:mua nợ",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:hao mòn tài sản cố định": [
+      "balance_sheet|id:balance_sheet|name:dự phòng rủi ro hoạt động mua nợ|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 28
+          "item_index": 28,
+          "row_identity": "balance_sheet|id:balance_sheet|name:dự phòng rủi ro hoạt động mua nợ",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tài sản có khác|note:15": [
+      "balance_sheet|id:balance_sheet|name:dự phòng rủi ro hoạt động mua nợ|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 29
+          "item_index": 29,
+          "row_identity": "balance_sheet|id:balance_sheet|name:dự phòng rủi ro hoạt động mua nợ",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:các khoản phải thu": [
+      "balance_sheet|name:chứng khoán đầu tư|note:12|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 30
+          "item_index": 30,
+          "row_identity": "balance_sheet|name:chứng khoán đầu tư|note:12",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:các khoản lãi, phí phải thu": [
+      "balance_sheet|name:chứng khoán đầu tư|note:12|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 31
+          "item_index": 31,
+          "row_identity": "balance_sheet|name:chứng khoán đầu tư|note:12",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:tài sản thuế thu nhập doanh nghiệp hoãn lại": [
+      "balance_sheet|name:chứng khoán đầu tư sẵn sàng để bán|note:12.1|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 32
+          "item_index": 32,
+          "row_identity": "balance_sheet|name:chứng khoán đầu tư sẵn sàng để bán|note:12.1",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tài sản có khác": [
+      "balance_sheet|name:chứng khoán đầu tư sẵn sàng để bán|note:12.1|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 33
+          "item_index": 33,
+          "row_identity": "balance_sheet|name:chứng khoán đầu tư sẵn sàng để bán|note:12.1",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:các khoản dự phòng rủi ro cho các tài sản có nội bảng khác": [
+      "balance_sheet|name:chứng khoán đầu tư giữ đến ngày đáo hạn|note:12.2|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 34
+          "item_index": 34,
+          "row_identity": "balance_sheet|name:chứng khoán đầu tư giữ đến ngày đáo hạn|note:12.2",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tổng tài sản": [
+      "balance_sheet|name:dự phòng rủi ro chứng khoán đầu tư|note:12.3|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p006",
           "page_index": 6,
-          "item_index": 35
+          "item_index": 35,
+          "row_identity": "balance_sheet|name:dự phòng rủi ro chứng khoán đầu tư|note:12.3",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:các khoản nợ chính phủ và nhnn|note:16": [
+      "balance_sheet|name:dự phòng rủi ro chứng khoán đầu tư|note:12.3|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 0
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 1
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 36,
+          "row_identity": "balance_sheet|name:dự phòng rủi ro chứng khoán đầu tư|note:12.3",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:tiền gửi và vay chính phủ, nhnn": [
+      "balance_sheet|name:góp vốn, đầu tư dài hạn|note:13|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 2
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 3
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 37,
+          "row_identity": "balance_sheet|name:góp vốn, đầu tư dài hạn|note:13",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tiền gửi và vay các tổ chức tài chính, các tctd khác|note:17": [
+      "balance_sheet|name:góp vốn, đầu tư dài hạn|note:13|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 4
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 5
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 38,
+          "row_identity": "balance_sheet|name:góp vốn, đầu tư dài hạn|note:13",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:tiền gửi các tổ chức tài chính, các tctd khác|note:17.1": [
+      "balance_sheet|id:balance_sheet|name:đầu tư dài hạn khác|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 6
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 7
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 39,
+          "row_identity": "balance_sheet|id:balance_sheet|name:đầu tư dài hạn khác",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:vay các tổ chức tài chính, các tctd khác|note:17.2": [
+      "balance_sheet|id:balance_sheet|name:đầu tư dài hạn khác|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 8
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 9
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 40,
+          "row_identity": "balance_sheet|id:balance_sheet|name:đầu tư dài hạn khác",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:tiền gửi của khách hàng|note:18": [
+      "balance_sheet|id:balance_sheet|name:dự phòng giảm giá góp vốn, đầu tư dài hạn|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 10
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 11
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 41,
+          "row_identity": "balance_sheet|id:balance_sheet|name:dự phòng giảm giá góp vốn, đầu tư dài hạn",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:phát hành giấy tờ có giá|note:20": [
+      "balance_sheet|id:balance_sheet|name:dự phòng giảm giá góp vốn, đầu tư dài hạn|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 12
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 13
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 42,
+          "row_identity": "balance_sheet|id:balance_sheet|name:dự phòng giảm giá góp vốn, đầu tư dài hạn",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:các khoản nợ khác|note:21": [
+      "balance_sheet|name:tài sản cố định|note:14|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 14
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 15
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 43,
+          "row_identity": "balance_sheet|name:tài sản cố định|note:14",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:các khoản lãi, phí phải trả": [
+      "balance_sheet|name:tài sản cố định|note:14|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 16
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 17
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 44,
+          "row_identity": "balance_sheet|name:tài sản cố định|note:14",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:các khoản phải trả và công nợ khác": [
+      "balance_sheet|name:tài sản cố định hữu hình|note:14.1|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 18
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 19
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 45,
+          "row_identity": "balance_sheet|name:tài sản cố định hữu hình|note:14.1",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tổng nợ phải trả": [
+      "balance_sheet|name:tài sản cố định hữu hình|note:14.1|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 20
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 21
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 46,
+          "row_identity": "balance_sheet|name:tài sản cố định hữu hình|note:14.1",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:vốn": [
+      "balance_sheet|id:balance_sheet|name:nguyên giá tài sản cố định|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 22
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 23
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 47,
+          "row_identity": "balance_sheet|id:balance_sheet|name:nguyên giá tài sản cố định",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:vốn điều lệ": [
+      "balance_sheet|id:balance_sheet|name:nguyên giá tài sản cố định|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 24
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 25
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 48,
+          "row_identity": "balance_sheet|id:balance_sheet|name:nguyên giá tài sản cố định",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:thặng dư vốn cổ phần": [
+      "balance_sheet|id:balance_sheet|name:khấu hao tài sản cố định|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 26
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 49,
+          "row_identity": "balance_sheet|id:balance_sheet|name:khấu hao tài sản cố định",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:vốn khác": [
+      "balance_sheet|id:balance_sheet|name:khấu hao tài sản cố định|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 27
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 28
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 50,
+          "row_identity": "balance_sheet|id:balance_sheet|name:khấu hao tài sản cố định",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:các quỹ": [
+      "balance_sheet|name:tài sản cố định vô hình|note:14.2|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 29
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 30
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 51,
+          "row_identity": "balance_sheet|name:tài sản cố định vô hình|note:14.2",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:chênh lệch tỷ giá hối đoái": [
+      "balance_sheet|name:tài sản cố định vô hình|note:14.2|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 31
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 52,
+          "row_identity": "balance_sheet|name:tài sản cố định vô hình|note:14.2",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:lợi nhuận chưa phân phối": [
+      "balance_sheet|id:balance_sheet|name:hao mòn tài sản cố định|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 32
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 33
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 53,
+          "row_identity": "balance_sheet|id:balance_sheet|name:hao mòn tài sản cố định",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:lợi ích cổ đông không kiểm soát": [
+      "balance_sheet|id:balance_sheet|name:hao mòn tài sản cố định|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 34
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 35
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 54,
+          "row_identity": "balance_sheet|id:balance_sheet|name:hao mòn tài sản cố định",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:tổng vốn chủ sở hữu|note:23": [
+      "balance_sheet|name:tài sản có khác|note:15|column:30/09/2024 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 36
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 37
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 55,
+          "row_identity": "balance_sheet|name:tài sản có khác|note:15",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu": [
+      "balance_sheet|name:tài sản có khác|note:15|column:31/12/2023 triệu đồng": [
         {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 38
-        },
-        {
-          "sample_id": "TCB_Q3_2024_p007",
-          "page_index": 7,
-          "item_index": 39
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 56,
+          "row_identity": "balance_sheet|name:tài sản có khác|note:15",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:bảo lãnh vay vốn": [
+      "balance_sheet|id:balance_sheet|name:các khoản phải thu|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 57,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản phải thu",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản phải thu|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 58,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản phải thu",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản lãi, phí phải thu|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 59,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản lãi, phí phải thu",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản lãi, phí phải thu|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 60,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản lãi, phí phải thu",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tài sản thuế thu nhập doanh nghiệp hoãn lại|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 61,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tài sản thuế thu nhập doanh nghiệp hoãn lại",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tài sản thuế thu nhập doanh nghiệp hoãn lại|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 62,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tài sản thuế thu nhập doanh nghiệp hoãn lại",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tài sản có khác|occ:2|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 63,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tài sản có khác|occ:2",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tài sản có khác|occ:2|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 64,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tài sản có khác|occ:2",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản dự phòng rủi ro cho các tài sản có nội bảng khác|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 65,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản dự phòng rủi ro cho các tài sản có nội bảng khác",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản dự phòng rủi ro cho các tài sản có nội bảng khác|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 66,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản dự phòng rủi ro cho các tài sản có nội bảng khác",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng tài sản|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 67,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng tài sản",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng tài sản|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p006",
+          "page_index": 6,
+          "item_index": 68,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng tài sản",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:các khoản nợ chính phủ và nhnn|note:16|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 0,
+          "row_identity": "balance_sheet|name:các khoản nợ chính phủ và nhnn|note:16",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:các khoản nợ chính phủ và nhnn|note:16|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 1,
+          "row_identity": "balance_sheet|name:các khoản nợ chính phủ và nhnn|note:16",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tiền gửi và vay chính phủ, nhnn|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 2,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tiền gửi và vay chính phủ, nhnn",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tiền gửi và vay chính phủ, nhnn|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 3,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tiền gửi và vay chính phủ, nhnn",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:tiền gửi và vay các tổ chức tài chính, các tctd khác|note:17|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 4,
+          "row_identity": "balance_sheet|name:tiền gửi và vay các tổ chức tài chính, các tctd khác|note:17",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:tiền gửi và vay các tổ chức tài chính, các tctd khác|note:17|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 5,
+          "row_identity": "balance_sheet|name:tiền gửi và vay các tổ chức tài chính, các tctd khác|note:17",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:tiền gửi các tổ chức tài chính, các tctd khác|note:17.1|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 6,
+          "row_identity": "balance_sheet|name:tiền gửi các tổ chức tài chính, các tctd khác|note:17.1",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:tiền gửi các tổ chức tài chính, các tctd khác|note:17.1|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 7,
+          "row_identity": "balance_sheet|name:tiền gửi các tổ chức tài chính, các tctd khác|note:17.1",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:vay các tổ chức tài chính, các tctd khác|note:17.2|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 8,
+          "row_identity": "balance_sheet|name:vay các tổ chức tài chính, các tctd khác|note:17.2",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:vay các tổ chức tài chính, các tctd khác|note:17.2|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 9,
+          "row_identity": "balance_sheet|name:vay các tổ chức tài chính, các tctd khác|note:17.2",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:tiền gửi của khách hàng|note:18|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 10,
+          "row_identity": "balance_sheet|name:tiền gửi của khách hàng|note:18",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:tiền gửi của khách hàng|note:18|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 11,
+          "row_identity": "balance_sheet|name:tiền gửi của khách hàng|note:18",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:phát hành giấy tờ có giá|note:20|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 12,
+          "row_identity": "balance_sheet|name:phát hành giấy tờ có giá|note:20",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:phát hành giấy tờ có giá|note:20|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 13,
+          "row_identity": "balance_sheet|name:phát hành giấy tờ có giá|note:20",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:các khoản nợ khác|note:21|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 14,
+          "row_identity": "balance_sheet|name:các khoản nợ khác|note:21",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:các khoản nợ khác|note:21|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 15,
+          "row_identity": "balance_sheet|name:các khoản nợ khác|note:21",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản lãi, phí phải trả|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 16,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản lãi, phí phải trả",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản lãi, phí phải trả|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 17,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản lãi, phí phải trả",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản phải trả và công nợ khác|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 18,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản phải trả và công nợ khác",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các khoản phải trả và công nợ khác|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 19,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các khoản phải trả và công nợ khác",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng nợ phải trả|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 20,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng nợ phải trả",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng nợ phải trả|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 21,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng nợ phải trả",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:vốn|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 22,
+          "row_identity": "balance_sheet|id:balance_sheet|name:vốn",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:vốn|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 23,
+          "row_identity": "balance_sheet|id:balance_sheet|name:vốn",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:vốn điều lệ|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 24,
+          "row_identity": "balance_sheet|id:balance_sheet|name:vốn điều lệ",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:vốn điều lệ|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 25,
+          "row_identity": "balance_sheet|id:balance_sheet|name:vốn điều lệ",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:thặng dư vốn cổ phần|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 26,
+          "row_identity": "balance_sheet|id:balance_sheet|name:thặng dư vốn cổ phần",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:vốn khác|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 27,
+          "row_identity": "balance_sheet|id:balance_sheet|name:vốn khác",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:vốn khác|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 28,
+          "row_identity": "balance_sheet|id:balance_sheet|name:vốn khác",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các quỹ|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 29,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các quỹ",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:các quỹ|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 30,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các quỹ",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:chênh lệch tỷ giá hối đoái|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 31,
+          "row_identity": "balance_sheet|id:balance_sheet|name:chênh lệch tỷ giá hối đoái",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:lợi nhuận chưa phân phối|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 32,
+          "row_identity": "balance_sheet|id:balance_sheet|name:lợi nhuận chưa phân phối",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:lợi nhuận chưa phân phối|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 33,
+          "row_identity": "balance_sheet|id:balance_sheet|name:lợi nhuận chưa phân phối",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:lợi ích cổ đông không kiểm soát|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 34,
+          "row_identity": "balance_sheet|id:balance_sheet|name:lợi ích cổ đông không kiểm soát",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:lợi ích cổ đông không kiểm soát|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 35,
+          "row_identity": "balance_sheet|id:balance_sheet|name:lợi ích cổ đông không kiểm soát",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:tổng vốn chủ sở hữu|note:23|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 36,
+          "row_identity": "balance_sheet|name:tổng vốn chủ sở hữu|note:23",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:tổng vốn chủ sở hữu|note:23|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 37,
+          "row_identity": "balance_sheet|name:tổng vốn chủ sở hữu|note:23",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 38,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p007",
+          "page_index": 7,
+          "item_index": 39,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:bảo lãnh vay vốn|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|id:balance_sheet|name:bảo lãnh vay vốn",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:cam kết giao dịch hối đoái": [
+      "balance_sheet|id:balance_sheet|name:bảo lãnh vay vốn|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "balance_sheet|id:balance_sheet|name:bảo lãnh vay vốn",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:- cam kết mua ngoại tệ giao ngay": [
+      "balance_sheet|id:balance_sheet|name:cam kết giao dịch hối đoái|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết giao dịch hối đoái",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:- cam kết bán ngoại tệ giao ngay": [
+      "balance_sheet|id:balance_sheet|name:cam kết giao dịch hối đoái|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết giao dịch hối đoái",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:- cam kết mua - giao dịch hoán đổi tiền tệ": [
+      "balance_sheet|id:balance_sheet|name:- cam kết mua ngoại tệ giao ngay|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết mua ngoại tệ giao ngay",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:- cam kết bán - giao dịch hoán đổi tiền tệ": [
+      "balance_sheet|id:balance_sheet|name:- cam kết mua ngoại tệ giao ngay|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết mua ngoại tệ giao ngay",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:cam kết trong nghiệp vụ thư tín dụng (l/c)": [
+      "balance_sheet|id:balance_sheet|name:- cam kết bán ngoại tệ giao ngay|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết bán ngoại tệ giao ngay",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:bảo lãnh khác": [
+      "balance_sheet|id:balance_sheet|name:- cam kết bán ngoại tệ giao ngay|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết bán ngoại tệ giao ngay",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:các cam kết khác": [
+      "balance_sheet|id:balance_sheet|name:- cam kết mua - giao dịch hoán đổi tiền tệ|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết mua - giao dịch hoán đổi tiền tệ",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng ngoại tệ": [
+      "balance_sheet|id:balance_sheet|name:- cam kết mua - giao dịch hoán đổi tiền tệ|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết mua - giao dịch hoán đổi tiền tệ",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng vnd": [
+      "balance_sheet|id:balance_sheet|name:- cam kết bán - giao dịch hoán đổi tiền tệ|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết bán - giao dịch hoán đổi tiền tệ",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:- cam kết hoán đổi lãi suất bằng ngoại tệ": [
+      "balance_sheet|id:balance_sheet|name:- cam kết bán - giao dịch hoán đổi tiền tệ|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết bán - giao dịch hoán đổi tiền tệ",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:- cam kết hoán đổi lãi suất bằng vnd": [
+      "balance_sheet|id:balance_sheet|name:cam kết trong nghiệp vụ thư tín dụng (l/c)|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết trong nghiệp vụ thư tín dụng (l/c)",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:- cam kết kỳ hạn giấy tờ có giá": [
+      "balance_sheet|id:balance_sheet|name:cam kết trong nghiệp vụ thư tín dụng (l/c)|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết trong nghiệp vụ thư tín dụng (l/c)",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:- cam kết khác": [
+      "balance_sheet|id:balance_sheet|name:bảo lãnh khác|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "balance_sheet|id:balance_sheet|name:bảo lãnh khác",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:hạn mức tín dụng chưa sử dụng": [
+      "balance_sheet|id:balance_sheet|name:bảo lãnh khác|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "balance_sheet|id:balance_sheet|name:bảo lãnh khác",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:lãi cho vay và phí phải thu chưa thu được|note:36": [
+      "balance_sheet|id:balance_sheet|name:các cam kết khác|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các cam kết khác",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:nợ khó đòi đã xử lý|note:37": [
+      "balance_sheet|id:balance_sheet|name:các cam kết khác|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "balance_sheet|id:balance_sheet|name:các cam kết khác",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ],
-      "balance_sheet|name:tài sản và chứng từ khác|note:38": [
+      "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng ngoại tệ|column:30/09/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "balance_sheet|name:tổng cộng": [
+      "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng ngoại tệ|column:31/12/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p008",
           "page_index": 8,
-          "item_index": 19
+          "item_index": 19,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng ngoại tệ",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng vnd|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 20,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng vnd",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng vnd|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 21,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi tiền tệ chéo bằng vnd",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi lãi suất bằng ngoại tệ|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 22,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi lãi suất bằng ngoại tệ",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi lãi suất bằng ngoại tệ|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 23,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi lãi suất bằng ngoại tệ",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi lãi suất bằng vnd|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 24,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi lãi suất bằng vnd",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi lãi suất bằng vnd|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 25,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết hoán đổi lãi suất bằng vnd",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết kỳ hạn giấy tờ có giá|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 26,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết kỳ hạn giấy tờ có giá",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết kỳ hạn giấy tờ có giá|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 27,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết kỳ hạn giấy tờ có giá",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết khác|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 28,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết khác",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:- cam kết khác|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 29,
+          "row_identity": "balance_sheet|id:balance_sheet|name:- cam kết khác",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:hạn mức tín dụng chưa sử dụng|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 30,
+          "row_identity": "balance_sheet|id:balance_sheet|name:hạn mức tín dụng chưa sử dụng",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:hạn mức tín dụng chưa sử dụng|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 31,
+          "row_identity": "balance_sheet|id:balance_sheet|name:hạn mức tín dụng chưa sử dụng",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:lãi cho vay và phí phải thu chưa thu được|note:36|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 32,
+          "row_identity": "balance_sheet|name:lãi cho vay và phí phải thu chưa thu được|note:36",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:lãi cho vay và phí phải thu chưa thu được|note:36|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 33,
+          "row_identity": "balance_sheet|name:lãi cho vay và phí phải thu chưa thu được|note:36",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:nợ khó đòi đã xử lý|note:37|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 34,
+          "row_identity": "balance_sheet|name:nợ khó đòi đã xử lý|note:37",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:nợ khó đòi đã xử lý|note:37|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 35,
+          "row_identity": "balance_sheet|name:nợ khó đòi đã xử lý|note:37",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|name:tài sản và chứng từ khác|note:38|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 36,
+          "row_identity": "balance_sheet|name:tài sản và chứng từ khác|note:38",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|name:tài sản và chứng từ khác|note:38|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 37,
+          "row_identity": "balance_sheet|name:tài sản và chứng từ khác|note:38",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng cộng|column:30/09/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 38,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng cộng",
+          "column_label": "30/09/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng cộng|column:31/12/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p008",
+          "page_index": 8,
+          "item_index": 39,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng cộng",
+          "column_label": "31/12/2023 triệu đồng",
+          "period_key": "2023FY"
         }
       ]
     },
     "income_statement": {
-      "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24": [
+      "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24|column:quý iii 2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
         }
       ],
-      "income_statement|name:chi phí lãi và các chi phí tương tự|note:25": [
+      "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24|column:quý iii 2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
         }
       ],
-      "income_statement|name:thu nhập lãi thuần": [
+      "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "income_statement|name:thu nhập từ hoạt động dịch vụ": [
+      "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "income_statement|name:thu nhập lãi và các khoản thu nhập tương tự|note:24",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
         }
       ],
-      "income_statement|name:chi phí hoạt động dịch vụ": [
+      "income_statement|name:chi phí lãi và các chi phí tương tự|note:25|column:quý iii 2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "income_statement|name:chi phí lãi và các chi phí tương tự|note:25",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
         }
       ],
-      "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26": [
+      "income_statement|name:chi phí lãi và các chi phí tương tự|note:25|column:quý iii 2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "income_statement|name:chi phí lãi và các chi phí tương tự|note:25",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
         }
       ],
-      "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27": [
+      "income_statement|name:chi phí lãi và các chi phí tương tự|note:25|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "income_statement|name:chi phí lãi và các chi phí tương tự|note:25",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28": [
+      "income_statement|name:chi phí lãi và các chi phí tương tự|note:25|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "income_statement|name:chi phí lãi và các chi phí tương tự|note:25",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
         }
       ],
-      "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29": [
+      "income_statement|id:income_statement|name:thu nhập lãi thuần|column:quý iii 2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập lãi thuần",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
         }
       ],
-      "income_statement|name:thu nhập từ hoạt động khác": [
+      "income_statement|id:income_statement|name:thu nhập lãi thuần|column:quý iii 2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập lãi thuần",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
         }
       ],
-      "income_statement|name:chi phí hoạt động khác": [
+      "income_statement|id:income_statement|name:thu nhập lãi thuần|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập lãi thuần",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "income_statement|name:lãi thuần từ hoạt động khác|note:30": [
+      "income_statement|id:income_statement|name:thu nhập lãi thuần|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập lãi thuần",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
         }
       ],
-      "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31": [
+      "income_statement|id:income_statement|name:thu nhập từ hoạt động dịch vụ|column:quý iii 2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập từ hoạt động dịch vụ",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
         }
       ],
-      "income_statement|name:tổng thu nhập hoạt động": [
+      "income_statement|id:income_statement|name:thu nhập từ hoạt động dịch vụ|column:quý iii 2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập từ hoạt động dịch vụ",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
         }
       ],
-      "income_statement|name:chi phí hoạt động|note:32": [
+      "income_statement|id:income_statement|name:thu nhập từ hoạt động dịch vụ|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập từ hoạt động dịch vụ",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng": [
+      "income_statement|id:income_statement|name:thu nhập từ hoạt động dịch vụ|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập từ hoạt động dịch vụ",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
         }
       ],
-      "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33": [
+      "income_statement|id:income_statement|name:chi phí hoạt động dịch vụ|column:quý iii 2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "income_statement|id:income_statement|name:chi phí hoạt động dịch vụ",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
         }
       ],
-      "income_statement|name:tổng lợi nhuận trước thuế": [
+      "income_statement|id:income_statement|name:chi phí hoạt động dịch vụ|column:quý iii 2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "income_statement|id:income_statement|name:chi phí hoạt động dịch vụ",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
         }
       ],
-      "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1": [
+      "income_statement|id:income_statement|name:chi phí hoạt động dịch vụ|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "income_statement|id:income_statement|name:chi phí hoạt động dịch vụ",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3": [
+      "income_statement|id:income_statement|name:chi phí hoạt động dịch vụ|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 19
+          "item_index": 19,
+          "row_identity": "income_statement|id:income_statement|name:chi phí hoạt động dịch vụ",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
         }
       ],
-      "income_statement|name:chi phí thuế thu nhập doanh nghiệp": [
+      "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26|column:quý iii 2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 20
+          "item_index": 20,
+          "row_identity": "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
         }
       ],
-      "income_statement|name:lợi nhuận sau thuế": [
+      "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26|column:quý iii 2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 21
+          "item_index": 21,
+          "row_identity": "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
         }
       ],
-      "income_statement|name:lợi ích cổ đông không kiểm soát": [
+      "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 22
+          "item_index": 22,
+          "row_identity": "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
         }
       ],
-      "income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng": [
+      "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p009",
           "page_index": 9,
-          "item_index": 23
+          "item_index": 23,
+          "row_identity": "income_statement|name:lãi thuần từ hoạt động dịch vụ|note:26",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 24,
+          "row_identity": "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 25,
+          "row_identity": "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 26,
+          "row_identity": "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 27,
+          "row_identity": "income_statement|name:lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 28,
+          "row_identity": "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 29,
+          "row_identity": "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 30,
+          "row_identity": "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 31,
+          "row_identity": "income_statement|name:lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 32,
+          "row_identity": "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 33,
+          "row_identity": "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 34,
+          "row_identity": "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 35,
+          "row_identity": "income_statement|name:lãi thuần từ mua bán chứng khoán đầu tư|note:29",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:thu nhập từ hoạt động khác|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 36,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập từ hoạt động khác",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:thu nhập từ hoạt động khác|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 37,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập từ hoạt động khác",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:thu nhập từ hoạt động khác|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 38,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập từ hoạt động khác",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:thu nhập từ hoạt động khác|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 39,
+          "row_identity": "income_statement|id:income_statement|name:thu nhập từ hoạt động khác",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:chi phí hoạt động khác|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 40,
+          "row_identity": "income_statement|id:income_statement|name:chi phí hoạt động khác",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:chi phí hoạt động khác|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 41,
+          "row_identity": "income_statement|id:income_statement|name:chi phí hoạt động khác",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:chi phí hoạt động khác|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 42,
+          "row_identity": "income_statement|id:income_statement|name:chi phí hoạt động khác",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:chi phí hoạt động khác|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 43,
+          "row_identity": "income_statement|id:income_statement|name:chi phí hoạt động khác",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:lãi thuần từ hoạt động khác|note:30|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 44,
+          "row_identity": "income_statement|name:lãi thuần từ hoạt động khác|note:30",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:lãi thuần từ hoạt động khác|note:30|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 45,
+          "row_identity": "income_statement|name:lãi thuần từ hoạt động khác|note:30",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:lãi thuần từ hoạt động khác|note:30|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 46,
+          "row_identity": "income_statement|name:lãi thuần từ hoạt động khác|note:30",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:lãi thuần từ hoạt động khác|note:30|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 47,
+          "row_identity": "income_statement|name:lãi thuần từ hoạt động khác|note:30",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 48,
+          "row_identity": "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 49,
+          "row_identity": "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 50,
+          "row_identity": "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 51,
+          "row_identity": "income_statement|name:thu nhập từ góp vốn, mua cổ phần|note:31",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:tổng thu nhập hoạt động|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 52,
+          "row_identity": "income_statement|id:income_statement|name:tổng thu nhập hoạt động",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:tổng thu nhập hoạt động|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 53,
+          "row_identity": "income_statement|id:income_statement|name:tổng thu nhập hoạt động",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:tổng thu nhập hoạt động|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 54,
+          "row_identity": "income_statement|id:income_statement|name:tổng thu nhập hoạt động",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:tổng thu nhập hoạt động|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 55,
+          "row_identity": "income_statement|id:income_statement|name:tổng thu nhập hoạt động",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:chi phí hoạt động|note:32|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 56,
+          "row_identity": "income_statement|name:chi phí hoạt động|note:32",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:chi phí hoạt động|note:32|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 57,
+          "row_identity": "income_statement|name:chi phí hoạt động|note:32",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:chi phí hoạt động|note:32|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 58,
+          "row_identity": "income_statement|name:chi phí hoạt động|note:32",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:chi phí hoạt động|note:32|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 59,
+          "row_identity": "income_statement|name:chi phí hoạt động|note:32",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 60,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 61,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 62,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 63,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 64,
+          "row_identity": "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 65,
+          "row_identity": "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 66,
+          "row_identity": "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 67,
+          "row_identity": "income_statement|name:chi phí dự phòng rủi ro tín dụng|note:33",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:tổng lợi nhuận trước thuế|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 68,
+          "row_identity": "income_statement|id:income_statement|name:tổng lợi nhuận trước thuế",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:tổng lợi nhuận trước thuế|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 69,
+          "row_identity": "income_statement|id:income_statement|name:tổng lợi nhuận trước thuế",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:tổng lợi nhuận trước thuế|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 70,
+          "row_identity": "income_statement|id:income_statement|name:tổng lợi nhuận trước thuế",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:tổng lợi nhuận trước thuế|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 71,
+          "row_identity": "income_statement|id:income_statement|name:tổng lợi nhuận trước thuế",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 72,
+          "row_identity": "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 73,
+          "row_identity": "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 74,
+          "row_identity": "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 75,
+          "row_identity": "income_statement|name:chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 76,
+          "row_identity": "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 77,
+          "row_identity": "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 78,
+          "row_identity": "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 79,
+          "row_identity": "income_statement|name:thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:chi phí thuế thu nhập doanh nghiệp|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 80,
+          "row_identity": "income_statement|id:income_statement|name:chi phí thuế thu nhập doanh nghiệp",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:chi phí thuế thu nhập doanh nghiệp|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 81,
+          "row_identity": "income_statement|id:income_statement|name:chi phí thuế thu nhập doanh nghiệp",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:chi phí thuế thu nhập doanh nghiệp|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 82,
+          "row_identity": "income_statement|id:income_statement|name:chi phí thuế thu nhập doanh nghiệp",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:chi phí thuế thu nhập doanh nghiệp|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 83,
+          "row_identity": "income_statement|id:income_statement|name:chi phí thuế thu nhập doanh nghiệp",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận sau thuế|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 84,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận sau thuế",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận sau thuế|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 85,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận sau thuế",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận sau thuế|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 86,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận sau thuế",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận sau thuế|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 87,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận sau thuế",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi ích cổ đông không kiểm soát|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 88,
+          "row_identity": "income_statement|id:income_statement|name:lợi ích cổ đông không kiểm soát",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi ích cổ đông không kiểm soát|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 89,
+          "row_identity": "income_statement|id:income_statement|name:lợi ích cổ đông không kiểm soát",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi ích cổ đông không kiểm soát|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 90,
+          "row_identity": "income_statement|id:income_statement|name:lợi ích cổ đông không kiểm soát",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi ích cổ đông không kiểm soát|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 91,
+          "row_identity": "income_statement|id:income_statement|name:lợi ích cổ đông không kiểm soát",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng|column:quý iii 2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 92,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng",
+          "column_label": "Quý III 2024 triệu đồng",
+          "period_key": "2024Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng|column:quý iii 2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 93,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng",
+          "column_label": "Quý III 2023 triệu đồng",
+          "period_key": "2023Q3"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng|column:lũy kế từ đầu năm đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 94,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2024 triệu đồng",
+          "period_key": "2024-09-30"
+        }
+      ],
+      "income_statement|id:income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng|column:lũy kế từ đầu năm đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p009",
+          "page_index": 9,
+          "item_index": 95,
+          "row_identity": "income_statement|id:income_statement|name:lợi nhuận thuần của cổ đông của ngân hàng",
+          "column_label": "Lũy kế từ đầu năm đến 30/9/2023 triệu đồng",
+          "period_key": "2023-09-30"
         }
       ]
     },
     "cash_flow": {
-      "cash_flow|name:thu nhập lãi và các khoản thu nhập tương tự nhận được": [
+      "cash_flow|id:cash_flow|name:thu nhập lãi và các khoản thu nhập tương tự nhận được|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "cash_flow|id:cash_flow|name:thu nhập lãi và các khoản thu nhập tương tự nhận được",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:chi phí lãi và các chi phí tương tự đã trả": [
+      "cash_flow|id:cash_flow|name:thu nhập lãi và các khoản thu nhập tương tự nhận được|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "cash_flow|id:cash_flow|name:thu nhập lãi và các khoản thu nhập tương tự nhận được",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:thu nhập từ hoạt động dịch vụ nhận được": [
+      "cash_flow|id:cash_flow|name:chi phí lãi và các chi phí tương tự đã trả|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "cash_flow|id:cash_flow|name:chi phí lãi và các chi phí tương tự đã trả",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán)": [
+      "cash_flow|id:cash_flow|name:chi phí lãi và các chi phí tương tự đã trả|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "cash_flow|id:cash_flow|name:chi phí lãi và các chi phí tương tự đã trả",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:thu nhập/(chi phí) khác": [
+      "cash_flow|id:cash_flow|name:thu nhập từ hoạt động dịch vụ nhận được|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "cash_flow|id:cash_flow|name:thu nhập từ hoạt động dịch vụ nhận được",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro|note:30": [
+      "cash_flow|id:cash_flow|name:thu nhập từ hoạt động dịch vụ nhận được|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "cash_flow|id:cash_flow|name:thu nhập từ hoạt động dịch vụ nhận được",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền chi trả cho nhân viên và hoạt động quản lý, công vụ": [
+      "cash_flow|id:cash_flow|name:chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán)|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "cash_flow|id:cash_flow|name:chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán)",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền thuế thu nhập thực nộp trong kỳ|note:22.1": [
+      "cash_flow|id:cash_flow|name:chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán)|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "cash_flow|id:cash_flow|name:chênh lệch số tiền thực thu từ hoạt động kinh doanh (ngoại tệ và chứng khoán)",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động": [
+      "cash_flow|id:cash_flow|name:thu nhập/(chi phí) khác|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "cash_flow|id:cash_flow|name:thu nhập/(chi phí) khác",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:giảm các khoản tiền gửi và cấp tín dụng cho các tctd khác": [
+      "cash_flow|id:cash_flow|name:thu nhập/(chi phí) khác|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "cash_flow|id:cash_flow|name:thu nhập/(chi phí) khác",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:(tăng)/giảm các khoản về kinh doanh chứng khoán": [
+      "cash_flow|name:tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro|note:30|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "cash_flow|name:tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro|note:30",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:tăng các công cụ tài chính phái sinh và các tài sản tài chính khác": [
+      "cash_flow|name:tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro|note:30|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "cash_flow|name:tiền thu các khoản nợ đã được xử lý bằng nguồn dự phòng rủi ro|note:30",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:tăng các khoản cho vay khách hàng": [
+      "cash_flow|id:cash_flow|name:tiền chi trả cho nhân viên và hoạt động quản lý, công vụ|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền chi trả cho nhân viên và hoạt động quản lý, công vụ",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản|note:10, 15": [
+      "cash_flow|id:cash_flow|name:tiền chi trả cho nhân viên và hoạt động quản lý, công vụ|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền chi trả cho nhân viên và hoạt động quản lý, công vụ",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:(tăng)/giảm khác về tài sản hoạt động": [
+      "cash_flow|name:tiền thuế thu nhập thực nộp trong kỳ|note:22.1|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "cash_flow|name:tiền thuế thu nhập thực nộp trong kỳ|note:22.1",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:giảm các khoản tiền gửi, tiền vay các tctd khác": [
+      "cash_flow|name:tiền thuế thu nhập thực nộp trong kỳ|note:22.1|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "cash_flow|name:tiền thuế thu nhập thực nộp trong kỳ|note:22.1",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:tăng tiền gửi của khách hàng": [
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính)": [
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 17
+          "item_index": 17,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:tăng/(giảm) khác về công nợ hoạt động": [
+      "cash_flow|id:cash_flow|name:giảm các khoản tiền gửi và cấp tín dụng cho các tctd khác|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 18
+          "item_index": 18,
+          "row_identity": "cash_flow|id:cash_flow|name:giảm các khoản tiền gửi và cấp tín dụng cho các tctd khác",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:chi từ các quỹ|note:23.1": [
+      "cash_flow|id:cash_flow|name:giảm các khoản tiền gửi và cấp tín dụng cho các tctd khác|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 19
+          "item_index": 19,
+          "row_identity": "cash_flow|id:cash_flow|name:giảm các khoản tiền gửi và cấp tín dụng cho các tctd khác",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh": [
+      "cash_flow|id:cash_flow|name:(tăng)/giảm các khoản về kinh doanh chứng khoán|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 20
+          "item_index": 20,
+          "row_identity": "cash_flow|id:cash_flow|name:(tăng)/giảm các khoản về kinh doanh chứng khoán",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:mua sắm tài sản cố định": [
+      "cash_flow|id:cash_flow|name:(tăng)/giảm các khoản về kinh doanh chứng khoán|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 21
+          "item_index": 21,
+          "row_identity": "cash_flow|id:cash_flow|name:(tăng)/giảm các khoản về kinh doanh chứng khoán",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền thu từ thanh lý tài sản cố định": [
+      "cash_flow|id:cash_flow|name:tăng các công cụ tài chính phái sinh và các tài sản tài chính khác|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 22
+          "item_index": 22,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng các công cụ tài chính phái sinh và các tài sản tài chính khác",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền chi từ thanh lý tài sản cố định": [
+      "cash_flow|id:cash_flow|name:tăng các công cụ tài chính phái sinh và các tài sản tài chính khác|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 23
+          "item_index": 23,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng các công cụ tài chính phái sinh và các tài sản tài chính khác",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền thu từ bán bất động sản đầu tư": [
+      "cash_flow|id:cash_flow|name:tăng các khoản cho vay khách hàng|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 24
+          "item_index": 24,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng các khoản cho vay khách hàng",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền chi đầu tư, góp vốn vào các đơn vị khác": [
+      "cash_flow|id:cash_flow|name:tăng các khoản cho vay khách hàng|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 25
+          "item_index": 25,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng các khoản cho vay khách hàng",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn|note:31": [
+      "cash_flow|name:giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản|note:10, 15|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 26
+          "item_index": 26,
+          "row_identity": "cash_flow|name:giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản|note:10, 15",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư": [
+      "cash_flow|name:giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản|note:10, 15|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p010",
           "page_index": 10,
-          "item_index": 27
+          "item_index": 27,
+          "row_identity": "cash_flow|name:giảm nguồn dự phòng để xử lý rủi ro, xử lý, bù đắp tổn thất các khoản|note:10, 15",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền thu được từ góp vốn của cổ đông không kiểm soát": [
+      "cash_flow|id:cash_flow|name:(tăng)/giảm khác về tài sản hoạt động|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 28,
+          "row_identity": "cash_flow|id:cash_flow|name:(tăng)/giảm khác về tài sản hoạt động",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:(tăng)/giảm khác về tài sản hoạt động|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 29,
+          "row_identity": "cash_flow|id:cash_flow|name:(tăng)/giảm khác về tài sản hoạt động",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:giảm các khoản tiền gửi, tiền vay các tctd khác|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 30,
+          "row_identity": "cash_flow|id:cash_flow|name:giảm các khoản tiền gửi, tiền vay các tctd khác",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:giảm các khoản tiền gửi, tiền vay các tctd khác|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 31,
+          "row_identity": "cash_flow|id:cash_flow|name:giảm các khoản tiền gửi, tiền vay các tctd khác",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tăng tiền gửi của khách hàng|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 32,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng tiền gửi của khách hàng",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tăng tiền gửi của khách hàng|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 33,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng tiền gửi của khách hàng",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính)|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 34,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính)",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính)|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 35,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng phát hành giấy tờ có giá (ngoại trừ giấy tờ có giá phát hành được tính vào hoạt động tài chính)",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tăng/(giảm) khác về công nợ hoạt động|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 36,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng/(giảm) khác về công nợ hoạt động",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tăng/(giảm) khác về công nợ hoạt động|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 37,
+          "row_identity": "cash_flow|id:cash_flow|name:tăng/(giảm) khác về công nợ hoạt động",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|name:chi từ các quỹ|note:23.1|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 38,
+          "row_identity": "cash_flow|name:chi từ các quỹ|note:23.1",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|name:chi từ các quỹ|note:23.1|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 39,
+          "row_identity": "cash_flow|name:chi từ các quỹ|note:23.1",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 40,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 41,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động kinh doanh",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:mua sắm tài sản cố định|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 42,
+          "row_identity": "cash_flow|id:cash_flow|name:mua sắm tài sản cố định",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:mua sắm tài sản cố định|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 43,
+          "row_identity": "cash_flow|id:cash_flow|name:mua sắm tài sản cố định",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền thu từ thanh lý tài sản cố định|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 44,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền thu từ thanh lý tài sản cố định",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền thu từ thanh lý tài sản cố định|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 45,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền thu từ thanh lý tài sản cố định",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền chi từ thanh lý tài sản cố định|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 46,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền chi từ thanh lý tài sản cố định",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền chi từ thanh lý tài sản cố định|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 47,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền chi từ thanh lý tài sản cố định",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền thu từ bán bất động sản đầu tư|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 48,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền thu từ bán bất động sản đầu tư",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền thu từ bán bất động sản đầu tư|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 49,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền thu từ bán bất động sản đầu tư",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền chi đầu tư, góp vốn vào các đơn vị khác|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 50,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền chi đầu tư, góp vốn vào các đơn vị khác",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền chi đầu tư, góp vốn vào các đơn vị khác|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 51,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền chi đầu tư, góp vốn vào các đơn vị khác",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|name:tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn|note:31|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 52,
+          "row_identity": "cash_flow|name:tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn|note:31",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|name:tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn|note:31|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 53,
+          "row_identity": "cash_flow|name:tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn|note:31",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 54,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p010",
+          "page_index": 10,
+          "item_index": 55,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần từ/(sử dụng vào) hoạt động đầu tư",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền thu được từ góp vốn của cổ đông không kiểm soát|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p011",
           "page_index": 11,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền thu được từ góp vốn của cổ đông không kiểm soát",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:cổ tức trả cho cổ đông": [
+      "cash_flow|id:cash_flow|name:tiền thu được từ góp vốn của cổ đông không kiểm soát|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p011",
           "page_index": 11,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền thu được từ góp vốn của cổ đông không kiểm soát",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính": [
+      "cash_flow|id:cash_flow|name:cổ tức trả cho cổ đông|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p011",
           "page_index": 11,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "cash_flow|id:cash_flow|name:cổ tức trả cho cổ đông",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:lưu chuyển tiền thuần trong kỳ": [
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p011",
           "page_index": 11,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền và các khoản tương đương tiền đầu kỳ|note:34": [
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p011",
           "page_index": 11,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần (sử dụng vào)/từ hoạt động tài chính",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ],
-      "cash_flow|name:chênh lệch tỷ giá hối đoái|note:23.1": [
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần trong kỳ|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p011",
           "page_index": 11,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần trong kỳ",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
         }
       ],
-      "cash_flow|name:tiền và các khoản tương đương tiền cuối kỳ|note:34": [
+      "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần trong kỳ|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
         {
           "sample_id": "TCB_Q3_2024_p011",
           "page_index": 11,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "cash_flow|id:cash_flow|name:lưu chuyển tiền thuần trong kỳ",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|name:tiền và các khoản tương đương tiền đầu kỳ|note:34|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p011",
+          "page_index": 11,
+          "item_index": 7,
+          "row_identity": "cash_flow|name:tiền và các khoản tương đương tiền đầu kỳ|note:34",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|name:tiền và các khoản tương đương tiền đầu kỳ|note:34|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p011",
+          "page_index": 11,
+          "item_index": 8,
+          "row_identity": "cash_flow|name:tiền và các khoản tương đương tiền đầu kỳ|note:34",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|name:chênh lệch tỷ giá hối đoái|note:23.1|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p011",
+          "page_index": 11,
+          "item_index": 9,
+          "row_identity": "cash_flow|name:chênh lệch tỷ giá hối đoái|note:23.1",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|name:chênh lệch tỷ giá hối đoái|note:23.1|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p011",
+          "page_index": 11,
+          "item_index": 10,
+          "row_identity": "cash_flow|name:chênh lệch tỷ giá hối đoái|note:23.1",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
+        }
+      ],
+      "cash_flow|name:tiền và các khoản tương đương tiền cuối kỳ|note:34|column:từ 1/1/2024 đến 30/9/2024 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p011",
+          "page_index": 11,
+          "item_index": 11,
+          "row_identity": "cash_flow|name:tiền và các khoản tương đương tiền cuối kỳ|note:34",
+          "column_label": "Từ 1/1/2024 đến 30/9/2024 triệu đồng",
+          "period_key": "2024Q3_YTD"
+        }
+      ],
+      "cash_flow|name:tiền và các khoản tương đương tiền cuối kỳ|note:34|column:từ 1/1/2023 đến 30/9/2023 triệu đồng": [
+        {
+          "sample_id": "TCB_Q3_2024_p011",
+          "page_index": 11,
+          "item_index": 12,
+          "row_identity": "cash_flow|name:tiền và các khoản tương đương tiền cuối kỳ|note:34",
+          "column_label": "Từ 1/1/2023 đến 30/9/2023 triệu đồng",
+          "period_key": "2023Q3_YTD"
         }
       ]
     }
   },
-  "conflicts": [
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p006",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:nguyên giá tài sản cố định",
-      "prior_values": [
-        9348348000000.0
-      ],
-      "new_value": 8160074000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:các khoản nợ chính phủ và nhnn|note:16",
-      "prior_values": [
-        20542000000.0
-      ],
-      "new_value": 131000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:tiền gửi và vay chính phủ, nhnn",
-      "prior_values": [
-        20542000000.0
-      ],
-      "new_value": 131000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:tiền gửi và vay các tổ chức tài chính, các tctd khác|note:17",
-      "prior_values": [
-        138462274000000.0
-      ],
-      "new_value": 153173002000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:tiền gửi các tổ chức tài chính, các tctd khác|note:17.1",
-      "prior_values": [
-        70584329000000.0
-      ],
-      "new_value": 50619678000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:vay các tổ chức tài chính, các tctd khác|note:17.2",
-      "prior_values": [
-        67877945000000.0
-      ],
-      "new_value": 102553324000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:tiền gửi của khách hàng|note:18",
-      "prior_values": [
-        494954017000000.0
-      ],
-      "new_value": 454660779000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:phát hành giấy tờ có giá|note:20",
-      "prior_values": [
-        126061309000000.0
-      ],
-      "new_value": 84703300000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:các khoản nợ khác|note:21",
-      "prior_values": [
-        23187221000000.0
-      ],
-      "new_value": 25328735000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:các khoản lãi, phí phải trả",
-      "prior_values": [
-        7309545000000.0
-      ],
-      "new_value": 9418750000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:các khoản phải trả và công nợ khác",
-      "prior_values": [
-        15877676000000.0
-      ],
-      "new_value": 15909985000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:tổng nợ phải trả",
-      "prior_values": [
-        782685363000000.0
-      ],
-      "new_value": 717865947000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:vốn",
-      "prior_values": [
-        71006213000000.0
-      ],
-      "new_value": 36257461000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:vốn điều lệ",
-      "prior_values": [
-        70450216000000.0
-      ],
-      "new_value": 35225108000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:các quỹ",
-      "prior_values": [
-        20845050000000.0
-      ],
-      "new_value": 45028627000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:lợi nhuận chưa phân phối",
-      "prior_values": [
-        51068780000000.0
-      ],
-      "new_value": 49013144000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:lợi ích cổ đông không kiểm soát",
-      "prior_values": [
-        1437445000000.0
-      ],
-      "new_value": 1316833000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:tổng vốn chủ sở hữu|note:23",
-      "prior_values": [
-        144367982000000.0
-      ],
-      "new_value": 131616065000000.0
-    },
-    {
-      "report_id": "TCB_Q3_2024",
-      "sample_id": "TCB_Q3_2024_p007",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu",
-      "prior_values": [
-        927053345000000.0
-      ],
-      "new_value": 849482012000000.0
-    }
-  ],
-  "conflict_count": 19
+  "conflicts": [],
+  "conflict_count": 0
 }

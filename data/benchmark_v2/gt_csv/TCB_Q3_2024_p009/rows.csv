@@ -1,25 +1,97 @@
-statement,item_code,item_name,value,notes_ref,original_name
-income_statement,,Thu nhập lãi và các khoản thu nhập tương tự,45024501000000,24,Thu nhập lãi và các khoản thu nhập tương tự
-income_statement,,Chi phí lãi và các chi phí tương tự,-18118355000000,25,Chi phí lãi và các chi phí tương tự
-income_statement,,Thu nhập lãi thuần,26906146000000,,Thu nhập lãi thuần
-income_statement,,Thu nhập từ hoạt động dịch vụ,8699537000000,,Thu nhập từ hoạt động dịch vụ
-income_statement,,Chi phí hoạt động dịch vụ,-2120131000000,,Chi phí hoạt động dịch vụ
-income_statement,,Lãi thuần từ hoạt động dịch vụ,6579406000000,26,Lãi thuần từ hoạt động dịch vụ
-income_statement,,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,1016826000000,27,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối
-income_statement,,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,79300000000,28,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh
-income_statement,,Lãi thuần từ mua bán chứng khoán đầu tư,2109206000000,29,Lãi thuần từ mua bán chứng khoán đầu tư
-income_statement,,Thu nhập từ hoạt động khác,5440789000000,,Thu nhập từ hoạt động khác
-income_statement,,Chi phí hoạt động khác,-4760369000000,,Chi phí hoạt động khác
-income_statement,,Lãi thuần từ hoạt động khác,680420000000,30,Lãi thuần từ hoạt động khác
-income_statement,,"Thu nhập từ góp vốn, mua cổ phần",64494000000,31,"Thu nhập từ góp vốn, mua cổ phần"
-income_statement,,Tổng thu nhập hoạt động,37435798000000,,Tổng thu nhập hoạt động
-income_statement,,Chi phí hoạt động,-10629012000000,32,Chi phí hoạt động
-income_statement,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,26806786000000,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng
-income_statement,,Chi phí dự phòng rủi ro tín dụng,-3964450000000,33,Chi phí dự phòng rủi ro tín dụng
-income_statement,,Tổng lợi nhuận trước thuế,22842336000000,,Tổng lợi nhuận trước thuế
-income_statement,,Chi phí thuế thu nhập doanh nghiệp hiện hành,-4505335000000,22.1,Chi phí thuế thu nhập doanh nghiệp hiện hành
-income_statement,,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,2992000000,22.3,Thu nhập thuế thu nhập doanh nghiệp hoãn lại
-income_statement,,Chi phí thuế thu nhập doanh nghiệp,-4502343000000,,Chi phí thuế thu nhập doanh nghiệp
-income_statement,,Lợi nhuận sau thuế,18339993000000,,Lợi nhuận sau thuế
-income_statement,,Lợi ích cổ đông không kiểm soát,-188130000000,,Lợi ích cổ đông không kiểm soát
-income_statement,,Lợi nhuận thuần của cổ đông của Ngân hàng,18151863000000,,Lợi nhuận thuần của cổ đông của Ngân hàng
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+income_statement,,Thu nhập lãi và các khoản thu nhập tương tự,15168282000000.0,24,Thu nhập lãi và các khoản thu nhập tương tự,income_statement|name:Thu nhập lãi và các khoản thu nhập tương tự|note:24,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Thu nhập lãi và các khoản thu nhập tương tự,14532716000000.0,24,Thu nhập lãi và các khoản thu nhập tương tự,income_statement|name:Thu nhập lãi và các khoản thu nhập tương tự|note:24,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Thu nhập lãi và các khoản thu nhập tương tự,45024501000000.0,24,Thu nhập lãi và các khoản thu nhập tương tự,income_statement|name:Thu nhập lãi và các khoản thu nhập tương tự|note:24,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Thu nhập lãi và các khoản thu nhập tương tự,42262779000000.0,24,Thu nhập lãi và các khoản thu nhập tương tự,income_statement|name:Thu nhập lãi và các khoản thu nhập tương tự|note:24,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Chi phí lãi và các chi phí tương tự,-6239606000000.0,25,Chi phí lãi và các chi phí tương tự,income_statement|name:Chi phí lãi và các chi phí tương tự|note:25,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Chi phí lãi và các chi phí tương tự,-7260556000000.0,25,Chi phí lãi và các chi phí tương tự,income_statement|name:Chi phí lãi và các chi phí tương tự|note:25,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Chi phí lãi và các chi phí tương tự,-18118355000000.0,25,Chi phí lãi và các chi phí tương tự,income_statement|name:Chi phí lãi và các chi phí tương tự|note:25,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Chi phí lãi và các chi phí tương tự,-22168862000000.0,25,Chi phí lãi và các chi phí tương tự,income_statement|name:Chi phí lãi và các chi phí tương tự|note:25,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Thu nhập lãi thuần,8928676000000.0,,Thu nhập lãi thuần,income_statement|name:Thu nhập lãi thuần,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Thu nhập lãi thuần,7272160000000.0,,Thu nhập lãi thuần,income_statement|name:Thu nhập lãi thuần,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Thu nhập lãi thuần,26906146000000.0,,Thu nhập lãi thuần,income_statement|name:Thu nhập lãi thuần,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Thu nhập lãi thuần,20093917000000.0,,Thu nhập lãi thuần,income_statement|name:Thu nhập lãi thuần,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Thu nhập từ hoạt động dịch vụ,2675088000000.0,,Thu nhập từ hoạt động dịch vụ,income_statement|name:Thu nhập từ hoạt động dịch vụ,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Thu nhập từ hoạt động dịch vụ,3008697000000.0,,Thu nhập từ hoạt động dịch vụ,income_statement|name:Thu nhập từ hoạt động dịch vụ,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Thu nhập từ hoạt động dịch vụ,8699537000000.0,,Thu nhập từ hoạt động dịch vụ,income_statement|name:Thu nhập từ hoạt động dịch vụ,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Thu nhập từ hoạt động dịch vụ,8174585000000.0,,Thu nhập từ hoạt động dịch vụ,income_statement|name:Thu nhập từ hoạt động dịch vụ,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Chi phí hoạt động dịch vụ,-728305000.0,,Chi phí hoạt động dịch vụ,income_statement|name:Chi phí hoạt động dịch vụ,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Chi phí hoạt động dịch vụ,-753037000.0,,Chi phí hoạt động dịch vụ,income_statement|name:Chi phí hoạt động dịch vụ,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Chi phí hoạt động dịch vụ,-2120131000000.0,,Chi phí hoạt động dịch vụ,income_statement|name:Chi phí hoạt động dịch vụ,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Chi phí hoạt động dịch vụ,-1955439000000.0,,Chi phí hoạt động dịch vụ,income_statement|name:Chi phí hoạt động dịch vụ,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lãi thuần từ hoạt động dịch vụ,1946783000000.0,26,Lãi thuần từ hoạt động dịch vụ,income_statement|name:Lãi thuần từ hoạt động dịch vụ|note:26,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lãi thuần từ hoạt động dịch vụ,2255660000000.0,26,Lãi thuần từ hoạt động dịch vụ,income_statement|name:Lãi thuần từ hoạt động dịch vụ|note:26,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lãi thuần từ hoạt động dịch vụ,6579406000000.0,26,Lãi thuần từ hoạt động dịch vụ,income_statement|name:Lãi thuần từ hoạt động dịch vụ|note:26,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lãi thuần từ hoạt động dịch vụ,6219146000000.0,26,Lãi thuần từ hoạt động dịch vụ,income_statement|name:Lãi thuần từ hoạt động dịch vụ|note:26,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,61041000.0,27,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,income_statement|name:Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,123789000.0,27,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,income_statement|name:Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,1016826000000.0,27,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,income_statement|name:Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,-116784000.0,27,Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối,income_statement|name:Lãi/(lỗ) thuần từ hoạt động kinh doanh ngoại hối|note:27,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,-527000000.0,28,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,income_statement|name:Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,-5587000.0,28,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,income_statement|name:Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,79300000.0,28,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,income_statement|name:Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,32387000.0,28,Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh,income_statement|name:Lãi/(lỗ) thuần từ mua bán chứng khoán kinh doanh|note:28,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lãi thuần từ mua bán chứng khoán đầu tư,389242000.0,29,Lãi thuần từ mua bán chứng khoán đầu tư,income_statement|name:Lãi thuần từ mua bán chứng khoán đầu tư|note:29,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lãi thuần từ mua bán chứng khoán đầu tư,634737000.0,29,Lãi thuần từ mua bán chứng khoán đầu tư,income_statement|name:Lãi thuần từ mua bán chứng khoán đầu tư|note:29,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lãi thuần từ mua bán chứng khoán đầu tư,2109206000000.0,29,Lãi thuần từ mua bán chứng khoán đầu tư,income_statement|name:Lãi thuần từ mua bán chứng khoán đầu tư|note:29,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lãi thuần từ mua bán chứng khoán đầu tư,678305000.0,29,Lãi thuần từ mua bán chứng khoán đầu tư,income_statement|name:Lãi thuần từ mua bán chứng khoán đầu tư|note:29,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Thu nhập từ hoạt động khác,1986320000000.0,,Thu nhập từ hoạt động khác,income_statement|name:Thu nhập từ hoạt động khác,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Thu nhập từ hoạt động khác,719642000.0,,Thu nhập từ hoạt động khác,income_statement|name:Thu nhập từ hoạt động khác,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Thu nhập từ hoạt động khác,5440789000000.0,,Thu nhập từ hoạt động khác,income_statement|name:Thu nhập từ hoạt động khác,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Thu nhập từ hoạt động khác,5235650000000.0,,Thu nhập từ hoạt động khác,income_statement|name:Thu nhập từ hoạt động khác,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Chi phí hoạt động khác,-1563606000000.0,,Chi phí hoạt động khác,income_statement|name:Chi phí hoạt động khác,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Chi phí hoạt động khác,-590358000.0,,Chi phí hoạt động khác,income_statement|name:Chi phí hoạt động khác,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Chi phí hoạt động khác,-4760369000000.0,,Chi phí hoạt động khác,income_statement|name:Chi phí hoạt động khác,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Chi phí hoạt động khác,-3110106000000.0,,Chi phí hoạt động khác,income_statement|name:Chi phí hoạt động khác,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lãi thuần từ hoạt động khác,422714000.0,30,Lãi thuần từ hoạt động khác,income_statement|name:Lãi thuần từ hoạt động khác|note:30,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lãi thuần từ hoạt động khác,129283999.99999999,30,Lãi thuần từ hoạt động khác,income_statement|name:Lãi thuần từ hoạt động khác|note:30,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lãi thuần từ hoạt động khác,680420000.0,30,Lãi thuần từ hoạt động khác,income_statement|name:Lãi thuần từ hoạt động khác|note:30,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lãi thuần từ hoạt động khác,2125544000000.0,30,Lãi thuần từ hoạt động khác,income_statement|name:Lãi thuần từ hoạt động khác|note:30,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,"Thu nhập từ góp vốn, mua cổ phần",6406000.0,31,"Thu nhập từ góp vốn, mua cổ phần","income_statement|name:Thu nhập từ góp vốn, mua cổ phần|note:31",Quý III 2024 triệu đồng,2024Q3
+income_statement,,"Thu nhập từ góp vốn, mua cổ phần",8450000.0,31,"Thu nhập từ góp vốn, mua cổ phần","income_statement|name:Thu nhập từ góp vốn, mua cổ phần|note:31",Quý III 2023 triệu đồng,2023Q3
+income_statement,,"Thu nhập từ góp vốn, mua cổ phần",64494000.0,31,"Thu nhập từ góp vốn, mua cổ phần","income_statement|name:Thu nhập từ góp vốn, mua cổ phần|note:31",Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,"Thu nhập từ góp vốn, mua cổ phần",11123000.0,31,"Thu nhập từ góp vốn, mua cổ phần","income_statement|name:Thu nhập từ góp vốn, mua cổ phần|note:31",Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Tổng thu nhập hoạt động,11754335000000.0,,Tổng thu nhập hoạt động,income_statement|name:Tổng thu nhập hoạt động,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Tổng thu nhập hoạt động,10418493000000.0,,Tổng thu nhập hoạt động,income_statement|name:Tổng thu nhập hoạt động,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Tổng thu nhập hoạt động,37435798000000.0,,Tổng thu nhập hoạt động,income_statement|name:Tổng thu nhập hoạt động,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Tổng thu nhập hoạt động,29043638000000.0,,Tổng thu nhập hoạt động,income_statement|name:Tổng thu nhập hoạt động,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Chi phí hoạt động,-3430902000000.0,32,Chi phí hoạt động,income_statement|name:Chi phí hoạt động|note:32,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Chi phí hoạt động,-3630731000000.0,32,Chi phí hoạt động,income_statement|name:Chi phí hoạt động|note:32,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Chi phí hoạt động,-10629012000000.0,32,Chi phí hoạt động,income_statement|name:Chi phí hoạt động|note:32,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Chi phí hoạt động,-9641707000000.0,32,Chi phí hoạt động,income_statement|name:Chi phí hoạt động|note:32,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,8323433000000.0,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,income_statement|name:Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,6787762000000.0,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,income_statement|name:Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,26806786000000.0,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,income_statement|name:Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,19401931000000.0,,Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,income_statement|name:Lợi nhuận thuần từ hoạt động kinh doanh trước chi phí dự phòng rủi ro tín dụng,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Chi phí dự phòng rủi ro tín dụng,-1109265000000.0,33,Chi phí dự phòng rủi ro tín dụng,income_statement|name:Chi phí dự phòng rủi ro tín dụng|note:33,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Chi phí dự phòng rủi ro tín dụng,-944972000.0,33,Chi phí dự phòng rủi ro tín dụng,income_statement|name:Chi phí dự phòng rủi ro tín dụng|note:33,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Chi phí dự phòng rủi ro tín dụng,-3964450000000.0,33,Chi phí dự phòng rủi ro tín dụng,income_statement|name:Chi phí dự phòng rủi ro tín dụng|note:33,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Chi phí dự phòng rủi ro tín dụng,-2286773000000.0,33,Chi phí dự phòng rủi ro tín dụng,income_statement|name:Chi phí dự phòng rủi ro tín dụng|note:33,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Tổng lợi nhuận trước thuế,7214168000000.0,,Tổng lợi nhuận trước thuế,income_statement|name:Tổng lợi nhuận trước thuế,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Tổng lợi nhuận trước thuế,5842790000000.0,,Tổng lợi nhuận trước thuế,income_statement|name:Tổng lợi nhuận trước thuế,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Tổng lợi nhuận trước thuế,22842336000000.0,,Tổng lợi nhuận trước thuế,income_statement|name:Tổng lợi nhuận trước thuế,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Tổng lợi nhuận trước thuế,17115158000000.0,,Tổng lợi nhuận trước thuế,income_statement|name:Tổng lợi nhuận trước thuế,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Chi phí thuế thu nhập doanh nghiệp hiện hành,-1422429000000.0,22.1,Chi phí thuế thu nhập doanh nghiệp hiện hành,income_statement|name:Chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Chi phí thuế thu nhập doanh nghiệp hiện hành,-1177199000000.0,22.1,Chi phí thuế thu nhập doanh nghiệp hiện hành,income_statement|name:Chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Chi phí thuế thu nhập doanh nghiệp hiện hành,-4505335000000.0,22.1,Chi phí thuế thu nhập doanh nghiệp hiện hành,income_statement|name:Chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Chi phí thuế thu nhập doanh nghiệp hiện hành,-3411338000000.0,22.1,Chi phí thuế thu nhập doanh nghiệp hiện hành,income_statement|name:Chi phí thuế thu nhập doanh nghiệp hiện hành|note:22.1,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,1283000.0,22.3,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,income_statement|name:Thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,3114000.0,22.3,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,income_statement|name:Thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,2992000.0,22.3,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,income_statement|name:Thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,5431000.0,22.3,Thu nhập thuế thu nhập doanh nghiệp hoãn lại,income_statement|name:Thu nhập thuế thu nhập doanh nghiệp hoãn lại|note:22.3,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Chi phí thuế thu nhập doanh nghiệp,-1421146000000.0,,Chi phí thuế thu nhập doanh nghiệp,income_statement|name:Chi phí thuế thu nhập doanh nghiệp,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Chi phí thuế thu nhập doanh nghiệp,-1174085000000.0,,Chi phí thuế thu nhập doanh nghiệp,income_statement|name:Chi phí thuế thu nhập doanh nghiệp,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Chi phí thuế thu nhập doanh nghiệp,-4502343000000.0,,Chi phí thuế thu nhập doanh nghiệp,income_statement|name:Chi phí thuế thu nhập doanh nghiệp,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Chi phí thuế thu nhập doanh nghiệp,-3405907000000.0,,Chi phí thuế thu nhập doanh nghiệp,income_statement|name:Chi phí thuế thu nhập doanh nghiệp,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lợi nhuận sau thuế,5793022000000.0,,Lợi nhuận sau thuế,income_statement|name:Lợi nhuận sau thuế,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lợi nhuận sau thuế,4668705000000.0,,Lợi nhuận sau thuế,income_statement|name:Lợi nhuận sau thuế,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lợi nhuận sau thuế,18339993000000.0,,Lợi nhuận sau thuế,income_statement|name:Lợi nhuận sau thuế,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lợi nhuận sau thuế,13709251000000.0,,Lợi nhuận sau thuế,income_statement|name:Lợi nhuận sau thuế,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lợi ích cổ đông không kiểm soát,-55517000.0,,Lợi ích cổ đông không kiểm soát,income_statement|name:Lợi ích cổ đông không kiểm soát,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lợi ích cổ đông không kiểm soát,-55762000.0,,Lợi ích cổ đông không kiểm soát,income_statement|name:Lợi ích cổ đông không kiểm soát,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lợi ích cổ đông không kiểm soát,-188130000.0,,Lợi ích cổ đông không kiểm soát,income_statement|name:Lợi ích cổ đông không kiểm soát,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lợi ích cổ đông không kiểm soát,-144358000.0,,Lợi ích cổ đông không kiểm soát,income_statement|name:Lợi ích cổ đông không kiểm soát,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30
+income_statement,,Lợi nhuận thuần của cổ đông của Ngân hàng,5737505000000.0,,Lợi nhuận thuần của cổ đông của Ngân hàng,income_statement|name:Lợi nhuận thuần của cổ đông của Ngân hàng,Quý III 2024 triệu đồng,2024Q3
+income_statement,,Lợi nhuận thuần của cổ đông của Ngân hàng,4612943000000.0,,Lợi nhuận thuần của cổ đông của Ngân hàng,income_statement|name:Lợi nhuận thuần của cổ đông của Ngân hàng,Quý III 2023 triệu đồng,2023Q3
+income_statement,,Lợi nhuận thuần của cổ đông của Ngân hàng,18151863000000.0,,Lợi nhuận thuần của cổ đông của Ngân hàng,income_statement|name:Lợi nhuận thuần của cổ đông của Ngân hàng,Lũy kế từ đầu năm đến 30/9/2024 triệu đồng,2024-09-30
+income_statement,,Lợi nhuận thuần của cổ đông của Ngân hàng,13564893000000.0,,Lợi nhuận thuần của cổ đông của Ngân hàng,income_statement|name:Lợi nhuận thuần của cổ đông của Ngân hàng,Lũy kế từ đầu năm đến 30/9/2023 triệu đồng,2023-09-30

@@ -3,11 +3,16 @@ from pathlib import Path
 from PIL import Image
 
 from evaluation.benchmark_v2.predict import (
+    _compare_table_structures,
     _content_crop_image,
     _extract_markdown_table_stats,
     _looks_structurally_collapsed,
 )
-from services.ocr.financial_table_reconstruction import OcrWord, reconstruct_table_from_words
+from services.ocr.financial_table_reconstruction import (
+    OcrWord,
+    reconstruct_table_from_tokens,
+    reconstruct_table_from_words,
+)
 from services.parser import AggregatedParser, ExtractionBundle, FinancialItem, ParsedReport, ParsedStatement
 
 
@@ -82,7 +87,16 @@ def test_parser_finalize_sets_unit_metadata_and_row_identity() -> None:
     assert "possible_scale_conflicts" in finalized.parse_audit
 
 
-def _word(text: str, left: int, top: int, *, width: int = 20, height: int = 12, line: int = 1) -> OcrWord:
+def _word(
+    text: str,
+    left: int,
+    top: int,
+    *,
+    width: int = 20,
+    height: int = 12,
+    line: int = 1,
+    source_tag: str = "baseline",
+) -> OcrWord:
     return OcrWord(
         text=text,
         left=left,
@@ -91,6 +105,7 @@ def _word(text: str, left: int, top: int, *, width: int = 20, height: int = 12, 
         height=height,
         conf=90.0,
         line_key=(1, 1, line),
+        source_tag=source_tag,
     )
 
 
@@ -114,6 +129,106 @@ def test_reconstruct_table_from_words_builds_markdown_grid() -> None:
     markdown, debug = reconstruct_table_from_words(words, image_size=(600, 800))
     assert debug["reconstruction_applied"] is True
     assert debug["numeric_column_count"] == 2
+    assert debug["header_band_count"] >= 1
     assert "| Chỉ tiêu |" in markdown or "| Mã số | Chỉ tiêu |" in markdown
     assert "Tiền" in markdown
     assert "200" in markdown
+
+
+def test_reconstruct_table_from_words_preserves_header_stack() -> None:
+    words = [
+        _word("Thuyết", 110, 10, width=44, line=1),
+        _word("minh", 158, 10, width=36, line=1),
+        _word("Quý", 230, 10, width=26, line=1),
+        _word("I", 260, 10, width=10, line=1),
+        _word("Quý", 330, 10, width=26, line=1),
+        _word("I", 360, 10, width=10, line=1),
+        _word("Năm", 230, 26, width=32, line=2),
+        _word("nay", 266, 26, width=24, line=2),
+        _word("Năm", 330, 26, width=32, line=2),
+        _word("trước", 366, 26, width=40, line=2),
+        _word("Triệu", 230, 42, width=36, line=3),
+        _word("VND", 270, 42, width=28, line=3),
+        _word("Triệu", 330, 42, width=36, line=3),
+        _word("VND", 370, 42, width=28, line=3),
+        _word("XV", 10, 62, line=4),
+        _word("Lãi", 50, 62, width=24, line=4),
+        _word("cơ", 78, 62, width=18, line=4),
+        _word("bản", 100, 62, width=28, line=4),
+        _word("15", 130, 62, width=18, line=4),
+        _word("1.682", 230, 62, width=40, line=4, source_tag="surya_updated"),
+        _word("1.459", 330, 62, width=40, line=4),
+    ]
+
+    markdown, debug = reconstruct_table_from_words(words, image_size=(600, 800))
+    assert debug["reconstruction_applied"] is True
+    assert debug["header_band_count"] >= 2
+    assert debug["header_present"] is True
+    assert debug["source_tag_counts"]["surya_updated"] == 1
+    assert "Quý I Năm nay Triệu VND" in markdown
+    assert "Thuyết minh" in markdown
+
+
+def test_reconstruct_table_from_tokens_prefers_table_region() -> None:
+    tokens = [
+        {"text": "Noise", "left": 20, "top": 20, "right": 70, "bottom": 32, "confidence": 0.9},
+        {"text": "Mã", "left": 10, "top": 110, "right": 30, "bottom": 122, "confidence": 0.9, "line_key": [1, 1, 1], "source_tag": "baseline"},
+        {"text": "số", "left": 34, "top": 110, "right": 54, "bottom": 122, "confidence": 0.9, "line_key": [1, 1, 1], "source_tag": "baseline"},
+        {"text": "2024", "left": 230, "top": 110, "right": 262, "bottom": 122, "confidence": 0.9, "line_key": [1, 1, 1], "source_tag": "baseline"},
+        {"text": "2023", "left": 330, "top": 110, "right": 362, "bottom": 122, "confidence": 0.9, "line_key": [1, 1, 1], "source_tag": "baseline"},
+        {"text": "110", "left": 10, "top": 130, "right": 30, "bottom": 142, "confidence": 0.9, "line_key": [1, 1, 2], "source_tag": "baseline"},
+        {"text": "Tiền", "left": 50, "top": 130, "right": 86, "bottom": 142, "confidence": 0.9, "line_key": [1, 1, 2], "source_tag": "baseline"},
+        {"text": "100", "left": 230, "top": 130, "right": 258, "bottom": 142, "confidence": 0.9, "line_key": [1, 1, 2], "source_tag": "surya_updated"},
+        {"text": "90", "left": 330, "top": 130, "right": 350, "bottom": 142, "confidence": 0.9, "line_key": [1, 1, 2], "source_tag": "baseline"},
+    ]
+
+    markdown, debug = reconstruct_table_from_tokens(
+        tokens,
+        page_size=(600, 800),
+        table_regions=[{"left": 0, "top": 100, "right": 500, "bottom": 200}],
+    )
+    assert debug["reconstruction_applied"] is True
+    assert debug["selection_mode"] == "docling_table_region"
+    assert debug["source_tag_counts"]["surya_updated"] == 1
+    assert "Tiền" in markdown
+
+
+def test_compare_table_structures_prefers_real_grid_reconstruction() -> None:
+    baseline_stats = _extract_markdown_table_stats(
+        """
+| Code | Name | Value |
+| --- | --- | --- |
+| | Tai san ngan han Tien va cac khoan tuong duong tien Dau tu ngan han | 100 90 200 180 |
+"""
+    )
+    candidate_stats = _extract_markdown_table_stats(
+        """
+| Mã số | Chỉ tiêu | 2024 | 2023 |
+| --- | --- | --- | --- |
+| 110 | Tiền | 100 | 90 |
+| 120 | Đầu tư | 200 | 180 |
+"""
+    )
+    comparison = _compare_table_structures(
+        baseline_stats,
+        candidate_stats,
+        candidate_debug={
+            "reconstructed_row_count": 2,
+            "numeric_column_count": 2,
+            "header_present": True,
+        },
+    )
+    assert comparison["baseline_collapsed"] is True
+    assert comparison["candidate_collapsed"] is False
+    assert comparison["select_candidate"] is False
+
+    comparison = _compare_table_structures(
+        baseline_stats,
+        candidate_stats,
+        candidate_debug={
+            "reconstructed_row_count": 3,
+            "numeric_column_count": 2,
+            "header_present": True,
+        },
+    )
+    assert comparison["select_candidate"] is True

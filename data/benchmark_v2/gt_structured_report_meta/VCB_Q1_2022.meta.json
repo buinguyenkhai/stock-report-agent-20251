@@ -1,771 +1,2798 @@
 {
   "row_sources": {
     "balance_sheet": {
-      "balance_sheet|code:i": [
+      "balance_sheet|code:i|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|code:i",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|code:i",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:ii": [
+      "balance_sheet|code:i|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "balance_sheet|code:i",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "balance_sheet|code:i",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|code:iii": [
+      "balance_sheet|code:ii|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "balance_sheet|code:ii",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 4
+          "item_index": 2,
+          "row_identity": "balance_sheet|code:ii",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:1": [
+      "balance_sheet|code:ii|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 3
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 7
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 11
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 14
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 18
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 23
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 30
+          "item_index": 3,
+          "row_identity": "balance_sheet|code:ii",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 2
+          "item_index": 3,
+          "row_identity": "balance_sheet|code:ii",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:iii|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 4,
+          "row_identity": "balance_sheet|code:iii",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 9
+          "item_index": 8,
+          "row_identity": "balance_sheet|code:iii",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:iii|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 5,
+          "row_identity": "balance_sheet|code:iii",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 12
+          "item_index": 9,
+          "row_identity": "balance_sheet|code:iii",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:1|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 6,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 14,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 21,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 27,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 35,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 45,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 55,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 4,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 17,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 23,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:2": [
+      "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 4
+          "item_index": 7,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 8
+          "item_index": 15,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 12
+          "item_index": 22,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 15
+          "item_index": 28,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 19
+          "item_index": 36,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 26
+          "item_index": 46,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 31
+          "item_index": 56,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 3
+          "item_index": 5,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 10
+          "item_index": 18,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 16
+          "item_index": 24,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:2|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 8,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 16,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 23,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 29,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 37,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 51,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 57,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 6,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 19,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 31,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 1
+          "item_index": 2,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:3": [
+      "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 5
+          "item_index": 9,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 16
+          "item_index": 17,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 20
+          "item_index": 24,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 32
+          "item_index": 30,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 38,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 52,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 58,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 17
+          "item_index": 7,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 20,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 32,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:3|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 10,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 31,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 39,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 59,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 33,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 5
+          "item_index": 10,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:iv": [
+      "balance_sheet|code:3|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 6
+          "item_index": 11,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 32,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 40,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 60,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 5
+          "item_index": 34,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|code:v": [
+      "balance_sheet|code:iv|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 9
+          "item_index": 12,
+          "row_identity": "balance_sheet|code:iv",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 6
+          "item_index": 10,
+          "row_identity": "balance_sheet|code:iv",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:vi": [
+      "balance_sheet|code:iv|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 10
+          "item_index": 13,
+          "row_identity": "balance_sheet|code:iv",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:v|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 18,
+          "row_identity": "balance_sheet|code:v",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 7
+          "item_index": 12,
+          "row_identity": "balance_sheet|code:v",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|code:vii": [
+      "balance_sheet|code:vi|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 13
+          "item_index": 19,
+          "row_identity": "balance_sheet|code:vi",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 8
+          "item_index": 13,
+          "row_identity": "balance_sheet|code:vi",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:viii": [
+      "balance_sheet|code:vi|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 17
-        }
-      ],
-      "balance_sheet|code:4": [
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 21
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 33
+          "item_index": 20,
+          "row_identity": "balance_sheet|code:vi",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 18
+          "item_index": 14,
+          "row_identity": "balance_sheet|code:vi",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:vii|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 25,
+          "row_identity": "balance_sheet|code:vii",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 15,
+          "row_identity": "balance_sheet|code:vii",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:vii|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 26,
+          "row_identity": "balance_sheet|code:vii",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 16,
+          "row_identity": "balance_sheet|code:vii",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:viii|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 33,
+          "row_identity": "balance_sheet|code:viii",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:viii|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 34,
+          "row_identity": "balance_sheet|code:viii",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:4|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 41,
+          "row_identity": "balance_sheet|code:4",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 61,
+          "row_identity": "balance_sheet|code:4",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 35,
+          "row_identity": "balance_sheet|code:4",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 6
+          "item_index": 12,
+          "row_identity": "balance_sheet|code:4",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:ix": [
+      "balance_sheet|code:4|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 22
-        }
-      ],
-      "balance_sheet|code:a": [
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 24
+          "item_index": 42,
+          "row_identity": "balance_sheet|code:4",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 27
+          "item_index": 62,
+          "row_identity": "balance_sheet|code:4",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 13
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p005",
-          "page_index": 5,
-          "item_index": 19
+          "item_index": 36,
+          "row_identity": "balance_sheet|code:4",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|code:b": [
+      "balance_sheet|code:ix|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 25
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p004",
-          "page_index": 4,
-          "item_index": 28
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p005",
-          "page_index": 5,
-          "item_index": 14
-        },
-        {
-          "sample_id": "VCB_Q1_2022_p005",
-          "page_index": 5,
-          "item_index": 20
+          "item_index": 43,
+          "row_identity": "balance_sheet|code:ix",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:x": [
+      "balance_sheet|code:ix|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 29
+          "item_index": 44,
+          "row_identity": "balance_sheet|code:ix",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|code:5": [
+      "balance_sheet|code:a|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 34
+          "item_index": 47,
+          "row_identity": "balance_sheet|code:a",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 21
+          "item_index": 25,
+          "row_identity": "balance_sheet|code:a",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 37,
+          "row_identity": "balance_sheet|code:a",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:a|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 48,
+          "row_identity": "balance_sheet|code:a",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 26,
+          "row_identity": "balance_sheet|code:a",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 38,
+          "row_identity": "balance_sheet|code:a",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:b|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 49,
+          "row_identity": "balance_sheet|code:b",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 27,
+          "row_identity": "balance_sheet|code:b",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 39,
+          "row_identity": "balance_sheet|code:b",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:b|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 50,
+          "row_identity": "balance_sheet|code:b",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 28,
+          "row_identity": "balance_sheet|code:b",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 40,
+          "row_identity": "balance_sheet|code:b",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:x|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 53,
+          "row_identity": "balance_sheet|code:x",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:x|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 54,
+          "row_identity": "balance_sheet|code:x",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:5|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 63,
+          "row_identity": "balance_sheet|code:5",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 41,
+          "row_identity": "balance_sheet|code:5",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         },
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 7
+          "item_index": 14,
+          "row_identity": "balance_sheet|code:5",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|name:tổng tài sản có": [
+      "balance_sheet|code:5|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p004",
           "page_index": 4,
-          "item_index": 35
-        }
-      ],
-      "balance_sheet|name:tổng nợ phải trả": [
+          "item_index": 64,
+          "row_identity": "balance_sheet|code:5",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        },
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 11
+          "item_index": 42,
+          "row_identity": "balance_sheet|code:5",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|code:c": [
+      "balance_sheet|id:balance_sheet|name:tổng tài sản có|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 65,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng tài sản có",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng tài sản có|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p004",
+          "page_index": 4,
+          "item_index": 66,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng tài sản có",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:v|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 15
+          "item_index": 11,
+          "row_identity": "balance_sheet|code:v",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|name:tổng vốn chủ sở hữu|note:14": [
+      "balance_sheet|id:balance_sheet|name:tổng nợ phải trả|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 22
+          "item_index": 21,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng nợ phải trả",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu": [
+      "balance_sheet|id:balance_sheet|name:tổng nợ phải trả|column:31/12/2021 triệu vnd (đã kiểm toán)": [
         {
           "sample_id": "VCB_Q1_2022_p005",
           "page_index": 5,
-          "item_index": 23
+          "item_index": 22,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng nợ phải trả",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|name:cam kết mua ngoại tệ": [
+      "balance_sheet|code:c|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 29,
+          "row_identity": "balance_sheet|code:c",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:c|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 30,
+          "row_identity": "balance_sheet|code:c",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|name:tổng vốn chủ sở hữu|note:14|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 43,
+          "row_identity": "balance_sheet|name:tổng vốn chủ sở hữu|note:14",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|name:tổng vốn chủ sở hữu|note:14|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 44,
+          "row_identity": "balance_sheet|name:tổng vốn chủ sở hữu|note:14",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 45,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu|column:31/12/2021 triệu vnd (đã kiểm toán)": [
+        {
+          "sample_id": "VCB_Q1_2022_p005",
+          "page_index": 5,
+          "item_index": 46,
+          "row_identity": "balance_sheet|id:balance_sheet|name:tổng nợ phải trả và vốn chủ sở hữu",
+          "column_label": "31/12/2021 Triệu VND (đã kiểm toán)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:1|column:31/12/2021 triệu vnd (trình bày lại)": [
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 2
+          "item_index": 1,
+          "row_identity": "balance_sheet|code:1",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|name:cam kết bán ngoại tệ": [
+      "balance_sheet|code:2|column:31/12/2021 triệu vnd (trình bày lại)": [
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "balance_sheet|code:2",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|name:cam kết giao dịch hoán đổi": [
+      "balance_sheet|id:balance_sheet|name:cam kết mua ngoại tệ|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết mua ngoại tệ",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:6": [
+      "balance_sheet|id:balance_sheet|name:cam kết mua ngoại tệ|column:31/12/2021 triệu vnd (trình bày lại)": [
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 8
+          "item_index": 5,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết mua ngoại tệ",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
         }
       ],
-      "balance_sheet|code:7": [
+      "balance_sheet|id:balance_sheet|name:cam kết bán ngoại tệ|column:31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 9
+          "item_index": 6,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết bán ngoại tệ",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
         }
       ],
-      "balance_sheet|code:8": [
+      "balance_sheet|id:balance_sheet|name:cam kết bán ngoại tệ|column:31/12/2021 triệu vnd (trình bày lại)": [
         {
           "sample_id": "VCB_Q1_2022_p006",
           "page_index": 6,
-          "item_index": 10
+          "item_index": 7,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết bán ngoại tệ",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:cam kết giao dịch hoán đổi|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 8,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết giao dịch hoán đổi",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|id:balance_sheet|name:cam kết giao dịch hoán đổi|column:31/12/2021 triệu vnd (trình bày lại)": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 9,
+          "row_identity": "balance_sheet|id:balance_sheet|name:cam kết giao dịch hoán đổi",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:3|column:31/12/2021 triệu vnd (trình bày lại)": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 11,
+          "row_identity": "balance_sheet|code:3",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:4|column:31/12/2021 triệu vnd (trình bày lại)": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 13,
+          "row_identity": "balance_sheet|code:4",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:5|column:31/12/2021 triệu vnd (trình bày lại)": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 15,
+          "row_identity": "balance_sheet|code:5",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:6|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 16,
+          "row_identity": "balance_sheet|code:6",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:6|column:31/12/2021 triệu vnd (trình bày lại)": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 17,
+          "row_identity": "balance_sheet|code:6",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:7|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 18,
+          "row_identity": "balance_sheet|code:7",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:7|column:31/12/2021 triệu vnd (trình bày lại)": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 19,
+          "row_identity": "balance_sheet|code:7",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
+        }
+      ],
+      "balance_sheet|code:8|column:31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 20,
+          "row_identity": "balance_sheet|code:8",
+          "column_label": "31/3/2022 Triệu VND",
+          "period_key": "2022-03-31"
+        }
+      ],
+      "balance_sheet|code:8|column:31/12/2021 triệu vnd (trình bày lại)": [
+        {
+          "sample_id": "VCB_Q1_2022_p006",
+          "page_index": 6,
+          "item_index": 21,
+          "row_identity": "balance_sheet|code:8",
+          "column_label": "31/12/2021 Triệu VND (trình bày lại)",
+          "period_key": "2021FY"
         }
       ]
     },
     "income_statement": {
-      "income_statement|code:1": [
+      "income_statement|code:1|column:quý i năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "income_statement|code:1",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "income_statement|code:2": [
+      "income_statement|code:1|column:quý i năm trước triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "income_statement|code:1",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "income_statement|code:i": [
+      "income_statement|code:1|column:lũy kế từ đầu năm năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 2
+          "item_index": 2,
+          "row_identity": "income_statement|code:1",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "income_statement|code:3": [
+      "income_statement|code:1|column:lũy kế từ đầu năm năm trước triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 3
+          "item_index": 3,
+          "row_identity": "income_statement|code:1",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "income_statement|code:4": [
+      "income_statement|code:2|column:quý i năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 4
+          "item_index": 4,
+          "row_identity": "income_statement|code:2",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "income_statement|code:ii": [
+      "income_statement|code:2|column:quý i năm trước triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 5
+          "item_index": 5,
+          "row_identity": "income_statement|code:2",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "income_statement|code:iii": [
+      "income_statement|code:2|column:lũy kế từ đầu năm năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 6
+          "item_index": 6,
+          "row_identity": "income_statement|code:2",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "income_statement|code:iv": [
+      "income_statement|code:2|column:lũy kế từ đầu năm năm trước triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 7
+          "item_index": 7,
+          "row_identity": "income_statement|code:2",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "income_statement|code:v": [
+      "income_statement|code:i|column:quý i năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 8
+          "item_index": 8,
+          "row_identity": "income_statement|code:i",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "income_statement|code:5": [
+      "income_statement|code:i|column:quý i năm trước triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 9
+          "item_index": 9,
+          "row_identity": "income_statement|code:i",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "income_statement|code:6": [
+      "income_statement|code:i|column:lũy kế từ đầu năm năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 10
+          "item_index": 10,
+          "row_identity": "income_statement|code:i",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "income_statement|code:vi": [
+      "income_statement|code:i|column:lũy kế từ đầu năm năm trước triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 11
+          "item_index": 11,
+          "row_identity": "income_statement|code:i",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "income_statement|code:vii": [
+      "income_statement|code:3|column:quý i năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 12
+          "item_index": 12,
+          "row_identity": "income_statement|code:3",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "income_statement|code:viii": [
+      "income_statement|code:3|column:quý i năm trước triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 13
+          "item_index": 13,
+          "row_identity": "income_statement|code:3",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "income_statement|code:ix": [
+      "income_statement|code:3|column:lũy kế từ đầu năm năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 14
+          "item_index": 14,
+          "row_identity": "income_statement|code:3",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "income_statement|code:x": [
+      "income_statement|code:3|column:lũy kế từ đầu năm năm trước triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 15
+          "item_index": 15,
+          "row_identity": "income_statement|code:3",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "income_statement|code:xi": [
+      "income_statement|code:4|column:quý i năm nay triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p007",
           "page_index": 7,
-          "item_index": 16
+          "item_index": 16,
+          "row_identity": "income_statement|code:4",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:4|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 17,
+          "row_identity": "income_statement|code:4",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:4|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 18,
+          "row_identity": "income_statement|code:4",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:4|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 19,
+          "row_identity": "income_statement|code:4",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:ii|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 20,
+          "row_identity": "income_statement|code:ii",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:ii|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 21,
+          "row_identity": "income_statement|code:ii",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:ii|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 22,
+          "row_identity": "income_statement|code:ii",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:ii|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 23,
+          "row_identity": "income_statement|code:ii",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:iii|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 24,
+          "row_identity": "income_statement|code:iii",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:iii|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 25,
+          "row_identity": "income_statement|code:iii",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:iii|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 26,
+          "row_identity": "income_statement|code:iii",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:iii|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 27,
+          "row_identity": "income_statement|code:iii",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:iv|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 28,
+          "row_identity": "income_statement|code:iv",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:iv|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 29,
+          "row_identity": "income_statement|code:iv",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:iv|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 30,
+          "row_identity": "income_statement|code:iv",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:iv|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 31,
+          "row_identity": "income_statement|code:iv",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:v|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 32,
+          "row_identity": "income_statement|code:v",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:v|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 33,
+          "row_identity": "income_statement|code:v",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:5|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 34,
+          "row_identity": "income_statement|code:5",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:5|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 35,
+          "row_identity": "income_statement|code:5",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:5|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 36,
+          "row_identity": "income_statement|code:5",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:5|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 37,
+          "row_identity": "income_statement|code:5",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:6|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 38,
+          "row_identity": "income_statement|code:6",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:6|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 39,
+          "row_identity": "income_statement|code:6",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:6|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 40,
+          "row_identity": "income_statement|code:6",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:6|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 41,
+          "row_identity": "income_statement|code:6",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:vi|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 42,
+          "row_identity": "income_statement|code:vi",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:vi|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 43,
+          "row_identity": "income_statement|code:vi",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:vi|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 44,
+          "row_identity": "income_statement|code:vi",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:vi|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 45,
+          "row_identity": "income_statement|code:vi",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:vii|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 46,
+          "row_identity": "income_statement|code:vii",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:vii|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 47,
+          "row_identity": "income_statement|code:vii",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:vii|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 48,
+          "row_identity": "income_statement|code:vii",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:vii|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 49,
+          "row_identity": "income_statement|code:vii",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:viii|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 50,
+          "row_identity": "income_statement|code:viii",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:viii|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 51,
+          "row_identity": "income_statement|code:viii",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:viii|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 52,
+          "row_identity": "income_statement|code:viii",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:viii|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 53,
+          "row_identity": "income_statement|code:viii",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:ix|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 54,
+          "row_identity": "income_statement|code:ix",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:ix|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 55,
+          "row_identity": "income_statement|code:ix",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:ix|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 56,
+          "row_identity": "income_statement|code:ix",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:ix|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 57,
+          "row_identity": "income_statement|code:ix",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:x|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 58,
+          "row_identity": "income_statement|code:x",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:x|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 59,
+          "row_identity": "income_statement|code:x",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:x|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 60,
+          "row_identity": "income_statement|code:x",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:x|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 61,
+          "row_identity": "income_statement|code:x",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xi|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 62,
+          "row_identity": "income_statement|code:xi",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 8,
+          "row_identity": "income_statement|code:xi",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xi|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 63,
+          "row_identity": "income_statement|code:xi",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 9,
+          "row_identity": "income_statement|code:xi",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xi|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 64,
+          "row_identity": "income_statement|code:xi",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 10,
+          "row_identity": "income_statement|code:xi",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xi|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p007",
+          "page_index": 7,
+          "item_index": 65,
+          "row_identity": "income_statement|code:xi",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        },
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 11,
+          "row_identity": "income_statement|code:xi",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:7|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 0,
+          "row_identity": "income_statement|code:7",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:7|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 1,
+          "row_identity": "income_statement|code:7",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:7|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 2,
+          "row_identity": "income_statement|code:7",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:7|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 3,
+          "row_identity": "income_statement|code:7",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:8|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 4,
+          "row_identity": "income_statement|code:8",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:8|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 5,
+          "row_identity": "income_statement|code:8",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:8|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 6,
+          "row_identity": "income_statement|code:8",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:8|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 7,
+          "row_identity": "income_statement|code:8",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xii|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 12,
+          "row_identity": "income_statement|code:xii",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xii|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 13,
+          "row_identity": "income_statement|code:xii",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xii|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 14,
+          "row_identity": "income_statement|code:xii",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xii|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 15,
+          "row_identity": "income_statement|code:xii",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xiii|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 16,
+          "row_identity": "income_statement|code:xiii",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xiii|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 17,
+          "row_identity": "income_statement|code:xiii",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xiii|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 18,
+          "row_identity": "income_statement|code:xiii",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xiii|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 19,
+          "row_identity": "income_statement|code:xiii",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xiv|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 20,
+          "row_identity": "income_statement|code:xiv",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xiv|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 21,
+          "row_identity": "income_statement|code:xiv",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xiv|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 22,
+          "row_identity": "income_statement|code:xiv",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xiv|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 23,
+          "row_identity": "income_statement|code:xiv",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xv|column:quý i năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 24,
+          "row_identity": "income_statement|code:xv",
+          "column_label": "Quý I Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xv|column:quý i năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 25,
+          "row_identity": "income_statement|code:xv",
+          "column_label": "Quý I Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "income_statement|code:xv|column:lũy kế từ đầu năm năm nay triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 26,
+          "row_identity": "income_statement|code:xv",
+          "column_label": "Lũy kế từ đầu năm Năm nay Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "income_statement|code:xv|column:lũy kế từ đầu năm năm trước triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p008",
+          "page_index": 8,
+          "item_index": 27,
+          "row_identity": "income_statement|code:xv",
+          "column_label": "Lũy kế từ đầu năm Năm trước Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ]
     },
     "cash_flow": {
-      "cash_flow|code:1": [
+      "cash_flow|code:1|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p009",
           "page_index": 9,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "cash_flow|code:1",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
         },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 0
+          "item_index": 0,
+          "row_identity": "cash_flow|code:1",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
         },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 6
+          "item_index": 11,
+          "row_identity": "cash_flow|code:1",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "cash_flow|code:2": [
+      "cash_flow|code:1|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p009",
           "page_index": 9,
-          "item_index": 1
+          "item_index": 1,
+          "row_identity": "cash_flow|code:1",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
         },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 1
-        }
-      ],
-      "cash_flow|code:3": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 2
+          "item_index": 1,
+          "row_identity": "cash_flow|code:1",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
         },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 2
+          "item_index": 12,
+          "row_identity": "cash_flow|code:1",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "cash_flow|code:4": [
+      "cash_flow|code:2|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p009",
           "page_index": 9,
-          "item_index": 3
+          "item_index": 2,
+          "row_identity": "cash_flow|code:2",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
         },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 3
+          "item_index": 2,
+          "row_identity": "cash_flow|code:2",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "cash_flow|code:5": [
+      "cash_flow|code:2|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p009",
           "page_index": 9,
-          "item_index": 4
+          "item_index": 3,
+          "row_identity": "cash_flow|code:2",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
         },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 4
+          "item_index": 3,
+          "row_identity": "cash_flow|code:2",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "cash_flow|code:6": [
+      "cash_flow|code:3|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
         {
           "sample_id": "VCB_Q1_2022_p009",
           "page_index": 9,
-          "item_index": 5
-        }
-      ],
-      "cash_flow|code:7": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 6
-        }
-      ],
-      "cash_flow|code:8": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 7
-        }
-      ],
-      "cash_flow|name:tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 8
-        }
-      ],
-      "cash_flow|code:9": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 9
-        }
-      ],
-      "cash_flow|code:10": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 10
-        }
-      ],
-      "cash_flow|code:11": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 11
-        }
-      ],
-      "cash_flow|code:12": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 12
-        }
-      ],
-      "cash_flow|code:13": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 13
-        }
-      ],
-      "cash_flow|code:14": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 14
-        }
-      ],
-      "cash_flow|code:15": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 15
-        }
-      ],
-      "cash_flow|code:16": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 16
-        }
-      ],
-      "cash_flow|code:17": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 17
-        }
-      ],
-      "cash_flow|code:18": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 18
-        }
-      ],
-      "cash_flow|code:19": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 19
-        }
-      ],
-      "cash_flow|code:20": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 20
-        }
-      ],
-      "cash_flow|code:21": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 21
-        }
-      ],
-      "cash_flow|code:22": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 22
-        }
-      ],
-      "cash_flow|code:i": [
-        {
-          "sample_id": "VCB_Q1_2022_p009",
-          "page_index": 9,
-          "item_index": 23
-        }
-      ],
-      "cash_flow|code:ii": [
+          "item_index": 4,
+          "row_identity": "cash_flow|code:3",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 5
+          "item_index": 4,
+          "row_identity": "cash_flow|code:3",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "cash_flow|code:iii": [
+      "cash_flow|code:3|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 5,
+          "row_identity": "cash_flow|code:3",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 7
+          "item_index": 5,
+          "row_identity": "cash_flow|code:3",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ],
-      "cash_flow|code:iv": [
+      "cash_flow|code:4|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 6,
+          "row_identity": "cash_flow|code:4",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 8
+          "item_index": 6,
+          "row_identity": "cash_flow|code:4",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "cash_flow|code:v": [
+      "cash_flow|code:4|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 7,
+          "row_identity": "cash_flow|code:4",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:5|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 8,
+          "row_identity": "cash_flow|code:5",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 9
+          "item_index": 7,
+          "row_identity": "cash_flow|code:5",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
         }
       ],
-      "cash_flow|code:vi": [
+      "cash_flow|code:5|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 9,
+          "row_identity": "cash_flow|code:5",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        },
         {
           "sample_id": "VCB_Q1_2022_p010",
           "page_index": 10,
-          "item_index": 10
+          "item_index": 8,
+          "row_identity": "cash_flow|code:5",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:6|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 10,
+          "row_identity": "cash_flow|code:6",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:6|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 11,
+          "row_identity": "cash_flow|code:6",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:7|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 12,
+          "row_identity": "cash_flow|code:7",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:7|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 13,
+          "row_identity": "cash_flow|code:7",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:8|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 14,
+          "row_identity": "cash_flow|code:8",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:8|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 15,
+          "row_identity": "cash_flow|code:8",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 16,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|id:cash_flow|name:tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 17,
+          "row_identity": "cash_flow|id:cash_flow|name:tiền thuần từ hoạt động kinh doanh trước những thay đổi về tài sản và vốn lưu động",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:9|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 18,
+          "row_identity": "cash_flow|code:9",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:9|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 19,
+          "row_identity": "cash_flow|code:9",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:10|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 20,
+          "row_identity": "cash_flow|code:10",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:10|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 21,
+          "row_identity": "cash_flow|code:10",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:11|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 22,
+          "row_identity": "cash_flow|code:11",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:12|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 23,
+          "row_identity": "cash_flow|code:12",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:12|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 24,
+          "row_identity": "cash_flow|code:12",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:13|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 25,
+          "row_identity": "cash_flow|code:13",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:14|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 26,
+          "row_identity": "cash_flow|code:14",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:14|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 27,
+          "row_identity": "cash_flow|code:14",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:15|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 28,
+          "row_identity": "cash_flow|code:15",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:15|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 29,
+          "row_identity": "cash_flow|code:15",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:16|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 30,
+          "row_identity": "cash_flow|code:16",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:16|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 31,
+          "row_identity": "cash_flow|code:16",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:17|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 32,
+          "row_identity": "cash_flow|code:17",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:17|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 33,
+          "row_identity": "cash_flow|code:17",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:18|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 34,
+          "row_identity": "cash_flow|code:18",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:18|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 35,
+          "row_identity": "cash_flow|code:18",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:19|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 36,
+          "row_identity": "cash_flow|code:19",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:19|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 37,
+          "row_identity": "cash_flow|code:19",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:20|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 38,
+          "row_identity": "cash_flow|code:20",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:20|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 39,
+          "row_identity": "cash_flow|code:20",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:21|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 40,
+          "row_identity": "cash_flow|code:21",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:21|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 41,
+          "row_identity": "cash_flow|code:21",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:22|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 42,
+          "row_identity": "cash_flow|code:22",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:22|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 43,
+          "row_identity": "cash_flow|code:22",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:i|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 44,
+          "row_identity": "cash_flow|code:i",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:i|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p009",
+          "page_index": 9,
+          "item_index": 45,
+          "row_identity": "cash_flow|code:i",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:ii|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 9,
+          "row_identity": "cash_flow|code:ii",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:ii|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 10,
+          "row_identity": "cash_flow|code:ii",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:iii|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 13,
+          "row_identity": "cash_flow|code:iii",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:iii|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 14,
+          "row_identity": "cash_flow|code:iii",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:iv|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 15,
+          "row_identity": "cash_flow|code:iv",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:iv|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 16,
+          "row_identity": "cash_flow|code:iv",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:v|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 17,
+          "row_identity": "cash_flow|code:v",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:v|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 18,
+          "row_identity": "cash_flow|code:v",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
+        }
+      ],
+      "cash_flow|code:vi|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 19,
+          "row_identity": "cash_flow|code:vi",
+          "column_label": "Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND",
+          "period_key": "2022Q1_YTD"
+        }
+      ],
+      "cash_flow|code:vi|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd": [
+        {
+          "sample_id": "VCB_Q1_2022_p010",
+          "page_index": 10,
+          "item_index": 20,
+          "row_identity": "cash_flow|code:vi",
+          "column_label": "Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND",
+          "period_key": "2021Q1_YTD"
         }
       ]
     }
@@ -775,7 +2802,7 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0
       ],
@@ -785,17 +2812,37 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        39451222000000.0
+        181036981000000.0
       ],
-      "new_value": -75065000000.0
+      "new_value": 2822531000000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
+      "prior_values": [
+        39451222000000.0
+      ],
+      "new_value": -75065000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        48727565000000.0
+      ],
+      "new_value": -56433000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0
@@ -806,10 +2853,21 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        181036981000000.0,
+        2822531000000.0
+      ],
+      "new_value": 960749955000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0
+        -75065000.0
       ],
       "new_value": -31191811000000.0
     },
@@ -817,7 +2875,18 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        48727565000000.0,
+        -56433000.0
+      ],
+      "new_value": -25975668000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0,
@@ -829,10 +2898,22 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        181036981000000.0,
+        2822531000000.0,
+        960749955000000.0
+      ],
+      "new_value": 71122502000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0,
+        -75065000.0,
         -31191811000000.0
       ],
       "new_value": 97125603000000.0
@@ -841,46 +2922,94 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:3",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        -1000000000000.0
+        48727565000000.0,
+        -56433000.0,
+        -25975668000000.0
       ],
-      "new_value": -173855000000.0
+      "new_value": 99657595000000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:3|column:31/3/2022 triệu vnd",
+      "prior_values": [
+        -1000000000000.0
+      ],
+      "new_value": -173855000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:3|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        -4000000000000.0
+      ],
+      "new_value": -175397000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0,
         1028899744000000.0,
         75001289000000.0
       ],
-      "new_value": 769437000000.0
+      "new_value": 769437000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        181036981000000.0,
+        2822531000000.0,
+        960749955000000.0,
+        71122502000000.0
+      ],
+      "new_value": 748895000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0,
+        -75065000.0,
         -31191811000000.0,
         97125603000000.0
       ],
-      "new_value": 11979000000.0
+      "new_value": 11979000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:3",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        48727565000000.0,
+        -56433000.0,
+        -25975668000000.0,
+        99657595000000.0
+      ],
+      "new_value": 10820000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:3|column:31/3/2022 triệu vnd",
       "prior_values": [
         -1000000000000.0,
-        -173855000000.0
+        -173855000.0
       ],
       "new_value": 1659597000000.0
     },
@@ -888,13 +3017,24 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:3|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        -4000000000000.0,
+        -175397000.0
+      ],
+      "new_value": 1661461000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0,
         1028899744000000.0,
         75001289000000.0,
-        769437000000.0
+        769437000.0
       ],
       "new_value": 5386077000000.0
     },
@@ -902,13 +3042,27 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        181036981000000.0,
+        2822531000000.0,
+        960749955000000.0,
+        71122502000000.0,
+        748895000.0
+      ],
+      "new_value": 5552624000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0,
+        -75065000.0,
         -31191811000000.0,
         97125603000000.0,
-        11979000000.0
+        11979000.0
       ],
       "new_value": 2958770000000.0
     },
@@ -916,33 +3070,27 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:a",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        13748800000000.0
+        48727565000000.0,
+        -56433000.0,
+        -25975668000000.0,
+        99657595000000.0,
+        10820000.0
       ],
-      "new_value": 4620978000000.0
+      "new_value": 3073419000000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:b",
-      "prior_values": [
-        -8362723000000.0
-      ],
-      "new_value": -1662208000000.0
-    },
-    {
-      "report_id": "VCB_Q1_2022",
-      "sample_id": "VCB_Q1_2022_p004",
-      "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0,
         1028899744000000.0,
         75001289000000.0,
-        769437000000.0,
+        769437000.0,
         5386077000000.0
       ],
       "new_value": 18941095000000.0
@@ -951,13 +3099,28 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        181036981000000.0,
+        2822531000000.0,
+        960749955000000.0,
+        71122502000000.0,
+        748895000.0,
+        5552624000000.0
+      ],
+      "new_value": 15796141000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0,
+        -75065000.0,
         -31191811000000.0,
         97125603000000.0,
-        11979000000.0,
+        11979000.0,
         2958770000000.0
       ],
       "new_value": 8216704000000.0
@@ -966,29 +3129,66 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:3",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        -1000000000000.0,
-        -173855000000.0,
-        1659597000000.0
+        48727565000000.0,
+        -56433000.0,
+        -25975668000000.0,
+        99657595000000.0,
+        10820000.0,
+        3073419000000.0
       ],
-      "new_value": 10798000000.0
+      "new_value": 7149313000000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p004",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:4",
+      "row_key": "balance_sheet|code:3|column:31/3/2022 triệu vnd",
       "prior_values": [
-        -75000000000.0
+        -1000000000000.0,
+        -173855000.0,
+        1659597000000.0
+      ],
+      "new_value": 10798000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:3|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        -4000000000000.0,
+        -175397000.0,
+        1661461000000.0
+      ],
+      "new_value": 7137000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:4|column:31/3/2022 triệu vnd",
+      "prior_values": [
+        -75000000.0
       ],
       "new_value": 3158305000000.0
     },
     {
       "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p004",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:4|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        -75000000.0
+      ],
+      "new_value": 6020487000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:i",
+      "row_key": "balance_sheet|code:i|column:31/3/2022 triệu vnd",
       "prior_values": [
         14868054000000.0
       ],
@@ -998,7 +3198,17 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:ii",
+      "row_key": "balance_sheet|code:i|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        18011766000000.0
+      ],
+      "new_value": 9468116000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:ii|column:31/3/2022 triệu vnd",
       "prior_values": [
         38888399000000.0
       ],
@@ -1008,13 +3218,23 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:ii|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        22506711000000.0
+      ],
+      "new_value": 109757777000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0,
         1028899744000000.0,
         75001289000000.0,
-        769437000000.0,
+        769437000.0,
         5386077000000.0,
         18941095000000.0
       ],
@@ -1024,13 +3244,29 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        181036981000000.0,
+        2822531000000.0,
+        960749955000000.0,
+        71122502000000.0,
+        748895000.0,
+        5552624000000.0,
+        15796141000000.0
+      ],
+      "new_value": 104043817000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0,
+        -75065000.0,
         -31191811000000.0,
         97125603000000.0,
-        11979000000.0,
+        11979000.0,
         2958770000000.0,
         8216704000000.0
       ],
@@ -1040,7 +3276,23 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:iii",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        48727565000000.0,
+        -56433000.0,
+        -25975668000000.0,
+        99657595000000.0,
+        10820000.0,
+        3073419000000.0,
+        7149313000000.0
+      ],
+      "new_value": 5713960000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:iii|column:31/3/2022 triệu vnd",
       "prior_values": [
         194999348000000.0
       ],
@@ -1050,27 +3302,37 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:iv",
+      "row_key": "balance_sheet|code:iii|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        225764546000000.0
+      ],
+      "new_value": 1135323913000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:iv|column:31/3/2022 triệu vnd",
       "prior_values": [
         3297566000000.0
       ],
-      "new_value": 5215000000.0
+      "new_value": 5215000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:v",
+      "row_key": "balance_sheet|code:v|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        0.0
+        303202000.0
       ],
-      "new_value": 6585000000.0
+      "new_value": 7707000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:vi",
+      "row_key": "balance_sheet|code:vi|column:31/3/2022 triệu vnd",
       "prior_values": [
         997707933000000.0
       ],
@@ -1080,7 +3342,17 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:vii",
+      "row_key": "balance_sheet|code:vi|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        934774287000000.0
+      ],
+      "new_value": 17387747000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:vii|column:31/3/2022 triệu vnd",
       "prior_values": [
         171953037000000.0
       ],
@@ -1090,13 +3362,23 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:vii|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        170604700000000.0
+      ],
+      "new_value": 33609934000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0,
         1028899744000000.0,
         75001289000000.0,
-        769437000000.0,
+        769437000.0,
         5386077000000.0,
         18941095000000.0,
         75589555000000.0
@@ -1107,13 +3389,30 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        181036981000000.0,
+        2822531000000.0,
+        960749955000000.0,
+        71122502000000.0,
+        748895000.0,
+        5552624000000.0,
+        15796141000000.0,
+        104043817000000.0
+      ],
+      "new_value": 9326334000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0,
+        -75065000.0,
         -31191811000000.0,
         97125603000000.0,
-        11979000000.0,
+        11979000.0,
         2958770000000.0,
         8216704000000.0,
         5688140000000.0
@@ -1124,13 +3423,30 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        48727565000000.0,
+        -56433000.0,
+        -25975668000000.0,
+        99657595000000.0,
+        10820000.0,
+        3073419000000.0,
+        7149313000000.0,
+        5713960000000.0
+      ],
+      "new_value": 24283600000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0,
         1028899744000000.0,
         75001289000000.0,
-        769437000000.0,
+        769437000.0,
         5386077000000.0,
         18941095000000.0,
         75589555000000.0,
@@ -1142,10 +3458,27 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:a",
+      "row_key": "balance_sheet|code:1|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        13748800000000.0,
-        4620978000000.0
+        181036981000000.0,
+        2822531000000.0,
+        960749955000000.0,
+        71122502000000.0,
+        748895000.0,
+        5552624000000.0,
+        15796141000000.0,
+        104043817000000.0,
+        9326334000000.0
+      ],
+      "new_value": 42428821000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:a|column:31/3/2022 triệu vnd",
+      "prior_values": [
+        13748800000000.0
       ],
       "new_value": 47325166000000.0
     },
@@ -1153,10 +3486,19 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:b",
+      "row_key": "balance_sheet|code:a|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        -8362723000000.0,
-        -1662208000000.0
+        13725160000000.0
+      ],
+      "new_value": 37088774000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:b|column:31/3/2022 triệu vnd",
+      "prior_values": [
+        -8362723000000.0
       ],
       "new_value": 4995389000000.0
     },
@@ -1164,13 +3506,23 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:b|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        -8172536000000.0
+      ],
+      "new_value": 4995389000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0,
+        -75065000.0,
         -31191811000000.0,
         97125603000000.0,
-        11979000000.0,
+        11979000.0,
         2958770000000.0,
         8216704000000.0,
         5688140000000.0,
@@ -1182,22 +3534,53 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:3",
+      "row_key": "balance_sheet|code:2|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        -1000000000000.0,
-        -173855000000.0,
-        1659597000000.0,
-        10798000000.0
+        48727565000000.0,
+        -56433000.0,
+        -25975668000000.0,
+        99657595000000.0,
+        10820000.0,
+        3073419000000.0,
+        7149313000000.0,
+        5713960000000.0,
+        24283600000000.0
       ],
-      "new_value": -9856000000.0
+      "new_value": 18173068000000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:4",
+      "row_key": "balance_sheet|code:3|column:31/3/2022 triệu vnd",
       "prior_values": [
-        -75000000000.0,
+        -1000000000000.0,
+        -173855000.0,
+        1659597000000.0,
+        10798000.0
+      ],
+      "new_value": -9856000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:3|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        -4000000000000.0,
+        -175397000.0,
+        1661461000000.0,
+        7137000.0
+      ],
+      "new_value": -5109000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:4|column:31/3/2022 triệu vnd",
+      "prior_values": [
+        -75000000.0,
         3158305000000.0
       ],
       "new_value": 46156897000000.0
@@ -1206,10 +3589,20 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:a",
+      "row_key": "balance_sheet|code:4|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        -75000000.0,
+        6020487000000.0
+      ],
+      "new_value": 48433500000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:a|column:31/3/2022 triệu vnd",
       "prior_values": [
         13748800000000.0,
-        4620978000000.0,
         47325166000000.0
       ],
       "new_value": 38194713000000.0
@@ -1218,10 +3611,20 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:b",
+      "row_key": "balance_sheet|code:a|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        13725160000000.0,
+        37088774000000.0
+      ],
+      "new_value": 31826728000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:b|column:31/3/2022 triệu vnd",
       "prior_values": [
         -8362723000000.0,
-        -1662208000000.0,
         4995389000000.0
       ],
       "new_value": 7962184000000.0
@@ -1230,23 +3633,44 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p005",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:5",
+      "row_key": "balance_sheet|code:b|column:31/12/2021 triệu vnd (đã kiểm toán)",
       "prior_values": [
-        -3941000000.0
+        -8172536000000.0,
+        4995389000000.0
       ],
-      "new_value": 92420000000.0
+      "new_value": 16606772000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:5|column:31/3/2022 triệu vnd",
+      "prior_values": [
+        -3941000.0
+      ],
+      "new_value": 92420000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p005",
+      "statement": "balance_sheet",
+      "row_key": "balance_sheet|code:5|column:31/12/2021 triệu vnd (đã kiểm toán)",
+      "prior_values": [
+        -4019999.9999999995
+      ],
+      "new_value": 87113000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p006",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:1",
+      "row_key": "balance_sheet|code:1|column:31/3/2022 triệu vnd",
       "prior_values": [
         156548126000000.0,
         3372631000000.0,
         1028899744000000.0,
         75001289000000.0,
-        769437000000.0,
+        769437000.0,
         5386077000000.0,
         18941095000000.0,
         75589555000000.0,
@@ -1259,13 +3683,13 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p006",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:2",
+      "row_key": "balance_sheet|code:2|column:31/3/2022 triệu vnd",
       "prior_values": [
         39451222000000.0,
-        -75065000000.0,
+        -75065000.0,
         -31191811000000.0,
         97125603000000.0,
-        11979000000.0,
+        11979000.0,
         2958770000000.0,
         8216704000000.0,
         5688140000000.0,
@@ -1278,13 +3702,13 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p006",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:3",
+      "row_key": "balance_sheet|code:3|column:31/3/2022 triệu vnd",
       "prior_values": [
         -1000000000000.0,
-        -173855000000.0,
+        -173855000.0,
         1659597000000.0,
-        10798000000.0,
-        -9856000000.0
+        10798000.0,
+        -9856000.0
       ],
       "new_value": 93900882000000.0
     },
@@ -1292,9 +3716,9 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p006",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:4",
+      "row_key": "balance_sheet|code:4|column:31/3/2022 triệu vnd",
       "prior_values": [
-        -75000000000.0,
+        -75000000.0,
         3158305000000.0,
         46156897000000.0
       ],
@@ -1304,74 +3728,165 @@
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p006",
       "statement": "balance_sheet",
-      "row_key": "balance_sheet|code:5",
+      "row_key": "balance_sheet|code:5|column:31/3/2022 triệu vnd",
       "prior_values": [
-        -3941000000.0,
-        92420000000.0
+        -3941000.0,
+        92420000.0
       ],
-      "new_value": 207744000000.0
+      "new_value": 207744000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p008",
+      "statement": "income_statement",
+      "row_key": "income_statement|code:xi|column:quý i năm nay triệu vnd",
+      "prior_values": [
+        9950256000000.0
+      ],
+      "new_value": -1982830000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p008",
+      "statement": "income_statement",
+      "row_key": "income_statement|code:xi|column:quý i năm trước triệu vnd",
+      "prior_values": [
+        8631466000000.0
+      ],
+      "new_value": -1723944000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p008",
+      "statement": "income_statement",
+      "row_key": "income_statement|code:xi|column:lũy kế từ đầu năm năm nay triệu vnd",
+      "prior_values": [
+        9950256000000.0
+      ],
+      "new_value": -1982830000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p008",
+      "statement": "income_statement",
+      "row_key": "income_statement|code:xi|column:lũy kế từ đầu năm năm trước triệu vnd",
+      "prior_values": [
+        8631466000000.0
+      ],
+      "new_value": -1723944000000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p010",
       "statement": "cash_flow",
-      "row_key": "cash_flow|code:1",
+      "row_key": "cash_flow|code:1|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd",
       "prior_values": [
         18270754000000.0
       ],
-      "new_value": -22389000000.0
+      "new_value": -22389000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p010",
       "statement": "cash_flow",
-      "row_key": "cash_flow|code:2",
+      "row_key": "cash_flow|code:1|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd",
+      "prior_values": [
+        15985319000000.0
+      ],
+      "new_value": -63503000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:2|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd",
       "prior_values": [
         -6591715000000.0
       ],
-      "new_value": 2948000000.0
+      "new_value": 2948000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p010",
       "statement": "cash_flow",
-      "row_key": "cash_flow|code:3",
+      "row_key": "cash_flow|code:2|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd",
+      "prior_values": [
+        -7496977000000.0
+      ],
+      "new_value": 1356000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:3|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd",
       "prior_values": [
         1031728000000.0
       ],
-      "new_value": -2045000000.0
+      "new_value": -2045000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p010",
       "statement": "cash_flow",
-      "row_key": "cash_flow|code:4",
+      "row_key": "cash_flow|code:3|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd",
+      "prior_values": [
+        1758681000000.0
+      ],
+      "new_value": -215000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:4|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd",
       "prior_values": [
         1637580000000.0
       ],
-      "new_value": 1864000000.0
+      "new_value": 1864000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p010",
       "statement": "cash_flow",
-      "row_key": "cash_flow|code:5",
+      "row_key": "cash_flow|code:5|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd",
       "prior_values": [
-        -62483000000.0
+        -62483000.0
       ],
-      "new_value": 2196000000.0
+      "new_value": 2196000.0
     },
     {
       "report_id": "VCB_Q1_2022",
       "sample_id": "VCB_Q1_2022_p010",
       "statement": "cash_flow",
-      "row_key": "cash_flow|code:1",
+      "row_key": "cash_flow|code:5|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd",
+      "prior_values": [
+        -100199000.0
+      ],
+      "new_value": 8278000.000000001
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:1|column:giai đoạn từ 1/1/2022 đến 31/3/2022 triệu vnd",
       "prior_values": [
         18270754000000.0,
-        -22389000000.0
+        -22389000.0
       ],
       "new_value": -3329224000000.0
+    },
+    {
+      "report_id": "VCB_Q1_2022",
+      "sample_id": "VCB_Q1_2022_p010",
+      "statement": "cash_flow",
+      "row_key": "cash_flow|code:1|column:giai đoạn từ 1/1/2021 đến 31/3/2021 triệu vnd",
+      "prior_values": [
+        15985319000000.0,
+        -63503000.0
+      ],
+      "new_value": -747619000.0
     }
   ],
-  "conflict_count": 49
+  "conflict_count": 90
 }

@@ -1,22 +1,43 @@
-statement,item_code,item_name,value,notes_ref,original_name
-balance_sheet,100,A. TÀI SẢN NGẮN HẠN,163350836000000,,A. TÀI SẢN NGẮN HẠN
-balance_sheet,110,I. Tiền và các khoản tương đương tiền,19653270000000,4,I. Tiền và các khoản tương đương tiền
-balance_sheet,111,1. Tiền,10308050000000,,1. Tiền
-balance_sheet,112,2. Các khoản tương đương tiền,9345220000000,,2. Các khoản tương đương tiền
-balance_sheet,120,II. Đầu tư tài chính ngắn hạn,6758243000000,5,II. Đầu tư tài chính ngắn hạn
-balance_sheet,121,1. Chứng khoán kinh doanh,3605159000000,,1. Chứng khoán kinh doanh
-balance_sheet,123,2. Đầu tư nắm giữ đến ngày đáo hạn,3153084000000,,2. Đầu tư nắm giữ đến ngày đáo hạn
-balance_sheet,130,III. Các khoản phải thu ngắn hạn,74342928000000,,III. Các khoản phải thu ngắn hạn
-balance_sheet,131,1. Phải thu ngắn hạn của khách hàng,20112289000000,6,1. Phải thu ngắn hạn của khách hàng
-balance_sheet,132,2. Trả trước cho người bán ngắn hạn,21767291000000,,2. Trả trước cho người bán ngắn hạn
-balance_sheet,135,3. Phải thu về cho vay ngắn hạn,14824123000000,7,3. Phải thu về cho vay ngắn hạn
-balance_sheet,136,4. Phải thu ngắn hạn khác,18180233000000,8,4. Phải thu ngắn hạn khác
-balance_sheet,137,5. Dự phòng phải thu ngắn hạn khó đòi,-541008000000,,5. Dự phòng phải thu ngắn hạn khó đòi
-balance_sheet,140,IV. Hàng tồn kho,50910386000000,9,IV. Hàng tồn kho
-balance_sheet,141,1. Hàng tồn kho,53074286000000,,1. Hàng tồn kho
-balance_sheet,149,2. Dự phòng giảm giá hàng tồn kho,-2163900000000,,2. Dự phòng giảm giá hàng tồn kho
-balance_sheet,150,V. Tài sản ngắn hạn khác,11686009000000,,V. Tài sản ngắn hạn khác
-balance_sheet,151,1. Chi phí trả trước ngắn hạn,1455458000000,10,1. Chi phí trả trước ngắn hạn
-balance_sheet,152,2. Thuế GTGT được khấu trừ,6773819000000,,2. Thuế GTGT được khấu trừ
-balance_sheet,153,3. Thuế và các khoản khác phải thu Nhà nước,561133000000,,3. Thuế và các khoản khác phải thu Nhà nước
-balance_sheet,155,4. Tài sản ngắn hạn khác,2895599000000,11,4. Tài sản ngắn hạn khác
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+balance_sheet,100,A. TÀI SẢN NGẮN HẠN,163350836000000.0,,A. TÀI SẢN NGẮN HẠN,balance_sheet|code:100,Số cuối kỳ,
+balance_sheet,100,A. TÀI SẢN NGẮN HẠN,166013805000000.0,,A. TÀI SẢN NGẮN HẠN,balance_sheet|code:100,Số đầu kỳ,
+balance_sheet,110,I. Tiền và các khoản tương đương tiền,19653270000000.0,4,I. Tiền và các khoản tương đương tiền,balance_sheet|code:110,Số cuối kỳ,
+balance_sheet,110,I. Tiền và các khoản tương đương tiền,29403688000000.0,4,I. Tiền và các khoản tương đương tiền,balance_sheet|code:110,Số đầu kỳ,
+balance_sheet,111,1. Tiền,10308050000000.0,,1. Tiền,balance_sheet|code:111,Số cuối kỳ,
+balance_sheet,111,1. Tiền,9076372000000.0,,1. Tiền,balance_sheet|code:111,Số đầu kỳ,
+balance_sheet,112,2. Các khoản tương đương tiền,9345220000000.0,,2. Các khoản tương đương tiền,balance_sheet|code:112,Số cuối kỳ,
+balance_sheet,112,2. Các khoản tương đương tiền,20327316000000.0,,2. Các khoản tương đương tiền,balance_sheet|code:112,Số đầu kỳ,
+balance_sheet,120,II. Đầu tư tài chính ngắn hạn,6758243000000.0,5,II. Đầu tư tài chính ngắn hạn,balance_sheet|code:120,Số cuối kỳ,
+balance_sheet,120,II. Đầu tư tài chính ngắn hạn,10413625000000.0,5,II. Đầu tư tài chính ngắn hạn,balance_sheet|code:120,Số đầu kỳ,
+balance_sheet,121,1. Chứng khoán kinh doanh,3605159000000.0,,1. Chứng khoán kinh doanh,balance_sheet|code:121,Số cuối kỳ,
+balance_sheet,121,1. Chứng khoán kinh doanh,5897650000000.0,,1. Chứng khoán kinh doanh,balance_sheet|code:121,Số đầu kỳ,
+balance_sheet,123,2. Đầu tư nắm giữ đến ngày đáo hạn,3153084000000.0,,2. Đầu tư nắm giữ đến ngày đáo hạn,balance_sheet|code:123,Số cuối kỳ,
+balance_sheet,123,2. Đầu tư nắm giữ đến ngày đáo hạn,4515975000000.0,,2. Đầu tư nắm giữ đến ngày đáo hạn,balance_sheet|code:123,Số đầu kỳ,
+balance_sheet,130,III. Các khoản phải thu ngắn hạn,74342928000000.0,,III. Các khoản phải thu ngắn hạn,balance_sheet|code:130,Số cuối kỳ,
+balance_sheet,130,III. Các khoản phải thu ngắn hạn,52395927000000.0,,III. Các khoản phải thu ngắn hạn,balance_sheet|code:130,Số đầu kỳ,
+balance_sheet,131,1. Phải thu ngắn hạn của khách hàng,20112289000000.0,6,1. Phải thu ngắn hạn của khách hàng,balance_sheet|code:131,Số cuối kỳ,
+balance_sheet,131,1. Phải thu ngắn hạn của khách hàng,16026874000000.0,6,1. Phải thu ngắn hạn của khách hàng,balance_sheet|code:131,Số đầu kỳ,
+balance_sheet,132,2. Trả trước cho người bán ngắn hạn,21767291000000.0,,2. Trả trước cho người bán ngắn hạn,balance_sheet|code:132,Số cuối kỳ,
+balance_sheet,132,2. Trả trước cho người bán ngắn hạn,15346915000000.0,,2. Trả trước cho người bán ngắn hạn,balance_sheet|code:132,Số đầu kỳ,
+balance_sheet,135,3. Phải thu về cho vay ngắn hạn,14824123000000.0,7,3. Phải thu về cho vay ngắn hạn,balance_sheet|code:135,Số cuối kỳ,
+balance_sheet,135,3. Phải thu về cho vay ngắn hạn,8539910000000.0,7,3. Phải thu về cho vay ngắn hạn,balance_sheet|code:135,Số đầu kỳ,
+balance_sheet,136,4. Phải thu ngắn hạn khác,18180233000000.0,8,4. Phải thu ngắn hạn khác,balance_sheet|code:136,Số cuối kỳ,
+balance_sheet,136,4. Phải thu ngắn hạn khác,12789024000000.0,8,4. Phải thu ngắn hạn khác,balance_sheet|code:136,Số đầu kỳ,
+balance_sheet,137,5. Dự phòng phải thu ngắn hạn khó đòi,-541008000.0,,5. Dự phòng phải thu ngắn hạn khó đòi,balance_sheet|code:137,Số cuối kỳ,
+balance_sheet,137,5. Dự phòng phải thu ngắn hạn khó đòi,-306796000.0,,5. Dự phòng phải thu ngắn hạn khó đòi,balance_sheet|code:137,Số đầu kỳ,
+balance_sheet,140,IV. Hàng tồn kho,50910386000000.0,9,IV. Hàng tồn kho,balance_sheet|code:140,Số cuối kỳ,
+balance_sheet,140,IV. Hàng tồn kho,62495269000000.0,9,IV. Hàng tồn kho,balance_sheet|code:140,Số đầu kỳ,
+balance_sheet,141,1. Hàng tồn kho,53074286000000.0,,1. Hàng tồn kho,balance_sheet|code:141,Số cuối kỳ,
+balance_sheet,141,1. Hàng tồn kho,63606541000000.0,,1. Hàng tồn kho,balance_sheet|code:141,Số đầu kỳ,
+balance_sheet,149,2. Dự phòng giảm giá hàng tồn kho,-2163900000000.0,,2. Dự phòng giảm giá hàng tồn kho,balance_sheet|code:149,Số cuối kỳ,
+balance_sheet,149,2. Dự phòng giảm giá hàng tồn kho,-1111272000000.0,,2. Dự phòng giảm giá hàng tồn kho,balance_sheet|code:149,Số đầu kỳ,
+balance_sheet,150,V. Tài sản ngắn hạn khác,11686009000000.0,,V. Tài sản ngắn hạn khác,balance_sheet|code:150,Số cuối kỳ,
+balance_sheet,150,V. Tài sản ngắn hạn khác,11305296000000.0,,V. Tài sản ngắn hạn khác,balance_sheet|code:150,Số đầu kỳ,
+balance_sheet,151,1. Chi phí trả trước ngắn hạn,1455458000000.0,10,1. Chi phí trả trước ngắn hạn,balance_sheet|code:151,Số cuối kỳ,
+balance_sheet,151,1. Chi phí trả trước ngắn hạn,2753060000000.0,10,1. Chi phí trả trước ngắn hạn,balance_sheet|code:151,Số đầu kỳ,
+balance_sheet,152,2. Thuế GTGT được khấu trừ,6773819000000.0,,2. Thuế GTGT được khấu trừ,balance_sheet|code:152,Số cuối kỳ,
+balance_sheet,152,2. Thuế GTGT được khấu trừ,4584086000000.0,,2. Thuế GTGT được khấu trừ,balance_sheet|code:152,Số đầu kỳ,
+balance_sheet,153,3. Thuế và các khoản khác phải thu Nhà nước,561133000.0,,3. Thuế và các khoản khác phải thu Nhà nước,balance_sheet|code:153,Số cuối kỳ,
+balance_sheet,153,3. Thuế và các khoản khác phải thu Nhà nước,913987000.0,,3. Thuế và các khoản khác phải thu Nhà nước,balance_sheet|code:153,Số đầu kỳ,
+balance_sheet,155,4. Tài sản ngắn hạn khác,2895599000000.0,11,4. Tài sản ngắn hạn khác,balance_sheet|code:155,Số cuối kỳ,
+balance_sheet,155,4. Tài sản ngắn hạn khác,3054163000000.0,11,4. Tài sản ngắn hạn khác,balance_sheet|code:155,Số đầu kỳ,

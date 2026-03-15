@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -21,6 +22,7 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 import pandas as pd
 
 from .dataset import BenchmarkDatasetV2, TableSample
+from .structured_contract import normalize_text_ascii
 
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
 
@@ -569,6 +571,501 @@ def canonical_to_csv(sample_id: str, dataset_root: str | Path) -> Dict[str, Any]
         "csv_root": str(_csv_paths(dataset_root, sample_id).root),
         "cells_count": int(len(cells_df)),
         "rows_count": int(len(rows_df)),
+    }
+
+
+_GENERIC_HEADER_KEYS = {
+    "",
+    "ma so",
+    "chi tieu",
+    "tai san",
+    "nguon von",
+    "thuyet minh",
+}
+_POINT_IN_TIME_DATE_RE = re.compile(r"(?P<day>\d{1,2})[/-](?P<month>\d{1,2})[/-](?P<year>\d{4})")
+_DATE_RANGE_RE = re.compile(
+    r"tu\s*\d{1,2}[/-]\d{1,2}[/-](?P<year>\d{4})\s*den\s*(?P<day>\d{1,2})[/-](?P<month>\d{1,2})[/-](?P=year)",
+    re.IGNORECASE,
+)
+_QUARTER_RE = re.compile(r"quy\s*(?P<quarter>[ivx]+|\d)\s*(?:nam)?\s*(?P<year>\d{4})", re.IGNORECASE)
+_YEAR_RE = re.compile(r"(?<!\d)(20\d{2})(?!\d)")
+_LEADING_CODE_RE = re.compile(r"^\s*(?P<code>[A-Za-z]{0,3}\d{1,4}|[IVXLCDM]+)\s+(?P<rest>.+?)\s*$", re.IGNORECASE)
+
+
+def _parse_report_period_context(report_id: str) -> Dict[str, int | None]:
+    match = re.search(r"_Q(?P<quarter>\d)_(?P<year>\d{4})$", str(report_id))
+    if not match:
+        return {"year": None, "quarter": None}
+    return {
+        "year": int(match.group("year")),
+        "quarter": int(match.group("quarter")),
+    }
+
+
+def _roman_quarter_to_int(value: str) -> int | None:
+    value_norm = str(value or "").strip().upper()
+    mapping = {"I": 1, "II": 2, "III": 3, "IV": 4}
+    if value_norm in mapping:
+        return mapping[value_norm]
+    try:
+        parsed = int(value_norm)
+    except Exception:
+        return None
+    return parsed if 1 <= parsed <= 4 else None
+
+
+def _infer_period_key(column_label: str, *, report_id: str) -> str:
+    label = str(column_label or "").strip()
+    if not label:
+        return ""
+    norm = normalize_text_ascii(label)
+    context = _parse_report_period_context(report_id)
+    report_year = context["year"]
+    report_quarter = context["quarter"]
+
+    date_range = _DATE_RANGE_RE.search(norm)
+    if date_range:
+        year = int(date_range.group("year"))
+        month = int(date_range.group("month"))
+        quarter = ((month - 1) // 3) + 1
+        return f"{year}Q{quarter}_YTD"
+
+    quarter_match = _QUARTER_RE.search(norm)
+    if quarter_match:
+        quarter = _roman_quarter_to_int(quarter_match.group("quarter"))
+        year = int(quarter_match.group("year"))
+        if quarter is not None:
+            return f"{year}Q{quarter}"
+
+    dates = list(_POINT_IN_TIME_DATE_RE.finditer(norm))
+    if dates:
+        day = int(dates[-1].group("day"))
+        month = int(dates[-1].group("month"))
+        year = int(dates[-1].group("year"))
+        if day == 31 and month == 12:
+            return f"{year}FY"
+        return f"{year:04d}-{month:02d}-{day:02d}"
+
+    if "nam nay" in norm and report_year:
+        if report_quarter == 4:
+            return f"{report_year}FY"
+        if report_quarter:
+            return f"{report_year}Q{report_quarter}_YTD"
+        return str(report_year)
+    if "nam truoc" in norm and report_year:
+        previous_year = int(report_year) - 1
+        if report_quarter == 4:
+            return f"{previous_year}FY"
+        if report_quarter:
+            return f"{previous_year}Q{report_quarter}_YTD"
+        return str(previous_year)
+
+    year_match = _YEAR_RE.search(norm)
+    if year_match:
+        year = int(year_match.group(1))
+        if "quy" not in norm and "nam" in norm:
+            return f"{year}FY"
+        return str(year)
+
+    return ""
+
+
+def _safe_cell(grid: List[List[str]], row_idx: int, col_idx: int) -> str:
+    if row_idx < 0 or row_idx >= len(grid):
+        return ""
+    row = grid[row_idx]
+    if col_idx < 0 or col_idx >= len(row):
+        return ""
+    return str(row[col_idx] or "").strip()
+
+
+def _grid_width(grid: List[List[str]]) -> int:
+    return max((len(row) for row in grid), default=0)
+
+
+def _column_values(grid: List[List[str]], col_idx: int) -> List[str]:
+    return [_safe_cell(grid, row_idx, col_idx) for row_idx in range(len(grid))]
+
+
+def _best_matching_column(candidates: List[str], grid: List[List[str]], *, exclude: set[int]) -> int | None:
+    normalized_candidates = {normalize_text_ascii(value) for value in candidates if str(value or "").strip()}
+    if not normalized_candidates:
+        return None
+
+    best_col: int | None = None
+    best_score = 0
+    for col_idx in range(_grid_width(grid)):
+        if col_idx in exclude:
+            continue
+        score = 0
+        for cell in _column_values(grid, col_idx):
+            if normalize_text_ascii(cell) in normalized_candidates:
+                score += 1
+        if score > best_score:
+            best_col = col_idx
+            best_score = score
+    return best_col if best_score > 0 else None
+
+
+def _detect_descriptor_columns(grid: List[List[str]], legacy_rows: List[Dict[str, Any]]) -> Dict[str, int | None]:
+    name_candidates = [
+        value
+        for row in legacy_rows
+        for value in (row.get("item_name"), row.get("original_name"))
+        if str(value or "").strip()
+    ]
+    code_candidates = [row.get("item_code") for row in legacy_rows if str(row.get("item_code") or "").strip()]
+    note_candidates = [row.get("notes_ref") for row in legacy_rows if str(row.get("notes_ref") or "").strip()]
+
+    name_col = _best_matching_column(name_candidates, grid, exclude=set())
+    exclude = {idx for idx in (name_col,) if idx is not None}
+    code_col = _best_matching_column(code_candidates, grid, exclude=exclude)
+    exclude = {idx for idx in (name_col, code_col) if idx is not None}
+    note_col = _best_matching_column(note_candidates, grid, exclude=exclude)
+    return {"name": name_col, "code": code_col, "note": note_col}
+
+
+def _split_leading_code(text: str) -> Tuple[str, str]:
+    raw = str(text or "").strip()
+    if not raw:
+        return "", ""
+    match = _LEADING_CODE_RE.match(raw)
+    if not match:
+        return "", raw
+    return str(match.group("code") or "").strip(), str(match.group("rest") or "").strip()
+
+
+def _collapse_legacy_rows(legacy_rows: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    deduped: List[Dict[str, Any]] = []
+    seen: set[Tuple[str, str, str, str, str]] = set()
+    for row in legacy_rows:
+        key = (
+            str(row.get("statement") or ""),
+            str(row.get("item_code") or "").strip(),
+            normalize_text_ascii(row.get("item_name")),
+            str(row.get("notes_ref") or "").strip(),
+            normalize_text_ascii(row.get("original_name")),
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(row)
+    return deduped
+
+
+def _row_match_score(
+    legacy_row: Dict[str, Any],
+    row_cells: List[str],
+    *,
+    descriptor_cols: Dict[str, int | None],
+) -> int:
+    score = 0
+    name_col = descriptor_cols.get("name")
+    code_col = descriptor_cols.get("code")
+    note_col = descriptor_cols.get("note")
+
+    name = normalize_text_ascii(legacy_row.get("item_name"))
+    original_name = normalize_text_ascii(legacy_row.get("original_name"))
+    code = normalize_text_ascii(legacy_row.get("item_code"))
+    note = normalize_text_ascii(legacy_row.get("notes_ref"))
+
+    if code_col is not None and code:
+        code_cell = normalize_text_ascii(row_cells[code_col] if code_col < len(row_cells) else "")
+        if code_cell == code:
+            score += 100
+    if name_col is not None:
+        raw_name_cell = row_cells[name_col] if name_col < len(row_cells) else ""
+        code_prefix, stripped_name = _split_leading_code(raw_name_cell)
+        name_cell = normalize_text_ascii(raw_name_cell)
+        stripped_name_cell = normalize_text_ascii(stripped_name)
+        if name_cell == name or stripped_name_cell == name:
+            score += 70
+        elif original_name and (name_cell == original_name or stripped_name_cell == original_name):
+            score += 60
+        if code and normalize_text_ascii(code_prefix) == code:
+            score += 20
+    if note_col is not None and note:
+        note_cell = normalize_text_ascii(row_cells[note_col] if note_col < len(row_cells) else "")
+        if note_cell == note:
+            score += 20
+
+    if score == 0:
+        row_keys = {normalize_text_ascii(cell) for cell in row_cells if str(cell or "").strip()}
+        if name and name in row_keys:
+            score += 40
+        elif original_name and original_name in row_keys:
+            score += 30
+        elif code and code in row_keys:
+            score += 25
+    return score
+
+
+def _match_legacy_rows_to_grid(
+    grid: List[List[str]],
+    legacy_rows: List[Dict[str, Any]],
+    *,
+    descriptor_cols: Dict[str, int | None],
+) -> List[Dict[str, Any]]:
+    used_grid_rows: set[int] = set()
+    matched: List[Dict[str, Any]] = []
+    last_grid_row_idx = -1
+
+    for legacy_idx, legacy_row in enumerate(legacy_rows):
+        best_row_idx: int | None = None
+        best_score = -1
+        for grid_row_idx, row_cells in enumerate(grid):
+            if grid_row_idx in used_grid_rows:
+                continue
+            score = _row_match_score(legacy_row, row_cells, descriptor_cols=descriptor_cols)
+            if score <= 0:
+                continue
+            if score > best_score or (score == best_score and best_row_idx is not None and grid_row_idx < best_row_idx):
+                best_row_idx = grid_row_idx
+                best_score = score
+
+        if best_row_idx is None:
+            for grid_row_idx, row_cells in enumerate(grid):
+                if grid_row_idx in used_grid_rows or grid_row_idx <= last_grid_row_idx:
+                    continue
+                has_numeric = False
+                for cell in row_cells:
+                    try:
+                        parsed = _parse_numeric_value(cell)
+                    except ValueError:
+                        parsed = None
+                    if parsed is not None:
+                        has_numeric = True
+                        break
+                if has_numeric:
+                    best_row_idx = grid_row_idx
+                    break
+
+        if best_row_idx is None:
+            continue
+        used_grid_rows.add(best_row_idx)
+        last_grid_row_idx = best_row_idx
+        matched.append(
+            {
+                "legacy_index": legacy_idx,
+                "grid_row_idx": best_row_idx,
+                "legacy_row": legacy_row,
+                "grid_row": list(grid[best_row_idx]),
+            }
+        )
+    return matched
+
+
+def _header_label_for_column(grid: List[List[str]], col_idx: int, first_data_row_idx: int) -> str:
+    labels: List[str] = []
+    seen: set[str] = set()
+    for row_idx in range(max(0, first_data_row_idx)):
+        text = _safe_cell(grid, row_idx, col_idx)
+        if not text:
+            continue
+        key = normalize_text_ascii(text)
+        if key in _GENERIC_HEADER_KEYS or key in seen:
+            continue
+        seen.add(key)
+        labels.append(text)
+    return " ".join(labels).strip()
+
+
+def _derive_value_columns(
+    grid: List[List[str]],
+    matched_rows: List[Dict[str, Any]],
+    *,
+    descriptor_cols: Dict[str, int | None],
+) -> List[Tuple[int, str]]:
+    excluded = {idx for idx in descriptor_cols.values() if idx is not None}
+    if not matched_rows:
+        return []
+
+    first_data_row_idx = min(int(row["grid_row_idx"]) for row in matched_rows)
+    candidates: List[Tuple[int, str]] = []
+    for col_idx in range(_grid_width(grid)):
+        if col_idx in excluded:
+            continue
+        numeric_count = 0
+        non_empty_count = 0
+        for row in matched_rows:
+            text = _safe_cell(grid, int(row["grid_row_idx"]), col_idx)
+            if not text:
+                continue
+            non_empty_count += 1
+            try:
+                parsed = _parse_numeric_value(text)
+            except ValueError:
+                parsed = None
+            if parsed is not None:
+                numeric_count += 1
+        header_label = _header_label_for_column(grid, col_idx, first_data_row_idx)
+        if numeric_count == 0:
+            continue
+        if non_empty_count == 0 and not header_label:
+            continue
+        candidates.append((col_idx, header_label))
+    return candidates
+
+
+def _build_explicit_row_identity(
+    *,
+    statement: str,
+    item_code: str | None,
+    item_name: str,
+    notes_ref: str | None,
+    occurrence: int,
+    total_occurrences: int,
+) -> str:
+    code = str(item_code or "").strip()
+    note = str(notes_ref or "").strip()
+    name = str(item_name or "").strip()
+    if code:
+        return f"{statement}|code:{code}"
+    if note:
+        return f"{statement}|name:{name}|note:{note}"
+    if total_occurrences > 1:
+        return f"{statement}|name:{name}|occ:{occurrence}"
+    return f"{statement}|name:{name}"
+
+
+def migrate_rows_to_structured_contract(
+    sample_id: str,
+    dataset_root: str | Path,
+    *,
+    force: bool = False,
+) -> Dict[str, Any]:
+    ds = BenchmarkDatasetV2(dataset_root)
+    sample = _find_sample(ds, sample_id)
+    pack = load_csv_pack(sample_id, dataset_root)
+    rows_df = pack["rows"]
+    cells_df = pack["cells"]
+    meta = load_meta(sample_id, dataset_root)
+    normalize_to_vnd = str(meta.get("value_unit_normalized_to") or "").strip().upper() == "VND"
+    report_unit_multiplier = float(meta.get("report_unit_multiplier") or 1.0)
+    if report_unit_multiplier <= 0:
+        report_unit_multiplier = 1.0
+
+    already_migrated = False
+    if not rows_df.empty:
+        for column in ("column_label", "period_key"):
+            if column in rows_df.columns and rows_df[column].astype(str).str.strip().ne("").any():
+                already_migrated = True
+                break
+    if already_migrated and not force:
+        return {
+            "sample_id": sample_id,
+            "changed": False,
+            "reason": "already_migrated",
+            "rows_before": int(len(rows_df)),
+            "rows_after": int(len(rows_df)),
+        }
+
+    cell_map, legacy_rows, errors = _parse_csv_frames(cells=cells_df, rows=rows_df)
+    if errors:
+        raise ValueError("CSV validation failed before migration:\n" + "\n".join(f"- {e}" for e in errors))
+    legacy_rows = _collapse_legacy_rows(legacy_rows)
+    if not legacy_rows:
+        return {
+            "sample_id": sample_id,
+            "changed": False,
+            "reason": "no_annotated_rows",
+            "rows_before": int(len(rows_df)),
+            "rows_after": int(len(rows_df)),
+        }
+
+    grid = _build_table_matrix(cell_map)
+    descriptor_cols = _detect_descriptor_columns(grid, legacy_rows)
+    matched_rows = _match_legacy_rows_to_grid(grid, legacy_rows, descriptor_cols=descriptor_cols)
+    if len(matched_rows) != len(legacy_rows):
+        raise ValueError(
+            f"Could not align all legacy rows for {sample_id}: matched {len(matched_rows)}/{len(legacy_rows)}"
+        )
+
+    value_columns = _derive_value_columns(grid, matched_rows, descriptor_cols=descriptor_cols)
+    if not value_columns:
+        raise ValueError(f"No numeric value columns detected for {sample_id}")
+
+    duplicate_totals: Dict[Tuple[str, str], int] = {}
+    for row in matched_rows:
+        legacy_row = row["legacy_row"]
+        base = str(legacy_row.get("item_code") or legacy_row.get("item_name") or legacy_row.get("original_name") or "").strip()
+        key = (str(legacy_row["statement"]), base)
+        duplicate_totals[key] = duplicate_totals.get(key, 0) + 1
+
+    duplicate_seen: Dict[Tuple[str, str], int] = {}
+    migrated_rows: List[Dict[str, Any]] = []
+    for row in matched_rows:
+        legacy_row = row["legacy_row"]
+        grid_row_idx = int(row["grid_row_idx"])
+        statement = str(legacy_row["statement"])
+        item_code = legacy_row.get("item_code")
+        item_name = str(legacy_row["item_name"])
+        notes_ref = legacy_row.get("notes_ref")
+        original_name = legacy_row.get("original_name")
+        base = str(item_code or item_name or original_name or "").strip()
+        duplicate_key = (statement, base)
+        occurrence = duplicate_seen.get(duplicate_key, 0) + 1
+        duplicate_seen[duplicate_key] = occurrence
+        row_identity = _build_explicit_row_identity(
+            statement=statement,
+            item_code=item_code,
+            item_name=item_name,
+            notes_ref=notes_ref,
+            occurrence=occurrence,
+            total_occurrences=duplicate_totals.get(duplicate_key, 1),
+        )
+
+        for col_idx, column_label in value_columns:
+            raw_value = _safe_cell(grid, grid_row_idx, col_idx)
+            if not raw_value:
+                continue
+            try:
+                value = _parse_numeric_value(raw_value)
+            except ValueError:
+                continue
+            if value is None:
+                continue
+            if normalize_to_vnd and report_unit_multiplier != 1.0:
+                value = float(value) * report_unit_multiplier
+            migrated_rows.append(
+                {
+                    "statement": statement,
+                    "item_code": item_code or "",
+                    "item_name": item_name,
+                    "value": value,
+                    "notes_ref": notes_ref or "",
+                    "original_name": original_name or "",
+                    "row_identity": row_identity,
+                    "column_label": column_label,
+                    "period_key": _infer_period_key(column_label, report_id=sample.report_id),
+                }
+            )
+
+    if not migrated_rows:
+        raise ValueError(f"No migrated rows generated for {sample_id}")
+
+    migrated_df = pd.DataFrame(migrated_rows, columns=list(ROWS_COLUMNS)).fillna("")
+    save_csv_pack(sample_id, dataset_root, cells=cells_df, rows=migrated_df)
+    csv_to_canonical(sample_id, dataset_root, validate=True)
+    update_meta(
+        sample_id,
+        dataset_root,
+        {
+            "structured_contract_version": "row_identity_column_period_v1",
+            "rows_migrated_from_cells": True,
+            "rows_migrated_at": _now_iso(),
+            "legacy_row_count": int(len(rows_df)),
+            "migrated_row_count": int(len(migrated_df)),
+            "value_column_labels": [label for _idx, label in value_columns],
+        },
+    )
+    return {
+        "sample_id": sample_id,
+        "changed": True,
+        "rows_before": int(len(rows_df)),
+        "rows_after": int(len(migrated_df)),
+        "value_column_count": int(len(value_columns)),
+        "value_column_labels": [label for _idx, label in value_columns],
     }
 
 

@@ -1,11 +1,20 @@
-statement,item_code,item_name,value,notes_ref,original_name
-cash_flow,31,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",13893343000000,,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu"
-cash_flow,32,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",-4250000000,,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành"
-cash_flow,33,Tiền thu từ đi vay,75447041000000,,Tiền thu từ đi vay
-cash_flow,34,Tiền chi trả nợ gốc vay,-68070233000000,,Tiền chi trả nợ gốc vay
-cash_flow,36,"Cổ tức, lợi nhuận đã trả",-1718207000000,,"Cổ tức, lợi nhuận đã trả"
-cash_flow,40,Lưu chuyển tiền thuần từ hoạt động tài chính,19547694000000,,Lưu chuyển tiền thuần từ hoạt động tài chính
-cash_flow,50,Lưu chuyển tiền thuần trong kỳ,-9750418000000,,Lưu chuyển tiền thuần trong kỳ
-cash_flow,60,Tiền và tương đương tiền đầu kỳ,29403688000000,,Tiền và tương đương tiền đầu kỳ
-cash_flow,61,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,0,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ
-cash_flow,70,Tiền và tương đương tiền cuối kỳ,19653270000000,4,Tiền và tương đương tiền cuối kỳ
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+cash_flow,31,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",13893343000000.0,,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",cash_flow|code:31,Năm nay,2021FY
+cash_flow,31,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",8974955000000.0,,"Tiền thu từ phát hành cổ phiếu, nhận vốn góp của chủ sở hữu",cash_flow|code:31,Năm trước,2020FY
+cash_flow,32,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",-4250000.0,,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",cash_flow|code:32,Năm nay,2021FY
+cash_flow,32,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",-42980000.0,,"Tiền chi trả vốn góp cho các chủ sở hữu, mua lại cổ phiếu của doanh nghiệp đã phát hành",cash_flow|code:32,Năm trước,2020FY
+cash_flow,33,Tiền thu từ đi vay,75447041000000.0,,Tiền thu từ đi vay,cash_flow|code:33,Năm nay,2021FY
+cash_flow,33,Tiền thu từ đi vay,41249657000000.0,,Tiền thu từ đi vay,cash_flow|code:33,Năm trước,2020FY
+cash_flow,34,Tiền chi trả nợ gốc vay,-68070233000000.0,,Tiền chi trả nợ gốc vay,cash_flow|code:34,Năm nay,2021FY
+cash_flow,34,Tiền chi trả nợ gốc vay,-38958120000000.0,,Tiền chi trả nợ gốc vay,cash_flow|code:34,Năm trước,2020FY
+cash_flow,36,"Cổ tức, lợi nhuận đã trả",-1718207000000.0,,"Cổ tức, lợi nhuận đã trả",cash_flow|code:36,Năm nay,2021FY
+cash_flow,36,"Cổ tức, lợi nhuận đã trả",-7188000.0,,"Cổ tức, lợi nhuận đã trả",cash_flow|code:36,Năm trước,2020FY
+cash_flow,40,Lưu chuyển tiền thuần từ hoạt động tài chính,19547694000000.0,,Lưu chuyển tiền thuần từ hoạt động tài chính,cash_flow|code:40,Năm nay,2021FY
+cash_flow,40,Lưu chuyển tiền thuần từ hoạt động tài chính,11216324000000.0,,Lưu chuyển tiền thuần từ hoạt động tài chính,cash_flow|code:40,Năm trước,2020FY
+cash_flow,50,Lưu chuyển tiền thuần trong kỳ,-9750418000000.0,,Lưu chuyển tiền thuần trong kỳ,cash_flow|code:50,Năm nay,2021FY
+cash_flow,50,Lưu chuyển tiền thuần trong kỳ,10957408000000.0,,Lưu chuyển tiền thuần trong kỳ,cash_flow|code:50,Năm trước,2020FY
+cash_flow,60,Tiền và tương đương tiền đầu kỳ,29403688000000.0,,Tiền và tương đương tiền đầu kỳ,cash_flow|code:60,Năm nay,2021FY
+cash_flow,60,Tiền và tương đương tiền đầu kỳ,18446968000000.0,,Tiền và tương đương tiền đầu kỳ,cash_flow|code:60,Năm trước,2020FY
+cash_flow,61,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,-688000000.0,,Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ,cash_flow|code:61,Năm trước,2020FY
+cash_flow,70,Tiền và tương đương tiền cuối kỳ,19653270000000.0,4,Tiền và tương đương tiền cuối kỳ,cash_flow|code:70,Năm nay,2021FY
+cash_flow,70,Tiền và tương đương tiền cuối kỳ,29403688000000.0,4,Tiền và tương đương tiền cuối kỳ,cash_flow|code:70,Năm trước,2020FY

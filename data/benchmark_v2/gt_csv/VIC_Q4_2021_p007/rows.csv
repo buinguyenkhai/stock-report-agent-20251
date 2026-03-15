@@ -1,28 +1,54 @@
-statement,item_code,item_name,value,notes_ref,original_name
-balance_sheet,200,B. TÀI SẢN DÀI HẠN,263973098000000,,B. TÀI SẢN DÀI HẠN
-balance_sheet,210,I. Các khoản phải thu dài hạn,598956000000,,I. Các khoản phải thu dài hạn
-balance_sheet,215,1. Phải thu về cho vay dài hạn,455249000000,7,1. Phải thu về cho vay dài hạn
-balance_sheet,216,2. Phải thu dài hạn khác,143707000000,8,2. Phải thu dài hạn khác
-balance_sheet,220,II. Tài sản cố định,130455105000000,,II. Tài sản cố định
-balance_sheet,221,1. Tài sản cố định hữu hình,106782309000000,12,1. Tài sản cố định hữu hình
-balance_sheet,222,Nguyên giá,134050869000000,,Nguyên giá
-balance_sheet,223,Giá trị hao mòn luỹ kế,-27268560000000,,Giá trị hao mòn luỹ kế
-balance_sheet,227,2. Tài sản cố định vô hình,23672796000000,13,2. Tài sản cố định vô hình
-balance_sheet,228,Nguyên giá,30283727000000,,Nguyên giá
-balance_sheet,229,Giá trị hao mòn luỹ kế,-6610931000000,,Giá trị hao mòn luỹ kế
-balance_sheet,230,III. Bất động sản đầu tư,35128444000000,14,III. Bất động sản đầu tư
-balance_sheet,231,1. Nguyên giá,43419869000000,,1. Nguyên giá
-balance_sheet,232,2. Giá trị hao mòn luỹ kế,-8291425000000,,2. Giá trị hao mòn luỹ kế
-balance_sheet,240,IV. Tài sản dở dang dài hạn,80303903000000,,IV. Tài sản dở dang dài hạn
-balance_sheet,242,1. Chi phí xây dựng cơ bản dở dang,80303903000000,15,1. Chi phí xây dựng cơ bản dở dang
-balance_sheet,250,V. Đầu tư tài chính dài hạn,9151771000000,,V. Đầu tư tài chính dài hạn
-balance_sheet,252,"1. Đầu tư vào công ty liên doanh, liên kết",215561000000,16.1,"1. Đầu tư vào công ty liên doanh, liên kết"
-balance_sheet,253,2. Đầu tư góp vốn vào đơn vị khác,8831485000000,16.2,2. Đầu tư góp vốn vào đơn vị khác
-balance_sheet,254,3. Dự phòng đầu tư tài chính dài hạn,-45470000000,,3. Dự phòng đầu tư tài chính dài hạn
-balance_sheet,255,4. Đầu tư nắm giữ đến ngày đáo hạn,150195000000,16.3,4. Đầu tư nắm giữ đến ngày đáo hạn
-balance_sheet,260,VI. Tài sản dài hạn khác,8334919000000,,VI. Tài sản dài hạn khác
-balance_sheet,261,1. Chi phí trả trước dài hạn,5806361000000,10,1. Chi phí trả trước dài hạn
-balance_sheet,262,2. Tài sản thuế thu nhập hoãn lại,669094000000,,2. Tài sản thuế thu nhập hoãn lại
-balance_sheet,268,3. Tài sản dài hạn khác,0,11,3. Tài sản dài hạn khác
-balance_sheet,269,4. Lợi thế thương mại,1859464000000,17,4. Lợi thế thương mại
-balance_sheet,270,TỔNG CỘNG TÀI SẢN,427323934000000,,TỔNG CỘNG TÀI SẢN
+statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
+balance_sheet,200,B. TÀI SẢN DÀI HẠN,263973098000000.0,,B. TÀI SẢN DÀI HẠN,balance_sheet|code:200,Số cuối kỳ,
+balance_sheet,200,B. TÀI SẢN DÀI HẠN,256489962000000.0,,B. TÀI SẢN DÀI HẠN,balance_sheet|code:200,Số đầu kỳ,
+balance_sheet,210,I. Các khoản phải thu dài hạn,598956000.0,,I. Các khoản phải thu dài hạn,balance_sheet|code:210,Số cuối kỳ,
+balance_sheet,210,I. Các khoản phải thu dài hạn,7379649000000.0,,I. Các khoản phải thu dài hạn,balance_sheet|code:210,Số đầu kỳ,
+balance_sheet,215,1. Phải thu về cho vay dài hạn,455249000.0,7,1. Phải thu về cho vay dài hạn,balance_sheet|code:215,Số cuối kỳ,
+balance_sheet,215,1. Phải thu về cho vay dài hạn,6015000000000.0,7,1. Phải thu về cho vay dài hạn,balance_sheet|code:215,Số đầu kỳ,
+balance_sheet,216,2. Phải thu dài hạn khác,143707000.0,8,2. Phải thu dài hạn khác,balance_sheet|code:216,Số cuối kỳ,
+balance_sheet,216,2. Phải thu dài hạn khác,1364649000000.0,8,2. Phải thu dài hạn khác,balance_sheet|code:216,Số đầu kỳ,
+balance_sheet,220,II. Tài sản cố định,130455105000000.0,,II. Tài sản cố định,balance_sheet|code:220,Số cuối kỳ,
+balance_sheet,220,II. Tài sản cố định,125639869000000.0,,II. Tài sản cố định,balance_sheet|code:220,Số đầu kỳ,
+balance_sheet,221,1. Tài sản cố định hữu hình,106782309000000.0,12,1. Tài sản cố định hữu hình,balance_sheet|code:221,Số cuối kỳ,
+balance_sheet,221,1. Tài sản cố định hữu hình,103813162000000.0,12,1. Tài sản cố định hữu hình,balance_sheet|code:221,Số đầu kỳ,
+balance_sheet,222,Nguyên giá,134050869000000.0,,Nguyên giá,balance_sheet|code:222,Số cuối kỳ,
+balance_sheet,222,Nguyên giá,122699550000000.0,,Nguyên giá,balance_sheet|code:222,Số đầu kỳ,
+balance_sheet,223,Giá trị hao mòn luỹ kế,-27268560000000.0,,Giá trị hao mòn luỹ kế,balance_sheet|code:223,Số cuối kỳ,
+balance_sheet,223,Giá trị hao mòn luỹ kế,-18886388000000.0,,Giá trị hao mòn luỹ kế,balance_sheet|code:223,Số đầu kỳ,
+balance_sheet,227,2. Tài sản cố định vô hình,23672796000000.0,13,2. Tài sản cố định vô hình,balance_sheet|code:227,Số cuối kỳ,
+balance_sheet,227,2. Tài sản cố định vô hình,21826707000000.0,13,2. Tài sản cố định vô hình,balance_sheet|code:227,Số đầu kỳ,
+balance_sheet,228,Nguyên giá,30283727000000.0,,Nguyên giá,balance_sheet|code:228,Số cuối kỳ,
+balance_sheet,228,Nguyên giá,24847891000000.0,,Nguyên giá,balance_sheet|code:228,Số đầu kỳ,
+balance_sheet,229,Giá trị hao mòn luỹ kế,-6610931000000.0,,Giá trị hao mòn luỹ kế,balance_sheet|code:229,Số cuối kỳ,
+balance_sheet,229,Giá trị hao mòn luỹ kế,-3021184000000.0,,Giá trị hao mòn luỹ kế,balance_sheet|code:229,Số đầu kỳ,
+balance_sheet,230,III. Bất động sản đầu tư,35128444000000.0,14,III. Bất động sản đầu tư,balance_sheet|code:230,Số cuối kỳ,
+balance_sheet,230,III. Bất động sản đầu tư,34725866000000.0,14,III. Bất động sản đầu tư,balance_sheet|code:230,Số đầu kỳ,
+balance_sheet,231,1. Nguyên giá,43419869000000.0,,1. Nguyên giá,balance_sheet|code:231,Số cuối kỳ,
+balance_sheet,231,1. Nguyên giá,41248115000000.0,,1. Nguyên giá,balance_sheet|code:231,Số đầu kỳ,
+balance_sheet,232,2. Giá trị hao mòn luỹ kế,-8291425000000.0,,2. Giá trị hao mòn luỹ kế,balance_sheet|code:232,Số cuối kỳ,
+balance_sheet,232,2. Giá trị hao mòn luỹ kế,-6522249000000.0,,2. Giá trị hao mòn luỹ kế,balance_sheet|code:232,Số đầu kỳ,
+balance_sheet,240,IV. Tài sản dở dang dài hạn,80303903000000.0,,IV. Tài sản dở dang dài hạn,balance_sheet|code:240,Số cuối kỳ,
+balance_sheet,240,IV. Tài sản dở dang dài hạn,67921619000000.0,,IV. Tài sản dở dang dài hạn,balance_sheet|code:240,Số đầu kỳ,
+balance_sheet,242,1. Chi phí xây dựng cơ bản dở dang,80303903000000.0,15,1. Chi phí xây dựng cơ bản dở dang,balance_sheet|code:242,Số cuối kỳ,
+balance_sheet,242,1. Chi phí xây dựng cơ bản dở dang,67921619000000.0,15,1. Chi phí xây dựng cơ bản dở dang,balance_sheet|code:242,Số đầu kỳ,
+balance_sheet,250,V. Đầu tư tài chính dài hạn,9151771000000.0,,V. Đầu tư tài chính dài hạn,balance_sheet|code:250,Số cuối kỳ,
+balance_sheet,250,V. Đầu tư tài chính dài hạn,7413828000000.0,,V. Đầu tư tài chính dài hạn,balance_sheet|code:250,Số đầu kỳ,
+balance_sheet,252,"1. Đầu tư vào công ty liên doanh, liên kết",215561000.0,16.1,"1. Đầu tư vào công ty liên doanh, liên kết",balance_sheet|code:252,Số cuối kỳ,
+balance_sheet,252,"1. Đầu tư vào công ty liên doanh, liên kết",2725460000000.0,16.1,"1. Đầu tư vào công ty liên doanh, liên kết",balance_sheet|code:252,Số đầu kỳ,
+balance_sheet,253,2. Đầu tư góp vốn vào đơn vị khác,8831485000000.0,16.2,2. Đầu tư góp vốn vào đơn vị khác,balance_sheet|code:253,Số cuối kỳ,
+balance_sheet,253,2. Đầu tư góp vốn vào đơn vị khác,4576705000000.0,16.2,2. Đầu tư góp vốn vào đơn vị khác,balance_sheet|code:253,Số đầu kỳ,
+balance_sheet,254,3. Dự phòng đầu tư tài chính dài hạn,-45470000.0,,3. Dự phòng đầu tư tài chính dài hạn,balance_sheet|code:254,Số cuối kỳ,
+balance_sheet,254,3. Dự phòng đầu tư tài chính dài hạn,-123532000.0,,3. Dự phòng đầu tư tài chính dài hạn,balance_sheet|code:254,Số đầu kỳ,
+balance_sheet,255,4. Đầu tư nắm giữ đến ngày đáo hạn,150195000.0,16.3,4. Đầu tư nắm giữ đến ngày đáo hạn,balance_sheet|code:255,Số cuối kỳ,
+balance_sheet,255,4. Đầu tư nắm giữ đến ngày đáo hạn,235195000.0,16.3,4. Đầu tư nắm giữ đến ngày đáo hạn,balance_sheet|code:255,Số đầu kỳ,
+balance_sheet,260,VI. Tài sản dài hạn khác,8334919000000.0,,VI. Tài sản dài hạn khác,balance_sheet|code:260,Số cuối kỳ,
+balance_sheet,260,VI. Tài sản dài hạn khác,13409131000000.0,,VI. Tài sản dài hạn khác,balance_sheet|code:260,Số đầu kỳ,
+balance_sheet,261,1. Chi phí trả trước dài hạn,5806361000000.0,10,1. Chi phí trả trước dài hạn,balance_sheet|code:261,Số cuối kỳ,
+balance_sheet,261,1. Chi phí trả trước dài hạn,8342477000000.0,10,1. Chi phí trả trước dài hạn,balance_sheet|code:261,Số đầu kỳ,
+balance_sheet,262,2. Tài sản thuế thu nhập hoãn lại,669094000.0,,2. Tài sản thuế thu nhập hoãn lại,balance_sheet|code:262,Số cuối kỳ,
+balance_sheet,262,2. Tài sản thuế thu nhập hoãn lại,1545853000000.0,,2. Tài sản thuế thu nhập hoãn lại,balance_sheet|code:262,Số đầu kỳ,
+balance_sheet,268,3. Tài sản dài hạn khác,1032337000000.0,11,3. Tài sản dài hạn khác,balance_sheet|code:268,Số đầu kỳ,
+balance_sheet,269,4. Lợi thế thương mại,1859464000000.0,17,4. Lợi thế thương mại,balance_sheet|code:269,Số cuối kỳ,
+balance_sheet,269,4. Lợi thế thương mại,2488464000000.0,17,4. Lợi thế thương mại,balance_sheet|code:269,Số đầu kỳ,
+balance_sheet,270,TỔNG CỘNG TÀI SẢN,427323934000000.0,,TỔNG CỘNG TÀI SẢN,balance_sheet|code:270,Số cuối kỳ,
+balance_sheet,270,TỔNG CỘNG TÀI SẢN,422503767000000.0,,TỔNG CỘNG TÀI SẢN,balance_sheet|code:270,Số đầu kỳ,

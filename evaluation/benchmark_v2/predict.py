@@ -178,10 +178,61 @@ def _extract_markdown_table_stats(markdown: str) -> Dict[str, Any]:
 
 def _looks_structurally_collapsed(stats: Dict[str, Any]) -> bool:
     return bool(
-        stats.get("pipe_row_count", 0) <= 3
+        stats.get("pipe_row_count", 0) <= 2
         or stats.get("giant_cell_count", 0) >= 1
         or stats.get("max_numeric_tokens_in_cell", 0) >= 10
     )
+
+
+def _compare_table_structures(
+    baseline_stats: Dict[str, Any],
+    candidate_stats: Dict[str, Any],
+    *,
+    candidate_debug: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    baseline_health = float(baseline_stats.get("structure_health_score", 0.0) or 0.0)
+    candidate_health = float(candidate_stats.get("structure_health_score", 0.0) or 0.0)
+    baseline_collapse = _looks_structurally_collapsed(baseline_stats)
+    candidate_collapse = _looks_structurally_collapsed(candidate_stats)
+    candidate_debug = candidate_debug or {}
+    reconstructed_rows = int(candidate_debug.get("reconstructed_row_count", 0) or 0)
+    numeric_columns = int(candidate_debug.get("numeric_column_count", 0) or 0)
+    header_present = bool(candidate_debug.get("header_present"))
+
+    select_candidate = bool(
+        candidate_stats.get("pipe_row_count", 0) >= 3
+        and reconstructed_rows >= 3
+        and numeric_columns >= 2
+        and (
+            header_present
+            or candidate_health > baseline_health + 4.0
+            or (baseline_collapse and not candidate_collapse)
+        )
+        and (
+            candidate_health > baseline_health + 2.0
+            or (baseline_collapse and not candidate_collapse)
+            or (
+                candidate_stats.get("giant_cell_count", 0) < baseline_stats.get("giant_cell_count", 0)
+                and candidate_stats.get("max_numeric_tokens_in_cell", 0)
+                <= baseline_stats.get("max_numeric_tokens_in_cell", 0)
+            )
+        )
+    )
+
+    return {
+        "baseline_structure_health_score": baseline_health,
+        "candidate_structure_health_score": candidate_health,
+        "baseline_collapsed": baseline_collapse,
+        "candidate_collapsed": candidate_collapse,
+        "health_delta": candidate_health - baseline_health,
+        "giant_cell_delta": int(candidate_stats.get("giant_cell_count", 0) or 0)
+        - int(baseline_stats.get("giant_cell_count", 0) or 0),
+        "pipe_row_delta": int(candidate_stats.get("pipe_row_count", 0) or 0)
+        - int(baseline_stats.get("pipe_row_count", 0) or 0),
+        "max_numeric_tokens_delta": int(candidate_stats.get("max_numeric_tokens_in_cell", 0) or 0)
+        - int(baseline_stats.get("max_numeric_tokens_in_cell", 0) or 0),
+        "select_candidate": select_candidate,
+    }
 
 
 def _run_ocr_for_sample(
@@ -239,20 +290,39 @@ def _run_ocr_for_sample(
                 reconstructed_markdown = ""
                 reconstruction_debug: Dict[str, Any] = {}
                 try:
-                    reconstructed_markdown, reconstruction_debug = reconstruct_financial_table_markdown(page_image)
+                    reconstruction_payload = _get_reconstruction_payload(ocr_service) or {}
+                    page_size_raw = reconstruction_payload.get("page_size")
+                    page_size = None
+                    if isinstance(page_size_raw, list) and len(page_size_raw) == 2:
+                        page_size = (int(page_size_raw[0]), int(page_size_raw[1]))
+                    tokens = reconstruction_payload.get("word_tokens") or reconstruction_payload.get("textline_tokens")
+                    reconstructed_markdown, reconstruction_debug = reconstruct_financial_table_markdown(
+                        str(page_image) if page_image is not None else None,
+                        ocr_tokens=tokens if isinstance(tokens, list) else None,
+                        page_size=page_size,
+                        table_regions=(
+                            reconstruction_payload.get("table_regions")
+                            if isinstance(reconstruction_payload.get("table_regions"), list)
+                            else None
+                        ),
+                    )
                 except Exception as exc:
                     reconstruction_debug = {"reconstruction_applied": False, "error": str(exc)}
                 reconstructed_stats = _extract_markdown_table_stats(reconstructed_markdown)
+                reconstruction_comparison = _compare_table_structures(
+                    chosen_stats,
+                    reconstructed_stats,
+                    candidate_debug=reconstruction_debug,
+                )
                 debug["deterministic_reconstruction"] = {
                     **reconstruction_debug,
+                    "attempted": True,
+                    "baseline_stats": chosen_stats,
                     "stats": reconstructed_stats,
+                    "comparison": reconstruction_comparison,
                     "selected_strategy": chosen_strategy,
                 }
-                if (
-                    reconstructed_markdown
-                    and reconstructed_stats["pipe_row_count"] >= 2
-                    and reconstructed_stats["structure_health_score"] > chosen_stats["structure_health_score"] + 2.0
-                ):
+                if reconstructed_markdown and reconstruction_comparison["select_candidate"]:
                     chosen_markdown = reconstructed_markdown
                     chosen_stats = reconstructed_stats
                     chosen_strategy = "deterministic_table_reconstruction"
@@ -280,6 +350,14 @@ def _run_ocr_for_sample(
 
 def _get_ocr_debug_payload(ocr_service: OCRStrategy) -> Optional[Dict[str, Any]]:
     getter = getattr(ocr_service, "get_debug_artifacts", None)
+    if not callable(getter):
+        return None
+    payload = getter()
+    return payload if isinstance(payload, dict) else None
+
+
+def _get_reconstruction_payload(ocr_service: OCRStrategy) -> Optional[Dict[str, Any]]:
+    getter = getattr(ocr_service, "get_reconstruction_artifacts", None)
     if not callable(getter):
         return None
     payload = getter()

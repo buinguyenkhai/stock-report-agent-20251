@@ -10,142 +10,182 @@
       {
         "item_code": "31",
         "item_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát",
-        "value": 0.0,
-        "notes_ref": "23.1",
-        "original_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát"
-      },
-      {
-        "item_code": "31",
-        "item_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát",
         "value": 191909700000.0,
         "notes_ref": "23.1",
-        "original_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát"
+        "original_name": "Tiền thu từ phát hành cổ phiếu và vốn góp của cổ đông không kiểm soát",
+        "row_identity": "cash_flow|code:31",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "32",
         "item_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành",
         "value": -7664060000.0,
         "notes_ref": null,
-        "original_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành"
+        "original_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành",
+        "row_identity": "cash_flow|code:32",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023",
+        "period_key": "2023FY"
       },
       {
         "item_code": "32",
         "item_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành",
         "value": -1696500000.0,
         "notes_ref": null,
-        "original_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành"
+        "original_name": "Mua lại cổ phiếu của doanh nghiệp đã phát hành",
+        "row_identity": "cash_flow|code:32",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "33",
         "item_name": "Tiền thu từ đi vay",
         "value": 27856643463587.0,
         "notes_ref": null,
-        "original_name": "Tiền thu từ đi vay"
+        "original_name": "Tiền thu từ đi vay",
+        "row_identity": "cash_flow|code:33",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023",
+        "period_key": "2023FY"
       },
       {
         "item_code": "33",
         "item_name": "Tiền thu từ đi vay",
         "value": 34307540225500.0,
         "notes_ref": null,
-        "original_name": "Tiền thu từ đi vay"
+        "original_name": "Tiền thu từ đi vay",
+        "row_identity": "cash_flow|code:33",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "34",
         "item_name": "Tiền chi trả nợ gốc vay",
         "value": -22207499036026.0,
         "notes_ref": "22",
-        "original_name": "Tiền chi trả nợ gốc vay"
+        "original_name": "Tiền chi trả nợ gốc vay",
+        "row_identity": "cash_flow|code:34",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023",
+        "period_key": "2023FY"
       },
       {
         "item_code": "34",
         "item_name": "Tiền chi trả nợ gốc vay",
         "value": -36612080348534.0,
         "notes_ref": "22",
-        "original_name": "Tiền chi trả nợ gốc vay"
-      },
-      {
-        "item_code": "36",
-        "item_name": "Cổ tức đã trả",
-        "value": 0.0,
-        "notes_ref": "23.1",
-        "original_name": "Cổ tức đã trả"
+        "original_name": "Tiền chi trả nợ gốc vay",
+        "row_identity": "cash_flow|code:34",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "36",
         "item_name": "Cổ tức đã trả",
         "value": -731854815000.0,
         "notes_ref": "23.1",
-        "original_name": "Cổ tức đã trả"
+        "original_name": "Cổ tức đã trả",
+        "row_identity": "cash_flow|code:36",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "40",
         "item_name": "Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính",
         "value": 5641480367561.0,
         "notes_ref": null,
-        "original_name": "Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính"
+        "original_name": "Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính",
+        "row_identity": "cash_flow|code:40",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023",
+        "period_key": "2023FY"
       },
       {
         "item_code": "40",
         "item_name": "Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính",
         "value": -2846181738034.0,
         "notes_ref": null,
-        "original_name": "Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính"
+        "original_name": "Lưu chuyển tiền thuần từ (sử dụng vào) hoạt động tài chính",
+        "row_identity": "cash_flow|code:40",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "50",
         "item_name": "Lưu chuyển tiền thuần trong kỳ",
         "value": -1619501229334.0,
         "notes_ref": null,
-        "original_name": "Lưu chuyển tiền thuần trong kỳ"
+        "original_name": "Lưu chuyển tiền thuần trong kỳ",
+        "row_identity": "cash_flow|code:50",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023",
+        "period_key": "2023FY"
       },
       {
         "item_code": "50",
         "item_name": "Lưu chuyển tiền thuần trong kỳ",
         "value": -1244329453278.0,
         "notes_ref": null,
-        "original_name": "Lưu chuyển tiền thuần trong kỳ"
+        "original_name": "Lưu chuyển tiền thuần trong kỳ",
+        "row_identity": "cash_flow|code:50",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "60",
         "item_name": "Tiền và tương đương tiền đầu kỳ",
         "value": 5061020547422.0,
         "notes_ref": null,
-        "original_name": "Tiền và tương đương tiền đầu kỳ"
+        "original_name": "Tiền và tương đương tiền đầu kỳ",
+        "row_identity": "cash_flow|code:60",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023",
+        "period_key": "2023FY"
       },
       {
         "item_code": "60",
         "item_name": "Tiền và tương đương tiền đầu kỳ",
         "value": 4142015762555.0,
         "notes_ref": null,
-        "original_name": "Tiền và tương đương tiền đầu kỳ"
+        "original_name": "Tiền và tương đương tiền đầu kỳ",
+        "row_identity": "cash_flow|code:60",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "61",
         "item_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
         "value": 20045929.0,
         "notes_ref": null,
-        "original_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ"
+        "original_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+        "row_identity": "cash_flow|code:61",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023",
+        "period_key": "2023FY"
       },
       {
         "item_code": "61",
         "item_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
         "value": 143043760.0,
         "notes_ref": null,
-        "original_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ"
+        "original_name": "Ảnh hưởng của thay đổi tỷ giá hối đoái quy đổi ngoại tệ",
+        "row_identity": "cash_flow|code:61",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       },
       {
         "item_code": "70",
         "item_name": "Tiền và tương đương tiền cuối kỳ",
         "value": 3441539364017.0,
         "notes_ref": "4",
-        "original_name": "Tiền và tương đương tiền cuối kỳ"
+        "original_name": "Tiền và tương đương tiền cuối kỳ",
+        "row_identity": "cash_flow|code:70",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2023",
+        "period_key": "2023FY"
       },
       {
         "item_code": "70",
         "item_name": "Tiền và tương đương tiền cuối kỳ",
         "value": 2897829353037.0,
         "notes_ref": "4",
-        "original_name": "Tiền và tương đương tiền cuối kỳ"
+        "original_name": "Tiền và tương đương tiền cuối kỳ",
+        "row_identity": "cash_flow|code:70",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 6 năm 2022",
+        "period_key": "2022FY"
       }
     ]
   }

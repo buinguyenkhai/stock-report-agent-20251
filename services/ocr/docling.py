@@ -77,6 +77,7 @@ class DoclingOCRService(OCRStrategy):
         # Image converter (lazy-loaded)
         self._image_converter = None
         self._last_debug_artifacts: Optional[Dict[str, Any]] = None
+        self._last_reconstruction_artifacts: Optional[Dict[str, Any]] = None
 
 
     @property
@@ -93,47 +94,209 @@ class DoclingOCRService(OCRStrategy):
             )
         return self._image_converter
 
-    def _capture_hybrid_debug_artifacts(self, *, input_format: InputFormat) -> None:
+    def _bbox_to_dict(self, bbox: Any) -> Optional[Dict[str, float]]:
+        if bbox is None:
+            return None
+        try:
+            return {
+                "left": float(getattr(bbox, "l")),
+                "top": float(getattr(bbox, "t")),
+                "right": float(getattr(bbox, "r")),
+                "bottom": float(getattr(bbox, "b")),
+            }
+        except Exception:
+            return None
+
+    def _extract_page_size(self, page: Any) -> Optional[list[float]]:
+        size = getattr(page, "size", None)
+        if size is None:
+            return None
+        width = getattr(size, "width", None)
+        height = getattr(size, "height", None)
+        if isinstance(width, (int, float)) and isinstance(height, (int, float)):
+            return [float(width), float(height)]
+        as_tuple = getattr(size, "as_tuple", None)
+        if callable(as_tuple):
+            try:
+                value = as_tuple()
+            except Exception:
+                value = None
+            if isinstance(value, tuple) and len(value) == 2:
+                return [float(value[0]), float(value[1])]
+        return None
+
+    def _bbox_signature(self, bbox_obj: Dict[str, float] | None) -> tuple[int, int, int, int] | None:
+        if bbox_obj is None:
+            return None
+        try:
+            return (
+                int(round(float(bbox_obj["left"]))),
+                int(round(float(bbox_obj["top"]))),
+                int(round(float(bbox_obj["right"]))),
+                int(round(float(bbox_obj["bottom"]))),
+            )
+        except Exception:
+            return None
+
+    def _extract_updated_bbox_signatures(self, payload: Dict[str, Any]) -> set[tuple[int, int, int, int]]:
+        accepted: set[tuple[int, int, int, int]] = set()
+        diffs = payload.get("update_diffs")
+        if not isinstance(diffs, list):
+            return accepted
+        for diff in diffs:
+            if not isinstance(diff, dict) or not bool(diff.get("accepted")):
+                continue
+            bbox = diff.get("bbox")
+            if not isinstance(bbox, dict):
+                continue
+            sig = self._bbox_signature(
+                {
+                    "left": float(bbox.get("l", 0.0) or 0.0),
+                    "top": float(bbox.get("t", 0.0) or 0.0),
+                    "right": float(bbox.get("r", 0.0) or 0.0),
+                    "bottom": float(bbox.get("b", 0.0) or 0.0),
+                }
+            )
+            if sig is not None:
+                accepted.add(sig)
+        return accepted
+
+    def _extract_cell_tokens(self, cells: Any, *, updated_bboxes: set[tuple[int, int, int, int]] | None = None) -> list[Dict[str, Any]]:
+        tokens: list[Dict[str, Any]] = []
+        updated = updated_bboxes or set()
+        for idx, cell in enumerate(cells or []):
+            text = str(getattr(cell, "text", "") or "").strip()
+            if not text:
+                continue
+            rect = getattr(cell, "rect", None)
+            if rect is None:
+                continue
+            try:
+                bbox = rect.to_bounding_box()
+            except Exception:
+                bbox = None
+            bbox_obj = self._bbox_to_dict(bbox)
+            if bbox_obj is None:
+                continue
+            line_key = getattr(cell, "_tsv_line_key", None)
+            bbox_sig = self._bbox_signature(bbox_obj)
+            source_tag = "surya_updated" if bbox_sig is not None and bbox_sig in updated else "baseline"
+            tokens.append(
+                {
+                    "index": int(getattr(cell, "index", idx) or idx),
+                    "text": text,
+                    "left": bbox_obj["left"],
+                    "top": bbox_obj["top"],
+                    "right": bbox_obj["right"],
+                    "bottom": bbox_obj["bottom"],
+                    "confidence": float(getattr(cell, "confidence", 0.0) or 0.0),
+                    "line_key": list(line_key) if isinstance(line_key, tuple) else None,
+                    "from_ocr": bool(getattr(cell, "from_ocr", False)),
+                    "source_tag": source_tag,
+                }
+            )
+        return tokens
+
+    def _extract_table_regions(self, page: Any) -> list[Dict[str, float]]:
+        regions: list[Dict[str, float]] = []
+        predictions = getattr(page, "predictions", None)
+        tablestructure = getattr(predictions, "tablestructure", None)
+        table_map = getattr(tablestructure, "table_map", {}) if tablestructure is not None else {}
+        if isinstance(table_map, dict):
+            for table in table_map.values():
+                cluster = getattr(table, "cluster", None)
+                bbox_obj = self._bbox_to_dict(getattr(cluster, "bbox", None))
+                if bbox_obj is not None:
+                    regions.append(bbox_obj)
+        if regions:
+            return regions
+
+        layout = getattr(predictions, "layout", None)
+        clusters = getattr(layout, "clusters", []) if layout is not None else []
+        for cluster in clusters or []:
+            label = str(getattr(cluster, "label", "") or "").lower()
+            if "table" not in label:
+                continue
+            bbox_obj = self._bbox_to_dict(getattr(cluster, "bbox", None))
+            if bbox_obj is not None:
+                regions.append(bbox_obj)
+        return regions
+
+    def _capture_conversion_debug_artifacts(self, result: Any, *, input_format: InputFormat) -> None:
         self._last_debug_artifacts = None
+        self._last_reconstruction_artifacts = None
         try:
             pipeline_get = getattr(self.converter, "_get_pipeline", None)
             if not callable(pipeline_get):
                 pipeline_get = getattr(self.image_converter, "_get_pipeline", None)
-            if not callable(pipeline_get):
-                return
-
-            pipeline = pipeline_get(input_format)
-            model = getattr(pipeline, "_hybrid_ocr_model", None) if pipeline is not None else None
-            if model is None:
-                return
 
             payload: Dict[str, Any] = {}
+            if callable(pipeline_get):
+                pipeline = pipeline_get(input_format)
+                model = getattr(pipeline, "_hybrid_ocr_model", None) if pipeline is not None else None
+            else:
+                model = None
 
-            stats_get = getattr(model, "get_stats", None)
-            if callable(stats_get):
-                stats = stats_get()
-                if isinstance(stats, dict):
-                    payload["hybrid_ocr_stats"] = stats
+            if model is not None:
+                stats_get = getattr(model, "get_stats", None)
+                if callable(stats_get):
+                    stats = stats_get()
+                    if isinstance(stats, dict):
+                        payload["hybrid_ocr_stats"] = stats
 
-            small_snap_get = getattr(model, "get_debug_snapshot", None)
-            if callable(small_snap_get):
-                snap = small_snap_get()
-                if isinstance(snap, dict):
-                    payload["ocr_cells_debug"] = snap
+                small_snap_get = getattr(model, "get_debug_snapshot", None)
+                if callable(small_snap_get):
+                    snap = small_snap_get()
+                    if isinstance(snap, dict):
+                        payload["ocr_cells_debug"] = snap
 
-            diffs_get = getattr(model, "get_update_diffs", None)
-            if callable(diffs_get):
-                diffs = diffs_get()
-                if isinstance(diffs, list):
-                    payload["update_diffs"] = diffs
+                diffs_get = getattr(model, "get_update_diffs", None)
+                if callable(diffs_get):
+                    diffs = diffs_get()
+                    if isinstance(diffs, list):
+                        payload["update_diffs"] = diffs
+
+            updated_bboxes = self._extract_updated_bbox_signatures(payload)
+
+            pages = getattr(result, "pages", None)
+            page = pages[0] if isinstance(pages, list) and pages else None
+            if page is not None:
+                parsed_page = getattr(page, "parsed_page", None)
+                textline_tokens = self._extract_cell_tokens(
+                    getattr(parsed_page, "textline_cells", None),
+                    updated_bboxes=updated_bboxes,
+                )
+                word_tokens = self._extract_cell_tokens(
+                    getattr(parsed_page, "word_cells", None),
+                    updated_bboxes=updated_bboxes,
+                )
+                table_regions = self._extract_table_regions(page)
+                reconstruction_artifacts = {
+                    "page_size": self._extract_page_size(page),
+                    "textline_tokens": textline_tokens,
+                    "word_tokens": word_tokens,
+                    "table_regions": table_regions,
+                }
+                self._last_reconstruction_artifacts = reconstruction_artifacts
+                payload["reconstruction_debug"] = {
+                    "page_size": reconstruction_artifacts["page_size"],
+                    "textline_token_count": len(textline_tokens),
+                    "word_token_count": len(word_tokens),
+                    "table_region_count": len(table_regions),
+                }
 
             if payload:
                 self._last_debug_artifacts = payload
         except Exception:
             self._last_debug_artifacts = None
+            self._last_reconstruction_artifacts = None
 
     def get_debug_artifacts(self) -> Optional[Dict[str, Any]]:
         payload = self._last_debug_artifacts
+        return dict(payload) if isinstance(payload, dict) else None
+
+    def get_reconstruction_artifacts(self) -> Optional[Dict[str, Any]]:
+        payload = self._last_reconstruction_artifacts
         return dict(payload) if isinstance(payload, dict) else None
 
     def process_pdf(self, pdf_url: str) -> str:
@@ -165,9 +328,9 @@ class DoclingOCRService(OCRStrategy):
                     pass
                 input_path = tmp_path
 
-            doc = self.converter.convert(input_path).document
-            self._capture_hybrid_debug_artifacts(input_format=InputFormat.PDF)
-            return doc.export_to_markdown()
+            result = self.converter.convert(input_path)
+            self._capture_conversion_debug_artifacts(result, input_format=InputFormat.PDF)
+            return result.document.export_to_markdown()
         finally:
             if tmp_path and os.path.exists(tmp_path):
                 try:
@@ -186,7 +349,7 @@ class DoclingOCRService(OCRStrategy):
         
         try:
             result = self.image_converter.convert(tmp_path)
-            self._capture_hybrid_debug_artifacts(input_format=InputFormat.IMAGE)
+            self._capture_conversion_debug_artifacts(result, input_format=InputFormat.IMAGE)
             return result.document.export_to_markdown()
         finally:
             if os.path.exists(tmp_path):

@@ -7,79 +7,442 @@
       {
         "item_code": "1",
         "item_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 29725046708024.0,
+        "notes_ref": "24.1",
+        "original_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:1",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
         "value": 57060133321700.0,
         "notes_ref": "24.1",
-        "original_name": "1. Doanh thu bán hàng và cung cấp dịch vụ"
+        "original_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:1",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 34702840342036.0,
+        "notes_ref": "24.1",
+        "original_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:1",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "1",
+        "item_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 71522014227655.0,
+        "notes_ref": "24.1",
+        "original_name": "1. Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:1",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "2",
+        "item_name": "2. Các khoản giảm trừ doanh thu",
+        "value": -260216264133.0,
+        "notes_ref": "24.1",
+        "original_name": "2. Các khoản giảm trừ doanh thu",
+        "row_identity": "income_statement|code:2",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "2",
         "item_name": "2. Các khoản giảm trừ doanh thu",
         "value": -489490855360.0,
         "notes_ref": "24.1",
-        "original_name": "2. Các khoản giảm trừ doanh thu"
+        "original_name": "2. Các khoản giảm trừ doanh thu",
+        "row_identity": "income_statement|code:2",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "2",
+        "item_name": "2. Các khoản giảm trừ doanh thu",
+        "value": -365100370263.0,
+        "notes_ref": "24.1",
+        "original_name": "2. Các khoản giảm trừ doanh thu",
+        "row_identity": "income_statement|code:2",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "2",
+        "item_name": "2. Các khoản giảm trừ doanh thu",
+        "value": -717597637232.0,
+        "notes_ref": "24.1",
+        "original_name": "2. Các khoản giảm trừ doanh thu",
+        "row_identity": "income_statement|code:2",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 29464830443891.0,
+        "notes_ref": "24.1",
+        "original_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "10",
         "item_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
         "value": 56570642466340.0,
         "notes_ref": "24.1",
-        "original_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ"
+        "original_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 34337739971773.0,
+        "notes_ref": "24.1",
+        "original_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 70804416590423.0,
+        "notes_ref": "24.1",
+        "original_name": "3. Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
+        "value": -24023662436242.0,
+        "notes_ref": "28",
+        "original_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
+        "row_identity": "income_statement|code:11",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "11",
         "item_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
         "value": -45914974606904.0,
         "notes_ref": "28",
-        "original_name": "4. Giá vốn hàng bán và dịch vụ cung cấp"
+        "original_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
+        "row_identity": "income_statement|code:11",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
+        "value": -27001321732513.0,
+        "notes_ref": "28",
+        "original_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
+        "row_identity": "income_statement|code:11",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
+        "value": -55343734259664.0,
+        "notes_ref": "28",
+        "original_name": "4. Giá vốn hàng bán và dịch vụ cung cấp",
+        "row_identity": "income_statement|code:11",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 5441168007649.0,
+        "notes_ref": null,
+        "original_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "20",
         "item_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
         "value": 10655667859436.0,
         "notes_ref": null,
-        "original_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+        "original_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 7336418239260.0,
+        "notes_ref": null,
+        "original_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 15460682330759.0,
+        "notes_ref": null,
+        "original_name": "5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6. Doanh thu hoạt động tài chính",
+        "value": 585368718654.0,
+        "notes_ref": "24.2",
+        "original_name": "6. Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "21",
         "item_name": "6. Doanh thu hoạt động tài chính",
         "value": 944453612603.0,
         "notes_ref": "24.2",
-        "original_name": "6. Doanh thu hoạt động tài chính"
+        "original_name": "6. Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6. Doanh thu hoạt động tài chính",
+        "value": 297757553066.0,
+        "notes_ref": "24.2",
+        "original_name": "6. Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6. Doanh thu hoạt động tài chính",
+        "value": 652616758696.0,
+        "notes_ref": "24.2",
+        "original_name": "6. Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7. Chi phí tài chính",
+        "value": -396875094839.0,
+        "notes_ref": "25",
+        "original_name": "7. Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "22",
         "item_name": "7. Chi phí tài chính",
         "value": -692654322784.0,
         "notes_ref": "25",
-        "original_name": "7. Chi phí tài chính"
+        "original_name": "7. Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7. Chi phí tài chính",
+        "value": -360157346540.0,
+        "notes_ref": "25",
+        "original_name": "7. Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7. Chi phí tài chính",
+        "value": -566436474665.0,
+        "notes_ref": "25",
+        "original_name": "7. Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "23",
+        "item_name": "- Trong đó: Chi phí lãi vay",
+        "value": -384520976326.0,
+        "notes_ref": null,
+        "original_name": "- Trong đó: Chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "23",
         "item_name": "- Trong đó: Chi phí lãi vay",
         "value": -680299703032.0,
         "notes_ref": null,
-        "original_name": "- Trong đó: Chi phí lãi vay"
+        "original_name": "- Trong đó: Chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "23",
+        "item_name": "- Trong đó: Chi phí lãi vay",
+        "value": -365962737941.0,
+        "notes_ref": null,
+        "original_name": "- Trong đó: Chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "23",
+        "item_name": "- Trong đó: Chi phí lãi vay",
+        "value": -566436474665.0,
+        "notes_ref": null,
+        "original_name": "- Trong đó: Chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "25",
+        "item_name": "8. Chi phí bán hàng",
+        "value": -5211133500533.0,
+        "notes_ref": "26, 28",
+        "original_name": "8. Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "25",
         "item_name": "8. Chi phí bán hàng",
         "value": -9995819411746.0,
         "notes_ref": "26, 28",
-        "original_name": "8. Chi phí bán hàng"
+        "original_name": "8. Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "25",
+        "item_name": "8. Chi phí bán hàng",
+        "value": -4807875682062.0,
+        "notes_ref": "26, 28",
+        "original_name": "8. Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "25",
+        "item_name": "8. Chi phí bán hàng",
+        "value": -9843906273209.0,
+        "notes_ref": "26, 28",
+        "original_name": "8. Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "26",
+        "item_name": "9. Chi phí quản lý doanh nghiệp",
+        "value": -229156805109.0,
+        "notes_ref": "26, 28",
+        "original_name": "9. Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "26",
         "item_name": "9. Chi phí quản lý doanh nghiệp",
         "value": -553849096527.0,
         "notes_ref": "26, 28",
-        "original_name": "9. Chi phí quản lý doanh nghiệp"
+        "original_name": "9. Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "26",
+        "item_name": "9. Chi phí quản lý doanh nghiệp",
+        "value": -500331314841.0,
+        "notes_ref": "26, 28",
+        "original_name": "9. Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "26",
+        "item_name": "9. Chi phí quản lý doanh nghiệp",
+        "value": -1739773674675.0,
+        "notes_ref": "26, 28",
+        "original_name": "9. Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "30",
+        "item_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 189371325822.0,
+        "notes_ref": null,
+        "original_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số quý này năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
       },
       {
         "item_code": "30",
         "item_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
         "value": 357798640982.0,
         "notes_ref": null,
-        "original_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh"
+        "original_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2023 Số lũy kế năm nay VNĐ",
+        "period_key": "2023Q2_YTD"
+      },
+      {
+        "item_code": "30",
+        "item_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 1965811448883.0,
+        "notes_ref": null,
+        "original_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số quý này năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
+      },
+      {
+        "item_code": "30",
+        "item_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 3963182666906.0,
+        "notes_ref": null,
+        "original_name": "10. Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "Cho kỳ kế toán sáu tháng kết thúc ngày 30 tháng 06 năm 2022 Số lũy kế năm trước VNĐ",
+        "period_key": "2022Q2_YTD"
       }
     ]
   },

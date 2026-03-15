@@ -10,10 +10,12 @@ from evaluation.benchmark_v2.csv_codec import (
     csv_to_canonical,
     load_csv_pack,
     load_meta,
+    migrate_rows_to_structured_contract,
     save_csv_pack,
     update_meta,
     validate_csv_pack,
 )
+from evaluation.benchmark_v2.migrate_gt_contract import migrate_gt_contract
 from evaluation.benchmark_v2.normalize_gt_units import normalize_gt_units
 
 
@@ -293,3 +295,134 @@ def test_csv_codec_round_trips_identity_fields(tmp_path: Path) -> None:
     assert pack["rows"].iloc[0]["row_identity"] == "net_cash_flow"
     assert pack["rows"].iloc[0]["column_label"] == "Từ 1/1/2024 đến 30/9/2024"
     assert pack["rows"].iloc[0]["period_key"] == "2024Q3_YTD"
+
+
+def test_migrate_rows_to_structured_contract_expands_multi_column_values(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_Q4_2024_p001"
+    _write_manifest(dataset_root, sample_id)
+    _seed_canonical_files(dataset_root, sample_id)
+
+    cells_df = pd.DataFrame(
+        [
+            {"row_idx": 0, "col_idx": 0, "text": "Mã số"},
+            {"row_idx": 0, "col_idx": 1, "text": "Chỉ tiêu"},
+            {"row_idx": 0, "col_idx": 2, "text": "31/12/2024"},
+            {"row_idx": 0, "col_idx": 3, "text": "31/12/2023"},
+            {"row_idx": 1, "col_idx": 0, "text": "110"},
+            {"row_idx": 1, "col_idx": 1, "text": "Tiền và tương đương tiền"},
+            {"row_idx": 1, "col_idx": 2, "text": "1.200"},
+            {"row_idx": 1, "col_idx": 3, "text": "900"},
+        ]
+    )
+    rows_df = pd.DataFrame(
+        [
+            {
+                "statement": "balance_sheet",
+                "item_code": "110",
+                "item_name": "Tiền và tương đương tiền",
+                "value": "1200",
+                "notes_ref": "",
+                "original_name": "Tiền và tương đương tiền",
+            }
+        ]
+    )
+    save_csv_pack(sample_id, dataset_root, cells=cells_df, rows=rows_df)
+
+    summary = migrate_rows_to_structured_contract(sample_id, dataset_root)
+    assert summary["changed"] is True
+    assert summary["rows_after"] == 2
+
+    pack = load_csv_pack(sample_id, dataset_root)
+    assert len(pack["rows"]) == 2
+    assert set(pack["rows"]["column_label"]) == {"31/12/2024", "31/12/2023"}
+    assert set(pack["rows"]["period_key"]) == {"2024FY", "2023FY"}
+
+    structured = json.loads((dataset_root / f"gt_structured/{sample_id}.json").read_text(encoding="utf-8"))
+    items = structured["balance_sheet"]["items"]
+    assert len(items) == 2
+    assert items[0]["row_identity"] == "balance_sheet|code:110"
+
+
+def test_migrate_rows_to_structured_contract_preserves_vnd_normalization(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_Q1_2024_p001"
+    _write_manifest(dataset_root, sample_id)
+    _seed_canonical_files(dataset_root, sample_id)
+
+    cells_df = pd.DataFrame(
+        [
+            {"row_idx": 0, "col_idx": 0, "text": "Chỉ tiêu"},
+            {"row_idx": 0, "col_idx": 1, "text": "31/03/2024 triệu đồng"},
+            {"row_idx": 0, "col_idx": 2, "text": "31/12/2023 triệu đồng"},
+            {"row_idx": 1, "col_idx": 0, "text": "Tiền mặt"},
+            {"row_idx": 1, "col_idx": 1, "text": "12"},
+            {"row_idx": 1, "col_idx": 2, "text": "10"},
+        ]
+    )
+    rows_df = pd.DataFrame(
+        [
+            {
+                "statement": "balance_sheet",
+                "item_code": "",
+                "item_name": "Tiền mặt",
+                "value": "12000000",
+                "notes_ref": "",
+                "original_name": "Tiền mặt",
+            }
+        ]
+    )
+    save_csv_pack(sample_id, dataset_root, cells=cells_df, rows=rows_df)
+    update_meta(
+        sample_id,
+        dataset_root,
+        {
+            "value_unit_normalized_to": "VND",
+            "report_unit_multiplier": 1_000_000.0,
+        },
+    )
+
+    summary = migrate_rows_to_structured_contract(sample_id, dataset_root)
+    assert summary["changed"] is True
+
+    pack = load_csv_pack(sample_id, dataset_root)
+    assert set(pack["rows"]["value"]) == {"12000000.0", "10000000.0"}
+
+
+def test_vcb_q1_2022_p008_backfill_is_complete() -> None:
+    dataset_root = Path("data/benchmark_v2")
+    sample_id = "VCB_Q1_2022_p008"
+
+    errors = validate_csv_pack(sample_id, dataset_root)
+    assert errors == []
+
+    pack = load_csv_pack(sample_id, dataset_root)
+    rows = pack["rows"]
+    assert len(rows) == 28
+    assert set(rows["statement"]) == {"income_statement"}
+    assert set(rows["item_code"]) == {"7", "8", "XI", "XII", "XIII", "XIV", "XV"}
+    assert set(rows["column_label"]) == {
+        "Quý I Năm nay Triệu VND",
+        "Quý I Năm trước Triệu VND",
+        "Lũy kế từ đầu năm Năm nay Triệu VND",
+        "Lũy kế từ đầu năm Năm trước Triệu VND",
+    }
+
+    structured = json.loads((dataset_root / f"gt_structured/{sample_id}.json").read_text(encoding="utf-8"))
+    assert len(structured["income_statement"]["items"]) == 28
+    eps_items = [item for item in structured["income_statement"]["items"] if item.get("item_code") == "XV"]
+    assert {item["value"] for item in eps_items} == {1682.0, 1459.0}
+
+
+def test_included_gt_has_no_remaining_annotation_gap() -> None:
+    summary = migrate_gt_contract(
+        dataset_root=Path("data/benchmark_v2"),
+        include_scope="included",
+        split="dev",
+        force=False,
+    )
+    assert summary["failed_count"] == 0
+    skipped = summary["skipped_samples"]
+    assert not any(sample.get("reason") == "no_annotated_rows" for sample in skipped)

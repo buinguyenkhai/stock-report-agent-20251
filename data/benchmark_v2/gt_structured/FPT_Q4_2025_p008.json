@@ -7,163 +7,922 @@
       {
         "item_code": "01",
         "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
-        "value": 70207689409.081,
+        "value": 20258866135395.0,
         "notes_ref": null,
-        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ"
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:01",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "01",
+        "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 17651065378939.0,
+        "notes_ref": null,
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:01",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "01",
+        "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 70207689409081.0,
+        "notes_ref": null,
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:01",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "01",
+        "item_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "value": 62962652134635.0,
+        "notes_ref": null,
+        "original_name": "1 Doanh thu bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:01",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "02",
         "item_name": "2 Các khoản giảm trừ",
-        "value": 94863843.843,
+        "value": 33415777986.0,
         "notes_ref": null,
-        "original_name": "2 Các khoản giảm trừ"
+        "original_name": "2 Các khoản giảm trừ",
+        "row_identity": "income_statement|code:02",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "02",
+        "item_name": "2 Các khoản giảm trừ",
+        "value": 43247573048.0,
+        "notes_ref": null,
+        "original_name": "2 Các khoản giảm trừ",
+        "row_identity": "income_statement|code:02",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "02",
+        "item_name": "2 Các khoản giảm trừ",
+        "value": 94863843843.0,
+        "notes_ref": null,
+        "original_name": "2 Các khoản giảm trừ",
+        "row_identity": "income_statement|code:02",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "02",
+        "item_name": "2 Các khoản giảm trừ",
+        "value": 113857783268.0,
+        "notes_ref": null,
+        "original_name": "2 Các khoản giảm trừ",
+        "row_identity": "income_statement|code:02",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "10",
         "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
-        "value": 70112825565.238,
+        "value": 20225450357409.0,
         "notes_ref": "25",
-        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ"
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 17607817805891.0,
+        "notes_ref": "25",
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 70112825565238.0,
+        "notes_ref": "25",
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "10",
+        "item_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "value": 62848794351367.0,
+        "notes_ref": "25",
+        "original_name": "3 Doanh thu thuần về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:10",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "11",
         "item_name": "4 Giá vốn hàng bán",
-        "value": 44217420808.74,
+        "value": 13171300027162.0,
         "notes_ref": "26",
-        "original_name": "4 Giá vốn hàng bán"
+        "original_name": "4 Giá vốn hàng bán",
+        "row_identity": "income_statement|code:11",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4 Giá vốn hàng bán",
+        "value": 11230248103366.0,
+        "notes_ref": "26",
+        "original_name": "4 Giá vốn hàng bán",
+        "row_identity": "income_statement|code:11",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4 Giá vốn hàng bán",
+        "value": 44217420808740.0,
+        "notes_ref": "26",
+        "original_name": "4 Giá vốn hàng bán",
+        "row_identity": "income_statement|code:11",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "11",
+        "item_name": "4 Giá vốn hàng bán",
+        "value": 39150445981451.0,
+        "notes_ref": "26",
+        "original_name": "4 Giá vốn hàng bán",
+        "row_identity": "income_statement|code:11",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "20",
         "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
-        "value": 25895404756.498,
+        "value": 7054150330247.0,
         "notes_ref": null,
-        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ"
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 6377569702525.0,
+        "notes_ref": null,
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 25895404756498.0,
+        "notes_ref": null,
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "20",
+        "item_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "value": 23698348369916.0,
+        "notes_ref": null,
+        "original_name": "5 Lợi nhuận gộp về bán hàng và cung cấp dịch vụ",
+        "row_identity": "income_statement|code:20",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "21",
         "item_name": "6 Doanh thu hoạt động tài chính",
-        "value": 2977156211.981,
+        "value": 553701777401.0,
         "notes_ref": "27",
-        "original_name": "6 Doanh thu hoạt động tài chính"
+        "original_name": "6 Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6 Doanh thu hoạt động tài chính",
+        "value": 582674583940.0,
+        "notes_ref": "27",
+        "original_name": "6 Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6 Doanh thu hoạt động tài chính",
+        "value": 2977156211981.0,
+        "notes_ref": "27",
+        "original_name": "6 Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "21",
+        "item_name": "6 Doanh thu hoạt động tài chính",
+        "value": 1935749115305.0,
+        "notes_ref": "27",
+        "original_name": "6 Doanh thu hoạt động tài chính",
+        "row_identity": "income_statement|code:21",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "22",
         "item_name": "7 Chi phí tài chính",
-        "value": 1672045216.743,
+        "value": 476741111428.0,
         "notes_ref": "28",
-        "original_name": "7 Chi phí tài chính"
+        "original_name": "7 Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7 Chi phí tài chính",
+        "value": 831375395433.0,
+        "notes_ref": "28",
+        "original_name": "7 Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7 Chi phí tài chính",
+        "value": 1672045216743.0,
+        "notes_ref": "28",
+        "original_name": "7 Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "22",
+        "item_name": "7 Chi phí tài chính",
+        "value": 1811547381981.0,
+        "notes_ref": "28",
+        "original_name": "7 Chi phí tài chính",
+        "row_identity": "income_statement|code:22",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "23",
         "item_name": "Trong đó: chi phí lãi vay",
-        "value": 809759601.156,
+        "value": 207025852637.0,
         "notes_ref": null,
-        "original_name": "Trong đó: chi phí lãi vay"
+        "original_name": "Trong đó: chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "23",
+        "item_name": "Trong đó: chi phí lãi vay",
+        "value": 134854268998.0,
+        "notes_ref": null,
+        "original_name": "Trong đó: chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "23",
+        "item_name": "Trong đó: chi phí lãi vay",
+        "value": 809759601156.0,
+        "notes_ref": null,
+        "original_name": "Trong đó: chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "23",
+        "item_name": "Trong đó: chi phí lãi vay",
+        "value": 551639361786.0,
+        "notes_ref": null,
+        "original_name": "Trong đó: chi phí lãi vay",
+        "row_identity": "income_statement|code:23",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "24",
         "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
-        "value": 658024835.314,
+        "value": 283746137174.0,
         "notes_ref": null,
-        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết"
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "row_identity": "income_statement|code:24",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "24",
+        "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "value": 116894742188.0,
+        "notes_ref": null,
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "row_identity": "income_statement|code:24",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "24",
+        "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "value": 658024835314.0,
+        "notes_ref": null,
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "row_identity": "income_statement|code:24",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "24",
+        "item_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "value": 392531256272.0,
+        "notes_ref": null,
+        "original_name": "8 Lợi nhuận từ công ty liên doanh liên kết",
+        "row_identity": "income_statement|code:24",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "25",
         "item_name": "9 Chi phí bán hàng",
-        "value": 7580840383.875,
+        "value": 2045175725062.0,
         "notes_ref": null,
-        "original_name": "9 Chi phí bán hàng"
+        "original_name": "9 Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "25",
+        "item_name": "9 Chi phí bán hàng",
+        "value": 1594938073232.0,
+        "notes_ref": null,
+        "original_name": "9 Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "25",
+        "item_name": "9 Chi phí bán hàng",
+        "value": 7580840383875.0,
+        "notes_ref": null,
+        "original_name": "9 Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "25",
+        "item_name": "9 Chi phí bán hàng",
+        "value": 6115961971783.0,
+        "notes_ref": null,
+        "original_name": "9 Chi phí bán hàng",
+        "row_identity": "income_statement|code:25",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "26",
         "item_name": "10 Chi phí quản lý doanh nghiệp",
-        "value": 7330786998.828,
+        "value": 1892395897574.0,
         "notes_ref": null,
-        "original_name": "10 Chi phí quản lý doanh nghiệp"
+        "original_name": "10 Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "26",
+        "item_name": "10 Chi phí quản lý doanh nghiệp",
+        "value": 1729950878232.0,
+        "notes_ref": null,
+        "original_name": "10 Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "26",
+        "item_name": "10 Chi phí quản lý doanh nghiệp",
+        "value": 7330786998828.0,
+        "notes_ref": null,
+        "original_name": "10 Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "26",
+        "item_name": "10 Chi phí quản lý doanh nghiệp",
+        "value": 7074038614774.0,
+        "notes_ref": null,
+        "original_name": "10 Chi phí quản lý doanh nghiệp",
+        "row_identity": "income_statement|code:26",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "30",
         "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
-        "value": 12946913204.347,
+        "value": 3477285510758.0,
         "notes_ref": null,
-        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh"
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "30",
+        "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 2920874681756.0,
+        "notes_ref": null,
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "30",
+        "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 12946913204347.0,
+        "notes_ref": null,
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "30",
+        "item_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "value": 11025080772955.0,
+        "notes_ref": null,
+        "original_name": "11 Lợi nhuận thuần từ hoạt động kinh doanh",
+        "row_identity": "income_statement|code:30",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "31",
         "item_name": "12 Thu nhập khác",
-        "value": 142891794.416,
+        "value": 40088826860.0,
         "notes_ref": null,
-        "original_name": "12 Thu nhập khác"
+        "original_name": "12 Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "31",
+        "item_name": "12 Thu nhập khác",
+        "value": 68481380356.0,
+        "notes_ref": null,
+        "original_name": "12 Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "31",
+        "item_name": "12 Thu nhập khác",
+        "value": 142891794416.0,
+        "notes_ref": null,
+        "original_name": "12 Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "31",
+        "item_name": "12 Thu nhập khác",
+        "value": 175450599740.0,
+        "notes_ref": null,
+        "original_name": "12 Thu nhập khác",
+        "row_identity": "income_statement|code:31",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "32",
         "item_name": "13 Chi phí khác",
-        "value": 50935701.459,
+        "value": 18969733713.0,
         "notes_ref": null,
-        "original_name": "13 Chi phí khác"
+        "original_name": "13 Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "32",
+        "item_name": "13 Chi phí khác",
+        "value": 30860884043.0,
+        "notes_ref": null,
+        "original_name": "13 Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "32",
+        "item_name": "13 Chi phí khác",
+        "value": 50935701459.0,
+        "notes_ref": null,
+        "original_name": "13 Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "32",
+        "item_name": "13 Chi phí khác",
+        "value": 130864954876.0,
+        "notes_ref": null,
+        "original_name": "13 Chi phí khác",
+        "row_identity": "income_statement|code:32",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "40",
         "item_name": "14 Lợi nhuận khác",
-        "value": 91956092.957,
+        "value": 21119093147.0,
         "notes_ref": null,
-        "original_name": "14 Lợi nhuận khác"
+        "original_name": "14 Lợi nhuận khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "40",
+        "item_name": "14 Lợi nhuận khác",
+        "value": 37620496313.0,
+        "notes_ref": null,
+        "original_name": "14 Lợi nhuận khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "40",
+        "item_name": "14 Lợi nhuận khác",
+        "value": 91956092957.0,
+        "notes_ref": null,
+        "original_name": "14 Lợi nhuận khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "40",
+        "item_name": "14 Lợi nhuận khác",
+        "value": 44585644864.0,
+        "notes_ref": null,
+        "original_name": "14 Lợi nhuận khác",
+        "row_identity": "income_statement|code:40",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "50",
         "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
-        "value": 13038869297.304,
+        "value": 3498404603905.0,
         "notes_ref": null,
-        "original_name": "15 Tổng lợi nhuận kế toán trước thuế"
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "50",
+        "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "value": 2958495178069.0,
+        "notes_ref": null,
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "50",
+        "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "value": 13038869297304.0,
+        "notes_ref": null,
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "50",
+        "item_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "value": 11069666417819.0,
+        "notes_ref": null,
+        "original_name": "15 Tổng lợi nhuận kế toán trước thuế",
+        "row_identity": "income_statement|code:50",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "51",
         "item_name": "16 Chi phí thuế TNDN hiện hành",
-        "value": 1918759235.4,
+        "value": 487956258402.0,
         "notes_ref": null,
-        "original_name": "16 Chi phí thuế TNDN hiện hành"
+        "original_name": "16 Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "51",
+        "item_name": "16 Chi phí thuế TNDN hiện hành",
+        "value": 530698618727.0,
+        "notes_ref": null,
+        "original_name": "16 Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "51",
+        "item_name": "16 Chi phí thuế TNDN hiện hành",
+        "value": 1918759235400.0,
+        "notes_ref": null,
+        "original_name": "16 Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "51",
+        "item_name": "16 Chi phí thuế TNDN hiện hành",
+        "value": 1922927614658.0,
+        "notes_ref": null,
+        "original_name": "16 Chi phí thuế TNDN hiện hành",
+        "row_identity": "income_statement|code:51",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "52",
         "item_name": "17 Chi phí thuế TNDN hoãn lại",
-        "value": -105413134.287,
+        "value": 22299782949.0,
         "notes_ref": null,
-        "original_name": "17 Chi phí thuế TNDN hoãn lại"
+        "original_name": "17 Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "52",
+        "item_name": "17 Chi phí thuế TNDN hoãn lại",
+        "value": -73049924176.0,
+        "notes_ref": null,
+        "original_name": "17 Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "52",
+        "item_name": "17 Chi phí thuế TNDN hoãn lại",
+        "value": -105413134287.0,
+        "notes_ref": null,
+        "original_name": "17 Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "52",
+        "item_name": "17 Chi phí thuế TNDN hoãn lại",
+        "value": -280683727283.0,
+        "notes_ref": null,
+        "original_name": "17 Chi phí thuế TNDN hoãn lại",
+        "row_identity": "income_statement|code:52",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "60",
         "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
-        "value": 11225523196.191,
+        "value": 2988148562554.0,
         "notes_ref": null,
-        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp"
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|code:60",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "60",
+        "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "value": 2500846483518.0,
+        "notes_ref": null,
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|code:60",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "60",
+        "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "value": 11225523196191.0,
+        "notes_ref": null,
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|code:60",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "60",
+        "item_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "value": 9427422530444.0,
+        "notes_ref": null,
+        "original_name": "18 Lợi nhuận sau thuế thu nhập doanh nghiệp",
+        "row_identity": "income_statement|code:60",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "61",
         "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
-        "value": 9369309781.066,
+        "value": 2502704371686.0,
         "notes_ref": null,
-        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ"
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "61",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "value": 2094725967705.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "61",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "value": 9369309781066.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "61",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "value": 7856767812178.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông Công ty mẹ",
+        "row_identity": "income_statement|code:61",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "62",
         "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
-        "value": 1856213415.125,
+        "value": 485444190868.0,
         "notes_ref": null,
-        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát"
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "62",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "value": 406120515813.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "62",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "value": 1856213415125.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "62",
+        "item_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "value": 1570654718266.0,
+        "notes_ref": null,
+        "original_name": "- Lợi nhuận sau thuế của Cổ đông không kiểm soát",
+        "row_identity": "income_statement|code:62",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "70",
         "item_name": "19 Lãi cơ bản trên cổ phiếu",
-        "value": 5211.0,
+        "value": 1.168,
         "notes_ref": null,
-        "original_name": "19 Lãi cơ bản trên cổ phiếu"
+        "original_name": "19 Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "70",
+        "item_name": "19 Lãi cơ bản trên cổ phiếu",
+        "value": 868.0,
+        "notes_ref": null,
+        "original_name": "19 Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "70",
+        "item_name": "19 Lãi cơ bản trên cổ phiếu",
+        "value": 5.211,
+        "notes_ref": null,
+        "original_name": "19 Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "70",
+        "item_name": "19 Lãi cơ bản trên cổ phiếu",
+        "value": 4.292,
+        "notes_ref": null,
+        "original_name": "19 Lãi cơ bản trên cổ phiếu",
+        "row_identity": "income_statement|code:70",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       },
       {
         "item_code": "71",
         "item_name": "20 Lãi suy giảm trên cổ phiếu",
-        "value": 5211.0,
+        "value": 1.168,
         "notes_ref": null,
-        "original_name": "20 Lãi suy giảm trên cổ phiếu"
+        "original_name": "20 Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "QUÝ IV Năm 2025",
+        "period_key": "2025Q4"
+      },
+      {
+        "item_code": "71",
+        "item_name": "20 Lãi suy giảm trên cổ phiếu",
+        "value": 868.0,
+        "notes_ref": null,
+        "original_name": "20 Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "QUÝ IV Năm 2024",
+        "period_key": "2024Q4"
+      },
+      {
+        "item_code": "71",
+        "item_name": "20 Lãi suy giảm trên cổ phiếu",
+        "value": 5.211,
+        "notes_ref": null,
+        "original_name": "20 Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2025",
+        "period_key": "2025"
+      },
+      {
+        "item_code": "71",
+        "item_name": "20 Lãi suy giảm trên cổ phiếu",
+        "value": 4.292,
+        "notes_ref": null,
+        "original_name": "20 Lãi suy giảm trên cổ phiếu",
+        "row_identity": "income_statement|code:71",
+        "column_label": "Lũy kế từ đầu năm đến cuối quý này Năm 2024",
+        "period_key": "2024"
       }
     ]
   },
