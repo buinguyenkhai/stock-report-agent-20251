@@ -26,6 +26,7 @@ from logger import get_logger
 from llm_settings import DEFAULT_MARKER_LLM_MODEL
 from services.ocr.base import OCRStrategy
 from services.ocr.docling import DoclingOCRService
+from services.ocr.financial_table_reconstruction import reconstruct_financial_table_markdown
 from services.ocr.marker import MarkerOCRService
 from services.pipeline import create_pipeline
 
@@ -204,6 +205,9 @@ def _run_ocr_for_sample(
             "ocr_input_strategy": "single_page_pdf",
             "base_markdown_stats": _extract_markdown_table_stats(markdown),
         }
+        chosen_markdown = markdown
+        chosen_stats = debug["base_markdown_stats"]
+        chosen_strategy = "single_page_pdf"
         if engine in {"docling", "hybrid"} and page_image is not None:
             base_stats = debug["base_markdown_stats"]
             if _looks_structurally_collapsed(base_stats):
@@ -220,16 +224,41 @@ def _run_ocr_for_sample(
                         "selected_strategy": "single_page_pdf",
                     }
                     if alt_stats["structure_health_score"] > base_stats["structure_health_score"] + 2.0:
+                        chosen_markdown = alt_markdown
+                        chosen_stats = alt_stats
+                        chosen_strategy = "cropped_page_image_pdf"
                         debug["ocr_input_strategy"] = "cropped_page_image_pdf"
                         debug["layout_retry"]["selected_strategy"] = "cropped_page_image_pdf"
-                        return alt_markdown, debug
                 finally:
                     if cropped_pdf is not None:
                         try:
                             os.unlink(cropped_pdf)
                         except Exception:
                             pass
-        return markdown, debug
+            if _looks_structurally_collapsed(chosen_stats):
+                reconstructed_markdown = ""
+                reconstruction_debug: Dict[str, Any] = {}
+                try:
+                    reconstructed_markdown, reconstruction_debug = reconstruct_financial_table_markdown(page_image)
+                except Exception as exc:
+                    reconstruction_debug = {"reconstruction_applied": False, "error": str(exc)}
+                reconstructed_stats = _extract_markdown_table_stats(reconstructed_markdown)
+                debug["deterministic_reconstruction"] = {
+                    **reconstruction_debug,
+                    "stats": reconstructed_stats,
+                    "selected_strategy": chosen_strategy,
+                }
+                if (
+                    reconstructed_markdown
+                    and reconstructed_stats["pipe_row_count"] >= 2
+                    and reconstructed_stats["structure_health_score"] > chosen_stats["structure_health_score"] + 2.0
+                ):
+                    chosen_markdown = reconstructed_markdown
+                    chosen_stats = reconstructed_stats
+                    chosen_strategy = "deterministic_table_reconstruction"
+                    debug["ocr_input_strategy"] = chosen_strategy
+                    debug["deterministic_reconstruction"]["selected_strategy"] = chosen_strategy
+        return chosen_markdown, debug
 
     if page_image is not None:
         if engine == "marker":

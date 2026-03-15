@@ -7,10 +7,11 @@ Evaluates UI-visible table rows and numeric values after parsing.
 from __future__ import annotations
 
 import math
-import re
 from collections import Counter
 from dataclasses import asdict, dataclass
 from typing import Any, Dict, List, Tuple
+
+from .structured_contract import build_row_key, coerce_numeric, iter_statement_items, values_close
 
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
 
@@ -30,28 +31,6 @@ class StructuredMetricResult:
     def to_dict(self) -> Dict[str, float | int]:
         return asdict(self)
 
-
-def _normalize_text(s: str) -> str:
-    s2 = (s or "").strip().lower()
-    s2 = re.sub(r"\s+", " ", s2)
-    return s2
-
-
-def _coerce_value(v: Any) -> float | None:
-    if v is None:
-        return None
-    if isinstance(v, (int, float)):
-        return float(v)
-    s = str(v).strip()
-    if not s:
-        return None
-    s = s.replace(",", "")
-    try:
-        return float(s)
-    except ValueError:
-        return None
-
-
 def _is_schema_valid(obj: Dict[str, Any]) -> bool:
     if not isinstance(obj, dict):
         return False
@@ -65,29 +44,11 @@ def _is_schema_valid(obj: Dict[str, Any]) -> bool:
     return True
 
 
-def _make_row_key(statement: str, item: Dict[str, Any]) -> str:
-    code = str(item.get("item_code") or "").strip()
-    if code:
-        return f"{statement}|code:{_normalize_text(code)}"
-    name = str(item.get("item_name") or "").strip()
-    notes_ref = str(item.get("notes_ref") or "").strip()
-    if notes_ref:
-        return f"{statement}|name:{_normalize_text(name)}|note:{_normalize_text(notes_ref)}"
-    return f"{statement}|name:{_normalize_text(name)}"
-
-
 def _extract_rows(obj: Dict[str, Any]) -> Dict[str, List[float | None]]:
     out: Dict[str, List[float | None]] = {}
-    for st in STATEMENTS:
-        st_obj = obj.get(st) or {}
-        items = st_obj.get("items") or []
-        if not isinstance(items, list):
-            continue
-        for item in items:
-            if not isinstance(item, dict):
-                continue
-            key = _make_row_key(st, item)
-            out.setdefault(key, []).append(_coerce_value(item.get("value")))
+    for statement, idx, item in iter_statement_items(obj, STATEMENTS):
+        key = build_row_key(statement, item, fallback=f"{statement}:{idx}")
+        out.setdefault(key, []).append(coerce_numeric(item.get("value")))
     return out
 
 
@@ -99,11 +60,7 @@ def _prf(matched: int, pred_total: int, gt_total: int) -> Tuple[float, float, fl
 
 
 def _values_close(a: float | None, b: float | None, abs_tol: float, rel_tol: float) -> bool:
-    if a is None and b is None:
-        return True
-    if a is None or b is None:
-        return False
-    return math.isclose(a, b, rel_tol=rel_tol, abs_tol=abs_tol)
+    return values_close(a, b, abs_tol=abs_tol, rel_tol=rel_tol)
 
 
 def _match_count(

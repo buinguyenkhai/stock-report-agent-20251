@@ -40,6 +40,9 @@ def _table_rows(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
                 "item_code": item.get("item_code"),
                 "item_name": item.get("item_name"),
                 "notes_ref": item.get("notes_ref"),
+                "row_identity": item.get("row_identity"),
+                "column_label": item.get("column_label"),
+                "period_key": item.get("period_key"),
                 "value": item.get("value"),
             }
         )

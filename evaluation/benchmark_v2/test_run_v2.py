@@ -289,3 +289,53 @@ def test_run_benchmark_allows_single_split_with_include_scope(tmp_path: Path) ->
     assert result["dataset_stats"]["available_splits"] == ["dev"]
     assert len(result["sample_results"]) == 1
     assert result["summary"]["counts"]["reports_total"] == 1
+
+
+def test_run_benchmark_surfaces_factor_and_sign_audit(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    pred_root = tmp_path / "predictions"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    pred_root.mkdir(parents=True, exist_ok=True)
+    (dataset_root / "gt_markdown").mkdir(parents=True, exist_ok=True)
+    (dataset_root / "gt_structured").mkdir(parents=True, exist_ok=True)
+
+    sample_id = "AAA_2024Q3_p001"
+    _write_manifest(dataset_root, sample_id)
+    (dataset_root / f"gt_markdown/{sample_id}.md").write_text("| Item | Value |\n| --- | --- |\n| A | 1 |\n", encoding="utf-8")
+    gt_struct = {
+        "balance_sheet": {
+            "items": [
+                {"item_name": "A", "row_identity": "a", "value": 1000.0},
+                {"item_name": "B", "row_identity": "b", "value": -50.0},
+            ]
+        },
+        "income_statement": {"items": []},
+        "cash_flow": {"items": []},
+    }
+    pred_struct = {
+        "balance_sheet": {
+            "items": [
+                {"item_name": "A", "row_identity": "a", "value": 1.0},
+                {"item_name": "B", "row_identity": "b", "value": 50.0},
+            ]
+        },
+        "income_statement": {"items": []},
+        "cash_flow": {"items": []},
+    }
+    (dataset_root / f"gt_structured/{sample_id}.json").write_text(json.dumps(gt_struct, indent=2), encoding="utf-8")
+    (pred_root / f"{sample_id}.raw.md").write_text("| Item | Value |\n| --- | --- |\n| A | 1 |\n", encoding="utf-8")
+    (pred_root / f"{sample_id}.structured.json").write_text(json.dumps(pred_struct, indent=2), encoding="utf-8")
+
+    result = run_benchmark(
+        dataset_root=dataset_root,
+        predictions_root=pred_root,
+        split="dev",
+        engine_name="test_engine",
+        raw_scope="table_only",
+        bootstrap_iters=10,
+        seed=1,
+    )
+
+    audit = result["report_structured_results"][0]["structured_audit"]
+    assert audit["factor_mismatch_count"] >= 1
+    assert audit["sign_mismatch_count"] >= 1

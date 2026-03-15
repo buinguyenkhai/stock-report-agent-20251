@@ -247,3 +247,49 @@ def test_normalize_gt_units_updates_rows_csv_and_canonical(tmp_path: Path) -> No
     meta = load_meta(sample_id, dataset_root)
     assert meta["value_unit_normalized_to"] == "VND"
     assert meta["report_unit_multiplier"] == 1_000_000.0
+
+
+def test_csv_codec_round_trips_identity_fields(tmp_path: Path) -> None:
+    dataset_root = tmp_path / "dataset"
+    dataset_root.mkdir(parents=True, exist_ok=True)
+    sample_id = "AAA_2024Q3_p001"
+    _write_manifest(dataset_root, sample_id)
+    _seed_canonical_files(dataset_root, sample_id)
+
+    rows_df = pd.DataFrame(
+        [
+            {
+                "statement": "cash_flow",
+                "item_code": "",
+                "item_name": "Lưu chuyển tiền thuần trong kỳ",
+                "value": "12599097000000",
+                "notes_ref": "",
+                "original_name": "Lưu chuyển tiền thuần trong kỳ",
+                "row_identity": "net_cash_flow",
+                "column_label": "Từ 1/1/2024 đến 30/9/2024",
+                "period_key": "2024Q3_YTD",
+            }
+        ]
+    )
+    cells_df = pd.DataFrame(
+        [
+            {"row_idx": 0, "col_idx": 0, "text": "Chỉ tiêu"},
+            {"row_idx": 0, "col_idx": 1, "text": "Giá trị"},
+            {"row_idx": 1, "col_idx": 0, "text": "Lưu chuyển tiền thuần trong kỳ"},
+            {"row_idx": 1, "col_idx": 1, "text": "12.599.097"},
+        ]
+    )
+    save_csv_pack(sample_id, dataset_root, cells=cells_df, rows=rows_df)
+
+    out = csv_to_canonical(sample_id, dataset_root, validate=True)
+    regenerated = json.loads(Path(out["gt_structured_path"]).read_text(encoding="utf-8"))
+    item = regenerated["cash_flow"]["items"][0]
+    assert item["row_identity"] == "net_cash_flow"
+    assert item["column_label"] == "Từ 1/1/2024 đến 30/9/2024"
+    assert item["period_key"] == "2024Q3_YTD"
+
+    canonical_to_csv(sample_id, dataset_root)
+    pack = load_csv_pack(sample_id, dataset_root)
+    assert pack["rows"].iloc[0]["row_identity"] == "net_cash_flow"
+    assert pack["rows"].iloc[0]["column_label"] == "Từ 1/1/2024 đến 30/9/2024"
+    assert pack["rows"].iloc[0]["period_key"] == "2024Q3_YTD"

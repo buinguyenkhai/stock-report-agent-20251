@@ -16,7 +16,6 @@ from __future__ import annotations
 import argparse
 import json
 import random
-import unicodedata
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Literal, Optional, Tuple
@@ -27,6 +26,16 @@ from .dataset import BenchmarkDatasetV2, IncludeScope, TableSample
 from .metrics_raw import RawScope, calculate_raw_metrics
 from .metrics_structured import calculate_structured_metrics
 from .report_assembler import assemble_report_structured_from_pages
+from .structured_contract import (
+    build_row_key,
+    coerce_numeric,
+    count_repeated_row_identities,
+    detect_exact_factor,
+    detect_unit_scale_from_text,
+    extract_structured_rows,
+    normalize_item,
+    sign_mismatch,
+)
 
 logger = get_logger(__name__)
 
@@ -60,6 +69,7 @@ class ReportStructuredEvalResult:
     pred_merge_conflict_count: int
     errors: List[str]
     gt_unit_audit: Dict[str, Any] = field(default_factory=dict)
+    structured_audit: Dict[str, Any] = field(default_factory=dict)
 
 
 def _read_text(path: Path) -> str:
@@ -110,49 +120,8 @@ def _bootstrap_ci(
     }
 
 
-def _normalize_text(s: str) -> str:
-    return " ".join((s or "").strip().lower().split())
-
-
-def _normalize_text_ascii(s: str) -> str:
-    text = unicodedata.normalize("NFKD", s or "")
-    text = "".join(ch for ch in text if not unicodedata.combining(ch))
-    text = text.replace("đ", "d").replace("Đ", "D")
-    return _normalize_text(text)
-
-
-def _coerce_numeric(v: Any) -> float | None:
-    if v is None:
-        return None
-    if isinstance(v, (int, float)):
-        return float(v)
-    s = str(v).strip()
-    if not s:
-        return None
-    s = s.replace(",", "")
-    try:
-        return float(s)
-    except Exception:
-        return None
-
-
 def _detect_unit_scale_from_markdown(markdown: str) -> Tuple[str | None, float]:
-    norm = _normalize_text_ascii(markdown)
-    if not norm:
-        return None, 1.0
-
-    patterns = [
-        (("ty vnd", "ty dong", "ty vietnam dong", "ty d"), 1_000_000_000.0),
-        (("trieu vnd", "trieu dong", "trieu vietnam dong", "trieu d"), 1_000_000.0),
-        (("nghin vnd", "nghin dong", "nghin vietnam dong", "nghin d"), 1_000.0),
-        (("ngan vnd", "ngan dong", "ngan vietnam dong", "ngan d"), 1_000.0),
-        (("vnd", "dong", "viet nam dong", "vietnam dong"), 1.0),
-    ]
-    for aliases, scale in patterns:
-        for alias in aliases:
-            if alias in norm:
-                return alias, scale
-    return None, 1.0
+    return detect_unit_scale_from_text(markdown)
 
 
 def _build_gt_unit_audit(
@@ -211,26 +180,6 @@ def _build_gt_unit_audit(
     }
 
 
-def _row_key(statement: str, item: Dict[str, Any], *, fallback: str) -> str:
-    code = str(item.get("item_code") or "").strip()
-    if code:
-        return f"{statement}|code:{_normalize_text(code)}"
-    name = str(item.get("item_name") or "").strip()
-    if name:
-        return f"{statement}|name:{_normalize_text(name)}"
-    return f"{statement}|fallback:{fallback}"
-
-
-def _normalized_item(item: Dict[str, Any]) -> Dict[str, Any]:
-    return {
-        "item_code": item.get("item_code"),
-        "item_name": item.get("item_name"),
-        "value": item.get("value"),
-        "notes_ref": item.get("notes_ref"),
-        "original_name": item.get("original_name"),
-    }
-
-
 def _assemble_report_structured(
     pages: List[Tuple[TableSample, Dict[str, Any]]],
 ) -> Tuple[Dict[str, Any], List[Dict[str, Any]]]:
@@ -251,8 +200,8 @@ def _assemble_report_structured(
             for i, raw_item in enumerate(items):
                 if not isinstance(raw_item, dict):
                     continue
-                item = _normalized_item(raw_item)
-                key = _row_key(
+                item = normalize_item(raw_item)
+                key = build_row_key(
                     statement,
                     item,
                     fallback=f"{sample.sample_id}:{i}",
@@ -291,6 +240,57 @@ def _group_samples_by_report(samples: List[TableSample]) -> Dict[str, List[Table
     for s in samples:
         out.setdefault(s.report_id, []).append(s)
     return out
+
+
+def _build_structured_audit(prediction: Dict[str, Any], reference: Dict[str, Any]) -> Dict[str, Any]:
+    pred_rows = extract_structured_rows(prediction, STATEMENTS)
+    gt_rows = extract_structured_rows(reference, STATEMENTS)
+
+    factor_mismatches: List[Dict[str, Any]] = []
+    sign_mismatches: List[Dict[str, Any]] = []
+    missing_rows = 0
+    extra_rows = 0
+
+    for key in sorted(set(pred_rows) | set(gt_rows)):
+        pred_list = pred_rows.get(key, [])
+        gt_list = gt_rows.get(key, [])
+        matched = min(len(pred_list), len(gt_list))
+        missing_rows += max(0, len(gt_list) - matched)
+        extra_rows += max(0, len(pred_list) - matched)
+        for idx in range(matched):
+            pred_item = pred_list[idx]
+            gt_item = gt_list[idx]
+            pred_val = coerce_numeric(pred_item.get("value"))
+            gt_val = coerce_numeric(gt_item.get("value"))
+            factor = detect_exact_factor(pred_val, gt_val)
+            if factor is not None and not (pred_val == gt_val):
+                factor_mismatches.append(
+                    {
+                        "row_key": key,
+                        "factor": factor,
+                        "pred_value": pred_item.get("value"),
+                        "gt_value": gt_item.get("value"),
+                    }
+                )
+            if sign_mismatch(pred_val, gt_val):
+                sign_mismatches.append(
+                    {
+                        "row_key": key,
+                        "pred_value": pred_item.get("value"),
+                        "gt_value": gt_item.get("value"),
+                    }
+                )
+
+    return {
+        "factor_mismatch_count": len(factor_mismatches),
+        "sign_mismatch_count": len(sign_mismatches),
+        "missing_row_count": int(missing_rows),
+        "extra_row_count": int(extra_rows),
+        "pred_repeated_row_identity_count": len(count_repeated_row_identities(prediction, STATEMENTS)),
+        "gt_repeated_row_identity_count": len(count_repeated_row_identities(reference, STATEMENTS)),
+        "factor_mismatches": factor_mismatches[:100],
+        "sign_mismatches": sign_mismatches[:100],
+    }
 
 
 def _aggregate_results(
@@ -475,6 +475,7 @@ def run_benchmark(
         gt_conflicts: List[Dict[str, Any]] = []
         pred_conflicts: List[Dict[str, Any]] = []
         gt_unit_audit = _build_gt_unit_audit(ds.dataset_root, sorted_samples)
+        structured_audit: Dict[str, Any] = {}
         structured_available = len(pred_pages) == len(sorted_samples) and len(pred_pages) > 0
         if not report_errors and structured_available:
             gt_assembled, gt_meta = assemble_report_structured_from_pages(gt_pages)
@@ -485,6 +486,7 @@ def run_benchmark(
                 pred_assembled,
                 gt_assembled,
             ).to_dict()
+            structured_audit = _build_structured_audit(pred_assembled, gt_assembled)
 
         report_results.append(
             ReportStructuredEvalResult(
@@ -498,6 +500,7 @@ def run_benchmark(
                 gt_merge_conflict_count=len(gt_conflicts),
                 pred_merge_conflict_count=len(pred_conflicts),
                 gt_unit_audit=gt_unit_audit,
+                structured_audit=structured_audit,
                 errors=report_errors,
             )
         )

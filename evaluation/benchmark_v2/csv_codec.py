@@ -4,7 +4,7 @@ CSV codec utilities for benchmark v2 annotation workflow.
 CSV pack layout per sample:
   gt_csv/<sample_id>/
     cells.csv   : row_idx,col_idx,text
-    rows.csv    : statement,item_code,item_name,value,notes_ref,original_name
+    rows.csv    : statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key
                   where value is canonical VND
     meta.json   : optional QA metadata
 """
@@ -25,7 +25,17 @@ from .dataset import BenchmarkDatasetV2, TableSample
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
 
 CELLS_COLUMNS = ("row_idx", "col_idx", "text")
-ROWS_COLUMNS = ("statement", "item_code", "item_name", "value", "notes_ref", "original_name")
+ROWS_COLUMNS = (
+    "statement",
+    "item_code",
+    "item_name",
+    "value",
+    "notes_ref",
+    "original_name",
+    "row_identity",
+    "column_label",
+    "period_key",
+)
 
 
 @dataclass(frozen=True)
@@ -275,6 +285,9 @@ def _parse_csv_frames(
                 "value": value,
                 "notes_ref": _to_optional_text(rec["notes_ref"]),
                 "original_name": _to_optional_text(rec["original_name"]),
+                "row_identity": _to_optional_text(rec["row_identity"]),
+                "column_label": _to_optional_text(rec["column_label"]),
+                "period_key": _to_optional_text(rec["period_key"]),
             }
         )
 
@@ -363,6 +376,9 @@ def _structured_from_rows(parsed_rows: List[Dict[str, Any]]) -> Dict[str, Any]:
             "value": row["value"],
             "notes_ref": row["notes_ref"],
             "original_name": row["original_name"],
+            "row_identity": row["row_identity"],
+            "column_label": row["column_label"],
+            "period_key": row["period_key"],
         }
         out[st]["items"].append(item)
     return out
@@ -496,6 +512,13 @@ def _rows_from_structured(structured: Dict[str, Any]) -> pd.DataFrame:
                     "original_name": (
                         item.get("original_name") if item.get("original_name") is not None else ""
                     ),
+                    "row_identity": (
+                        item.get("row_identity") if item.get("row_identity") is not None else ""
+                    ),
+                    "column_label": (
+                        item.get("column_label") if item.get("column_label") is not None else ""
+                    ),
+                    "period_key": item.get("period_key") if item.get("period_key") is not None else "",
                 }
             )
     return pd.DataFrame(out_rows, columns=list(ROWS_COLUMNS)).fillna("")

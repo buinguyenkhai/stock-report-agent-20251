@@ -42,6 +42,11 @@ Detailed annotation guide:
 Canonical numeric contract:
 - `gt_csv/<sample_id>/rows.csv:value` and `gt_structured/<sample_id>.json` values must be stored in `VND`.
 - Raw OCR references (`gt_markdown`, `gt_cells`) should still preserve the page text exactly as printed, including original page units.
+- `gt_csv/<sample_id>/rows.csv` may also store optional identity fields:
+  - `row_identity`
+  - `column_label`
+  - `period_key`
+- These identity fields should be filled when a page has repeated labels, repeated subrows, or multiple time columns.
 
 If `source_pdf_path` is present, you can auto-render `page_image_path` for all samples:
 ```bash

@@ -55,6 +55,46 @@ def test_assemble_report_structured_guardrails() -> None:
     assert len(meta["row_sources"]["balance_sheet"][row_key]) == 3
 
 
+def test_assemble_report_structured_preserves_period_identity() -> None:
+    s1 = _sample("AAA_2024Q3_p001", 1)
+    s2 = _sample("AAA_2024Q3_p002", 2)
+    page1 = {
+        "cash_flow": {
+            "items": [
+                {
+                    "item_name": "Lưu chuyển tiền thuần trong kỳ",
+                    "period_key": "2024Q3_YTD",
+                    "column_label": "Từ 1/1/2024 đến 30/9/2024",
+                    "value": 12599097000000.0,
+                }
+            ]
+        },
+        "balance_sheet": {"items": []},
+        "income_statement": {"items": []},
+    }
+    page2 = {
+        "cash_flow": {
+            "items": [
+                {
+                    "item_name": "Lưu chuyển tiền thuần trong kỳ",
+                    "period_key": "2023Q3_YTD",
+                    "column_label": "Từ 1/1/2023 đến 30/9/2023",
+                    "value": -5100088000000.0,
+                }
+            ]
+        },
+        "balance_sheet": {"items": []},
+        "income_statement": {"items": []},
+    }
+
+    merged, meta = assemble_report_structured_from_pages([(s1, page1), (s2, page2)])
+    items = merged["cash_flow"]["items"]
+    assert len(items) == 2
+    keys = set(meta["row_sources"]["cash_flow"].keys())
+    assert "cash_flow|name:lưu chuyển tiền thuần trong kỳ|period:2024q3_ytd" in keys
+    assert "cash_flow|name:lưu chuyển tiền thuần trong kỳ|period:2023q3_ytd" in keys
+
+
 def test_build_gt_and_prediction_report_structured_files(tmp_path: Path) -> None:
     dataset_root = tmp_path / "dataset"
     pred_root = tmp_path / "pred"

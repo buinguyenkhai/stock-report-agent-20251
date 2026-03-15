@@ -29,7 +29,7 @@ For each `sample_id`, store:
 
 CSV schema:
 - `cells.csv`: `row_idx,col_idx,text`
-- `rows.csv`: `statement,item_code,item_name,value,notes_ref,original_name`
+- `rows.csv`: `statement,item_code,item_name,value,notes_ref,original_name,row_identity,column_label,period_key`
 - `rows.csv.value` must be canonical `VND`, not the printed page unit.
 
 If your manifest includes `source_pdf_path`, generate images automatically:
@@ -93,6 +93,8 @@ Apply these consistently:
 - `value` must be normalized to `VND` even if the page header says `triệu`, `tỷ`, or `nghìn`.
 - Keep `item_name` faithful to report wording.
 - Keep `notes_ref` if visible in the statement row.
+- Use `row_identity` when repeated labels need a stable business identity across pages or sections.
+- Use `column_label` and `period_key` when one page contains multiple value columns.
 
 Numeric normalization:
 - `(1.234)` => negative numeric value

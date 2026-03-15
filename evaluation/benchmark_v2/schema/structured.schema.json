@@ -30,9 +30,11 @@
         "item_name": { "type": "string" },
         "value": { "type": ["number", "null"] },
         "notes_ref": { "type": ["string", "null"] },
-        "original_name": { "type": ["string", "null"] }
+        "original_name": { "type": ["string", "null"] },
+        "row_identity": { "type": ["string", "null"] },
+        "column_label": { "type": ["string", "null"] },
+        "period_key": { "type": ["string", "null"] }
       }
     }
   }
 }
-

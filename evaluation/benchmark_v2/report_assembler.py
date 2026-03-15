@@ -12,50 +12,9 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Literal, Tuple
 
 from .dataset import BenchmarkDatasetV2, IncludeScope, TableSample
+from .structured_contract import build_row_identity, build_row_key, coerce_numeric, normalize_item
 
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
-
-
-def _normalize_text(s: str) -> str:
-    return " ".join((s or "").strip().lower().split())
-
-
-def _coerce_numeric(v: Any) -> float | None:
-    if v is None:
-        return None
-    if isinstance(v, (int, float)):
-        return float(v)
-    s = str(v).strip()
-    if not s:
-        return None
-    s = s.replace(",", "")
-    try:
-        return float(s)
-    except Exception:
-        return None
-
-
-def _row_key(statement: str, item: Dict[str, Any], *, fallback: str) -> str:
-    code = str(item.get("item_code") or "").strip()
-    if code:
-        return f"{statement}|code:{_normalize_text(code)}"
-    name = str(item.get("item_name") or "").strip()
-    notes_ref = str(item.get("notes_ref") or "").strip()
-    if name:
-        if notes_ref:
-            return f"{statement}|name:{_normalize_text(name)}|note:{_normalize_text(notes_ref)}"
-        return f"{statement}|name:{_normalize_text(name)}"
-    return f"{statement}|fallback:{fallback}"
-
-
-def _normalized_item(item: Dict[str, Any]) -> Dict[str, Any]:
-    return {
-        "item_code": item.get("item_code"),
-        "item_name": item.get("item_name"),
-        "value": item.get("value"),
-        "notes_ref": item.get("notes_ref"),
-        "original_name": item.get("original_name"),
-    }
 
 
 def assemble_report_structured_from_pages(
@@ -88,18 +47,22 @@ def assemble_report_structured_from_pages(
             for item_idx, raw_item in enumerate(items):
                 if not isinstance(raw_item, dict):
                     continue
-                item = _normalized_item(raw_item)
-                key = _row_key(statement, item, fallback=f"{sample.sample_id}:{item_idx}")
+                item = normalize_item(raw_item)
+                key = build_row_key(statement, item, fallback=f"{sample.sample_id}:{item_idx}")
+                row_identity = build_row_identity(statement, item, fallback=f"{sample.sample_id}:{item_idx}")
                 source = {
                     "sample_id": sample.sample_id,
                     "page_index": sample.page_index,
                     "item_index": item_idx,
+                    "row_identity": row_identity,
+                    "column_label": item.get("column_label"),
+                    "period_key": item.get("period_key"),
                 }
                 merged[statement]["items"].append(item)
                 row_sources[statement].setdefault(key, []).append(source)
 
                 value_history = seen_values[statement].setdefault(key, [])
-                new_num = _coerce_numeric(item.get("value"))
+                new_num = coerce_numeric(item.get("value"))
                 if value_history and any(old_num != new_num for old_num in value_history):
                     conflicts.append(
                         {

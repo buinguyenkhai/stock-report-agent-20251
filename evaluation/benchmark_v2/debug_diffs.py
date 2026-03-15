@@ -20,6 +20,7 @@ from .dataset import BenchmarkDatasetV2, IncludeScope, TableSample
 from .metrics_raw import RawScope, calculate_raw_metrics
 from .metrics_structured import calculate_structured_metrics
 from .report_assembler import assemble_report_structured_from_pages
+from .structured_contract import coerce_numeric, extract_structured_rows, normalize_item
 
 SplitChoice = Literal["dev", "test", "all"]
 STATEMENTS = ("balance_sheet", "income_statement", "cash_flow")
@@ -84,64 +85,17 @@ def _counter_delta(left: Iterable[str], right: Iterable[str]) -> List[Dict[str, 
             out.append({"value": key, "count": int(delta)})
     return out
 
-
-def _normalize_text(s: str) -> str:
-    return " ".join((s or "").strip().lower().split())
-
-
-def _coerce_numeric(v: Any) -> float | None:
-    if v is None:
-        return None
-    if isinstance(v, (int, float)):
-        return float(v)
-    s = str(v).strip()
-    if not s:
-        return None
-    s = s.replace(",", "")
-    try:
-        return float(s)
-    except Exception:
-        return None
-
-
-def _row_key(statement: str, item: Dict[str, Any], *, fallback: str) -> str:
-    code = str(item.get("item_code") or "").strip()
-    if code:
-        return f"{statement}|code:{_normalize_text(code)}"
-    name = str(item.get("item_name") or "").strip()
-    notes_ref = str(item.get("notes_ref") or "").strip()
-    if notes_ref:
-        return f"{statement}|name:{_normalize_text(name)}|note:{_normalize_text(notes_ref)}"
-    if name:
-        return f"{statement}|name:{_normalize_text(name)}"
-    return f"{statement}|fallback:{fallback}"
-
-
 def _structured_rows(obj: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
     out: Dict[str, List[Dict[str, Any]]] = defaultdict(list)
-    for statement in STATEMENTS:
-        node = obj.get(statement, {})
-        items = node.get("items", []) if isinstance(node, dict) else []
-        if not isinstance(items, list):
-            continue
-        for idx, item in enumerate(items):
-            if not isinstance(item, dict):
-                continue
-            row = {
-                "statement": statement,
-                "item_code": item.get("item_code"),
-                "item_name": item.get("item_name"),
-                "notes_ref": item.get("notes_ref"),
-                "original_name": item.get("original_name"),
-                "value": item.get("value"),
-            }
-            key = _row_key(statement, row, fallback=f"{statement}:{idx}")
-            out[key].append(row)
+    extracted = extract_structured_rows(obj, STATEMENTS)
+    for key, rows in extracted.items():
+        for row in rows:
+            out[key].append({"statement": row["statement"], **normalize_item(row), "value": row.get("value")})
     return dict(out)
 
 
 def _value_sort_key(row: Dict[str, Any]) -> Tuple[int, float, str]:
-    num = _coerce_numeric(row.get("value"))
+    num = coerce_numeric(row.get("value"))
     if num is not None:
         return (0, num, "")
     return (1, 0.0, str(row.get("value") or ""))
@@ -163,8 +117,8 @@ def _compare_structured_objects(prediction: Dict[str, Any], reference: Dict[str,
         for idx in range(matched):
             gt_row = gt_list[idx]
             pred_row = pred_list[idx]
-            gt_val = _coerce_numeric(gt_row.get("value"))
-            pred_val = _coerce_numeric(pred_row.get("value"))
+            gt_val = coerce_numeric(gt_row.get("value"))
+            pred_val = coerce_numeric(pred_row.get("value"))
             if gt_val != pred_val:
                 value_mismatches.append(
                     {
