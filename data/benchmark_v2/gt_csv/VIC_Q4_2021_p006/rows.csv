@@ -1,0 +1,22 @@
+statement,item_code,item_name,value,notes_ref,original_name
+balance_sheet,100,A. TÀI SẢN NGẮN HẠN,163350836,,A. TÀI SẢN NGẮN HẠN
+balance_sheet,110,I. Tiền và các khoản tương đương tiền,19653270,4,I. Tiền và các khoản tương đương tiền
+balance_sheet,111,1. Tiền,10308050,,1. Tiền
+balance_sheet,112,2. Các khoản tương đương tiền,9345220,,2. Các khoản tương đương tiền
+balance_sheet,120,II. Đầu tư tài chính ngắn hạn,6758243,5,II. Đầu tư tài chính ngắn hạn
+balance_sheet,121,1. Chứng khoán kinh doanh,3605159,,1. Chứng khoán kinh doanh
+balance_sheet,123,2. Đầu tư nắm giữ đến ngày đáo hạn,3153084,,2. Đầu tư nắm giữ đến ngày đáo hạn
+balance_sheet,130,III. Các khoản phải thu ngắn hạn,74342928,,III. Các khoản phải thu ngắn hạn
+balance_sheet,131,1. Phải thu ngắn hạn của khách hàng,20112289,6,1. Phải thu ngắn hạn của khách hàng
+balance_sheet,132,2. Trả trước cho người bán ngắn hạn,21767291,,2. Trả trước cho người bán ngắn hạn
+balance_sheet,135,3. Phải thu về cho vay ngắn hạn,14824123,7,3. Phải thu về cho vay ngắn hạn
+balance_sheet,136,4. Phải thu ngắn hạn khác,18180233,8,4. Phải thu ngắn hạn khác
+balance_sheet,137,5. Dự phòng phải thu ngắn hạn khó đòi,-541008,,5. Dự phòng phải thu ngắn hạn khó đòi
+balance_sheet,140,IV. Hàng tồn kho,50910386,9,IV. Hàng tồn kho
+balance_sheet,141,1. Hàng tồn kho,53074286,,1. Hàng tồn kho
+balance_sheet,149,2. Dự phòng giảm giá hàng tồn kho,-2163900,,2. Dự phòng giảm giá hàng tồn kho
+balance_sheet,150,V. Tài sản ngắn hạn khác,11686009,,V. Tài sản ngắn hạn khác
+balance_sheet,151,1. Chi phí trả trước ngắn hạn,1455458,10,1. Chi phí trả trước ngắn hạn
+balance_sheet,152,2. Thuế GTGT được khấu trừ,6773819,,2. Thuế GTGT được khấu trừ
+balance_sheet,153,3. Thuế và các khoản khác phải thu Nhà nước,561133,,3. Thuế và các khoản khác phải thu Nhà nước
+balance_sheet,155,4. Tài sản ngắn hạn khác,2895599,11,4. Tài sản ngắn hạn khác

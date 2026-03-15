@@ -1,0 +1,12 @@
+statement,item_code,item_name,value,notes_ref,original_name
+cash_flow,1,Mua sắm tài sản cố định,-22389,,1 Mua sắm tài sản cố định
+cash_flow,2,"Tiền thu từ thanh lý, nhượng bán tài sản cố định",2948,,"2 Tiền thu từ thanh lý, nhượng bán tài sản cố định"
+cash_flow,3,"Tiền chi từ thanh lý, nhượng bán tài sản cố định",-2045,,"3 Tiền chi từ thanh lý, nhượng bán tài sản cố định"
+cash_flow,4,"Tiền thu đầu tư, góp vốn vào các đơn vị khác",1864,,"4 Tiền thu đầu tư, góp vốn vào các đơn vị khác"
+cash_flow,5,"Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",2196,,"5 Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn"
+cash_flow,II,Tiền thuần (sử dụng cho) hoạt động đầu tư,-17426,,II Tiền thuần (sử dụng cho) hoạt động đầu tư
+cash_flow,1,Cổ tức đã trả,-3329224,,1 Cổ tức đã trả
+cash_flow,III,Tiền thuần (sử dụng cho) hoạt động tài chính,-3329224,,III Tiền thuần (sử dụng cho) hoạt động tài chính
+cash_flow,IV,Lưu chuyển tiền thuần trong kỳ,-20728130,,IV Lưu chuyển tiền thuần trong kỳ
+cash_flow,V,Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ,232553995,21,V Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ
+cash_flow,VI,Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ,211825865,21,VI Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ

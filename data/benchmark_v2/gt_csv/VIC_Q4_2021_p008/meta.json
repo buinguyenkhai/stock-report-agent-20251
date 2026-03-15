@@ -1,0 +1,10 @@
+{
+  "last_csv_save_at": "2026-03-15T03:53:14.023202+00:00",
+  "updated_at": "2026-03-15T03:53:14.053660+00:00",
+  "last_generated_at": "2026-03-15T03:53:14.043576+00:00",
+  "last_generated_paths": {
+    "gt_markdown_path": "data\\benchmark_v2\\gt_markdown\\VIC_Q4_2021_p008.md",
+    "gt_structured_path": "data\\benchmark_v2\\gt_structured\\VIC_Q4_2021_p008.json",
+    "gt_table_cells_path": "data\\benchmark_v2\\gt_cells\\VIC_Q4_2021_p008.json"
+  }
+}

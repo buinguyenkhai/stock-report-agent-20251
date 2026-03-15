@@ -1,0 +1,89 @@
+{
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": []
+  },
+  "cash_flow": {
+    "items": [
+      {
+        "item_code": "1",
+        "item_name": "Mua sắm tài sản cố định",
+        "value": -22389.0,
+        "notes_ref": null,
+        "original_name": "1 Mua sắm tài sản cố định"
+      },
+      {
+        "item_code": "2",
+        "item_name": "Tiền thu từ thanh lý, nhượng bán tài sản cố định",
+        "value": 2948.0,
+        "notes_ref": null,
+        "original_name": "2 Tiền thu từ thanh lý, nhượng bán tài sản cố định"
+      },
+      {
+        "item_code": "3",
+        "item_name": "Tiền chi từ thanh lý, nhượng bán tài sản cố định",
+        "value": -2045.0,
+        "notes_ref": null,
+        "original_name": "3 Tiền chi từ thanh lý, nhượng bán tài sản cố định"
+      },
+      {
+        "item_code": "4",
+        "item_name": "Tiền thu đầu tư, góp vốn vào các đơn vị khác",
+        "value": 1864.0,
+        "notes_ref": null,
+        "original_name": "4 Tiền thu đầu tư, góp vốn vào các đơn vị khác"
+      },
+      {
+        "item_code": "5",
+        "item_name": "Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn",
+        "value": 2196.0,
+        "notes_ref": null,
+        "original_name": "5 Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn"
+      },
+      {
+        "item_code": "II",
+        "item_name": "Tiền thuần (sử dụng cho) hoạt động đầu tư",
+        "value": -17426.0,
+        "notes_ref": null,
+        "original_name": "II Tiền thuần (sử dụng cho) hoạt động đầu tư"
+      },
+      {
+        "item_code": "1",
+        "item_name": "Cổ tức đã trả",
+        "value": -3329224.0,
+        "notes_ref": null,
+        "original_name": "1 Cổ tức đã trả"
+      },
+      {
+        "item_code": "III",
+        "item_name": "Tiền thuần (sử dụng cho) hoạt động tài chính",
+        "value": -3329224.0,
+        "notes_ref": null,
+        "original_name": "III Tiền thuần (sử dụng cho) hoạt động tài chính"
+      },
+      {
+        "item_code": "IV",
+        "item_name": "Lưu chuyển tiền thuần trong kỳ",
+        "value": -20728130.0,
+        "notes_ref": null,
+        "original_name": "IV Lưu chuyển tiền thuần trong kỳ"
+      },
+      {
+        "item_code": "V",
+        "item_name": "Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ",
+        "value": 232553995.0,
+        "notes_ref": "21",
+        "original_name": "V Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ"
+      },
+      {
+        "item_code": "VI",
+        "item_name": "Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ",
+        "value": 211825865.0,
+        "notes_ref": "21",
+        "original_name": "VI Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ"
+      }
+    ]
+  }
+}

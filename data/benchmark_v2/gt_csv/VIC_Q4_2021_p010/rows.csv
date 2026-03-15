@@ -1,0 +1,22 @@
+statement,item_code,item_name,value,notes_ref,original_name
+income_statement,1,1. Doanh thu bán hàng và cung cấp dịch vụ,34478172,26.1,1. Doanh thu bán hàng và cung cấp dịch vụ
+income_statement,2,2. Các khoản giảm trừ doanh thu,20346,26.1,2. Các khoản giảm trừ doanh thu
+income_statement,10,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ,34457826,26.1,3. Doanh thu thuần về bán hàng và cung cấp dịch vụ
+income_statement,11,4. Giá vốn hàng bán,26217840,27,4. Giá vốn hàng bán
+income_statement,20,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ,8239986,,5. Lợi nhuận gộp về bán hàng và cung cấp dịch vụ
+income_statement,21,6. Doanh thu hoạt động tài chính,3212402,26.2,6. Doanh thu hoạt động tài chính
+income_statement,22,7. Chi phí tài chính,2788287,28,7. Chi phí tài chính
+income_statement,23,- Trong đó: Chi phí lãi vay và phát hành trái phiếu,2560860,,- Trong đó: Chi phí lãi vay và phát hành trái phiếu
+income_statement,24,"8. Phần lỗ trong công ty liên doanh, liên kết",-5759,16.1,"8. Phần lỗ trong công ty liên doanh, liên kết"
+income_statement,25,9. Chi phí bán hàng,2019498,,9. Chi phí bán hàng
+income_statement,26,10. Chi phí quản lý doanh nghiệp,9515758,,10. Chi phí quản lý doanh nghiệp
+income_statement,30,11. Lợi nhuận thuần từ hoạt động kinh doanh,-2876914,,11. Lợi nhuận thuần từ hoạt động kinh doanh
+income_statement,31,12. Thu nhập khác,485013,29,12. Thu nhập khác
+income_statement,32,13. Chi phí khác,3977010,29,13. Chi phí khác
+income_statement,40,14. Lãi/(lỗ) khác,-3491997,29,14. Lãi/(lỗ) khác
+income_statement,50,15. Tổng lợi nhuận kế toán trước thuế,-6368911,,15. Tổng lợi nhuận kế toán trước thuế
+income_statement,51,16. Chi phí thuế TNDN hiện hành,2277454,30,16. Chi phí thuế TNDN hiện hành
+income_statement,52,17. Chi phí (Thu nhập) thuế TNDN hoãn lại,602505,30,17. Chi phí (Thu nhập) thuế TNDN hoãn lại
+income_statement,60,18. Lợi nhuận sau thuế TNDN,-9248870,,18. Lợi nhuận sau thuế TNDN
+income_statement,61,Lợi nhuận sau thuế của công ty mẹ,-5964033,25,Lợi nhuận sau thuế của công ty mẹ
+income_statement,62,Lợi nhuận sau thuế của cổ đông không kiểm soát,-3284837,25,Lợi nhuận sau thuế của cổ đông không kiểm soát

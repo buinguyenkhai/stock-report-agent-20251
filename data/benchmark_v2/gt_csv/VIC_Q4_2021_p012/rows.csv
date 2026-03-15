@@ -1,0 +1,24 @@
+statement,item_code,item_name,value,notes_ref,original_name
+cash_flow,1,Lợi nhuận trước thuế,3345736,,Lợi nhuận trước thuế
+cash_flow,2,"Khấu hao, hao mòn và lãi từ giao dịch mua rẻ",15406754,,"Khấu hao, hao mòn và lãi từ giao dịch mua rẻ"
+cash_flow,3,Thay đổi các khoản dự phòng,1205912,,Thay đổi các khoản dự phòng
+cash_flow,4,Lỗ/ (lãi) chênh lệch tỷ giá,-371458,,Lỗ/ (lãi) chênh lệch tỷ giá
+cash_flow,5,Lãi từ hoạt động đầu tư,-7242558,,Lãi từ hoạt động đầu tư
+cash_flow,6,Chi phí lãi vay,10577230,,Chi phí lãi vay
+cash_flow,8,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động,22921616,,Lợi nhuận từ hoạt động kinh doanh trước thay đổi vốn lưu động
+cash_flow,9,(Tăng)/giảm các khoản phải thu,-12153532,,(Tăng)/giảm các khoản phải thu
+cash_flow,10,(Tăng)/giảm hàng tồn kho,10380196,,(Tăng)/giảm hàng tồn kho
+cash_flow,11,"Tăng/(giảm) các khoản phải trả (không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)",-15633516,,"Tăng/(giảm) các khoản phải trả (không kể lãi vay phải trả, thuế thu nhập doanh nghiệp phải nộp)"
+cash_flow,12,(Tăng)/giảm chi phí trả trước,3464617,,(Tăng)/giảm chi phí trả trước
+cash_flow,13,(Tăng) giảm chứng khoán kinh doanh,2292490,,(Tăng) giảm chứng khoán kinh doanh
+cash_flow,14,Tiền lãi vay đã trả,-9167218,,Tiền lãi vay đã trả
+cash_flow,15,Thuế thu nhập doanh nghiệp đã nộp,-10701173,,Thuế thu nhập doanh nghiệp đã nộp
+cash_flow,20,Lưu chuyển tiền thuần từ hoạt động kinh doanh,-8596520,,Lưu chuyển tiền thuần từ hoạt động kinh doanh
+cash_flow,21,"Tiền chi để mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác",-40937924,,"Tiền chi để mua sắm, xây dựng tài sản cố định và các tài sản dài hạn khác"
+cash_flow,22,"Tiền thu được từ thanh lý, nhượng bán tài sản cố định và các tài sản dài hạn khác",226088,,"Tiền thu được từ thanh lý, nhượng bán tài sản cố định và các tài sản dài hạn khác"
+cash_flow,23,"Tiền chi cho vay, mua các công cụ nợ của đơn vị khác",-11775662,,"Tiền chi cho vay, mua các công cụ nợ của đơn vị khác"
+cash_flow,24,"Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác",12512597,,"Tiền thu hồi cho vay, bán lại công cụ nợ của đơn vị khác"
+cash_flow,25,Tiền chi đầu tư góp vốn vào đơn vị khác (trừ đi tiền thu về),-4784090,,Tiền chi đầu tư góp vốn vào đơn vị khác (trừ đi tiền thu về)
+cash_flow,26,Tiền thu hồi đầu tư góp vốn vào đơn vị khác (trừ đi tiền do đơn vị bị thanh lý nắm giữ),23280030,,Tiền thu hồi đầu tư góp vốn vào đơn vị khác (trừ đi tiền do đơn vị bị thanh lý nắm giữ)
+cash_flow,27,"Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia",777369,,"Tiền thu lãi cho vay, cổ tức và lợi nhuận được chia"
+cash_flow,30,Lưu chuyển tiền thuần từ hoạt động đầu tư,-20701592,,Lưu chuyển tiền thuần từ hoạt động đầu tư

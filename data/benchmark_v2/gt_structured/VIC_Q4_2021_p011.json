@@ -1,0 +1,26 @@
+{
+  "balance_sheet": {
+    "items": []
+  },
+  "income_statement": {
+    "items": [
+      {
+        "item_code": "70",
+        "item_name": "19. Lãi cơ bản trên cổ phiếu",
+        "value": -815.0,
+        "notes_ref": null,
+        "original_name": "19. Lãi cơ bản trên cổ phiếu"
+      },
+      {
+        "item_code": "70",
+        "item_name": "19. Lãi cơ bản trên cổ phiếu",
+        "value": 1691.0,
+        "notes_ref": null,
+        "original_name": "19. Lãi cơ bản trên cổ phiếu"
+      }
+    ]
+  },
+  "cash_flow": {
+    "items": []
+  }
+}

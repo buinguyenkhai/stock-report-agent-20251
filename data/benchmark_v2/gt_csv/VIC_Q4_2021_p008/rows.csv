@@ -1,0 +1,20 @@
+statement,item_code,item_name,value,notes_ref,original_name
+balance_sheet,300,C. NỢ PHẢI TRẢ,268177346,,C. NỢ PHẢI TRẢ
+balance_sheet,310,I. Nợ ngắn hạn,144444929,,I. Nợ ngắn hạn
+balance_sheet,311,1. Phải trả người bán ngắn hạn,18889980,,1. Phải trả người bán ngắn hạn
+balance_sheet,312,2. Người mua trả tiền trước ngắn hạn,22352075,18,2. Người mua trả tiền trước ngắn hạn
+balance_sheet,313,3. Thuế và các khoản phải nộp Nhà nước,5614128,19,3. Thuế và các khoản phải nộp Nhà nước
+balance_sheet,314,4. Phải trả người lao động,489754,,4. Phải trả người lao động
+balance_sheet,315,5. Chi phí phải trả ngắn hạn,27744066,20,5. Chi phí phải trả ngắn hạn
+balance_sheet,318,6. Doanh thu chưa thực hiện ngắn hạn,3283080,21,6. Doanh thu chưa thực hiện ngắn hạn
+balance_sheet,319,7. Phải trả ngắn hạn khác,39343650,22,7. Phải trả ngắn hạn khác
+balance_sheet,320,8. Vay và nợ thuê tài chính ngắn hạn,20035038,23.1,8. Vay và nợ thuê tài chính ngắn hạn
+balance_sheet,321,9. Dự phòng phải trả ngắn hạn,6693158,,9. Dự phòng phải trả ngắn hạn
+balance_sheet,330,II. Nợ dài hạn,123732417,,II. Nợ dài hạn
+balance_sheet,333,1. Chi phí phải trả dài hạn,1594331,,1. Chi phí phải trả dài hạn
+balance_sheet,336,2. Doanh thu chưa thực hiện dài hạn,4293682,21,2. Doanh thu chưa thực hiện dài hạn
+balance_sheet,337,3. Phải trả dài hạn khác,2578894,22,3. Phải trả dài hạn khác
+balance_sheet,338,4. Vay và nợ thuê tài chính dài hạn,102180175,23.2,4. Vay và nợ thuê tài chính dài hạn
+balance_sheet,339,5. Trái phiếu hoán đổi,9550120,24,5. Trái phiếu hoán đổi
+balance_sheet,341,6. Thuế thu nhập hoãn lại phải trả,675057,,6. Thuế thu nhập hoãn lại phải trả
+balance_sheet,342,7. Dự phòng phải trả dài hạn,2860158,,7. Dự phòng phải trả dài hạn

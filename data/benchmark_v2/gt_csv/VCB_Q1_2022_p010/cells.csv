@@ -1,0 +1,41 @@
+row_idx,col_idx,text
+0,1,Thuyết minh
+0,2,Giai đoạn từ 1/1/2022 đến 31/3/2022 Triệu VND
+0,3,Giai đoạn từ 1/1/2021 đến 31/3/2021 Triệu VND
+1,0,LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG ĐẦU TƯ
+2,0,1 Mua sắm tài sản cố định
+2,2,(22.389)
+2,3,(63.503)
+3,0,"2 Tiền thu từ thanh lý, nhượng bán tài sản cố định"
+3,2,2.948
+3,3,1.356
+4,0,"3 Tiền chi từ thanh lý, nhượng bán tài sản cố định"
+4,2,(2.045)
+4,3,(215)
+5,0,"4 Tiền thu đầu tư, góp vốn vào các đơn vị khác"
+5,2,1.864
+5,3,-
+6,0,"5 Tiền thu cổ tức và lợi nhuận được chia từ các khoản đầu tư, góp vốn dài hạn"
+6,2,2.196
+6,3,8.278
+7,0,II Tiền thuần (sử dụng cho) hoạt động đầu tư
+7,2,(17.426)
+7,3,(54.084)
+8,0,LƯU CHUYỂN TIỀN TỪ HOẠT ĐỘNG TÀI CHÍNH
+9,0,1 Cổ tức đã trả
+9,2,(3.329.224)
+9,3,(747.619)
+10,0,III Tiền thuần (sử dụng cho) hoạt động tài chính
+10,2,(3.329.224)
+10,3,(747.619)
+11,0,IV Lưu chuyển tiền thuần trong kỳ
+11,2,(20.728.130)
+11,3,(57.651.209)
+12,0,V Tiền và các khoản tương đương tiền tại thời điểm đầu kỳ
+12,1,21
+12,2,232.553.995
+12,3,292.582.702
+13,0,VI Tiền và các khoản tương đương tiền tại thời điểm cuối kỳ
+13,1,21
+13,2,211.825.865
+13,3,234.931.493
