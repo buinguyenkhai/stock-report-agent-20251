@@ -1,8 +1,5 @@
 """
-Hybrid hyperparameter tuning on benchmark v2 dev split.
-
-Runs a grid over hybrid thresholds, generates predictions, scores them on dev,
-and selects the best setting by a chosen objective.
+Hybrid hyperparameter tuning on the raw OCR benchmark v2 dev split.
 """
 
 from __future__ import annotations
@@ -24,9 +21,8 @@ def _parse_float_list(raw: str) -> List[float]:
     vals = []
     for part in (raw or "").split(","):
         p = part.strip()
-        if not p:
-            continue
-        vals.append(float(p))
+        if p:
+            vals.append(float(p))
     if not vals:
         raise ValueError("Expected at least one float value")
     return vals
@@ -34,63 +30,38 @@ def _parse_float_list(raw: str) -> List[float]:
 
 def _objective_score(summary: Dict[str, object], objective: str) -> float:
     raw = summary.get("raw", {})
-    structured = summary.get("structured", {})
-    if not isinstance(raw, dict) or not isinstance(structured, dict):
+    if not isinstance(raw, dict):
         return 0.0
 
     def _mean(d: Dict[str, object], key: str) -> float:
         val = d.get(key, {})
         if isinstance(val, dict):
-            m = val.get("mean", 0.0)
             try:
-                return float(m)
+                return float(val.get("mean", 0.0))
             except Exception:
                 return 0.0
         return 0.0
 
-    raw_num_f1 = _mean(raw, "number_f1")
-    struct_row_f1 = _mean(structured, "row_f1")
-    struct_value_acc = _mean(structured, "value_tolerant_accuracy")
-
     if objective == "raw_number_f1":
-        return raw_num_f1
-    if objective == "structured_row_f1":
-        return struct_row_f1
-    if objective == "structured_value_acc":
-        return struct_value_acc
-    # blended default
-    return 0.5 * struct_row_f1 + 0.3 * struct_value_acc + 0.2 * raw_num_f1
+        return _mean(raw, "number_f1")
+    if objective == "table_cell_f1":
+        return _mean(raw, "table_cell_f1")
+    return 0.7 * _mean(raw, "number_f1") + 0.3 * _mean(raw, "table_cell_f1")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Tune hybrid OCR thresholds on benchmark v2 dev split")
+    parser = argparse.ArgumentParser(description="Tune hybrid OCR thresholds on raw benchmark v2 dev split")
     parser.add_argument("--dataset-root", required=True, type=str)
-    parser.add_argument("--work-root", required=True, type=str, help="Directory for per-trial predictions/results")
+    parser.add_argument("--work-root", required=True, type=str)
     parser.add_argument("--device", type=str, default="cuda", choices=["cuda", "cpu"])
-    parser.add_argument(
-        "--hybrid-thresholds",
-        type=str,
-        default="0.7,0.8,0.9",
-        help="Comma-separated confidence thresholds",
-    )
-    parser.add_argument(
-        "--hybrid-number-thresholds",
-        type=str,
-        default="0.85,0.9,0.95",
-        help="Comma-separated numeric confidence thresholds",
-    )
+    parser.add_argument("--hybrid-thresholds", type=str, default="0.7,0.8,0.9")
+    parser.add_argument("--hybrid-number-thresholds", type=str, default="0.85,0.9,0.95")
     parser.add_argument(
         "--objective",
         type=str,
-        default="blended",
-        choices=[
-            "blended",
-            "raw_number_f1",
-            "structured_row_f1",
-            "structured_value_acc",
-        ],
+        default="blended_raw",
+        choices=["blended_raw", "raw_number_f1", "table_cell_f1"],
     )
-    parser.add_argument("--raw-only", action="store_true", help="Tune only raw OCR metrics")
     parser.add_argument("--bootstrap-iters", type=int, default=300)
     parser.add_argument("--seed", type=int, default=42)
     args = parser.parse_args()
@@ -117,7 +88,6 @@ def main() -> None:
                 output_root=pred_root,
                 engine="hybrid",
                 split="dev",
-                include_structured=not bool(args.raw_only),
                 skip_existing=False,
                 device=args.device,
                 hybrid_threshold=float(thr),
@@ -133,8 +103,7 @@ def main() -> None:
                 bootstrap_iters=int(args.bootstrap_iters),
                 seed=int(args.seed),
             )
-            with open(out_json, "w", encoding="utf-8") as f:
-                json.dump(result, f, ensure_ascii=False, indent=2)
+            out_json.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
 
             score = _objective_score(result.get("summary", {}), args.objective)
             trial = {
@@ -149,7 +118,6 @@ def main() -> None:
             trials.append(trial)
             if best_trial is None or float(trial["score"]) > float(best_trial["score"]):
                 best_trial = trial
-
             logger.info(f"Trial {trial_name}: score={score:.6f}")
 
     summary = {
@@ -163,13 +131,10 @@ def main() -> None:
         "trials": sorted(trials, key=lambda x: float(x["score"]), reverse=True),
     }
     summary_path = work_root / "tuning_summary.json"
-    with open(summary_path, "w", encoding="utf-8") as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
-
+    summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     logger.info(f"Tuning complete. Best: {best_trial}")
     logger.info(f"Saved summary: {summary_path}")
 
 
 if __name__ == "__main__":
     main()
-

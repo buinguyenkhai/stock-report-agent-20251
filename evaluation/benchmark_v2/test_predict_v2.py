@@ -13,9 +13,6 @@ from services.ocr.financial_table_reconstruction import (
     reconstruct_table_from_tokens,
     reconstruct_table_from_words,
 )
-from services.parser import AggregatedParser, ExtractionBundle, FinancialItem, ParsedReport, ParsedStatement
-
-
 def test_markdown_stats_detect_collapsed_table_shape() -> None:
     markdown = """
 | Code | Name | Value |
@@ -58,34 +55,6 @@ def test_content_crop_image_trims_large_border(tmp_path: Path) -> None:
         assert debug["final_size"][1] < debug["original_size"][1]
     finally:
         pdf_path.unlink(missing_ok=True)
-
-
-def test_parser_finalize_sets_unit_metadata_and_row_identity() -> None:
-    parser = AggregatedParser(model="dummy")
-    bundle = ExtractionBundle(
-        balance_sheet="Đơn vị tính: triệu đồng\n| Chỉ tiêu | Quý III 2024 | Quý III 2023 |",
-        metadata={"unit": "triệu đồng", "quarter": 3, "year": 2024},
-    )
-    report = ParsedReport(
-        balance_sheet=ParsedStatement(
-            items=[
-                FinancialItem(item_name="Tiền và các khoản tương đương tiền", value=123000000.0),
-                FinancialItem(
-                    item_name="Tiền và các khoản tương đương tiền",
-                    value=111000000.0,
-                    period_key="2023Q3",
-                ),
-            ]
-        )
-    )
-
-    finalized = parser._finalize_report(report, bundle)
-    assert finalized.source_unit_multiplier_to_vnd == 1_000_000.0
-    assert finalized.source_unit_label == "trieu dong"
-    assert finalized.value_unit == "VND"
-    assert finalized.balance_sheet.items[0].row_identity is not None
-    assert "possible_scale_conflicts" in finalized.parse_audit
-
 
 def _word(
     text: str,
@@ -190,6 +159,28 @@ def test_reconstruct_table_from_tokens_prefers_table_region() -> None:
     assert debug["reconstruction_applied"] is True
     assert debug["selection_mode"] == "docling_table_region"
     assert debug["source_tag_counts"]["surya_updated"] == 1
+    assert "Tiền" in markdown
+
+
+def test_reconstruct_table_from_tokens_can_prefer_ocr_region() -> None:
+    tokens = [
+        {"text": "Mã", "left": 10, "top": 110, "right": 30, "bottom": 122, "confidence": 0.9, "line_key": [1, 1, 1]},
+        {"text": "số", "left": 34, "top": 110, "right": 54, "bottom": 122, "confidence": 0.9, "line_key": [1, 1, 1]},
+        {"text": "2024", "left": 230, "top": 110, "right": 262, "bottom": 122, "confidence": 0.9, "line_key": [1, 1, 1]},
+        {"text": "2023", "left": 330, "top": 110, "right": 362, "bottom": 122, "confidence": 0.9, "line_key": [1, 1, 1]},
+        {"text": "110", "left": 10, "top": 130, "right": 30, "bottom": 142, "confidence": 0.9, "line_key": [1, 1, 2]},
+        {"text": "Tiền", "left": 50, "top": 130, "right": 86, "bottom": 142, "confidence": 0.9, "line_key": [1, 1, 2]},
+        {"text": "100", "left": 230, "top": 130, "right": 258, "bottom": 142, "confidence": 0.9, "line_key": [1, 1, 2]},
+        {"text": "90", "left": 330, "top": 130, "right": 350, "bottom": 142, "confidence": 0.9, "line_key": [1, 1, 2]},
+    ]
+
+    markdown, debug = reconstruct_table_from_tokens(
+        tokens,
+        page_size=(600, 800),
+        ocr_regions=[{"left": 0, "top": 100, "right": 500, "bottom": 200}],
+    )
+    assert debug["reconstruction_applied"] is True
+    assert debug["selection_mode"] == "ocr_region"
     assert "Tiền" in markdown
 
 

@@ -58,13 +58,8 @@ try:
     from .benchmark_v2 import (
         BenchmarkDatasetV2,
         TableSample,
-        csv_to_canonical,
-        canonical_to_csv,
-        compute_pilot_metrics,
         RawMetricResult,
         calculate_raw_metrics,
-        StructuredMetricResult,
-        calculate_structured_metrics,
         generate_predictions,
         run_benchmark,
     )
@@ -73,13 +68,8 @@ try:
         [
             "BenchmarkDatasetV2",
             "TableSample",
-            "csv_to_canonical",
-            "canonical_to_csv",
-            "compute_pilot_metrics",
             "RawMetricResult",
             "calculate_raw_metrics",
-            "StructuredMetricResult",
-            "calculate_structured_metrics",
             "generate_predictions",
             "run_benchmark",
         ]

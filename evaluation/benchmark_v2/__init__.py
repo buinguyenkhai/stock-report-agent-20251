@@ -1,15 +1,10 @@
 """
-Benchmark v2 for Vietnamese financial table OCR/extraction.
+Benchmark v2 for Vietnamese financial table OCR.
 
-This module is intentionally decoupled from the legacy HF-based benchmark.
-It evaluates:
-1) Raw OCR table fidelity (markdown/text level)
-2) End-to-end structured output fidelity (UI-visible table rows/values)
+This module evaluates raw OCR table fidelity only.
 """
 
-__all__ = [
-    # dynamically extended below
-]
+__all__ = []
 
 try:
     from .dataset import BenchmarkDatasetV2, TableSample
@@ -26,13 +21,6 @@ except ImportError:
     pass
 
 try:
-    from .metrics_structured import StructuredMetricResult, calculate_structured_metrics
-
-    __all__.extend(["StructuredMetricResult", "calculate_structured_metrics"])
-except ImportError:
-    pass
-
-try:
     from .run import run_benchmark
 
     __all__.append("run_benchmark")
@@ -43,12 +31,5 @@ try:
     from .predict import generate_predictions
 
     __all__.append("generate_predictions")
-except ImportError:
-    pass
-
-try:
-    from .csv_codec import csv_to_canonical, canonical_to_csv, compute_pilot_metrics
-
-    __all__.extend(["csv_to_canonical", "canonical_to_csv", "compute_pilot_metrics"])
 except ImportError:
     pass

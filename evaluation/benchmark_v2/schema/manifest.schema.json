@@ -26,8 +26,7 @@
           "report_id",
           "page_index",
           "page_image_path",
-          "gt_markdown_path",
-          "gt_structured_path"
+          "gt_markdown_path"
         ],
         "properties": {
           "sample_id": { "type": "string" },
@@ -37,8 +36,6 @@
           "page_index": { "type": "integer", "minimum": 1 },
           "page_image_path": { "type": "string" },
           "gt_markdown_path": { "type": "string" },
-          "gt_structured_path": { "type": "string" },
-          "gt_table_cells_path": { "type": "string" },
           "source_pdf_path": { "type": "string" },
           "annotator_id": { "type": "string" },
           "annotation_passes": { "type": "integer", "minimum": 1 },
@@ -49,4 +46,3 @@
     }
   }
 }
-

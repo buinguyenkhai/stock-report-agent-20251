@@ -1,5 +1,5 @@
 """
-Lightweight Streamlit viewer for benchmark v2 debug diffs.
+Lightweight Streamlit viewer for raw OCR benchmark v2 debug diffs.
 
 Run:
   streamlit run evaluation/benchmark_v2/debug_app.py -- --diff-json results/benchmark_v2_debug_diffs.json
@@ -10,7 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict
 
 import streamlit as st
 
@@ -30,25 +30,6 @@ def _load_payload(path: str | Path) -> Dict[str, Any]:
     return data if isinstance(data, dict) else {}
 
 
-def _table_rows(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    rows: List[Dict[str, Any]] = []
-    for item in items:
-        rows.append(
-            {
-                "row_key": item.get("row_key"),
-                "statement": item.get("statement"),
-                "item_code": item.get("item_code"),
-                "item_name": item.get("item_name"),
-                "notes_ref": item.get("notes_ref"),
-                "row_identity": item.get("row_identity"),
-                "column_label": item.get("column_label"),
-                "period_key": item.get("period_key"),
-                "value": item.get("value"),
-            }
-        )
-    return rows
-
-
 def _render_sample(sample: Dict[str, Any]) -> None:
     st.subheader(sample["sample_id"])
     cols = st.columns(4)
@@ -56,6 +37,12 @@ def _render_sample(sample: Dict[str, Any]) -> None:
     cols[1].metric("WER", f"{sample['raw_metrics']['table_only_wer']:.4f}" if sample.get("raw_metrics") else "NA")
     cols[2].metric("Cell F1", f"{sample['raw_metrics']['table_cell_f1']:.4f}" if sample.get("raw_metrics") else "NA")
     cols[3].metric("Number F1", f"{sample['raw_metrics']['number_f1']:.4f}" if sample.get("raw_metrics") else "NA")
+
+    telemetry = sample.get("telemetry") or {}
+    tcols = st.columns(3)
+    tcols[0].metric("Latency (ms)", f"{float(telemetry['total_latency_ms']):.1f}" if telemetry.get("total_latency_ms") is not None else "NA")
+    tcols[1].metric("Peak VRAM reserved (MB)", f"{float(telemetry['peak_vram_reserved_mb']):.1f}" if telemetry.get("peak_vram_reserved_mb") is not None else "NA")
+    tcols[2].metric("Peak VRAM allocated (MB)", f"{float(telemetry['peak_vram_allocated_mb']):.1f}" if telemetry.get("peak_vram_allocated_mb") is not None else "NA")
 
     image_path = sample.get("page_image_path")
     if image_path and Path(image_path).exists():
@@ -93,34 +80,6 @@ def _render_sample(sample: Dict[str, Any]) -> None:
         st.code(sample.get("pred_raw_markdown", ""), language="markdown")
 
 
-def _render_report(report: Dict[str, Any]) -> None:
-    st.subheader(report["report_id"])
-    if report.get("comparison"):
-        metrics = report["comparison"]["metrics"]
-        cols = st.columns(5)
-        cols[0].metric("Row F1", f"{metrics['row_f1']:.4f}")
-        cols[1].metric("Row P", f"{metrics['row_precision']:.4f}")
-        cols[2].metric("Row R", f"{metrics['row_recall']:.4f}")
-        cols[3].metric("Exact", f"{metrics['value_exact_accuracy']:.4f}")
-        cols[4].metric("Tolerance", f"{metrics['value_tolerant_accuracy']:.4f}")
-
-        st.markdown("**Value mismatches**")
-        st.dataframe(report["comparison"].get("value_mismatches", []), use_container_width=True)
-        st.markdown("**Missing GT rows**")
-        st.dataframe(_table_rows(report["comparison"].get("missing_rows", [])), use_container_width=True)
-        st.markdown("**Extra predicted rows**")
-        st.dataframe(_table_rows(report["comparison"].get("extra_rows", [])), use_container_width=True)
-    else:
-        st.warning("Structured comparison unavailable for this report.")
-        if report.get("errors"):
-            st.code("\n".join(report["errors"]))
-
-    with st.expander("GT assembly conflicts"):
-        st.dataframe(report.get("gt_conflicts", []), use_container_width=True)
-    with st.expander("Prediction assembly conflicts"):
-        st.dataframe(report.get("pred_conflicts", []), use_container_width=True)
-
-
 def main() -> None:
     st.set_page_config(page_title="Benchmark v2 Debug Viewer", layout="wide")
     args = _parse_args()
@@ -132,21 +91,12 @@ def main() -> None:
         st.error(f"Could not load diff JSON: {diff_path}")
         st.stop()
 
-    mode = st.sidebar.radio("View", options=["Samples", "Reports"])
     st.sidebar.caption(f"Split: {payload.get('split')} | Include scope: {payload.get('include_scope')}")
-
-    if mode == "Samples":
-        samples = payload.get("sample_diffs", [])
-        sample_ids = [row["sample_id"] for row in samples]
-        selected = st.sidebar.selectbox("Sample", options=sample_ids)
-        sample = next(row for row in samples if row["sample_id"] == selected)
-        _render_sample(sample)
-    else:
-        reports = payload.get("report_diffs", [])
-        report_ids = [row["report_id"] for row in reports]
-        selected = st.sidebar.selectbox("Report", options=report_ids)
-        report = next(row for row in reports if row["report_id"] == selected)
-        _render_report(report)
+    samples = payload.get("sample_diffs", [])
+    sample_ids = [row["sample_id"] for row in samples]
+    selected = st.sidebar.selectbox("Sample", options=sample_ids)
+    sample = next(row for row in samples if row["sample_id"] == selected)
+    _render_sample(sample)
 
 
 if __name__ == "__main__":

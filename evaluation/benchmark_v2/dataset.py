@@ -1,5 +1,5 @@
 """
-Dataset loader for benchmark v2.
+Dataset loader for raw OCR benchmark v2.
 
 Expected dataset root layout:
   <dataset_root>/
@@ -27,8 +27,6 @@ class TableSample:
     page_index: int
     page_image_path: str
     gt_markdown_path: str
-    gt_structured_path: str
-    gt_table_cells_path: Optional[str] = None
     source_pdf_path: Optional[str] = None
     annotator_id: Optional[str] = None
     annotation_passes: int = 1
@@ -42,7 +40,7 @@ class TableSample:
 
 
 class BenchmarkDatasetV2:
-    """Schema-light, strict-enough loader for benchmark v2 manifests."""
+    """Schema-light, strict-enough loader for the raw OCR benchmark manifest."""
 
     def __init__(
         self,
@@ -81,7 +79,6 @@ class BenchmarkDatasetV2:
         }
         if not self.include_registry_path.exists():
             return default
-
         try:
             obj = json.loads(self.include_registry_path.read_text(encoding="utf-8"))
         except Exception:
@@ -98,7 +95,6 @@ class BenchmarkDatasetV2:
                 if sample_id and sample_id not in seen:
                     seen.add(sample_id)
                     included_ids.append(sample_id)
-
         return {
             "version": str(obj.get("version", "1.0.0")),
             "mode": str(obj.get("mode", "include_table_pages")),
@@ -109,7 +105,6 @@ class BenchmarkDatasetV2:
     def _apply_include_scope(self, samples: List[TableSample]) -> List[TableSample]:
         if self.include_scope == "all":
             return list(samples)
-
         included_ids = set(self._load_include_registry().get("included_sample_ids", []))
         if self.include_scope == "included":
             return [s for s in samples if s.sample_id in included_ids]
@@ -118,8 +113,7 @@ class BenchmarkDatasetV2:
     def _load_manifest(self) -> Dict[str, Any]:
         if not self.manifest_path.exists():
             raise FileNotFoundError(f"Manifest not found: {self.manifest_path}")
-        with open(self.manifest_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        data = json.loads(self.manifest_path.read_text(encoding="utf-8"))
         if not isinstance(data, dict):
             raise ValueError("Manifest root must be a JSON object")
         if "samples" not in data or not isinstance(data["samples"], list):
@@ -140,7 +134,6 @@ class BenchmarkDatasetV2:
                 "page_index",
                 "page_image_path",
                 "gt_markdown_path",
-                "gt_structured_path",
             ]
             missing = [k for k in required if k not in row]
             if missing:
@@ -158,23 +151,12 @@ class BenchmarkDatasetV2:
                 page_index=int(row["page_index"]),
                 page_image_path=str(row["page_image_path"]),
                 gt_markdown_path=str(row["gt_markdown_path"]),
-                gt_structured_path=str(row["gt_structured_path"]),
-                gt_table_cells_path=(
-                    str(row["gt_table_cells_path"])
-                    if row.get("gt_table_cells_path") is not None
-                    else None
-                ),
-                source_pdf_path=(
-                    str(row["source_pdf_path"]) if row.get("source_pdf_path") is not None else None
-                ),
-                annotator_id=(
-                    str(row["annotator_id"]) if row.get("annotator_id") is not None else None
-                ),
+                source_pdf_path=(str(row["source_pdf_path"]) if row.get("source_pdf_path") else None),
+                annotator_id=(str(row["annotator_id"]) if row.get("annotator_id") else None),
                 annotation_passes=int(row.get("annotation_passes", 1)),
                 audited_by=str(row["audited_by"]) if row.get("audited_by") else None,
                 notes=str(row["notes"]) if row.get("notes") else None,
             )
-
             if sample.sample_id in seen_ids:
                 raise ValueError(f"Duplicate sample_id: {sample.sample_id}")
             seen_ids.add(sample.sample_id)
@@ -185,9 +167,9 @@ class BenchmarkDatasetV2:
         split_norm = split.strip().lower()
         if split_norm not in {"dev", "test"}:
             raise ValueError(f"Invalid split: {split}")
-        for s in self.samples:
-            if s.split == split_norm:
-                yield s
+        for sample in self.samples:
+            if sample.split == split_norm:
+                yield sample
 
     def get_split_samples(self, split: SplitName) -> List[TableSample]:
         return list(self.iter_split(split))
@@ -218,20 +200,13 @@ class BenchmarkDatasetV2:
             )
 
     def validate_referenced_files(self) -> None:
-        for s in self.samples:
-            refs = [
-                s.page_image_path,
-                s.gt_markdown_path,
-                s.gt_structured_path,
-                s.gt_table_cells_path,
-                s.source_pdf_path,
-            ]
-            for rel in refs:
+        for sample in self.samples:
+            for rel in (sample.page_image_path, sample.gt_markdown_path, sample.source_pdf_path):
                 if rel is None:
                     continue
-                p = self.dataset_root / rel
-                if not p.exists():
-                    raise FileNotFoundError(f"Missing referenced file for {s.sample_id}: {p}")
+                path = self.dataset_root / rel
+                if not path.exists():
+                    raise FileNotFoundError(f"Missing referenced file for {sample.sample_id}: {path}")
 
     def validate(
         self,

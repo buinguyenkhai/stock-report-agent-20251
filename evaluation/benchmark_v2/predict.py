@@ -1,12 +1,9 @@
 """
-Prediction generator for benchmark v2.
+Prediction generator for raw OCR benchmark v2.
 
 Generates per-sample files expected by evaluation.benchmark_v2.run:
   <output_root>/<sample_id>.raw.md
-  <output_root>/<sample_id>.structured.json
-
-Also writes assembled report-level structured files when structured output is enabled:
-  <output_root>/report_structured/<report_id>.structured.json
+  <output_root>/<sample_id>.ocr_debug.json
 """
 
 from __future__ import annotations
@@ -14,8 +11,9 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import tempfile
 import re
+import tempfile
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Literal, Optional, Tuple
 
@@ -28,10 +26,9 @@ from services.ocr.base import OCRStrategy
 from services.ocr.docling import DoclingOCRService
 from services.ocr.financial_table_reconstruction import reconstruct_financial_table_markdown
 from services.ocr.marker import MarkerOCRService
-from services.pipeline import create_pipeline
 
 from .dataset import BenchmarkDatasetV2, IncludeScope
-from .report_assembler import build_prediction_structured_report_files
+from .telemetry import capture_cuda_peak_memory, reset_cuda_peak_memory
 
 logger = get_logger(__name__)
 
@@ -41,11 +38,10 @@ EngineName = Literal["docling", "hybrid", "marker"]
 def _load_hybrid_overrides(path: Optional[str]) -> Dict[str, Any]:
     if not path:
         return {}
-    p = Path(path)
-    with open(p, "r", encoding="utf-8") as f:
+    with open(Path(path), "r", encoding="utf-8") as f:
         data = json.load(f)
     if not isinstance(data, dict):
-        raise ValueError(f"Hybrid overrides must be a JSON object: {p}")
+        raise ValueError(f"Hybrid overrides must be a JSON object: {path}")
     return data
 
 
@@ -85,7 +81,6 @@ def _build_ocr_service(
 def _extract_single_page_pdf(source_pdf: Path, page_index_1based: int) -> Path:
     if page_index_1based < 1:
         raise ValueError(f"Invalid page index: {page_index_1based}")
-
     src = fitz.open(source_pdf)
     try:
         page_zero = page_index_1based - 1
@@ -138,7 +133,6 @@ def _extract_markdown_table_stats(markdown: str) -> Dict[str, Any]:
     giant_cells = 0
     max_cell_chars = 0
     max_numeric_tokens = 0
-
     for raw_line in (markdown or "").splitlines():
         line = raw_line.strip()
         if line.count("|") < 2:
@@ -160,7 +154,6 @@ def _extract_markdown_table_stats(markdown: str) -> Dict[str, Any]:
             max_numeric_tokens = max(max_numeric_tokens, numeric_tokens)
             if cell_chars >= 90 and numeric_tokens >= 4:
                 giant_cells += 1
-
     stats = {
         "pipe_row_count": len(pipe_rows),
         "max_cell_chars": max_cell_chars,
@@ -198,7 +191,6 @@ def _compare_table_structures(
     reconstructed_rows = int(candidate_debug.get("reconstructed_row_count", 0) or 0)
     numeric_columns = int(candidate_debug.get("numeric_column_count", 0) or 0)
     header_present = bool(candidate_debug.get("header_present"))
-
     select_candidate = bool(
         candidate_stats.get("pipe_row_count", 0) >= 3
         and reconstructed_rows >= 3
@@ -218,7 +210,6 @@ def _compare_table_structures(
             )
         )
     )
-
     return {
         "baseline_structure_health_score": baseline_health,
         "candidate_structure_health_score": candidate_health,
@@ -235,6 +226,28 @@ def _compare_table_structures(
     }
 
 
+def _time_call(fn) -> Tuple[Any, float]:
+    started = time.perf_counter()
+    result = fn()
+    return result, (time.perf_counter() - started) * 1000.0
+
+
+def _get_ocr_debug_payload(ocr_service: OCRStrategy) -> Optional[Dict[str, Any]]:
+    getter = getattr(ocr_service, "get_debug_artifacts", None)
+    if not callable(getter):
+        return None
+    payload = getter()
+    return payload if isinstance(payload, dict) else None
+
+
+def _get_reconstruction_payload(ocr_service: OCRStrategy) -> Optional[Dict[str, Any]]:
+    getter = getattr(ocr_service, "get_reconstruction_artifacts", None)
+    if not callable(getter):
+        return None
+    payload = getter()
+    return payload if isinstance(payload, dict) else None
+
+
 def _run_ocr_for_sample(
     *,
     engine: EngineName,
@@ -242,16 +255,24 @@ def _run_ocr_for_sample(
     source_pdf: Optional[Path],
     page_image: Optional[Path],
     page_index: int,
-) -> Tuple[str, Dict[str, Any]]:
+    device: str,
+) -> Tuple[str, Dict[str, Any], Dict[str, Any]]:
+    reset_cuda_peak_memory(device)
+    total_started = time.perf_counter()
+    stage_timings: Dict[str, Any] = {}
+
     if source_pdf is not None:
         one_page_pdf = _extract_single_page_pdf(source_pdf, page_index)
         try:
-            markdown = ocr_service.process_pdf(str(one_page_pdf))
+            markdown, stage_timings["base_ocr_latency_ms"] = _time_call(
+                lambda: ocr_service.process_pdf(str(one_page_pdf))
+            )
         finally:
             try:
                 os.unlink(one_page_pdf)
             except Exception:
                 pass
+
         debug: Dict[str, Any] = {
             "ocr_input_strategy": "single_page_pdf",
             "base_markdown_stats": _extract_markdown_table_stats(markdown),
@@ -259,13 +280,16 @@ def _run_ocr_for_sample(
         chosen_markdown = markdown
         chosen_stats = debug["base_markdown_stats"]
         chosen_strategy = "single_page_pdf"
+
         if engine in {"docling", "hybrid"} and page_image is not None:
             base_stats = debug["base_markdown_stats"]
             if _looks_structurally_collapsed(base_stats):
                 cropped_pdf = None
                 try:
                     cropped_pdf, crop_debug = _content_crop_image(page_image)
-                    alt_markdown = ocr_service.process_pdf(str(cropped_pdf))
+                    alt_markdown, stage_timings["layout_retry_ocr_latency_ms"] = _time_call(
+                        lambda: ocr_service.process_pdf(str(cropped_pdf))
+                    )
                     alt_stats = _extract_markdown_table_stats(alt_markdown)
                     debug["layout_retry"] = {
                         "triggered": True,
@@ -278,14 +302,15 @@ def _run_ocr_for_sample(
                         chosen_markdown = alt_markdown
                         chosen_stats = alt_stats
                         chosen_strategy = "cropped_page_image_pdf"
-                        debug["ocr_input_strategy"] = "cropped_page_image_pdf"
-                        debug["layout_retry"]["selected_strategy"] = "cropped_page_image_pdf"
+                        debug["ocr_input_strategy"] = chosen_strategy
+                        debug["layout_retry"]["selected_strategy"] = chosen_strategy
                 finally:
                     if cropped_pdf is not None:
                         try:
                             os.unlink(cropped_pdf)
                         except Exception:
                             pass
+
             if _looks_structurally_collapsed(chosen_stats):
                 reconstructed_markdown = ""
                 reconstruction_debug: Dict[str, Any] = {}
@@ -296,15 +321,24 @@ def _run_ocr_for_sample(
                     if isinstance(page_size_raw, list) and len(page_size_raw) == 2:
                         page_size = (int(page_size_raw[0]), int(page_size_raw[1]))
                     tokens = reconstruction_payload.get("word_tokens") or reconstruction_payload.get("textline_tokens")
-                    reconstructed_markdown, reconstruction_debug = reconstruct_financial_table_markdown(
-                        str(page_image) if page_image is not None else None,
-                        ocr_tokens=tokens if isinstance(tokens, list) else None,
-                        page_size=page_size,
-                        table_regions=(
-                            reconstruction_payload.get("table_regions")
-                            if isinstance(reconstruction_payload.get("table_regions"), list)
-                            else None
-                        ),
+                    (reconstructed_markdown, reconstruction_debug), stage_timings[
+                        "reconstruction_latency_ms"
+                    ] = _time_call(
+                        lambda: reconstruct_financial_table_markdown(
+                            str(page_image) if page_image is not None else None,
+                            ocr_tokens=tokens if isinstance(tokens, list) else None,
+                            page_size=page_size,
+                            table_regions=(
+                                reconstruction_payload.get("table_regions")
+                                if isinstance(reconstruction_payload.get("table_regions"), list)
+                                else None
+                            ),
+                            ocr_regions=(
+                                reconstruction_payload.get("ocr_regions")
+                                if isinstance(reconstruction_payload.get("ocr_regions"), list)
+                                else None
+                            ),
+                        )
                     )
                 except Exception as exc:
                     reconstruction_debug = {"reconstruction_applied": False, "error": str(exc)}
@@ -328,7 +362,14 @@ def _run_ocr_for_sample(
                     chosen_strategy = "deterministic_table_reconstruction"
                     debug["ocr_input_strategy"] = chosen_strategy
                     debug["deterministic_reconstruction"]["selected_strategy"] = chosen_strategy
-        return chosen_markdown, debug
+
+        telemetry = {
+            **capture_cuda_peak_memory(device),
+            "total_latency_ms": (time.perf_counter() - total_started) * 1000.0,
+            "stage_timings_ms": stage_timings,
+            "selected_ocr_strategy": chosen_strategy,
+        }
+        return chosen_markdown, debug, telemetry
 
     if page_image is not None:
         if engine == "marker":
@@ -337,31 +378,23 @@ def _run_ocr_for_sample(
             raise ValueError(f"Engine does not support image OCR fallback: {engine}")
         img = Image.open(page_image)
         try:
-            markdown = ocr_service.process_image(img)  # type: ignore[misc]
+            markdown, stage_timings["base_ocr_latency_ms"] = _time_call(
+                lambda: ocr_service.process_image(img)  # type: ignore[misc]
+            )
         finally:
             img.close()
+        telemetry = {
+            **capture_cuda_peak_memory(device),
+            "total_latency_ms": (time.perf_counter() - total_started) * 1000.0,
+            "stage_timings_ms": stage_timings,
+            "selected_ocr_strategy": "page_image",
+        }
         return markdown, {
             "ocr_input_strategy": "page_image",
             "base_markdown_stats": _extract_markdown_table_stats(markdown),
-        }
+        }, telemetry
 
     raise ValueError("No valid OCR input for sample (need source_pdf_path or page_image_path)")
-
-
-def _get_ocr_debug_payload(ocr_service: OCRStrategy) -> Optional[Dict[str, Any]]:
-    getter = getattr(ocr_service, "get_debug_artifacts", None)
-    if not callable(getter):
-        return None
-    payload = getter()
-    return payload if isinstance(payload, dict) else None
-
-
-def _get_reconstruction_payload(ocr_service: OCRStrategy) -> Optional[Dict[str, Any]]:
-    getter = getattr(ocr_service, "get_reconstruction_artifacts", None)
-    if not callable(getter):
-        return None
-    payload = getter()
-    return payload if isinstance(payload, dict) else None
 
 
 def generate_predictions(
@@ -371,7 +404,6 @@ def generate_predictions(
     engine: EngineName,
     split: Literal["dev", "test", "all"],
     include_scope: IncludeScope = "all",
-    include_structured: bool = True,
     skip_existing: bool = True,
     device: str = "cuda",
     hybrid_threshold: float = 0.9,
@@ -384,11 +416,7 @@ def generate_predictions(
 ) -> Dict[str, int]:
     ds = BenchmarkDatasetV2(dataset_root, include_scope=include_scope)
     required_splits = ("dev",) if split == "dev" else ("test",) if split == "test" else None
-    ds.validate(
-        check_files=False,
-        required_splits=required_splits,
-        require_company_disjoint=True,
-    )
+    ds.validate(check_files=False, required_splits=required_splits, require_company_disjoint=True)
 
     if split == "dev":
         samples = ds.get_split_samples("dev")
@@ -412,28 +440,15 @@ def generate_predictions(
         marker_force_ocr=marker_force_ocr,
         marker_extract_images=marker_extract_images,
     )
-    pipeline = (
-        create_pipeline(mode="separate", extract_notes=False, extract_metadata=True)
-        if include_structured
-        else None
-    )
 
-    counts = {
-        "total": 0,
-        "success": 0,
-        "failed": 0,
-        "skipped": 0,
-        "reports_structured_saved": 0,
-        "reports_structured_failed": 0,
-    }
-    errors: List[Dict[str, str]] = []
+    counts = {"total": 0, "success": 0, "failed": 0, "skipped": 0}
+    errors: List[Dict[str, Any]] = []
 
     run_config = {
         "engine": engine,
         "split": split,
         "include_scope": include_scope,
         "device": device,
-        "include_structured": bool(include_structured),
         "skip_existing": bool(skip_existing),
         "hybrid_threshold": float(hybrid_threshold),
         "hybrid_number_threshold": float(hybrid_number_threshold),
@@ -448,61 +463,44 @@ def generate_predictions(
         encoding="utf-8",
     )
 
-    for s in samples:
+    for sample in samples:
         counts["total"] += 1
-        raw_out = out_root / f"{s.sample_id}.raw.md"
-        struct_out = out_root / f"{s.sample_id}.structured.json"
-        ocr_debug_out = out_root / f"{s.sample_id}.ocr_debug.json"
-
-        if skip_existing and raw_out.exists() and (not include_structured or struct_out.exists()):
+        raw_out = out_root / f"{sample.sample_id}.raw.md"
+        ocr_debug_out = out_root / f"{sample.sample_id}.ocr_debug.json"
+        if skip_existing and raw_out.exists() and ocr_debug_out.exists():
             counts["skipped"] += 1
             continue
-
         try:
-            source_pdf = s.resolve_path(ds.dataset_root, s.source_pdf_path)
-            page_image = s.resolve_path(ds.dataset_root, s.page_image_path)
-
-            md, run_debug = _run_ocr_for_sample(
+            source_pdf = sample.resolve_path(ds.dataset_root, sample.source_pdf_path)
+            page_image = sample.resolve_path(ds.dataset_root, sample.page_image_path)
+            markdown, run_debug, telemetry = _run_ocr_for_sample(
                 engine=engine,
                 ocr_service=ocr_service,
                 source_pdf=source_pdf,
                 page_image=page_image,
-                page_index=s.page_index,
+                page_index=sample.page_index,
+                device=device,
             )
-
-            raw_out.write_text(md, encoding="utf-8")
-            ocr_debug = _get_ocr_debug_payload(ocr_service)
-            ocr_debug_payload = dict(ocr_debug or {})
-            ocr_debug_payload.update(run_debug)
-            if ocr_debug_payload:
-                ocr_debug_out.write_text(
-                    json.dumps(
-                        {
-                            "sample_id": s.sample_id,
-                            "engine": engine,
-                            "page_index": s.page_index,
-                            **ocr_debug_payload,
-                        },
-                        ensure_ascii=False,
-                        indent=2,
-                    ),
-                    encoding="utf-8",
-                )
-
-            if include_structured and pipeline is not None:
-                parsed = pipeline.process(md)
-                parsed_dict = pipeline.to_dict(parsed)
-                struct_out.write_text(
-                    json.dumps(parsed_dict, ensure_ascii=False, indent=2),
-                    encoding="utf-8",
-                )
-
+            raw_out.write_text(markdown, encoding="utf-8")
+            ocr_debug = _get_ocr_debug_payload(ocr_service) or {}
+            ocr_debug_payload = {
+                "sample_id": sample.sample_id,
+                "engine": engine,
+                "page_index": sample.page_index,
+                **ocr_debug,
+                **run_debug,
+                "telemetry": telemetry,
+            }
+            ocr_debug_out.write_text(
+                json.dumps(ocr_debug_payload, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+            )
             counts["success"] += 1
-            logger.info(f"Predicted: {s.sample_id}")
-        except Exception as e:
+            logger.info(f"Predicted: {sample.sample_id}")
+        except Exception as exc:
             counts["failed"] += 1
-            errors.append({"sample_id": s.sample_id, "error": str(e)})
-            logger.error(f"Failed {s.sample_id}: {e}")
+            errors.append({"sample_id": sample.sample_id, "error": str(exc)})
+            logger.error(f"Failed {sample.sample_id}: {exc}")
         finally:
             try:
                 ocr_service.cleanup_after_page()
@@ -514,38 +512,14 @@ def generate_predictions(
         err_path.write_text(json.dumps(errors, ensure_ascii=False, indent=2), encoding="utf-8")
         logger.warning(f"Saved prediction errors to {err_path}")
 
-    if include_structured:
-        rep_counts = build_prediction_structured_report_files(
-            dataset_root=dataset_root,
-            predictions_root=out_root,
-            split=split,
-            include_scope=include_scope,
-            structured_suffix=".structured.json",
-            output_dir="report_structured",
-            meta_dir="report_structured_meta",
-            strict_missing=False,
-        )
-        counts["reports_structured_saved"] = int(rep_counts.get("reports_saved", 0))
-        counts["reports_structured_failed"] = int(rep_counts.get("reports_failed", 0))
-        logger.info(
-            "Report-level structured files: "
-            f"saved={counts['reports_structured_saved']} failed={counts['reports_structured_failed']}"
-        )
-
     return counts
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate benchmark v2 prediction artifacts")
+    parser = argparse.ArgumentParser(description="Generate raw OCR benchmark v2 prediction artifacts")
     parser.add_argument("--dataset-root", required=True, type=str, help="Dataset root containing manifest.json")
     parser.add_argument("--output-root", required=True, type=str, help="Directory to write prediction files")
-    parser.add_argument(
-        "--engine",
-        required=True,
-        type=str,
-        choices=["docling", "hybrid", "marker"],
-        help="OCR engine",
-    )
+    parser.add_argument("--engine", required=True, type=str, choices=["docling", "hybrid", "marker"])
     parser.add_argument("--split", type=str, default="test", choices=["dev", "test", "all"])
     parser.add_argument(
         "--include-scope",
@@ -554,31 +528,15 @@ def main() -> None:
         choices=["all", "included", "not_included"],
         help="Filter samples using included_samples.json before split selection",
     )
-    parser.add_argument("--raw-only", action="store_true", help="Generate only raw markdown predictions")
     parser.add_argument("--no-skip", action="store_true", help="Do not skip existing prediction files")
     parser.add_argument("--device", type=str, default="cuda", choices=["cuda", "cpu"])
     parser.add_argument("--hybrid-threshold", type=float, default=0.9, help="Hybrid confidence threshold")
-    parser.add_argument(
-        "--hybrid-number-threshold",
-        type=float,
-        default=0.95,
-        help="Hybrid numeric confidence threshold",
-    )
-    parser.add_argument(
-        "--hybrid-options-json",
-        type=str,
-        default=None,
-        help="Path to JSON object of extra HybridOcrOptions overrides",
-    )
-    parser.add_argument("--marker-use-llm", action="store_true", help="Enable Marker LLM post-processing")
-    parser.add_argument(
-        "--marker-llm-model",
-        type=str,
-        default=DEFAULT_MARKER_LLM_MODEL,
-        help="Marker LLM model name",
-    )
-    parser.add_argument("--marker-no-force-ocr", action="store_true", help="Disable Marker force_ocr")
-    parser.add_argument("--marker-extract-images", action="store_true", help="Enable Marker image extraction")
+    parser.add_argument("--hybrid-number-threshold", type=float, default=0.95)
+    parser.add_argument("--hybrid-options-json", type=str, default=None)
+    parser.add_argument("--marker-use-llm", action="store_true")
+    parser.add_argument("--marker-llm-model", type=str, default=DEFAULT_MARKER_LLM_MODEL)
+    parser.add_argument("--marker-no-force-ocr", action="store_true")
+    parser.add_argument("--marker-extract-images", action="store_true")
     args = parser.parse_args()
 
     counts = generate_predictions(
@@ -587,7 +545,6 @@ def main() -> None:
         engine=args.engine,  # type: ignore[arg-type]
         split=args.split,  # type: ignore[arg-type]
         include_scope=args.include_scope,  # type: ignore[arg-type]
-        include_structured=not bool(args.raw_only),
         skip_existing=not bool(args.no_skip),
         device=args.device,
         hybrid_threshold=float(args.hybrid_threshold),

@@ -10,6 +10,7 @@ from PIL import Image
 import tempfile
 import os
 from typing import Any, Dict, Optional
+from .inspectable_pdf_pipeline import InspectablePdfPipeline
 
 try:
     from .hybrid_ocr_model import HybridOcrOptions
@@ -57,7 +58,7 @@ class DoclingOCRService(OCRStrategy):
             pipeline_cls = HybridPdfPipeline
         else:
             self.ocr_options = TesseractCliOcrOptions(force_full_page_ocr=True, lang=lang)
-            pipeline_cls = None
+            pipeline_cls = InspectablePdfPipeline if HAS_HYBRID else None
 
         self.pipeline_options.ocr_options = self.ocr_options
         
@@ -193,9 +194,56 @@ class DoclingOCRService(OCRStrategy):
                     "line_key": list(line_key) if isinstance(line_key, tuple) else None,
                     "from_ocr": bool(getattr(cell, "from_ocr", False)),
                     "source_tag": source_tag,
+                    "ocr_region_index": int(getattr(cell, "_ocr_region_index", -1) or -1),
                 }
             )
         return tokens
+
+    def _extract_snapshot_tokens(self, cells: Any) -> list[Dict[str, Any]]:
+        tokens: list[Dict[str, Any]] = []
+        for idx, cell in enumerate(cells or []):
+            if not isinstance(cell, dict):
+                continue
+            text = str(cell.get("text") or "").strip()
+            bbox = cell.get("bbox")
+            if not text or not isinstance(bbox, dict):
+                continue
+            try:
+                token = {
+                    "index": int(cell.get("index", idx) or idx),
+                    "text": text,
+                    "left": float(bbox.get("l") if "l" in bbox else bbox.get("left")),
+                    "top": float(bbox.get("t") if "t" in bbox else bbox.get("top")),
+                    "right": float(bbox.get("r") if "r" in bbox else bbox.get("right")),
+                    "bottom": float(bbox.get("b") if "b" in bbox else bbox.get("bottom")),
+                    "confidence": float(cell.get("confidence", 0.0) or 0.0),
+                    "line_key": cell.get("line_key"),
+                    "from_ocr": bool(cell.get("from_ocr", False)),
+                    "source_tag": str(cell.get("source_tag") or "baseline"),
+                    "ocr_region_index": int(cell.get("ocr_region_index", -1) or -1),
+                }
+            except Exception:
+                continue
+            tokens.append(token)
+        return tokens
+
+    def _extract_snapshot_regions(self, regions: Any) -> list[Dict[str, float]]:
+        out: list[Dict[str, float]] = []
+        for region in regions or []:
+            if not isinstance(region, dict):
+                continue
+            try:
+                out.append(
+                    {
+                        "left": float(region.get("left") if "left" in region else region.get("l")),
+                        "top": float(region.get("top") if "top" in region else region.get("t")),
+                        "right": float(region.get("right") if "right" in region else region.get("r")),
+                        "bottom": float(region.get("bottom") if "bottom" in region else region.get("b")),
+                    }
+                )
+            except Exception:
+                continue
+        return out
 
     def _extract_table_regions(self, page: Any) -> list[Dict[str, float]]:
         regions: list[Dict[str, float]] = []
@@ -245,16 +293,19 @@ class DoclingOCRService(OCRStrategy):
                         payload["hybrid_ocr_stats"] = stats
 
                 small_snap_get = getattr(model, "get_debug_snapshot", None)
-                if callable(small_snap_get):
-                    snap = small_snap_get()
-                    if isinstance(snap, dict):
-                        payload["ocr_cells_debug"] = snap
+            if callable(small_snap_get):
+                snap = small_snap_get()
+                if isinstance(snap, dict):
+                    payload["ocr_cells_debug"] = snap
 
-                diffs_get = getattr(model, "get_update_diffs", None)
-                if callable(diffs_get):
-                    diffs = diffs_get()
-                    if isinstance(diffs, list):
-                        payload["update_diffs"] = diffs
+            full_snap_get = getattr(model, "get_debug_snapshot_full", None)
+            full_snapshot = full_snap_get() if callable(full_snap_get) else None
+
+            diffs_get = getattr(model, "get_update_diffs", None)
+            if callable(diffs_get):
+                diffs = diffs_get()
+                if isinstance(diffs, list):
+                    payload["update_diffs"] = diffs
 
             updated_bboxes = self._extract_updated_bbox_signatures(payload)
 
@@ -262,20 +313,33 @@ class DoclingOCRService(OCRStrategy):
             page = pages[0] if isinstance(pages, list) and pages else None
             if page is not None:
                 parsed_page = getattr(page, "parsed_page", None)
-                textline_tokens = self._extract_cell_tokens(
-                    getattr(parsed_page, "textline_cells", None),
-                    updated_bboxes=updated_bboxes,
-                )
-                word_tokens = self._extract_cell_tokens(
-                    getattr(parsed_page, "word_cells", None),
-                    updated_bboxes=updated_bboxes,
-                )
+                if isinstance(full_snapshot, dict) and isinstance(full_snapshot.get("all_ocr_cells"), list):
+                    word_tokens = self._extract_snapshot_tokens(full_snapshot.get("all_ocr_cells"))
+                    ocr_regions = self._extract_snapshot_regions(full_snapshot.get("ocr_regions"))
+                    textline_tokens = self._extract_cell_tokens(
+                        getattr(parsed_page, "textline_cells", None),
+                        updated_bboxes=updated_bboxes,
+                    )
+                    token_source = "ocr_region_cells"
+                else:
+                    textline_tokens = self._extract_cell_tokens(
+                        getattr(parsed_page, "textline_cells", None),
+                        updated_bboxes=updated_bboxes,
+                    )
+                    word_tokens = self._extract_cell_tokens(
+                        getattr(parsed_page, "word_cells", None),
+                        updated_bboxes=updated_bboxes,
+                    )
+                    ocr_regions = []
+                    token_source = "parsed_page_cells"
                 table_regions = self._extract_table_regions(page)
                 reconstruction_artifacts = {
                     "page_size": self._extract_page_size(page),
                     "textline_tokens": textline_tokens,
                     "word_tokens": word_tokens,
                     "table_regions": table_regions,
+                    "ocr_regions": ocr_regions,
+                    "token_source": token_source,
                 }
                 self._last_reconstruction_artifacts = reconstruction_artifacts
                 payload["reconstruction_debug"] = {
@@ -283,6 +347,8 @@ class DoclingOCRService(OCRStrategy):
                     "textline_token_count": len(textline_tokens),
                     "word_token_count": len(word_tokens),
                     "table_region_count": len(table_regions),
+                    "ocr_region_count": len(ocr_regions),
+                    "token_source": token_source,
                 }
 
             if payload:

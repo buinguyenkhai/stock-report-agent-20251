@@ -303,8 +303,10 @@ def _select_table_region(
     *,
     page_size: Tuple[int, int],
     table_regions: Optional[Sequence[Dict[str, Any]]] = None,
+    ocr_regions: Optional[Sequence[Dict[str, Any]]] = None,
 ) -> Tuple[Optional[RegionBox], Dict[str, Any]]:
     docling_candidates: List[Tuple[RegionBox, float, Dict[str, Any]]] = []
+    ocr_candidates: List[Tuple[RegionBox, float, Dict[str, Any]]] = []
     inferred_candidates: List[Tuple[RegionBox, float, Dict[str, Any]]] = []
     for raw_region in table_regions or []:
         region = _coerce_region(raw_region)
@@ -312,17 +314,28 @@ def _select_table_region(
             continue
         score, summary = _score_region(region, words, page_size=page_size)
         docling_candidates.append((region, score, {"region_source": "docling_table_region", **summary}))
+    for raw_region in ocr_regions or []:
+        region = _coerce_region(raw_region)
+        if region is None:
+            continue
+        score, summary = _score_region(region, words, page_size=page_size)
+        ocr_candidates.append((region, score, {"region_source": "ocr_region", **summary}))
 
     inferred_regions = _infer_candidate_regions(words, page_size)
     for region in inferred_regions:
         score, summary = _score_region(region, words, page_size=page_size)
         inferred_candidates.append((region, score, {"region_source": "inferred_numeric_band", **summary}))
 
-    candidates = docling_candidates + inferred_candidates
+    candidates = docling_candidates + ocr_candidates + inferred_candidates
     if not candidates:
         return None, {"selection_mode": "none", "candidate_count": 0}
 
-    preferred = docling_candidates if any(score > 0.0 for _region, score, _summary in docling_candidates) else candidates
+    if any(score > 0.0 for _region, score, _summary in docling_candidates):
+        preferred = docling_candidates
+    elif any(score > 0.0 for _region, score, _summary in ocr_candidates):
+        preferred = ocr_candidates
+    else:
+        preferred = candidates
     best_region, best_score, best_summary = max(preferred, key=lambda item: item[1])
     if best_score <= 0.0:
         return None, {
@@ -438,11 +451,17 @@ def reconstruct_table_from_words(
     *,
     image_size: Tuple[int, int],
     table_regions: Optional[Sequence[Dict[str, Any]]] = None,
+    ocr_regions: Optional[Sequence[Dict[str, Any]]] = None,
 ) -> Tuple[str, Dict[str, Any]]:
     if not words:
         return "", {"reconstruction_applied": False, "reason": "no_words"}
 
-    region, region_debug = _select_table_region(words, page_size=image_size, table_regions=table_regions)
+    region, region_debug = _select_table_region(
+        words,
+        page_size=image_size,
+        table_regions=table_regions,
+        ocr_regions=ocr_regions,
+    )
     if region is None:
         return "", {"reconstruction_applied": False, "reason": "no_table_region", **region_debug}
 
@@ -608,9 +627,15 @@ def reconstruct_table_from_tokens(
     *,
     page_size: Tuple[int, int],
     table_regions: Optional[Sequence[Dict[str, Any]]] = None,
+    ocr_regions: Optional[Sequence[Dict[str, Any]]] = None,
 ) -> Tuple[str, Dict[str, Any]]:
     words = [word for token in tokens for word in [_token_to_word(token)] if word is not None]
-    markdown, debug = reconstruct_table_from_words(words, image_size=page_size, table_regions=table_regions)
+    markdown, debug = reconstruct_table_from_words(
+        words,
+        image_size=page_size,
+        table_regions=table_regions,
+        ocr_regions=ocr_regions,
+    )
     debug["token_count"] = len(words)
     return markdown, debug
 
@@ -621,6 +646,7 @@ def reconstruct_financial_table_markdown(
     ocr_tokens: Optional[Sequence[Dict[str, Any]]] = None,
     page_size: Optional[Tuple[int, int]] = None,
     table_regions: Optional[Sequence[Dict[str, Any]]] = None,
+    ocr_regions: Optional[Sequence[Dict[str, Any]]] = None,
 ) -> Tuple[str, Dict[str, Any]]:
     if not ocr_tokens:
         return "", {"reconstruction_applied": False, "reason": "no_ocr_tokens", "page_image_path": page_image}
@@ -631,6 +657,7 @@ def reconstruct_financial_table_markdown(
         ocr_tokens,
         page_size=page_size,
         table_regions=table_regions,
+        ocr_regions=ocr_regions,
     )
     debug["page_image_path"] = page_image
     return markdown, debug

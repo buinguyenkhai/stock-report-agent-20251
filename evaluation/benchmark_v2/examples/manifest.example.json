@@ -11,8 +11,6 @@
       "page_index": 3,
       "page_image_path": "images/AAA_2024Q3_p003.png",
       "gt_markdown_path": "gt_markdown/AAA_2024Q3_p003.md",
-      "gt_structured_path": "gt_structured/AAA_2024Q3_p003.json",
-      "gt_table_cells_path": "gt_cells/AAA_2024Q3_p003.json",
       "source_pdf_path": "pdf/AAA_2024Q3.pdf",
       "annotator_id": "khai",
       "annotation_passes": 2,
@@ -26,12 +24,9 @@
       "page_index": 5,
       "page_image_path": "images/FPT_2024Q3_p005.png",
       "gt_markdown_path": "gt_markdown/FPT_2024Q3_p005.md",
-      "gt_structured_path": "gt_structured/FPT_2024Q3_p005.json",
-      "gt_table_cells_path": "gt_cells/FPT_2024Q3_p005.json",
       "source_pdf_path": "pdf/FPT_2024Q3.pdf",
       "annotator_id": "khai",
       "annotation_passes": 2
     }
   ]
 }
-

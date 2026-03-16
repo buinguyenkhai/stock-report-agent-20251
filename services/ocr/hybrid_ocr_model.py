@@ -1256,16 +1256,23 @@ def _build_line_min_numeric_conf(df_result) -> dict[tuple[int, int, int], float]
 
 
 class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
-    def _make_debug_snapshot(self, page: Page, all_ocr_cells: List[TextCell]) -> dict[str, Any]:
+    def _make_debug_snapshot(
+        self,
+        page: Page,
+        all_ocr_cells: List[TextCell],
+        ocr_rects: Optional[List[BoundingBox]] = None,
+    ) -> dict[str, Any]:
         def _cell_to_obj(c: TextCell) -> dict[str, Any]:
             bb = c.rect.to_bounding_box()
+            region_bb = getattr(c, "_region_bbox", None)
+            line_key = getattr(c, "_tsv_line_key", None)
             return {
                 "index": int(c.index),
                 "text": str(c.text or ""),
                 "orig": str(getattr(c, "orig", "") or ""),
                 "confidence": float(getattr(c, "confidence", 0.0) or 0.0),
                 "from_ocr": bool(getattr(c, "from_ocr", False)),
-            "text_cell_unit": str(getattr(c, "text_cell_unit", "")),
+                "text_cell_unit": str(getattr(c, "text_cell_unit", "")),
                 "bbox": {
                     "l": float(bb.l),
                     "t": float(bb.t),
@@ -1273,16 +1280,41 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                     "b": float(bb.b),
                     "coord_origin": "TOPLEFT",
                 },
+                "region_bbox": (
+                    {
+                        "l": float(region_bb.l),
+                        "t": float(region_bb.t),
+                        "r": float(region_bb.r),
+                        "b": float(region_bb.b),
+                        "coord_origin": "TOPLEFT",
+                    }
+                    if region_bb is not None
+                    else None
+                ),
+                "line_key": list(line_key) if isinstance(line_key, tuple) else None,
+                "ocr_region_index": int(getattr(c, "_ocr_region_index", -1) or -1),
+                "source_tag": str(getattr(c, "_source_tag", "baseline") or "baseline"),
+                "in_table_region": bool(getattr(c, "_in_table_region", False)),
             }
 
         parsed = page.parsed_page
         snap: dict[str, Any] = {
             "page_number": int(getattr(page, "page_num", 0) or 0),
             "all_ocr_cells": [_cell_to_obj(c) for c in (all_ocr_cells or [])],
+            "ocr_regions": [
+                {
+                    "left": float(rect.l),
+                    "top": float(rect.t),
+                    "right": float(rect.r),
+                    "bottom": float(rect.b),
+                }
+                for rect in (ocr_rects or [])
+            ],
             "parsed_textline_cells": [_cell_to_obj(c) for c in (getattr(parsed, "textline_cells", None) or [])] if parsed is not None else [],
             "parsed_word_cells": [_cell_to_obj(c) for c in (getattr(parsed, "word_cells", None) or [])] if parsed is not None else [],
             "counts": {
                 "all_ocr_cells": int(len(all_ocr_cells or [])),
+                "ocr_regions": int(len(ocr_rects or [])),
                 "parsed_textline_cells": int(len(getattr(parsed, "textline_cells", None) or [])) if parsed is not None else 0,
                 "parsed_word_cells": int(len(getattr(parsed, "word_cells", None) or [])) if parsed is not None else 0,
             },
@@ -2270,6 +2302,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
 
                 cell.text = new_text
                 cell.orig = new_text  # Also update original
+                setattr(cell, "_source_tag", "surya_updated")
                 self._stats["surya_cells_updated"] += 1
 
                 if isinstance(self._last_update_diffs, list):
@@ -2427,6 +2460,8 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
                             # Store Tesseract TSV bbox in the region image coordinate system.
                             # This is what Surya needs when `page_image` is a cropped OCR region.
                             setattr(cell, "_region_bbox", bbox)
+                            setattr(cell, "_ocr_region_index", int(ocr_rect_i))
+                            setattr(cell, "_source_tag", "baseline")
 
                             if block_num > 0 and par_num > 0 and line_num > 0:
                                 setattr(cell, "_tsv_line_key", (block_num, par_num, line_num))
@@ -2653,7 +2688,7 @@ class HybridOcrModel(TesseractOcrCliModel):  # type: ignore[misc]
 
                 # Debug snapshot: what OCR produced (after Surya updates + post_process_cells)
                 try:
-                    self._last_snapshot = self._make_debug_snapshot(page, all_ocr_cells)
+                    self._last_snapshot = self._make_debug_snapshot(page, all_ocr_cells, list(ocr_rects or []))
                 except Exception:
                     self._last_snapshot = None
 
